@@ -161,7 +161,7 @@ Part 3 用数字 `3`，以 `A`、`B`、`C` 区分最多三名说话人；Part 4 
 
 ### Part 6/7 与多篇联读
 
-[reading.json](../data/reading.json) 的组字段为 `id`、`title`、`part`、`level`、`documents`、`questions`。每篇文稿有中文类型 `type`、英文标题 `title`、英文正文 `text`。换段在 JSON 字符串中写 `\n\n`，界面保留换行。每道子题包含通用选择题字段、`evidence`、`paraphrase`。
+[reading.json](../data/reading.json) 的组字段为 `id`、`title`、`part`、`level`、`documents`、`questions`。文稿还可附带 `table: {headers, rows}`，正文和表格均可作为答案依据。每篇文稿有中文类型 `type`、英文标题 `title`、英文正文 `text`。换段在 JSON 字符串中写 `\n\n`，界面保留换行。每道子题包含通用选择题字段、`evidence`、`paraphrase`。
 
 ```json
 {

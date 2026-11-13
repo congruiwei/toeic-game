@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-5';
+const CACHE = 'toeic-island-shell-6';
 const files = [
   './',
   './index.html',

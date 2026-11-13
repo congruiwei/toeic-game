@@ -268,7 +268,8 @@ function listening(groups) {
 }
 
 function reading(groups) {
-  let part6 = 0, single = 0, multi = 0;
+  let part6 = 0, single = 0, double = 0, triple = 0;
+  const originalShortPassages=new Set(['read-badge','read-samples','read-bikes','read-labels','read-credit']);
   scan(groups, 'reading', 12, (group, at) => {
     id(group, at);
     level(group, at);
@@ -278,10 +279,12 @@ function reading(groups) {
     scan(group.documents, `${at}.documents`, 1, (doc, path) => {
       strings(doc, path, ['type', 'title', 'text']);
       sources.push(doc.text);
+      if(doc.table)sources.push(...tableCells(doc.table,path+'.table'));
     });
     comprehension(group, at, sources);
     if (group.part === 6) {
       part6++;
+      if(!originalShortPassages.has(group.id))expect(group.questions?.length===4,at,'新增 Part 6 需要四个空位');
       const passage = sources.join('\n');
       const passageMarkers = new Set(passage.match(/\[\d+\]/g) || []);
       const questionMarkers = new Set();
@@ -293,11 +296,13 @@ function reading(groups) {
       }
       for (const marker of passageMarkers) expect(questionMarkers.has(marker), at, `Part 6 原文空位 ${marker} 没有对应问题`);
     } else if (group.part === 7) {
-      if (sources.length === 1) single++;
-      if (sources.length > 1) multi++;
+      const n=group.documents?.length, m=group.questions?.length;
+      if(n===1){single++;expect(m>=2 && m<=4,at,'单篇需 2–4 题');}
+      else {expect(n===2||n===3,at,'Part 7 每组限 1–3 篇');expect(m===5,at,'多篇组需 5 题');}
+      if(n===2)double++;if(n===3)triple++;
     }
   });
-  expect(part6 > 0 && single > 0 && multi > 0, 'reading', '须包含 Part 6、Part 7 单篇和 Part 7 多篇');
+  expect(part6 >=15 && single+double+triple>=45 && single>0 && double>=8 && triple>=6, 'reading', 'Part 6 需15组、Part 7 需45组，含至少8双篇及6三篇');
   counts['Part 6/7 组'] = Array.isArray(groups) ? groups.length : 0;
 }
 

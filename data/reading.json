@@ -451,6 +451,51 @@
         "paraphrase": "practicing calls with customers → customer calls practice",
         "en": "The plan puts call practice in Room C, and the email leaves every session other than safe lifting unchanged.",
         "zh": "原日程中 C 室安排客户电话练习。邮件只调整搬运示范，所以该活动照常。"
+      },
+      {
+        "id": "read-orientation-03",
+        "prompt": "What should trainees bring to the indoor demonstration?",
+        "options": [
+          "A training folder",
+          "A video playback device",
+          "An updated room plan",
+          "A pair of work gloves"
+        ],
+        "answer": "A training folder",
+        "evidence": "Please bring your training folder to all sessions.",
+        "paraphrase": "all sessions → includes the relocated demonstration",
+        "en": "The email changes the venue and method only; the original bring-your-folder instruction still applies.",
+        "zh": "新邮件只改示范地点和形式，原来每场都带培训文件夹的要求仍适用。"
+      },
+      {
+        "id": "read-orientation-04",
+        "prompt": "Why will the instructor use a video?",
+        "options": [
+          "The welcome tour will run late.",
+          "Trainees lack lifting experience.",
+          "Rain affects the original plan.",
+          "Room C has the only working screen."
+        ],
+        "answer": "Rain affects the original plan.",
+        "evidence": "because of heavy rain",
+        "paraphrase": "heavy rain → weather forces indoor instruction",
+        "en": "The email explicitly gives heavy rain as the reason for moving the demonstration indoors.",
+        "zh": "邮件直接说明因大雨改为室内视频示范。"
+      },
+      {
+        "id": "read-orientation-05",
+        "prompt": "How much time separates the end of safe lifting and the start of call practice?",
+        "options": [
+          "45 minutes",
+          "30 minutes",
+          "60 minutes",
+          "15 minutes"
+        ],
+        "answer": "15 minutes",
+        "evidence": "10:15–10:30  Break",
+        "paraphrase": "unchanged break → fifteen-minute gap",
+        "en": "The email keeps all times. The original plan ends safe lifting at 10:15 and starts call practice at 10:30.",
+        "zh": "邮件说时间不变，示范 10:15 结束，电话练习 10:30 开始，中间 15 分钟。"
       }
     ]
   },
@@ -501,6 +546,51 @@
         "paraphrase": "provide for itself → handled by the customer's caretaker",
         "en": "The quote assigns watering to customers on the standard plan. Tan confirms that a caretaker will do it.",
         "zh": "报价单说明标准款由客户浇水，邮件确认会由管理员照料。"
+      },
+      {
+        "id": "read-plants-03",
+        "prompt": "Which expense would disappear if Tan ordered one more pot under the same delivery terms?",
+        "options": [
+          "The cost of every standard pot",
+          "The trip to deliver the pots",
+          "The four-week rental charge",
+          "The charge for a service pot"
+        ],
+        "answer": "The trip to deliver the pots",
+        "evidence": "Delivery is free for orders of five pots or more.",
+        "paraphrase": "one more than four → five, qualifying for free delivery",
+        "en": "The email asks for four pots; adding one reaches the quote's free-delivery threshold.",
+        "zh": "现要四盆，再加一盆就满足报价的五盆免配送门槛。"
+      },
+      {
+        "id": "read-plants-04",
+        "prompt": "What will Tan do when the rental ends?",
+        "options": [
+          "Book weekly watering visits",
+          "Keep the pots for another month",
+          "Return the pots in person",
+          "Ask the caretaker to buy them"
+        ],
+        "answer": "Return the pots in person",
+        "evidence": "I can return them myself when the rental ends.",
+        "paraphrase": "in person → myself",
+        "en": "The quotation requires a counter return, and Tan offers to handle it personally.",
+        "zh": "报价要求送回柜台，Tan 说自己可以归还。"
+      },
+      {
+        "id": "read-plants-05",
+        "prompt": "Which feature distinguishes the service pot from Tan's choice?",
+        "options": [
+          "Weekly watering visits",
+          "A longer rental period",
+          "Counter return after rental",
+          "Free delivery for four pots"
+        ],
+        "answer": "Weekly watering visits",
+        "evidence": "Includes one watering visit per week.",
+        "paraphrase": "service pot → supplier visits weekly",
+        "en": "The service plan includes a weekly visit. Tan's standard pots require customer watering.",
+        "zh": "服务款包括每周上门浇水；Tan 选的标准款要由客户浇水。"
       }
     ]
   },
@@ -556,6 +646,51 @@
         "paraphrase": "put it on board → send the extra stand on the shuttle",
         "en": "Dara offers to send West's surplus to Lee at East, which received three of its four stands. Lee agrees.",
         "zh": "东店应收四台却只有三台，西店正好多一台。Dara 提议用中午班车运过去，Lee 已同意。"
+      },
+      {
+        "id": "read-staging-03",
+        "prompt": "Which part of the purchase note was followed despite the allocation error?",
+        "options": [
+          "The quantity sent to East",
+          "The required stand model",
+          "The site split specified by Birch",
+          "The quantity sent to West"
+        ],
+        "answer": "The required stand model",
+        "evidence": "three narrow stands delivered",
+        "paraphrase": "narrow models delivered → model requirement met",
+        "en": "Both route entries identify narrow stands, matching the purchase note's requested model.",
+        "zh": "两条送货记录均注明窄款，与订单要求的型号一致，错误在分店分配。"
+      },
+      {
+        "id": "read-staging-04",
+        "prompt": "What does Lee imply by “if the numbers are corrected”?",
+        "options": [
+          "West lacks three stands.",
+          "East found a wrong model.",
+          "East cannot sign receipts.",
+          "East needs another stand."
+        ],
+        "answer": "East needs another stand.",
+        "evidence": "East branch: three narrow stands delivered",
+        "paraphrase": "three received versus four requested → one still needed",
+        "en": "Lee represents East. It has three units and needs the fourth before completing its intended setup.",
+        "zh": "Lee 在东店，订单分配四台却只送到三台，所以还差一台。"
+      },
+      {
+        "id": "read-staging-05",
+        "prompt": "When is the suggested transfer scheduled compared with the van's return?",
+        "options": [
+          "Two hours earlier",
+          "One hour earlier",
+          "Two hours later",
+          "One hour later"
+        ],
+        "answer": "One hour earlier",
+        "evidence": "Van returns to the depot at 13:00.",
+        "paraphrase": "noon shuttle versus 13:00 van → one hour earlier",
+        "en": "Dara proposes the noon shuttle. The route sheet places the van's return at 13:00.",
+        "zh": "聊天里的班车中午出发，路线单上的货车下午一点回库，前者早一小时。"
       }
     ]
   },
@@ -611,6 +746,3044 @@
         "paraphrase": "approve the new proof in writing → reply to Proof 3 with approval",
         "en": "Proof 3 is the corrected version. The policy requires written approval, and the latest email tells the customer to reply to that version.",
         "zh": "Proof 3 才是修正后的版本。条款要求书面批准，最新邮件也请客户回复该版本确认。"
+      },
+      {
+        "id": "read-proof-03",
+        "prompt": "Who supplied the incorrect meeting time in the first place?",
+        "options": [
+          "Garden Walks",
+          "The map printer",
+          "Foldline's designer",
+          "The press operator"
+        ],
+        "answer": "Garden Walks",
+        "evidence": "We sent you an outdated meeting time in our original file",
+        "paraphrase": "our original file → customer's source file",
+        "en": "The email from Garden Walks takes responsibility for the old time in its own file.",
+        "zh": "Garden Walks 在邮件中承认原始文件给了过时的时间。"
+      },
+      {
+        "id": "read-proof-04",
+        "prompt": "What time should appear in Proof 3?",
+        "options": [
+          "8:15",
+          "8:45",
+          "9:15",
+          "8:30"
+        ],
+        "answer": "8:45",
+        "evidence": "please change 8:15 to 8:45 on page two",
+        "paraphrase": "changed as requested → keep 8:45",
+        "en": "Garden Walks requested 8:45. The printer made that change, and the next correction concerns only the map key.",
+        "zh": "客户要求改为 8:45，印厂已改好；下一次要修的是图例。"
+      },
+      {
+        "id": "read-proof-05",
+        "prompt": "Suppose Garden Walks then requests a new cover color of its own choosing. What would the quoted policy imply?",
+        "options": [
+          "An extra $35 round",
+          "A free correction for print damage",
+          "A return to the original meeting time",
+          "A new allowance of two free rounds"
+        ],
+        "answer": "An extra $35 round",
+        "evidence": "A further round requested by the customer costs $35.",
+        "paraphrase": "new customer change after time correction → further round",
+        "en": "The customer used the included correction for its outdated time. A new cover request would be another customer round.",
+        "zh": "客户因自己给错时间已用掉一轮免费修改，再主动要求换封面色将另计一轮。"
+      }
+    ]
+  },
+  {
+    "id": "read-tea-box",
+    "part": 6,
+    "level": 400,
+    "title": "茶包补货",
+    "documents": [
+      {
+        "type": "便条",
+        "title": "Restocking the tea shelf",
+        "text": "Hi Kim,\n\nThe delivery by the back door is for the tea shelf. Please [1] the cartons before putting anything away. A list inside each carton shows which teas it contains. Match the names on that list [2] the shelf labels.\n\nLeave the small red carton closed. [3] Its address label shows that it belongs to our next-door neighbor. A driver will collect it [4] noon today, so keep the entrance clear until then.\n\nJo"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-tea-box-01",
+        "prompt": "Which word fits [1]?",
+        "options": [
+          "flatten",
+          "seal",
+          "weigh",
+          "open"
+        ],
+        "answer": "open",
+        "evidence": "A list inside each carton",
+        "paraphrase": "inside → open to reach it",
+        "en": "Opening the cartons gives Kim access to the lists inside.",
+        "zh": "清单在箱内，要先打开箱子。"
+      },
+      {
+        "id": "read-tea-box-02",
+        "prompt": "Which word fits [2]?",
+        "options": [
+          "along",
+          "with",
+          "over",
+          "onto"
+        ],
+        "answer": "with",
+        "evidence": "the shelf labels",
+        "paraphrase": "match A with B → find the corresponding label",
+        "en": "Match one item with another is the expression for pairing items.",
+        "zh": "match A with B 表示把两个对应的项目配起来。"
+      },
+      {
+        "id": "read-tea-box-03",
+        "prompt": "Which sentence fits [3]?",
+        "options": [
+          "It came to us by mistake.",
+          "We sell that tea by weight.",
+          "Its contents need cooling.",
+          "The shelf has room for it."
+        ],
+        "answer": "It came to us by mistake.",
+        "evidence": "it belongs to our next-door neighbor",
+        "paraphrase": "belongs next door → delivered here by mistake",
+        "en": "The address explains why this carton should remain closed.",
+        "zh": "该箱属于邻店，说明它被错送到了这里，因而不应拆开。"
+      },
+      {
+        "id": "read-tea-box-04",
+        "prompt": "Which word fits [4]?",
+        "options": [
+          "over",
+          "at",
+          "through",
+          "onto"
+        ],
+        "answer": "at",
+        "evidence": "noon today",
+        "paraphrase": "noon → a point in time",
+        "en": "An exact time such as noon takes at.",
+        "zh": "noon 是确切时点，介词用 at。"
+      }
+    ]
+  },
+  {
+    "id": "read-mat",
+    "part": 6,
+    "level": 400,
+    "title": "雨垫回收",
+    "documents": [
+      {
+        "type": "通知",
+        "title": "Entrance mats",
+        "text": "During wet weather we place a long mat at each entrance. Before closing time, please [1] each mat from the floor. Hang it on the rail in the washroom so both sides can dry.\n\nThe mats by the café are [2] than the others. Two people should lift each one. [3] Use the cart instead of carrying them all the way to the washroom. The cart is kept [4] the stairs and the lift, in the narrow gap."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-mat-01",
+        "prompt": "Which word fits [1]?",
+        "options": [
+          "stitch",
+          "buy",
+          "lift",
+          "cut"
+        ],
+        "answer": "lift",
+        "evidence": "Hang it on the rail",
+        "paraphrase": "hang the mat → lift it first",
+        "en": "The mats must come off the floor before staff can hang them.",
+        "zh": "要把垫子挂起来，得先将它从地上提起。"
+      },
+      {
+        "id": "read-mat-02",
+        "prompt": "Which word fits [2]?",
+        "options": [
+          "heavily",
+          "heaviness",
+          "heaviest",
+          "heavier"
+        ],
+        "answer": "heavier",
+        "evidence": "Two people should lift each one.",
+        "paraphrase": "needs two lifters → greater weight",
+        "en": "Than calls for a comparative, and the next sentence points to weight.",
+        "zh": "than 需要比较级，两人抬表示这些垫子更重。"
+      },
+      {
+        "id": "read-mat-03",
+        "prompt": "Which sentence fits [3]?",
+        "options": [
+          "The café will close for repairs next week.",
+          "Customers may hire umbrellas at the till.",
+          "A cart is available for the longer trip.",
+          "The rail was painted earlier this year."
+        ],
+        "answer": "A cart is available for the longer trip.",
+        "evidence": "Use the cart instead of carrying them",
+        "paraphrase": "the longer trip → the journey to the washroom",
+        "en": "Introducing the cart prepares the reader for the instruction to use it.",
+        "zh": "后句要求用推车运到清洗间，因此此处先介绍可用的推车。"
+      },
+      {
+        "id": "read-mat-04",
+        "prompt": "Which word fits [4]?",
+        "options": [
+          "between",
+          "under",
+          "inside",
+          "among"
+        ],
+        "answer": "between",
+        "evidence": "the stairs and the lift, in the narrow gap",
+        "paraphrase": "the gap separating two things → between them",
+        "en": "Two named objects define the sides of a single gap.",
+        "zh": "楼梯和电梯是两个明确对象，推车位于两者之间。"
+      }
+    ]
+  },
+  {
+    "id": "read-stamp",
+    "part": 6,
+    "level": 500,
+    "title": "盖章换杯活动",
+    "documents": [
+      {
+        "type": "广告",
+        "title": "A mug for a full card",
+        "text": "Each time you purchase a bag of beans, we will [1] one stamp to your card. When all eight spaces are full, hand the card to a member of staff and choose a mug. The mug is free, even if you do not buy anything that day.\n\nCards from our two branches look [2], but they have different numbers on the back. We can check the branch number if a stamp is hard to read. [3] Keep your card dry, as damaged numbers may be difficult [4]."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-stamp-01",
+        "prompt": "Which word fits [1]?",
+        "options": [
+          "charge",
+          "remove",
+          "add",
+          "fold"
+        ],
+        "answer": "add",
+        "evidence": "one stamp to your card",
+        "paraphrase": "add a stamp → mark a space",
+        "en": "Add takes the pattern add something to something else.",
+        "zh": "add A to B 表示把章加盖到卡片上。"
+      },
+      {
+        "id": "read-stamp-02",
+        "prompt": "Which word fits [2]?",
+        "options": [
+          "likely",
+          "alike",
+          "unlike",
+          "likeness"
+        ],
+        "answer": "alike",
+        "evidence": "but they have different numbers",
+        "paraphrase": "different numbers despite similar appearance → look alike",
+        "en": "Look alike means resemble each other in appearance.",
+        "zh": "卡面相似但背面号码各异，look alike 表示看起来相像。"
+      },
+      {
+        "id": "read-stamp-03",
+        "prompt": "Which sentence fits [3]?",
+        "options": [
+          "There are eight chairs in each branch.",
+          "A clear number identifies the card.",
+          "Our newest mug is made of recycled glass.",
+          "We roast both bags on the day of sale."
+        ],
+        "answer": "A clear number identifies the card.",
+        "evidence": "We can check the branch number if a stamp is hard to read.",
+        "paraphrase": "identify → recognize the issuing branch",
+        "en": "The number links the explanation of checking the branch to the advice about keeping the card dry.",
+        "zh": "号码用来识别发卡门店，与下文保持卡片干燥相呼应。"
+      },
+      {
+        "id": "read-stamp-04",
+        "prompt": "Which form fits [4]?",
+        "options": [
+          "to verify",
+          "verification",
+          "verify",
+          "verified"
+        ],
+        "answer": "to verify",
+        "evidence": "damaged numbers may be difficult",
+        "paraphrase": "difficult to verify → hard to check",
+        "en": "Difficult takes a to-infinitive to name the action that is hard.",
+        "zh": "difficult 后接不定式，说明难以执行的动作。"
+      }
+    ]
+  },
+  {
+    "id": "read-refreshments",
+    "part": 6,
+    "level": 500,
+    "title": "会间茶点登记",
+    "documents": [
+      {
+        "type": "邮件",
+        "title": "Head count for Thursday",
+        "text": "Dear hosts,\n\nPlease send a count of your guests [1] Tuesday afternoon at the latest. The kitchen needs a full day to arrange Thursday's refreshments. Include visiting speakers in your figure, even [2] they expect to stay for just one session.\n\nWe can provide dairy-free snacks if someone asks for them. [3] Please give the number needed, without listing individual names. This information will help us prepare the correct [4] of each snack."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-refreshments-01",
+        "prompt": "Which word fits [1]?",
+        "options": [
+          "across",
+          "since",
+          "beyond",
+          "by"
+        ],
+        "answer": "by",
+        "evidence": "Tuesday afternoon at the latest",
+        "paraphrase": "at the latest → by that time",
+        "en": "By sets the deadline for sending the count.",
+        "zh": "at the latest 表示最迟时间，故用 by。"
+      },
+      {
+        "id": "read-refreshments-02",
+        "prompt": "Which word fits [2]?",
+        "options": [
+          "despite",
+          "if",
+          "during",
+          "toward"
+        ],
+        "answer": "if",
+        "evidence": "they expect to stay for just one session",
+        "paraphrase": "even if → regardless of a short stay",
+        "en": "Even if introduces a condition that does not change the request.",
+        "zh": "即便讲者只参加一场，也要计入人数，even if 引导让步条件。"
+      },
+      {
+        "id": "read-refreshments-03",
+        "prompt": "Which sentence fits [3]?",
+        "options": [
+          "Thursday's last session ends at five.",
+          "The kitchen will send a bill on Monday.",
+          "Ask speakers to bring their own chairs.",
+          "Tell us how many guests need that option."
+        ],
+        "answer": "Tell us how many guests need that option.",
+        "evidence": "Please give the number needed, without listing individual names.",
+        "paraphrase": "that option → dairy-free snacks",
+        "en": "The preceding sentence offers dairy-free food; the following one asks for a count.",
+        "zh": "先提无乳制点心，后文要人数而不要姓名，故应询问需要这种选项的人数。"
+      },
+      {
+        "id": "read-refreshments-04",
+        "prompt": "Which word fits [4]?",
+        "options": [
+          "quantity",
+          "entry",
+          "agenda",
+          "remark"
+        ],
+        "answer": "quantity",
+        "evidence": "give the number needed",
+        "paraphrase": "quantity → amount required",
+        "en": "The count determines how much of each snack to prepare.",
+        "zh": "人数决定各类点心应准备多少，quantity 表示数量。"
+      }
+    ]
+  },
+  {
+    "id": "read-glaze",
+    "part": 6,
+    "level": 600,
+    "title": "釉面样板展",
+    "documents": [
+      {
+        "type": "展览说明",
+        "title": "Glaze samples under two lights",
+        "text": "These ceramic panels were made from the same clay. They differ only in the glaze [1] before firing. View the first set under the warm lamp and the second under the cool lamp. Each pair carries the same number.\n\n[2] A green surface, for example, may look gray under the cooler lamp. We suggest [3] the lamps in turn before selecting a finish. Please leave the panels on their stands; this allows every visitor to compare them under [4] conditions."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-glaze-01",
+        "prompt": "Which form fits [1]?",
+        "options": [
+          "applies",
+          "applied",
+          "applying",
+          "to applying"
+        ],
+        "answer": "applied",
+        "evidence": "before firing",
+        "paraphrase": "glaze that was applied → glaze applied",
+        "en": "The glaze receives the application. Applied is a reduced passive relative clause.",
+        "zh": "釉料是被施加的，applied 相当于 that was applied。"
+      },
+      {
+        "id": "read-glaze-02",
+        "prompt": "Which sentence fits [2]?",
+        "options": [
+          "Each stand was built by the same carpenter.",
+          "The exhibition features only locally sourced clay.",
+          "Some of the samples will be sold by weight.",
+          "Light affects the color you see."
+        ],
+        "answer": "Light affects the color you see.",
+        "evidence": "A green surface, for example, may look gray",
+        "paraphrase": "apparent color → how the surface looks",
+        "en": "The green-to-gray example illustrates a general effect of lighting.",
+        "zh": "绿色在不同灯下可能像灰色，是对光线影响外观颜色的举例。"
+      },
+      {
+        "id": "read-glaze-03",
+        "prompt": "Which form fits [3]?",
+        "options": [
+          "to trying",
+          "trying",
+          "to try",
+          "tried"
+        ],
+        "answer": "trying",
+        "evidence": "We suggest",
+        "paraphrase": "suggest trying → recommend testing",
+        "en": "Suggest takes a gerund when followed directly by an action.",
+        "zh": "suggest 后直接接动作时用动名词 trying。"
+      },
+      {
+        "id": "read-glaze-04",
+        "prompt": "Which word fits [4]?",
+        "options": [
+          "accidental",
+          "consistent",
+          "financial",
+          "fragile"
+        ],
+        "answer": "consistent",
+        "evidence": "Please leave the panels on their stands",
+        "paraphrase": "fixed positions → consistent viewing conditions",
+        "en": "Keeping the panels in place makes the comparison conditions stable for different visitors.",
+        "zh": "样板留在原位，可让每位观众在一致的条件下比较。"
+      }
+    ]
+  },
+  {
+    "id": "read-receiving",
+    "part": 6,
+    "level": 600,
+    "title": "验收新流程",
+    "documents": [
+      {
+        "type": "工作备忘录",
+        "title": "Checking a mixed shipment",
+        "text": "A shipment may contain goods for several departments. Read the destination on each carton before [1] it to a shelf. Once a carton is shelved, enter its shelf code in the delivery record.\n\nA missing destination label does not mean that the carton should be opened. [2] The purchasing desk will trace the order using the reference printed beside the barcode. Keep the carton on the inspection bench [3] the desk confirms its destination. Following this sequence reduces the [4] of sending goods to the wrong floor."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-receiving-01",
+        "prompt": "Which form fits [1]?",
+        "options": [
+          "moved",
+          "moving",
+          "to move",
+          "moves"
+        ],
+        "answer": "moving",
+        "evidence": "before [1] it to a shelf",
+        "paraphrase": "before moving → prior to moving",
+        "en": "Here before is followed by an action without its own subject, so use a gerund.",
+        "zh": "before 后接无独立主语的动作，用动名词 moving。"
+      },
+      {
+        "id": "read-receiving-02",
+        "prompt": "Which sentence fits [2]?",
+        "options": [
+          "Report the reference with the seal intact.",
+          "List every item inside the carton by hand.",
+          "Put the items directly on the nearest empty shelf.",
+          "Ask the carrier to discard the packaging immediately."
+        ],
+        "answer": "Report the reference with the seal intact.",
+        "evidence": "using the reference printed beside the barcode",
+        "paraphrase": "seal intact → carton remains unopened",
+        "en": "The desk can trace the external reference without anyone opening the carton.",
+        "zh": "条码旁的外部编号足以追查订单，所以保留封条并报告编号。"
+      },
+      {
+        "id": "read-receiving-03",
+        "prompt": "Which word fits [3]?",
+        "options": [
+          "beside",
+          "during",
+          "until",
+          "despite"
+        ],
+        "answer": "until",
+        "evidence": "the desk confirms its destination",
+        "paraphrase": "until confirmation → keep waiting for confirmation",
+        "en": "Confirmation is the endpoint of the wait on the bench.",
+        "zh": "目的地得到确认是等待状态的终点，用 until。"
+      },
+      {
+        "id": "read-receiving-04",
+        "prompt": "Which word fits [4]?",
+        "options": [
+          "risk",
+          "view",
+          "span",
+          "pace"
+        ],
+        "answer": "risk",
+        "evidence": "sending goods to the wrong floor",
+        "paraphrase": "risk → chance of an unwanted outcome",
+        "en": "Following the procedure lowers the chance of a routing mistake.",
+        "zh": "执行流程能降低错送楼层的风险，选 risk。"
+      }
+    ]
+  },
+  {
+    "id": "read-library-lease",
+    "part": 6,
+    "level": 700,
+    "title": "设备续借条款",
+    "documents": [
+      {
+        "type": "规则",
+        "title": "Extending an equipment loan",
+        "text": "Members may request one extension per loan, provided [1] the item has not been reserved by another member. Submit the request while the loan is still active. The online form closes automatically at the original return time.\n\nAn extension request may remain pending while a librarian checks the reservation list. [2] The original deadline therefore remains in force until approval appears in your account. Members are responsible for [3] the status themselves. An approved extension runs for three days, [4] from the original return time."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-library-lease-01",
+        "prompt": "Which word fits [1]?",
+        "options": [
+          "what",
+          "which",
+          "that",
+          "than"
+        ],
+        "answer": "that",
+        "evidence": "the item has not been reserved",
+        "paraphrase": "provided that → on condition that",
+        "en": "Provided that introduces the condition for an extension.",
+        "zh": "provided that 引导续借成立的条件。"
+      },
+      {
+        "id": "read-library-lease-02",
+        "prompt": "Which sentence fits [2]?",
+        "options": [
+          "Returning an item early earns a discount.",
+          "The list includes descriptions of damaged cases.",
+          "The library replaces each tool after three years.",
+          "Submitting the form does not itself grant extra time."
+        ],
+        "answer": "Submitting the form does not itself grant extra time.",
+        "evidence": "The original deadline therefore remains in force until approval",
+        "paraphrase": "pending request → extra time is not yet granted",
+        "en": "The warning explains why the first deadline still applies.",
+        "zh": "申请待审核不等于已获延期，因此原截止时间仍然有效。"
+      },
+      {
+        "id": "read-library-lease-03",
+        "prompt": "Which form fits [3]?",
+        "options": [
+          "check",
+          "checked",
+          "checking",
+          "to check"
+        ],
+        "answer": "checking",
+        "evidence": "responsible for",
+        "paraphrase": "responsible for checking → must monitor",
+        "en": "For is a preposition here and takes the gerund checking.",
+        "zh": "responsible for 中 for 是介词，后接 checking。"
+      },
+      {
+        "id": "read-library-lease-04",
+        "prompt": "Which form fits [4]?",
+        "options": [
+          "measurement",
+          "measures",
+          "measured",
+          "measurable"
+        ],
+        "answer": "measured",
+        "evidence": "from the original return time",
+        "paraphrase": "measured from → calculated starting at",
+        "en": "Measured describes how the three-day period is calculated.",
+        "zh": "measured 说明三天时长从哪个时点计算。"
+      }
+    ]
+  },
+  {
+    "id": "read-hall-sound",
+    "part": 6,
+    "level": 700,
+    "title": "活动音量检查",
+    "documents": [
+      {
+        "type": "工作指引",
+        "title": "Sound check protocol",
+        "text": "Every act appearing in Hall Two must complete a sound check. Checks are scheduled in reverse performance order, so the final act [1] first. Equipment used by several acts may remain onstage, provided that it does not obstruct a marked exit.\n\nThe stage manager records a reference level for each microphone. [2] If a microphone is moved after the check, the marked level may no longer be [3]. Notify the manager of any such change before the audience is [4] to the hall."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-hall-sound-01",
+        "prompt": "Which form fits [1]?",
+        "options": [
+          "rehearses",
+          "rehearsing",
+          "rehearse",
+          "rehearsal"
+        ],
+        "answer": "rehearses",
+        "evidence": "the final act",
+        "paraphrase": "final performance slot → first rehearsal slot",
+        "en": "The singular subject act takes rehearses in the present tense.",
+        "zh": "主语 the final act 为单数，描述固定安排用 rehearses。"
+      },
+      {
+        "id": "read-hall-sound-02",
+        "prompt": "Which sentence fits [2]?",
+        "options": [
+          "That reading depends partly on its position.",
+          "Some tickets include a printed schedule.",
+          "The final act sells programs at the door.",
+          "Hall Two has recently changed its name."
+        ],
+        "answer": "That reading depends partly on its position.",
+        "evidence": "If a microphone is moved after the check",
+        "paraphrase": "moved → change of position",
+        "en": "The next sentence explains what happens to the reading after a microphone moves.",
+        "zh": "后句解释移动麦克风会影响读数，这里先点出位置因素。"
+      },
+      {
+        "id": "read-hall-sound-03",
+        "prompt": "Which word fits [3]?",
+        "options": [
+          "reliable",
+          "spacious",
+          "vacant",
+          "portable"
+        ],
+        "answer": "reliable",
+        "evidence": "If a microphone is moved after the check",
+        "paraphrase": "no longer reliable → may no longer be accurate",
+        "en": "Moving the microphone can make the earlier measurement inaccurate.",
+        "zh": "麦克风位置改变，原来的参考值可能不再可靠。"
+      },
+      {
+        "id": "read-hall-sound-04",
+        "prompt": "Which form fits [4]?",
+        "options": [
+          "admitting",
+          "admission",
+          "admits",
+          "admitted"
+        ],
+        "answer": "admitted",
+        "evidence": "the audience is [4] to the hall",
+        "paraphrase": "is admitted → is allowed in",
+        "en": "The audience receives permission to enter; use the passive is admitted.",
+        "zh": "观众是被允许进入的一方，用被动结构 is admitted。"
+      }
+    ]
+  },
+  {
+    "id": "read-recovery-box",
+    "part": 6,
+    "level": 800,
+    "title": "寄回包装跟踪",
+    "documents": [
+      {
+        "type": "服务说明",
+        "title": "Tracking reusable shipping cases",
+        "text": "Each reusable case has a metal plate carrying a permanent number. The paper shipping label, by [1], changes on every journey. When reporting a lost case, quote the permanent number so we can trace the case across successive orders.\n\nThe collection screen may show an empty date field even after a case has left your premises. [2] The date appears only once the depot scans the plate. A blank field should therefore be treated as [3] rather than as proof that the case is still with you. Retain the driver's receipt until the scan has been [4]."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-recovery-box-01",
+        "prompt": "Which word fits [1]?",
+        "options": [
+          "volume",
+          "measure",
+          "request",
+          "contrast"
+        ],
+        "answer": "contrast",
+        "evidence": "a permanent number",
+        "paraphrase": "permanent versus changing → by contrast",
+        "en": "By contrast introduces the changing paper label as the opposite of the fixed plate.",
+        "zh": "永久编号与每趟更换的纸标签形成对比，by contrast 是固定表达。"
+      },
+      {
+        "id": "read-recovery-box-02",
+        "prompt": "Which sentence fits [2]?",
+        "options": [
+          "A blank field prevents the case from moving.",
+          "The collection date is printed on every plate.",
+          "The driver can issue a new plate in the truck.",
+          "The depot registers cases later."
+        ],
+        "answer": "The depot registers cases later.",
+        "evidence": "only once the depot scans the plate",
+        "paraphrase": "departs before depot scan → two distinct events",
+        "en": "The case can physically leave before the depot registers its receipt.",
+        "zh": "包装箱先离开客户处，再到仓库扫码，实物流转与登记并非同时。"
+      },
+      {
+        "id": "read-recovery-box-03",
+        "prompt": "Which word fits [3]?",
+        "options": [
+          "permanent",
+          "inconclusive",
+          "impossible",
+          "persuasive"
+        ],
+        "answer": "inconclusive",
+        "evidence": "rather than as proof that the case is still with you",
+        "paraphrase": "inconclusive → insufficient to establish a location",
+        "en": "A blank date cannot establish whether the case has been collected.",
+        "zh": "日期为空不足以确定包装箱仍在客户处，inconclusive 表示没有定论。"
+      },
+      {
+        "id": "read-recovery-box-04",
+        "prompt": "Which form fits [4]?",
+        "options": [
+          "record",
+          "recording",
+          "recorded",
+          "records"
+        ],
+        "answer": "recorded",
+        "evidence": "the scan has been",
+        "paraphrase": "has been recorded → entered in the system",
+        "en": "The completed passive action takes has been recorded.",
+        "zh": "扫描记录被录入系统，用现在完成时被动语态 has been recorded。"
+      }
+    ]
+  },
+  {
+    "id": "read-interest-register",
+    "part": 6,
+    "level": 900,
+    "title": "意向登记说明",
+    "documents": [
+      {
+        "type": "采购说明",
+        "title": "Register of potential suppliers",
+        "text": "An entry in our register signals only that a supplier is interested in future work. It neither commits the council to buying goods [1] gives the supplier priority over other bidders. A formal invitation will be issued separately if a project proceeds.\n\nApplicants often attach complete price lists. [2] The panel considers prices only after a specification is available, when comparisons can be made on a common [3]. We therefore ask applicants to describe their capabilities at this stage and to reserve detailed quotations for any tender to which they are [4] invited."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-interest-register-01",
+        "prompt": "Which word fits [1]?",
+        "options": [
+          "or else",
+          "but for",
+          "nor",
+          "than"
+        ],
+        "answer": "nor",
+        "evidence": "It neither commits the council",
+        "paraphrase": "neither … nor → excludes two consequences",
+        "en": "Neither introduces the first negative alternative and pairs with nor.",
+        "zh": "neither 与 nor 配对，表示两种结果都不会发生。"
+      },
+      {
+        "id": "read-interest-register-02",
+        "prompt": "Which sentence fits [2]?",
+        "options": [
+          "Such figures arrive too early to inform a decision.",
+          "Every attachment is binding for the following year.",
+          "The register is limited to suppliers of stationery.",
+          "Bidders are ranked in order of their listed prices."
+        ],
+        "answer": "Such figures arrive too early to inform a decision.",
+        "evidence": "only after a specification is available",
+        "paraphrase": "too early → before specifications permit comparison",
+        "en": "The panel needs a common specification before price figures mean enough to compare.",
+        "zh": "委员会须等规格确定后才比较价格，因此现在提交完整价目表过早。"
+      },
+      {
+        "id": "read-interest-register-03",
+        "prompt": "Which word fits [3]?",
+        "options": [
+          "interval",
+          "occasion",
+          "delivery",
+          "basis"
+        ],
+        "answer": "basis",
+        "evidence": "when comparisons can be made on a common",
+        "paraphrase": "on a common basis → under comparable criteria",
+        "en": "A common basis is a shared standard for comparing prices.",
+        "zh": "common basis 指共同的比较标准。"
+      },
+      {
+        "id": "read-interest-register-04",
+        "prompt": "Which form fits [4]?",
+        "options": [
+          "formal",
+          "formality",
+          "formally",
+          "formalize"
+        ],
+        "answer": "formally",
+        "evidence": "they are [4] invited",
+        "paraphrase": "formally invited → given an official invitation",
+        "en": "Formally is the adverb modifying invited.",
+        "zh": "修饰 invited 用副词 formally，表示获得正式邀请。"
+      }
+    ]
+  },
+  {
+    "id": "read-coat",
+    "part": 7,
+    "level": 400,
+    "title": "衣帽间",
+    "documents": [
+      {
+        "type": "告示",
+        "title": "Coat counter",
+        "text": "Show us your coat ticket when you return. Your ticket has the same number as the hook holding your coat. If you lose it, wait until the counter closes and describe your coat to the attendant. The attendant will then check the remaining coats. The counter closes 20 minutes after the concert ends."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-coat-01",
+        "prompt": "Why does each ticket carry a number?",
+        "options": [
+          "To show a collection time",
+          "To identify a coat",
+          "To indicate a seat row",
+          "To set a storage charge"
+        ],
+        "answer": "To identify a coat",
+        "evidence": "the same number as the hook holding your coat",
+        "paraphrase": "identify → match ticket to hook",
+        "en": "The number matches the ticket with the hook where the coat hangs.",
+        "zh": "编号对应挂钩，用来找到正确的外套。"
+      },
+      {
+        "id": "read-coat-02",
+        "prompt": "When can people without a ticket claim a coat?",
+        "options": [
+          "Before the doors open",
+          "After the counter closes",
+          "While the concert is on",
+          "At the start of the interval"
+        ],
+        "answer": "After the counter closes",
+        "evidence": "wait until the counter closes",
+        "paraphrase": "claim after closing → wait until the counter closes",
+        "en": "Anyone who has lost a ticket must wait until closing and describe the coat.",
+        "zh": "遗失票据的人要等柜台关闭，再描述外套认领。"
+      }
+    ]
+  },
+  {
+    "id": "read-water",
+    "part": 7,
+    "level": 400,
+    "title": "饮水设施",
+    "documents": [
+      {
+        "type": "便签",
+        "title": "Message for the morning crew",
+        "text": "The water jug on the meeting table is empty. Please fill it from the kitchen tap before the visitors arrive at ten. The glasses are already on the table. After the meeting, take both the jug and the glasses to the kitchen sink. I will wash them after lunch.\n\nMila"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-water-01",
+        "prompt": "What should staff do before ten?",
+        "options": [
+          "Clear the table",
+          "Fill the jug",
+          "Set out the plates",
+          "Wash the glasses"
+        ],
+        "answer": "Fill the jug",
+        "evidence": "fill it from the kitchen tap before the visitors arrive at ten",
+        "paraphrase": "before ten → before visitors arrive",
+        "en": "The message asks staff to fill the jug before the ten o'clock visit.",
+        "zh": "访客十点到，员工需在这之前装好水。"
+      },
+      {
+        "id": "read-water-02",
+        "prompt": "Who will wash the glasses?",
+        "options": [
+          "The arriving visitors",
+          "The morning crew",
+          "The kitchen manager",
+          "Mila"
+        ],
+        "answer": "Mila",
+        "evidence": "I will wash them after lunch.",
+        "paraphrase": "I → the writer, Mila",
+        "en": "Mila signs the message and volunteers to wash the items herself.",
+        "zh": "署名的 Mila 说午餐后会亲自清洗。"
+      }
+    ]
+  },
+  {
+    "id": "read-photos",
+    "part": 7,
+    "level": 400,
+    "title": "展览摄影",
+    "documents": [
+      {
+        "type": "告示",
+        "title": "Photos in the craft room",
+        "text": "You may photograph the finished bowls on the central table. Please leave the flash off. The photographs on the walls belong to local artists; please do not photograph those works. At the shop beside the exit you can buy postcards showing several of the wall photographs."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-photos-01",
+        "prompt": "What may visitors photograph?",
+        "options": [
+          "Finished bowls",
+          "Anything near the exit",
+          "Local artists at work",
+          "Pictures on the walls"
+        ],
+        "answer": "Finished bowls",
+        "evidence": "photograph the finished bowls on the central table",
+        "paraphrase": "finished bowls → items on the central table",
+        "en": "Only the bowls are expressly offered for visitors to photograph.",
+        "zh": "告示明确允许拍摄中央桌上的成品碗。"
+      },
+      {
+        "id": "read-photos-02",
+        "prompt": "What can visitors buy at the shop?",
+        "options": [
+          "Tickets for a local class",
+          "The central display table",
+          "Printed postcards",
+          "Flash photography equipment"
+        ],
+        "answer": "Printed postcards",
+        "evidence": "you can buy postcards showing several of the wall photographs",
+        "paraphrase": "printed postcards → cards showing the photographs",
+        "en": "The shop sells postcards featuring some works on the walls.",
+        "zh": "商店出售部分墙上摄影作品的明信片。"
+      }
+    ]
+  },
+  {
+    "id": "read-keys",
+    "part": 7,
+    "level": 400,
+    "title": "钥匙交接",
+    "documents": [
+      {
+        "type": "聊天记录",
+        "title": "Studio desk · Monday",
+        "text": "Jules: Who has the key to the little supply cupboard?\nAna: I do. I'm downstairs by the vending machine. Are you coming this way?\nJules: No, a driver is waiting for me at the desk.\nAna: Stay there. I'll bring it up now.\nJules: Thanks. The driver needs a pen."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-keys-01",
+        "prompt": "Where is Ana at the start of the chat?",
+        "options": [
+          "At the delivery entrance",
+          "At the front desk",
+          "Inside the supply cupboard",
+          "By a vending machine"
+        ],
+        "answer": "By a vending machine",
+        "evidence": "I'm downstairs by the vending machine.",
+        "paraphrase": "by → next to",
+        "en": "Ana states her location in her first reply.",
+        "zh": "Ana 的第一条回复说明她在楼下自动售货机旁。"
+      },
+      {
+        "id": "read-keys-02",
+        "prompt": "What does “Stay there” suggest?",
+        "options": [
+          "Jules should buy a drink.",
+          "The driver should come back later.",
+          "Ana will deliver the key.",
+          "Ana needs the cupboard cleared."
+        ],
+        "answer": "Ana will deliver the key.",
+        "evidence": "I'll bring it up now.",
+        "paraphrase": "bring it up → take the key to Jules",
+        "en": "Ana tells Jules to wait because she will bring the key upstairs herself.",
+        "zh": "Ana 自己会上楼送钥匙，因此让 Jules 留在原处。"
+      }
+    ]
+  },
+  {
+    "id": "read-bags",
+    "part": 7,
+    "level": 400,
+    "title": "行李袋促销",
+    "documents": [
+      {
+        "type": "广告",
+        "title": "A smaller bag for shorter trips",
+        "text": "Our Weekender bag holds a change of clothes and a pair of shoes. Each bag comes with a removable shoulder strap. Choose black or blue at either branch. Green bags are available only from the website. Orders placed online by noon qualify for same-day dispatch; delivery time depends on your address."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-bags-01",
+        "prompt": "Which color requires an online order?",
+        "options": [
+          "Blue",
+          "Black",
+          "Every available color",
+          "Green"
+        ],
+        "answer": "Green",
+        "evidence": "Green bags are available only from the website.",
+        "paraphrase": "only from the website → must order online",
+        "en": "The shop branches carry black and blue, while green is web-only.",
+        "zh": "两家门店售黑蓝两色，绿色只在网上出售。"
+      },
+      {
+        "id": "read-bags-02",
+        "prompt": "What is included with each bag?",
+        "options": [
+          "A spare set of clothes",
+          "A shoulder strap",
+          "A printed address list",
+          "A second pair of shoes"
+        ],
+        "answer": "A shoulder strap",
+        "evidence": "comes with a removable shoulder strap",
+        "paraphrase": "included → comes with",
+        "en": "A strap accompanies the bag and can be removed.",
+        "zh": "每个包都配有可拆卸肩带。"
+      }
+    ]
+  },
+  {
+    "id": "read-flowers",
+    "part": 7,
+    "level": 400,
+    "title": "花店收件",
+    "documents": [
+      {
+        "type": "邮件",
+        "title": "Subject: Vase collection",
+        "text": "Dear Ms. Park,\n\nThe flowers will reach your office on Friday morning. The glass vase is ours. When the flowers are no longer on display, call the number on the tag. We will send someone to pick up the empty vase. The collection fee is already included in your order.\n\nLena, Reed Flowers"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-flowers-01",
+        "prompt": "What is the main purpose of the email?",
+        "options": [
+          "To request an earlier payment",
+          "To offer another flower order",
+          "To explain a vase return",
+          "To cancel a Friday delivery"
+        ],
+        "answer": "To explain a vase return",
+        "evidence": "We will send someone to pick up the empty vase.",
+        "paraphrase": "vase return → pickup of the empty vase",
+        "en": "The message explains who owns the vase and how the customer can return it.",
+        "zh": "邮件主要说明花瓶的所有权与归还方式。"
+      },
+      {
+        "id": "read-flowers-02",
+        "prompt": "What should Ms. Park do after the display ends?",
+        "options": [
+          "Call the number on the tag.",
+          "Buy a new glass container.",
+          "Pay the driver a second fee.",
+          "Take the vase to the store."
+        ],
+        "answer": "Call the number on the tag.",
+        "evidence": "call the number on the tag",
+        "paraphrase": "after the display ends → when flowers are no longer on display",
+        "en": "Calling the tagged number arranges the collection.",
+        "zh": "花不再展出后，应打标签上的电话安排取回。"
+      }
+    ]
+  },
+  {
+    "id": "read-mixer",
+    "part": 7,
+    "level": 400,
+    "title": "搅拌器借用",
+    "documents": [
+      {
+        "type": "申请回复",
+        "title": "Equipment desk reply",
+        "text": "Your request for a small mixer has been accepted. Collect it from the equipment desk on Tuesday. A metal bowl comes with the mixer. Bring the mixer and bowl back together on Friday before four. Wipe the bowl dry before you pack it. There is no charge for this loan."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-mixer-01",
+        "prompt": "What must be returned with the mixer?",
+        "options": [
+          "The receipt for a fee",
+          "A small kitchen towel",
+          "A signed equipment list",
+          "A bowl"
+        ],
+        "answer": "A bowl",
+        "evidence": "Bring the mixer and bowl back together",
+        "paraphrase": "with the mixer → together",
+        "en": "The reply tells the borrower to bring the bowl back with the mixer.",
+        "zh": "搅拌器和配套金属碗要一起归还。"
+      },
+      {
+        "id": "read-mixer-02",
+        "prompt": "Which detail is NOT mentioned?",
+        "options": [
+          "The loan charge",
+          "The return deadline",
+          "The mixer's color",
+          "The collection day"
+        ],
+        "answer": "The mixer's color",
+        "evidence": "Your request for a small mixer has been accepted.",
+        "paraphrase": "small → size, not color",
+        "en": "The reply gives the days, deadline and fee and identifies the size, but never specifies a color.",
+        "zh": "正文给出领取日、截止时间与费用，只提到尺寸，未说明颜色。"
+      }
+    ]
+  },
+  {
+    "id": "read-minute",
+    "part": 7,
+    "level": 500,
+    "title": "简短会议安排",
+    "documents": [
+      {
+        "type": "邮件",
+        "title": "Subject: Ten minutes at the desk",
+        "text": "We will meet at the dispatch desk at 8:40 tomorrow. Please leave your parcel list there this evening; I want to check it before we meet. Our usual meeting room is booked for new-staff training. We will finish by 8:50, in time for the vans to leave at nine.\n\nMorgan"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-minute-01",
+        "prompt": "Why was the dispatch desk chosen?",
+        "options": [
+          "The usual room is booked.",
+          "Parcel lists are stored upstairs.",
+          "A van will park at the desk.",
+          "The training session is over."
+        ],
+        "answer": "The usual room is booked.",
+        "evidence": "Our usual meeting room is booked for new-staff training.",
+        "paraphrase": "booked → already reserved",
+        "en": "Training will occupy the normal meeting room.",
+        "zh": "原会议室已被新人培训预订，因此改在调度台碰面。"
+      },
+      {
+        "id": "read-minute-02",
+        "prompt": "When does Morgan want the parcel list?",
+        "options": [
+          "At nine tomorrow",
+          "During the training",
+          "This evening",
+          "After the vans depart"
+        ],
+        "answer": "This evening",
+        "evidence": "leave your parcel list there this evening",
+        "paraphrase": "there → the dispatch desk",
+        "en": "Morgan wants time to check the list before the morning meeting.",
+        "zh": "Morgan 想在早会前检查清单，所以要求今晚留下。"
+      }
+    ]
+  },
+  {
+    "id": "read-receipt",
+    "part": 7,
+    "level": 500,
+    "title": "收据补开",
+    "documents": [
+      {
+        "type": "网页说明",
+        "title": "Requesting a receipt copy",
+        "text": "Enter the date shown on your bank statement and the amount charged.\nWe use these details to locate the sale.\n\nIf you bought several items in one transaction, enter the total rather than a price for each item. A copy will be emailed within two working days. This service covers purchases made in our stores only."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-receipt-01",
+        "prompt": "The word “locate” in paragraph 1, line 2, is closest in meaning to which option?",
+        "options": [
+          "Advertise",
+          "Find",
+          "Approve",
+          "Complete"
+        ],
+        "answer": "Find",
+        "evidence": "locate the sale",
+        "paraphrase": "locate a sale → find its record",
+        "en": "Staff use the date and amount to find a particular sale in their records.",
+        "zh": "工作人员用日期和金额查到相应的销售记录，locate 在此为“找到”。"
+      },
+      {
+        "id": "read-receipt-02",
+        "prompt": "Which purchase qualifies for this service?",
+        "options": [
+          "A purchase in a store",
+          "An order placed by post",
+          "A purchase from a partner",
+          "Any sale on the website"
+        ],
+        "answer": "A purchase in a store",
+        "evidence": "covers purchases made in our stores only",
+        "paraphrase": "in-store → made in our stores",
+        "en": "The final sentence limits the service to store purchases.",
+        "zh": "末句说明服务仅适用于门店购买。"
+      }
+    ]
+  },
+  {
+    "id": "read-uniforms",
+    "part": 7,
+    "level": 500,
+    "title": "工装试穿",
+    "documents": [
+      {
+        "type": "公告",
+        "title": "Uniform fitting on Wednesday",
+        "text": "A tailor will visit the staff room from noon until three. You can try on sample jackets there and record the size you want. Please wear the shirt you normally wear at work so the tailor can check the fit. The samples must stay in the staff room; the jackets you order will arrive next month."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-uniforms-01",
+        "prompt": "Why should staff wear their usual work shirts?",
+        "options": [
+          "To choose a matching shirt",
+          "To check the jacket fit",
+          "To leave a sample for sewing",
+          "To identify their department"
+        ],
+        "answer": "To check the jacket fit",
+        "evidence": "so the tailor can check the fit",
+        "paraphrase": "check the fit → see how the jacket sits over clothing",
+        "en": "Wearing the usual shirt lets the tailor assess the jacket in its normal setting.",
+        "zh": "穿日常工作衬衫有助于检查外套平时穿着时是否合身。"
+      },
+      {
+        "id": "read-uniforms-02",
+        "prompt": "Which statement is true?",
+        "options": [
+          "Samples stay in the staff room.",
+          "Workers should order a new shirt first.",
+          "Staff can collect jackets on Wednesday.",
+          "The tailor will measure staff before noon."
+        ],
+        "answer": "Samples stay in the staff room.",
+        "evidence": "The samples must stay in the staff room",
+        "paraphrase": "stay → remain on site",
+        "en": "The jackets on display are samples; actual orders arrive next month.",
+        "zh": "试穿样衣留在员工休息室，订购的外套下月到。"
+      }
+    ]
+  },
+  {
+    "id": "read-sound-check",
+    "part": 7,
+    "level": 500,
+    "title": "导览机故障",
+    "documents": [
+      {
+        "type": "聊天记录",
+        "title": "Museum desk · afternoon",
+        "text": "Nell: I tested guide 14. The screen lights up, but the headphones are silent.\nOmar: Try the headphones from guide 15.\nNell: I can hear the tour now.\nOmar: Then leave 14 on the counter with the working pair. Put the silent pair in the repair tray.\nNell: Done. I will fetch another pair for 15."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-sound-check-01",
+        "prompt": "What does Nell mean by “I can hear the tour now”?",
+        "options": [
+          "The tour group has arrived.",
+          "Guide 15 has lost its recording.",
+          "Guide 14 needs a new screen.",
+          "The other headphones work."
+        ],
+        "answer": "The other headphones work.",
+        "evidence": "Try the headphones from guide 15.",
+        "paraphrase": "other headphones → the pair from guide 15",
+        "en": "Nell reports success immediately after trying the second pair.",
+        "zh": "Nell 是在换上 15 号机的耳机后听到了讲解，说明那副耳机正常。"
+      },
+      {
+        "id": "read-sound-check-02",
+        "prompt": "What will Nell do next?",
+        "options": [
+          "Get headphones for guide 15.",
+          "Change the recording on guide 14.",
+          "Take the screen to a repair shop.",
+          "Leave the silent pair at the till."
+        ],
+        "answer": "Get headphones for guide 15.",
+        "evidence": "I will fetch another pair for 15.",
+        "paraphrase": "fetch → go and get",
+        "en": "Nell's last message states her next action.",
+        "zh": "末句说明她接下来会为 15 号导览机再取一副耳机。"
+      }
+    ]
+  },
+  {
+    "id": "read-bins",
+    "part": 7,
+    "level": 500,
+    "title": "搬办公室打包",
+    "documents": [
+      {
+        "type": "清单",
+        "title": "Move-day box labels",
+        "text": "Write a room number on the top of every box. Files that staff will need on the first morning should go into boxes with a yellow strip. We will open those first. Pack framed pictures separately and write GLASS on those boxes. A box may carry both a room number and a handling instruction."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-bins-01",
+        "prompt": "What does a yellow strip mean?",
+        "options": [
+          "Check this box for glass.",
+          "Open this box first.",
+          "Send this box to storage.",
+          "Keep this box upright."
+        ],
+        "answer": "Open this box first.",
+        "evidence": "We will open those first.",
+        "paraphrase": "those → yellow-strip boxes",
+        "en": "Files needed on the first morning go into boxes marked to be opened first.",
+        "zh": "黄条箱放第一天早上要用的文件，需要先打开。"
+      },
+      {
+        "id": "read-bins-02",
+        "prompt": "Which instruction applies to every box?",
+        "options": [
+          "Wrap framed pictures inside.",
+          "Add its room number.",
+          "Mark the top with GLASS.",
+          "Leave its lid partly open."
+        ],
+        "answer": "Add its room number.",
+        "evidence": "Write a room number on the top of every box.",
+        "paraphrase": "every box → all packed boxes",
+        "en": "Room numbers go on all boxes, regardless of content.",
+        "zh": "不论箱内装什么，所有箱顶都须标房间号。"
+      }
+    ]
+  },
+  {
+    "id": "read-coupon",
+    "part": 7,
+    "level": 500,
+    "title": "早餐券使用",
+    "documents": [
+      {
+        "type": "优惠券",
+        "title": "Ridge Café · Breakfast offer",
+        "text": "Present this card before ordering at the counter to receive a free small juice with any hot breakfast. One card per breakfast. The offer is available on weekdays until 10:30 a.m. It cannot be used with table service. The juice may be taken away in a paper cup."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-coupon-01",
+        "prompt": "Which customer can use the card?",
+        "options": [
+          "A weekday counter customer at noon",
+          "A weekday table customer at ten",
+          "A Sunday counter customer at eight",
+          "A weekday counter customer at nine"
+        ],
+        "answer": "A weekday counter customer at nine",
+        "evidence": "on weekdays until 10:30 a.m.",
+        "paraphrase": "weekday counter customer at nine → within the offer period and service",
+        "en": "The customer must order a hot breakfast at the counter on a weekday before the cutoff.",
+        "zh": "要在工作日上午截止前于柜台点热早餐，只有工作日九点的柜台顾客符合。"
+      },
+      {
+        "id": "read-coupon-02",
+        "prompt": "What does the offer provide?",
+        "options": [
+          "A small juice",
+          "A free hot breakfast",
+          "A second breakfast card",
+          "A discount on table service"
+        ],
+        "answer": "A small juice",
+        "evidence": "a free small juice with any hot breakfast",
+        "paraphrase": "provide → include at no extra cost",
+        "en": "The card adds a free small juice to a hot breakfast purchase.",
+        "zh": "优惠券附送的是小杯果汁。"
+      }
+    ]
+  },
+  {
+    "id": "read-bench",
+    "part": 7,
+    "level": 600,
+    "title": "长椅搬移",
+    "documents": [
+      {
+        "type": "通知",
+        "title": "A new place for the reading bench",
+        "text": "The long bench near the newspaper stand will move to the window on Friday. [1] At its present location, the bench blocks a cupboard whenever someone sits at the left end. [2] Staff need to open that cupboard several times a day. [3] An outlet by the new spot will also let visitors charge a phone while reading. [4] The newspaper stand itself will stay where it is."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-bench-01",
+        "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? “Moving it will give staff uninterrupted access.”",
+        "options": [
+          "At [3]",
+          "At [1]",
+          "At [4]",
+          "At [2]"
+        ],
+        "answer": "At [3]",
+        "evidence": "Staff need to open that cupboard several times a day.",
+        "paraphrase": "uninterrupted access → ability to open the cupboard freely",
+        "en": "The added line resolves the cupboard problem after its frequency is explained. The next sentence adds another benefit.",
+        "zh": "先说明柜门受阻且每天要打开多次，[3] 处说明搬走后的改善，再用 also 引出另一个好处。"
+      },
+      {
+        "id": "read-bench-02",
+        "prompt": "Which item will remain in its current position?",
+        "options": [
+          "The long reading bench",
+          "The newspaper stand",
+          "The left end of the bench",
+          "The visitors' phone table"
+        ],
+        "answer": "The newspaper stand",
+        "evidence": "The newspaper stand itself will stay where it is.",
+        "paraphrase": "remain in its current position → stay where it is",
+        "en": "The final sentence explicitly leaves the stand in place.",
+        "zh": "末句明确指出报刊架不会移动。"
+      }
+    ]
+  },
+  {
+    "id": "read-stair",
+    "part": 7,
+    "level": 600,
+    "title": "指引牌设计反馈",
+    "documents": [
+      {
+        "type": "客户反馈",
+        "title": "Feedback on direction signs",
+        "text": "The new entrance sign is easy to spot from the street. Inside, however, the arrow for the upstairs office points toward a closed door. [1] I tried the handle twice before a cleaner showed me the stairs behind the reception counter. [2] I suggest adding the word “stairs” and turning the arrow to the right. [3] New visitors could then follow the sign without asking for help. [4]\n\nM. Davis"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-stair-01",
+        "prompt": "Why did Davis try the door handle?",
+        "options": [
+          "A cleaner had left a note on it.",
+          "The office was behind the door.",
+          "An arrow pointed to the door.",
+          "The reception desk was closed."
+        ],
+        "answer": "An arrow pointed to the door.",
+        "evidence": "the arrow for the upstairs office points toward a closed door",
+        "paraphrase": "misleading arrow → reason for trying the door",
+        "en": "The existing arrow seems to direct a visitor toward the closed door.",
+        "zh": "指示上楼的箭头指向关着的门，导致 Davis 试着开门。"
+      },
+      {
+        "id": "read-stair-02",
+        "prompt": "Where does “With those two changes, the sign would name the route and point toward it.” fit best?",
+        "options": [
+          "At [3]",
+          "At [2]",
+          "At [4]",
+          "At [1]"
+        ],
+        "answer": "At [3]",
+        "evidence": "adding the word “stairs” and turning the arrow to the right",
+        "paraphrase": "those two changes → adding a word and rotating the arrow",
+        "en": "The proposed changes are introduced together immediately before [3]. The word then in the next sentence links them to a benefit for visitors.",
+        "zh": "[3] 前刚说加 stairs 和右转箭头两项修改，those two changes 紧接它们，下一句说明访客会怎样受益。"
+      }
+    ]
+  },
+  {
+    "id": "read-calendar",
+    "part": 7,
+    "level": 600,
+    "title": "培训日历筛选",
+    "documents": [
+      {
+        "type": "帮助页面",
+        "title": "Viewing the training calendar",
+        "text": "The calendar initially lists every session, including those that are full. Select “Open seats” to show only sessions that can still accept bookings. A gray date indicates a session that has ended, not a full session. To read the notes from an earlier workshop, turn off the filter and select its gray date. Notes are available even to staff who did not attend."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-calendar-01",
+        "prompt": "What should staff do to see a past workshop's notes?",
+        "options": [
+          "Contact the session leader.",
+          "Book an open seat first.",
+          "Remove the filter.",
+          "Choose any future gray date."
+        ],
+        "answer": "Remove the filter.",
+        "evidence": "turn off the filter and select its gray date",
+        "paraphrase": "remove the filter → turn it off",
+        "en": "Past workshops can be found by clearing the open-seat filter and selecting a gray date.",
+        "zh": "要看过往记录，先关掉空位筛选，再选灰色日期。"
+      },
+      {
+        "id": "read-calendar-02",
+        "prompt": "Which detail is NOT stated?",
+        "options": [
+          "How long notes stay online",
+          "What a gray date indicates",
+          "How to filter by availability",
+          "Who can read workshop notes"
+        ],
+        "answer": "How long notes stay online",
+        "evidence": "Notes are available even to staff who did not attend.",
+        "paraphrase": "access described → retention period unspecified",
+        "en": "The notice says who may read notes and how to find them, but gives no retention period.",
+        "zh": "说明给出了查找方法与访问权限，未交代笔记保留多久。"
+      }
+    ]
+  },
+  {
+    "id": "read-blade",
+    "part": 7,
+    "level": 600,
+    "title": "刀片来货抽检",
+    "documents": [
+      {
+        "type": "备忘录",
+        "title": "A check on replacement blades",
+        "text": "A carton contains ten sealed packs of blades. Take one pack from each carton for testing and leave the other nine sealed. If the tested pack passes, stamp the carton with the date. If it fails, move the entire carton to the inspection bay. Do not stamp it. The date stamp allows warehouse staff to distinguish approved stock from cartons still awaiting a test."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-blade-01",
+        "prompt": "What happens after a pack fails the test?",
+        "options": [
+          "Its blades are mixed with new ones.",
+          "Its carton goes to inspection.",
+          "Its nine other packs are sold first.",
+          "Its carton receives a date stamp."
+        ],
+        "answer": "Its carton goes to inspection.",
+        "evidence": "move the entire carton to the inspection bay",
+        "paraphrase": "entire carton → failed pack and remaining packs",
+        "en": "Failure sends the whole carton, not just the tested pack, to the inspection bay.",
+        "zh": "样包未通过时，整箱都要移到检查区。"
+      },
+      {
+        "id": "read-blade-02",
+        "prompt": "In the last sentence, “distinguish” most nearly means what?",
+        "options": [
+          "Write down",
+          "Deliver early",
+          "Tell apart",
+          "Put together"
+        ],
+        "answer": "Tell apart",
+        "evidence": "distinguish approved stock from cartons still awaiting a test",
+        "paraphrase": "distinguish A from B → tell A and B apart",
+        "en": "The stamp lets staff recognize which cartons have passed.",
+        "zh": "日期戳让员工分辨哪些箱子已获通过。"
+      }
+    ]
+  },
+  {
+    "id": "read-grant",
+    "part": 7,
+    "level": 600,
+    "title": "园艺补助",
+    "documents": [
+      {
+        "type": "网页答疑",
+        "title": "Small garden awards",
+        "text": "Can two teams apply for one award? Yes, provided they name one contact person. We communicate with that person throughout the project. Awards cover seeds and hand tools. Land rental is outside the scheme. You may apply before your site is ready, but you must include the landowner's written permission with the form. Payment is made after a successful applicant submits receipts."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-grant-01",
+        "prompt": "Which cost is outside the award?",
+        "options": [
+          "Obtaining vegetable seeds",
+          "Purchasing flower seeds",
+          "Renting the land",
+          "Buying hand tools"
+        ],
+        "answer": "Renting the land",
+        "evidence": "Land rental is outside the scheme.",
+        "paraphrase": "outside → excluded from coverage",
+        "en": "The rules include seeds and tools but exclude land rental.",
+        "zh": "规则包含种子与手工具费用，明确排除地租。"
+      },
+      {
+        "id": "read-grant-02",
+        "prompt": "What must a joint application include?",
+        "options": [
+          "One named contact person",
+          "Two completed planting sites",
+          "A separate award for each team",
+          "Receipts for the entire project"
+        ],
+        "answer": "One named contact person",
+        "evidence": "provided they name one contact person",
+        "paraphrase": "joint application → two teams applying together",
+        "en": "Teams may apply together if they designate one person for communications.",
+        "zh": "两队共同申请的条件是指定一名联系人。"
+      }
+    ]
+  },
+  {
+    "id": "read-packing-paper",
+    "part": 7,
+    "level": 600,
+    "title": "填充纸试用报告",
+    "documents": [
+      {
+        "type": "实验摘要",
+        "title": "Packing trial, batch 2",
+        "text": "We sent three identical cups in each box. For the first ten boxes, we used loose paper as padding; for the next ten, we used folded paper sleeves. Two cups broke in the loose-paper boxes. None broke in the sleeve boxes. However, packing a sleeve box took four minutes longer. A second trial will test whether preparing sleeves the day before reduces packing time."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-packing-paper-01",
+        "prompt": "What is one drawback of the sleeves?",
+        "options": [
+          "They cannot be made in advance.",
+          "They leave more cups broken.",
+          "They require heavier cups.",
+          "They slow down packing."
+        ],
+        "answer": "They slow down packing.",
+        "evidence": "packing a sleeve box took four minutes longer",
+        "paraphrase": "drawback → extra packing time",
+        "en": "The sleeves protected the cups, but packing took longer.",
+        "zh": "纸套虽保护了杯子，打包却耗时更长。"
+      },
+      {
+        "id": "read-packing-paper-02",
+        "prompt": "What will the next trial examine?",
+        "options": [
+          "Preparing sleeves earlier",
+          "Replacing the cups with bottles",
+          "Using fewer cups in each box",
+          "Changing the size of the cups"
+        ],
+        "answer": "Preparing sleeves earlier",
+        "evidence": "preparing sleeves the day before reduces packing time",
+        "paraphrase": "earlier → the day before",
+        "en": "The trial will change when sleeves are prepared and check the effect on packing time.",
+        "zh": "下一轮会提前一天准备纸套，观察是否能缩短打包时间。"
+      }
+    ]
+  },
+  {
+    "id": "read-dispatch-rule",
+    "part": 7,
+    "level": 700,
+    "title": "回收箱取货条款",
+    "documents": [
+      {
+        "type": "服务条款",
+        "title": "When a collection counts as attempted",
+        "text": "A collection counts as attempted only if the driver reaches the listed address during the agreed window and finds no cases ready. We then charge a second-trip fee for a new booking. If the driver arrives after the window, we rearrange the visit without a fee, even if no cases are ready on arrival. A photograph of the stop records the time and address; it does not show whether the cases were ready."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-dispatch-rule-01",
+        "prompt": "Which visit can lead to a second-trip fee?",
+        "options": [
+          "On time, with no cases ready",
+          "Late, with no cases ready",
+          "Late, with cases ready",
+          "On time, with cases ready"
+        ],
+        "answer": "On time, with no cases ready",
+        "evidence": "during the agreed window and finds no cases ready",
+        "paraphrase": "on time plus no cases → qualifying attempt",
+        "en": "Both conditions in the first sentence must apply before the fee is charged.",
+        "zh": "只有按时到达且箱子未备好同时成立，才会收二次上门费。"
+      },
+      {
+        "id": "read-dispatch-rule-02",
+        "prompt": "What can the photograph establish?",
+        "options": [
+          "How many cases were ready",
+          "When the driver stopped",
+          "Whether a fee was paid",
+          "Why the cases were missing"
+        ],
+        "answer": "When the driver stopped",
+        "evidence": "records the time and address",
+        "paraphrase": "when → recorded time",
+        "en": "The image records time and address but does not verify the readiness of cases.",
+        "zh": "照片记录时间、地址，无法证明箱子是否准备好。"
+      }
+    ]
+  },
+  {
+    "id": "read-courtyard",
+    "part": 7,
+    "level": 700,
+    "title": "庭院投票结果",
+    "documents": [
+      {
+        "type": "会议纪要",
+        "title": "Courtyard options",
+        "text": "Twenty tenants voted for benches and twelve for planters. The committee supported the more popular choice, subject to an access check. The marked fire lane must remain clear at all times. If a bench cannot fit outside the lane, the committee will reconsider planters, which can stand on the narrow ledge. No purchase order has been issued; the access check is booked for Friday."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-courtyard-01",
+        "prompt": "What remains uncertain?",
+        "options": [
+          "When the access check will occur",
+          "Which option won more votes",
+          "Where planters could be placed",
+          "Whether a bench can fit safely"
+        ],
+        "answer": "Whether a bench can fit safely",
+        "evidence": "subject to an access check",
+        "paraphrase": "conditional support → final feasibility unknown",
+        "en": "Benches won the vote, but the access check must establish whether there is enough space.",
+        "zh": "长椅票数领先，最终能否放下还要等通行检查。"
+      },
+      {
+        "id": "read-courtyard-02",
+        "prompt": "In the third sentence, what does “clear” mean?",
+        "options": [
+          "Transparent",
+          "Unobstructed",
+          "Unclouded",
+          "Unmistakable"
+        ],
+        "answer": "Unobstructed",
+        "evidence": "fire lane must remain clear",
+        "paraphrase": "clear lane → unobstructed passage",
+        "en": "A fire lane must be free of objects that block movement.",
+        "zh": "消防通道必须保持畅通，此处 clear 指没有障碍物。"
+      }
+    ]
+  },
+  {
+    "id": "read-archive",
+    "part": 7,
+    "level": 700,
+    "title": "档案查阅申请",
+    "documents": [
+      {
+        "type": "网站说明",
+        "title": "Requesting archived minutes",
+        "text": "Our printed index gives each folder a shelf code. To request a folder, enter that code exactly as printed, including the final letter. Two folders can have the same number but different letters. Requests received by Thursday noon are prepared for Friday viewing. Later requests go into the following week's batch. A booking lets you view the folder on site; permission to copy its contents must be requested separately."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-archive-01",
+        "prompt": "Why must a requester enter the final letter?",
+        "options": [
+          "Codes change each Friday.",
+          "The shelves lack numbers.",
+          "Numbers may be shared.",
+          "Letters mark copying rights."
+        ],
+        "answer": "Numbers may be shared.",
+        "evidence": "Two folders can have the same number but different letters.",
+        "paraphrase": "may be shared → can be the same",
+        "en": "The letter distinguishes folders that share the numeric part of a code.",
+        "zh": "不同文件夹可能号码相同，末尾字母可区分它们。"
+      },
+      {
+        "id": "read-archive-02",
+        "prompt": "What does an ordinary booking allow?",
+        "options": [
+          "Viewing the folder on site",
+          "Borrowing a folder for a week",
+          "Photocopying an entire folder",
+          "Receiving a folder by email"
+        ],
+        "answer": "Viewing the folder on site",
+        "evidence": "lets you view the folder on site",
+        "paraphrase": "ordinary booking → permission to view",
+        "en": "The viewing booking grants access on site. Copying requires further permission.",
+        "zh": "常规预约只允许现场查阅，复制须另申请。"
+      }
+    ]
+  },
+  {
+    "id": "read-refund",
+    "part": 7,
+    "level": 800,
+    "title": "项目款退付",
+    "documents": [
+      {
+        "type": "客户服务回复",
+        "title": "Response to a dual payment",
+        "text": "Our system shows a deposit and a balance payment, both charged to the same card. We will refund only the deposit, since a voucher covered that portion of the order. The balance was due in cash or by card. Your bank may list the refund as a separate credit rather than deleting the original deposit entry. If both the original charge and a matching credit appear, you have already received the refund."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-refund-01",
+        "prompt": "What explains the refund?",
+        "options": [
+          "Both charges used the same card.",
+          "The balance had to be paid in cash.",
+          "A voucher covered the deposit.",
+          "The bank rejected a second payment."
+        ],
+        "answer": "A voucher covered the deposit.",
+        "evidence": "a voucher covered that portion of the order",
+        "paraphrase": "that portion → the deposit",
+        "en": "The voucher covers the deposit portion, so that earlier card charge is returned.",
+        "zh": "代金券覆盖定金部分，因此退还该笔刷卡金额。"
+      },
+      {
+        "id": "read-refund-02",
+        "prompt": "In the fourth sentence, “credit” refers to what?",
+        "options": [
+          "A customer's reputation",
+          "A borrowing limit",
+          "A supplier reference",
+          "A returned amount"
+        ],
+        "answer": "A returned amount",
+        "evidence": "list the refund as a separate credit",
+        "paraphrase": "credit → money added back to the account",
+        "en": "Here a credit is an entry returning money to the card account.",
+        "zh": "此处 credit 指把退款记回卡账户的贷记金额。"
+      }
+    ]
+  },
+  {
+    "id": "read-guarantee",
+    "part": 7,
+    "level": 800,
+    "title": "演出票保留",
+    "documents": [
+      {
+        "type": "票务规定",
+        "title": "Provisional allocations",
+        "text": "A provisional allocation reserves seats for a group until its stated deadline. During that period the organizer can reduce the quantity without charge. After confirmation, however, each reduction is treated as a cancellation for the seats released. A reduction made before confirmation does not alter the deadline for the remaining seats. Unconfirmed seats lapse automatically at that deadline even if the group has already reduced its order.\nFor example, an organizer holding forty seats until Friday can release ten on Wednesday. The remaining thirty still need confirmation by Friday. The sales office will answer questions about the booking during that interval, but an inquiry by itself does not count as confirmation."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-guarantee-01",
+        "prompt": "What follows an early reduction of an unconfirmed allocation?",
+        "options": [
+          "The original deadline still applies.",
+          "A cancellation charge is immediately due.",
+          "All seats return to general sale at once.",
+          "The remaining seats become confirmed."
+        ],
+        "answer": "The original deadline still applies.",
+        "evidence": "does not alter the deadline for the remaining seats",
+        "paraphrase": "does not alter → leaves unchanged",
+        "en": "A smaller provisional allocation retains its existing confirmation deadline.",
+        "zh": "尚未确认前减少数量，不会改变剩余座位的确认期限。"
+      },
+      {
+        "id": "read-guarantee-02",
+        "prompt": "Which statement is NOT true?",
+        "options": [
+          "An organizer may trim a provisional order.",
+          "Reducing an order renews its deadline.",
+          "Confirmed reductions count as cancellations.",
+          "Unconfirmed seats expire automatically."
+        ],
+        "answer": "Reducing an order renews its deadline.",
+        "evidence": "does not alter the deadline",
+        "paraphrase": "renew → extend, contrary to the explicit rule",
+        "en": "The text explicitly says an early reduction leaves the deadline unchanged.",
+        "zh": "正文明确说提前减少座位不改变截止时间，所以声称可续期的选项错误。"
+      }
+    ]
+  },
+  {
+    "id": "read-market",
+    "part": 7,
+    "level": 800,
+    "title": "市场摊位候补",
+    "documents": [
+      {
+        "type": "来信",
+        "title": "Reply from the market coordinator",
+        "text": "Your application arrived one day before that of Hazel Press. Within a product category we normally offer a vacant stall to the earliest applicant. The stall now open, however, is wired for refrigerated goods and is reserved for food sellers. Both your stationery business and Hazel Press remain on the paper-goods list. If a paper-goods stall opens, your earlier application date will still count."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-market-01",
+        "prompt": "Why has the writer not offered the available stall to the recipient?",
+        "options": [
+          "It is reserved for food sales.",
+          "Hazel Press applied a day earlier.",
+          "The stall has no electrical supply.",
+          "The recipient withdrew a request."
+        ],
+        "answer": "It is reserved for food sales.",
+        "evidence": "reserved for food sellers",
+        "paraphrase": "reserved → restricted to one category",
+        "en": "Priority by date applies within a category, and the current vacancy is for food sellers.",
+        "zh": "日期优先只在同类内适用，当前空位专供食品摊商。"
+      },
+      {
+        "id": "read-market-02",
+        "prompt": "What is implied about Hazel Press?",
+        "options": [
+          "It can use the refrigerated stall if it applies today.",
+          "It will take the next opening in every category.",
+          "It would follow the recipient for a paper-goods opening.",
+          "It was given priority because it sells stationery."
+        ],
+        "answer": "It would follow the recipient for a paper-goods opening.",
+        "evidence": "your earlier application date will still count",
+        "paraphrase": "earlier application → earlier place within the same category",
+        "en": "Both applicants share a list; the recipient applied first, which establishes relative priority.",
+        "zh": "两家都在纸制品名单，收件人先申请，所以同类空位会先轮到收件人。"
+      }
+    ]
+  },
+  {
+    "id": "read-allowance",
+    "part": 7,
+    "level": 900,
+    "title": "迁移费用核算",
+    "documents": [
+      {
+        "type": "财务通告",
+        "title": "Separating service and equipment charges",
+        "text": "A migration allowance covers documented technician time but excludes equipment, even when the same contractor supplies both. An invoice that bundles the charges must be supported by a breakdown from the contractor. Staff estimates cannot establish the split. Once an acceptable breakdown is received, finance will assess the technician portion; receiving it does not establish that all hours qualify under the project dates.\nIf a single invoice spans two project periods, attach a dated work log as well as the breakdown. The breakdown identifies what the contractor supplied. The log identifies when the technician performed each task. A missing log can delay the decision even when the labor and equipment figures are perfectly clear."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-allowance-01",
+        "prompt": "Why might finance pay less than the technician amount on an itemized bill?",
+        "options": [
+          "Staff must estimate each hourly charge themselves.",
+          "Receiving a breakdown cancels the original claim.",
+          "Some hours may fall outside the project dates.",
+          "All technician work shares the equipment limit."
+        ],
+        "answer": "Some hours may fall outside the project dates.",
+        "evidence": "does not establish that all hours qualify under the project dates",
+        "paraphrase": "itemization → identifies labor but does not confirm date eligibility",
+        "en": "Breaking out labor costs addresses classification. The dates of those hours still affect eligibility.",
+        "zh": "费用明细解决的是分类问题，工时是否在项目期限内仍要审核。"
+      },
+      {
+        "id": "read-allowance-02",
+        "prompt": "What does “the split” in the third sentence refer to?",
+        "options": [
+          "The difference between two contractors' quotes",
+          "The interval between two project dates",
+          "The division of hours among finance staff",
+          "The division between labor and equipment"
+        ],
+        "answer": "The division between labor and equipment",
+        "evidence": "bundles the charges must be supported by a breakdown",
+        "paraphrase": "the split → allocation of a bundled price",
+        "en": "The preceding sentence requires bundled service and equipment charges to be separated.",
+        "zh": "前一句要求拆分服务费与设备费，the split 就是这种分摊。"
+      }
+    ]
+  },
+  {
+    "id": "read-waiver",
+    "part": 7,
+    "level": 900,
+    "title": "样机提前交付",
+    "documents": [
+      {
+        "type": "协议摘录",
+        "title": "Early access to evaluation units",
+        "text": "An evaluation unit may be supplied before the full manual is available if the receiving team signs the early-access form. The form acknowledges the missing manual and nothing further. In particular, acceptance of delivery does not start the warranty period. That period begins when the supplier issues written confirmation that the unit is ready for ordinary use. A team can therefore hold a unit for several days without using up any warranty time.\nA delivery slip records the date on which the receiving team took possession. The supplier may attach that slip to the later readiness notice for identification, but the earlier date does not replace the date of the notice. Please file both records so their different purposes remain clear."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-waiver-01",
+        "prompt": "Which event starts the warranty?",
+        "options": [
+          "A team member's first test run",
+          "Written confirmation of readiness",
+          "Receipt of the early-access form",
+          "Delivery of the evaluation unit"
+        ],
+        "answer": "Written confirmation of readiness",
+        "evidence": "when the supplier issues written confirmation",
+        "paraphrase": "readiness confirmed in writing → warranty begins",
+        "en": "The specified trigger is the supplier's notice that ordinary use can begin.",
+        "zh": "触发质保的是供应商出具书面就绪确认。"
+      },
+      {
+        "id": "read-waiver-02",
+        "prompt": "What is the main function of the signed form?",
+        "options": [
+          "To give up all warranty coverage",
+          "To certify the unit for ordinary use",
+          "To fix the length of the evaluation",
+          "To acknowledge a missing manual"
+        ],
+        "answer": "To acknowledge a missing manual",
+        "evidence": "acknowledges the missing manual and nothing further",
+        "paraphrase": "acknowledge → formally recognize",
+        "en": "The form records awareness of the missing documentation without changing warranty timing.",
+        "zh": "该表仅证明收件方知悉手册尚未提供。"
+      }
+    ]
+  },
+  {
+    "id": "read-keyrings",
+    "part": 7,
+    "level": 500,
+    "title": "促销品订购",
+    "documents": [
+      {
+        "type": "报价单",
+        "title": "Cedar Keyrings · standard prices",
+        "text": "Plain metal ring: $2 each. Ring with a printed name: $3 each. Printing takes three working days from payment. Plain rings can be collected on the day of payment. Orders of ten or more rings receive a free cloth bag. All collections are at the market desk."
+      },
+      {
+        "type": "邮件",
+        "title": "To: Cedar Keyrings · Order question",
+        "text": "I need eight rings for a welcome pack. The packs leave this afternoon, so I will take plain rings and pay when I arrive today. I already have a bag for carrying them. Could you put my order under the name Sol Marsh?\n\nSol"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-keyrings-01",
+        "prompt": "Why has Sol chosen plain rings?",
+        "options": [
+          "They are sold only in packs.",
+          "They come with a cloth bag.",
+          "They include a printed name.",
+          "They can be ready today."
+        ],
+        "answer": "They can be ready today.",
+        "evidence": "The packs leave this afternoon",
+        "paraphrase": "same-day departure → same-day collection needed",
+        "en": "Sol needs them this afternoon. The quote allows immediate collection of plain rings, while printing takes three working days.",
+        "zh": "欢迎包下午发走，素环当天可取，印名字则需三个工作日。"
+      },
+      {
+        "id": "read-keyrings-02",
+        "prompt": "What will Sol pay for the rings?",
+        "options": [
+          "$24",
+          "$20",
+          "$30",
+          "$16"
+        ],
+        "answer": "$16",
+        "evidence": "Plain metal ring: $2 each.",
+        "paraphrase": "eight plain rings × $2 → $16",
+        "en": "The email orders eight plain rings; the quote charges $2 each.",
+        "zh": "邮件订八个素环，报价每个两美元，合计十六美元。"
+      },
+      {
+        "id": "read-keyrings-03",
+        "prompt": "Where will Sol pick up the order?",
+        "options": [
+          "The welcome event",
+          "The payment office",
+          "The market desk",
+          "The printing workshop"
+        ],
+        "answer": "The market desk",
+        "evidence": "All collections are at the market desk.",
+        "paraphrase": "pick up → collect",
+        "en": "The quote directs all customers to the market desk for collection.",
+        "zh": "报价说明所有订单都到集市柜台领取。"
+      },
+      {
+        "id": "read-keyrings-04",
+        "prompt": "Why does this order miss the bag offer?",
+        "options": [
+          "The pack is assembled off site.",
+          "It has fewer than ten rings.",
+          "The rings lack printed names.",
+          "Payment is made in person."
+        ],
+        "answer": "It has fewer than ten rings.",
+        "evidence": "Orders of ten or more rings receive a free cloth bag.",
+        "paraphrase": "eight is below ten → no free bag",
+        "en": "The email requests eight units, two below the quote's minimum for the gift.",
+        "zh": "索要八个，比赠袋门槛十个少两个。"
+      },
+      {
+        "id": "read-keyrings-05",
+        "prompt": "What is Sol asking Cedar to record?",
+        "options": [
+          "A new printing address",
+          "A later payment date",
+          "A collection name",
+          "A different ring price"
+        ],
+        "answer": "A collection name",
+        "evidence": "put my order under the name Sol Marsh",
+        "paraphrase": "under the name → identify an order for pickup",
+        "en": "Sol wants the order identified by name when collecting it.",
+        "zh": "Sol 希望用自己的姓名登记，便于领取。"
+      }
+    ]
+  },
+  {
+    "id": "read-oven",
+    "part": 7,
+    "level": 600,
+    "title": "烤箱租用",
+    "documents": [
+      {
+        "type": "价目表",
+        "title": "Portable ovens · one-day hire",
+        "text": "Small oven: $28; bakes two trays at once. Large oven: $42; bakes four trays at once. Each oven comes with enough trays to fill it. A heatproof stand costs an extra $6. Collect equipment at the workshop after 8 a.m.; return by 6 p.m. the same day."
+      },
+      {
+        "type": "预订申请",
+        "title": "Workshop booking · Hall team",
+        "text": "We need to bake four trays in a single batch before the morning break. Our table has a plastic top, so please add a heatproof stand. I'll collect the equipment at 8:30 and take it back after lunch. We have already ordered the ingredients from another supplier.\n\nAmir"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-oven-01",
+        "prompt": "Which oven meets the team's batch requirement?",
+        "options": [
+          "The small oven",
+          "Either single oven",
+          "Neither listed oven",
+          "The large oven"
+        ],
+        "answer": "The large oven",
+        "evidence": "four trays in a single batch",
+        "paraphrase": "single batch → bake all four at once",
+        "en": "The large model takes four trays at once; the small model takes only two.",
+        "zh": "要一次烤四盘，只有大烤箱满足。"
+      },
+      {
+        "id": "read-oven-02",
+        "prompt": "What is the hire total for one suitable oven and the requested extra?",
+        "options": [
+          "$34",
+          "$48",
+          "$56",
+          "$42"
+        ],
+        "answer": "$48",
+        "evidence": "A heatproof stand costs an extra $6.",
+        "paraphrase": "large oven plus stand → $42 + $6",
+        "en": "The four-tray model costs $42 and the requested stand adds $6.",
+        "zh": "四盘规格租金 42 美元，另需隔热架 6 美元，共 48 美元。"
+      },
+      {
+        "id": "read-oven-03",
+        "prompt": "Why does Amir request a stand?",
+        "options": [
+          "The oven must travel on a cart.",
+          "The table has a plastic top.",
+          "The workshop lacks baking trays.",
+          "The team will bake outside."
+        ],
+        "answer": "The table has a plastic top.",
+        "evidence": "Our table has a plastic top",
+        "paraphrase": "heatproof stand → protects the work surface",
+        "en": "Amir directly links the plastic surface to the need for a heatproof stand.",
+        "zh": "Amir 说明桌面为塑料，因此要加隔热架。"
+      },
+      {
+        "id": "read-oven-04",
+        "prompt": "Which item has already been arranged separately?",
+        "options": [
+          "Ingredients",
+          "Baking trays",
+          "The large oven",
+          "A heatproof stand"
+        ],
+        "answer": "Ingredients",
+        "evidence": "ordered the ingredients from another supplier",
+        "paraphrase": "arranged separately → ordered elsewhere",
+        "en": "The team obtained ingredients from another supplier.",
+        "zh": "食材已经向另一供应商订购。"
+      },
+      {
+        "id": "read-oven-05",
+        "prompt": "What is true about the proposed collection time?",
+        "options": [
+          "It matches the evening return limit.",
+          "It requires overnight equipment hire.",
+          "It falls after opening.",
+          "It comes before the workshop opens."
+        ],
+        "answer": "It falls after opening.",
+        "evidence": "Collect equipment at the workshop after 8 a.m.",
+        "paraphrase": "8:30 pickup → later than 8:00",
+        "en": "The quote permits pickup after eight; Amir proposes 8:30.",
+        "zh": "价目表允许八点以后领取，Amir 提出的八点半符合。"
+      }
+    ]
+  },
+  {
+    "id": "read-bus-bay",
+    "part": 7,
+    "level": 600,
+    "title": "接驳车改站",
+    "documents": [
+      {
+        "type": "时刻表",
+        "title": "Conference shuttle · departures from hotel",
+        "text": "Both blue buses run to Main Hall from Bay A. Both gold departures use Bay B for the Annex. Each journey takes fifteen minutes. Please arrive five minutes before departure. The blue and gold routes have separate tickets.",
+        "table": {
+          "headers": [
+            "Departure",
+            "Route",
+            "Destination",
+            "Hotel bay"
+          ],
+          "rows": [
+            [
+              "08:00",
+              "Blue",
+              "Main Hall",
+              "A"
+            ],
+            [
+              "08:20",
+              "Gold",
+              "Annex",
+              "B"
+            ],
+            [
+              "08:40",
+              "Blue",
+              "Main Hall",
+              "A"
+            ],
+            [
+              "09:00",
+              "Gold",
+              "Annex",
+              "B"
+            ]
+          ]
+        }
+      },
+      {
+        "type": "通知",
+        "title": "Morning update from the hotel",
+        "text": "Work on the pavement outside Bay A will affect only today's second blue departure. That bus will pick up at Bay C instead. The driver will follow the printed timetable. Staff at the hotel desk can exchange unused tickets until a bus departs."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-bus-bay-01",
+        "prompt": "Which departure uses Bay C?",
+        "options": [
+          "The 09:00 bus",
+          "The 08:40 bus",
+          "The 08:00 bus",
+          "The 08:20 bus"
+        ],
+        "answer": "The 08:40 bus",
+        "evidence": "only today's second blue departure",
+        "paraphrase": "second blue departure → 08:40",
+        "en": "The timetable lists blue buses at 08:00 and 08:40; the notice moves only the second.",
+        "zh": "蓝线两班分别为 8:00 与 8:40，只有第二班改站。"
+      },
+      {
+        "id": "read-bus-bay-02",
+        "prompt": "At what time should a passenger for the relocated bus be at its bay?",
+        "options": [
+          "08:55",
+          "08:35",
+          "08:40",
+          "08:15"
+        ],
+        "answer": "08:35",
+        "evidence": "Please arrive five minutes before departure.",
+        "paraphrase": "five minutes before 08:40 → 08:35",
+        "en": "The affected departure stays at 08:40. The timetable requests arrival five minutes early.",
+        "zh": "改站班次仍是 8:40 发车，要提前五分钟到，即 8:35。"
+      },
+      {
+        "id": "read-bus-bay-03",
+        "prompt": "Where should a passenger go for the 09:00 service?",
+        "options": [
+          "Bay A",
+          "Bay C",
+          "The Main Hall exit",
+          "Bay B"
+        ],
+        "answer": "Bay B",
+        "evidence": "Both gold departures use Bay B for the Annex.",
+        "paraphrase": "gold route → unaffected bay",
+        "en": "The timetable shows that 09:00 is a gold departure from B. The update affects only one blue departure.",
+        "zh": "改站通知只涉及蓝线，9:00 金线仍在 B 站。"
+      },
+      {
+        "id": "read-bus-bay-04",
+        "prompt": "What is unchanged for the affected bus?",
+        "options": [
+          "Its departure time",
+          "Its passengers' waiting point",
+          "Its designated bay letter",
+          "The pavement at its usual bay"
+        ],
+        "answer": "Its departure time",
+        "evidence": "driver will follow the printed timetable",
+        "paraphrase": "follow the timetable → keep the listed time",
+        "en": "The notice explicitly keeps the schedule while changing the pickup bay.",
+        "zh": "通知明确只改乘车处，发车仍按原时刻表。"
+      },
+      {
+        "id": "read-bus-bay-05",
+        "prompt": "What would a holder of an unused gold ticket need in order to take a blue bus?",
+        "options": [
+          "A seat reservation",
+          "An earlier hotel checkout",
+          "A longer journey",
+          "A ticket exchange"
+        ],
+        "answer": "A ticket exchange",
+        "evidence": "blue and gold routes have separate tickets",
+        "paraphrase": "separate tickets → change the ticket for another route",
+        "en": "The routes require different tickets. The desk allows unused tickets to be exchanged before departure.",
+        "zh": "两条路线票种不同，出发前可在酒店柜台换未使用的票。"
+      }
+    ]
+  },
+  {
+    "id": "read-copper",
+    "part": 7,
+    "level": 700,
+    "title": "金属片交货检验",
+    "documents": [
+      {
+        "type": "订购单",
+        "title": "Oriel Works · order 63",
+        "text": "Please send twelve copper sheets, each 2 mm thick. We can accept two bundles of six or three bundles of four. Attach a thickness reading to each bundle. Our gate accepts deliveries until 16:30 on weekdays. Orders are signed for only after the readings have been checked."
+      },
+      {
+        "type": "司机短信",
+        "title": "Friday, 16:10 · incoming driver",
+        "text": "I have three bundles on the truck. Each contains four sheets and has its reading attached. One reading shows 1.5 mm; the other two show 2 mm. I will reach your gate at 16:25. Shall I hold the thinner bundle on the truck while your receiver checks the rest? The individual readings are copied below in loading order.",
+        "table": {
+          "headers": [
+            "Bundle",
+            "Sheets",
+            "Thickness"
+          ],
+          "rows": [
+            [
+              "Front",
+              "4",
+              "2 mm"
+            ],
+            [
+              "Middle",
+              "4",
+              "1.5 mm"
+            ],
+            [
+              "Rear",
+              "4",
+              "2 mm"
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-copper-01",
+        "prompt": "How many sheets meet the stated thickness according to the readings?",
+        "options": [
+          "Eight",
+          "Twelve",
+          "Four",
+          "Six"
+        ],
+        "answer": "Eight",
+        "evidence": "the other two show 2 mm.",
+        "paraphrase": "two bundles of four → eight suitable sheets",
+        "en": "Two bundles meet 2 mm, and each contains four sheets.",
+        "zh": "两捆厚度合格，每捆四张，共八张。"
+      },
+      {
+        "id": "read-copper-02",
+        "prompt": "Which order requirement is already met for every bundle?",
+        "options": [
+          "The thickness is 2 mm.",
+          "Six sheets are inside.",
+          "The receiver has signed.",
+          "A reading is attached."
+        ],
+        "answer": "A reading is attached.",
+        "evidence": "Each contains four sheets and has its reading attached.",
+        "paraphrase": "attach a reading → measurement supplied",
+        "en": "The order requests a thickness reading on every bundle; the driver confirms all three have one.",
+        "zh": "三捆都有读数，满足每捆必须附测量值的要求。"
+      },
+      {
+        "id": "read-copper-03",
+        "prompt": "Which bundle should the receiver keep apart because it misses the thickness requirement?",
+        "options": [
+          "All three bundles",
+          "The middle bundle",
+          "The rear bundle",
+          "The front bundle"
+        ],
+        "answer": "The middle bundle",
+        "evidence": "One reading shows 1.5 mm",
+        "paraphrase": "middle bundle at 1.5 mm → below the 2 mm specification",
+        "en": "The table identifies the middle bundle as 1.5 mm. The purchase order specifies 2 mm.",
+        "zh": "表格中间那捆是 1.5 毫米，未达到订单要求的 2 毫米。"
+      },
+      {
+        "id": "read-copper-04",
+        "prompt": "Which action is required before signing for the order?",
+        "options": [
+          "Split every bundle in two",
+          "Move sheets to the office",
+          "Check the readings",
+          "Close the delivery gate"
+        ],
+        "answer": "Check the readings",
+        "evidence": "signed for only after the readings have been checked",
+        "paraphrase": "before signing → after checking",
+        "en": "The order explicitly makes the measurement check a condition of signing.",
+        "zh": "订单说明核查测量值后才签收。"
+      },
+      {
+        "id": "read-copper-05",
+        "prompt": "If the driver arrives as predicted, how much time remains before the gate stops accepting deliveries?",
+        "options": [
+          "Twenty minutes",
+          "Fifteen minutes",
+          "Ten minutes",
+          "Five minutes"
+        ],
+        "answer": "Five minutes",
+        "evidence": "until 16:30 on weekdays",
+        "paraphrase": "16:25 to 16:30 → five minutes",
+        "en": "Friday is a weekday. The expected arrival is 16:25, five minutes before the cutoff.",
+        "zh": "周五截止 16:30，预计 16:25 到达，相差五分钟。"
+      }
+    ]
+  },
+  {
+    "id": "read-captions",
+    "part": 7,
+    "level": 700,
+    "title": "字幕套餐核价",
+    "documents": [
+      {
+        "type": "服务报价",
+        "title": "Clear Line · caption services",
+        "text": "Base captions cost $4 per finished minute of video. A transcript in a separate file costs $12 per project. Correcting an error made by our captioner is included. Changes to words already spoken correctly and captioned accurately are charged at $8 per request."
+      },
+      {
+        "type": "邮件",
+        "title": "From: Sera Lin · revised training clip",
+        "text": "The finished clip is six minutes long. We need captions and a separate transcript. Our trainer says “west door” at 02:10 and your captions currently read “west door.” Since that entrance has been renamed, please show “garden door” instead. We have no other changes to request."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-captions-01",
+        "prompt": "Which item attracts the $8 charge?",
+        "options": [
+          "The separate transcript file",
+          "The six-minute running time",
+          "A captioner's typing error",
+          "The new entrance wording"
+        ],
+        "answer": "The new entrance wording",
+        "evidence": "your captions currently read “west door.”",
+        "paraphrase": "matches the spoken words → customer-requested change",
+        "en": "The existing caption accurately matches the trainer. The requested renaming is therefore a charged change.",
+        "zh": "现有字幕忠实反映原话，客户因改名要求换词，按规则另收费。"
+      },
+      {
+        "id": "read-captions-02",
+        "prompt": "What is the full quoted cost of the requested work?",
+        "options": [
+          "$56",
+          "$24",
+          "$44",
+          "$36"
+        ],
+        "answer": "$44",
+        "evidence": "The finished clip is six minutes long.",
+        "paraphrase": "6 × $4 + $12 + $8 → $44",
+        "en": "Six minutes of captions cost $24. Add the $12 transcript and one $8 wording change.",
+        "zh": "字幕 6×4=24 美元，加文本 12 与改词 8，共 44。"
+      },
+      {
+        "id": "read-captions-03",
+        "prompt": "What would be included without the change charge?",
+        "options": [
+          "Renaming an entrance on request",
+          "Supplying an additional transcript",
+          "Fixing a captioner's error",
+          "Extending the video by a minute"
+        ],
+        "answer": "Fixing a captioner's error",
+        "evidence": "Correcting an error made by our captioner is included.",
+        "paraphrase": "included → covered by the base service",
+        "en": "The quote covers a correction when the captioner caused the mistake.",
+        "zh": "报价写明，字幕人员自身造成的错误可免费修正。"
+      },
+      {
+        "id": "read-captions-04",
+        "prompt": "What does Sera want in a separate file?",
+        "options": [
+          "The original audio",
+          "The shortened video",
+          "A new entrance sign",
+          "The transcript"
+        ],
+        "answer": "The transcript",
+        "evidence": "a separate transcript",
+        "paraphrase": "transcript → written record of the speech",
+        "en": "Sera asks for a written transcript as a separate deliverable.",
+        "zh": "Sera 除字幕外，还要一份独立的文字稿。"
+      },
+      {
+        "id": "read-captions-05",
+        "prompt": "Why has Sera proposed the word “garden”?",
+        "options": [
+          "The entrance has been renamed.",
+          "The trainer mispronounced “west.”",
+          "The west door is shown at its old size.",
+          "The clip was filmed in a garden."
+        ],
+        "answer": "The entrance has been renamed.",
+        "evidence": "that entrance has been renamed",
+        "paraphrase": "new name → revised caption wording",
+        "en": "The requested change reflects the entrance's new name.",
+        "zh": "更改字幕是为了反映入口的新名称。"
+      }
+    ]
+  },
+  {
+    "id": "read-seats",
+    "part": 7,
+    "level": 800,
+    "title": "会议室预订抵扣",
+    "documents": [
+      {
+        "type": "订房政策",
+        "title": "Mere House · conference rooms",
+        "text": "Pay a $60 deposit per booking. Up to seven days before the event, a booking may be transferred once to a different room on the same date without losing the deposit. After that point any room change counts as a new booking. The original deposit is then forfeited. A deposit is credited toward the room fee only if the corresponding booking goes ahead.\nTo keep a transfer within the original booking, the organizer must also give the original booking number. An agent can change the room on the existing receipt only while the transfer window is open. After that, even an identical event name and date will not link the two deposits."
+      },
+      {
+        "type": "往来邮件",
+        "title": "From: L. Vale · three days before the event",
+        "text": "We reserved Room Ash for Friday and paid the deposit. We now need Room Elm on the same Friday because Ash has no projection screen. Elm is available at $200, and we understand a fresh $60 deposit is required. We will proceed with Elm and cancel Ash. Please tell us the remaining room balance due for Elm after that fresh deposit."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-seats-01",
+        "prompt": "What will remain payable for Elm after the new deposit?",
+        "options": [
+          "$140",
+          "$200",
+          "$260",
+          "$80"
+        ],
+        "answer": "$140",
+        "evidence": "Elm is available at $200",
+        "paraphrase": "Elm fee less its own deposit → $140",
+        "en": "Only Elm's $60 deposit applies to its $200 fee. Ash's deposit is forfeited.",
+        "zh": "Elm 费用 200，只扣该预订的新押金 60，余 140。"
+      },
+      {
+        "id": "read-seats-02",
+        "prompt": "Why cannot Ash's deposit transfer to Elm?",
+        "options": [
+          "The booking has transferred once.",
+          "The change is too late.",
+          "Ash has a projection screen.",
+          "Elm is on a different date."
+        ],
+        "answer": "The change is too late.",
+        "evidence": "After that point any room change counts as a new booking.",
+        "paraphrase": "three days before → inside the seven-day cutoff",
+        "en": "The request is three days before the event; the transfer privilege ends seven days before it.",
+        "zh": "距活动仅三天，已过提前七天的免损转移期限。"
+      },
+      {
+        "id": "read-seats-03",
+        "prompt": "Which feature explains the switch?",
+        "options": [
+          "A larger deposit allowance",
+          "A projection screen",
+          "An earlier opening hour",
+          "An adjoining meeting space"
+        ],
+        "answer": "A projection screen",
+        "evidence": "because Ash has no projection screen",
+        "paraphrase": "needs a screen → Ash is unsuitable",
+        "en": "The email gives Ash's lack of a screen as the reason.",
+        "zh": "邮件说 Ash 没有投影幕，因而需换房。"
+      },
+      {
+        "id": "read-seats-04",
+        "prompt": "In the policy, “forfeited” most nearly means what?",
+        "options": [
+          "Divided",
+          "Extended",
+          "Deferred",
+          "Lost"
+        ],
+        "answer": "Lost",
+        "evidence": "The original deposit is then forfeited.",
+        "paraphrase": "forfeited → given up after a late change",
+        "en": "The original deposit can no longer be used or credited after a late room change.",
+        "zh": "在此 forfeited 指押金因逾期换房而被没收、不能再抵扣。"
+      },
+      {
+        "id": "read-seats-05",
+        "prompt": "What is the group's total outlay across both bookings if Elm goes ahead?",
+        "options": [
+          "$140",
+          "$320",
+          "$200",
+          "$260"
+        ],
+        "answer": "$260",
+        "evidence": "A deposit is credited toward the room fee only if the corresponding booking goes ahead.",
+        "paraphrase": "lost $60 plus Elm fee of $200 → $260",
+        "en": "The group pays Elm's $200 room fee in total and loses the original $60 for Ash.",
+        "zh": "Elm 总房费为 200，另损失 Ash 的 60 押金，相关总支出为 260。"
+      }
+    ]
+  },
+  {
+    "id": "read-fabric",
+    "part": 7,
+    "level": 800,
+    "title": "布料到货与补款",
+    "documents": [
+      {
+        "type": "订单",
+        "title": "Rill Costumes · curtain panels",
+        "text": "Order 90 meters of plum fabric at $6 per meter. We can use lengths of 15 meters or more. Please send the full quantity by Thursday noon. Each of our six curtains uses one continuous 15-meter panel; joining shorter lengths would leave a visible seam."
+      },
+      {
+        "type": "送货清单",
+        "title": "Thursday 09:30 · shipment 48",
+        "text": "Plum fabric: five rolls of 15 meters each, one roll of 10 meters and one roll of 5 meters. Total measured length: 90 meters. Invoice total: $540. The driver has left all seven rolls in receiving."
+      },
+      {
+        "type": "邮件",
+        "title": "Supplier to Rill · 10:00 Thursday",
+        "text": "We see why the two short rolls are a problem. We can exchange both for one 15-meter roll this morning at no extra charge. If you prefer to keep the short lengths for other work, the extra long roll will be billed separately at the original unit rate. Please confirm which arrangement you want."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-fabric-01",
+        "prompt": "How many curtains can Rill make from the original shipment without a seam?",
+        "options": [
+          "Five",
+          "Six",
+          "Seven",
+          "Four"
+        ],
+        "answer": "Five",
+        "evidence": "five rolls of 15 meters each",
+        "paraphrase": "five continuous 15-meter pieces → five usable panels",
+        "en": "Only five rolls meet the 15-meter minimum. The two shorter rolls cannot be joined for these curtains.",
+        "zh": "原送货只有五捆达到连续 15 米；两短捆不能拼接用于这些窗帘。"
+      },
+      {
+        "id": "read-fabric-02",
+        "prompt": "Why is the invoice total consistent with the order even though the shipment is unsuitable?",
+        "options": [
+          "The overall length is correct.",
+          "The short rolls were supplied free.",
+          "The original rate covered five curtains.",
+          "All seven rolls can form panels."
+        ],
+        "answer": "The overall length is correct.",
+        "evidence": "Total measured length: 90 meters.",
+        "paraphrase": "90 meters at $6 → billed $540",
+        "en": "The invoice uses the ordered total of 90 meters at $6 each. Suitability depends on individual lengths.",
+        "zh": "总米数和单价对应 540 美元，但是否能使用还取决于各捆长度。"
+      },
+      {
+        "id": "read-fabric-03",
+        "prompt": "What can Rill do to finish six panels without paying more?",
+        "options": [
+          "Exchange both short rolls.",
+          "Return only the five-meter roll.",
+          "Retain all seven rolls for the job.",
+          "Order another five-meter roll."
+        ],
+        "answer": "Exchange both short rolls.",
+        "evidence": "exchange both for one 15-meter roll this morning at no extra charge",
+        "paraphrase": "exchange → obtain the sixth usable length for free",
+        "en": "The exchange yields a sixth continuous 15-meter length at no extra charge.",
+        "zh": "两短捆一起换一捆整 15 米长卷，可免费得到第六片所需长度。"
+      },
+      {
+        "id": "read-fabric-04",
+        "prompt": "How much extra would the keep-and-buy option cost?",
+        "options": [
+          "$60",
+          "$15",
+          "$30",
+          "$90"
+        ],
+        "answer": "$90",
+        "evidence": "extra long roll will be billed separately at the original unit rate",
+        "paraphrase": "15 meters × original $6 → $90",
+        "en": "Keeping the short rolls requires buying a new 15-meter roll at the order's $6 rate.",
+        "zh": "保留短捆就要按原价另购 15 米，每米 6 美元，共 90。"
+      },
+      {
+        "id": "read-fabric-05",
+        "prompt": "Which deadline can the proposed exchange still meet?",
+        "options": [
+          "Wednesday at 10:00",
+          "Wednesday noon",
+          "Thursday noon",
+          "Thursday at 9:30"
+        ],
+        "answer": "Thursday noon",
+        "evidence": "this morning at no extra charge",
+        "paraphrase": "Thursday morning → before Thursday noon",
+        "en": "The supplier's Thursday 10:00 email offers a morning exchange, before the order's noon deadline.",
+        "zh": "供应商周四十点邮件承诺上午换货，仍赶得上订单中午截止。"
+      }
+    ]
+  },
+  {
+    "id": "read-hours",
+    "part": 7,
+    "level": 800,
+    "title": "志愿者工时认定",
+    "documents": [
+      {
+        "type": "规则",
+        "title": "Reading Fair · volunteer certificates",
+        "text": "A certificate requires six credited hours. Visitor assistance and setup count in full. Meal breaks do not count. A travel period counts only if a coordinator assigns the volunteer to accompany fair equipment. Record the assignment in writing before travel."
+      },
+      {
+        "type": "值班记录",
+        "title": "Dev Mills · Saturday",
+        "text": "08:00–09:30  Set up the reading tent.\n09:30–12:00  Helped visitors find talks.\n12:00–12:30  Meal break.\n12:30–13:30  Accompanied sound equipment to the second site.\n13:30–14:15  Assisted visitors at the second site."
+      },
+      {
+        "type": "聊天记录",
+        "title": "Coordinator and Dev · Saturday",
+        "text": "07:45 Coordinator: Please ride with the sound equipment at 12:30 and hand it to the second-site technician.\n07:47 Dev: Understood. Is there any later work if I still need time for the certificate?\n07:49 Coordinator: Yes. You can stay on the visitor desk after 14:15. Tell the desk lead when you finish so the extra time is recorded."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-hours-01",
+        "prompt": "Which period qualifies only because of the coordinator's written message?",
+        "options": [
+          "09:30–12:00",
+          "12:30–13:30",
+          "08:00–09:30",
+          "13:30–14:15"
+        ],
+        "answer": "12:30–13:30",
+        "evidence": "Please ride with the sound equipment at 12:30",
+        "paraphrase": "written assignment → eligible travel",
+        "en": "The recorded travel involved equipment, and the coordinator assigned it in writing before the trip.",
+        "zh": "12:30–13:30 是运输时段，协调员事先书面派遣，所以符合工时条件。"
+      },
+      {
+        "id": "read-hours-02",
+        "prompt": "How much credited time has Dev earned by 14:15?",
+        "options": [
+          "4 hours 45 minutes",
+          "6 hours 15 minutes",
+          "5 hours 45 minutes",
+          "5 hours 15 minutes"
+        ],
+        "answer": "5 hours 45 minutes",
+        "evidence": "Meal breaks do not count.",
+        "paraphrase": "6 h 15 elapsed less 30 min break → 5 h 45",
+        "en": "The full span is six hours fifteen. Exclude the thirty-minute meal and include assigned equipment travel.",
+        "zh": "8:00 到 14:15 共 6 小时 15 分，扣半小时午餐，指定随车时间可算，得 5 小时 45 分。"
+      },
+      {
+        "id": "read-hours-03",
+        "prompt": "How long should Dev stay at the desk after 14:15 to qualify?",
+        "options": [
+          "30 minutes",
+          "45 minutes",
+          "60 minutes",
+          "15 minutes"
+        ],
+        "answer": "15 minutes",
+        "evidence": "A certificate requires six credited hours.",
+        "paraphrase": "6 h minus 5 h 45 → 15 min",
+        "en": "Dev is fifteen minutes short, and visitor assistance counts in full.",
+        "zh": "距离六小时还差 15 分，访客服务按实际时间全计。"
+      },
+      {
+        "id": "read-hours-04",
+        "prompt": "Who should Dev notify at the end of the additional work?",
+        "options": [
+          "The desk lead",
+          "The equipment driver",
+          "The reading tent builder",
+          "The fair's sound technician"
+        ],
+        "answer": "The desk lead",
+        "evidence": "Tell the desk lead when you finish",
+        "paraphrase": "notify → tell",
+        "en": "The coordinator names the desk lead as the person who records the extra time.",
+        "zh": "协调员要求 Dev 完工时告知服务台负责人。"
+      },
+      {
+        "id": "read-hours-05",
+        "prompt": "What is the main purpose of Dev's reply in the chat?",
+        "options": [
+          "To decline the equipment assignment",
+          "To change the assigned travel time",
+          "To ask for a longer meal allowance",
+          "To ask about extra credited work"
+        ],
+        "answer": "To ask about extra credited work",
+        "evidence": "Is there any later work if I still need time",
+        "paraphrase": "later work → opportunity to add credited time",
+        "en": "Dev accepts the assignment and asks whether a later task could fill a possible shortfall.",
+        "zh": "Dev 先表示接受派遣，再询问是否能用稍后的工作补足证书工时。"
+      }
+    ]
+  },
+  {
+    "id": "read-rent-credit",
+    "part": 7,
+    "level": 900,
+    "title": "租赁替机费用",
+    "documents": [
+      {
+        "type": "合同条款",
+        "title": "North Mill hire · interruption credit",
+        "text": "If a hired press is unusable, we credit $12 for each complete hour from the time a fault is reported to the time a working replacement is made available. Fractions of an hour are discarded after the full interruption is measured. Time spent collecting an available replacement does not count. No credit is due for a fault first reported after the hire ends."
+      },
+      {
+        "type": "服务记录",
+        "title": "Fault desk · press R16",
+        "text": "09:05 Customer reports the press is producing uneven folds.\n09:30 Technician confirms the press cannot be used.\n11:50 Technician marks replacement ready at the customer's agreed collection point and notifies the customer.\n12:35 Customer signs for the replacement."
+      },
+      {
+        "type": "邮件",
+        "title": "From: Arrow Bindery · same day",
+        "text": "Our hire runs until 17:00 today. The press had already stopped at 08:40, but we tried adjusting it before calling your desk. We sent a runner as soon as your notice arrived. The delay in reaching the pickup point was due to roadworks. Please calculate the credit under the contract."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-rent-credit-01",
+        "prompt": "Which two times define the credit interval?",
+        "options": [
+          "09:05 and 12:35",
+          "09:30 and 11:50",
+          "09:05 and 11:50",
+          "08:40 and 12:35"
+        ],
+        "answer": "09:05 and 11:50",
+        "evidence": "from the time a fault is reported to the time a working replacement is made available",
+        "paraphrase": "reported at 09:05 → available at 11:50",
+        "en": "The contract uses the report time and availability time. The service record provides both.",
+        "zh": "条款取报告故障与替机就绪的时刻，记录分别是 9:05 与 11:50。"
+      },
+      {
+        "id": "read-rent-credit-02",
+        "prompt": "How much credit is payable?",
+        "options": [
+          "$36",
+          "$12",
+          "$48",
+          "$24"
+        ],
+        "answer": "$24",
+        "evidence": "$12 for each complete hour",
+        "paraphrase": "2 h 45 min → two complete hours at $12",
+        "en": "From 09:05 to 11:50 is two hours and forty-five minutes. Only two whole hours qualify.",
+        "zh": "区间为 2 小时 45 分，取完整两小时，每小时 12 美元，共 24。"
+      },
+      {
+        "id": "read-rent-credit-03",
+        "prompt": "Why do the roadworks leave the credit unchanged?",
+        "options": [
+          "The technician waived the delay.",
+          "The hire had already expired.",
+          "Collection time is excluded.",
+          "No runner was sent before noon."
+        ],
+        "answer": "Collection time is excluded.",
+        "evidence": "Time spent collecting an available replacement does not count.",
+        "paraphrase": "road delay after availability → excluded travel time",
+        "en": "The roadworks affected pickup after the replacement was made available.",
+        "zh": "道路施工发生在替机已就绪之后的领取途中，该段时间不计。"
+      },
+      {
+        "id": "read-rent-credit-04",
+        "prompt": "What role does the 09:30 entry play?",
+        "options": [
+          "It marks the first complaint.",
+          "It ends the original hire.",
+          "It confirms the fault.",
+          "It starts replacement collection."
+        ],
+        "answer": "It confirms the fault.",
+        "evidence": "Technician confirms the press cannot be used.",
+        "paraphrase": "cannot be used → unusable fault confirmed",
+        "en": "The entry verifies unusability but does not change the reporting start specified in the contract.",
+        "zh": "该条是技术人员确认停用，与合同所取的报告起算时间不同。"
+      },
+      {
+        "id": "read-rent-credit-05",
+        "prompt": "Which fact establishes that the reporting deadline was met?",
+        "options": [
+          "The press stopped at 08:40.",
+          "The runner met roadworks.",
+          "The hire lasts until 17:00.",
+          "The press has a tested replacement."
+        ],
+        "answer": "The hire lasts until 17:00.",
+        "evidence": "Our hire runs until 17:00 today.",
+        "paraphrase": "09:05 report before 17:00 expiry → timely report",
+        "en": "The email sets the expiry at 17:00, and the desk logged the fault at 09:05 the same day.",
+        "zh": "邮件表明当日 17:00 到期，故障在 9:05 已报，符合期限。"
+      }
+    ]
+  },
+  {
+    "id": "read-poll",
+    "part": 7,
+    "level": 900,
+    "title": "代表投票复核",
+    "documents": [
+      {
+        "type": "会议规则",
+        "title": "Guild council · motion procedure",
+        "text": "A motion passes if it receives more votes in favor than against, provided at least eight voting members are present when the vote is taken. Abstentions count toward attendance but not toward either vote total. A member who steps out before the vote does not count as present. Observers cannot vote and do not count toward the eight."
+      },
+      {
+        "type": "签到表",
+        "title": "Tuesday council · registration",
+        "text": "Nine voting members signed in. Two observers also signed in. Mara, one of the nine voting members, left at 14:10. The secretary recorded no other departures or arrivals before the vote at 14:20."
+      },
+      {
+        "type": "会议草稿",
+        "title": "Secretary’s draft · funding motion",
+        "text": "At 14:20, four members voted in favor of the funding motion, three voted against and one abstained. The draft currently says the motion failed because fewer than five members supported it. Please check this sentence before the minutes are circulated."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-poll-01",
+        "prompt": "How many people count toward the attendance requirement at 14:20?",
+        "options": [
+          "Nine",
+          "Eleven",
+          "Eight",
+          "Ten"
+        ],
+        "answer": "Eight",
+        "evidence": "Mara, one of the nine voting members, left at 14:10.",
+        "paraphrase": "nine members minus one departure → eight present",
+        "en": "One of nine voting members left before the vote. The observers do not count.",
+        "zh": "九名有投票权者中一人提前离开，两名观察员不计，因此到会有效人数为八。"
+      },
+      {
+        "id": "read-poll-02",
+        "prompt": "What outcome follows from the rules?",
+        "options": [
+          "The motion fails on attendance.",
+          "The motion passes.",
+          "The observers must break a tie.",
+          "The vote must be repeated."
+        ],
+        "answer": "The motion passes.",
+        "evidence": "more votes in favor than against",
+        "paraphrase": "four in favor versus three against → majority of votes cast",
+        "en": "Eight eligible members were present, meeting the minimum. Four votes exceed three, so the motion passes.",
+        "zh": "八人满足到会要求，四票赞成超过三票反对，故议案通过。"
+      },
+      {
+        "id": "read-poll-03",
+        "prompt": "How should the abstaining member be treated?",
+        "options": [
+          "Count as a vote against",
+          "Count as an observer",
+          "Count for attendance only",
+          "Exclude from attendance"
+        ],
+        "answer": "Count for attendance only",
+        "evidence": "Abstentions count toward attendance but not toward either vote total.",
+        "paraphrase": "abstention → included in head count only",
+        "en": "The rules explicitly distinguish attendance from a vote for or against.",
+        "zh": "弃权者计入出席人数，但既不算赞成也不算反对。"
+      },
+      {
+        "id": "read-poll-04",
+        "prompt": "Why is the draft's reference to five supporters misleading?",
+        "options": [
+          "It overlooks a second departure.",
+          "It applies the wrong voting test.",
+          "It uses the wrong meeting time.",
+          "It counts an observer's support."
+        ],
+        "answer": "It applies the wrong voting test.",
+        "evidence": "fewer than five members supported it",
+        "paraphrase": "five-supporter test → absent from the stated procedure",
+        "en": "The rule requires more support than opposition, not five supporters irrespective of abstentions.",
+        "zh": "规则比较赞成与反对数，不要求无论弃权情况如何都必须有五人赞成。"
+      },
+      {
+        "id": "read-poll-05",
+        "prompt": "When did Mara leave relative to the vote?",
+        "options": [
+          "Ten minutes after",
+          "Twenty minutes before",
+          "Twenty minutes after",
+          "Ten minutes before"
+        ],
+        "answer": "Ten minutes before",
+        "evidence": "left at 14:10",
+        "paraphrase": "14:10 versus 14:20 → ten minutes before",
+        "en": "The register records 14:10; the draft and register place the vote at 14:20.",
+        "zh": "签到表记录她 14:10 离开，表决是 14:20，相差十分钟。"
       }
     ]
   }

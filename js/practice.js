@@ -61,7 +61,7 @@ function passages(q, answered) {
   return `<div class="lesson-sources">${q.set.documents.map(doc => `
     <article class="lesson-document"><header>${icon('note',17)} ${esc(doc.type)}</header>
     <h3 lang="en">${esc(doc.title)}</h3>
-    <div lang="en" class="lesson-source-text">${mark(doc.text, answered ? q.evidence : null)}</div></article>`).join('')}</div>`;
+    <div lang="en" class="lesson-source-text">${mark(doc.text, answered ? q.evidence : null)}</div>${doc.table ? graphic({...doc.table, title:doc.title},answered ? q.evidence : '') : ''}</article>`).join('')}</div>`;
 }
 
 function choices(q, ref, run) {
