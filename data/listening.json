@@ -838,5 +838,3819 @@
       "text": "Average waiting time fell from nine minutes to six after we introduced appointment slots.",
       "answer": "slots"
     }
+  },
+  {
+    "id": "p3-g07",
+    "part": 3,
+    "level": 400,
+    "title": "前台借用",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I'd like to borrow a bicycle for the park tour."
+      },
+      {
+        "speaker": "B",
+        "text": "Show me your room key and I can give you a helmet."
+      },
+      {
+        "speaker": "A",
+        "text": "Here it is. Where do I return the bicycle?"
+      },
+      {
+        "speaker": "B",
+        "text": "Bring it to the gate behind the hotel before dark."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g07-q1",
+        "prompt": "What does the visitor want to do?",
+        "options": [
+          "Repair a room lock",
+          "Buy a map of the park",
+          "Reserve a hotel room",
+          "Join a cycling tour"
+        ],
+        "answer": "Join a cycling tour",
+        "evidence": "borrow a bicycle for the park tour",
+        "paraphrase": "borrow a bicycle for the park tour → Join a cycling tour",
+        "en": "The visitor needs a bike for the tour.",
+        "zh": "来访者想借自行车参加公园骑游。"
+      },
+      {
+        "id": "p3-g07-q2",
+        "prompt": "What must the visitor show?",
+        "options": [
+          "A park ticket",
+          "A room key",
+          "A photo card",
+          "A signed waiver"
+        ],
+        "answer": "A room key",
+        "evidence": "Show me your room key",
+        "paraphrase": "Show me your room key → A room key",
+        "en": "The key is required before the equipment is handed over.",
+        "zh": "领装备之前要出示房间钥匙。"
+      },
+      {
+        "id": "p3-g07-q3",
+        "prompt": "Where should the bicycle be left?",
+        "options": [
+          "Outside the park office",
+          "At the rear gate",
+          "Beside the front desk",
+          "In the hotel lobby"
+        ],
+        "answer": "At the rear gate",
+        "evidence": "the gate behind the hotel",
+        "paraphrase": "the gate behind the hotel → At the rear gate",
+        "en": "The return point is behind the hotel.",
+        "zh": "归还地点是酒店后门。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g07-d",
+      "text": "Show me your room key and I can give you a helmet.",
+      "answer": "helmet"
+    }
+  },
+  {
+    "id": "p3-g08",
+    "part": 3,
+    "level": 400,
+    "title": "午餐交接",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The lunch boxes are ready for the garden crew."
+      },
+      {
+        "speaker": "B",
+        "text": "Can I take them out on this cart?"
+      },
+      {
+        "speaker": "A",
+        "text": "Use the blue cart instead. This one has a broken wheel."
+      },
+      {
+        "speaker": "B",
+        "text": "I'll leave this one here and take the lunches straight to the greenhouse."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g08-q1",
+        "prompt": "Who will receive the lunches?",
+        "options": [
+          "The cart repair staff",
+          "The visitors at the gate",
+          "The kitchen team",
+          "The garden crew"
+        ],
+        "answer": "The garden crew",
+        "evidence": "lunch boxes are ready for the garden crew",
+        "paraphrase": "lunch boxes are ready for the garden crew → The garden crew",
+        "en": "The boxes were prepared for the gardening workers.",
+        "zh": "盒饭是为园艺组准备的。"
+      },
+      {
+        "id": "p3-g08-q2",
+        "prompt": "Why should the blue cart be used?",
+        "options": [
+          "It has a lock.",
+          "It holds more boxes.",
+          "The path is too narrow.",
+          "Another cart is damaged."
+        ],
+        "answer": "Another cart is damaged.",
+        "evidence": "This one has a broken wheel.",
+        "paraphrase": "This one has a broken wheel → Another cart is damaged",
+        "en": "A wheel on the first cart is broken.",
+        "zh": "原来的推车轮子坏了。"
+      },
+      {
+        "id": "p3-g08-q3",
+        "prompt": "Where is the second speaker going next?",
+        "options": [
+          "The repair counter",
+          "The greenhouse",
+          "The garden entrance",
+          "The staff kitchen"
+        ],
+        "answer": "The greenhouse",
+        "evidence": "straight to the greenhouse",
+        "paraphrase": "straight to the greenhouse → The greenhouse",
+        "en": "The delivery will go directly to the greenhouse.",
+        "zh": "送餐者准备直接去温室。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g08-d",
+      "text": "Can I take them out on this cart?",
+      "answer": "cart"
+    }
+  },
+  {
+    "id": "p3-g09",
+    "part": 3,
+    "level": 400,
+    "title": "电话预约",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I'd like someone to measure my office windows for new blinds."
+      },
+      {
+        "speaker": "B",
+        "text": "Our installer can visit on Tuesday morning or Thursday afternoon."
+      },
+      {
+        "speaker": "A",
+        "text": "Thursday is better because I have meetings all morning on Tuesday."
+      },
+      {
+        "speaker": "B",
+        "text": "I'll book that visit and send a text with the installer's name."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g09-q1",
+        "prompt": "What does the caller need?",
+        "options": [
+          "Replacement office chairs",
+          "Window measurements",
+          "A meeting invitation",
+          "A copy of a floor plan"
+        ],
+        "answer": "Window measurements",
+        "evidence": "measure my office windows",
+        "paraphrase": "measure my office windows → Window measurements",
+        "en": "Measurements are needed for new blinds.",
+        "zh": "来电者要为新百叶窗测量尺寸。"
+      },
+      {
+        "id": "p3-g09-q2",
+        "prompt": "When will the visit take place?",
+        "options": [
+          "Thursday afternoon",
+          "Tuesday morning",
+          "Thursday morning",
+          "Tuesday afternoon"
+        ],
+        "answer": "Thursday afternoon",
+        "evidence": "Thursday is better",
+        "paraphrase": "Thursday is better → Thursday afternoon",
+        "en": "The caller selects the Thursday afternoon appointment.",
+        "zh": "两个时段中选的是周四下午。"
+      },
+      {
+        "id": "p3-g09-q3",
+        "prompt": "What information will be sent by text?",
+        "options": [
+          "The final cost of the blinds",
+          "The office address",
+          "The meeting agenda",
+          "The installer's name"
+        ],
+        "answer": "The installer's name",
+        "evidence": "a text with the installer's name",
+        "paraphrase": "a text with the installer's name → The installer's name",
+        "en": "The text will identify the person coming to measure.",
+        "zh": "短信会告知上门人员的姓名。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g09-d",
+      "text": "Our installer can visit on Tuesday morning or Thursday afternoon.",
+      "answer": "afternoon"
+    }
+  },
+  {
+    "id": "p3-g10",
+    "part": 3,
+    "level": 400,
+    "title": "课程签到",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I've come for the drawing lesson, but I left my pencil at home."
+      },
+      {
+        "speaker": "B",
+        "text": "Take one from this cup. Your class meets upstairs."
+      },
+      {
+        "speaker": "A",
+        "text": "Should I pay you for the pencil now?"
+      },
+      {
+        "speaker": "B",
+        "text": "No, just put it back in the cup after class."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g10-q1",
+        "prompt": "Why does the student need help?",
+        "options": [
+          "A class fee was lost.",
+          "The lesson has been moved.",
+          "A pencil was left at home.",
+          "The sign-in sheet is missing."
+        ],
+        "answer": "A pencil was left at home.",
+        "evidence": "I left my pencil at home",
+        "paraphrase": "I left my pencil at home → A pencil was left at home",
+        "en": "The student forgot an item needed for drawing.",
+        "zh": "学员忘带了画画用的铅笔。"
+      },
+      {
+        "id": "p3-g10-q2",
+        "prompt": "Where does the class meet?",
+        "options": [
+          "By the street entrance",
+          "Upstairs",
+          "At a shop nearby",
+          "In the garden"
+        ],
+        "answer": "Upstairs",
+        "evidence": "Your class meets upstairs.",
+        "paraphrase": "Your class meets upstairs → Upstairs",
+        "en": "The lesson takes place on an upper floor.",
+        "zh": "课程在楼上进行。"
+      },
+      {
+        "id": "p3-g10-q3",
+        "prompt": "What should the student do with the pencil?",
+        "options": [
+          "Return it after class",
+          "Pay for it before leaving",
+          "Give it to the teacher",
+          "Take it home for practice"
+        ],
+        "answer": "Return it after class",
+        "evidence": "put it back in the cup after class",
+        "paraphrase": "put it back in the cup after class → Return it after class",
+        "en": "The pencil is on loan and goes back into the cup.",
+        "zh": "铅笔是借用的，下课后放回杯子。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g10-d",
+      "text": "I've come for the drawing lesson, but I left my pencil at home.",
+      "answer": "pencil"
+    }
+  },
+  {
+    "id": "p3-g11",
+    "part": 3,
+    "level": 400,
+    "title": "店内找零",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Do you have any coins for the locker by the pool?"
+      },
+      {
+        "speaker": "B",
+        "text": "The shop changes bills, but it closes at six."
+      },
+      {
+        "speaker": "A",
+        "text": "It's already six fifteen. Is there another place?"
+      },
+      {
+        "speaker": "B",
+        "text": "Try the machine opposite the pool entrance; it takes small bills."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g11-q1",
+        "prompt": "What does the first speaker need coins for?",
+        "options": [
+          "A parking meter",
+          "A drink machine",
+          "A bus ticket",
+          "A locker"
+        ],
+        "answer": "A locker",
+        "evidence": "coins for the locker by the pool",
+        "paraphrase": "coins for the locker by the pool → A locker",
+        "en": "The coins are needed for storage by the pool.",
+        "zh": "需要用硬币开启泳池旁的储物柜。"
+      },
+      {
+        "id": "p3-g11-q2",
+        "prompt": "Why is the shop unsuitable?",
+        "options": [
+          "It accepts cards only.",
+          "It is on another floor.",
+          "It has closed.",
+          "It has run out of change."
+        ],
+        "answer": "It has closed.",
+        "evidence": "It's already six fifteen.",
+        "paraphrase": "It's already six fifteen → It has closed",
+        "en": "It is fifteen minutes after the stated closing time.",
+        "zh": "此时六点一刻，已过六点关门时间。"
+      },
+      {
+        "id": "p3-g11-q3",
+        "prompt": "Where is another source of coins?",
+        "options": [
+          "Inside the closed shop",
+          "Across from the pool entrance",
+          "Beside the swimming lanes",
+          "Behind the changing rooms"
+        ],
+        "answer": "Across from the pool entrance",
+        "evidence": "the machine opposite the pool entrance",
+        "paraphrase": "the machine opposite the pool entrance → Across from the pool entrance",
+        "en": "Opposite places the machine across from the entrance.",
+        "zh": "兑换机在泳池入口对面。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g11-d",
+      "text": "Do you have any coins for the locker by the pool?",
+      "answer": "coins"
+    }
+  },
+  {
+    "id": "p3-g12",
+    "part": 3,
+    "level": 500,
+    "title": "分派柜台",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I ordered this lamp online and the shade is cracked."
+      },
+      {
+        "speaker": "B",
+        "text": "Have you already collected the lamp?"
+      },
+      {
+        "speaker": "A",
+        "text": "Yes, I picked it up yesterday and brought it back for a refund."
+      },
+      {
+        "speaker": "B",
+        "text": "Then join the line for returns. Take one of the numbered tickets first."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g12-q1",
+        "prompt": "What is wrong with the lamp?",
+        "options": [
+          "Its shade is cracked.",
+          "Its base is loose.",
+          "Its cable is missing.",
+          "Its switch does not work."
+        ],
+        "answer": "Its shade is cracked.",
+        "evidence": "the shade is cracked",
+        "paraphrase": "the shade is cracked → Its shade is cracked",
+        "en": "The damage is specifically to the shade.",
+        "zh": "破裂的是灯罩。"
+      },
+      {
+        "id": "p3-g12-q2",
+        "prompt": "Look at the graphic. Which desk should the customer use?",
+        "options": [
+          "Desk B",
+          "Desk C",
+          "Desk D",
+          "Desk A"
+        ],
+        "answer": "Desk A",
+        "evidence": "join the line for returns",
+        "paraphrase": "join the line for returns → Desk A",
+        "en": "The speaker needs a refund; Returns is at Desk A on the directory.",
+        "zh": "顾客已取货，现在要退款；表中 Returns 对应 A 柜台。",
+        "type": "graphic"
+      },
+      {
+        "id": "p3-g12-q3",
+        "prompt": "What should the customer do before joining the line?",
+        "options": [
+          "Get the lamp repaired",
+          "Collect an online order",
+          "Take a number",
+          "Purchase a gift card"
+        ],
+        "answer": "Take a number",
+        "evidence": "Take one of the numbered tickets first.",
+        "paraphrase": "Take one of the numbered tickets first → Take a number",
+        "en": "The numbered ticket determines the customer's place in line.",
+        "zh": "排队前须领号码票。"
+      }
+    ],
+    "graphic": {
+      "title": "Service desks",
+      "headers": [
+        "Desk",
+        "Handles"
+      ],
+      "rows": [
+        [
+          "A",
+          "Returns"
+        ],
+        [
+          "B",
+          "Gift cards"
+        ],
+        [
+          "C",
+          "Online collections"
+        ],
+        [
+          "D",
+          "Repairs"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p3-g12-d",
+      "text": "Take one of the numbered tickets first.",
+      "answer": "tickets"
+    }
+  },
+  {
+    "id": "p3-g13",
+    "part": 3,
+    "level": 500,
+    "title": "工作服领取",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The sleeves of my new kitchen jacket are too short."
+      },
+      {
+        "speaker": "B",
+        "text": "There's a longer version, but we have to order it."
+      },
+      {
+        "speaker": "A",
+        "text": "That's fine as long as I can keep this jacket for tomorrow's shift."
+      },
+      {
+        "speaker": "B",
+        "text": "Of course. We'll exchange it when the new one arrives."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g13-q1",
+        "prompt": "What does the employee want changed?",
+        "options": [
+          "The jacket color",
+          "The sleeve length",
+          "The fabric weight",
+          "The pocket position"
+        ],
+        "answer": "The sleeve length",
+        "evidence": "The sleeves of my new kitchen jacket are too short.",
+        "paraphrase": "The sleeves of my new kitchen jacket are too short → The sleeve length",
+        "en": "The present sleeves do not extend far enough.",
+        "zh": "员工觉得袖子太短。"
+      },
+      {
+        "id": "p3-g13-q2",
+        "prompt": "Why can't the employee get the preferred jacket today?",
+        "options": [
+          "It must be ordered.",
+          "It needs to be washed.",
+          "The store has closed.",
+          "The size label fell off."
+        ],
+        "answer": "It must be ordered.",
+        "evidence": "we have to order it",
+        "paraphrase": "we have to order it → It must be ordered",
+        "en": "The longer version is not in stock.",
+        "zh": "长袖版本需要订货。"
+      },
+      {
+        "id": "p3-g13-q3",
+        "prompt": "What may the employee do tomorrow?",
+        "options": [
+          "Skip the kitchen shift",
+          "Pick up a second uniform",
+          "Work at the clothing desk",
+          "Wear the current jacket"
+        ],
+        "answer": "Wear the current jacket",
+        "evidence": "I can keep this jacket for tomorrow's shift",
+        "paraphrase": "I can keep this jacket for tomorrow's shift → Wear the current jacket",
+        "en": "The other speaker agrees to let the employee keep it until the replacement arrives.",
+        "zh": "对方同意暂时保留现有制服，次日仍可穿。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g13-d",
+      "text": "The sleeves of my new kitchen jacket are too short.",
+      "answer": "sleeves"
+    }
+  },
+  {
+    "id": "p3-g14",
+    "part": 3,
+    "level": 500,
+    "title": "录音室安排",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The room we booked for the podcast has an echo."
+      },
+      {
+        "speaker": "B",
+        "text": "Would the small editing booth work? It has soft walls."
+      },
+      {
+        "speaker": "A",
+        "text": "Yes, but I'll need a second chair for the guest."
+      },
+      {
+        "speaker": "B",
+        "text": "I'll carry one in before the guest arrives at three."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g14-q1",
+        "prompt": "What are the speakers preparing for?",
+        "options": [
+          "A radio repair",
+          "A film screening",
+          "A podcast recording",
+          "A wall-painting class"
+        ],
+        "answer": "A podcast recording",
+        "evidence": "The room we booked for the podcast",
+        "paraphrase": "The room we booked for the podcast → A podcast recording",
+        "en": "They are choosing a suitable place to record a podcast.",
+        "zh": "他们在为播客录音寻找合适的房间。"
+      },
+      {
+        "id": "p3-g14-q2",
+        "prompt": "Why was the booth suggested?",
+        "options": [
+          "Its chairs are adjustable.",
+          "Its walls may reduce echoes.",
+          "It has a bigger editing screen.",
+          "It is closer to the entrance."
+        ],
+        "answer": "Its walls may reduce echoes.",
+        "evidence": "It has soft walls.",
+        "paraphrase": "It has soft walls → Its walls may reduce echoes",
+        "en": "Soft walls address the reflection of sound in the first room.",
+        "zh": "软质墙面有助于减轻原来房间的回声问题。"
+      },
+      {
+        "id": "p3-g14-q3",
+        "prompt": "What will the second speaker bring?",
+        "options": [
+          "An extra chair",
+          "A wall covering",
+          "A recording schedule",
+          "A guest badge"
+        ],
+        "answer": "An extra chair",
+        "evidence": "I'll carry one in",
+        "paraphrase": "I'll carry one in → An extra chair",
+        "en": "One refers to the second chair requested immediately before.",
+        "zh": "one 指上一句为来宾要求的第二把椅子。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g14-d",
+      "text": "The room we booked for the podcast has an echo.",
+      "answer": "echo"
+    }
+  },
+  {
+    "id": "p3-g15",
+    "part": 3,
+    "level": 500,
+    "title": "路线选择",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "My map sends me through the post office square to the art market."
+      },
+      {
+        "speaker": "B",
+        "text": "The square is fenced off today. Walk out beside the tram stop instead."
+      },
+      {
+        "speaker": "A",
+        "text": "Can I see the market from the stop?"
+      },
+      {
+        "speaker": "B",
+        "text": "Yes, look for the striped awning over the first stall."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g15-q1",
+        "prompt": "Why does the original route need to change?",
+        "options": [
+          "The market has moved.",
+          "The train is delayed.",
+          "The post office has closed permanently.",
+          "The square is closed off."
+        ],
+        "answer": "The square is closed off.",
+        "evidence": "The square is fenced off today.",
+        "paraphrase": "The square is fenced off today → The square is closed off",
+        "en": "A temporary fence blocks the planned route.",
+        "zh": "广场今天被围住，原路线无法通行。"
+      },
+      {
+        "id": "p3-g15-q2",
+        "prompt": "Look at the graphic. Which exit should the visitor take?",
+        "options": [
+          "East",
+          "South",
+          "North",
+          "West"
+        ],
+        "answer": "North",
+        "evidence": "beside the tram stop",
+        "paraphrase": "beside the tram stop → North",
+        "en": "The suggested landmark is the tram stop, which the directory lists at North.",
+        "zh": "建议从电车站旁出去，图表显示电车站在北口。",
+        "type": "graphic"
+      },
+      {
+        "id": "p3-g15-q3",
+        "prompt": "What will identify the market?",
+        "options": [
+          "A school sign",
+          "A striped awning",
+          "A painted fence",
+          "A row of ticket machines"
+        ],
+        "answer": "A striped awning",
+        "evidence": "the striped awning over the first stall",
+        "paraphrase": "the striped awning over the first stall → A striped awning",
+        "en": "The awning is a visual marker over the first stall.",
+        "zh": "第一个摊位的条纹遮阳篷是辨认标志。"
+      }
+    ],
+    "graphic": {
+      "title": "Station exits",
+      "headers": [
+        "Exit",
+        "Landmark"
+      ],
+      "rows": [
+        [
+          "North",
+          "Tram stop"
+        ],
+        [
+          "East",
+          "Post office"
+        ],
+        [
+          "South",
+          "Ferry pier"
+        ],
+        [
+          "West",
+          "Art school"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p3-g15-d",
+      "text": "Walk out beside the tram stop instead.",
+      "answer": "tram"
+    }
+  },
+  {
+    "id": "p3-g16",
+    "part": 3,
+    "level": 500,
+    "title": "家具送货",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Will the assembled desk fit through the studio door?"
+      },
+      {
+        "speaker": "B",
+        "text": "I measured it this morning. The door is too narrow."
+      },
+      {
+        "speaker": "A",
+        "text": "Can the delivery team bring the top and legs in separately?"
+      },
+      {
+        "speaker": "B",
+        "text": "Yes, but they'll need a clear space inside to put it together."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g16-q1",
+        "prompt": "Why could delivery be difficult?",
+        "options": [
+          "The doorway is narrow.",
+          "The studio is upstairs.",
+          "The legs are uneven.",
+          "The truck is too small."
+        ],
+        "answer": "The doorway is narrow.",
+        "evidence": "The door is too narrow.",
+        "paraphrase": "The door is too narrow → The doorway is narrow",
+        "en": "The assembled desk cannot pass through the opening.",
+        "zh": "门框太窄，无法搬入整张桌子。"
+      },
+      {
+        "id": "p3-g16-q2",
+        "prompt": "How will the desk enter the studio?",
+        "options": [
+          "Through a window",
+          "On a pallet",
+          "Before the door is fitted",
+          "In separate pieces"
+        ],
+        "answer": "In separate pieces",
+        "evidence": "bring the top and legs in separately",
+        "paraphrase": "bring the top and legs in separately → In separate pieces",
+        "en": "The speakers agree to move the top and legs in separately.",
+        "zh": "双方同意把桌面和桌腿分开搬。"
+      },
+      {
+        "id": "p3-g16-q3",
+        "prompt": "What must the studio provide?",
+        "options": [
+          "An extra delivery van",
+          "A set of longer legs",
+          "Space for assembly",
+          "A second entrance key"
+        ],
+        "answer": "Space for assembly",
+        "evidence": "a clear space inside to put it together",
+        "paraphrase": "a clear space inside to put it together → Space for assembly",
+        "en": "The crew needs an unobstructed area to assemble the desk.",
+        "zh": "搬运团队需要室内空地来组装桌子。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g16-d",
+      "text": "The door is too narrow.",
+      "answer": "narrow"
+    }
+  },
+  {
+    "id": "p3-g17",
+    "part": 3,
+    "level": 600,
+    "title": "样品交接",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The inspection form asks whether the seal was intact when the kit reached us."
+      },
+      {
+        "speaker": "B",
+        "text": "I opened the outer carton, but I didn't open the kit."
+      },
+      {
+        "speaker": "C",
+        "text": "I photographed the sealed kit before I cut the tape."
+      },
+      {
+        "speaker": "A",
+        "text": "Does the photograph show its serial number as well?"
+      },
+      {
+        "speaker": "C",
+        "text": "Yes, it's on the same label as the seal."
+      },
+      {
+        "speaker": "B",
+        "text": "Then attach that photograph to the form rather than guessing."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g17-q1",
+        "prompt": "What information does the form require?",
+        "options": [
+          "The cost of a replacement kit",
+          "The seal's condition on arrival",
+          "The name of the tape supplier",
+          "The carton dimensions at dispatch"
+        ],
+        "answer": "The seal's condition on arrival",
+        "evidence": "whether the seal was intact when the kit reached us",
+        "paraphrase": "whether the seal was intact when the kit reached us → The seal's condition on arrival",
+        "en": "The question concerns the seal when the kit arrived.",
+        "zh": "表格询问到货时封条是否完好。"
+      },
+      {
+        "id": "p3-g17-q2",
+        "prompt": "Who can provide direct evidence?",
+        "options": [
+          "The person who took the photograph",
+          "The person who opened the outer carton",
+          "The company that printed the form",
+          "The supplier that delivered the tape"
+        ],
+        "answer": "The person who took the photograph",
+        "evidence": "I photographed the sealed kit before I cut the tape.",
+        "paraphrase": "I photographed the sealed kit before I cut the tape → The person who took the photograph",
+        "en": "The third speaker photographed the kit before opening it.",
+        "zh": "第三位说话人在剪开胶带前拍了照，可提供直接证据。"
+      },
+      {
+        "id": "p3-g17-q3",
+        "prompt": "Why is the label useful?",
+        "options": [
+          "It specifies how to open the carton.",
+          "It gives the inspector's email address.",
+          "It includes the date of the next audit.",
+          "It links the pictured seal to the kit."
+        ],
+        "answer": "It links the pictured seal to the kit.",
+        "evidence": "on the same label as the seal",
+        "paraphrase": "on the same label as the seal → It links the pictured seal to the kit",
+        "en": "The visible serial number identifies the exact kit shown in the photograph.",
+        "zh": "标签同时显示序列号和封条，因此能把照片与这套器材对应起来。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g17-d",
+      "text": "The inspection form asks whether the seal was intact when the kit reached us.",
+      "answer": "seal"
+    }
+  },
+  {
+    "id": "p3-g18",
+    "part": 3,
+    "level": 600,
+    "title": "货架标记",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I've chosen the finish that staff can write on with chalk."
+      },
+      {
+        "speaker": "B",
+        "text": "Is that for the whole display or just the price strip?"
+      },
+      {
+        "speaker": "A",
+        "text": "Just the strip. We change those prices twice a week."
+      },
+      {
+        "speaker": "B",
+        "text": "Then the wooden frame can stay as it is."
+      },
+      {
+        "speaker": "A",
+        "text": "Exactly. Can you send a sample of the strip to the shop?"
+      },
+      {
+        "speaker": "B",
+        "text": "I'll send one with the next delivery so you can test the lettering."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g18-q1",
+        "prompt": "Look at the graphic. Which code should appear on the sample?",
+        "options": [
+          "L1",
+          "L3",
+          "L2",
+          "L4"
+        ],
+        "answer": "L2",
+        "evidence": "can write on with chalk",
+        "paraphrase": "can write on with chalk → L2",
+        "en": "The requested writable finish is Chalkboard, listed as L2.",
+        "zh": "能用粉笔书写的是黑板面，表中编号 L2。",
+        "type": "graphic"
+      },
+      {
+        "id": "p3-g18-q2",
+        "prompt": "Why is a writable finish needed?",
+        "options": [
+          "The frame gets wet.",
+          "Prices change frequently.",
+          "The strip is too short.",
+          "The shop sells writing supplies."
+        ],
+        "answer": "Prices change frequently.",
+        "evidence": "We change those prices twice a week.",
+        "paraphrase": "We change those prices twice a week → Prices change frequently",
+        "en": "A writable strip allows repeated price changes.",
+        "zh": "价格每周改两次，可书写标签便于更新。"
+      },
+      {
+        "id": "p3-g18-q3",
+        "prompt": "What will the shop receive?",
+        "options": [
+          "A strip sample",
+          "A new wooden frame",
+          "A set of display shelves",
+          "A printed price list"
+        ],
+        "answer": "A strip sample",
+        "evidence": "I'll send one with the next delivery",
+        "paraphrase": "I'll send one with the next delivery → A strip sample",
+        "en": "One refers to the strip sample requested in the preceding turn.",
+        "zh": "one 指前一句要求寄送的价格条样品。"
+      }
+    ],
+    "graphic": {
+      "title": "Finishes",
+      "headers": [
+        "Code",
+        "Surface"
+      ],
+      "rows": [
+        [
+          "L1",
+          "Rubber"
+        ],
+        [
+          "L2",
+          "Chalkboard"
+        ],
+        [
+          "L3",
+          "Glass"
+        ],
+        [
+          "L4",
+          "Wood grain"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p3-g18-d",
+      "text": "I've chosen the finish that staff can write on with chalk.",
+      "answer": "chalk"
+    }
+  },
+  {
+    "id": "p3-g19",
+    "part": 3,
+    "level": 600,
+    "title": "预约名单",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Seven people want the pottery lesson, but there are only six wheels."
+      },
+      {
+        "speaker": "B",
+        "text": "Didn't someone cancel this morning?"
+      },
+      {
+        "speaker": "A",
+        "text": "She canceled her second lesson, not her first one."
+      },
+      {
+        "speaker": "B",
+        "text": "Could one person work at the hand-building table instead?"
+      },
+      {
+        "speaker": "A",
+        "text": "I'll ask before I change any bookings; they all paid for wheel slots."
+      },
+      {
+        "speaker": "B",
+        "text": "Good. If nobody agrees, I'll offer a place next week."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g19-q1",
+        "prompt": "What is the problem?",
+        "options": [
+          "A teacher canceled the first lesson.",
+          "The table has not been delivered.",
+          "Seven wheels need repair.",
+          "Demand exceeds the number of wheels."
+        ],
+        "answer": "Demand exceeds the number of wheels.",
+        "evidence": "Seven people want the pottery lesson, but there are only six wheels.",
+        "paraphrase": "Seven people want the pottery lesson, but there are only six wheels → Demand exceeds the number of wheels",
+        "en": "There is one more interested person than available wheels.",
+        "zh": "想上课的人比陶轮多一个。"
+      },
+      {
+        "id": "p3-g19-q2",
+        "prompt": "What did the cancellation affect?",
+        "options": [
+          "Today's first booking",
+          "A whole group reservation",
+          "A later lesson",
+          "The hand-building workshop"
+        ],
+        "answer": "A later lesson",
+        "evidence": "She canceled her second lesson, not her first one.",
+        "paraphrase": "She canceled her second lesson, not her first one → A later lesson",
+        "en": "The first booking remains in place.",
+        "zh": "取消的是第二次课程，第一次预约仍有效。"
+      },
+      {
+        "id": "p3-g19-q3",
+        "prompt": "Why will the first speaker ask permission?",
+        "options": [
+          "The second lesson costs more than the first.",
+          "The alternative differs from what people bought.",
+          "The table is reserved for the teacher.",
+          "Changing bookings requires a doctor's note."
+        ],
+        "answer": "The alternative differs from what people bought.",
+        "evidence": "they all paid for wheel slots",
+        "paraphrase": "they all paid for wheel slots → The alternative differs from what people bought",
+        "en": "Working by hand would change the activity each person paid for.",
+        "zh": "改为纯手工与大家付费预订的陶轮课程不同，需先征得同意。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g19-d",
+      "text": "I'll ask before I change any bookings; they all paid for wheel slots.",
+      "answer": "slots"
+    }
+  },
+  {
+    "id": "p3-g20",
+    "part": 3,
+    "level": 600,
+    "title": "户外摄影",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "These menu photographs show a stripe of glare across each plate."
+      },
+      {
+        "speaker": "B",
+        "text": "It comes from the lamp above the serving counter."
+      },
+      {
+        "speaker": "C",
+        "text": "I can switch that lamp off for a few minutes."
+      },
+      {
+        "speaker": "A",
+        "text": "Wouldn't the plates look too dark then?"
+      },
+      {
+        "speaker": "B",
+        "text": "We can move the plates beside the window for natural light."
+      },
+      {
+        "speaker": "C",
+        "text": "I'll clear a spot there while you set up the camera."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g20-q1",
+        "prompt": "What spoils the photographs?",
+        "options": [
+          "Reflected light",
+          "Incorrect menu prices",
+          "An unwashed plate",
+          "A missing background"
+        ],
+        "answer": "Reflected light",
+        "evidence": "a stripe of glare across each plate",
+        "paraphrase": "a stripe of glare across each plate → Reflected light",
+        "en": "The photographs show glare on the plates.",
+        "zh": "照片上的盘子都有一条反光。"
+      },
+      {
+        "id": "p3-g20-q2",
+        "prompt": "Where does the second speaker suggest taking the pictures?",
+        "options": [
+          "Under the counter",
+          "Beside the entrance sign",
+          "At an outdoor table",
+          "By a window"
+        ],
+        "answer": "By a window",
+        "evidence": "move the plates beside the window",
+        "paraphrase": "move the plates beside the window → By a window",
+        "en": "The window supplies natural light after the lamp is switched off.",
+        "zh": "把盘子移到窗边可利用自然光。"
+      },
+      {
+        "id": "p3-g20-q3",
+        "prompt": "What will the third speaker do next?",
+        "options": [
+          "Adjust the camera settings",
+          "Select dishes for the menu",
+          "Clear space for the plates",
+          "Replace the overhead lamp"
+        ],
+        "answer": "Clear space for the plates",
+        "evidence": "I'll clear a spot there",
+        "paraphrase": "I'll clear a spot there → Clear space for the plates",
+        "en": "The third speaker volunteers to prepare the new location.",
+        "zh": "第三位说话人打算先腾出拍摄位置。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g20-d",
+      "text": "These menu photographs show a stripe of glare across each plate.",
+      "answer": "glare"
+    }
+  },
+  {
+    "id": "p3-g21",
+    "part": 3,
+    "level": 600,
+    "title": "取件凭证",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I need the coat I checked at the theater, but I lost the paper ticket."
+      },
+      {
+        "speaker": "B",
+        "text": "Can you describe something inside a pocket?"
+      },
+      {
+        "speaker": "A",
+        "text": "There's a folded receipt with my surname printed at the top."
+      },
+      {
+        "speaker": "B",
+        "text": "I'll look for that. What color is the lining?"
+      },
+      {
+        "speaker": "A",
+        "text": "Dark green, and one of the cuff buttons is missing."
+      },
+      {
+        "speaker": "B",
+        "text": "That should help us match it. Please wait by the counter."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g21-q1",
+        "prompt": "What has the visitor lost?",
+        "options": [
+          "A coat button found at the theater",
+          "A claim ticket",
+          "A printed receipt",
+          "A green wallet"
+        ],
+        "answer": "A claim ticket",
+        "evidence": "I lost the paper ticket",
+        "paraphrase": "I lost the paper ticket → A claim ticket",
+        "en": "The missing item is the ticket used to claim the checked coat.",
+        "zh": "丢失的是寄存大衣的纸质凭证。"
+      },
+      {
+        "id": "p3-g21-q2",
+        "prompt": "Which item could identify the owner?",
+        "options": [
+          "A receipt bearing a surname",
+          "A button sewn inside the pocket",
+          "A program signed by an actor",
+          "A ticket naming the theater"
+        ],
+        "answer": "A receipt bearing a surname",
+        "evidence": "a folded receipt with my surname printed at the top",
+        "paraphrase": "a folded receipt with my surname printed at the top → A receipt bearing a surname",
+        "en": "The surname on the receipt connects the coat to its owner.",
+        "zh": "衣袋里的收据印有姓氏，可用于核实归属。"
+      },
+      {
+        "id": "p3-g21-q3",
+        "prompt": "What does “match it” mean here?",
+        "options": [
+          "Choose a button of the same shade",
+          "Select a coat for a costume change",
+          "Compare the price with the receipt",
+          "Find the coat that fits the description"
+        ],
+        "answer": "Find the coat that fits the description",
+        "evidence": "That should help us match it.",
+        "paraphrase": "That should help us match it → Find the coat that fits the description",
+        "en": "The lining and missing button help identify the lost-ticket visitor's coat.",
+        "zh": "内衬颜色和缺少的袖扣有助于找出与描述相符的大衣。",
+        "type": "intent"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g21-d",
+      "text": "There's a folded receipt with my surname printed at the top.",
+      "answer": "surname"
+    }
+  },
+  {
+    "id": "p3-g22",
+    "part": 3,
+    "level": 700,
+    "title": "订单追踪",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The gallery says the frames arrived scratched, but our outgoing report is clean."
+      },
+      {
+        "speaker": "B",
+        "text": "Which batch went into rigid crates? The others held only paper or fabric."
+      },
+      {
+        "speaker": "A",
+        "text": "That was the only batch carrying frames. We need its unloading photos."
+      },
+      {
+        "speaker": "C",
+        "text": "I have those photos, but they show the crates before the lids came off."
+      },
+      {
+        "speaker": "B",
+        "text": "Then they establish the exterior condition only."
+      },
+      {
+        "speaker": "A",
+        "text": "I'll ask the gallery for pictures taken as each frame was removed."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g22-q1",
+        "prompt": "Look at the graphic. Which batch needs checking?",
+        "options": [
+          "R1",
+          "R2",
+          "R3",
+          "R4"
+        ],
+        "answer": "R3",
+        "evidence": "Which batch went into rigid crates?",
+        "paraphrase": "Which batch went into rigid crates → R3",
+        "en": "Only the rigid crates held frames. The shipment list links this packing to R3.",
+        "zh": "只有硬木箱装了画框，表中对应 R3。",
+        "type": "graphic"
+      },
+      {
+        "id": "p3-g22-q2",
+        "prompt": "What limits the value of the existing photos?",
+        "options": [
+          "Only the frames are visible.",
+          "The crates are still closed.",
+          "The batch codes have faded.",
+          "The photos show a different delivery."
+        ],
+        "answer": "The crates are still closed.",
+        "evidence": "before the lids came off",
+        "paraphrase": "before the lids came off → The crates are still closed",
+        "en": "Closed lids prevent the photos from showing the condition of the frames inside.",
+        "zh": "照片摄于开箱前，不能说明箱内画框的状况。"
+      },
+      {
+        "id": "p3-g22-q3",
+        "prompt": "What will the first speaker request?",
+        "options": [
+          "Images from the unpacking process",
+          "Replacement lids from the shipper",
+          "A revised packing price",
+          "Copies of the outgoing invoices"
+        ],
+        "answer": "Images from the unpacking process",
+        "evidence": "pictures taken as each frame was removed",
+        "paraphrase": "pictures taken as each frame was removed → Images from the unpacking process",
+        "en": "Images from the moment of removal may show when scratches were first visible.",
+        "zh": "逐一取出画框时的照片能帮助判断划痕何时可见。"
+      }
+    ],
+    "graphic": {
+      "title": "Shipments",
+      "headers": [
+        "Batch",
+        "Packing"
+      ],
+      "rows": [
+        [
+          "R1",
+          "Flat envelopes"
+        ],
+        [
+          "R2",
+          "Padded sleeves"
+        ],
+        [
+          "R3",
+          "Rigid crates"
+        ],
+        [
+          "R4",
+          "Cloth sacks"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p3-g22-d",
+      "text": "Which batch went into rigid crates?",
+      "answer": "crates"
+    }
+  },
+  {
+    "id": "p3-g23",
+    "part": 3,
+    "level": 700,
+    "title": "报名优惠",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Three colleagues used our referral link, yet the account shows only one credit."
+      },
+      {
+        "speaker": "B",
+        "text": "Did they finish creating their accounts, or just enter their email addresses?"
+      },
+      {
+        "speaker": "A",
+        "text": "All three created accounts, but only one attended an introductory class."
+      },
+      {
+        "speaker": "B",
+        "text": "That explains the balance. Attendance activates the credit."
+      },
+      {
+        "speaker": "A",
+        "text": "So the other two links are still useful?"
+      },
+      {
+        "speaker": "B",
+        "text": "Yes. Their credits will appear if those colleagues come to a first class."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g23-q1",
+        "prompt": "What prompted the inquiry?",
+        "options": [
+          "A referral link opened the wrong account.",
+          "A class was canceled at short notice.",
+          "Three people received duplicate emails.",
+          "Fewer credits appeared than expected."
+        ],
+        "answer": "Fewer credits appeared than expected.",
+        "evidence": "the account shows only one credit",
+        "paraphrase": "the account shows only one credit → Fewer credits appeared than expected",
+        "en": "Three referrals produced only one visible credit.",
+        "zh": "有三位受邀者，账户却只显示一笔奖励。"
+      },
+      {
+        "id": "p3-g23-q2",
+        "prompt": "Which action activates a credit?",
+        "options": [
+          "Entering an email address",
+          "Sharing the referral link",
+          "Attending an initial class",
+          "Creating a second account"
+        ],
+        "answer": "Attending an initial class",
+        "evidence": "Attendance activates the credit.",
+        "paraphrase": "Attendance activates the credit → Attending an initial class",
+        "en": "An account alone is insufficient; the referred colleague must attend.",
+        "zh": "只注册账户不够，受邀者参加首次课程才会触发奖励。"
+      },
+      {
+        "id": "p3-g23-q3",
+        "prompt": "What does the final reply imply?",
+        "options": [
+          "The unused links have expired.",
+          "Two credits can still be earned.",
+          "All credits must be spent at once.",
+          "A second account is required."
+        ],
+        "answer": "Two credits can still be earned.",
+        "evidence": "Their credits will appear if those colleagues come to a first class.",
+        "paraphrase": "Their credits will appear if those colleagues come to a first class → Two credits can still be earned",
+        "en": "The remaining credits depend on future attendance.",
+        "zh": "另外两位若来上首次课程，奖励仍能获得。",
+        "type": "intent"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g23-d",
+      "text": "Three colleagues used our referral link, yet the account shows only one credit.",
+      "answer": "credit"
+    }
+  },
+  {
+    "id": "p3-g24",
+    "part": 3,
+    "level": 700,
+    "title": "发言安排",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The guest presenter sent slides but asked us not to share them before the talk."
+      },
+      {
+        "speaker": "B",
+        "text": "Our caption writer needs them in advance to check the technical names."
+      },
+      {
+        "speaker": "C",
+        "text": "I can provide a separate list of names with pronunciations."
+      },
+      {
+        "speaker": "A",
+        "text": "Would that be enough for the caption writer?"
+      },
+      {
+        "speaker": "B",
+        "text": "Yes, provided it includes the names shown on the charts."
+      },
+      {
+        "speaker": "C",
+        "text": "I'll include those and send the list directly, without attaching any slides."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g24-q1",
+        "prompt": "What restriction applies to the slides?",
+        "options": [
+          "They must stay private before the talk.",
+          "They must contain phonetic spellings.",
+          "They may be shown only without charts.",
+          "They may not include technical terms."
+        ],
+        "answer": "They must stay private before the talk.",
+        "evidence": "not to share them before the talk",
+        "paraphrase": "not to share them before the talk → They must stay private before the talk",
+        "en": "The presenter prohibits advance distribution of the slides.",
+        "zh": "主讲人要求演讲前不要分享幻灯片。"
+      },
+      {
+        "id": "p3-g24-q2",
+        "prompt": "Why is advance information needed?",
+        "options": [
+          "To approve a new chart design",
+          "To shorten the guest's presentation",
+          "To print copies for the audience",
+          "To prepare accurate captions"
+        ],
+        "answer": "To prepare accurate captions",
+        "evidence": "to check the technical names",
+        "paraphrase": "to check the technical names → To prepare accurate captions",
+        "en": "The caption writer needs the exact names for accurate live text.",
+        "zh": "字幕人员要提前核准专有名称。"
+      },
+      {
+        "id": "p3-g24-q3",
+        "prompt": "What compromise is accepted?",
+        "options": [
+          "Send the charts without their titles.",
+          "Share the complete deck privately.",
+          "Send a list including chart names.",
+          "Record the whole talk in advance."
+        ],
+        "answer": "Send a list including chart names.",
+        "evidence": "include those and send the list directly",
+        "paraphrase": "include those and send the list directly → Send a list including chart names",
+        "en": "A separate list meets the caption writer's need and keeps the slides private.",
+        "zh": "另发含图表名称的清单，既便于准备字幕又不提前散发幻灯片。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g24-d",
+      "text": "Yes, provided it includes the names shown on the charts.",
+      "answer": "charts"
+    }
+  },
+  {
+    "id": "p3-g25",
+    "part": 3,
+    "level": 700,
+    "title": "维修评估",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The backup pump passed its test, so can we cancel the weekend service call?"
+      },
+      {
+        "speaker": "B",
+        "text": "What did the test cover? I thought it only checked whether the motor started."
+      },
+      {
+        "speaker": "C",
+        "text": "That's right. We haven't run it under a full load."
+      },
+      {
+        "speaker": "A",
+        "text": "Then the report doesn't settle the issue."
+      },
+      {
+        "speaker": "B",
+        "text": "I'll keep the booking and ask the technician to bring a load meter."
+      },
+      {
+        "speaker": "C",
+        "text": "I'll make sure the test area is clear before the visit."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g25-q1",
+        "prompt": "What did the completed test establish?",
+        "options": [
+          "The pump met its full rated load.",
+          "The motor could start.",
+          "The meter had been calibrated.",
+          "The repair had been completed."
+        ],
+        "answer": "The motor could start.",
+        "evidence": "it only checked whether the motor started",
+        "paraphrase": "it only checked whether the motor started → The motor could start",
+        "en": "The third speaker confirms that the test covered startup only.",
+        "zh": "第三位说话人确认测试只检查了电机能否启动。"
+      },
+      {
+        "id": "p3-g25-q2",
+        "prompt": "What does “doesn't settle the issue” mean?",
+        "options": [
+          "More testing is needed.",
+          "The report has been lost.",
+          "The booking was charged twice.",
+          "A replacement has been approved."
+        ],
+        "answer": "More testing is needed.",
+        "evidence": "We haven't run it under a full load.",
+        "paraphrase": "We haven't run it under a full load → More testing is needed",
+        "en": "A startup test leaves the pump's performance under load unresolved.",
+        "zh": "仅能启动不能证明满负荷运行正常，问题尚待验证。"
+      },
+      {
+        "id": "p3-g25-q3",
+        "prompt": "What will the second speaker do?",
+        "options": [
+          "Clear the area for the visit",
+          "Replace the pump motor",
+          "Calibrate a borrowed meter",
+          "Retain the service appointment"
+        ],
+        "answer": "Retain the service appointment",
+        "evidence": "I'll keep the booking",
+        "paraphrase": "I'll keep the booking → Retain the service appointment",
+        "en": "The second speaker will keep the appointment and request a meter.",
+        "zh": "第二位说话人决定保留上门预约，并要求带负载表。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g25-d",
+      "text": "The backup pump passed its test, so can we cancel the weekend service call?",
+      "answer": "backup"
+    }
+  },
+  {
+    "id": "p3-g26",
+    "part": 3,
+    "level": 800,
+    "title": "询价澄清",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The customer objects to paying extra to have the wrapping taken away."
+      },
+      {
+        "speaker": "B",
+        "text": "Which handoff did the signed estimate promise?"
+      },
+      {
+        "speaker": "A",
+        "text": "Only delivery to the named floor. The salesperson's email did mention recycling, though."
+      },
+      {
+        "speaker": "C",
+        "text": "It said our wrapping is recyclable. It didn't promise we'd collect it."
+      },
+      {
+        "speaker": "B",
+        "text": "Then explain the difference and quote the tier that covers collection."
+      },
+      {
+        "speaker": "A",
+        "text": "I'll do that before changing the order, so the customer can choose."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g26-q1",
+        "prompt": "Look at the graphic. Which tier should be quoted?",
+        "options": [
+          "Plus",
+          "Basic",
+          "Care",
+          "Hold"
+        ],
+        "answer": "Care",
+        "evidence": "quote the tier that covers collection",
+        "paraphrase": "quote the tier that covers collection → Care",
+        "en": "The customer wants the wrapping removed; Care includes unpacking and removal.",
+        "zh": "客户要清走包装，表内含拆包并清运的是 Care。",
+        "type": "graphic"
+      },
+      {
+        "id": "p3-g26-q2",
+        "prompt": "What distinction does the third speaker make?",
+        "options": [
+          "A floor number is different from a depot code.",
+          "A material property is different from a service.",
+          "A signed order is different from a draft invoice.",
+          "A discount applies to delivery but not collection."
+        ],
+        "answer": "A material property is different from a service.",
+        "evidence": "our wrapping is recyclable. It didn't promise we'd collect it.",
+        "paraphrase": "our wrapping is recyclable. It didn't promise we'd collect it → A material property is different from a service",
+        "en": "Recyclable describes the wrapping; it does not promise a pickup service.",
+        "zh": "可回收描述材料性质，不代表供货方承诺上门清运。"
+      },
+      {
+        "id": "p3-g26-q3",
+        "prompt": "Why will the order stay unchanged for now?",
+        "options": [
+          "The customer must choose how to proceed.",
+          "The signed estimate has expired.",
+          "The chosen floor is inaccessible.",
+          "The customer has already declined collection."
+        ],
+        "answer": "The customer must choose how to proceed.",
+        "evidence": "so the customer can choose",
+        "paraphrase": "so the customer can choose → The customer must choose how to proceed",
+        "en": "The revised option will be presented before the order is changed.",
+        "zh": "先说明并报价，让客户决定是否调整订单。"
+      }
+    ],
+    "graphic": {
+      "title": "Delivery tiers",
+      "headers": [
+        "Tier",
+        "Included handoff"
+      ],
+      "rows": [
+        [
+          "Basic",
+          "Building entrance"
+        ],
+        [
+          "Plus",
+          "Named floor"
+        ],
+        [
+          "Care",
+          "Unpack and remove wrapping"
+        ],
+        [
+          "Hold",
+          "Depot collection"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p3-g26-d",
+      "text": "Then explain the difference and quote the tier that covers collection.",
+      "answer": "tier"
+    }
+  },
+  {
+    "id": "p3-g27",
+    "part": 3,
+    "level": 800,
+    "title": "质检放行",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The sample passed the color test. May I release the entire fabric run?"
+      },
+      {
+        "speaker": "B",
+        "text": "Was the sample taken before or after the dye tank was topped up?"
+      },
+      {
+        "speaker": "A",
+        "text": "Before, according to the batch sheet."
+      },
+      {
+        "speaker": "C",
+        "text": "Then it represents only the first part of the run."
+      },
+      {
+        "speaker": "B",
+        "text": "Set aside the rolls made after the refill until another sample is checked."
+      },
+      {
+        "speaker": "A",
+        "text": "I'll mark the dividing point on the rack so the two lots stay separate."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g27-q1",
+        "prompt": "What decision is being considered?",
+        "options": [
+          "Whether to refill a damaged tank",
+          "Whether to replace the batch sheet",
+          "Whether to change the approved color",
+          "Whether to release all the fabric"
+        ],
+        "answer": "Whether to release all the fabric",
+        "evidence": "release the entire fabric run",
+        "paraphrase": "release the entire fabric run → Whether to release all the fabric",
+        "en": "The first speaker wants permission to release the whole production run.",
+        "zh": "第一位说话人询问整批布能否放行。"
+      },
+      {
+        "id": "p3-g27-q2",
+        "prompt": "Why is the first test insufficient?",
+        "options": [
+          "The approved shade has changed.",
+          "The test sheet identifies no batch.",
+          "The tank changed after sampling.",
+          "The sample came from another supplier."
+        ],
+        "answer": "The tank changed after sampling.",
+        "evidence": "Before, according to the batch sheet.",
+        "paraphrase": "Before, according to the batch sheet → The tank changed after sampling",
+        "en": "The sample preceded the refill and cannot establish the shade afterward.",
+        "zh": "抽样在补充染料前完成，无法证明后来生产的布也合格。"
+      },
+      {
+        "id": "p3-g27-q3",
+        "prompt": "What will the first speaker mark?",
+        "options": [
+          "Which color the customer preferred",
+          "Where one lot ends and the next starts",
+          "The height of the empty dye tank",
+          "The time of the next delivery"
+        ],
+        "answer": "Where one lot ends and the next starts",
+        "evidence": "mark the dividing point on the rack",
+        "paraphrase": "mark the dividing point on the rack → Where one lot ends and the next starts",
+        "en": "A physical marker will distinguish fabric produced before and after the refill.",
+        "zh": "用标记把补料前后生产的布分开。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g27-d",
+      "text": "The sample passed the color test.",
+      "answer": "sample"
+    }
+  },
+  {
+    "id": "p3-g28",
+    "part": 3,
+    "level": 800,
+    "title": "问卷反馈",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Since most respondents to our exit survey prefer late opening hours, can we use it to set next season's timetable?"
+      },
+      {
+        "speaker": "B",
+        "text": "Where did people fill it out?"
+      },
+      {
+        "speaker": "A",
+        "text": "At the evening exhibition. Morning visitors weren't given forms."
+      },
+      {
+        "speaker": "B",
+        "text": "That puts a limit on what we can conclude."
+      },
+      {
+        "speaker": "C",
+        "text": "I can repeat the question during the morning tours next week."
+      },
+      {
+        "speaker": "A",
+        "text": "Good. We'll wait for those replies before recommending different hours."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g28-q1",
+        "prompt": "Who contributed to the initial survey?",
+        "options": [
+          "Evening exhibition visitors",
+          "All visitors during the season",
+          "Only morning tour leaders",
+          "Staff responsible for scheduling"
+        ],
+        "answer": "Evening exhibition visitors",
+        "evidence": "At the evening exhibition.",
+        "paraphrase": "At the evening exhibition → Evening exhibition visitors",
+        "en": "The forms were distributed at an evening event.",
+        "zh": "问卷在晚间展览现场发放。"
+      },
+      {
+        "id": "p3-g28-q2",
+        "prompt": "What does “puts a limit” mean here?",
+        "options": [
+          "The survey reached its maximum number of forms.",
+          "The evening opening must end earlier.",
+          "The exhibition can accept no more bookings.",
+          "The responses may not represent all visitors."
+        ],
+        "answer": "The responses may not represent all visitors.",
+        "evidence": "Morning visitors weren't given forms.",
+        "paraphrase": "Morning visitors weren't given forms → The responses may not represent all visitors",
+        "en": "A group with possibly different preferences was excluded.",
+        "zh": "晨间访客未参与，结果未必代表全部人群。",
+        "type": "intent"
+      },
+      {
+        "id": "p3-g28-q3",
+        "prompt": "What will happen before a recommendation is made?",
+        "options": [
+          "Morning tours will be canceled.",
+          "All existing replies will be discarded.",
+          "Another group will be surveyed.",
+          "The evening opening will be extended."
+        ],
+        "answer": "Another group will be surveyed.",
+        "evidence": "repeat the question during the morning tours",
+        "paraphrase": "repeat the question during the morning tours → Another group will be surveyed",
+        "en": "The team will collect morning visitors' views before deciding.",
+        "zh": "先补收晨间访客意见，再提出营业时间建议。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g28-d",
+      "text": "Since most respondents to our exit survey prefer late opening hours, can we use it to set next season's timetable?",
+      "answer": "exit"
+    }
+  },
+  {
+    "id": "p3-g29",
+    "part": 3,
+    "level": 900,
+    "title": "租赁条款",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The client says our driver waived the cleaning charge at pickup. Which code should I record?"
+      },
+      {
+        "speaker": "B",
+        "text": "Could the driver approve a waiver, or only request an inspection?"
+      },
+      {
+        "speaker": "C",
+        "text": "Only the latter. The form he signed asks our depot to check the stains."
+      },
+      {
+        "speaker": "A",
+        "text": "Then recording a waiver would turn a request into a decision."
+      },
+      {
+        "speaker": "B",
+        "text": "Exactly, so enter the code for the action actually documented."
+      },
+      {
+        "speaker": "C",
+        "text": "I'll ask the depot for its finding before we issue the final statement."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g29-q1",
+        "prompt": "Look at the graphic. Which code should be entered now?",
+        "options": [
+          "W",
+          "I",
+          "R",
+          "N"
+        ],
+        "answer": "I",
+        "evidence": "asks our depot to check the stains",
+        "paraphrase": "asks our depot to check the stains → I",
+        "en": "The signed action was an inspection request, which the table labels I.",
+        "zh": "签署的是检查污渍的请求，表中对应 I。",
+        "type": "graphic"
+      },
+      {
+        "id": "p3-g29-q2",
+        "prompt": "What does the first speaker mean by “turn a request into a decision”?",
+        "options": [
+          "The code would imply approval that has not been granted.",
+          "The driver could use the code to appeal a decision.",
+          "The depot would have to repeat an approved inspection.",
+          "The inspection request would automatically expire."
+        ],
+        "answer": "The code would imply approval that has not been granted.",
+        "evidence": "recording a waiver would turn a request into a decision",
+        "paraphrase": "recording a waiver would turn a request into a decision → The code would imply approval that has not been granted",
+        "en": "Entering a waiver would misrepresent a request as an authorized result.",
+        "zh": "现在填豁免会把待查申请错误记为已批准结论。",
+        "type": "intent"
+      },
+      {
+        "id": "p3-g29-q3",
+        "prompt": "What will precede the final statement?",
+        "options": [
+          "A second signature from the driver",
+          "A replacement vehicle inspection",
+          "A new waiver request from the client",
+          "A finding from the depot"
+        ],
+        "answer": "A finding from the depot",
+        "evidence": "ask the depot for its finding before we issue the final statement",
+        "paraphrase": "ask the depot for its finding before we issue the final statement → A finding from the depot",
+        "en": "The final charge depends on the depot's outcome.",
+        "zh": "最终账单须先等仓库的检查结果。"
+      }
+    ],
+    "graphic": {
+      "title": "Return provisions",
+      "headers": [
+        "Code",
+        "Applicable circumstance"
+      ],
+      "rows": [
+        [
+          "N",
+          "Normal return"
+        ],
+        [
+          "W",
+          "Waiver approved in writing"
+        ],
+        [
+          "I",
+          "Inspection requested"
+        ],
+        [
+          "R",
+          "Replacement issued"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p3-g29-d",
+      "text": "Could the driver approve a waiver, or only request an inspection?",
+      "answer": "waiver"
+    }
+  },
+  {
+    "id": "p3-g30",
+    "part": 3,
+    "level": 900,
+    "title": "产能测算",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The spreadsheet treats every idle minute on the packing machine as spare capacity."
+      },
+      {
+        "speaker": "B",
+        "text": "That would be fair if the incoming trays were ready throughout the shift."
+      },
+      {
+        "speaker": "C",
+        "text": "They aren't. Some of those pauses are spent waiting for the ovens."
+      },
+      {
+        "speaker": "A",
+        "text": "So buying another packing machine wouldn't necessarily raise output?"
+      },
+      {
+        "speaker": "B",
+        "text": "Right. First separate waits for trays from stops caused by a full packing queue."
+      },
+      {
+        "speaker": "C",
+        "text": "I'll add those categories to the log and record them over the next three shifts."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g30-q1",
+        "prompt": "What assumption is questioned?",
+        "options": [
+          "All trays must be packed before they cool.",
+          "Machine repairs always delay the ovens.",
+          "All idle packing time is usable capacity.",
+          "The ovens and packing machines have equal capacity."
+        ],
+        "answer": "All idle packing time is usable capacity.",
+        "evidence": "treats every idle minute on the packing machine as spare capacity",
+        "paraphrase": "treats every idle minute on the packing machine as spare capacity → All idle packing time is usable capacity",
+        "en": "Idle time may result from an upstream wait instead of available productive time.",
+        "zh": "机器空转可能是上游未供货，不能全算作可利用产能。"
+      },
+      {
+        "id": "p3-g30-q2",
+        "prompt": "Why might another packing machine have little effect?",
+        "options": [
+          "The packing queue is always full.",
+          "The ovens sometimes limit the supply of trays.",
+          "There is no space for another operator.",
+          "The new machine would require a longer shift."
+        ],
+        "answer": "The ovens sometimes limit the supply of trays.",
+        "evidence": "Some of those pauses are spent waiting for the ovens.",
+        "paraphrase": "Some of those pauses are spent waiting for the ovens → The ovens sometimes limit the supply of trays",
+        "en": "Extra packing capacity does not resolve a shortage of trays from the ovens.",
+        "zh": "缺盘源于烤炉时，增加下游包装机无助于提升产出。"
+      },
+      {
+        "id": "p3-g30-q3",
+        "prompt": "What will be recorded next?",
+        "options": [
+          "Reasons for stoppages across several shifts",
+          "The purchase price of each packing machine",
+          "The weight of each incoming tray",
+          "A revised delivery time for every customer"
+        ],
+        "answer": "Reasons for stoppages across several shifts",
+        "evidence": "add those categories to the log and record them over the next three shifts",
+        "paraphrase": "add those categories to the log and record them over the next three shifts → Reasons for stoppages across several shifts",
+        "en": "The new log distinguishes two causes of delay over three shifts.",
+        "zh": "接下来三个班次会分别记录等待来盘和包装排队等原因。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g30-d",
+      "text": "The spreadsheet treats every idle minute on the packing machine as spare capacity.",
+      "answer": "idle"
+    }
+  },
+  {
+    "id": "p4-g07",
+    "part": 4,
+    "level": 400,
+    "title": "巴士提示",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Welcome to the central bus station. Passengers for the harbor shuttle should check the platform board. The shuttle leaves in ten minutes. Please buy a ticket at the blue machine before boarding. The driver does not sell tickets."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g07-q1",
+        "prompt": "Where is the speaker making the announcement?",
+        "options": [
+          "Inside a museum",
+          "At a harbor gate",
+          "On a college campus",
+          "At a bus station"
+        ],
+        "answer": "At a bus station",
+        "evidence": "Welcome to the central bus station.",
+        "paraphrase": "Welcome to the central bus station → At a bus station",
+        "en": "The opening identifies the location.",
+        "zh": "开头明确说明是中央汽车站。"
+      },
+      {
+        "id": "p4-g07-q2",
+        "prompt": "Look at the graphic. Where should harbor passengers wait?",
+        "options": [
+          "Platform 1",
+          "Platform 2",
+          "Platform 3",
+          "Platform 4"
+        ],
+        "answer": "Platform 2",
+        "evidence": "Passengers for the harbor shuttle should check the platform board.",
+        "paraphrase": "Passengers for the harbor shuttle should check the platform board → Platform 2",
+        "en": "The board assigns the Harbor shuttle to Platform 2.",
+        "zh": "广播让乘坐港湾接驳车的旅客查看显示板，表中为 2 号站台。",
+        "type": "graphic"
+      },
+      {
+        "id": "p4-g07-q3",
+        "prompt": "What should a passenger do before boarding?",
+        "options": [
+          "Choose a seat by the driver",
+          "Buy a ticket from a machine",
+          "Print the bus timetable",
+          "Visit the information office"
+        ],
+        "answer": "Buy a ticket from a machine",
+        "evidence": "buy a ticket at the blue machine before boarding",
+        "paraphrase": "buy a ticket at the blue machine before boarding → Buy a ticket from a machine",
+        "en": "The driver does not sell tickets, so passengers use the machine.",
+        "zh": "司机不售票，须先在蓝色机器购票。"
+      }
+    ],
+    "graphic": {
+      "title": "Departure board",
+      "headers": [
+        "Platform",
+        "Service"
+      ],
+      "rows": [
+        [
+          "1",
+          "Museum express"
+        ],
+        [
+          "2",
+          "Harbor shuttle"
+        ],
+        [
+          "3",
+          "Hill loop"
+        ],
+        [
+          "4",
+          "College bus"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p4-g07-d",
+      "text": "Passengers for the harbor shuttle should check the platform board.",
+      "answer": "platform"
+    }
+  },
+  {
+    "id": "p4-g08",
+    "part": 4,
+    "level": 400,
+    "title": "营业时间留言",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Thank you for calling Elm Cutlery. Our sharpening counter opens at noon today. Please wrap your kitchen knives in a thick cloth before bringing them in. Most orders take two days. We will call you when your order is ready."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g08-q1",
+        "prompt": "What service is offered?",
+        "options": [
+          "Selling kitchen cloths",
+          "Repairing ovens",
+          "Delivering groceries",
+          "Sharpening knives"
+        ],
+        "answer": "Sharpening knives",
+        "evidence": "Our sharpening counter opens at noon today.",
+        "paraphrase": "Our sharpening counter opens at noon today → Sharpening knives",
+        "en": "The shop sharpens customers' knives.",
+        "zh": "店铺提供厨刀磨刃服务。"
+      },
+      {
+        "id": "p4-g08-q2",
+        "prompt": "When does the counter open today?",
+        "options": [
+          "In two days",
+          "At nine in the morning",
+          "At the end of the day",
+          "At noon"
+        ],
+        "answer": "At noon",
+        "evidence": "opens at noon today",
+        "paraphrase": "opens at noon today → At noon",
+        "en": "Noon is the opening time, while two days is a typical turnaround.",
+        "zh": "中午是营业时间，两天指通常的处理时长。"
+      },
+      {
+        "id": "p4-g08-q3",
+        "prompt": "How will customers learn that their orders are ready?",
+        "options": [
+          "By checking a board",
+          "By telephone",
+          "By a printed leaflet",
+          "By returning at noon"
+        ],
+        "answer": "By telephone",
+        "evidence": "We will call you when your order is ready.",
+        "paraphrase": "We will call you when your order is ready → By telephone",
+        "en": "The shop will telephone customers.",
+        "zh": "完成后店铺会打电话通知。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g08-d",
+      "text": "Our sharpening counter opens at noon today.",
+      "answer": "sharpening"
+    }
+  },
+  {
+    "id": "p4-g09",
+    "part": 4,
+    "level": 400,
+    "title": "参观前说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Welcome to the glass studio. Leave your bags on the bench before you enter the workshop. A yellow rail separates visitors from the hot equipment. Please stay behind the rail during the demonstration. You may take pictures from there."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g09-q1",
+        "prompt": "What are listeners preparing to watch?",
+        "options": [
+          "A safety film",
+          "A glassmaking demonstration",
+          "A photography contest",
+          "A furniture sale"
+        ],
+        "answer": "A glassmaking demonstration",
+        "evidence": "stay behind the rail during the demonstration",
+        "paraphrase": "stay behind the rail during the demonstration → A glassmaking demonstration",
+        "en": "The welcome identifies a glass studio and introduces a demonstration there.",
+        "zh": "欢迎词说明地点为玻璃工坊，接下来观看现场示范。"
+      },
+      {
+        "id": "p4-g09-q2",
+        "prompt": "Where should bags be left?",
+        "options": [
+          "On a bench",
+          "Behind the equipment",
+          "In a yellow locker",
+          "At the photography counter"
+        ],
+        "answer": "On a bench",
+        "evidence": "Leave your bags on the bench",
+        "paraphrase": "Leave your bags on the bench → On a bench",
+        "en": "The bench is the designated place for bags.",
+        "zh": "包须放在长凳上。"
+      },
+      {
+        "id": "p4-g09-q3",
+        "prompt": "What is permitted from behind the rail?",
+        "options": [
+          "Handling glass samples",
+          "Moving the equipment",
+          "Joining the demonstration",
+          "Taking photographs"
+        ],
+        "answer": "Taking photographs",
+        "evidence": "You may take pictures from there.",
+        "paraphrase": "You may take pictures from there → Taking photographs",
+        "en": "There refers to the visitors' side of the rail.",
+        "zh": "there 指栏杆后方，允许在那里拍照。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g09-d",
+      "text": "A yellow rail separates visitors from the hot equipment.",
+      "answer": "rail"
+    }
+  },
+  {
+    "id": "p4-g10",
+    "part": 4,
+    "level": 400,
+    "title": "失物广播",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "A green scarf was found near the library printer this morning. Its owner can collect it at the main desk until five today. Please tell the librarian what picture is on the scarf. You do not need to show your library card."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g10-q1",
+        "prompt": "What item has been found?",
+        "options": [
+          "A printer cable",
+          "A library card",
+          "A scarf",
+          "A picture book"
+        ],
+        "answer": "A scarf",
+        "evidence": "A green scarf was found",
+        "paraphrase": "A green scarf was found → A scarf",
+        "en": "The announcement concerns a found scarf.",
+        "zh": "广播为一条绿色围巾寻找失主。"
+      },
+      {
+        "id": "p4-g10-q2",
+        "prompt": "Where can the owner get it back?",
+        "options": [
+          "Beside the printer",
+          "At the main desk",
+          "In the reading room",
+          "At the library entrance"
+        ],
+        "answer": "At the main desk",
+        "evidence": "collect it at the main desk",
+        "paraphrase": "collect it at the main desk → At the main desk",
+        "en": "The item has been taken from the printer area to the main desk.",
+        "zh": "拾获地点在打印机旁，领取地点是总服务台。"
+      },
+      {
+        "id": "p4-g10-q3",
+        "prompt": "How should the owner identify the item?",
+        "options": [
+          "Describe its picture",
+          "Show a library card",
+          "Give the printer number",
+          "Name the librarian"
+        ],
+        "answer": "Describe its picture",
+        "evidence": "tell the librarian what picture is on the scarf",
+        "paraphrase": "tell the librarian what picture is on the scarf → Describe its picture",
+        "en": "Knowledge of the scarf's design serves as identification.",
+        "zh": "说出围巾上的图案可用来证明归属。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g10-d",
+      "text": "A green scarf was found near the library printer this morning.",
+      "answer": "scarf"
+    }
+  },
+  {
+    "id": "p4-g11",
+    "part": 4,
+    "level": 400,
+    "title": "器材归还",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Before you leave the badminton hall, count the rackets in your bag. Return all borrowed rackets to the basket by the office. Keep your own water bottles with you. The next group will come in at four."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g11-q1",
+        "prompt": "Who is the speaker most likely addressing?",
+        "options": [
+          "Staff selling sportswear",
+          "New office employees",
+          "People buying concert tickets",
+          "Players finishing a session"
+        ],
+        "answer": "Players finishing a session",
+        "evidence": "Before you leave the badminton hall",
+        "paraphrase": "Before you leave the badminton hall → Players finishing a session",
+        "en": "The instructions concern sports equipment after play.",
+        "zh": "广播提醒正在离开羽毛球馆的球员收拾器材。"
+      },
+      {
+        "id": "p4-g11-q2",
+        "prompt": "Where do borrowed rackets belong?",
+        "options": [
+          "In a bag beside the entrance",
+          "On a bench near the court",
+          "In a basket near the office",
+          "At the drinks counter"
+        ],
+        "answer": "In a basket near the office",
+        "evidence": "the basket by the office",
+        "paraphrase": "the basket by the office → In a basket near the office",
+        "en": "Borrowed rackets go to the designated basket.",
+        "zh": "借用的球拍放进办公室旁的篮子。"
+      },
+      {
+        "id": "p4-g11-q3",
+        "prompt": "What should listeners take with them?",
+        "options": [
+          "Their borrowed rackets",
+          "Their water bottles",
+          "The equipment basket",
+          "The next group's bags"
+        ],
+        "answer": "Their water bottles",
+        "evidence": "Keep your own water bottles with you.",
+        "paraphrase": "Keep your own water bottles with you → Their water bottles",
+        "en": "Players take personal bottles away.",
+        "zh": "个人水瓶应自行带走。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g11-d",
+      "text": "Return all borrowed rackets to the basket by the office.",
+      "answer": "basket"
+    }
+  },
+  {
+    "id": "p4-g12",
+    "part": 4,
+    "level": 500,
+    "title": "邮寄选择",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "You are listening to our mailing desk guide. For this envelope, the buyer wants a signature from the person who receives it. Please choose the matching service on the screen. Check the address before paying. Keep the printed slip because it carries your tracking number."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g12-q1",
+        "prompt": "What does the buyer require?",
+        "options": [
+          "Proof signed by the recipient",
+          "Delivery before noon",
+          "A plain envelope without tracking",
+          "A handwritten return address"
+        ],
+        "answer": "Proof signed by the recipient",
+        "evidence": "a signature from the person who receives it",
+        "paraphrase": "a signature from the person who receives it → Proof signed by the recipient",
+        "en": "The recipient must sign when accepting the envelope.",
+        "zh": "买家要求收件人签收。"
+      },
+      {
+        "id": "p4-g12-q2",
+        "prompt": "Look at the graphic. Which service meets that requirement?",
+        "options": [
+          "Plain",
+          "Rush",
+          "Trace",
+          "Sign"
+        ],
+        "answer": "Sign",
+        "evidence": "choose the matching service on the screen",
+        "paraphrase": "choose the matching service on the screen → Sign",
+        "en": "The Sign row specifically requires a signature.",
+        "zh": "表中 Sign 服务对应签收要求。",
+        "type": "graphic"
+      },
+      {
+        "id": "p4-g12-q3",
+        "prompt": "Why should the sender keep the slip?",
+        "options": [
+          "It serves as the address label.",
+          "It confirms the buyer's identity.",
+          "It contains a tracking number.",
+          "It lists the desk opening hours."
+        ],
+        "answer": "It contains a tracking number.",
+        "evidence": "it carries your tracking number",
+        "paraphrase": "it carries your tracking number → It contains a tracking number",
+        "en": "The number on the slip helps track the envelope.",
+        "zh": "凭条印有邮件追踪号码。"
+      }
+    ],
+    "graphic": {
+      "title": "Mail services",
+      "headers": [
+        "Service",
+        "Feature"
+      ],
+      "rows": [
+        [
+          "Plain",
+          "No tracking"
+        ],
+        [
+          "Trace",
+          "Tracking only"
+        ],
+        [
+          "Sign",
+          "Signature required"
+        ],
+        [
+          "Rush",
+          "Delivery before noon"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p4-g12-d",
+      "text": "Keep the printed slip because it carries your tracking number.",
+      "answer": "tracking"
+    }
+  },
+  {
+    "id": "p4-g13",
+    "part": 4,
+    "level": 500,
+    "title": "临时菜单通知",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Here is a lunch update from the Cedar Cafe. Our bread oven needs a new part, so we cannot serve hot sandwiches today. The cold salad boxes are still available. Anyone who ordered a hot sandwich online may exchange it for a salad or ask for a refund at the till."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g13-q1",
+        "prompt": "Why are hot sandwiches unavailable?",
+        "options": [
+          "The bread order was canceled.",
+          "An oven needs repair.",
+          "The shop has sold out of salad.",
+          "There are no online orders."
+        ],
+        "answer": "An oven needs repair.",
+        "evidence": "Our bread oven needs a new part",
+        "paraphrase": "Our bread oven needs a new part → An oven needs repair",
+        "en": "A missing replacement part prevents use of the oven.",
+        "zh": "面包烤炉需要更换零件，因此不能供应热三明治。"
+      },
+      {
+        "id": "p4-g13-q2",
+        "prompt": "Which item can customers still buy?",
+        "options": [
+          "A cold salad box",
+          "A hot bread roll",
+          "A toasted sandwich",
+          "An oven spare part"
+        ],
+        "answer": "A cold salad box",
+        "evidence": "The cold salad boxes are still available.",
+        "paraphrase": "The cold salad boxes are still available → A cold salad box",
+        "en": "The speaker confirms salads remain available.",
+        "zh": "冷沙拉盒仍有供应。"
+      },
+      {
+        "id": "p4-g13-q3",
+        "prompt": "Where can an online customer request money back?",
+        "options": [
+          "On the delivery van",
+          "By the bread oven",
+          "At the supplier's office",
+          "At the till"
+        ],
+        "answer": "At the till",
+        "evidence": "ask for a refund at the till",
+        "paraphrase": "ask for a refund at the till → At the till",
+        "en": "The till is the payment counter where refunds can be requested.",
+        "zh": "till 指收银处，在线订购者可在那里申请退款。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g13-d",
+      "text": "Our bread oven needs a new part, so we cannot serve hot sandwiches today.",
+      "answer": "oven"
+    }
+  },
+  {
+    "id": "p4-g14",
+    "part": 4,
+    "level": 500,
+    "title": "清洁服务进门说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "This message is for the cleaners visiting Pine Hall tonight. The side door sticks, so enter through the glass door below the clock. Lift the small mat inside to find the cleaning checklist. Sign the checklist after you have finished each room. The building manager will collect it tomorrow."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g14-q1",
+        "prompt": "Who should follow these instructions?",
+        "options": [
+          "The clock repair staff",
+          "The hall's performers",
+          "The cleaning crew",
+          "Visitors on a tour"
+        ],
+        "answer": "The cleaning crew",
+        "evidence": "for the cleaners visiting Pine Hall tonight",
+        "paraphrase": "for the cleaners visiting Pine Hall tonight → The cleaning crew",
+        "en": "The message names the intended workers.",
+        "zh": "留言明确面向当晚的清洁人员。"
+      },
+      {
+        "id": "p4-g14-q2",
+        "prompt": "Which entrance should be used?",
+        "options": [
+          "The side door",
+          "The glass door",
+          "The manager's private door",
+          "The loading entrance"
+        ],
+        "answer": "The glass door",
+        "evidence": "enter through the glass door below the clock",
+        "paraphrase": "enter through the glass door below the clock → The glass door",
+        "en": "The side door sticks; the glass door is the alternative.",
+        "zh": "侧门卡住，改从钟下的玻璃门进入。"
+      },
+      {
+        "id": "p4-g14-q3",
+        "prompt": "When should a room be signed off?",
+        "options": [
+          "After its cleaning is finished",
+          "Before the cleaners enter it",
+          "When the manager arrives",
+          "After the whole building closes"
+        ],
+        "answer": "After its cleaning is finished",
+        "evidence": "after you have finished each room",
+        "paraphrase": "after you have finished each room → After its cleaning is finished",
+        "en": "The checklist is updated room by room after completion.",
+        "zh": "每清洁完一个房间就签一次。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g14-d",
+      "text": "Lift the small mat inside to find the cleaning checklist.",
+      "answer": "mat"
+    }
+  },
+  {
+    "id": "p4-g15",
+    "part": 4,
+    "level": 500,
+    "title": "预约取件窗口",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "This is a message from the arts center for people who have paid to rent an instrument. Take your receipt to the pickup zone shown on the lobby map. Staff there will give you a locker key. Return the key to the same staff member after you remove your instrument."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g15-q1",
+        "prompt": "Who is this message for?",
+        "options": [
+          "Customers reserving library books",
+          "Visitors claiming lost property",
+          "Performers buying tickets",
+          "People renting musical instruments"
+        ],
+        "answer": "People renting musical instruments",
+        "evidence": "people who have paid to rent an instrument",
+        "paraphrase": "people who have paid to rent an instrument → People renting musical instruments",
+        "en": "The instructions are for paid rentals.",
+        "zh": "领取说明面向已付费租用乐器的人。"
+      },
+      {
+        "id": "p4-g15-q2",
+        "prompt": "Look at the graphic. Which zone should listeners visit?",
+        "options": [
+          "Amber",
+          "Gray",
+          "Blue",
+          "Rose"
+        ],
+        "answer": "Blue",
+        "evidence": "the pickup zone shown on the lobby map",
+        "paraphrase": "the pickup zone shown on the lobby map → Blue",
+        "en": "The map places paid instrument rentals in Blue.",
+        "zh": "图表把已付款乐器租借列在蓝区。",
+        "type": "graphic"
+      },
+      {
+        "id": "p4-g15-q3",
+        "prompt": "What should listeners do after taking out an instrument?",
+        "options": [
+          "Keep the locker open all day",
+          "Give back the key",
+          "Pay the rental charge again",
+          "Move the locker to the lobby"
+        ],
+        "answer": "Give back the key",
+        "evidence": "Return the key to the same staff member",
+        "paraphrase": "Return the key to the same staff member → Give back the key",
+        "en": "The key must go back to staff after collection.",
+        "zh": "取出乐器后须把钥匙交还工作人员。"
+      }
+    ],
+    "graphic": {
+      "title": "Pickup zones",
+      "headers": [
+        "Zone",
+        "Service"
+      ],
+      "rows": [
+        [
+          "Amber",
+          "Books on hold"
+        ],
+        [
+          "Blue",
+          "Paid instrument rentals"
+        ],
+        [
+          "Gray",
+          "Lost property"
+        ],
+        [
+          "Rose",
+          "Tickets"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p4-g15-d",
+      "text": "Staff there will give you a locker key.",
+      "answer": "locker"
+    }
+  },
+  {
+    "id": "p4-g16",
+    "part": 4,
+    "level": 500,
+    "title": "集合方式更新",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Hello, this is your walking tour guide. Tomorrow's group will meet outside the bakery instead of at the fountain. A street crew will be cleaning the fountain all morning. Our start time is still ten. Wear comfortable shoes because the route includes a stone path."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g16-q1",
+        "prompt": "Where should the group meet?",
+        "options": [
+          "Outside the bakery",
+          "At the fountain",
+          "Beside a stone bridge",
+          "Inside the tour office"
+        ],
+        "answer": "Outside the bakery",
+        "evidence": "meet outside the bakery instead of at the fountain",
+        "paraphrase": "meet outside the bakery instead of at the fountain → Outside the bakery",
+        "en": "The bakery is the revised meeting point.",
+        "zh": "集合点改为面包店外。"
+      },
+      {
+        "id": "p4-g16-q2",
+        "prompt": "Why has the meeting place changed?",
+        "options": [
+          "The bakery opens late.",
+          "The tour route is shorter.",
+          "The group has requested shade.",
+          "Work is planned at the fountain."
+        ],
+        "answer": "Work is planned at the fountain.",
+        "evidence": "A street crew will be cleaning the fountain all morning.",
+        "paraphrase": "A street crew will be cleaning the fountain all morning → Work is planned at the fountain",
+        "en": "Cleaning makes the original meeting place unsuitable.",
+        "zh": "街道工作人员要清洗喷泉，原处不便集合。"
+      },
+      {
+        "id": "p4-g16-q3",
+        "prompt": "Which part of the plan is unchanged?",
+        "options": [
+          "The meeting place",
+          "The fountain access",
+          "The starting time",
+          "The morning cleaning crew"
+        ],
+        "answer": "The starting time",
+        "evidence": "Our start time is still ten.",
+        "paraphrase": "Our start time is still ten → The starting time",
+        "en": "The word still signals the time remains ten.",
+        "zh": "still 表明出发时间仍是十点。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g16-d",
+      "text": "Tomorrow's group will meet outside the bakery instead of at the fountain.",
+      "answer": "fountain"
+    }
+  },
+  {
+    "id": "p4-g17",
+    "part": 4,
+    "level": 600,
+    "title": "会议茶歇说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Welcome to the training day at Ash Hall. Each badge has two paper tokens attached. Use the round token for a hot drink and the square one for lunch. If you leave before lunch, give the square token to reception. They use the returned tokens to adjust the catering count. Please keep your badge until the final session ends."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g17-q1",
+        "prompt": "What is attached to each badge?",
+        "options": [
+          "A printed session survey",
+          "Two meal-service tokens",
+          "A reserved seat number",
+          "Two parking passes"
+        ],
+        "answer": "Two meal-service tokens",
+        "evidence": "two paper tokens attached",
+        "paraphrase": "two paper tokens attached → Two meal-service tokens",
+        "en": "The drink and lunch tokens are attached to the badge.",
+        "zh": "胸牌上连着饮料券和午餐券各一张。"
+      },
+      {
+        "id": "p4-g17-q2",
+        "prompt": "Which token pays for a hot drink?",
+        "options": [
+          "The round token",
+          "The square token",
+          "A returned lunch token",
+          "A token from reception"
+        ],
+        "answer": "The round token",
+        "evidence": "Use the round token for a hot drink",
+        "paraphrase": "Use the round token for a hot drink → The round token",
+        "en": "The shapes distinguish the two services.",
+        "zh": "圆形券用来换热饮。"
+      },
+      {
+        "id": "p4-g17-q3",
+        "prompt": "Why collect unused square tokens?",
+        "options": [
+          "To issue badges to late arrivals",
+          "To check the final session time",
+          "To count the hot drinks already served",
+          "To revise the expected lunch quantity"
+        ],
+        "answer": "To revise the expected lunch quantity",
+        "evidence": "adjust the catering count",
+        "paraphrase": "adjust the catering count → To revise the expected lunch quantity",
+        "en": "An unused lunch token tells reception that one fewer meal is needed.",
+        "zh": "回收未用餐券有助于估计实际需要的午餐份数。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g17-d",
+      "text": "Each badge has two paper tokens attached.",
+      "answer": "tokens"
+    }
+  },
+  {
+    "id": "p4-g18",
+    "part": 4,
+    "level": 600,
+    "title": "快件分流",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Today's first delivery contains fresh herb samples. The sender says to keep them chilled, but never frozen. Choose the label for the chilled shelf from the chart. Put it on the short side of each box. That side faces the aisle when the boxes are stacked. Call me if any box feels warm on arrival."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g18-q1",
+        "prompt": "What condition is required for the samples?",
+        "options": [
+          "A warm cabinet",
+          "An upright drying rack",
+          "Cool storage above freezing",
+          "Storage at room temperature"
+        ],
+        "answer": "Cool storage above freezing",
+        "evidence": "keep them chilled, but never frozen",
+        "paraphrase": "keep them chilled, but never frozen → Cool storage above freezing",
+        "en": "Chilled storage keeps the herbs cool without freezing them.",
+        "zh": "样品需冷藏，不可冷冻。"
+      },
+      {
+        "id": "p4-g18-q2",
+        "prompt": "Look at the graphic. Which label should be used?",
+        "options": [
+          "Leaf",
+          "Snow",
+          "Sun",
+          "Wave"
+        ],
+        "answer": "Snow",
+        "evidence": "the label for the chilled shelf",
+        "paraphrase": "the label for the chilled shelf → Snow",
+        "en": "The label chart matches the chilled shelf with Snow.",
+        "zh": "图表中冷藏架对应 Snow。",
+        "type": "graphic"
+      },
+      {
+        "id": "p4-g18-q3",
+        "prompt": "Why place the label on a short side?",
+        "options": [
+          "It remains visible from the aisle.",
+          "It prevents the stack from falling.",
+          "It covers the sender's address.",
+          "It measures the arrival temperature."
+        ],
+        "answer": "It remains visible from the aisle.",
+        "evidence": "That side faces the aisle",
+        "paraphrase": "That side faces the aisle → It remains visible from the aisle",
+        "en": "The outward-facing side is easy to inspect in the stack.",
+        "zh": "短边朝向通道，堆放后仍便于看到标签。"
+      }
+    ],
+    "graphic": {
+      "title": "Packing labels",
+      "headers": [
+        "Label",
+        "Storage"
+      ],
+      "rows": [
+        [
+          "Snow",
+          "Chilled shelf"
+        ],
+        [
+          "Sun",
+          "Warm cabinet"
+        ],
+        [
+          "Leaf",
+          "Dry cupboard"
+        ],
+        [
+          "Wave",
+          "Upright rack"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p4-g18-d",
+      "text": "The sender says to keep them chilled, but never frozen.",
+      "answer": "chilled"
+    }
+  },
+  {
+    "id": "p4-g19",
+    "part": 4,
+    "level": 600,
+    "title": "奖品领取说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Congratulations to the winners of our staff design contest. Your notebooks have arrived, but two of the covers carry the wrong initials. We will check each cover with you at collection. If yours is incorrect, leave it with the desk staff. They will request a replacement from the printer. Correct notebooks can be taken home immediately."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g19-q1",
+        "prompt": "What problem is mentioned?",
+        "options": [
+          "The printer sent too few notebooks.",
+          "The contest ended a week early.",
+          "Two prizes were never ordered.",
+          "Some covers show incorrect initials."
+        ],
+        "answer": "Some covers show incorrect initials.",
+        "evidence": "two of the covers carry the wrong initials",
+        "paraphrase": "two of the covers carry the wrong initials → Some covers show incorrect initials",
+        "en": "The problem concerns letters printed on two covers.",
+        "zh": "两本笔记本封面的姓名首字母印错了。"
+      },
+      {
+        "id": "p4-g19-q2",
+        "prompt": "What should a winner do with an incorrect notebook?",
+        "options": [
+          "Write over the printed letters",
+          "Return it to the contest judge",
+          "Leave it at the desk",
+          "Send it directly to the printer"
+        ],
+        "answer": "Leave it at the desk",
+        "evidence": "leave it with the desk staff",
+        "paraphrase": "leave it with the desk staff → Leave it at the desk",
+        "en": "Desk staff handle the replacement request.",
+        "zh": "印错的奖品由服务台收下并申请更换。"
+      },
+      {
+        "id": "p4-g19-q3",
+        "prompt": "Who can take a prize home immediately?",
+        "options": [
+          "Only the first two people in line",
+          "Winners whose covers are correct",
+          "Judges who selected the designs",
+          "Anyone bringing a replacement cover"
+        ],
+        "answer": "Winners whose covers are correct",
+        "evidence": "Correct notebooks can be taken home immediately.",
+        "paraphrase": "Correct notebooks can be taken home immediately → Winners whose covers are correct",
+        "en": "A notebook without the printing error needs no replacement.",
+        "zh": "封面无误者可以直接带走奖品。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g19-d",
+      "text": "Your notebooks have arrived, but two of the covers carry the wrong initials.",
+      "answer": "initials"
+    }
+  },
+  {
+    "id": "p4-g20",
+    "part": 4,
+    "level": 600,
+    "title": "图书馆播客",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "This week's archive recording is an interview with a retired shipbuilder. A transcript is available in the folder beside the listening station. Please use headphones when playing the recording. If you notice a misspelled name in the transcript, write it on the correction sheet. Include the page number so our editor can find the line. Corrections to the transcript will not change the original audio."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g20-q1",
+        "prompt": "Who is featured in the recording?",
+        "options": [
+          "A former shipbuilder",
+          "The archive editor",
+          "A library volunteer",
+          "A ship passenger"
+        ],
+        "answer": "A former shipbuilder",
+        "evidence": "an interview with a retired shipbuilder",
+        "paraphrase": "an interview with a retired shipbuilder → A former shipbuilder",
+        "en": "The interview is with someone who used to build ships.",
+        "zh": "录音采访的是退休造船工人。"
+      },
+      {
+        "id": "p4-g20-q2",
+        "prompt": "Where is the written version?",
+        "options": [
+          "On the headphones",
+          "At the editor's home",
+          "Inside the correction sheet",
+          "In a folder near the station"
+        ],
+        "answer": "In a folder near the station",
+        "evidence": "in the folder beside the listening station",
+        "paraphrase": "in the folder beside the listening station → In a folder near the station",
+        "en": "Transcript means the written version of the recording.",
+        "zh": "听录音处旁的文件夹里有文字稿。"
+      },
+      {
+        "id": "p4-g20-q3",
+        "prompt": "Why include a page number?",
+        "options": [
+          "To select the next recording",
+          "To calculate an editing fee",
+          "To help locate a spelling error",
+          "To change the original audio"
+        ],
+        "answer": "To help locate a spelling error",
+        "evidence": "so our editor can find the line",
+        "paraphrase": "so our editor can find the line → To help locate a spelling error",
+        "en": "The page number directs the editor to the relevant line.",
+        "zh": "页码便于编辑定位有问题的那一行。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g20-d",
+      "text": "A transcript is available in the folder beside the listening station.",
+      "answer": "folder"
+    }
+  },
+  {
+    "id": "p4-g21",
+    "part": 4,
+    "level": 600,
+    "title": "电梯预约留言",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "This is a reminder for tenants moving large furniture this weekend. The freight lift has to be reserved in advance. Our office can lend you protective blankets for the walls inside it. Collect them on Friday because the office is closed on Saturday. Bring them back on Monday morning. Smaller items may still be carried in the passenger lift."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g21-q1",
+        "prompt": "What must tenants book?",
+        "options": [
+          "A passenger seat",
+          "The freight lift",
+          "A furniture shop visit",
+          "A moving blanket repair"
+        ],
+        "answer": "The freight lift",
+        "evidence": "The freight lift has to be reserved in advance.",
+        "paraphrase": "The freight lift has to be reserved in advance → The freight lift",
+        "en": "Large furniture requires a reservation for the freight lift.",
+        "zh": "用货梯搬大件家具需事先预约。"
+      },
+      {
+        "id": "p4-g21-q2",
+        "prompt": "What are the blankets intended to protect?",
+        "options": [
+          "The lift walls",
+          "The office windows",
+          "The furniture labels",
+          "The passenger seats"
+        ],
+        "answer": "The lift walls",
+        "evidence": "protective blankets for the walls inside it",
+        "paraphrase": "protective blankets for the walls inside it → The lift walls",
+        "en": "It refers to the freight lift.",
+        "zh": "it 指货梯，毯子用来保护货梯内壁。"
+      },
+      {
+        "id": "p4-g21-q3",
+        "prompt": "Why should tenants collect the blankets on Friday?",
+        "options": [
+          "The freight lift closes on Monday.",
+          "Smaller items arrive on Friday.",
+          "The blankets are sold on weekends.",
+          "The office will close on Saturday."
+        ],
+        "answer": "The office will close on Saturday.",
+        "evidence": "because the office is closed on Saturday",
+        "paraphrase": "because the office is closed on Saturday → The office will close on Saturday",
+        "en": "The office will not be available on the weekend moving day.",
+        "zh": "周六办公室不开门，因此应周五领取。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g21-d",
+      "text": "Our office can lend you protective blankets for the walls inside it.",
+      "answer": "blankets"
+    }
+  },
+  {
+    "id": "p4-g22",
+    "part": 4,
+    "level": 700,
+    "title": "设备校准提示",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Before weighing today's parcels, test the scale with the reference block. A reading just outside tolerance produces an amber light. Follow the action listed for amber on the guide. Do not adjust the dial between the first and second readings. A change to the dial would make the readings impossible to compare. If the second reading also falls outside tolerance, call the shift leader."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g22-q1",
+        "prompt": "What should be weighed first?",
+        "options": [
+          "The day's heaviest parcel",
+          "A spare dial",
+          "A reference block",
+          "An empty shipping crate"
+        ],
+        "answer": "A reference block",
+        "evidence": "test the scale with the reference block",
+        "paraphrase": "test the scale with the reference block → A reference block",
+        "en": "The block provides a known test weight.",
+        "zh": "先用标准重量块测试秤。"
+      },
+      {
+        "id": "p4-g22-q2",
+        "prompt": "Look at the graphic. What should staff do when amber first appears?",
+        "options": [
+          "Stop and report immediately",
+          "Run a second check",
+          "Wait for power",
+          "Continue normal work"
+        ],
+        "answer": "Run a second check",
+        "evidence": "Follow the action listed for amber",
+        "paraphrase": "Follow the action listed for amber → Run a second check",
+        "en": "The guide pairs Amber with a second check.",
+        "zh": "表中琥珀色指示灯对应再次检测。",
+        "type": "graphic"
+      },
+      {
+        "id": "p4-g22-q3",
+        "prompt": "Why keep the dial unchanged between readings?",
+        "options": [
+          "To make the two tests comparable",
+          "To prevent a power interruption",
+          "To reset the amber light",
+          "To avoid weighing the block twice"
+        ],
+        "answer": "To make the two tests comparable",
+        "evidence": "make the readings impossible to compare",
+        "paraphrase": "make the readings impossible to compare → To make the two tests comparable",
+        "en": "Adjusting the dial would change the measurement conditions.",
+        "zh": "两次之间调刻度会改变测量条件，读数无法比较。"
+      }
+    ],
+    "graphic": {
+      "title": "Calibration guide",
+      "headers": [
+        "Indicator",
+        "Action"
+      ],
+      "rows": [
+        [
+          "Green",
+          "Continue work"
+        ],
+        [
+          "Amber",
+          "Run a second check"
+        ],
+        [
+          "Red",
+          "Stop and report"
+        ],
+        [
+          "White",
+          "Wait for power"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p4-g22-d",
+      "text": "A reading just outside tolerance produces an amber light.",
+      "answer": "tolerance"
+    }
+  },
+  {
+    "id": "p4-g23",
+    "part": 4,
+    "level": 700,
+    "title": "雨天活动说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Tomorrow's makers' fair will go ahead in light rain. Demonstrations with electrical tools will move into the pavilion. Visitors may watch those sessions from the marked doorway, but only exhibitors may enter the work area. A live camera will show close-up views on the outdoor screen. The screen stays in its covered location regardless of the weather. If strong winds develop, listen for a further announcement."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g23-q1",
+        "prompt": "Under what conditions is the fair currently expected to proceed?",
+        "options": [
+          "Strong winds only",
+          "Clear skies only",
+          "Indoor seating for all visitors",
+          "Light rain"
+        ],
+        "answer": "Light rain",
+        "evidence": "will go ahead in light rain",
+        "paraphrase": "will go ahead in light rain → Light rain",
+        "en": "The fair continues despite light rainfall.",
+        "zh": "小雨时活动仍照常举行。"
+      },
+      {
+        "id": "p4-g23-q2",
+        "prompt": "Who may enter the pavilion work area?",
+        "options": [
+          "All ticket holders",
+          "Camera viewers",
+          "Exhibitors",
+          "Anyone with a raincoat"
+        ],
+        "answer": "Exhibitors",
+        "evidence": "only exhibitors may enter the work area",
+        "paraphrase": "only exhibitors may enter the work area → Exhibitors",
+        "en": "Visitors watch from the doorway rather than entering the work area.",
+        "zh": "只有参展者可进入操作区域。"
+      },
+      {
+        "id": "p4-g23-q3",
+        "prompt": "How can a visitor see fine details of the tool work?",
+        "options": [
+          "Stand inside the work area",
+          "Watch the live camera feed",
+          "Ask for a printed tool diagram",
+          "Wait until the outdoor screen moves"
+        ],
+        "answer": "Watch the live camera feed",
+        "evidence": "A live camera will show close-up views on the outdoor screen.",
+        "paraphrase": "A live camera will show close-up views on the outdoor screen → Watch the live camera feed",
+        "en": "The feed displays close-ups where visitors can watch safely.",
+        "zh": "室外显示屏直播特写，访客可观看操作细节。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g23-d",
+      "text": "Demonstrations with electrical tools will move into the pavilion.",
+      "answer": "pavilion"
+    }
+  },
+  {
+    "id": "p4-g24",
+    "part": 4,
+    "level": 700,
+    "title": "新员工报销",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Here is a reminder about expense claims in foreign currencies. Enter the amount exactly as it appears on the receipt. Our system calculates the conversion after you choose the currency from the menu. Typing an amount you have already converted will cause the system to convert twice. For a receipt that shows two currencies, use the one actually charged to your card. Your card statement can help you check which one that was."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g24-q1",
+        "prompt": "What does the system do automatically?",
+        "options": [
+          "Convert a reported amount",
+          "Scan the card statement",
+          "Choose the receipt currency",
+          "Approve every foreign claim"
+        ],
+        "answer": "Convert a reported amount",
+        "evidence": "Our system calculates the conversion",
+        "paraphrase": "Our system calculates the conversion → Convert a reported amount",
+        "en": "The conversion is performed after the employee selects the currency.",
+        "zh": "员工选定币种后由系统自动换算。"
+      },
+      {
+        "id": "p4-g24-q2",
+        "prompt": "What error is the speaker trying to prevent?",
+        "options": [
+          "Charging an employee's card twice",
+          "Submitting two travel claims together",
+          "Discarding a receipt after checking it",
+          "Applying the conversion twice"
+        ],
+        "answer": "Applying the conversion twice",
+        "evidence": "cause the system to convert twice",
+        "paraphrase": "cause the system to convert twice → Applying the conversion twice",
+        "en": "A manually converted amount would be converted again by the system.",
+        "zh": "自行换算后输入会导致系统再次换算。"
+      },
+      {
+        "id": "p4-g24-q3",
+        "prompt": "Which currency should be used on a dual-currency receipt?",
+        "options": [
+          "Whichever shows the smaller number",
+          "The local currency in every case",
+          "The one charged to the card",
+          "The one listed first on the receipt"
+        ],
+        "answer": "The one charged to the card",
+        "evidence": "use the one actually charged to your card",
+        "paraphrase": "use the one actually charged to your card → The one charged to the card",
+        "en": "The payment currency, not the order of the printed amounts, determines the entry.",
+        "zh": "以银行卡实际扣款币种为准。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g24-d",
+      "text": "Our system calculates the conversion after you choose the currency from the menu.",
+      "answer": "conversion"
+    }
+  },
+  {
+    "id": "p4-g25",
+    "part": 4,
+    "level": 900,
+    "title": "投标评审说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The scoring sheet lists response time and the availability of a backup crew as separate items. A bidder may promise a quick response without naming anyone to cover an absence. Award the response-time points if the promised time meets our standard. Do not award backup points for the same promise. For those points we require a named fallback team in the staffing plan. Please add the page reference whenever you award backup points."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g25-q1",
+        "prompt": "What distinction matters in scoring?",
+        "options": [
+          "A fast response always requires extra staff.",
+          "Response speed and staffing cover are separate.",
+          "Response time counts only for named teams.",
+          "Page references replace staffing details."
+        ],
+        "answer": "Response speed and staffing cover are separate.",
+        "evidence": "lists response time and the availability of a backup crew as separate items",
+        "paraphrase": "lists response time and the availability of a backup crew as separate items → Response speed and staffing cover are separate",
+        "en": "The two criteria must be scored independently.",
+        "zh": "响应速度和人员替补是两项独立指标。"
+      },
+      {
+        "id": "p4-g25-q2",
+        "prompt": "What earns backup points?",
+        "options": [
+          "A named fallback team",
+          "A response-time guarantee",
+          "A manager's general assurance",
+          "A previous bid with extra staff"
+        ],
+        "answer": "A named fallback team",
+        "evidence": "require a named fallback team in the staffing plan",
+        "paraphrase": "require a named fallback team in the staffing plan → A named fallback team",
+        "en": "A specific team must appear in the staffing plan.",
+        "zh": "须在人员计划中列明具体的后备团队。"
+      },
+      {
+        "id": "p4-g25-q3",
+        "prompt": "Why add a page reference?",
+        "options": [
+          "To show when the bid was received",
+          "To estimate the team's response time",
+          "To reduce the staffing plan to one page",
+          "To locate support for the awarded points"
+        ],
+        "answer": "To locate support for the awarded points",
+        "evidence": "add the page reference whenever you award backup points",
+        "paraphrase": "add the page reference whenever you award backup points → To locate support for the awarded points",
+        "en": "The reference points reviewers to the required evidence in the plan.",
+        "zh": "页码让复核人能找到支持该项得分的人员计划内容。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g25-d",
+      "text": "For those points we require a named fallback team in the staffing plan.",
+      "answer": "fallback"
+    }
+  },
+  {
+    "id": "p4-g26",
+    "part": 4,
+    "level": 800,
+    "title": "材料清单说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The tender requires certified recycled paper for the printed inserts. A supplier's claim that paper can be recycled after use does not meet that requirement. Choose the stock whose status addresses what the paper is made from. Keep a copy of the certificate with the order. The cover can use a different stock because the clause mentions inserts only. Do not extend the requirement to other parts without checking the tender."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g26-q1",
+        "prompt": "Look at the graphic. Which stock meets the insert requirement?",
+        "options": [
+          "B6",
+          "C4",
+          "A8",
+          "D3"
+        ],
+        "answer": "A8",
+        "evidence": "requires certified recycled paper",
+        "paraphrase": "requires certified recycled paper → A8",
+        "en": "Only A8 is listed as certified recycled; B6 concerns disposal after use.",
+        "zh": "A8 是认证再生纸，B6 仅指用后可回收。",
+        "type": "graphic"
+      },
+      {
+        "id": "p4-g26-q2",
+        "prompt": "Why is a claim about recyclability insufficient?",
+        "options": [
+          "It applies only to paper used for covers.",
+          "It describes future disposal rather than material origin.",
+          "It proves the paper cannot be reused.",
+          "It specifies thickness instead of weight."
+        ],
+        "answer": "It describes future disposal rather than material origin.",
+        "evidence": "what the paper is made from",
+        "paraphrase": "what the paper is made from → It describes future disposal rather than material origin",
+        "en": "The tender specifies recycled content, not the possibility of recycling later.",
+        "zh": "招标要求原料已经回收再利用，不是成品以后可以回收。"
+      },
+      {
+        "id": "p4-g26-q3",
+        "prompt": "Why may the cover use another stock?",
+        "options": [
+          "The clause names only the inserts.",
+          "The certificate has already expired.",
+          "The cover will not be printed.",
+          "The supplier includes free cover stock."
+        ],
+        "answer": "The clause names only the inserts.",
+        "evidence": "the clause mentions inserts only",
+        "paraphrase": "the clause mentions inserts only → The clause names only the inserts",
+        "en": "The written requirement is limited in scope to the inserts.",
+        "zh": "文字条款的适用范围仅为内页。"
+      }
+    ],
+    "graphic": {
+      "title": "Paper guide",
+      "headers": [
+        "Code",
+        "Status"
+      ],
+      "rows": [
+        [
+          "A8",
+          "Certified recycled"
+        ],
+        [
+          "B6",
+          "Recyclable after use"
+        ],
+        [
+          "C4",
+          "Reusable cover stock"
+        ],
+        [
+          "D3",
+          "Uncoated sample only"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p4-g26-d",
+      "text": "The tender requires certified recycled paper for the printed inserts.",
+      "answer": "certified"
+    }
+  },
+  {
+    "id": "p4-g27",
+    "part": 4,
+    "level": 800,
+    "title": "交通试行总结",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Our new transfer desk handled fewer complaints in its second week. That sounds encouraging until we look at where complaints were recorded. During the first week staff logged every case at the desk. During the second they sent payment issues directly to the accounts office, which kept a separate list. Before calling this a reduction, combine both lists and remove duplicate cases. Keep the dates of the original complaints when you merge the records."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g27-q1",
+        "prompt": "What changed in the second week?",
+        "options": [
+          "The transfer desk stopped opening daily.",
+          "Accounts staff took over the desk entirely.",
+          "All complaints were recorded twice.",
+          "Some cases were logged elsewhere."
+        ],
+        "answer": "Some cases were logged elsewhere.",
+        "evidence": "sent payment issues directly to the accounts office",
+        "paraphrase": "sent payment issues directly to the accounts office → Some cases were logged elsewhere",
+        "en": "Payment complaints moved to a separate accounting list.",
+        "zh": "付款问题转到财务办公室单独登记。"
+      },
+      {
+        "id": "p4-g27-q2",
+        "prompt": "What does “That sounds encouraging” suggest in context?",
+        "options": [
+          "The new method should be adopted immediately.",
+          "The accounts office has solved all payment issues.",
+          "The apparent improvement needs checking.",
+          "The first week's figures should be discarded."
+        ],
+        "answer": "The apparent improvement needs checking.",
+        "evidence": "until we look at where complaints were recorded",
+        "paraphrase": "until we look at where complaints were recorded → The apparent improvement needs checking",
+        "en": "A change in recording location could explain the lower desk total.",
+        "zh": "登记地点发生变化，表面上的下降还需核实。"
+      },
+      {
+        "id": "p4-g27-q3",
+        "prompt": "What date should a merged case retain?",
+        "options": [
+          "When the lists are combined",
+          "When the complaint was first made",
+          "When the desk transferred the case",
+          "When accounts closed the case"
+        ],
+        "answer": "When the complaint was first made",
+        "evidence": "Keep the dates of the original complaints",
+        "paraphrase": "Keep the dates of the original complaints → When the complaint was first made",
+        "en": "The original dates preserve when customers raised the issues.",
+        "zh": "合并记录时保留顾客最初提出投诉的日期。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g27-d",
+      "text": "Our new transfer desk handled fewer complaints in its second week.",
+      "answer": "transfer"
+    }
+  },
+  {
+    "id": "p4-g28",
+    "part": 4,
+    "level": 800,
+    "title": "库存报告说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The dashboard shows twenty notebooks on the shelf, but that number includes reserved stock. Four are being held for a teacher until Friday. Treat those four as unavailable for walk-in sales even though they remain physically on the shelf. If the teacher cancels, release the reserve in the system first. Simply moving the books to the front counter will not change the number customers see online. Use the updated dashboard before promising stock to a caller."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g28-q1",
+        "prompt": "How many notebooks are currently available for walk-in sales?",
+        "options": [
+          "Sixteen",
+          "Twenty",
+          "Four",
+          "Twenty-four"
+        ],
+        "answer": "Sixteen",
+        "evidence": "Four are being held for a teacher until Friday.",
+        "paraphrase": "Four are being held for a teacher until Friday → Sixteen",
+        "en": "Four of twenty are reserved, leaving sixteen for walk-in buyers.",
+        "zh": "货架有二十本，扣除预留的四本，还可现场售卖十六本。"
+      },
+      {
+        "id": "p4-g28-q2",
+        "prompt": "What should happen first if the teacher cancels?",
+        "options": [
+          "Promise the four books to a caller",
+          "Move every notebook to the counter",
+          "Change the teacher's pickup date",
+          "Remove the electronic reservation"
+        ],
+        "answer": "Remove the electronic reservation",
+        "evidence": "release the reserve in the system first",
+        "paraphrase": "release the reserve in the system first → Remove the electronic reservation",
+        "en": "The reservation must be removed in the stock system.",
+        "zh": "应先在系统中解除预留。"
+      },
+      {
+        "id": "p4-g28-q3",
+        "prompt": "Why is moving the books insufficient?",
+        "options": [
+          "The teacher must approve every sale.",
+          "All counter stock is hidden from callers.",
+          "The online count comes from system records.",
+          "The books must remain on one shelf."
+        ],
+        "answer": "The online count comes from system records.",
+        "evidence": "will not change the number customers see online",
+        "paraphrase": "will not change the number customers see online → The online count comes from system records",
+        "en": "A physical move alone does not update the customer-facing inventory.",
+        "zh": "挪动实物不会自动更新顾客看到的线上库存。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g28-d",
+      "text": "If the teacher cancels, release the reserve in the system first.",
+      "answer": "reserve"
+    }
+  },
+  {
+    "id": "p4-g29",
+    "part": 4,
+    "level": 900,
+    "title": "续约窗口",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "When assigning renewal routes, distinguish the date of dispatch from the date of receipt. Our agreement uses receipt of written notice to determine the route. One client's letter was posted on the last eligible day, but it reached our office the following morning. Record the route dictated by that arrival, even though the postmark is earlier. You may attach the envelope to explain the timeline. A postmark alone does not change the trigger in the agreement."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g29-q1",
+        "prompt": "Look at the graphic. Which route fits the client's letter?",
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "answer": "B",
+        "evidence": "it reached our office the following morning",
+        "paraphrase": "it reached our office the following morning → B",
+        "en": "Receipt occurred after the last eligible day; the table labels late receipt as B.",
+        "zh": "以收件为准，次日上午已过期限，表中迟收书面通知对应 B。",
+        "type": "graphic"
+      },
+      {
+        "id": "p4-g29-q2",
+        "prompt": "What principle determines the route?",
+        "options": [
+          "The written notice must actually arrive.",
+          "The envelope must bear the client's signature.",
+          "The earliest date on any document controls.",
+          "The client can choose the more favorable date."
+        ],
+        "answer": "The written notice must actually arrive.",
+        "evidence": "uses receipt of written notice to determine the route",
+        "paraphrase": "uses receipt of written notice to determine the route → The written notice must actually arrive",
+        "en": "Dispatch and receipt are distinct; this agreement uses receipt.",
+        "zh": "寄出和送达是两件事，协议以实际收件为准。"
+      },
+      {
+        "id": "p4-g29-q3",
+        "prompt": "Why might the envelope be attached?",
+        "options": [
+          "To convert a late letter into timely notice",
+          "To request new terms for the client",
+          "To replace the client's written letter",
+          "To document the sequence of events"
+        ],
+        "answer": "To document the sequence of events",
+        "evidence": "attach the envelope to explain the timeline",
+        "paraphrase": "attach the envelope to explain the timeline → To document the sequence of events",
+        "en": "The postmark helps document dispatch without overriding the contractual trigger.",
+        "zh": "邮戳有助于说明寄送经过，但不改变合同规定的判断标准。"
+      }
+    ],
+    "graphic": {
+      "title": "Renewal routes",
+      "headers": [
+        "Route",
+        "Trigger"
+      ],
+      "rows": [
+        [
+          "A",
+          "Written notice received by deadline"
+        ],
+        [
+          "B",
+          "Written notice received late"
+        ],
+        [
+          "C",
+          "No notice received"
+        ],
+        [
+          "D",
+          "Client requests new terms"
+        ]
+      ]
+    },
+    "dictation": {
+      "id": "p4-g29-d",
+      "text": "Our agreement uses receipt of written notice to determine the route.",
+      "answer": "notice"
+    }
+  },
+  {
+    "id": "p4-g30",
+    "part": 4,
+    "level": 900,
+    "title": "保修工单",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "In last quarter's report, a reopened repair ticket counted as a repeat failure. The measure only makes sense when the original fault has returned. Some tickets were reopened simply to add a missing part number after the equipment was back in service. Those administrative changes say nothing about reliability. For the revised report, compare the symptom recorded on reopening with the original symptom before classifying a repeat. Keep the administrative tickets in the audit trail, but exclude them from the failure total."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g30-q1",
+        "prompt": "What is the speaker correcting?",
+        "options": [
+          "How part numbers are assigned",
+          "How technicians reopen the ticket system",
+          "How repeated faults are counted",
+          "How customers report missing equipment"
+        ],
+        "answer": "How repeated faults are counted",
+        "evidence": "a reopened repair ticket counted as a repeat failure",
+        "paraphrase": "a reopened repair ticket counted as a repeat failure → How repeated faults are counted",
+        "en": "The old measure counted every reopening as another fault.",
+        "zh": "旧方法把每次重开工单都当成再次故障。"
+      },
+      {
+        "id": "p4-g30-q2",
+        "prompt": "Why might a ticket reopen without a failure?",
+        "options": [
+          "A replacement part has failed again.",
+          "A record needs a missing detail.",
+          "The customer has changed the symptoms.",
+          "The equipment has been withdrawn permanently."
+        ],
+        "answer": "A record needs a missing detail.",
+        "evidence": "to add a missing part number",
+        "paraphrase": "to add a missing part number → A record needs a missing detail",
+        "en": "Adding a part number can be an administrative correction after service resumes.",
+        "zh": "设备恢复后补录零件号属于行政更正，不代表又坏了。"
+      },
+      {
+        "id": "p4-g30-q3",
+        "prompt": "What should happen to administrative reopenings?",
+        "options": [
+          "Retain them without counting them as failures.",
+          "Delete them from all historical records.",
+          "Count them only if a part number is supplied.",
+          "Treat them as a new symptom category."
+        ],
+        "answer": "Retain them without counting them as failures.",
+        "evidence": "Keep the administrative tickets in the audit trail",
+        "paraphrase": "Keep the administrative tickets in the audit trail → Retain them without counting them as failures",
+        "en": "The tickets remain traceable but are excluded from the failure statistic.",
+        "zh": "保留可追溯记录，但从重复故障总数中排除。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g30-d",
+      "text": "Those administrative changes say nothing about reliability.",
+      "answer": "reliability"
+    }
   }
 ]

@@ -48,6 +48,15 @@ function player(q, ref, answered) {
     <span class="lesson-wave" aria-hidden="true">${waveform}</span></button>`;
 }
 
+function graphic(table, evidence = '') {
+  const cells = row => row.map(cell => `<td>${mark(cell,evidence)}</td>`).join('');
+  return `<div class="lesson-graphic" tabindex="0" role="region" aria-label="题目附表"><table lang="en">
+    <caption>${esc(table.title || 'Reference table')}</caption>
+    <thead><tr>${table.headers.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>
+    <tbody>${table.rows.map(row => `<tr>${cells(row)}</tr>`).join('')}</tbody>
+  </table></div>`;
+}
+
 function passages(q, answered) {
   return `<div class="lesson-sources">${q.set.documents.map(doc => `
     <article class="lesson-document"><header>${icon('note',17)} ${esc(doc.type)}</header>
@@ -128,6 +137,7 @@ export function practiceView(state) {
     <div class="lesson-meta lesson-section-meta"><span>${icon(({vocab:'cards',grammar:'grammar',reading:'reading'})[ref.mode] || 'headphones',17)} ${esc(q.instruction)}</span>
     <span>${run.timed ? `${icon('clock',15)} <b id="timer">${clock(run.elapsed)}</b> · ` : ''}${q.level} 级</span></div>
     ${ref.mode === 'reading' ? passages(q, answered) : ''}
+    ${ref.mode === 'dialogue' && q.set.graphic ? graphic(q.set.graphic) : ''}
     <div class="lesson-panel lesson-question">
       ${q.set && ref.mode !== 'reading' ? `<p class="lesson-source-title">${esc(q.set.title)}</p>` : ''}
       <h2 class="${ref.mode === 'vocab' && !['cloze','sound'].includes(ref.format) ? 'lesson-word' : ''}" ${['reading','grammar','dialogue','dictation'].includes(ref.mode) ? 'lang="en"' : ''}>${esc(q.prompt)}</h2>

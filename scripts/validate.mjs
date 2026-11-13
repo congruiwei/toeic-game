@@ -214,8 +214,21 @@ function comprehension(group, at, sources) {
   });
 }
 
+function tableCells(table, at) {
+  if (!record(table,at)) return [];
+  const cells=[];
+  const headers=items(table.headers,at+'.headers',2);
+  for(const header of headers) string(header,at+'.headers');
+  for(const row of items(table.rows,at+'.rows')) {
+    if(!Array.isArray(row)){issues.push(at+': 表格行必须是数组');continue;}
+    expect(row.length===headers.length,at,'数据行与表头列数不同');
+    for(const cell of row) if(string(cell,at+'.rows'))cells.push(cell);
+  }
+  return cells;
+}
 function listening(groups) {
   const parts = new Set();
+  let graphics=0,three=0,intents=0;
   scan(groups, 'listening', 12, (group, at) => {
     id(group, at);
     level(group, at);
@@ -231,6 +244,13 @@ function listening(groups) {
     });
     if (group.part === 3) expect(speakers.size >= 2, at, 'Part 3 对话至少需要两位说话人');
     if (group.part === 4) expect(speakers.size === 1, at, 'Part 4 应为独白');
+    expect([...speakers].every(s=>['A','B','C'].includes(s)),at,'说话人应为 A、B 或 C');
+    if(group.part===3 && group.level>=600 && speakers.size===3)three++;
+    if(group.graphic){string(group.graphic.title,at+'.graphic.title');tableCells(group.graphic,at+'.graphic');}
+    const questions=Array.isArray(group.questions)?group.questions:[];
+    expect(questions.length===3,at,'每组需要三道理解题');
+    if(questions.some(q=>q.prompt?.startsWith('Look at the graphic.'))){expect(!!group.graphic,at,'联读图表缺失');graphics++;}
+    if(questions.some(q=>q.type==='intent'))intents++;
     comprehension(group, at, sources);
     const path = `${at}.dictation`;
     if (record(group.dictation, path)) {
@@ -241,6 +261,8 @@ function listening(groups) {
       expect(typeof d.answer === 'string' && /^\S+$/.test(d.answer) && wordsIn(d.answer, d.text).length === 1, path, '听写答案须为句中只出现一次的完整单词');
     }
   });
+  for(const part of [3,4])expect(groups.filter(g=>g.part===part).length>=30,'listening','Part '+part+' 至少 30 组');
+  expect(graphics>=10 && three>0 && intents>0,'listening','需要至少 10 组图表并覆盖三人对话和意图题');
   expect(parts.has(3) && parts.has(4), 'listening', '须同时包含 Part 3 和 Part 4');
   counts['Part 3/4 组'] = Array.isArray(groups) ? groups.length : 0;
 }

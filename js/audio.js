@@ -52,14 +52,15 @@ export function speak(turns, prefs, fail) {
         ? all
         : all.filter((v) => v.lang.replace('_', '-').toLowerCase() === prefs.accent.toLowerCase());
   const pool = [...preferred, ...all.filter((v) => !preferred.includes(v))];
+  const cast = [...new Set(turns.map(turn => turn.speaker))];
   const messages = turns.map(({ text, speaker }) => {
-    const u = new SpeechSynthesisUtterance(text),
-      b = speaker === 'B';
-    const voice = pool[b && pool.length > 1 ? 1 : 0];
+    const u = new SpeechSynthesisUtterance(text);
+    const index = cast.indexOf(speaker);
+    const voice = pool.length ? pool[index % pool.length] : undefined;
     if (voice) u.voice = voice;
     u.lang = voice?.lang || (prefs.accent === 'auto' ? 'en-US' : prefs.accent);
     u.rate = prefs.rate;
-    u.pitch = b && pool.length < 2 ? 1.15 : 1;
+    u.pitch = pool.length < cast.length ? [1, 1.15, 0.85][index] ?? 1 : 1;
     u.onerror = (e) => {
       if (token === generation && !['interrupted', 'canceled'].includes(e.error))
         fail('声音未能播放，请在设置中测试英语语音。');
