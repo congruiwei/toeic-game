@@ -182,6 +182,30 @@ function vocabulary(entries) {
   counts['单词'] = words.size;
 }
 
+// Exact English word overlap. Skip function words, contraction fragments and the particle "up".
+const ignoredWords = new Set(('a an the and or nor but if of in on from to at for into after as with by while than that this these those there which what why up who whose how where when whether we i you she he it they their them his her your our my us me is are was were be being been do does did should could can will shall would have has had may might must not t s re m ve ll d didn isn wasn haven aren wouldn won').split(' '));
+function contentWords(text) {
+  return new Set((text.toLowerCase().match(/[a-z]+/g) || []).filter(w => !ignoredWords.has(w)));
+}
+function responseOverlap(entries) {
+  let right=0, wrong=0, totalWrong=0, total=0, byElimination=0;
+  for (const q of entries) {
+    if (q.type!=='response' || typeof q.audio!=='string' || !Array.isArray(q.options)
+        || !q.options.includes(q.answer) || q.options.some(o=>typeof o!=='string')) continue;
+    const words = contentWords(q.audio);
+    const repeats = option => [...contentWords(option)].some(w => words.has(w));
+    const correct = repeats(q.answer);
+    const traps = q.options.filter(o=>o!==q.answer);
+    const matches = traps.filter(repeats).length;
+    total++;
+    totalWrong += traps.length;
+    right += Number(correct);
+    wrong += matches;
+    if (!correct && traps.length && matches===traps.length) byElimination++;
+  }
+  console.log('Part 2 原词重复：干扰项 '+fraction(wrong,totalWrong)+'，正确回应 '+fraction(right,total)+'，仅靠排除即可作对 '+fraction(byElimination,total)+'。');
+}
+
 function part2(entries) {
   const firstWords = new Set();
   let responses = 0;
@@ -208,6 +232,7 @@ function part2(entries) {
   const types=new Set(entries.map(q=>q.questionType));
   for(const name of ['wh','yes-no','choice','negative','tag','statement','request','suggestion'])expect(types.has(name),'part2','缺少回应类型 '+name);
   expect(responses > 0, 'part2', '须包含问答练习');
+  responseOverlap(entries);
   counts['Part 2'] = Array.isArray(entries) ? entries.length : 0;
 }
 
