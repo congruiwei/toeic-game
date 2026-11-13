@@ -1,5 +1,6 @@
 // Run from any directory: node scripts/validate.mjs
 import { readFile } from 'node:fs/promises';
+import { vocabularyOptions, formats } from '../js/bank.js';
 
 const dataDirectory = new URL('../data/', import.meta.url);
 const levels = [400, 500, 600, 700, 800, 900];
@@ -7,6 +8,32 @@ const seenIds = new Map();
 const presentLevels = new Set();
 const issues = [];
 const counts = {};
+const distributions = new Map(), warnings = [];
+const normalize = text => text.normalize('NFKC').trim().replace(/\s+/gu,' ').toLowerCase();
+const optionLength = text => [...normalize(text)].length;
+function measure(type, q) {
+  if (!Array.isArray(q.options) || !q.options.every(o => typeof o === 'string') || !q.options.includes(q.answer)) return;
+  const report = distributions.get(type) || {total:0,longest:0,positions:[],expected:[]};
+  report.total++;
+  if (optionLength(q.answer) === Math.max(...q.options.map(optionLength))) report.longest++;
+  q.options.forEach((option,i) => {
+    report.positions[i] = (report.positions[i] || 0) + Number(option === q.answer);
+    report.expected[i] = (report.expected[i] || 0) + 1/q.options.length;
+  });
+  distributions.set(type, report);
+}
+function reportDistributions() {
+  console.log('题型                 最长答案（含并列）       正确位置 A/B/C/D');
+  for (const [type,r] of distributions) {
+    const ratio = r.longest/r.total;
+    console.log(type.padEnd(19) + (r.longest+'/'+r.total+' ('+(ratio*100).toFixed(1)+'%)').padEnd(21) + r.positions.join('/'));
+    expect(ratio <= .4, type, '正确答案为最长选项的比例超过 40%');
+    const chi = r.positions.reduce((sum,n,i) => sum + (n-r.expected[i])**2/r.expected[i],0);
+    if (r.positions.some((n,i) => Math.abs(n-r.expected[i]) / r.total > .12) || chi > (r.positions.length===3?9.21:11.35))
+      warnings.push(type+' 答案位置分布偏离均匀值，实际 '+r.positions.join('/'));
+  }
+  for (const warning of warnings) console.warn('警告：'+warning);
+}
 
 function expect(condition, location, message) {
   if (!condition) issues.push(`${location}: ${message}`);
@@ -81,7 +108,8 @@ function scan(entries, location, minimum, visit) {
 }
 
 function vocabulary(entries) {
-  const words = new Set();
+  const words = new Set(), uses = new Map();
+  let confused=0;
   scan(entries, 'vocab', 300, (entry, at) => {
     id(entry, at);
     level(entry, at);
@@ -91,17 +119,39 @@ function vocabulary(entries) {
     expect(!words.has(key), at, `重复词条「${entry.word}」`);
     words.add(key);
     expect(wordsIn(entry.word, entry.example).length === 1, at, 'example 应含一次可用于填空的完整词头');
-    if ('clozeDistractors' in entry) {
+    if ('confusables' in entry) {
+      const list=items(entry.confusables, at+'.confusables');
+      const unique=new Set();
+      for (const value of list) {
+        if (!string(value,at+'.confusables')) continue;
+        const norm=normalize(value);
+        expect(norm!==key&&!unique.has(norm),at,'易混词不得重复或等于词头');unique.add(norm);
+      }
+      if(unique.size)confused++;
+    }
+    {
       const path = `${at}.clozeDistractors`;
       const distractors = items(entry.clozeDistractors, path, 3);
       expect(distractors.length === 3, path, '需要恰好三个干扰项');
-      const normalized = distractors.flatMap((word, i) => string(word, `${path}[${i}]`) ? [word.trim().toLowerCase()] : []);
+      const normalized = distractors.flatMap((word, i) => string(word, `${path}[${i}]`) ? [normalize(word)] : []);
       expect(new Set(normalized).size === normalized.length, path, '三个干扰项须互不相同');
       expect(!normalized.includes(key), path, '干扰项不能是词头本身');
+      for (const other of normalized) {
+        expect(other.split(' ').length === normalize(entry.word).split(' ').length,path,'干扰项词数不同：'+other);
+        uses.set(other,(uses.get(other)||0)+1);
+      }
     }
   });
   for (const required of ['available', 'valuable', 'postpone', 'itinerary', 'reimburse', 'tentative', 'inadvertently', 'deadline', 'invoice']) {
     expect(words.has(required), 'vocab', `缺少指定词 ${required}`);
+  }
+  expect(confused>=80,'vocab','至少 80 个词条需提供易混词');
+  for(const [word,n] of uses) expect(n<=3,'vocab.clozeDistractors',word+' 使用 '+n+' 次（上限 3）');
+  for (const [a,b] of [['available','valuable'],['valuable','available']]) expect(entries.find(w=>w.word===a)?.confusables?.includes(b),a,'缺少互列易混词 '+b);
+  if(!issues.length)for(const w of entries)for(const f of formats){
+    const options=vocabularyOptions(w,f,entries),answer=f==='meaning'?w.zh:f==='match'?w.paraphrase:w.word;
+    expect(options.length===4&&options.includes(answer)&&new Set(options.map(normalize)).size===4,w.id,'生成的 '+f+' 选项无效');
+    measure('Vocab '+f,{answer,options});
   }
   counts['单词'] = words.size;
 }
@@ -113,6 +163,7 @@ function part2(entries) {
     id(entry, at);
     level(entry, at);
     answers(entry, at);
+    measure('Part 2 '+entry.type,entry);
     string(entry.audio, `${at}.audio`);
     cite(entry, [entry.audio], at);
     expect(['first', 'response'].includes(entry.type), at, 'type 须为 first 或 response');
@@ -146,6 +197,7 @@ function grammar(lessons) {
       level(q, path);
       answers(q, path);
       expect(typeof q.prompt === 'string' && q.prompt.includes('___'), path, 'Part 5 题干须标出 ___ 空位');
+      measure(lesson.id==='gram-lexis'?'Part 5 词汇':'Part 5 语法',q);
       total++;
     });
   });
@@ -158,6 +210,7 @@ function comprehension(group, at, sources) {
     id(q, path);
     answers(q, path);
     cite(q, sources, path);
+    measure('Part '+group.part,q);
   });
 }
 
@@ -235,6 +288,7 @@ for (const [file, validate] of Object.entries({ vocab: vocabulary, part2, gramma
   }
 }
 for (const target of levels) expect(presentLevels.has(target), '题库', `未包含 ${target} 级练习`);
+reportDistributions();
 if (issues.length) {
   console.error(issues.join('\n'));
   process.exitCode = 1;

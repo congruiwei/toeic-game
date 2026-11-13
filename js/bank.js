@@ -34,6 +34,57 @@ function hash(str) {
   return n >>> 0;
 }
 const seedSort = (a, seed) => a.slice().sort((x, y) => hash(seed + x) - hash(seed + y));
+const normalize = text => text.normalize('NFKC').trim().toLowerCase().replace(/\s+/gu, ' ');
+const senses = text => normalize(text).split(/[；;、]/u).map(s => s.trim()).filter(Boolean);
+const conflictingSound = [
+  ['stationary','stationery'], ['complement','compliment'], ['principal','principle'],
+  ['site','sight','cite'], ['sale','sail'], ['fare','fair'], ['mail','male'], ['serial','cereal'],
+  ['aisle','isle'], ['board','bored'], ['break','brake'], ['capital','capitol'], ['course','coarse'],
+  ['council','counsel'], ['discreet','discrete'], ['dual','duel'], ['flour','flower'], ['loan','lone'],
+  ['meet','meat'], ['morning','mourning'], ['peak','peek','pique'], ['profit','prophet'],
+  ['raise','rays','raze'], ['role','roll'], ['sole','soul'], ['suite','sweet'], ['waist','waste'],
+  ['wait','weight'], ['ware','wear','where'], ['weather','whether'], ['write','right','rite'],
+  ['hire','higher'], ['route','root'], ['weigh','way','whey'],
+  ['pair','pear','pare'], ['steel','steal'], ['tail','tale'], ['waive','wave'], ['led','lead']
+];
+function sameSound(a,b) {
+  return conflictingSound.some(group => group.includes(a) && group.includes(b));
+}
+
+// Used both by the lesson and by the bank validator. Seeds keep a question stable on resume.
+export function vocabularyOptions(word, format, words) {
+  const key = format === 'meaning' ? 'zh' : format === 'match' ? 'paraphrase' : 'word';
+  const answer = word[key], seed = word.id + ':' + format;
+  if (format === 'cloze' && word.clozeDistractors?.length === 3) {
+    return seedSort([answer, ...word.clozeDistractors], seed);
+  }
+  const options = new Map([[normalize(answer), answer]]);
+  const known = new Set(senses(word.zh));
+  const spelling = normalize(word.word);
+  const ipa = word.ipa.replace(/[ˈˌ.\s]/gu, '');
+  const byWord = new Map(words.map(w => [normalize(w.word), w]));
+  function add(text, other) {
+    if (options.size >= 4 || options.has(normalize(text))) return;
+    if (other && (senses(other.zh).some(s => known.has(s)) || normalize(other.paraphrase) === normalize(word.paraphrase))) return;
+    if (format === 'sound' && (sameSound(spelling,normalize(text)) || other?.ipa.replace(/[ˈˌ.\s]/gu,'') === ipa)) return;
+    options.set(normalize(text),text);
+  }
+  if (format === 'sound' || format === 'english') {
+    for (const text of seedSort(word.confusables || [], seed)) add(text, byWord.get(normalize(text)));
+  }
+  if (options.size < 4) {
+    const candidates = words.filter(w => w.id !== word.id).map(w => ({
+      word:w,
+      rank: (w.pos === word.pos ? 0 : 2) + (w.theme === word.theme ? 0 : 1),
+      tie:hash(seed+w.id),
+    })).sort((a,b) => a.rank-b.rank || a.tie-b.tie);
+    for (const {word:other} of candidates) {
+      add(other[key],other);
+      if (options.size === 4) break;
+    }
+  }
+  return seedSort([...options.values()],seed);
+}
 export const blank = (text, word) =>
   text.replace(
     new RegExp('\\b' + word.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '\\b', 'i'),
@@ -45,28 +96,11 @@ export function question(ref) {
   if (ref.mode === 'vocab') {
     const f = ref.format || 'meaning',
       key = f === 'meaning' ? 'zh' : f === 'match' ? 'paraphrase' : 'word';
-    const mixed = seedSort(
-      bank.vocab.map((x) => x.id),
-      d.id + f,
-    );
-    const options = new Set([d[key]]),
-      avoid = new Set([d.zh]);
-    for (const id of mixed) {
-      const other = catalog.get(id).data;
-      if (other.word === d.word || avoid.has(other.zh) || other.paraphrase === d.paraphrase)
-        continue;
-      options.add(other[key]);
-      avoid.add(other.zh);
-      if (options.size === 4) break;
-    }
     return {
       ...d,
       skill: 'vocab',
       answer: d[key],
-      options: seedSort(
-        f === 'cloze' && d.clozeDistractors ? [d.word, ...d.clozeDistractors] : [...options],
-        f + d.word,
-      ),
+      options: vocabularyOptions(d, f, bank.vocab),
       prompt: {
         meaning: d.word,
         english: d.zh,
