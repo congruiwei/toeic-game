@@ -44,6 +44,8 @@ const conflictingSound = [
   ['meet','meat'], ['morning','mourning'], ['peak','peek','pique'], ['profit','prophet'],
   ['raise','rays','raze'], ['role','roll'], ['sole','soul'], ['suite','sweet'], ['waist','waste'],
   ['wait','weight'], ['ware','wear','where'], ['weather','whether'], ['write','right','rite'],
+  ['pallet','palette','palate'], ['berth','birth'], ['die','dye'], ['sensor','censor'],
+  ['timber','timbre'], ['draft','draught'], ['meter','metre'],
   ['hire','higher'], ['route','root'], ['weigh','way','whey'],
   ['pair','pear','pare'], ['steel','steal'], ['tail','tale'], ['waive','wave'], ['led','lead']
 ];
@@ -65,6 +67,7 @@ export function vocabularyOptions(word, format, words) {
   const byWord = new Map(words.map(w => [normalize(w.word), w]));
   function add(text, other) {
     if (options.size >= 4 || options.has(normalize(text))) return;
+    if (word.avoidWith?.some(w => normalize(w) === normalize(other?.word || text)) || other?.avoidWith?.some(w => normalize(w) === spelling)) return;
     if (other && (senses(other.zh).some(s => known.has(s)) || normalize(other.paraphrase) === normalize(word.paraphrase))) return;
     if (format === 'sound' && (sameSound(spelling,normalize(text)) || other?.ipa.replace(/[ˈˌ.\s]/gu,'') === ipa)) return;
     options.set(normalize(text),text);

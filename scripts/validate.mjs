@@ -110,7 +110,7 @@ function scan(entries, location, minimum, visit) {
 function vocabulary(entries) {
   const words = new Set(), uses = new Map();
   let confused=0;
-  scan(entries, 'vocab', 300, (entry, at) => {
+  scan(entries, 'vocab', 1000, (entry, at) => {
     id(entry, at);
     level(entry, at);
     strings(entry, at, ['word', 'ipa', 'zh', 'pos', 'theme', 'example', 'collocation', 'paraphrase']);
@@ -119,6 +119,10 @@ function vocabulary(entries) {
     expect(!words.has(key), at, `重复词条「${entry.word}」`);
     words.add(key);
     expect(wordsIn(entry.word, entry.example).length === 1, at, 'example 应含一次可用于填空的完整词头');
+    if('avoidWith' in entry){
+      const list=items(entry.avoidWith,at+'.avoidWith').filter(x=>string(x,at+'.avoidWith')).map(normalize);
+      expect(!list.includes(key)&&new Set(list).size===list.length,at,'避配词不能重复或等于词头');
+    }
     if ('confusables' in entry) {
       const list=items(entry.confusables, at+'.confusables');
       const unique=new Set();
