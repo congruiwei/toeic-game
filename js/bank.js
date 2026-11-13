@@ -37,6 +37,7 @@ const seedSort = (a, seed) => a.slice().sort((x, y) => hash(seed + x) - hash(see
 const normalize = text => text.normalize('NFKC').trim().toLowerCase().replace(/\s+/gu, ' ');
 const senses = text => normalize(text).split(/[；;、]/u).map(s => s.trim()).filter(Boolean);
 const conflictingSound = [
+  ['stairs','stares'], ['flyer','flier'], ['assistance','assistants'],
   ['stationary','stationery'], ['complement','compliment'], ['principal','principle'],
   ['site','sight','cite'], ['sale','sail'], ['fare','fair'], ['mail','male'], ['serial','cereal'],
   ['aisle','isle'], ['board','bored'], ['break','brake'], ['capital','capitol'], ['course','coarse'],

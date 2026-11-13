@@ -72,8 +72,7 @@ function save() {
   try {
     const current = localStorage.getItem(KEY);
     if (current !== lastRaw && current) {
-      const newer = decode(current);
-      verifyRefs(newer);
+      const newer = decode(current, catalog);
       s = newer;
       lastRaw = current;
       clockStart = 0;
@@ -384,8 +383,7 @@ document.addEventListener('change', async (e) => {
   if (el.id === 'import-file' && el.files[0]) {
     try {
       if (el.files[0].size > 5e6) throw Error('文件过大');
-      const candidate = decode(await el.files[0].text());
-      verifyRefs(candidate);
+      const candidate = decode(await el.files[0].text(), catalog);
       incoming = candidate;
       modal(
         `<h2>恢复这份进度？</h2><p>备份中的伙伴是「${forms[incoming.stage]}」，共有 ${incoming.xp} XP。恢复后会替换当前设备的进度。</p>${act('restore', '恢复备份', 'primary')}`,
@@ -396,10 +394,6 @@ document.addEventListener('change', async (e) => {
     el.value = '';
   }
 });
-function verifyRefs(x) {
-  for (const r of [...(x.session?.items || []), ...Object.values(x.errors).map((e) => e.ref)])
-    if (catalog.get(r.id)?.ref.mode !== r.mode) throw Error('题目记录与题库不符');
-}
 document.addEventListener('input', (e) => {
   if (e.target.dataset.pref === 'rate') $('#rate-val').textContent = e.target.value + '×';
 });
@@ -520,8 +514,7 @@ document.addEventListener('visibilitychange', () => {
 window.addEventListener('storage', (e) => {
   if (e.key !== KEY || !e.newValue || e.newValue === lastRaw) return;
   try {
-    const updated = decode(e.newValue);
-    verifyRefs(updated);
+    const updated = decode(e.newValue, catalog);
     lastRaw = e.newValue;
     s = updated;
     clockStart = 0;
@@ -544,8 +537,7 @@ async function boot() {
     const raw = localStorage.getItem(KEY);
     lastRaw = raw;
     if (raw) {
-      s = decode(raw);
-      verifyRefs(s);
+      s = decode(raw, catalog);
     }
   } catch {
     storageBroken = true;

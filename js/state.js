@@ -29,7 +29,7 @@ const safeKey = (x) =>
 function mapOk(m, fn) {
   return record(m) && Object.entries(m).every(([k, v]) => safeKey(k) && fn(v));
 }
-export function decode(raw) {
+export function decode(raw, catalog) {
   const x = JSON.parse(raw);
   if (!record(x) || x.version !== VERSION) throw Error('存档版本无法识别');
   if (
@@ -94,7 +94,8 @@ export function decode(raw) {
         (r) => record(r) && safeKey(r.id) && safeKey(r.mode) && (!r.format || safeKey(r.format)),
       ) ||
       !number(s.index, s.items.length) ||
-      !number(s.right, s.items.length) ||
+      !number(s.retiredAnswered ?? 0, 30 - s.items.length) ||
+      !number(s.right, s.items.length + (s.retiredAnswered ?? 0)) ||
       !number(s.gain) ||
       !number(s.elapsed) ||
       !(s.selected === null || typeof s.selected === 'string') ||
@@ -103,7 +104,60 @@ export function decode(raw) {
     )
       throw Error('练习进度有误');
   }
+  if (catalog) reconcileBank(x, catalog);
   return x;
+}
+
+// Resolve persisted IDs after the current bank is loaded. An absent ID is a retired question.
+function reconcileBank(state, catalog) {
+  function available(ref) {
+    const current = catalog.get(ref.id);
+    if (current && current.ref.mode !== ref.mode) throw Error('题目模式与存档不符');
+    return Boolean(current);
+  }
+  for (const [id, err] of Object.entries(state.errors)) {
+    if (id !== err.ref.id) throw Error('错题引用不一致');
+    if (!available(err.ref)) delete state.errors[id];
+  }
+  for (const id of Object.keys(state.words)) {
+    if (catalog.get(id)?.ref.mode !== 'vocab') delete state.words[id];
+  }
+  for (const id of Object.keys(state.seen)) {
+    if (!catalog.has(id)) delete state.seen[id];
+  }
+
+  const run = state.session;
+  if (!run) return;
+  const previous = run.items;
+  const current = previous[run.index];
+  const item = current && catalog.get(current.id)?.data;
+  if (run.selected !== null && item?.options && !item.options.includes(run.selected)) {
+    // Older insertion exercises displayed "At [3]" instead of "[3]".
+    const mark = /^At (\[[1-4]\])$/.exec(run.selected)?.[1];
+    const last = state.history.at(-1);
+    if (item.kind === 'insertion' && item.options.includes(mark)) run.selected = mark;
+    else if (last?.ok && last.level === item.level &&
+      last.skill === ({grammar:'grammar', reading:'reading', part2:'listening', dialogue:'listening'})[current.mode]) {
+      // An active answered item is the most recent answer. Keep its earned verdict if its wording changed.
+      run.selected = item.answer;
+    }
+  }
+  const kept = previous.filter(available);
+  if (!kept.length) {
+    state.session = null;
+    return;
+  }
+  if (kept.length === previous.length) return;
+  const keptBefore = previous.slice(0, run.index).filter(available).length;
+  const lostCurrent = current && !available(current);
+  const retiredAnswered = run.index - keptBefore + Number(Boolean(lostCurrent && run.selected !== null));
+  if (retiredAnswered) run.retiredAnswered = (run.retiredAnswered || 0) + retiredAnswered;
+  run.items = kept;
+  run.index = keptBefore;
+  if (lostCurrent) {
+    run.selected = null;
+    run.intro = kept[keptBefore]?.mode === 'grammar';
+  }
 }
 export function estimate(s) {
   const recent = s.history.slice(-32);

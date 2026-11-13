@@ -119,7 +119,7 @@ function feedback(q, ref, run) {
 function summary(run) {
   return `<section class="lesson-shell lesson-summary"><div class="lesson-emblem">${icon('sprout',36)}</div>
     <h1>本轮完成</h1><p>${esc(run.title)}</p>
-    <div class="lesson-results"><div><strong>${run.right}<small> / ${run.items.length}</small></strong><span>答对题数</span></div>
+    <div class="lesson-results"><div><strong>${run.right}<small> / ${run.items.length + (run.retiredAnswered || 0)}</small></strong><span>答对题数</span></div>
     <div><strong>+${run.gain}</strong><span>获得经验</span></div>
     ${run.timed ? `<div><strong>${clock(run.elapsed)}</strong><span>阅读用时</span></div>` : ''}</div>
     <button type="button" class="lesson-primary" data-act="home">回到小岛 ${icon('arrow',18)}</button></section>`;
