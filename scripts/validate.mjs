@@ -163,7 +163,7 @@ function vocabulary(entries) {
 function part2(entries) {
   const firstWords = new Set();
   let responses = 0;
-  scan(entries, 'part2', 40, (entry, at) => {
+  scan(entries, 'part2', 200, (entry, at) => {
     id(entry, at);
     level(entry, at);
     answers(entry, at);
@@ -181,6 +181,10 @@ function part2(entries) {
   for (const required of ['where', 'when', 'who', 'why', 'how', 'do', 'is']) {
     expect(firstWords.has(required), 'part2', `缺少 ${required} 的首词练习`);
   }
+  const indirect = entries.filter(q=>q.type==='response' && q.indirect===true).length;
+  expect(indirect >= Math.ceil(entries.length/2),'part2','明确标注的间接回应须达到总题数的一半');
+  const types=new Set(entries.map(q=>q.questionType));
+  for(const name of ['wh','yes-no','choice','negative','tag','statement','request','suggestion'])expect(types.has(name),'part2','缺少回应类型 '+name);
   expect(responses > 0, 'part2', '须包含问答练习');
   counts['Part 2'] = Array.isArray(entries) ? entries.length : 0;
 }

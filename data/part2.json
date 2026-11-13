@@ -57,9 +57,9 @@
     "audio": "Why is the lobby door locked?",
     "prompt": "听清开头：说话人说的第一个词是什么？",
     "options": [
-      "Why",
+      "Where",
       "Which",
-      "Where"
+      "Why"
     ],
     "answer": "Why",
     "evidence": "Why",
@@ -882,5 +882,2817 @@
     "paraphrase": "billed separately → other charges remain",
     "en": "Waiving rent removes one charge, while security and cleanup can still make the total high.",
     "zh": "免场租只减去了一项费用，安保和清洁仍单独收费。"
+  },
+  {
+    "id": "p2-053",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Where can I refill this bottle?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "It holds nearly a liter.",
+      "The bottle was a gift from the coach.",
+      "See the tap beside the lockers?"
+    ],
+    "answer": "See the tap beside the lockers?",
+    "evidence": "Where can I refill this bottle?",
+    "paraphrase": "Where can I refill this bottle → See the tap beside the lockers",
+    "en": "The tap points the listener to a refill source.",
+    "zh": "提到储物柜旁的水龙头，暗示可以到那里接水。"
+  },
+  {
+    "id": "p2-054",
+    "level": 400,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Do we have any more blue chalk?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The board is on the wall.",
+      "I drew a blue line yesterday.",
+      "All I can see is white."
+    ],
+    "answer": "All I can see is white.",
+    "evidence": "Do we have any more blue chalk?",
+    "paraphrase": "Do we have any more blue chalk → All I can see is white",
+    "en": "Only white chalk is visible, suggesting no blue chalk remains at hand.",
+    "zh": "只能看到白粉笔，暗示手边没有蓝粉笔。"
+  },
+  {
+    "id": "p2-055",
+    "level": 400,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Could you hold the door for me?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The handle is made of brass.",
+      "My hands are full too.",
+      "I know who painted the door."
+    ],
+    "answer": "My hands are full too.",
+    "evidence": "Could you hold the door for me?",
+    "paraphrase": "Could you hold the door for me → My hands are full too",
+    "en": "Full hands make it difficult to help with the door.",
+    "zh": "对方也腾不出手，间接表示难以帮忙扶门。"
+  },
+  {
+    "id": "p2-056",
+    "level": 400,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The waiting room is getting cold.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "I'll shut the window.",
+      "The room has six chairs.",
+      "I'm waiting for a blue parcel."
+    ],
+    "answer": "I'll shut the window.",
+    "evidence": "The waiting room is getting cold.",
+    "paraphrase": "The waiting room is getting cold → I'll shut the window",
+    "en": "Closing the window addresses the cold.",
+    "zh": "关窗是针对室内变冷采取的行动。"
+  },
+  {
+    "id": "p2-057",
+    "level": 400,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": false,
+    "audio": "Do you want the red cup or the yellow one?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "There are six in the box.",
+      "I'll wash the spoons first.",
+      "The yellow one, please."
+    ],
+    "answer": "The yellow one, please.",
+    "evidence": "Do you want the red cup or the yellow one?",
+    "paraphrase": "Do you want the red cup or the yellow one → The yellow one, please",
+    "en": "The speaker chooses one of the two colors.",
+    "zh": "对方在两种颜色中选了黄色。"
+  },
+  {
+    "id": "p2-058",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "When can we use the kitchen again?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The kitchen has two sinks.",
+      "The floor is still wet.",
+      "There are fresh towels on the shelf."
+    ],
+    "answer": "The floor is still wet.",
+    "evidence": "When can we use the kitchen again?",
+    "paraphrase": "When can we use the kitchen again → The floor is still wet",
+    "en": "The wet floor implies that they should wait until it dries.",
+    "zh": "地板还湿，暗示要等地面干了才能使用。"
+  },
+  {
+    "id": "p2-059",
+    "level": 400,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "This bus goes to the stadium, doesn't it?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "You're on the airport shuttle.",
+      "The stadium seats forty thousand.",
+      "The drivers wear green jackets."
+    ],
+    "answer": "You're on the airport shuttle.",
+    "evidence": "This bus goes to the stadium, doesn't it?",
+    "paraphrase": "This bus goes to the stadium, doesn't it → You're on the airport shuttle",
+    "en": "Naming a different destination corrects the assumption.",
+    "zh": "指出这是机场接驳车，纠正了开往体育场的判断。"
+  },
+  {
+    "id": "p2-060",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Who's bringing the tea for the picnic?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "We need four tea bags.",
+      "The picnic starts after lunch.",
+      "My neighbor Jill is."
+    ],
+    "answer": "My neighbor Jill is.",
+    "evidence": "Who's bringing the tea for the picnic?",
+    "paraphrase": "Who's bringing the tea for the picnic → My neighbor Jill is",
+    "en": "Jill is identified as the person bringing the tea.",
+    "zh": "Jill 是准备带茶的人。"
+  },
+  {
+    "id": "p2-061",
+    "level": 400,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Didn't you bring an umbrella?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The handle is black.",
+      "It's in my desk at work.",
+      "They sell raincoats in summer."
+    ],
+    "answer": "It's in my desk at work.",
+    "evidence": "Didn't you bring an umbrella?",
+    "paraphrase": "Didn't you bring an umbrella → It's in my desk at work",
+    "en": "An umbrella left at work was not brought along.",
+    "zh": "伞还放在工作地点的桌子里，暗示没带来。"
+  },
+  {
+    "id": "p2-062",
+    "level": 400,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Let's move this table outside.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The legs won't fit through the door.",
+      "The table top is made from a single piece of oak.",
+      "The table number is seven."
+    ],
+    "answer": "The legs won't fit through the door.",
+    "evidence": "Let's move this table outside.",
+    "paraphrase": "Let's move this table outside → The legs won't fit through the door",
+    "en": "The doorway prevents moving the table outside as proposed.",
+    "zh": "桌腿过不了门，间接说明建议暂时不可行。"
+  },
+  {
+    "id": "p2-063",
+    "level": 400,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Is the stamp machine working today?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "I usually send postcards abroad.",
+      "The stamps have pictures of birds.",
+      "It just gave me these stamps."
+    ],
+    "answer": "It just gave me these stamps.",
+    "evidence": "Is the stamp machine working today?",
+    "paraphrase": "Is the stamp machine working today → It just gave me these stamps",
+    "en": "A successful purchase implies the machine works.",
+    "zh": "机器刚吐出邮票，说明它能正常使用。"
+  },
+  {
+    "id": "p2-064",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How many name tags should I print?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The tags are white.",
+      "One for each of the eight guests.",
+      "The guest list is in alphabetical order."
+    ],
+    "answer": "One for each of the eight guests.",
+    "evidence": "How many name tags should I print?",
+    "paraphrase": "How many name tags should I print → One for each of the eight guests",
+    "en": "Eight guests each need one tag, so eight are needed.",
+    "zh": "八位来宾每人一张，因此共八张。"
+  },
+  {
+    "id": "p2-065",
+    "level": 400,
+    "type": "response",
+    "questionType": "request",
+    "indirect": false,
+    "audio": "Can you read the number on this key?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Let me get my glasses.",
+      "I left my key in the lock.",
+      "The number of lockers has doubled."
+    ],
+    "answer": "Let me get my glasses.",
+    "evidence": "Can you read the number on this key?",
+    "paraphrase": "Can you read the number on this key → Let me get my glasses",
+    "en": "Getting glasses indicates the speaker needs help seeing the number.",
+    "zh": "要先拿眼镜，暗示目前看不清号码。"
+  },
+  {
+    "id": "p2-066",
+    "level": 400,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "On Monday, shall we eat at the cafe or bring lunch from home?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "I keep my cup at home.",
+      "The chef grows mint by the window.",
+      "The cafe is closed on Mondays."
+    ],
+    "answer": "The cafe is closed on Mondays.",
+    "evidence": "On Monday, shall we eat at the cafe or bring lunch from home?",
+    "paraphrase": "closed on Mondays → bring lunch instead",
+    "en": "The proposed meal is on the cafe’s weekly closing day.",
+    "zh": "用餐时间恰好是咖啡馆每周的休息日，所以应自带午餐。"
+  },
+  {
+    "id": "p2-067",
+    "level": 400,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "I can't find my green folder.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The printer beside the filing cabinet uses black ink.",
+      "Have you looked under the printer?",
+      "I like the green design too."
+    ],
+    "answer": "Have you looked under the printer?",
+    "evidence": "I can't find my green folder.",
+    "paraphrase": "I can't find my green folder → Have you looked under the printer",
+    "en": "The reply suggests a place to look for the missing folder.",
+    "zh": "答句建议去打印机下面找文件夹。"
+  },
+  {
+    "id": "p2-068",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Where do the clean towels go?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "In the basket near the shower.",
+      "After the swimming lesson.",
+      "They come in three different colors."
+    ],
+    "answer": "In the basket near the shower.",
+    "evidence": "Where do the clean towels go?",
+    "paraphrase": "Where do the clean towels go → In the basket near the shower",
+    "en": "The basket gives the requested storage location.",
+    "zh": "询问摆放地点，淋浴间旁的篮子是具体位置。"
+  },
+  {
+    "id": "p2-069",
+    "level": 400,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Does this lift stop on the roof?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The roof was painted last year.",
+      "The doors close quite slowly.",
+      "Five is the last stop; take the stairs up from there."
+    ],
+    "answer": "Five is the last stop; take the stairs up from there.",
+    "evidence": "Does this lift stop on the roof?",
+    "paraphrase": "stairs above the last stop → no direct lift to the roof",
+    "en": "Passengers must leave the lift and use the stairs for the last part.",
+    "zh": "电梯到五楼为止，最后一段要走楼梯。"
+  },
+  {
+    "id": "p2-070",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Who's going to water the office plants?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "They stand by the east window.",
+      "Eli brought his watering can.",
+      "The pot is made of brown clay."
+    ],
+    "answer": "Eli brought his watering can.",
+    "evidence": "Who's going to water the office plants?",
+    "paraphrase": "Who's going to water the office plants → Eli brought his watering can",
+    "en": "Bringing a watering can suggests Eli is preparing to do it.",
+    "zh": "Eli 带来了浇水壶，暗示是他准备给植物浇水。"
+  },
+  {
+    "id": "p2-071",
+    "level": 400,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Aren't the children's tickets free?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Only for those under six.",
+      "The children enter through the side.",
+      "The tickets come in a blue envelope."
+    ],
+    "answer": "Only for those under six.",
+    "evidence": "Aren't the children's tickets free?",
+    "paraphrase": "Aren't the children's tickets free → Only for those under six",
+    "en": "The reply narrows the condition for free admission.",
+    "zh": "六岁以下才免费，修正了所有儿童都免费的假设。"
+  },
+  {
+    "id": "p2-072",
+    "level": 400,
+    "type": "response",
+    "questionType": "request",
+    "indirect": false,
+    "audio": "Could I have a paper bag for these cards?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The cards are printed on thick paper.",
+      "There are ten cards in a pack.",
+      "Certainly, here's a small one."
+    ],
+    "answer": "Certainly, here's a small one.",
+    "evidence": "Could I have a paper bag for these cards?",
+    "paraphrase": "Could I have a paper bag for these cards → Certainly, here's a small one",
+    "en": "Handing over a bag grants the request.",
+    "zh": "递出小袋子，直接满足请求。"
+  },
+  {
+    "id": "p2-073",
+    "level": 400,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "We still have time for coffee, right?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The coffee comes from Peru.",
+      "The train doors are closing.",
+      "The station clock is very old."
+    ],
+    "answer": "The train doors are closing.",
+    "evidence": "We still have time for coffee, right?",
+    "paraphrase": "We still have time for coffee, right → The train doors are closing",
+    "en": "Closing doors suggest there is no time to stop.",
+    "zh": "车门正在关闭，暗示没时间再买咖啡。"
+  },
+  {
+    "id": "p2-074",
+    "level": 400,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": false,
+    "audio": "Will you drive to the picnic or take the bus?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "My car's still at the garage.",
+      "The steering wheel is black.",
+      "The picnic basket is in the kitchen."
+    ],
+    "answer": "My car's still at the garage.",
+    "evidence": "Will you drive to the picnic or take the bus?",
+    "paraphrase": "Will you drive to the picnic or take the bus → My car's still at the garage",
+    "en": "An unavailable car rules out driving it.",
+    "zh": "汽车还在修理厂，间接排除了开车去的选项。"
+  },
+  {
+    "id": "p2-075",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Which drawer holds the spare batteries?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "They're sold in pairs.",
+      "The sign uses two batteries.",
+      "The shallow one at the top."
+    ],
+    "answer": "The shallow one at the top.",
+    "evidence": "Which drawer holds the spare batteries?",
+    "paraphrase": "Which drawer holds the spare batteries → The shallow one at the top",
+    "en": "The reply identifies a specific drawer.",
+    "zh": "最上层的浅抽屉指明了位置。"
+  },
+  {
+    "id": "p2-076",
+    "level": 400,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "This chair feels too low for the counter.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The counter came from the cafe that used to be next door.",
+      "Try pulling the lever under the seat.",
+      "We counted all the chairs yesterday."
+    ],
+    "answer": "Try pulling the lever under the seat.",
+    "evidence": "This chair feels too low for the counter.",
+    "paraphrase": "This chair feels too low for the counter → Try pulling the lever under the seat",
+    "en": "The lever suggests a way to raise the seat.",
+    "zh": "建议拉座椅下方调节杆，应对座位太低的问题。"
+  },
+  {
+    "id": "p2-077",
+    "level": 400,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Can visitors park inside the gate?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Those spaces have staff names on them.",
+      "The old wooden gate was replaced by a local builder last winter.",
+      "Our visitor book is kept in the lobby."
+    ],
+    "answer": "Those spaces have staff names on them.",
+    "evidence": "Can visitors park inside the gate?",
+    "paraphrase": "Can visitors park inside the gate → Those spaces have staff names on them",
+    "en": "Names on the spaces suggest that they are reserved for staff.",
+    "zh": "车位标着员工姓名，暗示访客不能随便停。"
+  },
+  {
+    "id": "p2-078",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Why did you put tape on the box?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The tape is in the top drawer.",
+      "The box measures thirty centimeters.",
+      "The bottom was coming open."
+    ],
+    "answer": "The bottom was coming open.",
+    "evidence": "Why did you put tape on the box?",
+    "paraphrase": "Why did you put tape on the box → The bottom was coming open",
+    "en": "An opening bottom explains the repair with tape.",
+    "zh": "箱底快散开了，因此贴胶带加固。"
+  },
+  {
+    "id": "p2-079",
+    "level": 400,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Why don't we read the leaflet on the bus?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The leaflet folds into three panels.",
+      "I get dizzy reading on the road.",
+      "The bus route is on the front."
+    ],
+    "answer": "I get dizzy reading on the road.",
+    "evidence": "Why don't we read the leaflet on the bus?",
+    "paraphrase": "Why don't we read the leaflet on the bus → I get dizzy reading on the road",
+    "en": "The speaker gives a reason for declining the suggestion.",
+    "zh": "乘车读东西会头晕，委婉拒绝了建议。"
+  },
+  {
+    "id": "p2-080",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How can I tell which suitcase is yours?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Mine has a pink ribbon.",
+      "I used it on my last holiday.",
+      "The suitcases are beside the lift."
+    ],
+    "answer": "Mine has a pink ribbon.",
+    "evidence": "How can I tell which suitcase is yours?",
+    "paraphrase": "How can I tell which suitcase is yours → Mine has a pink ribbon",
+    "en": "The ribbon is a distinctive identifying feature.",
+    "zh": "粉色丝带可用来辨认哪件行李是对方的。"
+  },
+  {
+    "id": "p2-081",
+    "level": 400,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Is the phone charger in this drawer yours?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The drawer slides out quietly.",
+      "Our phone bill arrives on Friday.",
+      "Mine plugs into a round socket."
+    ],
+    "answer": "Mine plugs into a round socket.",
+    "evidence": "Is the phone charger in this drawer yours?",
+    "paraphrase": "Is the phone charger in this drawer yours → Mine plugs into a round socket",
+    "en": "The plug description gives a way to check ownership.",
+    "zh": "说明自己充电器的插头类型，便于对方核对。"
+  },
+  {
+    "id": "p2-082",
+    "level": 400,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "When does the last ferry cross the river?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "From the north landing.",
+      "At a quarter past nine.",
+      "It carries up to thirty passengers."
+    ],
+    "answer": "At a quarter past nine.",
+    "evidence": "When does the last ferry cross the river?",
+    "paraphrase": "When does the last ferry cross the river → At a quarter past nine",
+    "en": "A quarter past nine gives the departure time.",
+    "zh": "九点一刻回答了末班渡船时间。"
+  },
+  {
+    "id": "p2-083",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Where should guests leave their wet coats?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "See the hooks behind the screen?",
+      "The guests arrived ten minutes early.",
+      "The coats were made locally."
+    ],
+    "answer": "See the hooks behind the screen?",
+    "evidence": "Where should guests leave their wet coats?",
+    "paraphrase": "Where should guests leave their wet coats → See the hooks behind the screen",
+    "en": "Pointing out hooks directs guests to a place to hang coats.",
+    "zh": "指出屏风后的挂钩，间接说明外套该挂在哪里。"
+  },
+  {
+    "id": "p2-084",
+    "level": 500,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Have you seen the new price list?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The shelf labels are printed in blue.",
+      "The price tags are on the samples.",
+      "It hasn't reached my inbox yet."
+    ],
+    "answer": "It hasn't reached my inbox yet.",
+    "evidence": "Have you seen the new price list?",
+    "paraphrase": "Have you seen the new price list → It hasn't reached my inbox yet",
+    "en": "The speaker has not yet received the list by email.",
+    "zh": "收件箱里还没有，暗示尚未看到新价格表。"
+  },
+  {
+    "id": "p2-085",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Why is the display shelf empty?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The display has three shelves.",
+      "The paint is still drying.",
+      "The shelf stands next to the window."
+    ],
+    "answer": "The paint is still drying.",
+    "evidence": "Why is the display shelf empty?",
+    "paraphrase": "Why is the display shelf empty → The paint is still drying",
+    "en": "Wet paint explains why products have not been put back.",
+    "zh": "油漆没干，所以架上暂时不能摆商品。"
+  },
+  {
+    "id": "p2-086",
+    "level": 500,
+    "type": "response",
+    "questionType": "request",
+    "indirect": false,
+    "audio": "Could you help me carry this freezer downstairs?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "I'll take the left handle.",
+      "The freezer has two drawers and an ice tray.",
+      "The new model uses a quieter motor."
+    ],
+    "answer": "I'll take the left handle.",
+    "evidence": "Could you help me carry this freezer downstairs?",
+    "paraphrase": "Could you help me carry this freezer downstairs → I'll take the left handle",
+    "en": "Taking one handle signals agreement to help carry it.",
+    "zh": "对方主动抓住一边把手，表示愿意协助搬运。"
+  },
+  {
+    "id": "p2-087",
+    "level": 500,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "The side gate opens with this card, doesn't it?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The identification photograph is printed on the back of the card.",
+      "The main hall seats eighty people.",
+      "That card only works on the main door."
+    ],
+    "answer": "That card only works on the main door.",
+    "evidence": "The side gate opens with this card, doesn't it?",
+    "paraphrase": "The side gate opens with this card, doesn't it → That card only works on the main door",
+    "en": "The restriction to the main door rules out the side gate.",
+    "zh": "这张卡只开正门，说明不能开侧门。"
+  },
+  {
+    "id": "p2-088",
+    "level": 500,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": false,
+    "audio": "Would you like a window seat or an aisle seat?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The flight takes about two hours.",
+      "An aisle seat, if one is free.",
+      "Our boarding passes were printed this morning."
+    ],
+    "answer": "An aisle seat, if one is free.",
+    "evidence": "Would you like a window seat or an aisle seat?",
+    "paraphrase": "Would you like a window seat or an aisle seat → An aisle seat, if one is free",
+    "en": "The speaker explicitly chooses the aisle option.",
+    "zh": "明确选择靠过道的座位。"
+  },
+  {
+    "id": "p2-089",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Who can explain this train allowance?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Payroll handles travel benefits.",
+      "The train stops twice on the way.",
+      "The trip is almost an hour long."
+    ],
+    "answer": "Payroll handles travel benefits.",
+    "evidence": "Who can explain this train allowance?",
+    "paraphrase": "Who can explain this train allowance → Payroll handles travel benefits",
+    "en": "Naming the responsible department suggests whom to ask.",
+    "zh": "薪资部门负责交通津贴，暗示可向该部门咨询。"
+  },
+  {
+    "id": "p2-090",
+    "level": 500,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The framed photograph is leaning to the left.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The frame comes in a choice of black, silver, or dark green.",
+      "I left the photo album on the train.",
+      "Hand me the level and I'll check it."
+    ],
+    "answer": "Hand me the level and I'll check it.",
+    "evidence": "The framed photograph is leaning to the left.",
+    "paraphrase": "The framed photograph is leaning to the left → Hand me the level and I'll check it",
+    "en": "A level can check and correct the picture's alignment.",
+    "zh": "索取水平尺是为了检查相框是否挂正。"
+  },
+  {
+    "id": "p2-091",
+    "level": 500,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Didn't we order the envelopes with windows?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The window in the accounts office faces the staff courtyard.",
+      "These are the free samples, not our order.",
+      "I usually stamp the envelope in blue."
+    ],
+    "answer": "These are the free samples, not our order.",
+    "evidence": "Didn't we order the envelopes with windows?",
+    "paraphrase": "Didn't we order the envelopes with windows → These are the free samples, not our order",
+    "en": "The samples need not match the envelopes actually ordered.",
+    "zh": "眼前的是样品，不是已下单的信封，不能据此否定订单。"
+  },
+  {
+    "id": "p2-092",
+    "level": 500,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Can I collect the package after work?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The counter locks up at four.",
+      "I work in the packaging department.",
+      "The package was wrapped in brown paper."
+    ],
+    "answer": "The counter locks up at four.",
+    "evidence": "Can I collect the package after work?",
+    "paraphrase": "Can I collect the package after work → The counter locks up at four",
+    "en": "The closing time lets the caller judge whether pickup is possible.",
+    "zh": "告知柜台四点关闭，让对方判断下班后是否来得及。"
+  },
+  {
+    "id": "p2-093",
+    "level": 500,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Why don't we move the rehearsal to the morning?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The morning paper reviewed the show.",
+      "The song has a short opening section.",
+      "Two of the singers teach until noon."
+    ],
+    "answer": "Two of the singers teach until noon.",
+    "evidence": "Why don't we move the rehearsal to the morning?",
+    "paraphrase": "Why don't we move the rehearsal to the morning → Two of the singers teach until noon",
+    "en": "The singers' teaching commitments conflict with a morning rehearsal.",
+    "zh": "两位歌手中午前要上课，暗示早上排练不合适。"
+  },
+  {
+    "id": "p2-094",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How often are the water jugs washed?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "There are four on the table.",
+      "After every lunch service.",
+      "The jugs hold a liter each."
+    ],
+    "answer": "After every lunch service.",
+    "evidence": "How often are the water jugs washed?",
+    "paraphrase": "How often are the water jugs washed → After every lunch service",
+    "en": "After every service gives the washing frequency.",
+    "zh": "每次午餐服务后清洗，回答了频率。"
+  },
+  {
+    "id": "p2-095",
+    "level": 500,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Should I file this receipt or throw it away?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The accounts team asks for originals.",
+      "The cleaning crew empties that bin just after lunch.",
+      "The card reader has a blue screen."
+    ],
+    "answer": "The accounts team asks for originals.",
+    "evidence": "Should I file this receipt or throw it away?",
+    "paraphrase": "Should I file this receipt or throw it away → The accounts team asks for originals",
+    "en": "A requirement for originals implies the receipt should be kept.",
+    "zh": "财务部要求原件，因此应把收据存档。"
+  },
+  {
+    "id": "p2-096",
+    "level": 500,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Can you make the letters on the sign bigger?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The sign points to the loading bay.",
+      "Those letters came by express mail.",
+      "I'll need a wider board first."
+    ],
+    "answer": "I'll need a wider board first.",
+    "evidence": "Can you make the letters on the sign bigger?",
+    "paraphrase": "Can you make the letters on the sign bigger → I'll need a wider board first",
+    "en": "A wider board is a prerequisite for larger lettering.",
+    "zh": "要先换宽一点的板子，意味着可以改但有条件。"
+  },
+  {
+    "id": "p2-097",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "When should the guest artist go on stage?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The guest artist is staying in the new hotel beside the central station.",
+      "Wait for the blue light by the curtain.",
+      "The stage was built from oak panels."
+    ],
+    "answer": "Wait for the blue light by the curtain.",
+    "evidence": "When should the guest artist go on stage?",
+    "paraphrase": "When should the guest artist go on stage → Wait for the blue light by the curtain",
+    "en": "The light is a cue for the timing of the entrance.",
+    "zh": "幕布旁蓝灯亮起是上场的时间信号。"
+  },
+  {
+    "id": "p2-098",
+    "level": 500,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "Our membership includes the workshop kit, right?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "There's a separate charge for materials.",
+      "The workshop meets in the main hall.",
+      "My membership card has a new photo."
+    ],
+    "answer": "There's a separate charge for materials.",
+    "evidence": "Our membership includes the workshop kit, right?",
+    "paraphrase": "Our membership includes the workshop kit, right → There's a separate charge for materials",
+    "en": "A separate materials charge means the kit is not included.",
+    "zh": "材料另收费，暗示会员费不包含这套材料。"
+  },
+  {
+    "id": "p2-099",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How did you fix the broken drawer handle?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The handle is made of wood.",
+      "The drawer is almost empty.",
+      "I tightened the screws."
+    ],
+    "answer": "I tightened the screws.",
+    "evidence": "How did you fix the broken drawer handle?",
+    "paraphrase": "How did you fix the broken drawer handle → I tightened the screws",
+    "en": "Tightening screws describes the repair method.",
+    "zh": "拧紧螺丝是具体的修理方法。"
+  },
+  {
+    "id": "p2-100",
+    "level": 500,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "My visitor badge has yesterday's date on it.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The meeting started late yesterday.",
+      "Reception can print a fresh one.",
+      "The date is printed below the company logo."
+    ],
+    "answer": "Reception can print a fresh one.",
+    "evidence": "My visitor badge has yesterday's date on it.",
+    "paraphrase": "My visitor badge has yesterday's date on it → Reception can print a fresh one",
+    "en": "The reply directs the visitor to a source for a replacement.",
+    "zh": "前台能重打胸牌，解决日期过期的问题。"
+  },
+  {
+    "id": "p2-101",
+    "level": 500,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Are both practice rooms free this evening?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "One is reserved for the choir.",
+      "The choir usually sings outdoors.",
+      "Both rooms have wooden floors."
+    ],
+    "answer": "One is reserved for the choir.",
+    "evidence": "Are both practice rooms free this evening?",
+    "paraphrase": "Are both practice rooms free this evening → One is reserved for the choir",
+    "en": "A reservation rules out both rooms being available.",
+    "zh": "一间已被合唱团预订，说明不可能两间都空着。"
+  },
+  {
+    "id": "p2-102",
+    "level": 500,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Hasn't the bakery changed its phone number?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The bakery sells birthday candles.",
+      "The shop moved to a larger kitchen.",
+      "Their new card still lists the old one."
+    ],
+    "answer": "Their new card still lists the old one.",
+    "evidence": "Hasn't the bakery changed its phone number?",
+    "paraphrase": "Hasn't the bakery changed its phone number → Their new card still lists the old one",
+    "en": "The unchanged number on the new card casts doubt on the change.",
+    "zh": "新名片上仍是旧号码，间接否定了已经换号的猜测。"
+  },
+  {
+    "id": "p2-103",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Which of these cables goes to the microphone?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The microphone is on the stand.",
+      "The one marked with red tape.",
+      "They're sold in pairs online."
+    ],
+    "answer": "The one marked with red tape.",
+    "evidence": "Which of these cables goes to the microphone?",
+    "paraphrase": "Which of these cables goes to the microphone → The one marked with red tape",
+    "en": "The colored tape identifies the correct cable.",
+    "zh": "红色胶带是用来辨认这根线的标记。"
+  },
+  {
+    "id": "p2-104",
+    "level": 500,
+    "type": "response",
+    "questionType": "request",
+    "indirect": false,
+    "audio": "Could I pay the deposit with cash?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Our card reader is right here; we don't keep a till.",
+      "The deposit notice was posted beside the door.",
+      "Cash drawers are sold at the shop next door."
+    ],
+    "answer": "Our card reader is right here; we don't keep a till.",
+    "evidence": "Could I pay the deposit with cash?",
+    "paraphrase": "Could I pay the deposit with cash → Our card reader is right here; we don't keep a till",
+    "en": "Having a card reader but no cash till signals card payment.",
+    "zh": "现场只有刷卡设备，没有现金收款台，暗示无法收现金。"
+  },
+  {
+    "id": "p2-105",
+    "level": 500,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Shall we have the brochures folded or leave them flat?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The printer has enough paper for both runs.",
+      "The flat upstairs has a new tenant.",
+      "They have to fit in these little envelopes."
+    ],
+    "answer": "They have to fit in these little envelopes.",
+    "evidence": "Shall we have the brochures folded or leave them flat?",
+    "paraphrase": "Shall we have the brochures folded or leave them flat → They have to fit in these little envelopes",
+    "en": "The small envelopes make folding the practical choice.",
+    "zh": "小信封装不下平摊的手册，暗示应折叠。"
+  },
+  {
+    "id": "p2-106",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Where do I report the loose tile?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The tile is light gray.",
+      "Maintenance has a desk by the lift.",
+      "The lift takes about thirty seconds."
+    ],
+    "answer": "Maintenance has a desk by the lift.",
+    "evidence": "Where do I report the loose tile?",
+    "paraphrase": "Where do I report the loose tile → Maintenance has a desk by the lift",
+    "en": "The maintenance desk is the point of contact for repairs.",
+    "zh": "电梯旁的维修台是报告地砖松动的地点。"
+  },
+  {
+    "id": "p2-107",
+    "level": 500,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Do we still need a volunteer for registration?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Nobody has claimed the first shift.",
+      "The registration form uses blue ink.",
+      "The first guest came from a neighboring town."
+    ],
+    "answer": "Nobody has claimed the first shift.",
+    "evidence": "Do we still need a volunteer for registration?",
+    "paraphrase": "Do we still need a volunteer for registration → Nobody has claimed the first shift",
+    "en": "An unclaimed shift indicates a volunteer is still needed.",
+    "zh": "第一个班次没人认领，说明仍需志愿者。"
+  },
+  {
+    "id": "p2-108",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "What time should the florist bring the table flowers?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Twelve small bunches, please.",
+      "The florist uses the service entrance.",
+      "Just before the doors open at six."
+    ],
+    "answer": "Just before the doors open at six.",
+    "evidence": "What time should the florist bring the table flowers?",
+    "paraphrase": "What time should the florist bring the table flowers → Just before the doors open at six",
+    "en": "The reply places delivery shortly before the six o'clock opening.",
+    "zh": "交货安排在六点开门前不久。"
+  },
+  {
+    "id": "p2-109",
+    "level": 500,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The new employee can't read the tiny print on this map.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "She started in the print room last week.",
+      "I'll enlarge a copy for her.",
+      "The map covers all three company sites."
+    ],
+    "answer": "I'll enlarge a copy for her.",
+    "evidence": "The new employee can't read the tiny print on this map.",
+    "paraphrase": "The new employee can't read the tiny print on this map → I'll enlarge a copy for her",
+    "en": "Enlarging the copy addresses the readability problem.",
+    "zh": "放大复印件能解决地图字体太小的问题。"
+  },
+  {
+    "id": "p2-110",
+    "level": 500,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Let's carry the drinks in these open trays.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "There's a lid for each tray in the cupboard.",
+      "The glasses belong to the caterer.",
+      "The cupboard doors match the kitchen units."
+    ],
+    "answer": "There's a lid for each tray in the cupboard.",
+    "evidence": "Let's carry the drinks in these open trays.",
+    "paraphrase": "Let's carry the drinks in these open trays → There's a lid for each tray in the cupboard",
+    "en": "The available lids suggest covering the trays for transport.",
+    "zh": "提醒有盖子，委婉建议搬运时把托盘盖上。"
+  },
+  {
+    "id": "p2-111",
+    "level": 500,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Who can let the delivery crew into the yard?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The crew wears orange jackets.",
+      "The yard is paved with new concrete.",
+      "Mina has the gate code."
+    ],
+    "answer": "Mina has the gate code.",
+    "evidence": "Who can let the delivery crew into the yard?",
+    "paraphrase": "Who can let the delivery crew into the yard → Mina has the gate code",
+    "en": "Possessing the code makes Mina able to provide entry.",
+    "zh": "Mina 掌握门禁密码，暗示她能协助开门。"
+  },
+  {
+    "id": "p2-112",
+    "level": 500,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": false,
+    "audio": "The craft fair runs on Sunday too, doesn't it?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The craft stalls sell handmade gifts.",
+      "Saturday is the final day.",
+      "The fair printed a new map this year."
+    ],
+    "answer": "Saturday is the final day.",
+    "evidence": "The craft fair runs on Sunday too, doesn't it?",
+    "paraphrase": "The craft fair runs on Sunday too, doesn't it → Saturday is the final day",
+    "en": "A Saturday finish rules out Sunday opening.",
+    "zh": "周六是最后一天，说明周日不办。"
+  },
+  {
+    "id": "p2-113",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Why are the sample cards spread out on the table?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The ink smears if they touch.",
+      "The box of cards arrived by courier.",
+      "The table came from our old showroom."
+    ],
+    "answer": "The ink smears if they touch.",
+    "evidence": "Why are the sample cards spread out on the table?",
+    "paraphrase": "Why are the sample cards spread out on the table → The ink smears if they touch",
+    "en": "Keeping the wet ink apart prevents smearing.",
+    "zh": "把色卡摊开是为了避免油墨相碰而蹭花。"
+  },
+  {
+    "id": "p2-114",
+    "level": 600,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Can the new scanner read both sides at once?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The new pages are numbered at the bottom.",
+      "Scanning takes longer with thick paper.",
+      "I haven't had to turn a page over yet."
+    ],
+    "answer": "I haven't had to turn a page over yet.",
+    "evidence": "Can the new scanner read both sides at once?",
+    "paraphrase": "Can the new scanner read both sides at once → I haven't had to turn a page over yet",
+    "en": "Not having to turn pages suggests automatic two-sided scanning.",
+    "zh": "从未需要翻面，暗示扫描仪支持自动双面扫描。"
+  },
+  {
+    "id": "p2-115",
+    "level": 600,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Should I invite the whole club or only the committee?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Our chairperson joined the club last spring.",
+      "The room has exactly enough chairs for the committee.",
+      "The invitation has a blue border and a club badge."
+    ],
+    "answer": "The room has exactly enough chairs for the committee.",
+    "evidence": "Should I invite the whole club or only the committee?",
+    "paraphrase": "Should I invite the whole club or only the committee → The room has exactly enough chairs for the committee",
+    "en": "The available seating favors inviting only the committee.",
+    "zh": "座位仅够委员会成员，暗示不宜邀请全体。"
+  },
+  {
+    "id": "p2-116",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How far in advance must I cancel a studio booking?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "At least a full day beforehand.",
+      "The studio closes at seven.",
+      "The booking fee is thirty dollars."
+    ],
+    "answer": "At least a full day beforehand.",
+    "evidence": "How far in advance must I cancel a studio booking?",
+    "paraphrase": "How far in advance must I cancel a studio booking → At least a full day beforehand",
+    "en": "A full day specifies the required notice period.",
+    "zh": "至少提前一整天是取消预约的通知期限。"
+  },
+  {
+    "id": "p2-117",
+    "level": 600,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Could you send the spare keys by ordinary mail?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The keys are stamped with the room numbers.",
+      "The post office has a display of historic stamps.",
+      "I'd rather use a service that gets a signature."
+    ],
+    "answer": "I'd rather use a service that gets a signature.",
+    "evidence": "Could you send the spare keys by ordinary mail?",
+    "paraphrase": "Could you send the spare keys by ordinary mail → I'd rather use a service that gets a signature",
+    "en": "Preferring signed delivery declines ordinary mail for this item.",
+    "zh": "希望有人签收，间接拒绝用普通邮件寄钥匙。"
+  },
+  {
+    "id": "p2-118",
+    "level": 600,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "The library still takes book donations, doesn't it?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The first edition has a blue cloth cover.",
+      "They're running out of shelf space; call before you go.",
+      "The reading room faces the old market square."
+    ],
+    "answer": "They're running out of shelf space; call before you go.",
+    "evidence": "The library still takes book donations, doesn't it?",
+    "paraphrase": "The library still takes book donations, doesn't it → They're running out of shelf space; call before you go",
+    "en": "Limited space makes acceptance uncertain, so checking is advised.",
+    "zh": "书架空间有限，暗示目前未必收书，建议先联系。"
+  },
+  {
+    "id": "p2-119",
+    "level": 600,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The guest's surname is spelled two ways in the program.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Let's check the spelling on her own website.",
+      "The program has an interview on page two.",
+      "Her guest pass is valid for both sessions."
+    ],
+    "answer": "Let's check the spelling on her own website.",
+    "evidence": "The guest's surname is spelled two ways in the program.",
+    "paraphrase": "The guest's surname is spelled two ways in the program → Let's check the spelling on her own website",
+    "en": "The guest's own spelling can resolve the inconsistency.",
+    "zh": "去本人网站核对可解决姓名拼写不一致。"
+  },
+  {
+    "id": "p2-120",
+    "level": 600,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Didn't maintenance finish painting this corridor?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The paint comes in three shades of gray.",
+      "The entrance lights use very little power.",
+      "They've still got half the wall left to paint."
+    ],
+    "answer": "They've still got half the wall left to paint.",
+    "evidence": "Didn't maintenance finish painting this corridor?",
+    "paraphrase": "half the wall left → painting is unfinished",
+    "en": "A remaining section of unpainted wall answers the negative question.",
+    "zh": "还有半面墙没有刷完，说明工程尚未完成。"
+  },
+  {
+    "id": "p2-121",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Who should sign for a refrigerated delivery?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The delivery truck has a white roof.",
+      "Only the kitchen supervisor has the receiving stamp.",
+      "The signature on this menu is the chef's."
+    ],
+    "answer": "Only the kitchen supervisor has the receiving stamp.",
+    "evidence": "Who should sign for a refrigerated delivery?",
+    "paraphrase": "holds the receiving stamp → authorized to sign",
+    "en": "The stamp identifies the one staff member authorized to receive the delivery.",
+    "zh": "只有厨房主管持有收货章，说明应由其签收。"
+  },
+  {
+    "id": "p2-122",
+    "level": 600,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Why don't we put the display beside the stairwell?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "That wall is marked as a fire exit route.",
+      "The display uses four wooden panels.",
+      "The stairwell windows were washed this morning."
+    ],
+    "answer": "That wall is marked as a fire exit route.",
+    "evidence": "Why don't we put the display beside the stairwell?",
+    "paraphrase": "Why don't we put the display beside the stairwell → That wall is marked as a fire exit route",
+    "en": "A designated exit route should stay clear, making the site unsuitable.",
+    "zh": "那里是疏散通道，暗示不适合摆展架。"
+  },
+  {
+    "id": "p2-123",
+    "level": 600,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Are the lockers included in my day pass?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The day pass has a picture of the new pool.",
+      "The locker doors were installed early this spring.",
+      "You'll need a coin to start the lock, but it comes back."
+    ],
+    "answer": "You'll need a coin to start the lock, but it comes back.",
+    "evidence": "Are the lockers included in my day pass?",
+    "paraphrase": "Are the lockers included in my day pass → You'll need a coin to start the lock, but it comes back",
+    "en": "A returned coin is a temporary deposit rather than a lasting locker charge.",
+    "zh": "投币后会退回，说明只是临时押币，不是额外使用费。"
+  },
+  {
+    "id": "p2-124",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "What should I enter in the space for a reference number?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The reference book is near the lift.",
+      "The code on your confirmation email.",
+      "The form uses capital letters throughout."
+    ],
+    "answer": "The code on your confirmation email.",
+    "evidence": "What should I enter in the space for a reference number?",
+    "paraphrase": "What should I enter in the space for a reference number → The code on your confirmation email",
+    "en": "The confirmation email supplies the requested code.",
+    "zh": "参考编号取自确认邮件中的代码。"
+  },
+  {
+    "id": "p2-125",
+    "level": 600,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": false,
+    "audio": "Did the leak come from the pipe or from the roof?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Water is dripping from a joint in the pipe.",
+      "The roof tiles are dark green.",
+      "The plumber will send a paper invoice."
+    ],
+    "answer": "Water is dripping from a joint in the pipe.",
+    "evidence": "Did the leak come from the pipe or from the roof?",
+    "paraphrase": "Did the leak come from the pipe or from the roof → Water is dripping from a joint in the pipe",
+    "en": "Water coming from the joint identifies the pipe as the source.",
+    "zh": "接头正在滴水，说明漏水来自管道。"
+  },
+  {
+    "id": "p2-126",
+    "level": 600,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Can I replace my cracked badge without another photo?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The badge holder has a metal clip.",
+      "Photos for the gallery close on Friday.",
+      "Your original picture is still on file."
+    ],
+    "answer": "Your original picture is still on file.",
+    "evidence": "Can I replace my cracked badge without another photo?",
+    "paraphrase": "Can I replace my cracked badge without another photo → Your original picture is still on file",
+    "en": "The saved photo can be reused for a replacement.",
+    "zh": "旧照片仍在档案里，暗示补办时不用再拍。"
+  },
+  {
+    "id": "p2-127",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "When should I announce the raffle winner?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The tickets were printed at our branch.",
+      "Give the last guest time to drop in a ticket.",
+      "The winner gets a wooden picture frame."
+    ],
+    "answer": "Give the last guest time to drop in a ticket.",
+    "evidence": "When should I announce the raffle winner?",
+    "paraphrase": "When should I announce the raffle winner → Give the last guest time to drop in a ticket",
+    "en": "The announcement should follow the final opportunity to enter.",
+    "zh": "要等最后一位客人也投完票再宣布获奖者。"
+  },
+  {
+    "id": "p2-128",
+    "level": 600,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "Both deliveries are listed under the same invoice number.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "I'll check whether one entry was copied twice.",
+      "The van can carry both packages at once.",
+      "Invoice paper is stored on the top shelf."
+    ],
+    "answer": "I'll check whether one entry was copied twice.",
+    "evidence": "Both deliveries are listed under the same invoice number.",
+    "paraphrase": "Both deliveries are listed under the same invoice number → I'll check whether one entry was copied twice",
+    "en": "Checking for duplication directly addresses the shared number.",
+    "zh": "同一票号出现两次，需要查是否重复录入。"
+  },
+  {
+    "id": "p2-129",
+    "level": 600,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Will the garden path be open to other guests during the wedding procession?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The weddings are listed on that noticeboard.",
+      "The path was laid with local stone last spring.",
+      "The florist has exclusive use until the couple passes."
+    ],
+    "answer": "The florist has exclusive use until the couple passes.",
+    "evidence": "Will the garden path be open to other guests during the wedding procession?",
+    "paraphrase": "exclusive use → other guests must wait",
+    "en": "The florist alone can use the path during the procession.",
+    "zh": "新人通过之前小径仅供花艺人员使用，其他宾客须等待。"
+  },
+  {
+    "id": "p2-130",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Where is the deadline for late registration printed?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "At five on the final Friday.",
+      "On the back of the entry form.",
+      "The entry fee rose last year."
+    ],
+    "answer": "On the back of the entry form.",
+    "evidence": "Where is the deadline for late registration printed?",
+    "paraphrase": "Where is the deadline for late registration printed → On the back of the entry form",
+    "en": "The question asks where the date is printed rather than what the date is.",
+    "zh": "问截止日期印在哪里，应答报名表背面。"
+  },
+  {
+    "id": "p2-131",
+    "level": 600,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "We've paid the balance on the sound equipment, haven't we?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The latest statement still shows an amount due.",
+      "The sound equipment has a two-year warranty.",
+      "The balance control is on the mixing desk."
+    ],
+    "answer": "The latest statement still shows an amount due.",
+    "evidence": "We've paid the balance on the sound equipment, haven't we?",
+    "paraphrase": "We've paid the balance on the sound equipment, haven't we → The latest statement still shows an amount due",
+    "en": "An outstanding amount contradicts full payment.",
+    "zh": "对账单仍显示欠款，说明尾款未结清。"
+  },
+  {
+    "id": "p2-132",
+    "level": 600,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": false,
+    "audio": "Haven't the new uniforms been delivered to the branch?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The new designs use a darker shade of blue.",
+      "The branch manager tried on two samples.",
+      "Only the name patches came in this morning."
+    ],
+    "answer": "Only the name patches came in this morning.",
+    "evidence": "Haven't the new uniforms been delivered to the branch?",
+    "paraphrase": "Haven't the new uniforms been delivered to the branch → Only the name patches came in this morning",
+    "en": "Receiving patches alone implies the uniforms have not arrived.",
+    "zh": "今天只到了姓名布章，暗示制服尚未送达。"
+  },
+  {
+    "id": "p2-133",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How do we tell whether a form has been reviewed?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The form is available from the front desk.",
+      "Look for a date beside the editor's initials.",
+      "The editor joined the review panel on Monday."
+    ],
+    "answer": "Look for a date beside the editor's initials.",
+    "evidence": "How do we tell whether a form has been reviewed?",
+    "paraphrase": "How do we tell whether a form has been reviewed → Look for a date beside the editor's initials",
+    "en": "The dated initials are evidence of completed review.",
+    "zh": "编辑缩写旁的日期可作为已经审核的标志。"
+  },
+  {
+    "id": "p2-134",
+    "level": 600,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Should the tour start at the bakery or finish there?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Fresh bread comes out just as our walk ends.",
+      "The bakery sign was painted by a local artist.",
+      "The walk includes three historic buildings."
+    ],
+    "answer": "Fresh bread comes out just as our walk ends.",
+    "evidence": "Should the tour start at the bakery or finish there?",
+    "paraphrase": "Should the tour start at the bakery or finish there → Fresh bread comes out just as our walk ends",
+    "en": "The baking schedule makes the bakery attractive as the final stop.",
+    "zh": "出炉时间正好是步行结束时，暗示面包店适合作终点。"
+  },
+  {
+    "id": "p2-135",
+    "level": 600,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Why not email everyone the full video file?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The video includes a short interview.",
+      "The email addresses are in alphabetical order.",
+      "Most inboxes here reject files that large."
+    ],
+    "answer": "Most inboxes here reject files that large.",
+    "evidence": "Why not email everyone the full video file?",
+    "paraphrase": "Why not email everyone the full video file → Most inboxes here reject files that large",
+    "en": "A file-size limit is a practical objection to the suggestion.",
+    "zh": "附件太大会被邮箱拒收，因此不宜群发完整视频。"
+  },
+  {
+    "id": "p2-136",
+    "level": 600,
+    "type": "response",
+    "questionType": "request",
+    "indirect": false,
+    "audio": "Would you check whether my seat number is on the list?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The seats were covered last month.",
+      "Certainly, what number were you given?",
+      "We usually print one list per section."
+    ],
+    "answer": "Certainly, what number were you given?",
+    "evidence": "Would you check whether my seat number is on the list?",
+    "paraphrase": "Would you check whether my seat number is on the list → Certainly, what number were you given",
+    "en": "Asking for the number begins the requested check.",
+    "zh": "询问座位号是为对方查名单的第一步。"
+  },
+  {
+    "id": "p2-137",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Who's updating the floor plan after the partition moves?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "I saw Rosa measuring the new wall this morning.",
+      "The plans are printed on large sheets.",
+      "The partition slides along a metal track."
+    ],
+    "answer": "I saw Rosa measuring the new wall this morning.",
+    "evidence": "Who's updating the floor plan after the partition moves?",
+    "paraphrase": "Who's updating the floor plan after the partition moves → I saw Rosa measuring the new wall this morning",
+    "en": "Rosa's measurements suggest she is preparing the plan update.",
+    "zh": "Rosa 在测量新墙，暗示她可能负责更新平面图。"
+  },
+  {
+    "id": "p2-138",
+    "level": 600,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The tasting cards don't say which juice contains ginger.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The card stock is suitable for color printing.",
+      "There are six cups on each tasting tray.",
+      "I'll ask the kitchen before we put them out."
+    ],
+    "answer": "I'll ask the kitchen before we put them out.",
+    "evidence": "The tasting cards don't say which juice contains ginger.",
+    "paraphrase": "The tasting cards don't say which juice contains ginger → I'll ask the kitchen before we put them out",
+    "en": "Checking the ingredient before display addresses the missing information.",
+    "zh": "摆出试饮品前先向厨房确认，可补上成分信息。"
+  },
+  {
+    "id": "p2-139",
+    "level": 600,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": false,
+    "audio": "Does the repair quotation cover delivery back to us?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The delivery driver wears a red uniform.",
+      "There's a separate line marked return freight.",
+      "The repairs usually take three business days."
+    ],
+    "answer": "There's a separate line marked return freight.",
+    "evidence": "Does the repair quotation cover delivery back to us?",
+    "paraphrase": "Does the repair quotation cover delivery back to us → There's a separate line marked return freight",
+    "en": "The freight line is where the return cost is specified.",
+    "zh": "报价中有单列的返程运费，可据此确认寄回费用。"
+  },
+  {
+    "id": "p2-140",
+    "level": 600,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Why is the evening class moving to the large studio?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "More people enrolled than we expected.",
+      "The studio is above the gift shop.",
+      "The course lasts for six evenings."
+    ],
+    "answer": "More people enrolled than we expected.",
+    "evidence": "Why is the evening class moving to the large studio?",
+    "paraphrase": "Why is the evening class moving to the large studio → More people enrolled than we expected",
+    "en": "Higher enrollment explains the need for a larger room.",
+    "zh": "报名人数超预期，因此改用大教室。"
+  },
+  {
+    "id": "p2-141",
+    "level": 600,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "The coupons are good for takeaway meals too, right?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The coupons came with the local paper.",
+      "The takeaway boxes have green lids.",
+      "The small print says dine-in only."
+    ],
+    "answer": "The small print says dine-in only.",
+    "evidence": "The coupons are good for takeaway meals too, right?",
+    "paraphrase": "The coupons are good for takeaway meals too, right → The small print says dine-in only",
+    "en": "Dine-in only excludes meals taken away.",
+    "zh": "仅限堂食的条款排除了外带。"
+  },
+  {
+    "id": "p2-142",
+    "level": 700,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "When can we publish the speaker's biography?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The biography runs to about a hundred words.",
+      "Her assistant still has the proof for approval.",
+      "The speaker will use the smaller stage."
+    ],
+    "answer": "Her assistant still has the proof for approval.",
+    "evidence": "When can we publish the speaker's biography?",
+    "paraphrase": "When can we publish the speaker's biography → Her assistant still has the proof for approval",
+    "en": "Publication is waiting on approval of the proof.",
+    "zh": "校样仍待助理批准，暗示获批后才能发布。"
+  },
+  {
+    "id": "p2-143",
+    "level": 700,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Shall I call the client now or wait for the final figures?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "She asked us for a firm total, not a rough estimate.",
+      "The client sends most invoices electronically.",
+      "I called the figures out during the stock count."
+    ],
+    "answer": "She asked us for a firm total, not a rough estimate.",
+    "evidence": "Shall I call the client now or wait for the final figures?",
+    "paraphrase": "Shall I call the client now or wait for the final figures → She asked us for a firm total, not a rough estimate",
+    "en": "A request for a firm total favors waiting for final numbers.",
+    "zh": "客户要确定总价，因此应等最终数据再联系。"
+  },
+  {
+    "id": "p2-144",
+    "level": 700,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Isn't the new meter supposed to show daily usage?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The installer left a new battery with us.",
+      "Daily newspapers are sold by the entrance.",
+      "You're looking at the monthly total screen."
+    ],
+    "answer": "You're looking at the monthly total screen.",
+    "evidence": "Isn't the new meter supposed to show daily usage?",
+    "paraphrase": "Isn't the new meter supposed to show daily usage → You're looking at the monthly total screen",
+    "en": "The display mode explains why daily usage is absent.",
+    "zh": "眼前是月汇总界面，所以未显示日用量。"
+  },
+  {
+    "id": "p2-145",
+    "level": 700,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Could you forward the client's original artwork to the sign maker?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The sign maker uses a wide-format printer.",
+      "I can send the link once the client grants access.",
+      "The art show has its opening on Friday."
+    ],
+    "answer": "I can send the link once the client grants access.",
+    "evidence": "Could you forward the client's original artwork to the sign maker?",
+    "paraphrase": "Could you forward the client's original artwork to the sign maker → I can send the link once the client grants access",
+    "en": "Access permission is a condition for sharing the file.",
+    "zh": "客户先授权，才能把素材链接发给制作方。"
+  },
+  {
+    "id": "p2-146",
+    "level": 700,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "Our return labels show the address of the old warehouse.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Hold that batch while I print replacements.",
+      "The warehouse has a new blue entrance sign.",
+      "The return policy lasts for thirty days."
+    ],
+    "answer": "Hold that batch while I print replacements.",
+    "evidence": "Our return labels show the address of the old warehouse.",
+    "paraphrase": "Our return labels show the address of the old warehouse → Hold that batch while I print replacements",
+    "en": "Holding the batch prevents parcels from being mislabeled.",
+    "zh": "新标签印好前暂停这一批，可避免退货寄错地点。"
+  },
+  {
+    "id": "p2-147",
+    "level": 700,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How long will the replacement screen stay under warranty?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The original screen cracked near the corner.",
+      "You can check the progress on our repair page.",
+      "For the rest of the original warranty period."
+    ],
+    "answer": "For the rest of the original warranty period.",
+    "evidence": "How long will the replacement screen stay under warranty?",
+    "paraphrase": "How long will the replacement screen stay under warranty → For the rest of the original warranty period",
+    "en": "Coverage lasts only for the remaining original period.",
+    "zh": "替换屏幕沿用原保修期的剩余时长。"
+  },
+  {
+    "id": "p2-148",
+    "level": 700,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Why don't we schedule the stock count during lunch?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The staff ordered sandwiches for lunch.",
+      "That's when both delivery vans usually unload.",
+      "The stock list is sorted by product code."
+    ],
+    "answer": "That's when both delivery vans usually unload.",
+    "evidence": "Why don't we schedule the stock count during lunch?",
+    "paraphrase": "Why don't we schedule the stock count during lunch → That's when both delivery vans usually unload",
+    "en": "Counting while goods arrive would disrupt or complicate the count.",
+    "zh": "午餐时通常有两车卸货，暗示那时盘点不方便。"
+  },
+  {
+    "id": "p2-149",
+    "level": 700,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "The damaged chair was on loan, wasn't it?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "There's a purchase receipt stapled to its record.",
+      "The record cabinet is beside the cashier.",
+      "The loan desk opens at half past eight."
+    ],
+    "answer": "There's a purchase receipt stapled to its record.",
+    "evidence": "The damaged chair was on loan, wasn't it?",
+    "paraphrase": "The damaged chair was on loan, wasn't it → There's a purchase receipt stapled to its record",
+    "en": "A receipt for purchase points to ownership instead of a loan.",
+    "zh": "档案中有购买收据，表明椅子可能是买来的。"
+  },
+  {
+    "id": "p2-150",
+    "level": 700,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": false,
+    "audio": "Can I use our parking permit in either company van?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Both vans have recently had their annual service.",
+      "The parking office changed its opening hours.",
+      "The permit shows a single registration plate."
+    ],
+    "answer": "The permit shows a single registration plate.",
+    "evidence": "Can I use our parking permit in either company van?",
+    "paraphrase": "Can I use our parking permit in either company van → The permit shows a single registration plate",
+    "en": "A permit tied to one plate limits its use to the registered vehicle.",
+    "zh": "停车证绑定一个车牌，只能用于登记车辆。"
+  },
+  {
+    "id": "p2-151",
+    "level": 700,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Who can confirm the spelling of this village on the map?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The guidebook has a map inside the cover.",
+      "Our local guide grew up there.",
+      "The village trail starts beside a bakery."
+    ],
+    "answer": "Our local guide grew up there.",
+    "evidence": "Who can confirm the spelling of this village on the map?",
+    "paraphrase": "Who can confirm the spelling of this village on the map → Our local guide grew up there",
+    "en": "The local guide's firsthand familiarity makes that person a likely source.",
+    "zh": "当地导游在那里长大，很可能知道地名的正确写法。"
+  },
+  {
+    "id": "p2-152",
+    "level": 700,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Are we paying for each printed page or for the whole machine by the month?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The bill changes with the number on the page counter.",
+      "The machine has a monthly maintenance visit.",
+      "The pages come in boxes of five hundred."
+    ],
+    "answer": "The bill changes with the number on the page counter.",
+    "evidence": "Are we paying for each printed page or for the whole machine by the month?",
+    "paraphrase": "Are we paying for each printed page or for the whole machine by the month → The bill changes with the number on the page counter",
+    "en": "A charge linked to the counter indicates usage-based pricing.",
+    "zh": "费用随页数计数器变化，暗示按印量收费。"
+  },
+  {
+    "id": "p2-153",
+    "level": 700,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The add-on workshop is full, but several attendees still want places.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The workshop leader designed the original course.",
+      "The add-on fee includes a small workbook.",
+      "Let's start a waiting list in case someone cancels."
+    ],
+    "answer": "Let's start a waiting list in case someone cancels.",
+    "evidence": "The add-on workshop is full, but several attendees still want places.",
+    "paraphrase": "The add-on workshop is full, but several attendees still want places → Let's start a waiting list in case someone cancels",
+    "en": "A waiting list offers a way to fill any canceled places.",
+    "zh": "候补名单可在有人取消时接替空位。"
+  },
+  {
+    "id": "p2-154",
+    "level": 700,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "Which date should go on the correction notice?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The original version had two columns.",
+      "The day the corrected version is issued.",
+      "The notice goes on the staff board."
+    ],
+    "answer": "The day the corrected version is issued.",
+    "evidence": "Which date should go on the correction notice?",
+    "paraphrase": "Which date should go on the correction notice → The day the corrected version is issued",
+    "en": "The issue date of the correction is the requested date.",
+    "zh": "更正通知应标更正版的发布日期。"
+  },
+  {
+    "id": "p2-155",
+    "level": 700,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Would you move the spare boxes away from the emergency exit?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "I'll get the trolley before I lift them.",
+      "The boxes came from a local manufacturer.",
+      "Exit surveys are filed at the front desk."
+    ],
+    "answer": "I'll get the trolley before I lift them.",
+    "evidence": "Would you move the spare boxes away from the emergency exit?",
+    "paraphrase": "Would you move the spare boxes away from the emergency exit → I'll get the trolley before I lift them",
+    "en": "Getting a trolley indicates willingness to move the boxes.",
+    "zh": "先去拿推车，意味着答应搬开纸箱。"
+  },
+  {
+    "id": "p2-156",
+    "level": 700,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Didn't the supplier include a packing list with this crate?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The crate is made of recycled wood.",
+      "The supplier has another factory inland.",
+      "Check the clear sleeve on the outside."
+    ],
+    "answer": "Check the clear sleeve on the outside.",
+    "evidence": "Didn't the supplier include a packing list with this crate?",
+    "paraphrase": "Didn't the supplier include a packing list with this crate → Check the clear sleeve on the outside",
+    "en": "The sleeve is a likely location for the requested document.",
+    "zh": "透明袋通常放装箱单，答句给出了查找方向。"
+  },
+  {
+    "id": "p2-157",
+    "level": 700,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Will my afternoon admission let me back in after dinner?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The dinner menu changes every evening.",
+      "Keep the wristband fastened until your final visit.",
+      "The afternoon show lasts about an hour."
+    ],
+    "answer": "Keep the wristband fastened until your final visit.",
+    "evidence": "Will my afternoon admission let me back in after dinner?",
+    "paraphrase": "Will my afternoon admission let me back in after dinner → Keep the wristband fastened until your final visit",
+    "en": "Keeping the wristband provides proof for reentry.",
+    "zh": "提醒保留腕带，暗示晚些时候可以凭它再次进入。"
+  },
+  {
+    "id": "p2-158",
+    "level": 700,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "How can we prove the rug was marked before delivery?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The loading crew photographs every rug as it leaves.",
+      "The rug was delivered by a local van.",
+      "The photograph on the label shows the design."
+    ],
+    "answer": "The loading crew photographs every rug as it leaves.",
+    "evidence": "How can we prove the rug was marked before delivery?",
+    "paraphrase": "How can we prove the rug was marked before delivery → The loading crew photographs every rug as it leaves",
+    "en": "Dispatch photos could establish the rug's earlier condition.",
+    "zh": "装车时的照片可用来核实送达前是否已有污痕。"
+  },
+  {
+    "id": "p2-159",
+    "level": 700,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "We can reuse last year's permission slips, can't we?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Last year's trip included a picnic lunch.",
+      "The slips were printed on recycled paper.",
+      "The route and emergency contact have both changed."
+    ],
+    "answer": "The route and emergency contact have both changed.",
+    "evidence": "We can reuse last year's permission slips, can't we?",
+    "paraphrase": "We can reuse last year's permission slips, can't we → The route and emergency contact have both changed",
+    "en": "Changed details make old permission slips unsuitable.",
+    "zh": "路线和紧急联系人均已不同，旧授权书不适合沿用。"
+  },
+  {
+    "id": "p2-160",
+    "level": 700,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Shall we post the finalists' names on the lobby screen?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The lobby screen has a brighter backlight now.",
+      "The judges haven't notified the finalists themselves yet.",
+      "There are four judges on this year's panel."
+    ],
+    "answer": "The judges haven't notified the finalists themselves yet.",
+    "evidence": "Shall we post the finalists' names on the lobby screen?",
+    "paraphrase": "Shall we post the finalists' names on the lobby screen → The judges haven't notified the finalists themselves yet",
+    "en": "The finalists should be notified before their names go public.",
+    "zh": "本人尚未获通知，暗示现在公开名单太早。"
+  },
+  {
+    "id": "p2-161",
+    "level": 700,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "What should we do with tickets bought before the price increase?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Honor them at the amount already paid.",
+      "The box office has moved upstairs.",
+      "The increase applies to weekend concerts."
+    ],
+    "answer": "Honor them at the amount already paid.",
+    "evidence": "What should we do with tickets bought before the price increase?",
+    "paraphrase": "What should we do with tickets bought before the price increase → Honor them at the amount already paid",
+    "en": "Honor them means accept the existing tickets on their original terms.",
+    "zh": "按已付金额认可旧票，无需补票价差。"
+  },
+  {
+    "id": "p2-162",
+    "level": 700,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Is tomorrow's fire drill for visitors as well or just staff?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The alarm speakers were tested yesterday.",
+      "Visitors sign in on a separate sheet.",
+      "Everyone in the building follows the same announcement."
+    ],
+    "answer": "Everyone in the building follows the same announcement.",
+    "evidence": "Is tomorrow's fire drill for visitors as well or just staff?",
+    "paraphrase": "Is tomorrow's fire drill for visitors as well or just staff → Everyone in the building follows the same announcement",
+    "en": "Everyone in the building includes visitors and employees.",
+    "zh": "楼内所有人都要听从广播，因此包括访客。"
+  },
+  {
+    "id": "p2-163",
+    "level": 700,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The proof shows a gray logo where I expected silver.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "This logo was drawn by an outside designer.",
+      "The metallic finish won't show on a screen.",
+      "The gray paper comes in large sheets."
+    ],
+    "answer": "The metallic finish won't show on a screen.",
+    "evidence": "The proof shows a gray logo where I expected silver.",
+    "paraphrase": "The proof shows a gray logo where I expected silver → The metallic finish won't show on a screen",
+    "en": "A digital proof cannot reproduce the metallic effect.",
+    "zh": "屏幕无法呈现金属光泽，解释了为什么看起来是灰色。"
+  },
+  {
+    "id": "p2-164",
+    "level": 800,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Why did the first vendor score lower despite quoting the lowest price?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Its estimate left out installation.",
+      "The first page shows the vendor's address.",
+      "The quotation is valid until the end of June."
+    ],
+    "answer": "Its estimate left out installation.",
+    "evidence": "Why did the first vendor score lower despite quoting the lowest price?",
+    "paraphrase": "Why did the first vendor score lower despite quoting the lowest price → Its estimate left out installation",
+    "en": "Missing work makes the low headline price less competitive.",
+    "zh": "报价漏计安装，解释了低价供应商为何得分不高。"
+  },
+  {
+    "id": "p2-165",
+    "level": 800,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Can you approve the overtime on behalf of our supervisor?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The supervisor's email signature has changed.",
+      "Overtime totals appear on the second tab.",
+      "My approval limit covers supplies only."
+    ],
+    "answer": "My approval limit covers supplies only.",
+    "evidence": "Can you approve the overtime on behalf of our supervisor?",
+    "paraphrase": "Can you approve the overtime on behalf of our supervisor → My approval limit covers supplies only",
+    "en": "A supplies-only approval limit excludes overtime.",
+    "zh": "权限仅限采购用品，不能代批加班。"
+  },
+  {
+    "id": "p2-166",
+    "level": 800,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "The service credit will appear on this invoice, won't it?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The credit department moved to the second floor.",
+      "We posted that credit after this invoice closed.",
+      "The invoice uses the same customer number."
+    ],
+    "answer": "We posted that credit after this invoice closed.",
+    "evidence": "The service credit will appear on this invoice, won't it?",
+    "paraphrase": "posted after closing → not on this invoice",
+    "en": "The credit was posted after the cutoff for this particular invoice.",
+    "zh": "这笔抵扣在本期关账后才入账，因而不会列在本期。"
+  },
+  {
+    "id": "p2-167",
+    "level": 800,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Should we reject the test result or rerun the sample first?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "We haven't ruled out a fault in the meter.",
+      "The sample came in a sealed plastic bag.",
+      "The meter readings are stored by date."
+    ],
+    "answer": "We haven't ruled out a fault in the meter.",
+    "evidence": "Should we reject the test result or rerun the sample first?",
+    "paraphrase": "Should we reject the test result or rerun the sample first → We haven't ruled out a fault in the meter",
+    "en": "A possible meter error gives a reason to verify before rejecting the sample.",
+    "zh": "仪表问题尚未排除，应先复测再下结论。"
+  },
+  {
+    "id": "p2-168",
+    "level": 800,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "Our total is higher than the distributor's figure for the same month.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The distributor delivers only on weekdays.",
+      "The monthly report uses a landscape layout.",
+      "Are their figures net of returns?"
+    ],
+    "answer": "Are their figures net of returns?",
+    "evidence": "Our total is higher than the distributor's figure for the same month.",
+    "paraphrase": "Our total is higher than the distributor's figure for the same month → Are their figures net of returns",
+    "en": "Deducting returns could explain why one total is lower.",
+    "zh": "若对方已扣退货，可能解释同月总数较低。"
+  },
+  {
+    "id": "p2-169",
+    "level": 800,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Wasn't the sponsor promised a seat at the opening dinner?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The sponsor's name is printed on each program.",
+      "The letter promises admission to the talk only.",
+      "The opening dinner will have assigned seats."
+    ],
+    "answer": "The letter promises admission to the talk only.",
+    "evidence": "Wasn't the sponsor promised a seat at the opening dinner?",
+    "paraphrase": "Wasn't the sponsor promised a seat at the opening dinner → The letter promises admission to the talk only",
+    "en": "The written promise covers the talk rather than dinner.",
+    "zh": "信中的承诺只涉及讲座入场，不含晚餐席位。"
+  },
+  {
+    "id": "p2-170",
+    "level": 800,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "How should we record an order canceled after dispatch?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "As a return once the goods come back.",
+      "The dispatch note carries the order number.",
+      "The driver will call at the next stop."
+    ],
+    "answer": "As a return once the goods come back.",
+    "evidence": "How should we record an order canceled after dispatch?",
+    "paraphrase": "How should we record an order canceled after dispatch → As a return once the goods come back",
+    "en": "The reply states both the classification and the timing.",
+    "zh": "待货物退回后按退货登记，说明了分类和时点。"
+  },
+  {
+    "id": "p2-171",
+    "level": 800,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Can the repair proceed while the insurer considers the claim?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The repair company is near the loading bays.",
+      "The insurer changed its stationery recently.",
+      "Our policy requires written clearance first."
+    ],
+    "answer": "Our policy requires written clearance first.",
+    "evidence": "Can the repair proceed while the insurer considers the claim?",
+    "paraphrase": "Can the repair proceed while the insurer considers the claim → Our policy requires written clearance first",
+    "en": "Required clearance prevents starting while the decision is pending.",
+    "zh": "必须先取得书面放行，因此不能在审批中动工。"
+  },
+  {
+    "id": "p2-172",
+    "level": 800,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Why don't we compare the two branches by total sales alone?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The branch signs use different background colors.",
+      "One branch had twice as many trading days.",
+      "The totals are rounded to the nearest dollar."
+    ],
+    "answer": "One branch had twice as many trading days.",
+    "evidence": "Why don't we compare the two branches by total sales alone?",
+    "paraphrase": "Why don't we compare the two branches by total sales alone → One branch had twice as many trading days",
+    "en": "Unequal operating time makes raw totals a misleading comparison.",
+    "zh": "营业天数相差一倍，只比较总额不公平。"
+  },
+  {
+    "id": "p2-173",
+    "level": 800,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Who decides whether a late bid can still be opened?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Our bidding rules reserve exceptions for the panel chair.",
+      "The bids were delivered in identical envelopes.",
+      "The opening session starts shortly after lunch."
+    ],
+    "answer": "Our bidding rules reserve exceptions for the panel chair.",
+    "evidence": "Who decides whether a late bid can still be opened?",
+    "paraphrase": "Who decides whether a late bid can still be opened → Our bidding rules reserve exceptions for the panel chair",
+    "en": "The exception authority identifies the chair as the decision maker.",
+    "zh": "规则把例外审批权交给主席，因此应由主席决定。"
+  },
+  {
+    "id": "p2-174",
+    "level": 800,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Would a permanent repair be better, or shall we fit a temporary patch?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The patch kit comes with two different brushes.",
+      "September's maintenance list was printed yesterday.",
+      "The original part won't be available until September."
+    ],
+    "answer": "The original part won't be available until September.",
+    "evidence": "Would a permanent repair be better, or shall we fit a temporary patch?",
+    "paraphrase": "Would a permanent repair be better, or shall we fit a temporary patch → The original part won't be available until September",
+    "en": "The wait for the original part favors a temporary measure in the meantime.",
+    "zh": "原装部件要等到九月，暗示可先临时修补。"
+  },
+  {
+    "id": "p2-175",
+    "level": 800,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Could you give the artist our members' private email addresses?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The artist works mainly with paper and fine wire.",
+      "I can pass her invitation on through our own mailing list.",
+      "Our members choose their workshops from the printed guide."
+    ],
+    "answer": "I can pass her invitation on through our own mailing list.",
+    "evidence": "Could you give the artist our members' private email addresses?",
+    "paraphrase": "Could you give the artist our members' private email addresses → I can pass her invitation on through our own mailing list",
+    "en": "Offering to forward the invitation avoids disclosing member addresses.",
+    "zh": "提出由己方代转邀请，委婉拒绝直接提供私人地址。"
+  },
+  {
+    "id": "p2-176",
+    "level": 800,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "When will the occupancy figures represent a full month again?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Next month will be our first full month back.",
+      "The occupancy counter is mounted above the main door.",
+      "A full report is available in the committee room."
+    ],
+    "answer": "Next month will be our first full month back.",
+    "evidence": "When will the occupancy figures represent a full month again?",
+    "paraphrase": "first full month back → next reporting period",
+    "en": "The next reporting period is the first one with a full month of operation.",
+    "zh": "下月是恢复营业后的首个完整月份。"
+  },
+  {
+    "id": "p2-177",
+    "level": 800,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "The replacement part comes with free labor, correct?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The supplier is sending the part tomorrow.",
+      "The technician usually arrives in a blue van.",
+      "The warranty lists parts only."
+    ],
+    "answer": "The warranty lists parts only.",
+    "evidence": "The replacement part comes with free labor, correct?",
+    "paraphrase": "parts only → labor is not included",
+    "en": "Limiting coverage to parts excludes the cost of installing them.",
+    "zh": "保修范围仅限部件，不含安装人工。"
+  },
+  {
+    "id": "p2-178",
+    "level": 800,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The contract names the old trading company, but the shop sign has changed.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The new sign is made from brushed steel.",
+      "Check whether its registered name changed too.",
+      "The contract has a table of contents at the front."
+    ],
+    "answer": "Check whether its registered name changed too.",
+    "evidence": "The contract names the old trading company, but the shop sign has changed.",
+    "paraphrase": "The contract names the old trading company, but the shop sign has changed → Check whether its registered name changed too",
+    "en": "A trading sign can change without a change in legal identity.",
+    "zh": "门店招牌变了不一定等于注册主体变了，应核对正式名称。"
+  },
+  {
+    "id": "p2-179",
+    "level": 800,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Shouldn't the rejected samples be destroyed immediately?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The appeal period hasn't ended.",
+      "The sample colors are numbered in pencil.",
+      "The rejected parcel came by road."
+    ],
+    "answer": "The appeal period hasn't ended.",
+    "evidence": "Shouldn't the rejected samples be destroyed immediately?",
+    "paraphrase": "Shouldn't the rejected samples be destroyed immediately → The appeal period hasn't ended",
+    "en": "A possible appeal gives a reason to retain the samples.",
+    "zh": "申诉期未结束，暗示样品仍需保留作为依据。"
+  },
+  {
+    "id": "p2-180",
+    "level": 800,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Will a photo of each side of the signed form satisfy the archive rules?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The photograph shows a well-lit meeting room.",
+      "The form was signed at the end of the briefing.",
+      "Only if the signatures and reverse-side stamp are legible."
+    ],
+    "answer": "Only if the signatures and reverse-side stamp are legible.",
+    "evidence": "Will a photo of each side of the signed form satisfy the archive rules?",
+    "paraphrase": "legible signatures and stamp → acceptable copies",
+    "en": "Photographs qualify only when the identifying marks on both sides can be read.",
+    "zh": "双面的签名和印章必须清晰可辨，照片才符合条件。"
+  },
+  {
+    "id": "p2-181",
+    "level": 800,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "What counts as a business day under this delivery agreement?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The agreement starts on the first of April.",
+      "Any weekday except a public holiday.",
+      "The delivery van serves three nearby towns."
+    ],
+    "answer": "Any weekday except a public holiday.",
+    "evidence": "What counts as a business day under this delivery agreement?",
+    "paraphrase": "What counts as a business day under this delivery agreement → Any weekday except a public holiday",
+    "en": "The answer defines the contractual term business day.",
+    "zh": "工作日按非公共假日的周一至周五计算。"
+  },
+  {
+    "id": "p2-182",
+    "level": 800,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Let's use the survey's highest rating in our advertisement.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Only two people answered that particular question.",
+      "The advertisement will appear in two magazines.",
+      "The rating scale is printed at the top of the page."
+    ],
+    "answer": "Only two people answered that particular question.",
+    "evidence": "Let's use the survey's highest rating in our advertisement.",
+    "paraphrase": "Let's use the survey's highest rating in our advertisement → Only two people answered that particular question",
+    "en": "Two respondents provide weak support for a broad promotional claim.",
+    "zh": "该题只有两人回答，不宜据此做宽泛宣传。"
+  },
+  {
+    "id": "p2-183",
+    "level": 800,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Are the extra cartons part of today's order or a second shipment?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The cartons were stacked beside the first shipment.",
+      "The purchase office keeps its order forms in binders.",
+      "The labels show a different purchase order number."
+    ],
+    "answer": "The labels show a different purchase order number.",
+    "evidence": "Are the extra cartons part of today's order or a second shipment?",
+    "paraphrase": "Are the extra cartons part of today's order or a second shipment → The labels show a different purchase order number",
+    "en": "A distinct order number points to a separate order or shipment.",
+    "zh": "标签上的采购单号不同，暗示这些箱子属于另一批订单。"
+  },
+  {
+    "id": "p2-184",
+    "level": 800,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Why hasn't the refund appeared on my statement yet?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The refund was for two identical window shades.",
+      "Your statement was issued the day before we processed it.",
+      "Your statement has a new company logo at the top."
+    ],
+    "answer": "Your statement was issued the day before we processed it.",
+    "evidence": "Why hasn't the refund appeared on my statement yet?",
+    "paraphrase": "Why hasn't the refund appeared on my statement yet → Your statement was issued the day before we processed it",
+    "en": "A statement issued earlier cannot show the later refund.",
+    "zh": "对账单先于退款处理，因而这期尚看不到。"
+  },
+  {
+    "id": "p2-185",
+    "level": 800,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Could you reserve the adjoining room without increasing our rental fee?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The two rooms are priced as separate bookings.",
+      "The adjoining room has a door near the kitchen.",
+      "The fee schedule was printed on one sheet."
+    ],
+    "answer": "The two rooms are priced as separate bookings.",
+    "evidence": "Could you reserve the adjoining room without increasing our rental fee?",
+    "paraphrase": "Could you reserve the adjoining room without increasing our rental fee → The two rooms are priced as separate bookings",
+    "en": "Separate pricing implies that adding the room will add a charge.",
+    "zh": "两间分别计价，暗示加订邻室会增加费用。"
+  },
+  {
+    "id": "p2-186",
+    "level": 900,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Which deadline controls when the cover letter and the bid form disagree?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The bid form includes a line for the company's registered address.",
+      "The cover letter uses the revised logo from our new stationery.",
+      "The instructions say amendments take precedence; check the latest one."
+    ],
+    "answer": "The instructions say amendments take precedence; check the latest one.",
+    "evidence": "Which deadline controls when the cover letter and the bid form disagree?",
+    "paraphrase": "Which deadline controls when the cover letter and the bid form disagree → The instructions say amendments take precedence; check the latest one",
+    "en": "The latest amendment is the controlling source if it addresses the deadline.",
+    "zh": "说明规定补充通知优先，因此应查最新补充通知的截止时间。"
+  },
+  {
+    "id": "p2-187",
+    "level": 900,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "We can count the request as resolved once a replacement ships, can't we?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The replacement comes from our distribution center.",
+      "Our measure runs until the customer confirms it works.",
+      "The customer requested a copy of the original estimate."
+    ],
+    "answer": "Our measure runs until the customer confirms it works.",
+    "evidence": "We can count the request as resolved once a replacement ships, can't we?",
+    "paraphrase": "We can count the request as resolved once a replacement ships, can't we → Our measure runs until the customer confirms it works",
+    "en": "Shipment alone falls short of the measure's endpoint.",
+    "zh": "指标以客户确认能用为终点，寄出替代品还不能算解决。"
+  },
+  {
+    "id": "p2-188",
+    "level": 900,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Should the trial report quote the median wait or the shortest one?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "We're trying to describe a typical visit.",
+      "The shortest wait occurred late on Friday.",
+      "The trial report has a chart for each waiting area."
+    ],
+    "answer": "We're trying to describe a typical visit.",
+    "evidence": "Should the trial report quote the median wait or the shortest one?",
+    "paraphrase": "Should the trial report quote the median wait or the shortest one → We're trying to describe a typical visit",
+    "en": "A typical visit is better represented by the median than the minimum.",
+    "zh": "中位数比最短值更能代表典型等候情况。"
+  },
+  {
+    "id": "p2-189",
+    "level": 900,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Didn't the waiver remove the requirement for a second signature?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The signatures are stored with the project plans.",
+      "The waiver request was printed on official paper.",
+      "It removed the fee for obtaining one."
+    ],
+    "answer": "It removed the fee for obtaining one.",
+    "evidence": "Didn't the waiver remove the requirement for a second signature?",
+    "paraphrase": "Didn't the waiver remove the requirement for a second signature → It removed the fee for obtaining one",
+    "en": "Waiving the cost of a signature leaves the signature requirement intact.",
+    "zh": "免除的是办理费用，不是第二个签名本身。"
+  },
+  {
+    "id": "p2-190",
+    "level": 900,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "The two proposals use the same hourly rate, yet one totals much more.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "Their proposals were uploaded before the portal closed.",
+      "Have you compared their assumptions about setup time?",
+      "The rate table is attached to both cover letters."
+    ],
+    "answer": "Have you compared their assumptions about setup time?",
+    "evidence": "The two proposals use the same hourly rate, yet one totals much more.",
+    "paraphrase": "The two proposals use the same hourly rate, yet one totals much more → Have you compared their assumptions about setup time",
+    "en": "Different assumed hours can explain different totals at the same rate.",
+    "zh": "单价相同，预计准备工时不同也会造成总额差异。"
+  },
+  {
+    "id": "p2-191",
+    "level": 900,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "How could our repeat-visit rate rise while the number of returning customers fell?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The total visitor count fell even faster.",
+      "The visitor center opened a new information counter.",
+      "Returning customers receive a different color of ticket."
+    ],
+    "answer": "The total visitor count fell even faster.",
+    "evidence": "How could our repeat-visit rate rise while the number of returning customers fell?",
+    "paraphrase": "How could our repeat-visit rate rise while the number of returning customers fell → The total visitor count fell even faster",
+    "en": "A faster fall in the denominator can raise a rate despite a smaller numerator.",
+    "zh": "总访客数下降更快，因此回访人数下降时回访率仍可能上升。"
+  },
+  {
+    "id": "p2-192",
+    "level": 900,
+    "type": "response",
+    "questionType": "request",
+    "indirect": true,
+    "audio": "Could we release the prototype images now that the review meeting is over?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The prototype uses a smaller housing than the earlier version.",
+      "The meeting room has been booked for another design review.",
+      "The agreement ties release to written approval, not to the meeting."
+    ],
+    "answer": "The agreement ties release to written approval, not to the meeting.",
+    "evidence": "Could we release the prototype images now that the review meeting is over?",
+    "paraphrase": "Could we release the prototype images now that the review meeting is over → The agreement ties release to written approval, not to the meeting",
+    "en": "The end of the meeting does not satisfy the written-approval condition.",
+    "zh": "会议结束不是公开条件，仍须取得书面批准。"
+  },
+  {
+    "id": "p2-193",
+    "level": 900,
+    "type": "response",
+    "questionType": "yes-no",
+    "indirect": true,
+    "audio": "Can we record the client's deposit as income before the work is accepted?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The bank issued the reserve statement on Monday.",
+      "Our accountant still lists it as refundable.",
+      "The booking office has updated its opening hours."
+    ],
+    "answer": "Our accountant still lists it as refundable.",
+    "evidence": "Can we record the client's deposit as income before the work is accepted?",
+    "paraphrase": "still refundable → not yet earned",
+    "en": "The accountant treats this particular deposit as refundable, so it is not being recognized as earned income.",
+    "zh": "这笔订金仍按可退还款项处理，因此目前没有确认为已赚收入。"
+  },
+  {
+    "id": "p2-194",
+    "level": 900,
+    "type": "response",
+    "questionType": "suggestion",
+    "indirect": true,
+    "audio": "Why don't we accept the lower unit cost as proof the new line is more efficient?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "That calculation excludes all the rejected units.",
+      "The new line has its own maintenance noticeboard.",
+      "The units leave the factory in batches of twenty."
+    ],
+    "answer": "That calculation excludes all the rejected units.",
+    "evidence": "Why don't we accept the lower unit cost as proof the new line is more efficient?",
+    "paraphrase": "Why don't we accept the lower unit cost as proof the new line is more efficient → That calculation excludes all the rejected units",
+    "en": "Excluding rejects can distort the apparent unit cost.",
+    "zh": "成本计算排除了废品，可能掩盖实际投入，不能据此断定效率提高。"
+  },
+  {
+    "id": "p2-195",
+    "level": 900,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": false,
+    "audio": "What distinguishes a corrected invoice from a second charge in this system?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The system sends both documents as email attachments.",
+      "A second charge can be printed on the same paper stock.",
+      "A correction refers back to the invoice it replaces."
+    ],
+    "answer": "A correction refers back to the invoice it replaces.",
+    "evidence": "What distinguishes a corrected invoice from a second charge in this system?",
+    "paraphrase": "What distinguishes a corrected invoice from a second charge in this system → A correction refers back to the invoice it replaces",
+    "en": "The reference to the superseded invoice identifies a correction.",
+    "zh": "更正单关联其取代的原发票，这个关联能区分更正与新收费。"
+  },
+  {
+    "id": "p2-196",
+    "level": 900,
+    "type": "response",
+    "questionType": "tag",
+    "indirect": true,
+    "audio": "Extending the pilot should remove the bias in its results, shouldn't it?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The pilot display will be open for another month.",
+      "We'd still be asking only weekday visitors.",
+      "The results are listed in the order they were received."
+    ],
+    "answer": "We'd still be asking only weekday visitors.",
+    "evidence": "Extending the pilot should remove the bias in its results, shouldn't it?",
+    "paraphrase": "Extending the pilot should remove the bias in its results, shouldn't it → We'd still be asking only weekday visitors",
+    "en": "A longer run does not fix the exclusion of other visitors.",
+    "zh": "若仍只询问工作日访客，延长期限不会解决样本偏差。"
+  },
+  {
+    "id": "p2-197",
+    "level": 900,
+    "type": "response",
+    "questionType": "choice",
+    "indirect": true,
+    "audio": "Should we record the shortfall as a loss now or wait for the carrier's count?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The receiving count hasn't been independently verified.",
+      "The carrier's name appears on the back of the delivery slip.",
+      "The loss report form is available in two languages."
+    ],
+    "answer": "The receiving count hasn't been independently verified.",
+    "evidence": "Should we record the shortfall as a loss now or wait for the carrier's count?",
+    "paraphrase": "Should we record the shortfall as a loss now or wait for the carrier's count → The receiving count hasn't been independently verified",
+    "en": "An unverified count favors waiting for confirmation before declaring a loss.",
+    "zh": "收货数量尚未复核，暗示不宜立即认定损失。"
+  },
+  {
+    "id": "p2-198",
+    "level": 900,
+    "type": "response",
+    "questionType": "statement",
+    "indirect": true,
+    "audio": "Our lease gives us priority for the next term, but the owner is advertising the space.",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The advertisement shows the renovated lobby and loading gate.",
+      "The owner arranged for fresh signs after the lease was signed.",
+      "Read the clause about when you have to exercise the option."
+    ],
+    "answer": "Read the clause about when you have to exercise the option.",
+    "evidence": "Our lease gives us priority for the next term, but the owner is advertising the space.",
+    "paraphrase": "Our lease gives us priority for the next term, but the owner is advertising the space → Read the clause about when you have to exercise the option",
+    "en": "Priority may depend on exercising the option within a specified period.",
+    "zh": "优先权可能附带行使期限，应核对约定。"
+  },
+  {
+    "id": "p2-199",
+    "level": 900,
+    "type": "response",
+    "questionType": "negative",
+    "indirect": true,
+    "audio": "Wasn't the lowest bidder guaranteed the contract?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The bidders used the same online submission portal.",
+      "Only bids meeting the safety standard reached the price stage.",
+      "The contract summary lists the duration of the project."
+    ],
+    "answer": "Only bids meeting the safety standard reached the price stage.",
+    "evidence": "Wasn't the lowest bidder guaranteed the contract?",
+    "paraphrase": "Wasn't the lowest bidder guaranteed the contract → Only bids meeting the safety standard reached the price stage",
+    "en": "Meeting the safety condition comes before comparison on price.",
+    "zh": "先通过安全门槛才进入价格评审，最低报价不自动中标。"
+  },
+  {
+    "id": "p2-200",
+    "level": 900,
+    "type": "response",
+    "questionType": "wh",
+    "indirect": true,
+    "audio": "Why does our claimed energy saving shrink when the winter figures are included?",
+    "prompt": "Which response best fits what you heard?",
+    "options": [
+      "The old heating totals were low because last winter was milder.",
+      "The winter figures were submitted in a separate folder.",
+      "The energy display shows readings in whole units."
+    ],
+    "answer": "The old heating totals were low because last winter was milder.",
+    "evidence": "Why does our claimed energy saving shrink when the winter figures are included?",
+    "paraphrase": "milder comparison winter → smaller apparent saving",
+    "en": "The previous winter required less heating, lowering the baseline against which this year's use is compared.",
+    "zh": "上一冬季更暖、采暖基准值偏低，纳入这一季后显示的节省量会缩小。"
   }
 ]

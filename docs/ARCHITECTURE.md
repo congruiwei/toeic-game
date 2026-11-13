@@ -121,6 +121,8 @@
 }
 ```
 
+新增回应题用 `questionType` 区分 wh、yes-no、choice、negative、tag、statement、request、suggestion，用布尔字段 `indirect` 标明是否需要从回应推知答案。
+
 `response` 会把问句和按 A、B、C 编号的回应依次朗读，作答前隐藏选项正文。`evidence` 必须来自 `audio`；回应里的线索可以写进 `paraphrase` 和解析。
 
 ### Part 3/4 材料、子题与听写
