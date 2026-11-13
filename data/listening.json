@@ -2437,7 +2437,8 @@
         "evidence": "We haven't run it under a full load.",
         "paraphrase": "We haven't run it under a full load → More testing is needed",
         "en": "A startup test leaves the pump's performance under load unresolved.",
-        "zh": "仅能启动不能证明满负荷运行正常，问题尚待验证。"
+        "zh": "仅能启动不能证明满负荷运行正常，问题尚待验证。",
+        "type": "intent"
       },
       {
         "id": "p3-g25-q3",
@@ -3318,8 +3319,8 @@
           "Sign"
         ],
         "answer": "Sign",
-        "evidence": "choose the matching service on the screen",
-        "paraphrase": "choose the matching service on the screen → Sign",
+        "evidence": "the buyer wants a signature from the person who receives it",
+        "paraphrase": "the buyer wants a signature from the person who receives it → Sign",
         "en": "The Sign row specifically requires a signature.",
         "zh": "表中 Sign 服务对应签收要求。",
         "type": "graphic"
@@ -3536,8 +3537,8 @@
           "Rose"
         ],
         "answer": "Blue",
-        "evidence": "the pickup zone shown on the lobby map",
-        "paraphrase": "the pickup zone shown on the lobby map → Blue",
+        "evidence": "people who have paid to rent an instrument",
+        "paraphrase": "people who have paid to rent an instrument → Blue",
         "en": "The map places paid instrument rentals in Blue.",
         "zh": "图表把已付款乐器租借列在蓝区。",
         "type": "graphic"
@@ -4007,7 +4008,7 @@
     "turns": [
       {
         "speaker": "A",
-        "text": "Before weighing today's parcels, test the scale with the reference block. A reading just outside tolerance produces an amber light. Follow the action listed for amber on the guide. Do not adjust the dial between the first and second readings. A change to the dial would make the readings impossible to compare. If the second reading also falls outside tolerance, call the shift leader."
+        "text": "Before weighing today's parcels, test the scale with the reference block. A reading just outside tolerance produces an amber light. Follow the action listed for amber on the guide. Do not adjust the dial while checking the scale. Changing the dial would make the result impossible to compare with the laboratory reference. Report persistent faults to the shift leader."
       }
     ],
     "questions": [
@@ -4036,26 +4037,26 @@
           "Continue normal work"
         ],
         "answer": "Run a second check",
-        "evidence": "Follow the action listed for amber",
-        "paraphrase": "Follow the action listed for amber → Run a second check",
+        "evidence": "A reading just outside tolerance produces an amber light.",
+        "paraphrase": "just outside tolerance → amber → run a second check",
         "en": "The guide pairs Amber with a second check.",
         "zh": "表中琥珀色指示灯对应再次检测。",
         "type": "graphic"
       },
       {
         "id": "p4-g22-q3",
-        "prompt": "Why keep the dial unchanged between readings?",
+        "prompt": "Why must staff leave the dial unchanged?",
         "options": [
-          "To make the two tests comparable",
+          "To preserve the reference comparison",
           "To prevent a power interruption",
           "To reset the amber light",
           "To avoid weighing the block twice"
         ],
-        "answer": "To make the two tests comparable",
-        "evidence": "make the readings impossible to compare",
-        "paraphrase": "make the readings impossible to compare → To make the two tests comparable",
-        "en": "Adjusting the dial would change the measurement conditions.",
-        "zh": "两次之间调刻度会改变测量条件，读数无法比较。"
+        "answer": "To preserve the reference comparison",
+        "evidence": "impossible to compare with the laboratory reference",
+        "paraphrase": "leave the setting unchanged → keep the reference comparison valid",
+        "en": "A dial adjustment would invalidate the comparison with the laboratory reference.",
+        "zh": "调节旋钮会使结果无法与实验室基准直接比较。"
       }
     ],
     "graphic": {
@@ -4411,7 +4412,8 @@
         "evidence": "until we look at where complaints were recorded",
         "paraphrase": "until we look at where complaints were recorded → The apparent improvement needs checking",
         "en": "A change in recording location could explain the lower desk total.",
-        "zh": "登记地点发生变化，表面上的下降还需核实。"
+        "zh": "登记地点发生变化，表面上的下降还需核实。",
+        "type": "intent"
       },
       {
         "id": "p4-g27-q3",
