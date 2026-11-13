@@ -29,7 +29,7 @@ function measure(type, q) {
       if (length === hi) report.longestOnly++;
     }
   }
-  q.options.forEach((_, i) => {
+  if (q.kind !== 'insertion') q.options.forEach((_, i) => {
     report.positions[i] = (report.positions[i] || 0) + Number(i === key);
     report.expected[i] = (report.expected[i] || 0) + 1 / q.options.length;
   });
@@ -301,6 +301,8 @@ function listening(groups) {
 
 function reading(groups) {
   let part6 = 0, single = 0, double = 0, triple = 0;
+  const kinds={vocabulary:0,negative:0,insertion:0};
+  let longerSingles=0;
   const originalShortPassages=new Set(['read-badge','read-samples','read-bikes','read-labels','read-credit']);
   scan(groups, 'reading', 12, (group, at) => {
     id(group, at);
@@ -329,12 +331,31 @@ function reading(groups) {
       for (const marker of passageMarkers) expect(questionMarkers.has(marker), at, `Part 6 原文空位 ${marker} 没有对应问题`);
     } else if (group.part === 7) {
       const n=group.documents?.length, m=group.questions?.length;
-      if(n===1){single++;expect(m>=2 && m<=4,at,'单篇需 2–4 题');}
+      if(n===1){
+        single++; if(m===3 || m===4)longerSingles++;
+        expect(m>=2 && m<=4,at,'单篇需 2–4 题');
+      }
       else {expect(n===2||n===3,at,'Part 7 每组限 1–3 篇');expect(m===5,at,'多篇组需 5 题');}
       if(n===2)double++;if(n===3)triple++;
+      for (const q of group.questions || []) {
+        if(!q.kind)continue;
+        expect(Object.hasOwn(kinds,q.kind),q.id,'未知阅读题型');
+        if(Object.hasOwn(kinds,q.kind))kinds[q.kind]++;
+        if(q.kind==='vocabulary')expect(/closest in meaning to/i.test(q.prompt),q.id,'词义题应定位并询问原文中的表达');
+        if(q.kind==='negative')expect(/\bNOT\b/.test(q.prompt),q.id,'否定题应突出 NOT');
+        if(q.kind==='insertion'){
+          const marks=['[1]','[2]','[3]','[4]'];
+          expect(JSON.stringify(q.options)===JSON.stringify(marks),q.id,'插句选项必须固定为 [1]、[2]、[3]、[4]');
+          expect(group.documents.some(doc=>marks.every(mark=>doc.text.split(mark).length===2)&&
+            marks.every((mark,i)=>i===0||doc.text.indexOf(marks[i-1])<doc.text.indexOf(mark))),q.id,'同一文稿须按顺序各有一个插句位置');
+        }
+      }
     }
   });
   expect(part6 >=15 && single+double+triple>=45 && single>0 && double>=8 && triple>=6, 'reading', 'Part 6 需15组、Part 7 需45组，含至少8双篇及6三篇');
+  expect(longerSingles>=Math.ceil(single/2),'reading','至少半数单篇需要 3–4 题');
+  expect(kinds.vocabulary>=20 && kinds.negative>=15 && kinds.insertion>=12,'reading','Part 7 词义、NOT、插句题数量不足');
+  console.log('Part 7 专项：词义 '+kinds.vocabulary+'，NOT '+kinds.negative+'，插句 '+kinds.insertion+'；3–4 题单篇 '+longerSingles+'/'+single+'。插句排除于位置统计。');
   counts['Part 6/7 组'] = Array.isArray(groups) ? groups.length : 0;
 }
 

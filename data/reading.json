@@ -266,6 +266,38 @@
         "paraphrase": "received earlier → given when the order was placed",
         "en": "Kai was given a yellow ticket when placing the order and must bring it for pickup.",
         "zh": "下单时拿到的黄票需要在取件时带来，received earlier 指当时已领到。"
+      },
+      {
+        "id": "read-print-03",
+        "kind": "vocabulary",
+        "prompt": "In the email sentence about the side counter, “collect” is closest in meaning to which option?",
+        "options": [
+          "Pick up",
+          "Put away",
+          "Send out",
+          "Pay for"
+        ],
+        "answer": "Pick up",
+        "evidence": "collect it at the side counter",
+        "paraphrase": "collect → pick up",
+        "en": "Kai's finished poster is waiting at the shop. Collect here means go and pick it up.",
+        "zh": "海报已经完成，在柜台等候取走，所以 collect 是“领取”。"
+      },
+      {
+        "id": "read-print-04",
+        "kind": "negative",
+        "prompt": "Which detail about the poster order is NOT stated?",
+        "options": [
+          "The pickup date",
+          "The poster color",
+          "The pickup counter",
+          "The amount paid"
+        ],
+        "answer": "The amount paid",
+        "evidence": "Your blue poster is ready.",
+        "paraphrase": "pickup information → color, time and counter given",
+        "en": "The email calls the poster blue, names the side counter and offers pickup today. It gives no price.",
+        "zh": "邮件写了蓝色海报、侧柜台和今天可取，但未说明支付金额。"
       }
     ]
   },
@@ -311,6 +343,38 @@
         "paraphrase": "at no cost → free of charge",
         "en": "The alternative small lockers can be used without payment.",
         "zh": "检修期间，售票台旁的小储物柜可以免费使用。"
+      },
+      {
+        "id": "read-locker-03",
+        "kind": "vocabulary",
+        "prompt": "In the last sentence of the notice, “expects” is closest in meaning to which option?",
+        "options": [
+          "Anticipates",
+          "Arranges",
+          "Requires",
+          "Promises"
+        ],
+        "answer": "Anticipates",
+        "evidence": "expects to finish by noon",
+        "paraphrase": "expects → anticipates",
+        "en": "The technician gives an anticipated completion time. An expectation is a forecast, rather than a guarantee.",
+        "zh": "技术人员给出的是预计的完工时间，expects 对应 anticipates。"
+      },
+      {
+        "id": "read-locker-04",
+        "kind": "negative",
+        "prompt": "Which detail is NOT included in the locker notice?",
+        "options": [
+          "The name of the technician",
+          "When work should finish",
+          "Where other lockers are",
+          "Which lockers will close"
+        ],
+        "answer": "The name of the technician",
+        "evidence": "The technician expects to finish by noon on Thursday.",
+        "paraphrase": "technician's expected finish → time given, name omitted",
+        "en": "The notice names the lockers, alternative location and expected finish, but does not identify the technician by name.",
+        "zh": "告示给出柜号、替代柜地点与预计完成时间，未给技术人员姓名。"
       }
     ]
   },
@@ -356,6 +420,22 @@
         "paraphrase": "stands on the desk → freestanding",
         "en": "For a glass surface, the shop suggests a freestanding base in place of the clamp.",
         "zh": "玻璃桌面建议改用独立底座，freestanding 指无需夹在桌边也能站稳。"
+      },
+      {
+        "id": "read-lamp-03",
+        "kind": "vocabulary",
+        "prompt": "In the paragraph about the deposit, “refundable” is closest in meaning to which option?",
+        "options": [
+          "Deducted from the final price",
+          "Required in advance",
+          "Charged each evening",
+          "Able to be paid back"
+        ],
+        "answer": "Able to be paid back",
+        "evidence": "We return the full amount when you bring the lamp back on time",
+        "paraphrase": "refundable → able to be paid back",
+        "en": "An on-time return gets the deposit back. Refundable describes money that can be paid back.",
+        "zh": "按时归还能拿回押金，refundable 表示“可退还的”。"
       }
     ]
   },
@@ -401,6 +481,22 @@
         "paraphrase": "replenish the supply → order more rolls",
         "en": "Hana says she will order additional rolls before lunch.",
         "zh": "Hana 要在午饭前订更多标签卷，replenish 表示“补充”。"
+      },
+      {
+        "id": "read-printer-03",
+        "kind": "negative",
+        "prompt": "Which detail about the label supplies is NOT given in the chat?",
+        "options": [
+          "When the order will be placed",
+          "Where the spare roll was stored",
+          "The price of a replacement roll",
+          "Who will order additional rolls"
+        ],
+        "answer": "The price of a replacement roll",
+        "evidence": "I'll order more rolls before lunch.",
+        "paraphrase": "more rolls before lunch → buyer and timing given",
+        "en": "Hana names the drawer and says she will place an order before lunch. Neither person mentions a price.",
+        "zh": "Hana 提到存放位置、由谁订购和订购时间，没有提标签卷价格。"
       }
     ]
   },
@@ -1553,7 +1649,7 @@
       {
         "type": "告示",
         "title": "Coat counter",
-        "text": "Show us your coat ticket when you return. Your ticket has the same number as the hook holding your coat. If you lose it, wait until the counter closes and describe your coat to the attendant. The attendant will then check the remaining coats. The counter closes 20 minutes after the concert ends."
+        "text": "Show us your coat ticket when you return. [1] Your ticket has the same number as the hook holding your coat. [2] If you lose it, wait until the counter closes and describe your coat to the attendant. [3] The attendant will then check the remaining coats. [4] The counter closes 20 minutes after the concert ends."
       }
     ],
     "questions": [
@@ -1586,6 +1682,38 @@
         "paraphrase": "claim after closing → wait until the counter closes",
         "en": "Anyone who has lost a ticket must wait until closing and describe the coat.",
         "zh": "遗失票据的人要等柜台关闭，再描述外套认领。"
+      },
+      {
+        "id": "read-coat-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence about the attendant checking coats, “remaining” is closest in meaning to which option?",
+        "options": [
+          "Wrongly numbered",
+          "Just delivered",
+          "Still there",
+          "Already claimed"
+        ],
+        "answer": "Still there",
+        "evidence": "check the remaining coats",
+        "paraphrase": "remaining → still there",
+        "en": "After the other coats have been claimed, the attendant looks among the ones still there.",
+        "zh": "其他客人取走外套后，工作人员检查还留在柜台的外套。"
+      },
+      {
+        "id": "read-coat-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “Mention any marks on the coat when you give that description.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[3]",
+        "evidence": "describe your coat to the attendant.",
+        "paraphrase": "that description → the description given after losing a ticket",
+        "en": "The instruction to describe a coat first appears just before [3]. The next sentence gives the attendant’s following action.",
+        "zh": "改用外观认领的步骤在 [3] 前刚出现，that description 指代清楚；接下来才轮到工作人员查找。"
       }
     ]
   },
@@ -1631,6 +1759,22 @@
         "paraphrase": "I → the writer, Mila",
         "en": "Mila signs the message and volunteers to wash the items herself.",
         "zh": "署名的 Mila 说午餐后会亲自清洗。"
+      },
+      {
+        "id": "read-water-03",
+        "kind": "negative",
+        "prompt": "Which action is NOT requested of the morning crew?",
+        "options": [
+          "Take the jug to the sink",
+          "Refill the empty jug",
+          "Use the kitchen tap",
+          "Wash the used glasses"
+        ],
+        "answer": "Wash the used glasses",
+        "evidence": "I will wash them after lunch.",
+        "paraphrase": "writer will wash → crew only returns the items",
+        "en": "The crew must fill the jug at the tap and return it and the glasses to the sink. Mila reserves washing for herself.",
+        "zh": "早班员工负责从水龙头装水及将用过的物品送至水池，清洗是 Mila 的工作。"
       }
     ]
   },
@@ -1676,6 +1820,38 @@
         "paraphrase": "printed postcards → cards showing the photographs",
         "en": "The shop sells postcards featuring some works on the walls.",
         "zh": "商店出售部分墙上摄影作品的明信片。"
+      },
+      {
+        "id": "read-photos-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence restricting photography of wall displays, “works” is closest in meaning to which option?",
+        "options": [
+          "Pieces of art",
+          "Tasks to do",
+          "Mechanical parts",
+          "Places of work"
+        ],
+        "answer": "Pieces of art",
+        "evidence": "please do not photograph those works",
+        "paraphrase": "works → pieces of art",
+        "en": "Those works refers back to the artists' photographs on the walls.",
+        "zh": "those works 指前文艺术家创作的墙上摄影作品。"
+      },
+      {
+        "id": "read-photos-04",
+        "kind": "negative",
+        "prompt": "Which detail about photographs is NOT stated?",
+        "options": [
+          "Who owns the wall pictures",
+          "Where to buy the postcards",
+          "How to set the camera flash",
+          "What each postcard costs"
+        ],
+        "answer": "What each postcard costs",
+        "evidence": "you can buy postcards showing several of the wall photographs",
+        "paraphrase": "postcards offered → price not quoted",
+        "en": "The notice names the owners, shop location and flash rule. It gives no postcard price.",
+        "zh": "告示说明了墙上照片的主人、商店地点和闪光灯规定，没写明信片售价。"
       }
     ]
   },
@@ -1721,6 +1897,22 @@
         "paraphrase": "bring it up → take the key to Jules",
         "en": "Ana tells Jules to wait because she will bring the key upstairs herself.",
         "zh": "Ana 自己会上楼送钥匙，因此让 Jules 留在原处。"
+      },
+      {
+        "id": "read-keys-03",
+        "kind": "negative",
+        "prompt": "Which detail is NOT mentioned in the conversation?",
+        "options": [
+          "The cupboard's color",
+          "What the driver needs",
+          "Where Ana is waiting",
+          "Who has the key"
+        ],
+        "answer": "The cupboard's color",
+        "evidence": "Who has the key to the little supply cupboard?",
+        "paraphrase": "little → description of size only",
+        "en": "The chat identifies Ana, her location and the driver's need for a pen. It gives no color for the cupboard.",
+        "zh": "对话交代了持钥匙人、Ana 的位置和司机所需物品，未说明柜子颜色。"
       }
     ]
   },
@@ -1733,7 +1925,7 @@
       {
         "type": "广告",
         "title": "A smaller bag for shorter trips",
-        "text": "Our Weekender bag holds a change of clothes and a pair of shoes. Each bag comes with a removable shoulder strap. Choose black or blue at either branch. Green bags are available only from the website. Orders placed online by noon qualify for same-day dispatch; delivery time depends on your address."
+        "text": "Our Weekender bag holds a change of clothes and a pair of shoes. [1] Each bag comes with a removable shoulder strap. [2] Choose black or blue at either branch. [3] Green bags are available only from the website. [4] Orders placed online by noon qualify for same-day dispatch; delivery time depends on your address."
       }
     ],
     "questions": [
@@ -1766,6 +1958,38 @@
         "paraphrase": "included → comes with",
         "en": "A strap accompanies the bag and can be removed.",
         "zh": "每个包都配有可拆卸肩带。"
+      },
+      {
+        "id": "read-bags-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence about orders placed by noon, “dispatch” is closest in meaning to which option?",
+        "options": [
+          "Receiving payment",
+          "Sending out",
+          "Taking measurements",
+          "Checking the address"
+        ],
+        "answer": "Sending out",
+        "evidence": "qualify for same-day dispatch",
+        "paraphrase": "dispatch → sending out",
+        "en": "The next clause distinguishes dispatch from delivery time. Dispatch is the act of sending out the goods.",
+        "zh": "后文说到货时间另取决于地址，可见 dispatch 指发货。"
+      },
+      {
+        "id": "read-bags-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “You can detach it if you prefer to use the short handles.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[2]",
+        "evidence": "a removable shoulder strap.",
+        "paraphrase": "detach it → remove the shoulder strap",
+        "en": "The pronoun it refers to the strap just introduced. After [2], the advertisement changes to colors and ordering.",
+        "zh": "[2] 前刚提到可拆肩带，it 和 detach 与之衔接，紧接着原文转去谈颜色。"
       }
     ]
   },
@@ -1778,7 +2002,7 @@
       {
         "type": "邮件",
         "title": "Subject: Vase collection",
-        "text": "Dear Ms. Park,\n\nThe flowers will reach your office on Friday morning. The glass vase is ours. When the flowers are no longer on display, call the number on the tag. We will send someone to pick up the empty vase. The collection fee is already included in your order.\n\nLena, Reed Flowers"
+        "text": "Dear Ms. Park,\n\nThe flowers will reach your office on Friday morning. [1] The glass vase is ours. [2] When the flowers are no longer on display, call the number on the tag. [3] We will send someone to pick up the empty vase. [4] The collection fee is already included in your order.\n\nLena, Reed Flowers"
       }
     ],
     "questions": [
@@ -1811,6 +2035,38 @@
         "paraphrase": "after the display ends → when flowers are no longer on display",
         "en": "Calling the tagged number arranges the collection.",
         "zh": "花不再展出后，应打标签上的电话安排取回。"
+      },
+      {
+        "id": "read-flowers-03",
+        "kind": "vocabulary",
+        "prompt": "In the line about the collection fee, “included” is closest in meaning to which option?",
+        "options": [
+          "Paid on arrival",
+          "Already covered",
+          "Billed separately",
+          "Still negotiable"
+        ],
+        "answer": "Already covered",
+        "evidence": "already included in your order",
+        "paraphrase": "included → already covered",
+        "en": "The existing order covers the cost of collecting the vase, so that cost is already included.",
+        "zh": "现有订单已包含取回花瓶的费用。"
+      },
+      {
+        "id": "read-flowers-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “For that reason we need the container back when the display is over.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[2]",
+        "evidence": "The glass vase is ours.",
+        "paraphrase": "that reason → the shop owns the vase",
+        "en": "The ownership statement explains why the shop needs the vase back. The following instructions then describe the return.",
+        "zh": "[2] 前说花瓶属于花店，因此要收回；下一句开始说明如何联系归还。"
       }
     ]
   },
@@ -1823,7 +2079,7 @@
       {
         "type": "申请回复",
         "title": "Equipment desk reply",
-        "text": "Your request for a small mixer has been accepted. Collect it from the equipment desk on Tuesday. A metal bowl comes with the mixer. Bring the mixer and bowl back together on Friday before four. Wipe the bowl dry before you pack it. There is no charge for this loan."
+        "text": "Your request for a small mixer has been accepted. [1] Collect it from the equipment desk on Tuesday. [2] A metal bowl comes with the mixer. [3] Bring the mixer and bowl back together on Friday before four. [4] Wipe the bowl dry before you pack it. There is no charge for this loan."
       }
     ],
     "questions": [
@@ -1855,7 +2111,24 @@
         "evidence": "Your request for a small mixer has been accepted.",
         "paraphrase": "small → size, not color",
         "en": "The reply gives the days, deadline and fee and identifies the size, but never specifies a color.",
-        "zh": "正文给出领取日、截止时间与费用，只提到尺寸，未说明颜色。"
+        "zh": "正文给出领取日、截止时间与费用，只提到尺寸，未说明颜色。",
+        "kind": "negative"
+      },
+      {
+        "id": "read-mixer-03",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “There is no need to request that accessory separately.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[3]",
+        "evidence": "A metal bowl comes with the mixer.",
+        "paraphrase": "that accessory → the bowl supplied with the mixer",
+        "en": "The bowl has just been introduced at [3]. The next sentence switches from what is supplied to when both pieces must be returned.",
+        "zh": "that accessory 指 [3] 前首次出现且已随机器附带的金属碗。下文才转入归还两件物品。"
       }
     ]
   },
@@ -1901,6 +2174,22 @@
         "paraphrase": "there → the dispatch desk",
         "en": "Morgan wants time to check the list before the morning meeting.",
         "zh": "Morgan 想在早会前检查清单，所以要求今晚留下。"
+      },
+      {
+        "id": "read-minute-03",
+        "kind": "negative",
+        "prompt": "Which aspect of the meeting is NOT specified?",
+        "options": [
+          "Where the team will meet",
+          "When to leave the parcel list",
+          "How many people will attend",
+          "What time the meeting ends"
+        ],
+        "answer": "How many people will attend",
+        "evidence": "We will finish by 8:50",
+        "paraphrase": "time and location specified → head count omitted",
+        "en": "The desk, the 8:50 finish and the evening list deadline are all stated. No head count is given.",
+        "zh": "地点、8:50 结束和今晚交清单均有交代，未写参会人数。"
       }
     ]
   },
@@ -1930,7 +2219,8 @@
         "evidence": "locate the sale",
         "paraphrase": "locate a sale → find its record",
         "en": "Staff use the date and amount to find a particular sale in their records.",
-        "zh": "工作人员用日期和金额查到相应的销售记录，locate 在此为“找到”。"
+        "zh": "工作人员用日期和金额查到相应的销售记录，locate 在此为“找到”。",
+        "kind": "vocabulary"
       },
       {
         "id": "read-receipt-02",
@@ -1946,6 +2236,22 @@
         "paraphrase": "in-store → made in our stores",
         "en": "The final sentence limits the service to store purchases.",
         "zh": "末句说明服务仅适用于门店购买。"
+      },
+      {
+        "id": "read-receipt-03",
+        "kind": "vocabulary",
+        "prompt": "In the first sentence of the second paragraph, “transaction” is closest in meaning to which option?",
+        "options": [
+          "Purchase",
+          "Application",
+          "Shipment",
+          "Quotation"
+        ],
+        "answer": "Purchase",
+        "evidence": "bought several items in one transaction",
+        "paraphrase": "transaction → purchase",
+        "en": "Several items form one purchase when paid for together; the page requests their combined total.",
+        "zh": "多件商品合在一次付款中，transaction 在这里指一次购买交易。"
       }
     ]
   },
@@ -1958,7 +2264,7 @@
       {
         "type": "公告",
         "title": "Uniform fitting on Wednesday",
-        "text": "A tailor will visit the staff room from noon until three. You can try on sample jackets there and record the size you want. Please wear the shirt you normally wear at work so the tailor can check the fit. The samples must stay in the staff room; the jackets you order will arrive next month."
+        "text": "A tailor will visit the staff room from noon until three. [1] You can try on sample jackets there and record the size you want. [2] Please wear the shirt you normally wear at work so the tailor can check the fit. [3] The samples must stay in the staff room; the jackets you order will arrive next month. [4]"
       }
     ],
     "questions": [
@@ -1991,6 +2297,38 @@
         "paraphrase": "stay → remain on site",
         "en": "The jackets on display are samples; actual orders arrive next month.",
         "zh": "试穿样衣留在员工休息室，订购的外套下月到。"
+      },
+      {
+        "id": "read-uniforms-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence about wearing the usual work shirt, “fit” is closest in meaning to which option?",
+        "options": [
+          "Which shirt color matches",
+          "When a sample can be kept",
+          "How well the jacket sits",
+          "How much the order costs"
+        ],
+        "answer": "How well the jacket sits",
+        "evidence": "so the tailor can check the fit",
+        "paraphrase": "fit → how well the jacket sits",
+        "en": "Wearing normal work clothes lets the tailor judge how closely the jacket suits the wearer's shape.",
+        "zh": "穿日常衬衫试衣，才能看出外套穿在身上是否合身。"
+      },
+      {
+        "id": "read-uniforms-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “The tailor will bring several jackets for staff to try during that visit.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[1]",
+        "evidence": "A tailor will visit the staff room from noon until three.",
+        "paraphrase": "that visit → the tailor’s scheduled visit",
+        "en": "The added sentence introduces the jackets the tailor brings. The next sentence explains trying on those samples and recording a size.",
+        "zh": "先确定裁缝来访时间，在 [1] 说明会带夹克，再说明如何试穿登记，介绍顺序完整。"
       }
     ]
   },
@@ -2036,6 +2374,22 @@
         "paraphrase": "fetch → go and get",
         "en": "Nell's last message states her next action.",
         "zh": "末句说明她接下来会为 15 号导览机再取一副耳机。"
+      },
+      {
+        "id": "read-sound-check-03",
+        "kind": "vocabulary",
+        "prompt": "In Nell's final message, “fetch” is closest in meaning to which option?",
+        "options": [
+          "Go and get",
+          "Check for faults",
+          "Hand back",
+          "Put away"
+        ],
+        "answer": "Go and get",
+        "evidence": "I will fetch another pair",
+        "paraphrase": "fetch → go and get",
+        "en": "Nell needs to retrieve a different pair for guide 15 after moving its working headphones to guide 14.",
+        "zh": "正常的耳机给了 14 号机，Nell 要再去取一副给 15 号机。"
       }
     ]
   },
@@ -2048,7 +2402,7 @@
       {
         "type": "清单",
         "title": "Move-day box labels",
-        "text": "Write a room number on the top of every box. Files that staff will need on the first morning should go into boxes with a yellow strip. We will open those first. Pack framed pictures separately and write GLASS on those boxes. A box may carry both a room number and a handling instruction."
+        "text": "Write a room number on the top of every box. [1] Files that staff will need on the first morning should go into boxes with a yellow strip. [2] We will open those first. [3] Pack framed pictures separately and write GLASS on those boxes. [4] A box may carry both a room number and a handling instruction."
       }
     ],
     "questions": [
@@ -2081,6 +2435,38 @@
         "paraphrase": "every box → all packed boxes",
         "en": "Room numbers go on all boxes, regardless of content.",
         "zh": "不论箱内装什么，所有箱顶都须标房间号。"
+      },
+      {
+        "id": "read-bins-03",
+        "kind": "vocabulary",
+        "prompt": "In the final sentence about handling instructions, “carry” is closest in meaning to which option?",
+        "options": [
+          "Transport",
+          "Lift",
+          "Deliver",
+          "Display"
+        ],
+        "answer": "Display",
+        "evidence": "carry both a room number and a handling instruction",
+        "paraphrase": "carry → display",
+        "en": "The sentence describes markings that appear on a box. Carry means display information on its surface.",
+        "zh": "此处指箱面上标有房间号和搬运指令，carry 意为“载有、显示”。"
+      },
+      {
+        "id": "read-bins-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “Keep that warning visible even after you add the destination number.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[4]",
+        "evidence": "write GLASS on those boxes.",
+        "paraphrase": "that warning → the word GLASS on picture boxes",
+        "en": "Only the GLASS marking is a warning. The final sentence then explains that a box can show a destination and an instruction together.",
+        "zh": "that warning 指 [4] 前刚写好的 GLASS。随后一句进一步说明房间号与操作警示可以并列。"
       }
     ]
   },
@@ -2126,6 +2512,22 @@
         "paraphrase": "provide → include at no extra cost",
         "en": "The card adds a free small juice to a hot breakfast purchase.",
         "zh": "优惠券附送的是小杯果汁。"
+      },
+      {
+        "id": "read-coupon-03",
+        "kind": "negative",
+        "prompt": "Which purchase would NOT qualify for the offer?",
+        "options": [
+          "A hot counter breakfast at eight on Tuesday",
+          "A hot breakfast ordered at a table",
+          "A hot counter breakfast at nine on Friday",
+          "A Monday hot counter breakfast at ten"
+        ],
+        "answer": "A hot breakfast ordered at a table",
+        "evidence": "It cannot be used with table service.",
+        "paraphrase": "ordered at a table → excluded service type",
+        "en": "The offer requires counter ordering on a weekday by 10:30. Table service is excluded even for hot breakfasts.",
+        "zh": "工作日 10:30 前在柜台点热早餐可用，桌边点餐不符合。"
       }
     ]
   },
@@ -2146,16 +2548,17 @@
         "id": "read-bench-01",
         "prompt": "In which of the positions marked [1], [2], [3], and [4] does the following sentence best belong? “Moving the bench will leave the cupboard clear for that afternoon delivery.”",
         "options": [
-          "At [3]",
-          "At [1]",
-          "At [4]",
-          "At [2]"
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
         ],
-        "answer": "At [3]",
+        "answer": "[3]",
         "evidence": "a second delivery each afternoon",
         "paraphrase": "open the cupboard for a second delivery → leave the cupboard clear for that delivery",
         "en": "Only at [3] has the afternoon delivery just been introduced. The following sentence adds a second advantage of moving the bench.",
-        "zh": "只有 [3] 紧接刚刚提到的下午送货，that afternoon delivery 有明确指代；下一句再用 also 补充搬移长椅的另一项好处。"
+        "zh": "只有 [3] 紧接刚刚提到的下午送货，that afternoon delivery 有明确指代；下一句再用 also 补充搬移长椅的另一项好处。",
+        "kind": "insertion"
       },
       {
         "id": "read-bench-02",
@@ -2171,6 +2574,22 @@
         "paraphrase": "remain in its current position → stay where it is",
         "en": "The final sentence explicitly leaves the stand in place.",
         "zh": "末句明确指出报刊架不会移动。"
+      },
+      {
+        "id": "read-bench-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence about the left end of the bench, “blocks” is closest in meaning to which option?",
+        "options": [
+          "Divides",
+          "Obstructs",
+          "Fastens",
+          "Labels"
+        ],
+        "answer": "Obstructs",
+        "evidence": "the bench blocks a cupboard",
+        "paraphrase": "blocks → obstructs",
+        "en": "A seated reader prevents staff from reaching the cupboard. Blocks means obstructs access.",
+        "zh": "有人坐在长椅左端会妨碍打开柜子，blocks 意为阻碍通行或取用。"
       }
     ]
   },
@@ -2206,16 +2625,33 @@
         "id": "read-stair-02",
         "prompt": "Where does “With those two changes, the sign would name the route and point toward it.” fit best?",
         "options": [
-          "At [3]",
-          "At [2]",
-          "At [4]",
-          "At [1]"
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
         ],
-        "answer": "At [3]",
+        "answer": "[3]",
         "evidence": "adding the word “stairs” and turning the arrow to the right",
         "paraphrase": "those two changes → adding a word and rotating the arrow",
         "en": "The proposed changes are introduced together immediately before [3]. The word then in the next sentence links them to a benefit for visitors.",
-        "zh": "[3] 前刚说加 stairs 和右转箭头两项修改，those two changes 紧接它们，下一句说明访客会怎样受益。"
+        "zh": "[3] 前刚说加 stairs 和右转箭头两项修改，those two changes 紧接它们，下一句说明访客会怎样受益。",
+        "kind": "insertion"
+      },
+      {
+        "id": "read-stair-03",
+        "kind": "vocabulary",
+        "prompt": "In the opening sentence of Davis's message, “spot” is closest in meaning to which option?",
+        "options": [
+          "Position",
+          "Photograph",
+          "Notice",
+          "Mark"
+        ],
+        "answer": "Notice",
+        "evidence": "easy to spot from the street",
+        "paraphrase": "spot → notice",
+        "en": "Davis describes how readily an arriving visitor sees the entrance sign. Spot means notice in this use.",
+        "zh": "Davis 在描述来客从街上很容易看到标记，spot 在此表示注意到。"
       }
     ]
   },
@@ -2228,7 +2664,7 @@
       {
         "type": "帮助页面",
         "title": "Viewing the training calendar",
-        "text": "The calendar initially lists every session, including those that are full. Select “Open seats” to show only sessions that can still accept bookings. A gray date indicates a session that has ended, not a full session. To read the notes from an earlier workshop, turn off the filter and select its gray date. Notes are available even to staff who did not attend."
+        "text": "The calendar initially lists every session, including those that are full. [1] Select “Open seats” to show only sessions that can still accept bookings. [2] A gray date indicates a session that has ended, not a full session. [3] To read the notes from an earlier workshop, turn off the filter and select its gray date. [4] Notes are available even to staff who did not attend."
       }
     ],
     "questions": [
@@ -2260,7 +2696,24 @@
         "evidence": "Notes are available even to staff who did not attend.",
         "paraphrase": "access described → retention period unspecified",
         "en": "The notice says who may read notes and how to find them, but gives no retention period.",
-        "zh": "说明给出了查找方法与访问权限，未交代笔记保留多久。"
+        "zh": "说明给出了查找方法与访问权限，未交代笔记保留多久。",
+        "kind": "negative"
+      },
+      {
+        "id": "read-calendar-03",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “With that setting enabled, past workshops will disappear from view as well.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[2]",
+        "evidence": "Select “Open seats” to show only sessions that can still accept bookings.",
+        "paraphrase": "that setting → the Open seats filter",
+        "en": "The inserted sentence explains another effect of the filter introduced immediately before [2]. The gray-date instructions then explain how to reach past workshops.",
+        "zh": "[2] 前刚出现可选设置 Open seats。补句承接设置的另一效果，之后才说灰色日期和如何找回旧场次。"
       }
     ]
   },
@@ -2273,7 +2726,7 @@
       {
         "type": "备忘录",
         "title": "A check on replacement blades",
-        "text": "A carton contains ten sealed packs of blades. Take one pack from each carton for testing and leave the other nine sealed. If the tested pack passes, stamp the carton with the date. If it fails, move the entire carton to the inspection bay. Do not stamp it. The date stamp allows warehouse staff to distinguish approved stock from cartons still awaiting a test."
+        "text": "A carton contains ten sealed packs of blades. [1] Take one pack from each carton for testing and leave the other nine sealed. [2] If the tested pack passes, stamp the carton with the date. [3] If it fails, move the entire carton to the inspection bay. Do not stamp it. [4] The date stamp allows warehouse staff to distinguish approved stock from cartons still awaiting a test."
       }
     ],
     "questions": [
@@ -2294,7 +2747,7 @@
       },
       {
         "id": "read-blade-02",
-        "prompt": "In the last sentence, “distinguish” most nearly means what?",
+        "prompt": "In the final sentence of the blade memo, “distinguish” is closest in meaning to which option?",
         "options": [
           "Write down",
           "Deliver early",
@@ -2305,7 +2758,24 @@
         "evidence": "distinguish approved stock from cartons still awaiting a test",
         "paraphrase": "distinguish A from B → tell A and B apart",
         "en": "The stamp lets staff recognize which cartons have passed.",
-        "zh": "日期戳让员工分辨哪些箱子已获通过。"
+        "zh": "日期戳让员工分辨哪些箱子已获通过。",
+        "kind": "vocabulary"
+      },
+      {
+        "id": "read-blade-03",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “Such an unmarked carton must stay out of approved stock until the inspection is finished.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[4]",
+        "evidence": "If it fails, move the entire carton to the inspection bay. Do not stamp it.",
+        "paraphrase": "such an unmarked carton → the failed carton set aside without a stamp",
+        "en": "The failed carton and the instruction to withhold its stamp appear together immediately before [4]. The last sentence then explains the stamp’s role.",
+        "zh": "只有在 [4] 前才同时交代了未通过的整箱、送检和不盖章，Such an unmarked carton 指代明确；下一句转而说明日期戳的作用。"
       }
     ]
   },
@@ -2318,7 +2788,7 @@
       {
         "type": "网页答疑",
         "title": "Small garden awards",
-        "text": "Can two teams apply for one award? Yes, provided they name one contact person. We communicate with that person throughout the project. Awards cover seeds and hand tools. Land rental is outside the scheme. You may apply before your site is ready, but you must include the landowner's written permission with the form. Payment is made after a successful applicant submits receipts."
+        "text": "Can two teams apply for one award? Yes, provided they name one contact person. [1] We communicate with that person throughout the project. [2] Awards cover seeds and hand tools. Land rental is outside the scheme. [3] You may apply before your site is ready, but you must include the landowner's written permission with the form. [4] Payment is made after a successful applicant submits receipts."
       }
     ],
     "questions": [
@@ -2351,6 +2821,38 @@
         "paraphrase": "joint application → two teams applying together",
         "en": "Teams may apply together if they designate one person for communications.",
         "zh": "两队共同申请的条件是指定一名联系人。"
+      },
+      {
+        "id": "read-grant-03",
+        "kind": "negative",
+        "prompt": "Which detail about the awards is NOT specified?",
+        "options": [
+          "Who may apply together",
+          "The maximum payment",
+          "When receipts are needed",
+          "Which tools are covered"
+        ],
+        "answer": "The maximum payment",
+        "evidence": "Awards cover seeds and hand tools.",
+        "paraphrase": "expense categories named → maximum not stated",
+        "en": "The page permits two teams, requires receipts for payment and covers hand tools. It sets no amount limit in the text.",
+        "zh": "可联合申请、付款需收据、可资助手工具均已说明，未给最高金额。"
+      },
+      {
+        "id": "read-grant-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “Attach that signed note even when planting has not yet begun.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[4]",
+        "evidence": "you must include the landowner's written permission with the form.",
+        "paraphrase": "that signed note → the landowner’s written permission",
+        "en": "The landowner’s permission is first identified just before [4]; payment and receipts follow as a new topic.",
+        "zh": "[4] 前首次说明土地所有者的书面许可，that signed note 承接它；之后谈的是付款与收据。"
       }
     ]
   },
@@ -2396,6 +2898,38 @@
         "paraphrase": "earlier → the day before",
         "en": "The trial will change when sleeves are prepared and check the effect on packing time.",
         "zh": "下一轮会提前一天准备纸套，观察是否能缩短打包时间。"
+      },
+      {
+        "id": "read-packing-paper-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence describing the first ten boxes, “padding” is closest in meaning to which option?",
+        "options": [
+          "Shipping paperwork",
+          "Written instructions",
+          "Extra merchandise",
+          "Protective material"
+        ],
+        "answer": "Protective material",
+        "evidence": "loose paper as padding",
+        "paraphrase": "padding → protective material",
+        "en": "Loose paper cushioned the cups during shipping. Here padding is protective material.",
+        "zh": "松散的纸用来缓冲运输中的碰撞，padding 是填充保护材料。"
+      },
+      {
+        "id": "read-packing-paper-04",
+        "kind": "negative",
+        "prompt": "Which claim is NOT supported by the trial results?",
+        "options": [
+          "Making sleeves earlier saves time.",
+          "No cups broke in paper sleeves.",
+          "Sleeve boxes took longer to pack.",
+          "Two cups broke in loose paper."
+        ],
+        "answer": "Making sleeves earlier saves time.",
+        "evidence": "A second trial will test whether preparing sleeves the day before reduces packing time.",
+        "paraphrase": "will test → outcome still unknown",
+        "en": "The first trial reports damage and packing time. Earlier preparation is a proposal for the next trial.",
+        "zh": "首轮已观察破损和打包耗时；提前折纸能否省时还待下一轮测试。"
       }
     ]
   },
@@ -2441,6 +2975,22 @@
         "paraphrase": "when → recorded time",
         "en": "The image records time and address but does not verify the readiness of cases.",
         "zh": "照片记录时间、地址，无法证明箱子是否准备好。"
+      },
+      {
+        "id": "read-dispatch-rule-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence about a driver arriving after the window, “rearrange” is closest in meaning to which option?",
+        "options": [
+          "Postpone indefinitely",
+          "Reschedule",
+          "Combine",
+          "Document"
+        ],
+        "answer": "Reschedule",
+        "evidence": "we rearrange the visit without a fee",
+        "paraphrase": "rearrange → reschedule",
+        "en": "A late driver leads to another appointment at no charge. Rearrange means set a new time.",
+        "zh": "司机迟到后要免费另约上门时间，rearrange 是重新安排。"
       }
     ]
   },
@@ -2474,7 +3024,7 @@
       },
       {
         "id": "read-courtyard-02",
-        "prompt": "In the third sentence, what does “clear” mean?",
+        "prompt": "In the third sentence of the courtyard minutes, “clear” is closest in meaning to which option?",
         "options": [
           "Transparent",
           "Unobstructed",
@@ -2485,7 +3035,24 @@
         "evidence": "fire lane must remain clear",
         "paraphrase": "clear lane → unobstructed passage",
         "en": "A fire lane must be free of objects that block movement.",
-        "zh": "消防通道必须保持畅通，此处 clear 指没有障碍物。"
+        "zh": "消防通道必须保持畅通，此处 clear 指没有障碍物。",
+        "kind": "vocabulary"
+      },
+      {
+        "id": "read-courtyard-03",
+        "kind": "negative",
+        "prompt": "Which statement is NOT supported by the minutes?",
+        "options": [
+          "Planters received fewer votes.",
+          "An access check is scheduled.",
+          "Benches are already on order.",
+          "The fire lane must stay clear."
+        ],
+        "answer": "Benches are already on order.",
+        "evidence": "No purchase order has been issued",
+        "paraphrase": "no order issued → benches not yet purchased",
+        "en": "The vote, scheduled check and fire lane rule are stated. The committee has not ordered benches.",
+        "zh": "纪要确认票数、检查安排和消防通道要求，并明确尚未下采购单。"
       }
     ]
   },
@@ -2498,7 +3065,7 @@
       {
         "type": "网站说明",
         "title": "Requesting archived minutes",
-        "text": "Our printed index gives each folder a shelf code. To request a folder, enter that code exactly as printed, including the final letter. Two folders can have the same number but different letters. Requests received by Thursday noon are prepared for Friday viewing. Later requests go into the following week's batch. A booking lets you view the folder on site; permission to copy its contents must be requested separately."
+        "text": "Our printed index gives each folder a shelf code. [1] To request a folder, enter that code exactly as printed, including the final letter. [2] Two folders can have the same number but different letters. [3] Requests received by Thursday noon are prepared for Friday viewing. [4] Later requests go into the following week's batch. A booking lets you view the folder on site; permission to copy its contents must be requested separately."
       }
     ],
     "questions": [
@@ -2531,6 +3098,38 @@
         "paraphrase": "ordinary booking → permission to view",
         "en": "The viewing booking grants access on site. Copying requires further permission.",
         "zh": "常规预约只允许现场查阅，复制须另申请。"
+      },
+      {
+        "id": "read-archive-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence about requests received after the deadline, “batch” is closest in meaning to which option?",
+        "options": [
+          "Group processed together",
+          "Shelf holding old files",
+          "Number assigned to a user",
+          "Fee charged per folder"
+        ],
+        "answer": "Group processed together",
+        "evidence": "the following week's batch",
+        "paraphrase": "batch → group processed together",
+        "en": "Late requests are grouped for processing the next week. A batch is a group handled together.",
+        "zh": "逾期申请被归入下周统一处理的一批，batch 指一组同时处理的项目。"
+      },
+      {
+        "id": "read-archive-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “That difference is why a number alone cannot identify the folder.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[3]",
+        "evidence": "Two folders can have the same number but different letters.",
+        "paraphrase": "that difference → distinct letters for an identical number",
+        "en": "The contrast in final letters immediately precedes [3]. After that position the passage turns to the request timetable.",
+        "zh": "that difference 指相同数字却有不同末字母，[3] 后正文转到查阅时间表。"
       }
     ]
   },
@@ -2564,7 +3163,7 @@
       },
       {
         "id": "read-refund-02",
-        "prompt": "In the fourth sentence, “credit” refers to what?",
+        "prompt": "In the fourth sentence of the customer-service reply, “credit” is closest in meaning to which option?",
         "options": [
           "A customer's reputation",
           "A borrowing limit",
@@ -2575,7 +3174,8 @@
         "evidence": "list the refund as a separate credit",
         "paraphrase": "credit → money added back to the account",
         "en": "Here a credit is an entry returning money to the card account.",
-        "zh": "此处 credit 指把退款记回卡账户的贷记金额。"
+        "zh": "此处 credit 指把退款记回卡账户的贷记金额。",
+        "kind": "vocabulary"
       }
     ]
   },
@@ -2620,7 +3220,24 @@
         "evidence": "does not alter the deadline",
         "paraphrase": "renew → extend, contrary to the explicit rule",
         "en": "The text explicitly says an early reduction leaves the deadline unchanged.",
-        "zh": "正文明确说提前减少座位不改变截止时间，所以声称可续期的选项错误。"
+        "zh": "正文明确说提前减少座位不改变截止时间，所以声称可续期的选项错误。",
+        "kind": "negative"
+      },
+      {
+        "id": "read-guarantee-03",
+        "kind": "vocabulary",
+        "prompt": "In the first sentence of the allocation policy, “provisional” is closest in meaning to which option?",
+        "options": [
+          "Guaranteed",
+          "Permanent",
+          "Unrestricted",
+          "Temporary"
+        ],
+        "answer": "Temporary",
+        "evidence": "A provisional allocation reserves seats for a group until its stated deadline.",
+        "paraphrase": "provisional → temporary",
+        "en": "The seats are held only until a deadline unless confirmed. Provisional describes the temporary status of the allocation.",
+        "zh": "没有确认时，座位只保留到截止时间，provisional 表示暂时的、尚待确定的。"
       }
     ]
   },
@@ -2633,7 +3250,7 @@
       {
         "type": "来信",
         "title": "Reply from the market coordinator",
-        "text": "Your application arrived one day before that of Hazel Press. Within a product category we normally offer a vacant stall to the earliest applicant. The stall now open, however, is wired for refrigerated goods and is reserved for food sellers. Both your stationery business and Hazel Press remain on the paper-goods list. If a paper-goods stall opens, your earlier application date will still count."
+        "text": "Your application arrived one day before that of Hazel Press. [1] Within a product category we normally offer a vacant stall to the earliest applicant. [2] The stall now open, however, is wired for refrigerated goods and is reserved for food sellers. [3] Both your stationery business and Hazel Press remain on the paper-goods list. [4] If a paper-goods stall opens, your earlier application date will still count."
       }
     ],
     "questions": [
@@ -2666,6 +3283,38 @@
         "paraphrase": "earlier application → earlier place within the same category",
         "en": "Both applicants share a list; the recipient applied first, which establishes relative priority.",
         "zh": "两家都在纸制品名单，收件人先申请，所以同类空位会先轮到收件人。"
+      },
+      {
+        "id": "read-market-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence describing the wired stall, “reserved” is closest in meaning to which option?",
+        "options": [
+          "Booked by post",
+          "Kept on display",
+          "Set aside",
+          "Occupied already"
+        ],
+        "answer": "Set aside",
+        "evidence": "reserved for food sellers",
+        "paraphrase": "reserved → set aside",
+        "en": "Only food sellers can receive this particular stall, so the term means set aside for them.",
+        "zh": "该摊位专供食品商户申请，reserved 指“为某类人预留”。"
+      },
+      {
+        "id": "read-market-04",
+        "kind": "insertion",
+        "prompt": "In which of the four positions would the following sentence fit best? “As a result, we cannot use this vacancy to shorten either stationer’s wait.”",
+        "options": [
+          "[1]",
+          "[2]",
+          "[3]",
+          "[4]"
+        ],
+        "answer": "[3]",
+        "evidence": "wired for refrigerated goods and is reserved for food sellers.",
+        "paraphrase": "this vacancy → the food-only stall",
+        "en": "Only after the food-only restriction is introduced can this vacancy refer to the unsuitable stall. The following sentence confirms both applicants stay on their own list.",
+        "zh": "在 [3] 前才交代当前空位专属食品摊；补句说明为何两家纸品商不能借此提前，下一句确认两家仍在原名单。"
       }
     ]
   },
@@ -2711,6 +3360,22 @@
         "paraphrase": "the split → allocation of a bundled price",
         "en": "The preceding sentence requires bundled service and equipment charges to be separated.",
         "zh": "前一句要求拆分服务费与设备费，the split 就是这种分摊。"
+      },
+      {
+        "id": "read-allowance-03",
+        "kind": "negative",
+        "prompt": "Which item is NOT described as a record relevant to assessing a migration claim?",
+        "options": [
+          "The contractor's breakdown",
+          "An invoice for the work",
+          "A dated work log",
+          "A signed delivery photograph"
+        ],
+        "answer": "A signed delivery photograph",
+        "evidence": "attach a dated work log as well as the breakdown",
+        "paraphrase": "listed financial records → no photograph mentioned",
+        "en": "The policy discusses the invoice, the contractor's breakdown and the work log. It does not mention a delivery photograph.",
+        "zh": "规则提及发票、承包商明细和有日期的工作日志，未提签名收货照片。"
       }
     ]
   },
@@ -2756,6 +3421,22 @@
         "paraphrase": "acknowledge → formally recognize",
         "en": "The form records awareness of the missing documentation without changing warranty timing.",
         "zh": "该表仅证明收件方知悉手册尚未提供。"
+      },
+      {
+        "id": "read-waiver-03",
+        "kind": "vocabulary",
+        "prompt": "In the sentence beginning “The form acknowledges”, “acknowledges” is closest in meaning to which option?",
+        "options": [
+          "Investigates",
+          "Recognizes",
+          "Corrects",
+          "Supplies"
+        ],
+        "answer": "Recognizes",
+        "evidence": "acknowledges the missing manual",
+        "paraphrase": "acknowledges → recognizes",
+        "en": "Signing records that the recipient is aware of the missing manual. It does not supply or correct it.",
+        "zh": "签字表示知悉手册尚未提供，并非补发或更正手册。"
       }
     ]
   },
@@ -3357,7 +4038,7 @@
       },
       {
         "id": "read-seats-04",
-        "prompt": "In the policy, “forfeited” most nearly means what?",
+        "prompt": "In the fourth sentence of the Mere House booking policy, “forfeited” is closest in meaning to which option?",
         "options": [
           "Divided",
           "Extended",
@@ -3368,7 +4049,8 @@
         "evidence": "The original deposit is then forfeited.",
         "paraphrase": "forfeited → given up after a late change",
         "en": "The original deposit can no longer be used or credited after a late room change.",
-        "zh": "在此 forfeited 指押金因逾期换房而被没收、不能再抵扣。"
+        "zh": "在此 forfeited 指押金因逾期换房而被没收、不能再抵扣。",
+        "kind": "vocabulary"
       },
       {
         "id": "read-seats-05",
