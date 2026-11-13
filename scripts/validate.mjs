@@ -196,7 +196,7 @@ function grammar(lessons) {
       string(diagram.caption, `${at}.diagram.caption`);
       scan(diagram.steps, `${at}.diagram.steps`, 2, (step, path) => strings(step, path, ['label', 'detail']));
     }
-    scan(lesson.questions, `${at}.questions`, 1, (q, path) => {
+    scan(lesson.questions, `${at}.questions`, lesson.id === 'gram-lexis' ? 100 : 15, (q, path) => {
       id(q, path);
       level(q, path);
       answers(q, path);
@@ -205,8 +205,10 @@ function grammar(lessons) {
       total++;
     });
   });
-  expect(total >= 80, 'grammar', `语法题至少 80 道，实际 ${total} 道`);
-  counts['语法题'] = total;
+  const topics=new Set(lessons.map(t=>t.id));
+  for(const name of ['gram-lexis','gram-pronouns','gram-nonfinite','gram-modifiers','gram-agreement','gram-quantity','gram-sequence','gram-linkers']) expect(topics.has(name),'grammar','缺少关卡 '+name);
+  expect(total >= 300, 'grammar', `Part 5 至少 300 道，实际 ${total} 道`);
+  counts['Part 5'] = total;
 }
 
 function comprehension(group, at, sources) {
