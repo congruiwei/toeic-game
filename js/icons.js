@@ -1,0 +1,25 @@
+const paths = {
+ island:'<path d="M3 16q9-6 18 0l-9 5zM12 13V8m0 2Q5 11 5 4q7 0 7 6Zm0-2q0-6 7-6 0 7-7 6Z"/>',
+ book:'<path d="M12 6C9 4 6 4 3 4v14c3 0 6 0 9 2 3-2 6-2 9-2V4c-3 0-6 0-9 2Zm0 0v14"/>',
+ cards:'<rect x="7" y="3" width="13" height="17" rx="2"/><path d="m5 6-2 1 2 14q0 2 3 1l7-1M10 8h7m-7 4h5"/>',
+ compass:'<circle cx="12" cy="12" r="9"/><path d="m16 7-2.5 6.5L7 17l3-7z"/>',
+ sprout:'<path d="M12 20v-9M12 14C5 15 3 10 3 6c6 0 9 3 9 8Zm0-4c0-6 4-8 9-8 0 5-3 10-9 8Z"/>',
+ sound:'<path d="M3 9h4l5-5v16l-5-5H3zm12 0q3 3 0 6m3-9q6 6 0 12"/>',
+ headphones:'<path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="12" width="4" height="8" rx="2"/><rect x="17" y="12" width="4" height="8" rx="2"/>',
+ grammar:'<path d="m5 17 2-5L17 2l5 5-10 10-7 2zm9-12 5 5M3 22h18"/>',
+ reading:'<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h8m-8 4h5"/>',
+ settings:'<path d="m10 2 4 0 .7 2.5 2 .9 2.4-.9 2 3.5-1.7 1.9.2 2.3 1.6 2-2 3.4-2.5-.5-2 1-.8 2.5h-4L9 18.1l-2-1-2.5.5-2-3.4 1.6-2 .2-2.3L2.6 8l2-3.5 2.4.9 2-.9z"/><circle cx="12" cy="11.5" r="3"/>',
+ arrow:'<path d="M4 12h15m-6-6 6 6-6 6"/>',chev:'<path d="m9 5 7 7-7 7"/>',back:'<path d="m15 5-7 7 7 7"/>',play:'<path d="m8 4 12 8-12 8z"/>',
+ spark:'<path d="m12 2 1.8 6.2L20 10l-6.2 1.8L12 18l-1.8-6.2L4 10l6.2-1.8ZM19 16l.7 2.3L22 19l-2.3.7L19 22l-.7-2.3L16 19l2.3-.7Z"/>',
+ flag:'<path d="M5 21V4m0 0q4-3 8 0t7 0v10q-3 3-7 0t-8 0"/>',
+ route:'<circle cx="5" cy="17" r="2"/><circle cx="19" cy="6" r="2"/><path d="M7 17h5q5 0 5-4t-5-4H9q-3 0-3-2t4-2h6"/>',
+ clock:'<circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/>',check:'<path d="m4 12 5 5L20 6"/>',close:'<path d="m5 5 14 14m0-14L5 19"/>',
+ star:'<path d="m12 2 2.7 6.3 6.8.7-5.1 4.9 1.4 7-5.8-3.7-5.8 3.7 1.4-7L2.5 9l6.8-.7z"/>',
+ lock:'<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/>',
+ note:'<path d="M7 3h12v18H7zM4 7h4m-4 5h4m-4 5h4m3-8h5m-5 4h4"/>',
+ sun:'<circle cx="12" cy="12" r="4"/><path d="M12 1v3m0 16v3M1 12h3m16 0h3M4 4l2 2m12 12 2 2M20 4l-2 2M6 18l-2 2"/>',
+ chart:'<path d="M3 20h18M6 16v-5m6 5V7m6 9V3"/>',target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+ leaf:'<path d="M4 20q2-9 12-13M6 16C1 7 11 3 21 3c0 11-5 17-15 13Z"/>',
+ bag:'<rect x="3" y="7" width="18" height="14" rx="3"/><path d="M8 7V4h8v3m-13 6q9 5 18 0m-9 0v3"/>'
+};
+export const icon=(name,size=20)=>'<svg class="icon" aria-hidden="true" width="'+size+'" height="'+size+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">'+(paths[name]||paths.spark)+'</svg>';

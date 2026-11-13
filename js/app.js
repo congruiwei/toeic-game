@@ -1,0 +1,135 @@
+import {icon} from './icons.js';
+import {creature,landscape} from './art.js';
+import {tileArt} from './tiles.js';
+import {KEY,fresh,decode,estimate,difficulty,levelOf,titleOf,skills,labels,forms,thresholds,reward} from './state.js';
+import {bank,catalog,loadBank,select,question,formats} from './bank.js';
+import {hush,speak,tone,voices} from './audio.js';
+const $=s=>document.querySelector(s),root=$('#app'),dialog=$('#modal');
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const icons={vocab:'cards',grammar:'grammar',listening:'headphones',reading:'reading'};
+const navs=[['home','island','小岛'],['learn','compass','练习'],['library','cards','图鉴']];
+const names={vocab:'单词采集',part2:'听音寻迹',grammar:'语法工坊',dialogue:'情景听力',dictation:'听写手记',reading:'阅读探访',errors:'错题复习'};
+const taskInfo={match:['单词','辨认同义表达','reading'],vocab:['单词','收集商务词卡','vocab'],part2:['听力','捕捉问句线索','part2'],grammar:['语法','破解句子结构','grammar'],reading:['阅读','探索文中的线索','reading']};
+let s=fresh(),page='home',tab='words',themeFilter='',tasks=[],clockStart=0,tick=0,toastTimer=0,returnBonus=false,storageBroken=false;
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('show'),3000);}
+function save(){if(storageBroken)return;try{localStorage.setItem(KEY,JSON.stringify(s));}catch{toast('当前浏览器未能保存进度，请在设置中导出备份。');}}
+function applyPrefs(){document.documentElement.dataset.theme=s.settings.theme;document.documentElement.dataset.motion=s.settings.motion?'on':'off';}
+function act(id,txt,cls='',attrs=''){return `<button type="button" class="${cls}" data-act="${id}" ${attrs}>${txt}</button>`;}
+function sectionTitle(ico,name,extra=''){return `<div class="section-head"><h2>${icon(ico,22)}${name}</h2>${extra}</div>`;}
+function frame(){
+ $('#top').innerHTML=`<div class="top-inner"><button data-act="nav" data-page="home" class="brand"><img src="./assets/mark.svg" alt="" width="42" height="42"><span>芽语岛<small>TOEIC ISLAND</small></span></button><nav class="desk-nav" aria-label="主导航">${navItems()}</nav><button class="gear" data-act="settings" aria-label="设置">${icon('settings',21)}</button></div>`;
+ $('#mobile-nav').innerHTML=navItems();
+}
+function navItems(){return navs.map(([p,i,n])=>act('nav',icon(i)+'<span>'+n+'</span>',(page==='practice'?'learn':page)===p?'active':'',`data-page="${p}"`)).join('');}
+function go(p){pauseClock();hush();page=p;render();window.scrollTo(0,0);}
+function meter(val,max,cl=''){return `<span class="meter ${cl}"><i style="width:${Math.max(0,Math.min(100,100*val/max))}%"></i></span>`;}
+function taskTile(mode,idx){
+ const [label,desc,art]=taskInfo[mode];return `<button class="task ${art}" data-act="start" data-mode="${mode==='match'?'vocab':mode}" data-filter="${mode==='match'?'match':''}"><div class="task-top"><span class="chip"><i></i>${label}</span>${tileArt(art)}</div><h3>${names[mode]||'词义连线'}</h3><p>${desc}</p><div class="task-foot"><span>${icon('clock',14)}${mode==='reading'?'约 5 分钟':'约 3 分钟'}</span>${icon('arrow',19)}</div></button>`;
+}
+function home(){
+ const score=estimate(s),lv=levelOf(s.xp),date=new Intl.DateTimeFormat('zh-CN',{month:'long',day:'numeric',weekday:'long'}).format(new Date());
+ return `<div class="welcome"><div><div class="eyebrow"><i></i> ISLAND DASHBOARD</div><h1>欢迎回到小岛<span class="hello-star">✦</span></h1></div><small class="date">${icon('sun',16)}${esc(date)}</small></div>
+ <div class="overview"><section class="habitat">${landscape(s.stage,s.branch)}<div class="hab-text"><span class="hab-tag">${icon('leaf',14)} 伙伴栖息地</span><h2>${forms[s.stage]}</h2><p>第 ${String(s.stage+1).padStart(2,'0')} 形态 <b>·</b> ${s.stage?labels[s.branch]+'特化':'初生之芽'}</p></div><div class="hab-bottom"><div class="level"><b>Lv. ${String(lv).padStart(2,'0')}</b><span>${titleOf(s.xp)}</span></div>${meter(s.xp%100,100)}<div class="xp"><span>成长经验</span><b>${s.xp%100} / 100 XP</b></div></div>${act('evolution',icon('route',15)+'<span>进化路线</span>','route')}</section>
+ <section class="stats panel"><div class="stats-head"><h2>${icon('chart')} 能力面板</h2>${act('evolution',icon('chev',16),'soft-round','aria-label="查看能力与进化条件"')}</div><div class="score"><div><span>预估 TOEIC 分数</span><strong>${score}<small>分</small></strong></div><small>仅供参考</small></div><div class="skills">${skills.map(k=>`<div class="skill ${k}"><i>${icon(icons[k],16)}</i><label>${labels[k]}</label>${meter(s.stats[k],thresholds[Math.min(5,s.stage+1)])}<b>${s.stats[k]}</b></div>`).join('')}</div></section></div>
+ <section class="tasks">${sectionTitle('flag','探索任务', '<span class="section-note">任选一个开始</span>')}<div class="task-grid">${tasks.map(taskTile).join('')}</div></section>
+ <div class="continue"><span class="continue-icon">${icon('compass',27)}</span><div><h3>${s.session?'上次的探险':'自由练习'}</h3><p>${s.session?esc(s.session.title)+' · '+Math.min(s.session.index+1,s.session.items.length)+' / '+s.session.items.length:'按主题与题型选择练习'}</p></div>${act(s.session?'resume':'nav',s.session?'继续学习 '+icon('arrow',16):'进入练习 '+icon('arrow',16),'primary','data-page="learn"')}</div>`;
+}
+function learn(){
+ const options=Object.keys(names).filter(m=>m==='vocab'||m==='part2');
+ return `<div class="page-title"><div class="eyebrow"><i></i> TRAINING</div><h1>练习地图</h1></div><div class="learn-grid">${options.map(m=>`<button class="learn-card panel" data-act="start" data-mode="${m}">${tileArt(m)}<strong>${names[m]}</strong>${icon('chev')}</button>`).join('')}</div>`;
+}
+function practiceView(){
+ const a=s.session;if(!a)return learn();
+ if(a.index>=a.items.length)return `<section class="panel quiz"><h1>探险完成</h1><p>答对 ${a.right} / ${a.items.length} · 获得 ${a.gain} XP</p>${act('home','回到小岛','primary')}</section>`;
+ const q=question(a.items[a.index]);return `<section class="panel quiz">${act('leave','返回小岛','plain')}<p>${a.index+1} / ${a.items.length} · ${q.level} 级</p><h2>${esc(q.instruction)}</h2>${q.audio?act('play','点击开始 · 播放','primary'):''}<h3>${esc(q.prompt)}</h3><div class="choices">${q.options.map((v,i)=>act('answer',esc(v),'option',`data-i="${i}" ${a.selected!==null?'disabled':''}`)).join('')}</div>${a.selected!==null?`<p>${a.selected===q.answer?'答对了':'正确答案：'+esc(q.answer)}</p><p>${esc(q.en||q.example)}</p><p>${esc(q.zh)}</p>${act('next','继续','primary')}`:''}</section>`;
+}
+function render(){
+ applyPrefs();frame();
+ root.innerHTML=page==='home'?home():page==='learn'?learn():page==='library'?`<div class="page-title"><h1>词卡图鉴</h1></div><section class="panel quiz">${Object.keys(s.words).filter(k=>s.words[k].right).map(k=>esc(catalog.get(k)?.data.word)).join(' · ')||'答对单词即可收藏词卡。'}</section>`:practiceView(s);
+ root.setAttribute('aria-busy','false');if(page==='practice')startClock();
+}
+function pauseClock(){if(clockStart&&s.session){s.session.elapsed+=Math.max(0,Date.now()-clockStart);clockStart=0;save();}clearInterval(tick);}
+function startClock(){const a=s.session;if(!a?.timed||a.index>=a.items.length||a.selected!==null||document.hidden||dialog.open)return;if(!clockStart)clockStart=Date.now();const update=()=>{const el=$('#timer');if(el){const seconds=Math.floor((a.elapsed+Date.now()-clockStart)/1000);el.textContent=Math.floor(seconds/60)+':'+String(seconds%60).padStart(2,'0');}};clearInterval(tick);update();tick=setInterval(update,500);}
+function modal(content,cls=''){pauseClock();dialog.className=cls;dialog.innerHTML=`<div class="modal-body">${act('close',icon('close',19),'modal-close','aria-label="关闭"')}${content}</div>`;if(!dialog.open)dialog.showModal();dialog.scrollTop=0;}
+function close(){dialog.close();}
+dialog.addEventListener('close',()=>{if(page==='practice')startClock();});
+dialog.addEventListener('click',e=>{if(e.target===dialog)close();});
+function evolution(evolved=false){
+ modal(`<div class="${evolved?'ceremony':'mini-pet'}"><svg viewBox="-110 -120 220 200" aria-label="${forms[s.stage]}">${creature(s.stage,s.branch)}</svg></div><div class="eyebrow">EVOLUTION</div><h2>${evolved?'进化成功 · '+forms[s.stage]:'伙伴进化路线'}</h2><p class="muted">同时达到预估分数与四项能力经验，即可进化。最强的能力决定新形态的特征。</p><div class="stage-list">${forms.map((f,i)=>`<div class="${i===s.stage?'current':''}"><span>${icon(i<s.stage?'check':i===s.stage?'sprout':'lock',17)} ${f}</span><small>${400+i*100} 分 · 各 ${thresholds[i]} XP</small></div>`).join('')}</div>`,evolved?'evolved':'');
+}
+function settings(){
+ const p=s.settings,lang=voices();const option=(v,n,c)=>`<option value="${v}" ${v===c?'selected':''}>${n}</option>`;
+ modal(`<div class="eyebrow">PREFERENCES</div><h2>小岛设置</h2><label class="setting">外观<select data-pref="theme">${[['auto','跟随系统'],['light','浅色'],['dark','深色']].map(([v,n])=>option(v,n,p.theme)).join('')}</select></label>
+ ${[['sound','答题与进化音效'],['motion','角色与进化动画'],['timed','阅读计时']].map(([v,n])=>`<label class="setting">${n}<input type="checkbox" data-pref="${v}" ${p[v]?'checked':''}></label>`).join('')}
+ <label class="setting">朗读速度 <span><output id="rate-val">${p.rate}×</output> <input aria-label="朗读速度" type="range" min="0.75" max="1.2" step="0.05" value="${p.rate}" data-pref="rate"></span></label>
+ <label class="setting">英语口音<select data-pref="accent">${option('auto','设备默认',p.accent)}${[['en-US','美式'],['en-GB','英式'],['en-AU','澳式']].filter(([v])=>lang.some(x=>x.lang.toLowerCase().replace('_','-')===v.toLowerCase())||p.accent===v).map(([v,n])=>option(v,n,p.accent)).join('')}</select></label>${act('test',icon('sound',16)+' 测试声音','secondary')}
+ <p class="muted fine">口音和离线朗读取决于设备已安装的英语语音。</p><div class="backup"><h3>进度备份</h3>${act('export','导出进度','secondary')} ${act('import','导入进度','secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
+}
+let pending=null;
+function start(mode,filter='',only='',force=false){
+ if(s.session&&s.session.index<s.session.items.length&&!force){
+ pending={mode,filter,only};modal(`<h2>切换这次练习？</h2><p>「${esc(s.session.title)}」还有未答题目。已经获得的经验和词卡都会保留。</p>${act('resume','继续上次练习','secondary')} ${act('replace','开始所选练习','primary')}`);return;}
+ let items=only?[s.errors[only]?.ref].filter(Boolean):select(s,mode,5,formats.includes(filter)?'':filter);
+ if(mode==='vocab'&&formats.includes(filter))items=items.map(r=>({...r,format:filter}));
+ if(!items.length){toast('这里暂时没有待复习的题目');return;}
+ pauseClock();if(dialog.open)close();s.session={mode,title:names[mode],items,index:0,right:0,gain:0,selected:null,elapsed:0,timed:mode==='reading'&&s.settings.timed,intro:items[0].mode==='grammar'};save();go('practice');
+}
+function answer(value){
+ const a=s.session;if(!a||a.selected!==null||a.index>=a.items.length)return;
+ const r=a.items[a.index],q=question(r);if(!value?.trim()){toast('先填入一个单词');return;}
+ hush();pauseClock();const ok=value.trim().toLowerCase()===q.answer.trim().toLowerCase(),result=reward(s,q,r,ok);
+ a.selected=ok?q.answer:value;a.right+=Number(ok);a.gain+=result.xp;save();render();
+ if(ok||result.leveled||result.evolved)tone(result.evolved?'evolve':result.leveled?'level':'correct',s.settings.sound);
+ if(result.evolved)evolution(true);else if(result.leveled)toast('升级啦！Lv. '+levelOf(s.xp));
+}
+function exportSave(){
+ const blob=new Blob([JSON.stringify(s,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='toeic-island-save.json';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
+}
+let incoming=null;
+document.addEventListener('change',async e=>{
+ const el=e.target,k=el.dataset.pref;
+ if(k){s.settings[k]=el.type==='checkbox'?el.checked:k==='rate'?Number(el.value):el.value;save();applyPrefs();if(k==='rate')$('#rate-val').textContent=el.value+'×';return;}
+ if(el.id==='import-file'&&el.files[0]){
+ try{if(el.files[0].size>5e6)throw Error('文件过大');const candidate=decode(await el.files[0].text());verifyRefs(candidate);incoming=candidate;
+ modal(`<h2>恢复这份进度？</h2><p>备份中的伙伴是「${forms[incoming.stage]}」，共有 ${incoming.xp} XP。恢复后会替换当前设备的进度。</p>${act('restore','恢复备份','primary')}`);}
+ catch(err){toast('无法导入：'+err.message);}el.value='';
+ }
+});
+function verifyRefs(x){for(const r of [...(x.session?.items||[]),...Object.values(x.errors).map(e=>e.ref)])if(catalog.get(r.id)?.ref.mode!==r.mode)throw Error('题目记录与题库不符');}
+document.addEventListener('input',e=>{if(e.target.dataset.pref==='rate')$('#rate-val').textContent=e.target.value+'×';});
+document.addEventListener('click',e=>{
+ const el=e.target.closest('[data-act]');if(!el||el.disabled)return;
+ const {act:a,mode,page:p,i,filter,id}=el.dataset;
+ if(a==='nav')go(p);
+ if(a==='resume'){if(dialog.open)close();go('practice');}
+ if(a==='replace'&&pending){const x=pending;pending=null;start(x.mode,x.filter,x.only,true);}
+ if(a==='home'||a==='leave'){if(s.session?.index>=s.session?.items.length){s.session=null;save();}go('home');}
+ if(a==='start')start(mode,filter);
+ if(a==='review-one')start('errors','',id);
+ if(a==='settings')settings();
+ if(a==='evolution')evolution();
+ if(a==='close')close();
+ if(a==='begin'){s.session.intro=false;save();render();}
+ if(['answer','submit-dict','play','listen-choice'].includes(a)){
+ const ref=s.session?.items[s.session.index];if(!ref)return;const q=question(ref);
+ if(a==='answer')answer(q.options[Number(i)]);if(a==='submit-dict')answer($('#dict-input').value);
+ if(a==='play'||a==='listen-choice'){speak(a==='play'?q.turns:[{text:q.options[Number(i)],speaker:'B'}],s.settings,toast);if(a==='play')el.setAttribute('aria-label','重新播放');}
+ }
+ if(a==='next'&&s.session.selected!==null){hush();const b=s.session;b.index++;b.selected=null;
+ const next=b.items[b.index];b.intro=!!next&&next.mode==='grammar'&&catalog.get(next.id).data.topic.id!==catalog.get(b.items[b.index-1].id).data.topic?.id;
+ save();render();window.scrollTo(0,0);}
+ if(a==='test')speak([{text:'Welcome to Sprout Island. Your sound is ready.',speaker:'A'}],s.settings,toast);
+ if(a==='export')exportSave();if(a==='import')$('#import-file').click();
+ if(a==='restore'&&incoming){pauseClock();s=incoming;incoming=null;storageBroken=false;save();close();go('home');toast('已恢复进度');}
+});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){pauseClock();hush();}else if(page==='practice')startClock();});
+window.addEventListener('pagehide',pauseClock);
+async function boot(){
+ try{await loadBank(['vocab','part2']);}catch{root.innerHTML='<h2>题库未能打开</h2><p>请联网后重新载入一次，以准备离线资源。</p>';return;}
+ try{const raw=localStorage.getItem(KEY);if(raw){s=decode(raw);verifyRefs(s);}}catch{storageBroken=true;s=fresh();toast('原存档读取失败，已保留原始记录。可从设置导入备份。');}
+ const now=Date.now();returnBonus=s.lastVisit>0&&now-s.lastVisit>=6*3600000;if(returnBonus)s.xp+=8;s.lastVisit=now;
+ tasks=['vocab','part2','match'];save();render();if(returnBonus)toast('欢迎回来！获得 8 XP');
+ navigator.storage?.persist?.().catch(()=>{});
+ if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>toast('离线资源未就绪，请联网后重开。'));
+}
+boot();
