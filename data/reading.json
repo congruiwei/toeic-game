@@ -1,0 +1,617 @@
+[
+  {
+    "id": "read-badge",
+    "level": 400,
+    "part": 6,
+    "title": "领取新工牌",
+    "documents": [
+      {
+        "type": "通知",
+        "title": "New visitor badges",
+        "text": "Starting Monday, all visitors will need a blue badge. A member of the reception team will [1] each guest a badge at the front desk. Please keep it visible while you are in the building.\n\nBefore you leave, put the badge in the white box beside the exit. We use the same badges again the next day. [2]"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-badge-01",
+        "prompt": "Which word best completes [1]?",
+        "options": [
+          "wear",
+          "give",
+          "collect",
+          "borrow"
+        ],
+        "answer": "give",
+        "evidence": "each guest a badge at the front desk",
+        "paraphrase": "give each guest a badge → issue a badge to every visitor",
+        "en": "The receptionist gives something to someone. Give fits the pattern give each guest a badge.",
+        "zh": "前台人员把工牌发给每位访客，give 后可接人和物两个宾语。"
+      },
+      {
+        "id": "read-badge-02",
+        "prompt": "Which sentence best completes [2]?",
+        "options": [
+          "The white box holds outgoing letters.",
+          "Please keep your badge at home.",
+          "Blue paint dries quickly.",
+          "Thank you for returning yours."
+        ],
+        "answer": "Thank you for returning yours.",
+        "evidence": "We use the same badges again the next day.",
+        "paraphrase": "use the same badges again → collect them for reuse",
+        "en": "The return box and the plan to reuse badges make a thank-you for returning them a logical closing.",
+        "zh": "出口的回收箱和次日重复使用都说明需要归还工牌，最后一句应感谢访客配合。"
+      }
+    ]
+  },
+  {
+    "id": "read-samples",
+    "level": 500,
+    "part": 6,
+    "title": "试用装登记",
+    "documents": [
+      {
+        "type": "邮件",
+        "title": "Subject: Sample jars for the shop floor",
+        "text": "Hello team,\n\nFour sample jars arrived this morning. The supplier sent them free of charge so that customers can try the new jam. Please set them on the tasting table [1] the shop opens at nine. Everything should be in place when the first customers walk in.\n\nThere is a card beside each jar. Ask visitors to note which flavor they prefer. [2] I will use the results to decide which jam to order.\n\nBest,\nIrene"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-samples-01",
+        "prompt": "Which word best completes [1]?",
+        "options": [
+          "since",
+          "before",
+          "unless",
+          "whereas"
+        ],
+        "answer": "before",
+        "evidence": "Everything should be in place when the first customers walk in.",
+        "paraphrase": "in place when the first customers walk in → ready before opening",
+        "en": "The team needs the tasting table ready at opening time, so setup happens before the shop opens.",
+        "zh": "第一批顾客进来时就要布置好，因此摆放试用装必须在开门之前完成。"
+      },
+      {
+        "id": "read-samples-02",
+        "prompt": "Which sentence best completes [2]?",
+        "options": [
+          "Put the completed cards in my tray at closing time.",
+          "The jars are too heavy for the shelf.",
+          "We have already ordered every flavor.",
+          "Unopened boxes should go back to the driver."
+        ],
+        "answer": "Put the completed cards in my tray at closing time.",
+        "evidence": "I will use the results to decide which jam to order.",
+        "paraphrase": "the results → the preferences on the completed cards",
+        "en": "Collecting the cards gives Irene the preference data she needs for her order.",
+        "zh": "收集填好的卡片，Irene 才有依据决定订购什么口味，与上下文衔接。"
+      }
+    ]
+  },
+  {
+    "id": "read-bikes",
+    "level": 600,
+    "part": 6,
+    "title": "维修站预约说明",
+    "documents": [
+      {
+        "type": "服务说明",
+        "title": "A shorter wait for bike repairs",
+        "text": "At Birch Lane Cycles, we repair both ordinary bicycles and folding models. From April onward, you may reserve a repair slot online. When you choose a time, please describe the problem as [1] as possible. A detailed description helps the mechanic select tools in advance.\n\nSome repairs take longer than the scheduled slot. If this happens, we will [2] you with a revised collection time. Please leave a phone number where you can be reached during the day."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-bikes-01",
+        "prompt": "Which word best completes [1]?",
+        "options": [
+          "precisely",
+          "preciseness",
+          "precision",
+          "precise"
+        ],
+        "answer": "precisely",
+        "evidence": "A detailed description helps the mechanic select tools in advance.",
+        "paraphrase": "describe precisely → give a detailed account",
+        "en": "Describe is a verb and needs the adverb precisely. As … as possible keeps the adverb in its base form.",
+        "zh": "空格修饰 describe，需用副词 precisely；as … as possible 表示“尽可能……”。"
+      },
+      {
+        "id": "read-bikes-02",
+        "prompt": "Which word best completes [2]?",
+        "options": [
+          "compare",
+          "charge",
+          "contact",
+          "equip"
+        ],
+        "answer": "contact",
+        "evidence": "Please leave a phone number where you can be reached during the day.",
+        "paraphrase": "can be reached → can be contacted",
+        "en": "The shop asks for a reachable phone number so it can contact the customer about a changed pickup time.",
+        "zh": "店方索要白天能接通的号码，是为了在取车时间变动时联系顾客。"
+      }
+    ]
+  },
+  {
+    "id": "read-labels",
+    "level": 700,
+    "part": 6,
+    "title": "仓库换标签",
+    "documents": [
+      {
+        "type": "备忘录",
+        "title": "Revised shelf labels",
+        "text": "Beginning next week, shelf labels in the stockroom will show an aisle number above the item name. The new format should make it easier for temporary staff to find supplies. Old labels already list the correct item names. [1], their lack of aisle numbers has caused delays.\n\nSupervisors will receive a packet of new labels on Friday. Replace labels only on shelves listed in the packet. Several shelves are due to be moved; [2] these shelves now would waste labels. We will identify their new locations next month."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-labels-01",
+        "prompt": "Which transition best completes [1]?",
+        "options": [
+          "However",
+          "Similarly",
+          "For example",
+          "Consequently"
+        ],
+        "answer": "However",
+        "evidence": "Old labels already list the correct item names.",
+        "paraphrase": "correct names but missing location information → a contrast",
+        "en": "The passage contrasts a strength of the old labels with a problem they cause. However signals that contrast.",
+        "zh": "旧标签名称正确是优点，缺少通道编号却导致延误是缺点，应用 However 表示转折。"
+      },
+      {
+        "id": "read-labels-02",
+        "prompt": "Which form best completes [2]?",
+        "options": [
+          "relabels",
+          "had relabeled",
+          "relabeled",
+          "relabeling"
+        ],
+        "answer": "relabeling",
+        "evidence": "Several shelves are due to be moved",
+        "paraphrase": "are due to be moved → are scheduled for relocation",
+        "en": "The action of relabeling is the subject of would waste. The upcoming move explains why it would be wasteful.",
+        "zh": "would waste 的主语是“现在重新贴标签”这个动作，用动名词 relabeling；这些货架还要搬动。"
+      }
+    ]
+  },
+  {
+    "id": "read-credit",
+    "level": 800,
+    "part": 6,
+    "title": "自愿更换取货日期",
+    "documents": [
+      {
+        "type": "邮件",
+        "title": "Subject: An alternative collection date",
+        "text": "Dear studio members,\n\nA late delivery of clay has affected our Friday firing schedule. Orders marked for Friday collection can still be completed on time if necessary. To reduce pressure on the kiln team, we are asking members with flexible plans to collect on Monday instead. Members who volunteer will receive studio credit. This offer applies [1] to orders originally marked for Friday.\n\nYou need only reply if you wish to change dates. [2] Our staff will set those pieces aside for collection at the promised time. Thank you for helping us balance the workload."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-credit-01",
+        "prompt": "Which word best completes [1]?",
+        "options": [
+          "exclusively",
+          "accidentally",
+          "loosely",
+          "previously"
+        ],
+        "answer": "exclusively",
+        "evidence": "Members who volunteer will receive studio credit.",
+        "paraphrase": "applies exclusively to → is restricted to",
+        "en": "The offer singles out orders originally assigned to Friday. Exclusively states this limit.",
+        "zh": "优惠对象限定为原定周五取件的订单，exclusively 表示“仅限”。"
+      },
+      {
+        "id": "read-credit-02",
+        "prompt": "Which sentence best completes [2]?",
+        "options": [
+          "We will cancel all unconfirmed orders.",
+          "Monday orders must be collected on Friday.",
+          "All replies will be published on our website.",
+          "Unchanged orders will remain on Friday's list."
+        ],
+        "answer": "Unchanged orders will remain on Friday's list.",
+        "evidence": "You need only reply if you wish to change dates.",
+        "paraphrase": "only reply to change dates → no reply keeps the original date",
+        "en": "The sentence must identify the pieces staff will set aside and fit the rule that only volunteers need to reply.",
+        "zh": "只有想换日期的人才需回复，所以未更改日期的订单仍安排在周五；those pieces 指这些订单里的作品。"
+      }
+    ]
+  },
+  {
+    "id": "read-print",
+    "level": 400,
+    "part": 7,
+    "title": "打印店取件邮件",
+    "documents": [
+      {
+        "type": "邮件",
+        "title": "Subject: Your poster is ready",
+        "text": "Hello Kai,\n\nYour blue poster is ready. You can collect it at the side counter of Lane Print after 2 p.m. today. Our front counter is being painted, so please enter through the garden door. Bring the yellow ticket we gave you when you placed the order.\n\nMara\nLane Print"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-print-01",
+        "prompt": "Why should Kai use the garden door?",
+        "options": [
+          "The poster is too wide for the front door.",
+          "The side counter closes at two.",
+          "The usual counter is being painted.",
+          "The garden door has a ticket machine."
+        ],
+        "answer": "The usual counter is being painted.",
+        "evidence": "Our front counter is being painted",
+        "paraphrase": "usual counter → front counter",
+        "en": "Painting at the front counter explains the instruction to enter through the garden door.",
+        "zh": "邮件说前台正在刷漆，因此要从花园门进入。"
+      },
+      {
+        "id": "read-print-02",
+        "prompt": "What should Kai take to the shop?",
+        "options": [
+          "A paint sample",
+          "A ticket received earlier",
+          "An additional copy of the poster",
+          "A new order form"
+        ],
+        "answer": "A ticket received earlier",
+        "evidence": "Bring the yellow ticket we gave you when you placed the order.",
+        "paraphrase": "received earlier → given when the order was placed",
+        "en": "Kai was given a yellow ticket when placing the order and must bring it for pickup.",
+        "zh": "下单时拿到的黄票需要在取件时带来，received earlier 指当时已领到。"
+      }
+    ]
+  },
+  {
+    "id": "read-locker",
+    "level": 400,
+    "part": 7,
+    "title": "柜门检修通知",
+    "documents": [
+      {
+        "type": "通知",
+        "title": "West Hall locker notice",
+        "text": "Lockers 30 through 42 will be unavailable on Thursday morning while a technician changes the locks. Empty these lockers by 6 p.m. on Wednesday. You may use the small lockers beside the ticket desk free of charge during the work. The technician expects to finish by noon on Thursday."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-locker-01",
+        "prompt": "By when must users remove their belongings?",
+        "options": [
+          "Wednesday at noon",
+          "Thursday at noon",
+          "Wednesday at 6 p.m.",
+          "Thursday at 6 p.m."
+        ],
+        "answer": "Wednesday at 6 p.m.",
+        "evidence": "Empty these lockers by 6 p.m. on Wednesday.",
+        "paraphrase": "remove belongings → empty the lockers",
+        "en": "The deadline for emptying the lockers is Wednesday evening. Thursday noon is the expected end of the work.",
+        "zh": "取出物品的截止时间是周三晚上六点；周四中午是预计完工时间。"
+      },
+      {
+        "id": "read-locker-02",
+        "prompt": "What is available at no cost during the work?",
+        "options": [
+          "A technician's tool kit",
+          "Other lockers near the ticket desk",
+          "Tickets for West Hall",
+          "Replacement locks to take home"
+        ],
+        "answer": "Other lockers near the ticket desk",
+        "evidence": "You may use the small lockers beside the ticket desk free of charge",
+        "paraphrase": "at no cost → free of charge",
+        "en": "The alternative small lockers can be used without payment.",
+        "zh": "检修期间，售票台旁的小储物柜可以免费使用。"
+      }
+    ]
+  },
+  {
+    "id": "read-lamp",
+    "level": 500,
+    "part": 7,
+    "title": "台灯试用广告",
+    "documents": [
+      {
+        "type": "广告",
+        "title": "Try a Finch desk lamp at your own desk",
+        "text": "Not sure which lamp suits your work area? Borrow our display model for two evenings and test it at home. Leave a refundable deposit of $20 at the counter. We return the full amount when you bring the lamp back on time, whether you buy a lamp or not.\n\nThe display model comes with a clamp. If your desk has a glass top, ask us for a freestanding base instead. Both fittings are included in the trial at the same price."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-lamp-01",
+        "prompt": "What must a borrower do to get the full deposit back?",
+        "options": [
+          "Keep the lamp for a week",
+          "Purchase a lamp from the shop",
+          "Borrow both types of base",
+          "Return the lamp within the trial period"
+        ],
+        "answer": "Return the lamp within the trial period",
+        "evidence": "We return the full amount when you bring the lamp back on time",
+        "paraphrase": "within the trial period → on time",
+        "en": "An on-time return is the condition for a full refund. A purchase is optional.",
+        "zh": "全额退押金的条件是按时归还，购买台灯并非领取退款的条件。"
+      },
+      {
+        "id": "read-lamp-02",
+        "prompt": "What does the shop suggest for glass desks?",
+        "options": [
+          "Pay a higher trial fee.",
+          "Take the lamp without any fitting.",
+          "Request a base that stands on the desk.",
+          "Use the clamp with extra force."
+        ],
+        "answer": "Request a base that stands on the desk.",
+        "evidence": "If your desk has a glass top, ask us for a freestanding base instead.",
+        "paraphrase": "stands on the desk → freestanding",
+        "en": "For a glass surface, the shop suggests a freestanding base in place of the clamp.",
+        "zh": "玻璃桌面建议改用独立底座，freestanding 指无需夹在桌边也能站稳。"
+      }
+    ]
+  },
+  {
+    "id": "read-printer",
+    "level": 500,
+    "part": 7,
+    "title": "同事聊天记录",
+    "documents": [
+      {
+        "type": "聊天记录",
+        "title": "Packing team · Thursday",
+        "text": "08:42 Ben: The printer by the lift has run out of label rolls. Can I use the office printer for today's shipping labels?\n08:43 Hana: The office printer only takes plain paper. I put the last spare roll in the top drawer by the lift yesterday.\n08:44 Ben: Found it, thanks. I'll get the parcels ready now.\n08:46 Hana: Good. I'll order more rolls before lunch. We should have enough for today."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-printer-01",
+        "prompt": "What does Ben mean by “Found it”?",
+        "options": [
+          "He found a missing parcel.",
+          "He located a spare roll of labels.",
+          "He located the lunch order.",
+          "He discovered a new printer setting."
+        ],
+        "answer": "He located a spare roll of labels.",
+        "evidence": "I put the last spare roll in the top drawer by the lift yesterday.",
+        "paraphrase": "it → the last spare roll",
+        "en": "Hana has just told Ben where to find the roll. His reply confirms that he located it.",
+        "zh": "Hana 刚说备用标签卷在电梯旁的抽屉里，it 指那卷标签。"
+      },
+      {
+        "id": "read-printer-02",
+        "prompt": "What does Hana plan to do?",
+        "options": [
+          "Collect the parcels at noon",
+          "Print labels on plain paper",
+          "Move the printer upstairs",
+          "Replenish the label supply"
+        ],
+        "answer": "Replenish the label supply",
+        "evidence": "I'll order more rolls before lunch.",
+        "paraphrase": "replenish the supply → order more rolls",
+        "en": "Hana says she will order additional rolls before lunch.",
+        "zh": "Hana 要在午饭前订更多标签卷，replenish 表示“补充”。"
+      }
+    ]
+  },
+  {
+    "id": "read-orientation",
+    "level": 600,
+    "part": 7,
+    "title": "培训计划调整",
+    "documents": [
+      {
+        "type": "日程",
+        "title": "New starter morning · original plan",
+        "text": "09:00–09:30  Welcome and building tour · Reception\n09:30–10:15  Safe lifting demonstration · Loading Bay\n10:15–10:30  Break · Staff Room\n10:30–11:15  Customer calls practice · Room C\n\nPlease bring your training folder to all sessions."
+      },
+      {
+        "type": "邮件",
+        "title": "Subject: Tomorrow’s demonstration",
+        "text": "Hello everyone,\n\nThe instructor for the safe lifting demonstration will show a video indoors because of heavy rain. Meet in Room B at the time shown on the plan. All other sessions and times remain as listed.\n\nEli, Training Coordinator"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-orientation-01",
+        "prompt": "Where should trainees be at 9:30?",
+        "options": [
+          "Room C",
+          "Room B",
+          "Reception",
+          "Loading Bay"
+        ],
+        "answer": "Room B",
+        "evidence": "Meet in Room B at the time shown on the plan.",
+        "paraphrase": "at the time shown → at the original 09:30 start",
+        "en": "The plan sets safe lifting for 09:30. The email replaces its Loading Bay venue with Room B.",
+        "zh": "日程把搬运示范定在 9:30，新邮件要求同一时间在 B 室集合，地点取新、时间照旧。"
+      },
+      {
+        "id": "read-orientation-02",
+        "prompt": "Which activity will still take place in Room C?",
+        "options": [
+          "Taking a refreshment break",
+          "Watching a lifting video",
+          "Practicing calls with customers",
+          "Touring the building"
+        ],
+        "answer": "Practicing calls with customers",
+        "evidence": "10:30–11:15  Customer calls practice · Room C",
+        "paraphrase": "practicing calls with customers → customer calls practice",
+        "en": "The plan puts call practice in Room C, and the email leaves every session other than safe lifting unchanged.",
+        "zh": "原日程中 C 室安排客户电话练习。邮件只调整搬运示范，所以该活动照常。"
+      }
+    ]
+  },
+  {
+    "id": "read-plants",
+    "level": 700,
+    "part": 7,
+    "title": "绿植租赁方案",
+    "documents": [
+      {
+        "type": "报价单",
+        "title": "Leaf Cart · four-week rentals",
+        "text": "Standard pot: $12 per pot. Watering by the customer.\nService pot: $18 per pot. Includes one watering visit per week.\nDelivery is free for orders of five pots or more. For smaller orders, add $8 per delivery. Pots must be returned to the counter after four weeks."
+      },
+      {
+        "type": "邮件",
+        "title": "Subject: Plants for the reception area",
+        "text": "Hello Leaf Cart,\n\nPlease reserve four standard pots for our reception area for four weeks. Our caretaker is happy to water them. We will need delivery, as the pots will not fit on our trolley. I can return them myself when the rental ends.\n\nTan, Office Coordinator"
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-plants-01",
+        "prompt": "What is the total rental and delivery charge for Tan's request?",
+        "options": [
+          "$48",
+          "$56",
+          "$80",
+          "$72"
+        ],
+        "answer": "$56",
+        "evidence": "For smaller orders, add $8 per delivery.",
+        "paraphrase": "four standard pots → four at $12, below the free-delivery threshold",
+        "en": "Four standard pots cost $48. Four is fewer than five, so the $8 delivery charge makes the total $56.",
+        "zh": "四盆标准款共 48 美元。数量未到五盆，需加 8 美元配送费，合计 56 美元。"
+      },
+      {
+        "id": "read-plants-02",
+        "prompt": "Which service will Tan's team provide for itself during the rental?",
+        "options": [
+          "Supplying a larger trolley",
+          "Delivering the plants to reception",
+          "Watering the plants",
+          "Extending the rental period"
+        ],
+        "answer": "Watering the plants",
+        "evidence": "Our caretaker is happy to water them.",
+        "paraphrase": "provide for itself → handled by the customer's caretaker",
+        "en": "The quote assigns watering to customers on the standard plan. Tan confirms that a caretaker will do it.",
+        "zh": "报价单说明标准款由客户浇水，邮件确认会由管理员照料。"
+      }
+    ]
+  },
+  {
+    "id": "read-staging",
+    "level": 800,
+    "part": 7,
+    "title": "展架交付记录",
+    "documents": [
+      {
+        "type": "订单",
+        "title": "Order 814 · display stands",
+        "text": "Birch Books ordered six narrow display stands for its East and West branches. Purchase note: send four to East and two to West. Both branches need their stands before Saturday's display change. No substitutions without approval."
+      },
+      {
+        "type": "送货记录",
+        "title": "Friday · route sheet",
+        "text": "10:10 — East branch: three narrow stands delivered; receipt signed by Lee.\n10:55 — West branch: three narrow stands delivered; receipt signed by Dara.\nNo damaged units reported. Van returns to the depot at 13:00."
+      },
+      {
+        "type": "聊天记录",
+        "title": "Branch coordinators · Friday",
+        "text": "11:15 Lee: We can assemble ours this afternoon if the numbers are corrected.\n11:17 Dara: I have checked the stockroom here. The spare is still packed. Our shuttle leaves for your branch at noon, so I can put it on board.\n11:20 Lee: Yes, please. I'll meet the shuttle at our rear door."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-staging-01",
+        "prompt": "Why does Dara refer to a stand as “the spare”?",
+        "options": [
+          "A substitute model needs approval.",
+          "West received one more stand than it ordered.",
+          "East canceled its display change.",
+          "One unit was damaged in transit."
+        ],
+        "answer": "West received one more stand than it ordered.",
+        "evidence": "10:55 — West branch: three narrow stands delivered",
+        "paraphrase": "two requested versus three delivered → one extra",
+        "en": "The purchase note allocates two units to West. The route sheet records three delivered there, leaving one extra.",
+        "zh": "订单给西店分配两台，送货记录却是三台，所以西店有一台多出来的展架。"
+      },
+      {
+        "id": "read-staging-02",
+        "prompt": "How will the order most likely be corrected?",
+        "options": [
+          "Both stores will wait for a new order on Saturday.",
+          "East will send one assembled stand to West.",
+          "One packed stand will travel from West to East on the noon shuttle.",
+          "The delivery van will collect all six stands at one."
+        ],
+        "answer": "One packed stand will travel from West to East on the noon shuttle.",
+        "evidence": "Our shuttle leaves for your branch at noon, so I can put it on board.",
+        "paraphrase": "put it on board → send the extra stand on the shuttle",
+        "en": "Dara offers to send West's surplus to Lee at East, which received three of its four stands. Lee agrees.",
+        "zh": "东店应收四台却只有三台，西店正好多一台。Dara 提议用中午班车运过去，Lee 已同意。"
+      }
+    ]
+  },
+  {
+    "id": "read-proof",
+    "level": 900,
+    "part": 7,
+    "title": "印刷稿版本核对",
+    "documents": [
+      {
+        "type": "报价条款",
+        "title": "Foldline Press · proof and print policy",
+        "text": "The quoted price includes one digital proof and one round of customer corrections. A further round requested by the customer costs $35. Changes needed to resolve errors introduced by our production team are free and do not count toward the included round. Printing starts only after written approval of the final proof."
+      },
+      {
+        "type": "邮件",
+        "title": "From: J. Moss, Garden Walks · Proof 1",
+        "text": "The route map looks right. We sent you an outdated meeting time in our original file; please change 8:15 to 8:45 on page two. No other revisions from us. Please send the updated proof before printing."
+      },
+      {
+        "type": "邮件",
+        "title": "From: Foldline production · Proof 2",
+        "text": "We changed the time as requested. During that edit we accidentally moved the map key over the north arrow. Our designer will restore the map key this afternoon and send Proof 3. Please reply to that version with your approval if everything is in order."
+      }
+    ],
+    "questions": [
+      {
+        "id": "read-proof-01",
+        "prompt": "Why should fixing the map key leave the invoice total unchanged?",
+        "options": [
+          "All changes are free before the first print run.",
+          "The printer introduced the layout error.",
+          "The customer still has two free revision rounds.",
+          "The customer supplied a replacement map."
+        ],
+        "answer": "The printer introduced the layout error.",
+        "evidence": "During that edit we accidentally moved the map key over the north arrow.",
+        "paraphrase": "printer introduced the layout error → production team accidentally moved the key",
+        "en": "The meeting-time correction uses the included customer round. The printer caused the map error, which the terms say it must correct for free.",
+        "zh": "更正集合时间占用一轮客户修改；图例错位由印厂造成，根据条款应免费修正。"
+      },
+      {
+        "id": "read-proof-02",
+        "prompt": "What must happen after Foldline restores the map key and before printing begins?",
+        "options": [
+          "Garden Walks must pay $35 for Proof 3.",
+          "The designer must remove the north arrow.",
+          "Garden Walks must approve the new proof in writing.",
+          "Production must restore the original meeting time."
+        ],
+        "answer": "Garden Walks must approve the new proof in writing.",
+        "evidence": "Printing starts only after written approval of the final proof.",
+        "paraphrase": "approve the new proof in writing → reply to Proof 3 with approval",
+        "en": "Proof 3 is the corrected version. The policy requires written approval, and the latest email tells the customer to reply to that version.",
+        "zh": "Proof 3 才是修正后的版本。条款要求书面批准，最新邮件也请客户回复该版本确认。"
+      }
+    ]
+  }
+]

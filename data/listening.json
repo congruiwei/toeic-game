@@ -1,0 +1,842 @@
+[
+  {
+    "id": "p3-g01",
+    "part": 3,
+    "level": 400,
+    "title": "前台的对话",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Good morning. I'm here for the safety workshop. Is this the right desk?"
+      },
+      {
+        "speaker": "B",
+        "text": "Yes. Please write your name on this sheet. The workshop is in the room next to the kitchen."
+      },
+      {
+        "speaker": "A",
+        "text": "Thanks. Do I need to bring my own notebook?"
+      },
+      {
+        "speaker": "B",
+        "text": "No. There is a notebook on every chair. Just take a visitor badge before you go in."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g01-q1",
+        "prompt": "Why is the visitor there?",
+        "options": [
+          "To attend a training session",
+          "To deliver a kitchen appliance",
+          "To interview for a position",
+          "To buy office supplies"
+        ],
+        "answer": "To attend a training session",
+        "evidence": "I'm here for the safety workshop",
+        "paraphrase": "safety workshop → training session",
+        "en": "The visitor says the purpose of the visit is to join the safety workshop.",
+        "zh": "来访者说明自己要参加安全培训；workshop 对应 training session。"
+      },
+      {
+        "id": "p3-g01-q2",
+        "prompt": "What is already in the workshop room?",
+        "options": [
+          "Name badges",
+          "Notebooks",
+          "Registration sheets",
+          "Kitchen aprons"
+        ],
+        "answer": "Notebooks",
+        "evidence": "There is a notebook on every chair.",
+        "paraphrase": "on every chair → provided in the room",
+        "en": "Notebooks have been placed on the chairs, so the visitor need not bring one.",
+        "zh": "每张椅子上都有笔记本，可知会场已备好笔记本。"
+      },
+      {
+        "id": "p3-g01-q3",
+        "prompt": "What should the visitor pick up before entering?",
+        "options": [
+          "A room key",
+          "A lunch voucher",
+          "A visitor badge",
+          "A pen"
+        ],
+        "answer": "A visitor badge",
+        "evidence": "Just take a visitor badge before you go in.",
+        "paraphrase": "take → pick up",
+        "en": "The final instruction is to take a badge before entering the room.",
+        "zh": "最后一句让来访者进屋前领取访客证。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g01-d",
+      "text": "There is a notebook on every chair.",
+      "answer": "notebook"
+    }
+  },
+  {
+    "id": "p4-g01",
+    "part": 4,
+    "level": 400,
+    "title": "店内广播",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Good afternoon, shoppers. Our upstairs checkout is closed for the rest of the day. Please pay for all items at the front counter on the ground floor. If you are picking up an online order, go to the small desk beside the front counter. Have your order number ready. Thank you for shopping with us."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g01-q1",
+        "prompt": "Where is this announcement being made?",
+        "options": [
+          "At a train station",
+          "In a hospital",
+          "In a store",
+          "At a school"
+        ],
+        "answer": "In a store",
+        "evidence": "Good afternoon, shoppers.",
+        "paraphrase": "shoppers → store customers",
+        "en": "Shoppers, a checkout, and a front counter all point to a retail store.",
+        "zh": "称呼 shoppers 并提到账台，表明场景是在商店。"
+      },
+      {
+        "id": "p4-g01-q2",
+        "prompt": "Where should a customer pay for an item?",
+        "options": [
+          "At the upstairs checkout",
+          "At the online pickup desk",
+          "At a counter near the lifts",
+          "At the ground-floor front counter"
+        ],
+        "answer": "At the ground-floor front counter",
+        "evidence": "Please pay for all items at the front counter on the ground floor.",
+        "paraphrase": "pay for items → use the front counter",
+        "en": "The front counter handles all payments while the upstairs checkout is closed.",
+        "zh": "楼上收银台关闭，所有商品须在底层前台结账。"
+      },
+      {
+        "id": "p4-g01-q3",
+        "prompt": "What should someone collecting an online purchase have ready?",
+        "options": [
+          "An order number",
+          "A bank statement",
+          "A shopping bag",
+          "A gift card"
+        ],
+        "answer": "An order number",
+        "evidence": "Have your order number ready.",
+        "paraphrase": "collecting an online purchase → picking up an online order",
+        "en": "The announcement tells pickup customers to prepare their order number.",
+        "zh": "取网购商品时须准备好订单号。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g01-d",
+      "text": "Have your order number ready.",
+      "answer": "number"
+    }
+  },
+  {
+    "id": "p3-g02",
+    "part": 3,
+    "level": 500,
+    "title": "办公室的午后",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Maya, the print shop sent over the posters for Saturday. Where shall I put them?"
+      },
+      {
+        "speaker": "B",
+        "text": "Leave one by the entrance. The rest are for the market stalls, but the stall owners won't be here until tomorrow."
+      },
+      {
+        "speaker": "A",
+        "text": "I'll keep those in the supply cupboard overnight. Do you want me to tell the owners?"
+      },
+      {
+        "speaker": "B",
+        "text": "Yes, please send them a message before lunch so they know where to collect their posters."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g02-q1",
+        "prompt": "Where should one poster be placed?",
+        "options": [
+          "In the print shop window",
+          "On the market gate",
+          "Near the entrance",
+          "Beside the cupboard"
+        ],
+        "answer": "Near the entrance",
+        "evidence": "Leave one by the entrance.",
+        "paraphrase": "by the entrance → near the entrance",
+        "en": "Maya asks for one poster to be left by the entrance.",
+        "zh": "Maya 指定其中一张放在入口旁。"
+      },
+      {
+        "id": "p3-g02-q2",
+        "prompt": "Why will some posters be stored overnight?",
+        "options": [
+          "The ink is still wet",
+          "The print shop needs extra space",
+          "Saturday's market has been canceled",
+          "Their recipients will arrive the next day"
+        ],
+        "answer": "Their recipients will arrive the next day",
+        "evidence": "the stall owners won't be here until tomorrow",
+        "paraphrase": "won't be here until tomorrow → arriving the next day",
+        "en": "The stall owners cannot collect the posters today, so the posters will be kept overnight.",
+        "zh": "摊主明天才到，给他们的海报需要暂存一夜。"
+      },
+      {
+        "id": "p3-g02-q3",
+        "prompt": "What is the first speaker asked to do before lunch?",
+        "options": [
+          "Contact the stall owners",
+          "Collect the posters from the shop",
+          "Open the market gates",
+          "Return an entrance sign"
+        ],
+        "answer": "Contact the stall owners",
+        "evidence": "please send them a message before lunch",
+        "paraphrase": "send them a message → contact the stall owners",
+        "en": "Them refers to the stall owners who need pickup information.",
+        "zh": "them 指摊主，午餐前要发消息告知领取地点。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g02-d",
+      "text": "I'll keep those in the supply cupboard overnight.",
+      "answer": "cupboard"
+    }
+  },
+  {
+    "id": "p4-g02",
+    "part": 4,
+    "level": 500,
+    "title": "一则旅行留言",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Hello, this is Angel from Cedar Travel with a message about your airport pickup on Monday. The car will meet you at Door Three, outside the arrivals hall. Your driver will hold a yellow sign with your company name. If your flight is late, call our office when you land. We'll contact the driver for you."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g02-q1",
+        "prompt": "What is the message mainly about?",
+        "options": [
+          "Arrangements for ground transportation",
+          "A change to a flight number",
+          "The cost of a hotel room",
+          "An airport job opening"
+        ],
+        "answer": "Arrangements for ground transportation",
+        "evidence": "a message about your airport pickup on Monday",
+        "paraphrase": "airport pickup → ground transportation arrangements",
+        "en": "The speaker explains where to meet a car and how to identify the driver.",
+        "zh": "留言说明机场接车的地点及辨认司机的方法。"
+      },
+      {
+        "id": "p4-g02-q2",
+        "prompt": "How can the traveler recognize the driver?",
+        "options": [
+          "By a numbered badge",
+          "By a yellow sign",
+          "By a green jacket",
+          "By a travel brochure"
+        ],
+        "answer": "By a yellow sign",
+        "evidence": "Your driver will hold a yellow sign with your company name.",
+        "paraphrase": "hold a yellow sign → be recognized by a sign",
+        "en": "The sign with the company name identifies the driver.",
+        "zh": "司机将举写有公司名的黄色牌子。"
+      },
+      {
+        "id": "p4-g02-q3",
+        "prompt": "What should the traveler do if the plane arrives late?",
+        "options": [
+          "Call the driver before takeoff",
+          "Book a second vehicle",
+          "Call the travel office after landing",
+          "Wait inside the departure hall"
+        ],
+        "answer": "Call the travel office after landing",
+        "evidence": "If your flight is late, call our office when you land.",
+        "paraphrase": "when you land → after landing",
+        "en": "The travel office asks to be called after landing so it can notify the driver.",
+        "zh": "若航班晚点，落地后应先联系旅行社，由旅行社联系司机。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g02-d",
+      "text": "We'll contact the driver for you.",
+      "answer": "driver"
+    }
+  },
+  {
+    "id": "p3-g03",
+    "part": 3,
+    "level": 600,
+    "title": "订单跟进",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I've checked the delivery against our order. The ten blue aprons are here, but there are only six white ones. We ordered eight."
+      },
+      {
+        "speaker": "B",
+        "text": "Can we wait for the supplier to send the missing ones?"
+      },
+      {
+        "speaker": "A",
+        "text": "The kitchen opens on Friday, so yes, if they can get here by Thursday evening."
+      },
+      {
+        "speaker": "B",
+        "text": "I'll ask them to confirm a delivery date in writing. Keep the carton until we've heard back."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g03-q1",
+        "prompt": "What problem has been found?",
+        "options": [
+          "Two white aprons are missing",
+          "The blue aprons are the wrong size",
+          "The carton arrived damaged",
+          "The supplier delivered an extra box"
+        ],
+        "answer": "Two white aprons are missing",
+        "evidence": "there are only six white ones. We ordered eight.",
+        "paraphrase": "six received out of eight → short by two",
+        "en": "Eight white aprons were ordered and six arrived, leaving a shortage of two.",
+        "zh": "白围裙订了八条，只收到六条，因此少两条。"
+      },
+      {
+        "id": "p3-g03-q2",
+        "prompt": "When must the remaining items arrive?",
+        "options": [
+          "By Thursday morning",
+          "By Thursday evening",
+          "On Friday evening",
+          "On Saturday morning"
+        ],
+        "answer": "By Thursday evening",
+        "evidence": "if they can get here by Thursday evening",
+        "paraphrase": "get here by → arrive no later than",
+        "en": "The first speaker gives Thursday evening as the latest acceptable arrival time.",
+        "zh": "第一位说话人明确说最迟需要在周四晚上送达。"
+      },
+      {
+        "id": "p3-g03-q3",
+        "prompt": "What will the second speaker request?",
+        "options": [
+          "A refund for all the aprons",
+          "A new price list",
+          "Written confirmation of an arrival date",
+          "A copy of the opening menu"
+        ],
+        "answer": "Written confirmation of an arrival date",
+        "evidence": "I'll ask them to confirm a delivery date in writing.",
+        "paraphrase": "in writing → written confirmation",
+        "en": "The speaker plans to ask the supplier for a written delivery date.",
+        "zh": "对方会向供应商索取书面的交货日期确认。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g03-d",
+      "text": "Keep the carton until we've heard back.",
+      "answer": "carton"
+    }
+  },
+  {
+    "id": "p4-g03",
+    "part": 4,
+    "level": 600,
+    "title": "楼内设施通知",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "This is a notice for tenants of Harbor House. The east lift will be out of service on Wednesday morning while its doors are being adjusted. The west lift will run as usual. If you're expecting large deliveries, please ask your supplier to come after two in the afternoon. The loading bay will be used for the repair crew's equipment until then."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g03-q1",
+        "prompt": "Who is the notice intended for?",
+        "options": [
+          "Customers visiting a furniture shop",
+          "Passengers at a harbor",
+          "People who rent space in the building",
+          "Drivers taking a licensing test"
+        ],
+        "answer": "People who rent space in the building",
+        "evidence": "This is a notice for tenants of Harbor House.",
+        "paraphrase": "tenants → people who rent space",
+        "en": "The speaker addresses the building's tenants directly.",
+        "zh": "通知开头明确面向 Harbor House 的租户。"
+      },
+      {
+        "id": "p4-g03-q2",
+        "prompt": "Which facility will operate normally?",
+        "options": [
+          "The east lift",
+          "The loading bay all morning",
+          "The east lift doors during adjustment",
+          "The west lift"
+        ],
+        "answer": "The west lift",
+        "evidence": "The west lift will run as usual.",
+        "paraphrase": "run as usual → operate normally",
+        "en": "Only the west lift is expressly said to run as usual.",
+        "zh": "明确说明照常运行的是西侧电梯。"
+      },
+      {
+        "id": "p4-g03-q3",
+        "prompt": "Why should large deliveries be scheduled for later?",
+        "options": [
+          "Repair equipment will occupy the loading area",
+          "Suppliers charge more in the morning",
+          "The west lift will be reserved for tenants",
+          "The building opens late on Wednesdays"
+        ],
+        "answer": "Repair equipment will occupy the loading area",
+        "evidence": "The loading bay will be used for the repair crew's equipment until then.",
+        "paraphrase": "used for the crew's equipment → occupied by repair equipment",
+        "en": "The equipment takes up the loading bay until two, limiting access for deliveries.",
+        "zh": "装卸区在两点前要放维修设备，因此大件送货应延后。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g03-d",
+      "text": "The west lift will run as usual.",
+      "answer": "usual"
+    }
+  },
+  {
+    "id": "p3-g04",
+    "part": 3,
+    "level": 700,
+    "title": "场地协调",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The sponsor wants a quiet spot for the interviews at our design fair. I put them in the glass room near the stage."
+      },
+      {
+        "speaker": "B",
+        "text": "Quiet? The sound check starts at ten, when the interviews begin. That room picks up every note."
+      },
+      {
+        "speaker": "A",
+        "text": "Good point. Is the room behind the ticket desk free?"
+      },
+      {
+        "speaker": "B",
+        "text": "I reserved it for volunteers, but they only need a place to leave coats. They can use the lockers. I'll update the room list."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g04-q1",
+        "prompt": "What concern does the second speaker express?",
+        "options": [
+          "Tickets are selling too slowly",
+          "The sponsor needs a larger stage",
+          "Music could disrupt the interviews",
+          "There are too few volunteers"
+        ],
+        "answer": "Music could disrupt the interviews",
+        "evidence": "The sound check starts at ten, when the interviews begin.",
+        "paraphrase": "sound check during interviews → potential noise disruption",
+        "en": "The nearby stage will be noisy at the same time as the interviews.",
+        "zh": "试音与访谈同时进行，靠近舞台的玻璃房可能太吵。"
+      },
+      {
+        "id": "p3-g04-q2",
+        "prompt": "What does the second speaker mean by “That room picks up every note”?",
+        "options": [
+          "The room is equipped to record interviews",
+          "Written notes are collected in the room",
+          "Musicians must sign in there",
+          "Sounds from the stage can be heard clearly there"
+        ],
+        "answer": "Sounds from the stage can be heard clearly there",
+        "evidence": "That room picks up every note.",
+        "paraphrase": "picks up every note → lets stage sound carry in",
+        "en": "In this context every note refers to music heard from the nearby stage.",
+        "zh": "这里的 note 指音乐声；舞台的声音在房间里听得很清楚。"
+      },
+      {
+        "id": "p3-g04-q3",
+        "prompt": "Why can the volunteers give up their room?",
+        "options": [
+          "They can store their coats elsewhere",
+          "Their shift has been canceled",
+          "They are attending the interviews",
+          "Extra tickets are available"
+        ],
+        "answer": "They can store their coats elsewhere",
+        "evidence": "they only need a place to leave coats. They can use the lockers.",
+        "paraphrase": "leave coats in lockers → use alternative storage",
+        "en": "The lockers meet the volunteers' only stated need for the room.",
+        "zh": "志愿者只需寄放外套，储物柜即可代替原先的房间。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g04-d",
+      "text": "They can use the lockers.",
+      "answer": "lockers"
+    }
+  },
+  {
+    "id": "p4-g04",
+    "part": 4,
+    "level": 700,
+    "title": "仓库交班说明",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Before we start packing, a quick update on our trial of reusable shipping trays. Last week we sent twenty trays to our three regular customers, and sixteen have already come back. That is encouraging, but two returned trays had loose corners. Set any damaged tray on the orange shelf so the supplier can inspect it. For today's orders, use the cardboard cartons unless a customer specifically requests a tray."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g04-q1",
+        "prompt": "What is the speaker reporting on?",
+        "options": [
+          "A trial of reusable packaging",
+          "A change to supplier invoices",
+          "A course in shelf assembly",
+          "Hiring for a night shift"
+        ],
+        "answer": "A trial of reusable packaging",
+        "evidence": "our trial of reusable shipping trays",
+        "paraphrase": "shipping trays → reusable packaging",
+        "en": "The speaker reports returns and damage during a packaging trial.",
+        "zh": "说话人汇报可重复使用的运输托盘试用情况，包括回收和损坏情况。"
+      },
+      {
+        "id": "p4-g04-q2",
+        "prompt": "What is the orange shelf for?",
+        "options": [
+          "Storing new cartons for today's orders",
+          "Holding damaged trays for inspection",
+          "Displaying items for customers",
+          "Organizing outgoing invoices"
+        ],
+        "answer": "Holding damaged trays for inspection",
+        "evidence": "Set any damaged tray on the orange shelf so the supplier can inspect it.",
+        "paraphrase": "set aside for inspection → hold for examination",
+        "en": "Damaged trays are put there for the supplier to check.",
+        "zh": "损坏的托盘要单独放在橙色架上，供供应商检查。"
+      },
+      {
+        "id": "p4-g04-q3",
+        "prompt": "When should a tray be used today?",
+        "options": [
+          "Whenever a carton is damaged",
+          "For every order from a regular customer",
+          "When a customer explicitly asks for one",
+          "Only when twenty trays have returned"
+        ],
+        "answer": "When a customer explicitly asks for one",
+        "evidence": "use the cardboard cartons unless a customer specifically requests a tray",
+        "paraphrase": "unless specifically requested → only on explicit request",
+        "en": "Cartons are the default, and a specific request is the exception.",
+        "zh": "今天默认用纸箱，客户明确要求使用托盘时才例外。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g04-d",
+      "text": "Set any damaged tray on the orange shelf so the supplier can inspect it.",
+      "answer": "inspect"
+    }
+  },
+  {
+    "id": "p3-g05",
+    "part": 3,
+    "level": 800,
+    "title": "费用核对",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The estimate for the window display came in under budget. Can we tell the studio to begin cutting the panels?"
+      },
+      {
+        "speaker": "B",
+        "text": "Have you looked at the small print? Transport is included, but fitting the panels on site isn't."
+      },
+      {
+        "speaker": "A",
+        "text": "I assumed the store crew would install them. Is that off the table?"
+      },
+      {
+        "speaker": "B",
+        "text": "They aren't certified to work at that height. Ask the studio for a figure that includes installation before we give them the go-ahead."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g05-q1",
+        "prompt": "Which service is missing from the estimate?",
+        "options": [
+          "Installing the panels at the store",
+          "Transporting the panels",
+          "Cutting the display panels",
+          "Designing a replacement window"
+        ],
+        "answer": "Installing the panels at the store",
+        "evidence": "Transport is included, but fitting the panels on site isn't.",
+        "paraphrase": "fitting on site → installation at the store",
+        "en": "Transport is covered while the cost of installation is excluded.",
+        "zh": "报价含运输，但不含到店安装面板的费用。"
+      },
+      {
+        "id": "p3-g05-q2",
+        "prompt": "Why is the store crew unable to help as expected?",
+        "options": [
+          "The crew is working at another branch",
+          "Its members lack a required qualification",
+          "The studio owns the only suitable van",
+          "Its manager rejected the panel design"
+        ],
+        "answer": "Its members lack a required qualification",
+        "evidence": "They aren't certified to work at that height.",
+        "paraphrase": "not certified → lack a required qualification",
+        "en": "The work requires certification for the height involved, which the crew lacks.",
+        "zh": "店员没有该高度作业所需的资质，因此不能负责安装。"
+      },
+      {
+        "id": "p3-g05-q3",
+        "prompt": "What needs to happen before the studio starts work?",
+        "options": [
+          "The display needs to be shortened",
+          "The panel color must be approved",
+          "It must provide a more complete estimate",
+          "The crew must purchase a delivery van"
+        ],
+        "answer": "It must provide a more complete estimate",
+        "evidence": "Ask the studio for a figure that includes installation before we give them the go-ahead.",
+        "paraphrase": "give the go-ahead → authorize work to start",
+        "en": "The team wants a figure covering installation before authorizing work.",
+        "zh": "团队要先取得包含安装费的报价，才会批准动工。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g05-d",
+      "text": "They aren't certified to work at that height.",
+      "answer": "certified"
+    }
+  },
+  {
+    "id": "p4-g05",
+    "part": 4,
+    "level": 800,
+    "title": "会员服务留言",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "Hello, Ms. Perez. This is Lee at Meadow Studios about your pottery membership. You asked to pause it while our large kiln is being replaced. We've extended your access by two weeks at no charge instead, so you can still use the wheels during the repair. If that arrangement doesn't suit you, reply to the email I sent this morning before Friday. I can then switch your account to a full pause beginning next Monday."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g05-q1",
+        "prompt": "Why did the member request a pause?",
+        "options": [
+          "Her course has reached its final week",
+          "A membership charge was duplicated",
+          "A piece of studio equipment is being replaced",
+          "She plans to teach at another studio"
+        ],
+        "answer": "A piece of studio equipment is being replaced",
+        "evidence": "You asked to pause it while our large kiln is being replaced.",
+        "paraphrase": "kiln being replaced → equipment replacement",
+        "en": "The kiln replacement prompted the member to ask for a pause.",
+        "zh": "会员因大型陶窑更换而请求暂停会籍。"
+      },
+      {
+        "id": "p4-g05-q2",
+        "prompt": "What has the studio already done?",
+        "options": [
+          "Suspended all workshop access",
+          "Issued a cash refund",
+          "Sent the member a new wheel",
+          "Added free time to the membership"
+        ],
+        "answer": "Added free time to the membership",
+        "evidence": "We've extended your access by two weeks at no charge instead",
+        "paraphrase": "at no charge → free of cost",
+        "en": "The studio has already added two weeks without charging a fee.",
+        "zh": "工作室已将使用期免费延长两周。"
+      },
+      {
+        "id": "p4-g05-q3",
+        "prompt": "What should Ms. Perez do if she prefers the original request?",
+        "options": [
+          "Respond to an email before Friday",
+          "Visit the studio on Monday morning",
+          "Pay an adjustment fee online",
+          "Reserve the kiln by phone"
+        ],
+        "answer": "Respond to an email before Friday",
+        "evidence": "reply to the email I sent this morning before Friday",
+        "paraphrase": "prefers a full pause → reply before the deadline",
+        "en": "An email reply before Friday allows the studio to switch the account to a full pause.",
+        "zh": "如仍希望完全暂停会籍，应在周五之前回复邮件。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g05-d",
+      "text": "I can then switch your account to a full pause beginning next Monday.",
+      "answer": "account"
+    }
+  },
+  {
+    "id": "p3-g06",
+    "part": 3,
+    "level": 900,
+    "title": "进度评审",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "The vendor says eighty percent of the archive has been indexed. That puts us ahead of schedule, doesn't it?"
+      },
+      {
+        "speaker": "B",
+        "text": "Only by file count. The outstanding fifth contains nearly all the handwritten forms, and those take three times as long to check."
+      },
+      {
+        "speaker": "A",
+        "text": "So our progress note shouldn't promise an early finish. Could we give a better estimate tomorrow?"
+      },
+      {
+        "speaker": "B",
+        "text": "Yes. I'll time a sample of the handwritten forms today. Then we can base the forecast on the work left, not just the number of files."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p3-g06-q1",
+        "prompt": "What assumption does the second speaker challenge?",
+        "options": [
+          "The vendor counted the files correctly",
+          "Handwritten forms belong in the archive",
+          "The percentage of files finished reflects the percentage of effort completed",
+          "All indexing was to be done by tomorrow"
+        ],
+        "answer": "The percentage of files finished reflects the percentage of effort completed",
+        "evidence": "The outstanding fifth contains nearly all the handwritten forms, and those take three times as long to check.",
+        "paraphrase": "three times as long → remaining files require disproportionate effort",
+        "en": "The remaining files are more time-consuming, so the file count overstates progress in terms of effort.",
+        "zh": "剩余文件多为耗时的手写表格；按份数完成八成，并不能据此推断所需工时也已完成八成。"
+      },
+      {
+        "id": "p3-g06-q2",
+        "prompt": "What does “the outstanding fifth” refer to?",
+        "options": [
+          "The fifth vendor shortlisted for the contract",
+          "An unusually successful batch of forms",
+          "A surcharge for handwritten documents",
+          "The portion of files that still needs indexing"
+        ],
+        "answer": "The portion of files that still needs indexing",
+        "evidence": "The outstanding fifth contains nearly all the handwritten forms",
+        "paraphrase": "the outstanding fifth → the remaining twenty percent",
+        "en": "Outstanding means still unfinished here. A fifth remains after eighty percent has been indexed.",
+        "zh": "outstanding 在此指尚未处理的，fifth 是五分之一，即剩余的 20%。"
+      },
+      {
+        "id": "p3-g06-q3",
+        "prompt": "What will the second speaker do to improve the forecast?",
+        "options": [
+          "Measure the processing time of selected forms",
+          "Ask for a larger archive",
+          "Count the indexed files again",
+          "Postpone the progress note for a month"
+        ],
+        "answer": "Measure the processing time of selected forms",
+        "evidence": "I'll time a sample of the handwritten forms today.",
+        "paraphrase": "time a sample → measure processing time for selected forms",
+        "en": "Timing a sample supplies evidence about how long the difficult remaining work takes.",
+        "zh": "抽样计时能估算费时表格的实际处理速度，从而改进预测。"
+      }
+    ],
+    "dictation": {
+      "id": "p3-g06-d",
+      "text": "I'll time a sample of the handwritten forms today.",
+      "answer": "sample"
+    }
+  },
+  {
+    "id": "p4-g06",
+    "part": 4,
+    "level": 900,
+    "title": "管理会议简报",
+    "turns": [
+      {
+        "speaker": "A",
+        "text": "I'd like to clarify our findings from the trial at the repair counter. Average waiting time fell from nine minutes to six after we introduced appointment slots. However, we also assigned an extra technician to that counter for the entire trial. Before we roll out appointments across all branches, we'll run another trial with the usual staffing level. For now, branch managers should continue using their existing queues and send me their hourly arrival counts by Tuesday."
+      }
+    ],
+    "questions": [
+      {
+        "id": "p4-g06-q1",
+        "prompt": "Why is the speaker cautious about the initial result?",
+        "options": [
+          "A staffing change may have contributed to the improvement",
+          "The average waiting time remained unchanged",
+          "No appointments were actually booked",
+          "Technicians recorded only the busiest hour"
+        ],
+        "answer": "A staffing change may have contributed to the improvement",
+        "evidence": "we also assigned an extra technician to that counter for the entire trial",
+        "paraphrase": "extra technician → another possible cause of the improvement",
+        "en": "Two factors changed together: appointments and staffing. The shorter wait cannot yet be attributed to appointments alone.",
+        "zh": "引入预约时也多派了一名技师；等待时间缩短，还不能单独归功于预约。"
+      },
+      {
+        "id": "p4-g06-q2",
+        "prompt": "How will the next trial differ?",
+        "options": [
+          "It will take place at every branch",
+          "It will operate with the usual number of staff",
+          "It will replace hourly counts with monthly totals",
+          "It will use longer appointment slots"
+        ],
+        "answer": "It will operate with the usual number of staff",
+        "evidence": "we'll run another trial with the usual staffing level",
+        "paraphrase": "usual staffing level → normal number of employees",
+        "en": "The next trial removes the extra technician as a difference from normal operations.",
+        "zh": "下一轮采用正常人员配置，排除增派技师这一差异。"
+      },
+      {
+        "id": "p4-g06-q3",
+        "prompt": "What should managers do by Tuesday?",
+        "options": [
+          "Introduce appointments at all branches",
+          "Hire an additional technician",
+          "Submit counts of arrivals by hour",
+          "Report the longest single wait"
+        ],
+        "answer": "Submit counts of arrivals by hour",
+        "evidence": "send me their hourly arrival counts by Tuesday",
+        "paraphrase": "hourly arrival counts → counts of arrivals by hour",
+        "en": "For now managers keep existing queues and supply hourly arrival figures by the deadline.",
+        "zh": "目前照常排队，经理需在周二前提交每小时到达的人数。"
+      }
+    ],
+    "dictation": {
+      "id": "p4-g06-d",
+      "text": "Average waiting time fell from nine minutes to six after we introduced appointment slots.",
+      "answer": "slots"
+    }
+  }
+]

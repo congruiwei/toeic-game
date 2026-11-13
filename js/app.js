@@ -1,3 +1,6 @@
+import {practiceView} from './practice.js';
+import {libraryView} from './library.js';
+import {learnView,configureView} from './training.js';
 import {icon} from './icons.js';
 import {creature,landscape} from './art.js';
 import {tileArt} from './tiles.js';
@@ -34,18 +37,9 @@ function home(){
  <section class="tasks">${sectionTitle('flag','探索任务', '<span class="section-note">任选一个开始</span>')}<div class="task-grid">${tasks.map(taskTile).join('')}</div></section>
  <div class="continue"><span class="continue-icon">${icon('compass',27)}</span><div><h3>${s.session?'上次的探险':'自由练习'}</h3><p>${s.session?esc(s.session.title)+' · '+Math.min(s.session.index+1,s.session.items.length)+' / '+s.session.items.length:'按主题与题型选择练习'}</p></div>${act(s.session?'resume':'nav',s.session?'继续学习 '+icon('arrow',16):'进入练习 '+icon('arrow',16),'primary','data-page="learn"')}</div>`;
 }
-function learn(){
- const options=Object.keys(names).filter(m=>m==='vocab'||m==='part2');
- return `<div class="page-title"><div class="eyebrow"><i></i> TRAINING</div><h1>练习地图</h1></div><div class="learn-grid">${options.map(m=>`<button class="learn-card panel" data-act="start" data-mode="${m}">${tileArt(m)}<strong>${names[m]}</strong>${icon('chev')}</button>`).join('')}</div>`;
-}
-function practiceView(){
- const a=s.session;if(!a)return learn();
- if(a.index>=a.items.length)return `<section class="panel quiz"><h1>探险完成</h1><p>答对 ${a.right} / ${a.items.length} · 获得 ${a.gain} XP</p>${act('home','回到小岛','primary')}</section>`;
- const q=question(a.items[a.index]);return `<section class="panel quiz">${act('leave','返回小岛','plain')}<p>${a.index+1} / ${a.items.length} · ${q.level} 级</p><h2>${esc(q.instruction)}</h2>${q.audio?act('play','点击开始 · 播放','primary'):''}<h3>${esc(q.prompt)}</h3><div class="choices">${q.options.map((v,i)=>act('answer',esc(v),'option',`data-i="${i}" ${a.selected!==null?'disabled':''}`)).join('')}</div>${a.selected!==null?`<p>${a.selected===q.answer?'答对了':'正确答案：'+esc(q.answer)}</p><p>${esc(q.en||q.example)}</p><p>${esc(q.zh)}</p>${act('next','继续','primary')}`:''}</section>`;
-}
 function render(){
  applyPrefs();frame();
- root.innerHTML=page==='home'?home():page==='learn'?learn():page==='library'?`<div class="page-title"><h1>词卡图鉴</h1></div><section class="panel quiz">${Object.keys(s.words).filter(k=>s.words[k].right).map(k=>esc(catalog.get(k)?.data.word)).join(' · ')||'答对单词即可收藏词卡。'}</section>`:practiceView(s);
+ root.innerHTML=page==='home'?home():page==='learn'?learnView(s):page==='library'?libraryView(s,tab,themeFilter):practiceView(s);
  root.setAttribute('aria-busy','false');if(page==='practice')startClock();
 }
 function pauseClock(){if(clockStart&&s.session){s.session.elapsed+=Math.max(0,Date.now()-clockStart);clockStart=0;save();}clearInterval(tick);}
@@ -66,11 +60,11 @@ function settings(){
  <p class="muted fine">口音和离线朗读取决于设备已安装的英语语音。</p><div class="backup"><h3>进度备份</h3>${act('export','导出进度','secondary')} ${act('import','导入进度','secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
 }
 let pending=null;
-function start(mode,filter='',only='',force=false){
+function start(mode,filter='',only='',force=false,format=''){
  if(s.session&&s.session.index<s.session.items.length&&!force){
- pending={mode,filter,only};modal(`<h2>切换这次练习？</h2><p>「${esc(s.session.title)}」还有未答题目。已经获得的经验和词卡都会保留。</p>${act('resume','继续上次练习','secondary')} ${act('replace','开始所选练习','primary')}`);return;}
+ pending={mode,filter,only,format};modal(`<h2>切换这次练习？</h2><p>「${esc(s.session.title)}」还有未答题目。已经获得的经验和词卡都会保留。</p>${act('resume','继续上次练习','secondary')} ${act('replace','开始所选练习','primary')}`);return;}
  let items=only?[s.errors[only]?.ref].filter(Boolean):select(s,mode,5,formats.includes(filter)?'':filter);
- if(mode==='vocab'&&formats.includes(filter))items=items.map(r=>({...r,format:filter}));
+ if(mode==='vocab'&&formats.includes(format||filter))items=items.map(r=>({...r,format:format||filter}));
  if(!items.length){toast('这里暂时没有待复习的题目');return;}
  pauseClock();if(dialog.open)close();s.session={mode,title:names[mode],items,index:0,right:0,gain:0,selected:null,elapsed:0,timed:mode==='reading'&&s.settings.timed,intro:items[0].mode==='grammar'};save();go('practice');
 }
@@ -89,6 +83,7 @@ let incoming=null;
 document.addEventListener('change',async e=>{
  const el=e.target,k=el.dataset.pref;
  if(k){s.settings[k]=el.type==='checkbox'?el.checked:k==='rate'?Number(el.value):el.value;save();applyPrefs();if(k==='rate')$('#rate-val').textContent=el.value+'×';return;}
+ if(el.id==='library-theme'){themeFilter=el.value;render();return;}
  if(el.id==='import-file'&&el.files[0]){
  try{if(el.files[0].size>5e6)throw Error('文件过大');const candidate=decode(await el.files[0].text());verifyRefs(candidate);incoming=candidate;
  modal(`<h2>恢复这份进度？</h2><p>备份中的伙伴是「${forms[incoming.stage]}」，共有 ${incoming.xp} XP。恢复后会替换当前设备的进度。</p>${act('restore','恢复备份','primary')}`);}
@@ -101,8 +96,15 @@ document.addEventListener('click',e=>{
  const el=e.target.closest('[data-act]');if(!el||el.disabled)return;
  const {act:a,mode,page:p,i,filter,id}=el.dataset;
  if(a==='nav')go(p);
+ if(a==='configure')modal(configureView(mode,s));
+ if(a==='configured'){
+   const f=$('#mode-filter')?.value||'',format=$('#vocab-format')?.value||'';
+   if($('#run-timed')){s.settings.timed=$('#run-timed').checked;save();}
+   start(mode,f,'',false,format);
+ }
+ if(a==='library-tab'){tab=el.dataset.tab;render();}
  if(a==='resume'){if(dialog.open)close();go('practice');}
- if(a==='replace'&&pending){const x=pending;pending=null;start(x.mode,x.filter,x.only,true);}
+ if(a==='replace'&&pending){const x=pending;pending=null;start(x.mode,x.filter,x.only,true,x.format);}
  if(a==='home'||a==='leave'){if(s.session?.index>=s.session?.items.length){s.session=null;save();}go('home');}
  if(a==='start')start(mode,filter);
  if(a==='review-one')start('errors','',id);
@@ -113,7 +115,7 @@ document.addEventListener('click',e=>{
  if(['answer','submit-dict','play','listen-choice'].includes(a)){
  const ref=s.session?.items[s.session.index];if(!ref)return;const q=question(ref);
  if(a==='answer')answer(q.options[Number(i)]);if(a==='submit-dict')answer($('#dict-input').value);
- if(a==='play'||a==='listen-choice'){speak(a==='play'?q.turns:[{text:q.options[Number(i)],speaker:'B'}],s.settings,toast);if(a==='play')el.setAttribute('aria-label','重新播放');}
+ if(a==='play'||a==='listen-choice'){speak(a==='play'?q.turns:[{text:q.options[Number(i)],speaker:'B'}],s.settings,toast);if(a==='play'){el.setAttribute('aria-label','重新播放');const label=el.querySelector('[data-play-label]');if(label)label.textContent='再听一次';}}
  }
  if(a==='next'&&s.session.selected!==null){hush();const b=s.session;b.index++;b.selected=null;
  const next=b.items[b.index];b.intro=!!next&&next.mode==='grammar'&&catalog.get(next.id).data.topic.id!==catalog.get(b.items[b.index-1].id).data.topic?.id;
@@ -125,10 +127,10 @@ document.addEventListener('click',e=>{
 document.addEventListener('visibilitychange',()=>{if(document.hidden){pauseClock();hush();}else if(page==='practice')startClock();});
 window.addEventListener('pagehide',pauseClock);
 async function boot(){
- try{await loadBank(['vocab','part2']);}catch{root.innerHTML='<h2>题库未能打开</h2><p>请联网后重新载入一次，以准备离线资源。</p>';return;}
+ try{await loadBank(['vocab','part2','grammar','listening','reading']);}catch{root.innerHTML='<h2>题库未能打开</h2><p>请联网后重新载入一次，以准备离线资源。</p>';return;}
  try{const raw=localStorage.getItem(KEY);if(raw){s=decode(raw);verifyRefs(s);}}catch{storageBroken=true;s=fresh();toast('原存档读取失败，已保留原始记录。可从设置导入备份。');}
  const now=Date.now();returnBonus=s.lastVisit>0&&now-s.lastVisit>=6*3600000;if(returnBonus)s.xp+=8;s.lastVisit=now;
- tasks=['vocab','part2','match'];save();render();if(returnBonus)toast('欢迎回来！获得 8 XP');
+ tasks=['vocab','part2',s.history.length&&Math.random()<.5?'reading':'grammar'];save();render();if(returnBonus)toast('欢迎回来！获得 8 XP');
  navigator.storage?.persist?.().catch(()=>{});
  if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>toast('离线资源未就绪，请联网后重开。'));
 }
