@@ -13,25 +13,47 @@ const normalize = text => text.normalize('NFKC').trim().replace(/\s+/gu,' ').toL
 const optionLength = text => [...normalize(text)].length;
 function measure(type, q) {
   if (!Array.isArray(q.options) || !q.options.every(o => typeof o === 'string') || !q.options.includes(q.answer)) return;
-  const report = distributions.get(type) || {total:0,longest:0,positions:[],expected:[]};
+  const report = distributions.get(type) || {
+    total: 0, longest: 0, varied: 0, shortestOnly: 0, longestOnly: 0, positions: [], expected: [],
+  };
+  const lengths = q.options.map(optionLength);
+  const key = q.options.indexOf(q.answer);
+  const length = lengths[key];
+  const lo = Math.min(...lengths), hi = Math.max(...lengths);
   report.total++;
-  if (optionLength(q.answer) === Math.max(...q.options.map(optionLength))) report.longest++;
-  q.options.forEach((option,i) => {
-    report.positions[i] = (report.positions[i] || 0) + Number(option === q.answer);
-    report.expected[i] = (report.expected[i] || 0) + 1/q.options.length;
+  if (length === hi) report.longest++;
+  if (lo !== hi) {
+    report.varied++;
+    if (lengths.filter(n => n === length).length === 1) {
+      if (length === lo) report.shortestOnly++;
+      if (length === hi) report.longestOnly++;
+    }
+  }
+  q.options.forEach((_, i) => {
+    report.positions[i] = (report.positions[i] || 0) + Number(i === key);
+    report.expected[i] = (report.expected[i] || 0) + 1 / q.options.length;
   });
   distributions.set(type, report);
 }
+
+function fraction(count, total) {
+  return total ? count+'/'+total+' ('+(100*count/total).toFixed(1)+'%)' : '—';
+}
+
 function reportDistributions() {
-  console.log('题型                 最长答案（含并列）       正确位置 A/B/C/D');
+  console.log('题型 | 最长（含并列） | 唯一最短¹ | 唯一最长¹ | 正确位置 A/B/C/D');
   for (const [type,r] of distributions) {
-    const ratio = r.longest/r.total;
-    console.log(type.padEnd(19) + (r.longest+'/'+r.total+' ('+(ratio*100).toFixed(1)+'%)').padEnd(21) + r.positions.join('/'));
-    expect(ratio <= .4, type, '正确答案为最长选项的比例超过 40%');
+    console.log([type, fraction(r.longest,r.total), fraction(r.shortestOnly,r.varied),
+      fraction(r.longestOnly,r.varied), r.positions.join('/')].join(' | '));
+    expect(r.longest <= .4*r.total, type, '正确答案为最长选项的比例超过 40%');
+    expect(r.shortestOnly <= .35*r.varied, type, '正确答案为唯一最短选项的比例超过 35%');
     const chi = r.positions.reduce((sum,n,i) => sum + (n-r.expected[i])**2/r.expected[i],0);
-    if (r.positions.some((n,i) => Math.abs(n-r.expected[i]) / r.total > .12) || chi > (r.positions.length===3?9.21:11.35))
+    const positioned = r.positions.reduce((a,b) => a+b,0);
+    if (positioned && (r.positions.some((n,i) => Math.abs(n-r.expected[i])/positioned > .12)
+      || chi > (r.positions.length===3?9.21:11.35)))
       warnings.push(type+' 答案位置分布偏离均匀值，实际 '+r.positions.join('/'));
   }
+  console.log('¹ 唯一最短、唯一最长的分母均排除所有选项等长的题。');
   for (const warning of warnings) console.warn('警告：'+warning);
 }
 
