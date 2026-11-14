@@ -55,7 +55,7 @@ export const voices = () => englishVoices(window.speechSynthesis?.getVoices() ||
 
 export function castVoices(turns, prefs, seed, list) {
   const cast = [...new Set(turns.map(t=>t.speaker))], assigned = new Map();
-  const start = Math.max(0, Number((String(seed).match(/\d+/g)||['1']).at(0))-1);
+  const start = Math.max(0, Number((String(seed).match(/\d+/g)||['1']).at(-1))-1);
   const installed = accents.filter(a=>list.some(v=>language(v)===a.toLowerCase()));
   const rotating = installed.length ? installed : accents;
   for(const s of cast){
