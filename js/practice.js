@@ -72,7 +72,7 @@ function choices(q, ref, run) {
         placeholder="输入听到的单词" ${answered ? 'readonly' : ''} value="${esc(run.selected)}">
       ${answered ? '' : '<button type="button" data-act="submit-dict" class="lesson-primary">提交答案</button>'}</div>`;
   }
-  const audioOnly = ref.mode === 'part2' && q.type === 'response' && !answered;
+  const audioOnly = (ref.mode==='part1'||(ref.mode === 'part2' && q.type === 'response')) && !answered;
   return `<div class="lesson-choices" role="group" aria-label="答案选项">${q.options.map((option, i) => {
     const correct = answered && option === q.answer;
     const wrong = answered && option === run.selected && !correct;
@@ -109,6 +109,7 @@ function feedback(q, ref, run) {
   return `<section class="lesson-feedback ${correct ? 'is-right' : 'is-miss'}" aria-label="答题反馈">
     <h2>${icon(correct ? 'check' : 'note',19)} ${correct ? '答对了' : '再记一次'}</h2>
     <p><b>正确答案</b> <span>${esc(q.answer)}</span></p>
+    ${ref.mode==='part1'?`<p><b>画面说明</b> ${esc(q.description)}</p>`:''}
     ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p></div>`}
     ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>` : ''}
     ${evidence(q,ref)}
@@ -136,6 +137,7 @@ export function practiceView(state) {
   return `<section class="lesson-shell">${header(run)}
     <div class="lesson-meta lesson-section-meta"><span>${icon(({vocab:'cards',grammar:'grammar',reading:'reading'})[ref.mode] || 'headphones',17)} ${esc(q.instruction)}</span>
     <span>${run.timed ? `${icon('clock',15)} <b id="timer">${clock(run.elapsed)}</b> · ` : ''}${q.level} 级</span></div>
+    ${ref.mode==='part1'?`<figure class="lesson-photo"><img src="./${esc(q.image)}" alt="本题原创场景插画"><figcaption>原创场景插画</figcaption></figure>`:''}
     ${ref.mode === 'reading' ? passages(q, answered) : ''}
     ${ref.mode === 'dialogue' && q.set.graphic ? graphic(q.set.graphic) : ''}
     <div class="lesson-panel lesson-question">

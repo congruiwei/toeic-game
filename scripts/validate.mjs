@@ -3,6 +3,7 @@ import { readFile } from 'node:fs/promises';
 import { vocabularyOptions, formats } from '../js/bank.js';
 
 const dataDirectory = new URL('../data/', import.meta.url);
+const picturePaths=[];
 const levels = [400, 500, 600, 700, 800, 900];
 const seenIds = new Map();
 const presentLevels = new Set();
@@ -214,6 +215,18 @@ function responseOverlap(entries) {
   console.log('Part 2 原词重复：干扰项 '+fraction(wrong,totalWrong)+'，正确回应 '+fraction(right,total)+'，仅靠排除即可作对 '+fraction(byElimination,total)+'。');
 }
 
+function photographs(entries){
+  const bins=[0,0,0,0,0,0], paths=new Set();
+  scan(entries,'part1',60,(q,at)=>{
+    id(q,at);level(q,at);strings(q,at,['description','en','zh','image']);
+    answers({...q,prompt:'看图听句'},at);expect(q.options?.length===4,at,'插画题需要四句描述');
+    expect(q.image==='assets/part1/'+q.id+'.svg'&&!paths.has(q.image),at,'每题需独立的本地 SVG');
+    if(q.image==='assets/part1/'+q.id+'.svg')picturePaths.push(q.image);
+    paths.add(q.image);bins[levels.indexOf(q.level)]++;measure('Part 1',q);
+  });
+  expect(entries.length>=60 && bins.every(n=>n>0),'part1','需要覆盖全部六档');
+  counts['Part 1']=entries.length;
+}
 function part2(entries) {
   const firstWords = new Set();
   let responses = 0;
@@ -401,13 +414,16 @@ function reading(groups) {
   counts['Part 6/7 组'] = Array.isArray(groups) ? groups.length : 0;
 }
 
-for (const [file, validate] of Object.entries({ vocab: vocabulary, part2, grammar, listening, reading })) {
+for (const [file, validate] of Object.entries({ vocab: vocabulary, part1:photographs, part2, grammar, listening, reading })) {
   const name = `${file}.json`;
   try {
     validate(JSON.parse(await readFile(new URL(name, dataDirectory), 'utf8')));
   } catch (error) {
     issues.push(`${name}: ${error.message}`);
   }
+}
+for(const path of picturePaths){
+  try{const svg=await readFile(new URL('../'+path,dataDirectory),'utf8');expect(/<svg[\s>]/.test(svg)&&!/<script|<foreignObject|(?:href|src)=["']https?:/i.test(svg),path,'SVG 需自包含');}catch{issues.push(path+' 缺少插画');}
 }
 for (const target of levels) expect(presentLevels.has(target), '题库', `未包含 ${target} 级练习`);
 reportDistributions();
@@ -416,5 +432,5 @@ if (issues.length) {
   process.exitCode = 1;
 } else {
   console.log(Object.entries(counts).map(([name, n]) => `${name} ${n}`).join(' · '));
-  console.log(`五份题库通过校验，含 ${seenIds.size} 个唯一 ID。`);
+  console.log(`六份题库通过校验，含 ${seenIds.size} 个唯一 ID。`);
 }

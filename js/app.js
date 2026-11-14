@@ -36,6 +36,7 @@ const navs = [
 const names = {
   vocab: '单词采集',
   part2: '听音寻迹',
+  part1: '看图听句',
   grammar: '语法工坊',
   dialogue: '情景听力',
   dictation: '听写手记',
@@ -538,7 +539,7 @@ window.addEventListener('storage', (e) => {
 window.addEventListener('pagehide', pauseClock);
 async function boot() {
   try {
-    await loadBank(['vocab', 'part2', 'grammar', 'listening', 'reading']);
+    await loadBank(['vocab', 'part1','part2', 'grammar', 'listening', 'reading']);
   } catch {
     root.innerHTML = '<h2>题库未能打开</h2><p>请联网后重新载入一次，以准备离线资源。</p>';
     return;

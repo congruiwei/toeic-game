@@ -62,7 +62,7 @@ function wordsView(s, filter) {
 }
 
 const errorLabels = {
-  vocab: '单词', grammar: 'Part 5 · 语法', part2: 'Part 2 · 问答',
+  vocab: '单词', grammar: 'Part 5 · 语法', part1: 'Part 1 · 插画', part2: 'Part 2 · 问答',
   dictation: '听写', dialogue: '听力理解', reading: '阅读理解'
 };
 

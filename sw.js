@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-11';
+const CACHE = 'toeic-island-shell-12';
 const files = [
   './',
   './index.html',
@@ -22,6 +22,7 @@ const files = [
   './js/library.js',
   './js/practice.js',
   './data/vocab.json',
+  './data/part1.json',
   './data/part2.json',
   './data/grammar.json',
   './data/listening.json',
@@ -32,7 +33,11 @@ self.addEventListener('install', (event) => {
   const requests = files.map(
     (path) => new Request(new URL(path, self.registration.scope), { cache: 'reload' }),
   );
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(requests)));
+  event.waitUntil((async()=>{
+    const cache=await caches.open(CACHE);await cache.addAll(requests);
+    const part1=await (await cache.match(new URL('data/part1.json',self.registration.scope))).json();
+    await cache.addAll(part1.map(q=>new URL(q.image,self.registration.scope).href));
+  })());
 });
 
 self.addEventListener('activate', (event) => {

@@ -9,6 +9,7 @@ const esc = (s) =>
   );
 const routes = [
   ['vocab', 'vocab', '单词采集', '商务词卡 · 间隔复习'],
+  ['part1','reading','看图听句','Part 1 · 看原创插画，听四句描述'],
   ['part2', 'part2', '听音寻迹', 'Part 2 · 首词与情景回应'],
   ['grammar', 'grammar', '语法工坊', 'Part 5 · 图解与句子填空'],
   ['dialogue', 'part2', '情景听力', 'Part 3 / 4 · 对话与独白'],

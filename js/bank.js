@@ -11,6 +11,7 @@ export async function loadBank(files) {
     }),
   );
   for (const w of bank.vocab) entry({ id: w.id, mode: 'vocab' }, w);
+  for (const q of bank.part1||[]) entry({id:q.id,mode:'part1'},q);
   for (const q of bank.part2) entry({ id: q.id, mode: 'part2' }, q);
   for (const t of bank.grammar || [])
     for (const q of t.questions) entry({ id: q.id, mode: 'grammar' }, { ...q, topic: t });
@@ -124,6 +125,8 @@ export function question(ref) {
       audio: f === 'sound',
     };
   }
+  if(ref.mode==='part1')return {...d,skill:'listening',instruction:'Part 1 · 看图听句',prompt:'哪一句最符合插画？',audio:true,
+    turns:d.options.map((text,i)=>({speaker:'A',text:String.fromCharCode(65+i)+'. '+text}))};
   if (ref.mode === 'dictation')
     return {
       ...d,
