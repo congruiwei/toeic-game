@@ -452,6 +452,10 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a==='copy-claude') {
+    const text=reviewedAnswer(id);
+    if(text)await copyText(text+'\n\n请用中文解释为什么选这个答案，以及我错在哪里。',modal,toast,'已复制，可粘贴给 Claude');
+  }
   if(a==='report-issue' && reviewedAnswer(id)) modal(issueForm(id));
   if(a==='save-issue') {
     const text=reviewedAnswer(id),reason=$('#issue-reason')?.value;

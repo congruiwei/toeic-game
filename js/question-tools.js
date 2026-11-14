@@ -30,7 +30,7 @@ export function answerText(ref,q,selected,correct=q.answer) {
   return sections.join('\n\n');
 }
 export function reviewTools(id) {
-  return '<div class="review-tools"><button type="button" class="secondary" data-act="report-issue" data-id="'+esc(id)+'">这题有问题</button></div>';
+  return '<div class="review-tools"><button type="button" class="secondary" data-act="report-issue" data-id="'+esc(id)+'">这题有问题</button><button type="button" class="secondary" data-act="copy-claude" data-id="'+esc(id)+'">复制问 Claude</button></div>';
 }
 export function validIssues(rows) {
   return rows===undefined || (Array.isArray(rows) && rows.every(r=>r && typeof r.id==='string' && /^[\w-]{1,100}$/.test(r.id) && reasons.includes(r.reason) && typeof r.note==='string' && r.note.length<=1000 && typeof r.text==='string' && r.text.length>0));
