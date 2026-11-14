@@ -1,3 +1,4 @@
+import {validDiagnosis,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
 import {validateScreen} from './screening.js';
 import {validIssues} from './question-tools.js';
 import {validReport} from './report.js';
@@ -112,6 +113,8 @@ export function decode(raw, catalog) {
       throw Error('练习进度有误');
   }
   validateScreen(x,catalog);
+  if(!validDiagnosis(x.diagnosis))throw Error('诊断记录有误');
+  if(catalog)reconcileDiagnosis(x,catalog);
   if(!validIssues(x.issues))throw Error('问题报告记录有误');
   if(!validReport(x.report))throw Error('学习报告记录有误');
   if(x.examForms!==undefined && (!Array.isArray(x.examForms)||x.examForms.length!==4||!x.examForms.every(n=>number(n))))throw Error('模考记录有误');
@@ -187,6 +190,8 @@ export function estimate(s) {
 }
 export function difficulty(s, skill) {
   const recent = s.history.filter((h) => h.skill === skill).slice(-12);
+  const placement=diagnosedDifficulty(s,skill,recent);
+  if(placement!==null)return placement;
   if (recent.length < 4) return 400;
   const base = recent.reduce((a, h) => a + h.level, 0) / recent.length;
   const acc = recent.filter((h) => h.ok).length / recent.length;
@@ -204,6 +209,7 @@ export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false}={}) 
   const xp = ok ? 12 : 4,
     oldLv = levelOf(s.xp),
     oldStage = s.stage;
+  diagnosisPractice(s,q.skill);
   s.xp += xp;
   s.stats[q.skill] += xp;
   s.history.push({ skill: q.skill, level: q.level, ok });

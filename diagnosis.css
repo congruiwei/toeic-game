@@ -1,0 +1,13 @@
+.diag-card, .diag-skipped {display:flex; align-items:center; gap:12px; justify-content:space-between; margin:12px 0;}
+.diag-card {padding:16px 20px;}
+.diag-card h2,.diag-history h2 {font-size:18px;margin:0 0 6px;}
+.diag-card p,.diag-skipped {font-size:14px;color:var(--muted);}
+.diag-card p {margin:0;}
+.diag-card > div:last-child {display:flex;gap:5px;flex-wrap:wrap;}
+.diag-card button,.diag-skipped button,.diag-history summary {min-height:44px;}
+.diag-levels {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:10px 0 16px;}
+.diag-levels div {display:flex;justify-content:space-between;align-items:center;padding:8px 10px;background:var(--bg);border-radius:12px;}
+.diag-levels b {font-size:14px;}
+.diag-history {margin:12px auto;max-width:760px;padding:18px;}
+.diag-history summary {cursor:pointer;line-height:44px;}
+@media(max-width:540px){.diag-card{align-items:flex-start;flex-direction:column;}}

@@ -1,5 +1,7 @@
-import {playLine,stopReplay,stopClosedReplay} from './replay.js';
-import {answerText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
+import {startDiagnosis,skipDiagnosis,answerDiagnosis} from './diagnosis.js';
+import {diagnosisHome,diagnosisView,diagnosisHistory,unknownDiagnosisView} from './diagnosis-ui.js';
+import {replayView,playLine,stopReplay,stopClosedReplay} from './replay.js';
+import {reviewTools,answerText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
 import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
@@ -162,7 +164,7 @@ function home() {
       weekday: 'long',
     }).format(new Date());
   return `<div class="welcome"><div><div class="eyebrow"><i></i> ISLAND DASHBOARD</div><h1>欢迎回到小岛<span class="hello-star">✦</span></h1></div>${s.session && s.session.index < s.session.items.length ? act('resume', '继续学习 ' + icon('play', 13), 'secondary top-resume') : `<small class="date">${icon('sun', 16)}${esc(date)}</small>`}</div>
- <div class="overview"><section class="habitat">${landscape(s.stage, s.branch)}<div class="hab-text"><span class="hab-tag">${icon('leaf', 14)} 伙伴栖息地</span><h2>${forms[s.stage]}</h2><p>第 ${String(s.stage + 1).padStart(2, '0')} 形态 <b>·</b> ${s.stage ? labels[s.branch] + '特化' : '初生之芽'}</p></div><div class="hab-bottom"><div class="level"><b>Lv. ${String(lv).padStart(2, '0')}</b><span>${titleOf(s.xp)}</span></div>${meter(s.xp % 100, 100)}<div class="xp"><span>成长经验</span><b>${s.xp % 100} / 100 XP</b></div></div>${act('evolution', icon('route', 15) + '<span>进化路线</span>', 'route')}</section>
+ ${diagnosisHome(s)}<div class="overview"><section class="habitat">${landscape(s.stage, s.branch)}<div class="hab-text"><span class="hab-tag">${icon('leaf', 14)} 伙伴栖息地</span><h2>${forms[s.stage]}</h2><p>第 ${String(s.stage + 1).padStart(2, '0')} 形态 <b>·</b> ${s.stage ? labels[s.branch] + '特化' : '初生之芽'}</p></div><div class="hab-bottom"><div class="level"><b>Lv. ${String(lv).padStart(2, '0')}</b><span>${titleOf(s.xp)}</span></div>${meter(s.xp % 100, 100)}<div class="xp"><span>成长经验</span><b>${s.xp % 100} / 100 XP</b></div></div>${act('evolution', icon('route', 15) + '<span>进化路线</span>', 'route')}</section>
  <section class="stats panel"><div class="stats-head"><h2>${icon('chart')} 能力面板</h2>${act('evolution', icon('chev', 16), 'soft-round', 'aria-label="查看能力与进化条件"')}</div><div class="score"><div><span>预估 TOEIC 分数</span><strong>${score}<small>分</small></strong></div><small>仅供参考</small></div><div class="skills">${skills.map((k) => `<div class="skill ${k}"><i>${icon(icons[k], 16)}</i><label>${labels[k]}</label>${meter(s.stats[k], thresholds[Math.min(5, s.stage + 1)])}<b>${s.stats[k]}</b></div>`).join('')}</div></section></div>
  <section class="tasks">${sectionTitle('flag', '探索任务', '<span class="section-note">任选一个开始</span>')}<div class="task-grid">${tasks.map(taskTile).join('')}</div></section>
  <div class="continue"><span class="continue-icon">${icon('compass', 27)}</span><div><h3>${s.session ? '上次的探险' : '自由练习'}</h3><p>${s.session ? esc(s.session.title) + ' · ' + Math.min(s.session.index + 1, s.session.items.length) + ' / ' + s.session.items.length : '按主题与题型选择练习'}</p></div>${act(s.session ? 'resume' : 'nav', s.session ? '继续学习 ' + icon('arrow', 16) : '进入练习 ' + icon('arrow', 16), 'primary', 'data-page="learn"')}</div>`;
@@ -172,7 +174,7 @@ function render() {
   applyPrefs();
   frame();
   root.innerHTML =
-    page==='screen'?screenView(s):page==='report'?reportView(s,bank):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -371,10 +373,13 @@ function answer(value) {
     $('#toast').classList.add('level-pop');
   }
 }
+let diagFeedback=null;
 function reviewedAnswer(id) {
   let ref, selected, correct;
   if(page==='practice' && s.session?.selected!=null) {
     ref=s.session.items[s.session.index];selected=s.session.selected;
+  } else if(page==='diagnosis' && dialog.open && diagFeedback) {
+    ({ref,selected}=diagFeedback);
   } else if(page==='screen' && s.screening?.run?.feedback) {
     const check=s.screening.run.feedback;
     ref={id:check.id,mode:'vocab',format:'meaning'};selected=check.selected;
@@ -455,12 +460,30 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a==='diag-skip'){skipDiagnosis(s);save();render();return;}
+  if(a==='diag-open'){startDiagnosis(s,catalog);if(save())go('diagnosis');return;}
+  if(a==='diag-leave'){go('home');return;}
+  if(a==='diag-audio'&&page==='diagnosis'&&s.diagnosis?.active){
+    const r=s.diagnosis.active.current,q=question(r);speak(q.turns,s.settings,toast,{seed:q.set?.id||r.id});return;
+  }
+  if(a==='diag-dismiss'){close();return;}
+  if((a==='diag-answer'||a==='diag-unknown')&&page==='diagnosis'){
+    const r=s.diagnosis?.active?.current;if(!r||r.id!==id)return;
+    const q=question(r),unknown=a==='diag-unknown',choice=q.options[Number(i)];if(!unknown&&!choice)return;
+    hush();
+    const ok=!unknown && choice===q.answer, now=Date.now();
+    reward(s,q,r,ok,now,{sourceType:'diagnosis'});
+    recordStudy(s,r,q,ok,now,unknown?'unknown':undefined);
+    answerDiagnosis(s,id,ok,catalog,now,unknown);
+    diagFeedback=unknown?{ref:r,selected:UNKNOWN}:null;
+    if(save()){render();window.scrollTo(0,0);if(unknown)modal(unknownDiagnosisView(r,q)+replayView(q,r)+reviewTools(id));}return;
+  }
   if(a==='sentence-play'){
     const id=el.closest('[data-replay-id]')?.dataset.replayId;
     const session=s.session, ref=catalog.get(id)?.ref;
     const practiceAllowed=page==='practice' && session?.selected!=null && session.items[session.index]?.id===id;
     const examAllowed=page==='exam' && s.exam?.phase==='done' && s.exam.units.some(unit=>unit.ids.includes(id));
-    if(ref && (practiceAllowed || examAllowed)) playLine(el,question(ref),ref,s.settings,toast);
+    if(ref && (practiceAllowed || examAllowed || (page==='diagnosis' && dialog.open && diagFeedback?.ref.id===id))) playLine(el,question(ref),ref,s.settings,toast);
     return;
   }
   stopReplay();
@@ -618,6 +641,7 @@ window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend(
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};
 function requiredBanks(action,el){
+  if(action==='diag-open')return allBanks;
   if(action.startsWith('screen-'))return ['vocab'];
   if(action==='nav' && ['library','report'].includes(el.dataset.page) || action==='import' || action==='resume' || action==='exam-start' || action==='exam-lobby')return allBanks;
   if(['start','configure','configured'].includes(action))return routeFiles[el.dataset.mode]?[routeFiles[el.dataset.mode]]:allBanks;
