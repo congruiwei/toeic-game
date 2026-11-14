@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-24';
+const CACHE = 'toeic-island-shell-25';
 const files = [
   './',
   './index.html',
@@ -13,7 +13,7 @@ const files = [
   './assets/icon-512.png',
   './report.css','./js/report.js',
   './js/shell-update.js','./js/app.js','./js/exam.js','./js/exam-ui.js','./js/exam-controller.js',
-  './js/prediction.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./data/methods.json','./js/methods.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
+  './js/prediction.js','./js/prediction-migration.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./data/methods.json','./js/methods.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
   './js/art.js',
   './js/audio.js',
   './js/bank.js','./js/screening.js','./js/screen-view.js',

@@ -4,7 +4,7 @@ import {predictionView,predictAnswer,predictionSummary,snapshotOnVisit} from './
 import {startDiagnosis,skipDiagnosis,answerDiagnosis} from './diagnosis.js';
 import {diagnosisHome,diagnosisView,diagnosisHistory,unknownDiagnosisView} from './diagnosis-ui.js';
 import {replayView,playLine,stopReplay,stopClosedReplay} from './replay.js';
-import {reviewTools,answerText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
+import {reviewTools,answerText,claudeText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
 import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
@@ -415,7 +415,7 @@ function answer(value) {
   }
 }
 let diagFeedback=null;
-function reviewedAnswer(id) {
+function reviewedAnswer(id, format = answerText) {
   let ref, selected, correct;
   if(page==='practice' && s.session?.selected!=null) {
     ref=s.session.items[s.session.index];selected=s.session.selected;
@@ -427,7 +427,7 @@ function reviewedAnswer(id) {
   } else if(page==='exam' && s.exam?.phase==='done' && Object.hasOwn(s.exam.keys,id)) {
     ref=catalog.get(id)?.ref;selected=s.exam.answers[id];correct=s.exam.keys[id];
   }
-  return ref && ref.id===id ? answerText(ref,question(ref),selected,correct) : null;
+  return ref && ref.id===id ? format(ref,question(ref),selected,correct) : null;
 }
 function exportSave() {
   const blob = new Blob([JSON.stringify(s, null, 2)], { type: 'application/json' }),
@@ -538,8 +538,8 @@ document.addEventListener('click', async (e) => {
   }
   stopReplay();
   if(a==='copy-claude') {
-    const text=reviewedAnswer(id);
-    if(text)await copyText(text+'\n\n请用中文解释为什么选这个答案，以及我错在哪里。',modal,toast,'已复制，可粘贴给 Claude');
+    const text=reviewedAnswer(id,claudeText);
+    if(text)await copyText(text,modal,toast,'已复制，可粘贴给 Claude');
   }
   if(a==='report-issue' && reviewedAnswer(id)) modal(issueForm(id));
   if(a==='save-issue') {

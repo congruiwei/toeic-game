@@ -69,7 +69,7 @@ export function answerDiagnosis(state,id,ok,catalog,now=Date.now(),unknown=false
   a.items.push({id,part:ref.part,level:ref.level,ok,...(unknown?{unknown:true}:{}),...(ref.group?{group:ref.group}:{})});
   if(a.items.length<diagnosisCount){selectNext(state,catalog);return null;}
   const levels=diagnosisLevels(a.items);
-  const result={at:now,items:a.items,levels,ranges:diagnosisRanges(levels,a.items)};
+  const result={at:now,items:a.items,levels,rangeVersion:2,ranges:diagnosisRanges(levels,a.items)};
   d.results.push(result);
   d.active=null;d.skipped=false;
   d.since=Object.fromEntries(abilities.map(skill=>[skill,0]));
@@ -77,14 +77,16 @@ export function answerDiagnosis(state,id,ok,catalog,now=Date.now(),unknown=false
 }
 // Placement bands use the evidence in this diagnostic only. The ongoing prediction
 // combines this evidence with later independent practice and simulated exams.
-export function diagnosisRanges(levels,items){
+export function diagnosisRanges(levels,items,version=2){
   function range(center,n){
     const uncertainty=35+95/Math.sqrt(1+n/3);
     return [Math.max(5,5*Math.round((center-uncertainty)/5)),Math.min(495,5*Math.round((center+uncertainty)/5))];
   }
-  const reading=levels.reading*.64+levels.grammar*.26+levels.vocab*.10;
+  const reading = version === 1 ? levels.reading*.64 + levels.grammar*.26 + levels.vocab*.10
+    : (64*levels.reading + 26*levels.grammar)/90;
+  const readingCount = items.filter(row => row.part >= 5 || (version === 1 && row.part === 0)).length;
   return {L:range(levels.listening/2,items.filter(r=>skillOf(r.part)==='listening').length),
-    R:range(reading/2,items.filter(r=>skillOf(r.part)!=='listening').length)};
+    R:range(reading/2,readingCount)};
 }
 export function diagnosisPractice(state,skill){
   if(state.diagnosis?.since && abilities.includes(skill)) {
@@ -115,8 +117,19 @@ function validItems(items,complete){
 export function validDiagnosis(d){
   if(d===undefined)return true;
   if(!record(d)||typeof d.skipped!=='boolean'||!Array.isArray(d.results))return false;
-  if(!d.results.every(r=>record(r)&&count(r.at)&&validItems(r.items,true)&&record(r.levels)&&
-    abilities.every(s=>r.levels[s]===diagnosisLevels(r.items)[s])&&(!r.ranges||['L','R'].every(k=>Array.isArray(r.ranges[k])&&r.ranges[k].length===2&&r.ranges[k].every((x,i)=>x===diagnosisRanges(r.levels,r.items)[k][i])))))return false;
+  if(!d.results.every(r => {
+    if(!record(r)||!count(r.at)||!validItems(r.items,true)||!record(r.levels)) return false;
+    const actual=diagnosisLevels(r.items);
+    if(!abilities.every(k=>r.levels[k]===actual[k])) return false;
+    // Unmarked stored results were calculated with the original weights.
+    const version=r.rangeVersion===undefined ? 1 : r.rangeVersion;
+    if(version!==1 && version!==2) return false;
+    if(r.ranges===undefined) return version===1;
+    if(!record(r.ranges)) return false;
+    const expected=diagnosisRanges(actual,r.items,version);
+    return ['L','R'].every(k=>Array.isArray(r.ranges[k])&&r.ranges[k].length===2&&
+      r.ranges[k].every((x,i)=>x===expected[k][i]));
+  })) return false;
   if(d.results.length){if(!record(d.since)||!abilities.every(s=>count(d.since[s])&&d.since[s]<=12))return false;}
   else if(d.since!==null)return false;
   if(d.active===null)return true;
@@ -124,6 +137,13 @@ export function validDiagnosis(d){
   return record(a)&&count(a.answerMs??0)&&count(a.started)&&validItems(a.items,false)&&record(c)&&safeId(c.id)&&
     (c.target===undefined||c.target===nextDiagnosisTarget(a.items))&&c.part===rounds[a.items.length]&&c.mode===modeOf(c.part)&&levels.includes(c.level)&&
     (c.part!==0||['meaning','english','cloze','match'].includes(c.format))&&!a.items.some(row=>row.id===c.id);
+}
+// Historical exports may have stored only validated results and levels. Restore
+// their original range calculation so every caller displays the historical scale.
+export function restoreDiagnosisRanges(diagnosis){
+  for(const result of diagnosis?.results || []) {
+    if(result.ranges===undefined) result.ranges=diagnosisRanges(result.levels,result.items,1);
+  }
 }
 export function reconcileDiagnosis(state,catalog){
   const run=state.diagnosis?.active,ref=run?.current;

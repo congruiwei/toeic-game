@@ -29,6 +29,15 @@ export function answerText(ref,q,selected,correct=q.answer) {
   sections.push('现有解析\n'+explanation.filter(Boolean).join('\n'));
   return sections.join('\n\n');
 }
+export function claudeText(ref, q, selected, correct = q.answer) {
+  const correctChoice = selected != null && selected !== UNKNOWN && (ref.mode === 'dictation'
+    ? selected.trim().toLowerCase() === correct.trim().toLowerCase()
+    : selected === correct);
+  const request = correctChoice
+    ? '请用中文解释这道题的考点，确认我的理解是否正确。'
+    : '请用中文解释为什么选这个答案，以及我错在哪里。';
+  return answerText(ref, q, selected, correct) + '\n\n' + request;
+}
 export function reviewTools(id) {
   return '<div class="review-tools"><button type="button" class="secondary" data-act="report-issue" data-id="'+esc(id)+'">这题有问题</button><button type="button" class="secondary" data-act="copy-claude" data-id="'+esc(id)+'">复制问 Claude</button></div>';
 }

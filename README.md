@@ -38,7 +38,7 @@
 | 请 Claude 解释 | 在答后点复制给 Claude 的按钮，再自行粘贴到对话。复制内容包含题目、材料、选项、你的答案、正确答案和解析。 |
 | 精听一句 | 答后展开「听力原文 · 逐句重听」，点某句即可按对应角色和当前语速播放，也可打开单句循环。 |
 | 找到练习起点 | 首页的「水平诊断」含 30 道自适应题，可分次完成。结果提供四项能力起点和本次听读参考区间，可以在报告中查看历次诊断。 |
-| 看分数变化 | 能力面板及学习报告分别显示听力、阅读参考估分和区间。报告中的趋势图可切换听力、阅读或总分，再按近 7 天、30 天或全部学习日查看。 |
+| 看分数变化 | 能力面板及学习报告分别显示听力、阅读参考估分和区间。独立词卡与快筛只更新词汇学习记录。报告中的听力、阅读与总分趋势用最近 3 个学习日加权平滑，可按 7 天、30 天或全部查看。 |
 | 复习到期题 | 「图鉴 → 错题本」可练到期题，也可点单题提前练。非单词错题需要连续答对两次才移出。设置里可选 85%、90% 或 95% 的目标记忆率。 |
 | 学解题步骤 | 「练习 → 解题方法」按 Part 浏览 22 张卡并试做例题。普通练习初次遇到相应题型会提示，设置中可关闭。 |
 
@@ -93,6 +93,7 @@ node tests/forms.mjs
 node --test tests/*.test.mjs
 node tests/diagnosis-logic.mjs
 node tests/prediction-logic.mjs
+node scripts/simulate-prediction.mjs
 node tests/v6/replay-logic.mjs
 node tests/v6/methods-logic.mjs
 npm install --prefix /tmp/island-browser-test playwright
@@ -104,7 +105,9 @@ NODE_PATH=/tmp/island-browser-test/node_modules node tests/shell-update.cjs
 
 已有 Chrome 可给浏览器测试命令加 `PW_CHANNEL=chrome`。运行 `node tests/v6.cjs screen fsrs` 可单独检查快筛和复习；统一入口会在每个功能的 375、390、430px 三档各建独立上下文。脚本启动临时本地 HTTP 服务，模拟 iPhone 并使用可控语音事件。模考测试实际开始、回答、退出、恢复和交卷，并用测试存档推进到听力末段及阅读到期点。真实设备的系统音色与音响效果需另行试听。
 
-v6 的完整校验输出、三宽回归和同档估分对照见 [v6 验收记录](docs/V6-CHECKS.md)。
+本轮的模拟与测试输出见 [估分修正验收](docs/PREDICTION-CHECKS.md)。
+
+v6 首次发布的校验输出、三宽回归和同档估分对照见 [v6 验收记录](docs/V6-CHECKS.md)。
 
 上一版各难度题量、测试输出和加载速度见 [定版验收](docs/RELEASE-CHECKS.md)。复审说明和逐字段前后对照见 [按 ID 的复审清单](docs/CONTENT-REVIEW.md) 与 [CSV 明细](docs/review-detail.csv)。
 

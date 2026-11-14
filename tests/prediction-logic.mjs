@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {fresh,reward,estimate} from '../js/state.js';
-import {predictAnswer,predictionSummary,predictionView,validPrediction,snapshotOnVisit} from '../js/prediction.js';
+import {predictAnswer,predictionSummary,predictionView,validPrediction,snapshotOnVisit,smoothedTrend} from '../js/prediction.js';
 const epoch=new Date(2026,5,1,12).getTime(),s=fresh();
 function add(st,mode,id,level,ok,date,extra={}){
  const ref={id,mode},data={id,level,options:['A','B','C','D'],...extra};
@@ -34,9 +34,11 @@ for(let i=0;i<240;i++){
  if([31,95,159,239].includes(i))checkpoints.push([i+1,oldScore(demo.history),estimate(demo),demo.stage]);
  if(demo.stage>oldStage){transitions.push([demo.stage,i+1]);oldStage=demo.stage;}
 }
-assert.equal(demo.stage,5);console.log('evolution transitions',JSON.stringify(transitions));
+assert.equal(demo.stage,5);
+assert.deepEqual(transitions.map(([,n])=>n),[13,42,76,112,151]);
+console.log('evolution transitions',JSON.stringify(transitions));
 
-assert.deepEqual(checkpoints,[[32,500,520,1],[96,705,720,3],[160,900,925,5],[240,900,970,5]]);
+assert.deepEqual(checkpoints,[[32,500,520,1],[96,705,730,3],[160,900,920,5],[240,900,975,5]]);
 console.log('fixed answer counts and old/new scores',JSON.stringify(checkpoints),'old evolution attempts',oldTransitions);
 const diagnostic=fresh(),sample=[
  {id:'dgL',part:2,level:500,ok:true},{id:'dgR',part:7,level:500,ok:true}
@@ -73,10 +75,11 @@ for(let i=0;i<96;i++){
     Object.values(old.stats).every(x=>x>=[0,36,90,165,260,380][old.stage+1]))old.stage++;
 }
 const {decode}=await import('../js/state.js'),restored=decode(JSON.stringify(old),registry),estimateV6=predictionSummary(restored);
-assert.deepEqual([oldScore(old.history),estimateV6.total,estimateV6.low,estimateV6.high],[705,675,555,795]);
-assert.deepEqual([estimateV6.L.score,estimateV6.R.score,restored.stage,restored.xp],[310,365,3,1064]);
+assert.deepEqual([oldScore(old.history),estimateV6.total,estimateV6.low,estimateV6.high],[705,690,565,815]);
+assert.deepEqual([estimateV6.L.score,estimateV6.R.score],[320,370]);
+assert.deepEqual([restored.stage,restored.xp],[3,1064]);
 assert.equal(Object.keys(restored.seen).length,96);
-console.log('Same 96-answer v1 save: 705 → 675 [555–795]; L 310 [240–380], R 365 [315–415]; XP 1064, form 4 preserved.');
+console.log('Same 96-answer v1 save: 705 → 690 [565–815]; L 320 [250–390], R 370 [315–425]; XP 1064, form 4 preserved.');
 
 const visited=structuredClone(s);
 snapshotOnVisit(visited,epoch+12*86400000);
@@ -85,3 +88,30 @@ assert.equal(Object.keys(visited.prediction.days).length,3);
 for(const [l,r,total] of Object.values(visited.prediction.days))assert.equal(l+r,total);
 assert.ok(validPrediction({...visited.prediction,days:{'2025-01-01':[200,220]}}));
 assert.ok(!validPrediction({...visited.prediction,days:{'2025-01-01':[200,220,500]}}));
+
+
+const control=fresh(), withWords=fresh();
+for(let i=0;i<15;i++){
+ for(const state of [control,withWords])add(state,'reading','reading-'+i,500,i%4!==1,epoch+i,{part:7});
+ for(let j=0;j<10;j++){
+  const id='screen-'+i+'-'+j, ref={mode:'vocab',id,format:'meaning'};
+  reward(withWords,{id,skill:'vocab',level:900},ref,j%3!==0,epoch+i,{screenCheck:true});
+ }
+}
+assert.deepEqual(withWords.prediction,control.prediction);
+assert.deepEqual(predictionSummary(withWords),predictionSummary(control));
+assert.equal(Object.keys(withWords.words).length,150);
+const onlyListening=fresh();
+add(onlyListening,'dictation','heard',500,true,epoch,{options:undefined});
+assert.equal(onlyListening.prediction.L.evidence,.35*.82);
+assert.equal(onlyListening.prediction.R.evidence,0);
+
+const days={'2026-06-04':[190,210,400],'2026-06-11':[130,300,430],'2026-06-02':[100,210]};
+const before=structuredClone(days), expectedTotal=[310,(2*310+3*400)/5,(310+2*400+3*430)/6];
+assert.deepEqual(smoothedTrend(days).map(x=>x.score),expectedTotal);
+for(const [index,point] of smoothedTrend(days).entries()){
+ const sum=smoothedTrend(days,'L')[index].score+smoothedTrend(days,'R')[index].score;
+ assert(Math.abs(point.score-sum)<1e-9);
+}
+assert.deepEqual(days,before);
+console.log('PASS independent word and spot-check evidence, dictation weight, three-day weighted charts and raw snapshots');

@@ -3,7 +3,7 @@
 const parts=['L','R'];
 const bound=(x,lo,hi)=>Math.max(lo,Math.min(hi,x));
 const initial=()=>({rating:400,evidence:0});
-const empty=()=>({version:1,L:initial(),R:initial(),days:{},exposure:{}});
+const empty=()=>({version:2,L:initial(),R:initial(),days:{},exposure:{}});
 const count=x=>Number.isSafeInteger(x)&&x>=0;
 const safeId=s=>typeof s==='string'&&/^[\w-]{1,100}$/.test(s)&&!Object.hasOwn(Object.prototype,s)&&s!=='prototype';
 const finite=(x,lo,hi)=>Number.isFinite(x)&&x>=lo&&x<=hi;
@@ -14,7 +14,7 @@ function dateKey(value){
 const validDay=k=>/^\d{4}-\d{2}-\d{2}$/.test(k)&&dateKey(k+'T12:00:00')===k;
 export function validPrediction(p){
   if(p===undefined)return true;
-  if(!p||p.version!==1||!p.exposure||typeof p.exposure!=='object'||Array.isArray(p.exposure)
+  if(!p||![1,2].includes(p.version)||!p.exposure||typeof p.exposure!=='object'||Array.isArray(p.exposure)
     ||!p.days||typeof p.days!=='object'||Array.isArray(p.days))return false;
   return parts.every(k=>p[k]&&finite(p[k].rating,10,990)&&finite(p[k].evidence,0,Number.MAX_SAFE_INTEGER))
     &&Object.entries(p.exposure).every(([k,v])=>safeId(k)&&count(v)&&v>0)
@@ -22,7 +22,7 @@ export function validPrediction(p){
 }
 function source(ref,data){
   const mode=ref.mode,part=({part1:1,part2:2,grammar:5})[mode]??data.set?.part??data.part??ref.part;
-  if(mode==='vocab')return {key:'R',weight:.28};
+  if(mode==='vocab')return null;
   if(mode==='dictation')return {key:'L',weight:.35};
   if(mode==='part2'&&data.type==='first')return {key:'L',weight:.4};
   if(part>=1&&part<=4)return {key:'L',weight:1};
@@ -34,7 +34,9 @@ function update(p,key,level,ok,weight,choiceCount) {
   // Reduce guessing credit on multiple-choice items; free recall uses no guessing floor.
   const guess=choiceCount>=2?1/choiceCount:0;
   const expected=guess+(1-guess)/(1+10**((level-b.rating)/310));
-  const sensitivity=42+62/Math.sqrt(1+b.evidence/6);
+  // Start at 104 for placement. As independent evidence accumulates, a single
+  // answer should move an established section score much less.
+  const sensitivity=20+84/(1+(b.evidence/35)**3);
   b.rating=bound(b.rating+sensitivity*weight*(Number(ok)-expected),10,990);
   b.evidence+=weight;
 }
@@ -53,16 +55,18 @@ export function ensurePrediction(s){
   if(s.prediction)return s.prediction;
   const p=empty();
   for(const h of s.history||[]){
+    if(h.skill==='vocab')continue;
     const key=h.skill==='listening'?'L':'R';
-    update(p,key,h.level,h.ok,h.skill==='vocab'?.15:.45,4);
+    update(p,key,h.level,h.ok,.45,4);
   }
   // Legacy history has no dates. It deliberately creates no synthetic chart points.
   s.prediction=p;return p;
 }
-function apply(s,ref,data,ok,{sourceType='practice',outcome,previouslySeen=0}={}){
-  const p=ensurePrediction(s),spec=source(ref,data);
+function apply(s,ref,data,ok,{sourceType='practice',previouslySeen=0}={}){
+  const spec=source(ref,data);
   if(!spec||typeof ok!=='boolean'||!finite(data.level??ref.level,400,900))return false;
   const id=ref.id;if(!safeId(id))return false;
+  const p=ensurePrediction(s);
   const exposures=Math.max(previouslySeen||0,p.exposure[id]||0);
   // A previously revealed answer is less independent evidence. This reduction applies
   // to mocks and diagnosis as well as drills, including repeats from an older save.
@@ -88,23 +92,41 @@ export function predictionSummary(s){
   }
   return {...a,total:a.L.score+a.R.score,low:a.L.low+a.R.low,high:a.L.high+a.R.high};
 }
+// Smooth before applying a display range, so a date has the same value in every view.
+export function smoothedTrend(days,series='total'){
+  const dates=Object.keys(days).sort();
+  const raw=dates.map(date=>{
+    const [listening,reading]=days[date];
+    return series==='L'?listening:series==='R'?reading:listening+reading;
+  });
+  return dates.map((date,i)=>{
+    let weighted=0,weights=0;
+    for(let lag=0;lag<3 && lag<=i;lag++){
+      const weight=3-lag;
+      weighted+=raw[i-lag]*weight;
+      weights+=weight;
+    }
+    return {date,score:weighted/weights};
+  });
+}
 function chart(days,range,now,series){
   const section=series==='L'||series==='R',label=({L:'听力',R:'阅读'})[series]||'总';
   const end=dateKey(now),begin=new Date(now);
   begin.setDate(begin.getDate()-(range==='7'?6:29));
-  const keys=Object.keys(days).filter(k=>k<=end&&(range==='all'||k>=dateKey(begin))).sort();
-  if(!keys.length)return '<p class="prediction-empty">这段时间还没有已记录的估分。完成练习后会留下当天的一个点。</p>';
-  const span=range==='all'?keys[0]:dateKey(begin);
+  const first=dateKey(begin);
+  const points=smoothedTrend(days,series).filter(p=>p.date<=end&&(range==='all'||p.date>=first));
+  if(!points.length)return '<p class="prediction-empty">这段时间还没有已记录的估分。完成听力或阅读类练习后会留下当天的一个点。</p>';
+  const span=range==='all'?points[0].date:first;
   const utc=k=>Date.parse(k+'T00:00:00Z');
-  const start=utc(span),stop=utc(end);const results=keys.map(k=>({k,total:section?days[k][series==='L'?0:1]:days[k][0]+days[k][1]}));
+  const start=utc(span),stop=utc(end);
   const x=k=>start===stop?150:32+244*(utc(k)-start)/(stop-start);
   const y=n=>105-86*(n-(section?5:10))/(section?490:980);
-  const path=results.map((v,i)=>(i?'L':'M')+x(v.k).toFixed(1)+' '+y(v.total).toFixed(1)).join(' ');
+  const path=points.map((v,i)=>(i?'L':'M')+x(v.date).toFixed(1)+' '+y(v.score).toFixed(1)).join(' ');
   const startLabel=span.slice(5),endLabel=end.slice(5);
-  return '<svg data-pred-chart role="img" aria-label="'+label+'估分趋势，'+results.length+' 个学习日" viewBox="0 0 300 130" style="width:100%;height:auto">'+
+  return '<svg data-pred-chart role="img" aria-label="'+label+'估分趋势，'+points.length+' 个学习日" viewBox="0 0 300 130" style="width:100%;height:auto">'+
     (section?[5,250,495]:[10,500,990]).map(n=>'<line x1="30" x2="280" y1="'+y(n)+'" y2="'+y(n)+'" stroke="var(--border)"/><text x="1" y="'+(y(n)+3)+'" font-size="9" fill="currentColor">'+n+'</text>').join('')+
     '<path d="'+path+'" fill="none" stroke="var(--accent)" stroke-width="2.5"/>'+
-    results.map(({k,total})=>'<circle cx="'+x(k)+'" cy="'+y(total)+'" r="3" fill="var(--accent)"><title>'+k+' · '+total+' 分</title></circle>').join('')+
+    points.map(({date,score})=>'<circle cx="'+x(date)+'" cy="'+y(score)+'" r="3" fill="var(--accent)"><title>'+date+' · 平滑估分 '+Math.round(score)+' 分</title></circle>').join('')+
     '<text x="32" y="123" font-size="10" fill="currentColor">'+startLabel+'</text><text x="276" y="123" text-anchor="end" font-size="10" fill="currentColor">'+endLabel+'</text></svg>';
 }
 export function predictionView(s,range='30',now=Date.now(),series='total'){
@@ -113,6 +135,7 @@ export function predictionView(s,range='30',now=Date.now(),series='total'){
     '<div><b>'+(k==='L'?'听力':'阅读')+'</b><strong>'+v[k].score+' / 495</strong></div>').join('')+'</div>'+
     '<p>总估分 <b>'+v.total+'</b> / 990 · 参考范围 '+v.low+'–'+v.high+' 分</p>'+
     '<p>听力 '+v.L.low+'–'+v.L.high+' 分，阅读 '+v.R.low+'–'+v.R.high+' 分。新题样本少时，参考范围较宽。</p>'+
+    '<p class="fine muted">上方是当前估分。曲线按最近三个有快照的学习日加权平均，越近的一天权重越高。</p>'+
     '<div class="prediction-range" aria-label="查看估分时段">'+[['7','7 天'],['30','30 天'],['all','全部']].map(([k,t])=>
       '<button class="secondary" data-act="pred-range" data-range="'+k+'" aria-pressed="'+(k===valid)+'">'+t+'</button>').join('')+'</div>'+
     '<div class="prediction-range" aria-label="曲线科目">'+[['total','总分'],['L','听力'],['R','阅读']].map(([k,t])=>

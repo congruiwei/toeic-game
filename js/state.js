@@ -1,4 +1,5 @@
-import {validDiagnosis,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
+import {migratePrediction} from './prediction-migration.js';
+import {validDiagnosis,restoreDiagnosisRanges,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
 import {migrateReview,advance,gradeError,responseRating,reviewBand} from './review-scheduler.js';
 import {validPrediction,predictAnswer,predictionSummary} from './prediction.js';
 import {validateScreen} from './screening.js';
@@ -122,6 +123,7 @@ export function decode(raw, catalog) {
   }
   validateScreen(x,catalog);
   if(!validDiagnosis(x.diagnosis))throw Error('诊断记录有误');
+  restoreDiagnosisRanges(x.diagnosis);
   if(catalog)reconcileDiagnosis(x,catalog);
   if(!validPrediction(x.prediction))throw Error('估分记录有误');
   if(!validIssues(x.issues))throw Error('问题报告记录有误');
@@ -129,6 +131,10 @@ export function decode(raw, catalog) {
   if(x.examForms!==undefined && (!Array.isArray(x.examForms)||x.examForms.length!==4||!x.examForms.every(n=>number(n))))throw Error('模考记录有误');
   if(x.exam) {
     if(!examValid(x.exam))throw Error('模考试卷记录无效');
+  }
+  // Inspect retired IDs before reconciliation can erase evidence of an older exam.
+  migratePrediction(x,catalog);
+  if(x.exam) {
     // A retired exam item should not make a player's whole backup unusable.
     if(catalog && x.exam.units.some(unit=>unit.ids.some(id=>!catalog.has(id)))) x.exam=null;
     else if(catalog && !examValid(x.exam,catalog))throw Error('模考试卷题型与题库不符');

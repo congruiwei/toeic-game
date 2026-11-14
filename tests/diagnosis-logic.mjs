@@ -36,3 +36,24 @@ const available=[...only.values()].map(o=>Math.abs(o.data.level-600));
 assert.equal(spare.diagnosis.active.current.target,600);
 assert.equal(Math.abs(spare.diagnosis.active.current.level-600),Math.min(...available));
 const result=s.diagnosis.results[0];assert.ok(result.ranges.L[0]<result.ranges.L[1]&&result.ranges.R[0]<result.ranges.R[1]);
+
+// New diagnostic ranges use the formal Reading sections. Vocabulary is still
+// a separate placement ability and used in the adaptive difficulty sequence.
+const {diagnosisRanges}=await import('../js/diagnosis.js');
+const varying={...result.levels,vocab:400},hardWords={...varying,vocab:900};
+const formal=result.items.filter(q=>q.part!==0);
+assert.deepEqual(diagnosisRanges(varying,result.items),diagnosisRanges(hardWords,formal));
+assert.equal(result.rangeVersion,2);
+const legacy=structuredClone(s);const saved=legacy.diagnosis.results[0];delete saved.rangeVersion;
+const historical=diagnosisRanges(saved.levels,saved.items,1);saved.ranges=historical;
+assert.ok(validDiagnosis(legacy.diagnosis));assert.deepEqual(decode(JSON.stringify(legacy),catalog).diagnosis.results[0].ranges,historical);
+delete saved.ranges;
+const restored=decode(JSON.stringify(legacy),catalog);assert.deepEqual(restored.diagnosis.results[0].ranges,historical);
+assert.deepEqual(decode(JSON.stringify(restored),catalog),restored);
+for(const kind of [undefined,2]){
+ const tampered=structuredClone(legacy);const r=tampered.diagnosis.results[0];
+ if(kind===2)r.rangeVersion=2;
+ r.ranges=structuredClone(diagnosisRanges(r.levels,r.items,kind??1));r.ranges.R[1]-=5;
+ assert.throws(()=>decode(JSON.stringify(tampered),catalog));
+}
+console.log('Diagnosis: vocabulary-independent R ranges and verified historical ranges');
