@@ -1,3 +1,4 @@
+import {screenedQueue} from './screening.js';
 import { difficulty } from './state.js';
 const bank = {},
   catalog = new Map(),
@@ -165,6 +166,9 @@ export function question(ref) {
   };
 }
 export function select(s, mode, count = 5, filter = '') {
+  if(mode==='vocab' && filter==='screen-queue'){
+    return screenedQueue(s).filter(id=>catalog.has(id)).slice(0,count).map(id=>({mode:'vocab',id,format:'meaning'}));
+  }
   if (mode === 'errors')
     return Object.values(s.errors)
       .filter((e) => catalog.has(e.ref.id))
@@ -183,6 +187,7 @@ export function select(s, mode, count = 5, filter = '') {
     const { data: d, ref: r } = o,
       w = s.words[r.id];
     if (s.errors[r.id]) return -10000;
+    if (mode==='vocab' && ['learn','unconfirmed'].includes(s.screening?.marks[r.id])) return -4000;
     if (w && w.due <= now) return -5000;
     return (
       (w && w.due > now ? 9000 : 0) +

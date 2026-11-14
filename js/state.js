@@ -1,3 +1,4 @@
+import {validateScreen} from './screening.js';
 import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
@@ -109,6 +110,7 @@ export function decode(raw, catalog) {
     )
       throw Error('练习进度有误');
   }
+  validateScreen(x,catalog);
   if(!validReport(x.report))throw Error('学习报告记录有误');
   if(x.examForms!==undefined && (!Array.isArray(x.examForms)||x.examForms.length!==4||!x.examForms.every(n=>number(n))))throw Error('模考记录有误');
   if(x.exam) {
@@ -196,7 +198,7 @@ export const titleOf = (xp) =>
   ['初遇旅人', '词卡收藏家', '林间探索者', '浮岛领航员', '星海学者'][
     Math.min(4, Math.floor(xp / 400))
   ];
-export function reward(s, q, ref, ok, now = Date.now()) {
+export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false}={}) {
   const xp = ok ? 12 : 4,
     oldLv = levelOf(s.xp),
     oldStage = s.stage;
@@ -208,6 +210,7 @@ export function reward(s, q, ref, ok, now = Date.now()) {
   if (ok) delete s.errors[q.id];
   else s.errors[q.id] = { misses: (s.errors[q.id]?.misses || 0) + 1, at: now, ref: { ...ref } };
   if (q.skill === 'vocab') {
+    if(!screenCheck && ok && s.screening?.marks[q.id]) s.screening.marks[q.id]='studied';
     const w = s.words[q.id] || { box: 0, due: 0, right: 0, tries: 0 };
     w.box = ok ? Math.min(w.box + 1, 5) : 0;
     w.right += Number(ok);

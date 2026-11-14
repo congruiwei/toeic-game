@@ -163,3 +163,9 @@
 .lesson-option.exam-chosen{border-color:var(--accent);background:var(--lilac);box-shadow:inset 0 0 0 1px var(--accent)}
 
 .lesson-unknown { width: 100%; min-height: 44px; margin-top: 10px; }
+
+.screen-card{touch-action:pan-y;text-align:center;display:grid;align-content:center;min-height:190px;user-select:none;-webkit-user-select:none}
+.screen-card h2{font-size:clamp(1.9rem,8vw,3rem);overflow-wrap:anywhere;margin:0}
+.screen-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.screen-actions button{min-height:54px;font-size:1rem}
+.screen-hint{text-align:center;font-size:.85rem}

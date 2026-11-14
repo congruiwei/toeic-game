@@ -1,3 +1,4 @@
+import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
 import {examController} from './exam-controller.js';
@@ -71,6 +72,10 @@ const exam = examController({
   onGrade:(ref,data,ok,at)=>recordStudy(s,ref,data,ok,at),
   confirm:(title,detail,action,label)=>modal(`<h2>${esc(title)}</h2><p>${esc(detail)}</p>${act(action,esc(label),'primary')}`)
 });
+const screening=screenController({state:()=>s,go,render,save,toast,study:()=>start('vocab','screen-queue')});
+root.addEventListener('pointerdown',screening.pointerDown);
+root.addEventListener('pointerup',screening.pointerUp);
+root.addEventListener('pointercancel',screening.cancel);
 function toast(t) {
   const el = dialog.open ? dialog.querySelector('.dialog-notice') || $('#toast') : $('#toast');
   el.textContent = t;
@@ -164,7 +169,7 @@ function render() {
   applyPrefs();
   frame();
   root.innerHTML =
-    page==='report'?reportView(s,bank):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='screen'?screenView(s):page==='report'?reportView(s,bank):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -434,6 +439,7 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a.startsWith('screen-')){screening.action(a,el);return;}
   if(a.startsWith('exam-')){exam.action(a,el);return;}
   if (a === 'nav') {
     if (dialog.open) close();
@@ -570,6 +576,7 @@ window.addEventListener('pagehide',()=>{if(exam.live){exam.suspend();page='examL
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};
 function requiredBanks(action,el){
+  if(action.startsWith('screen-'))return ['vocab'];
   if(action==='nav' && ['library','report'].includes(el.dataset.page) || action==='import' || action==='resume' || action==='exam-start' || action==='exam-lobby')return allBanks;
   if(['start','configure','configured'].includes(action))return routeFiles[el.dataset.mode]?[routeFiles[el.dataset.mode]]:allBanks;
   return [];
