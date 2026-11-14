@@ -1,3 +1,4 @@
+import {replayView} from './replay.js';
 import {reviewTools} from './question-tools.js';
 import {UNKNOWN} from './answers.js';
 import {question} from './bank.js';
@@ -95,15 +96,6 @@ function vocabNote(q) {
   </section>`;
 }
 
-function evidence(q, ref) {
-  if (!q.turns?.length || !['part2','dialogue','dictation'].includes(ref.mode)) return '';
-  return `<details class="lesson-transcript"><summary>${icon('headphones',17)} 听力原文 ${icon('chev',16)}</summary>
-    <div class="lesson-turns">${q.turns.map((turn,i) => {
-      const label = ref.mode === 'part2' ? (i ? letter(i - 1) : 'Q') : turn.speaker;
-      return `<p lang="en"><b aria-hidden="true">${esc(label)}</b><span>${mark(turn.text, q.evidence)}</span></p>`;
-    }).join('')}</div></details>`;
-}
-
 function feedback(q, ref, run) {
   const normalize = value => value.trim().toLowerCase();
   const correct = ref.mode === 'dictation'
@@ -114,7 +106,7 @@ function feedback(q, ref, run) {
     ${ref.mode==='part1'?`<p><b>画面说明</b> ${esc(q.description)}</p>`:''}
     ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p></div>`}
     ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>` : ''}
-    ${evidence(q,ref)}
+    ${replayView(q,ref)}
     ${reviewTools(ref.id)}
   </section>${ref.mode === 'vocab' ? vocabNote(q) : ''}
     <button type="button" data-act="next" class="lesson-primary">${run.index === run.items.length - 1 ? '查看本轮成果' : '下一题'} ${icon('arrow',18)}</button>`;

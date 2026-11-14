@@ -1,3 +1,4 @@
+import {replayView} from './replay.js';
 import {reviewTools} from './question-tools.js';
 import {question,catalog} from './bank.js';
 import {examIds,readingIds,examScores} from './exam.js';
@@ -43,7 +44,7 @@ function reviewEntry(e,id,i){
   ${q.set?.graphic?graphic(q.set.graphic):''}${q.description?'<p>'+esc(q.description)+'</p>':''}
   <ol type="A">${q.options.map(o=>'<li>'+esc(o)+'</li>').join('')}</ol>
   <p>我的答案　${esc(e.answers[id]||'未作答')}</p><p>正确答案　${esc(answer)}</p>
-  <p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p>${reviewTools(id)}</details>`;
+  <p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p>${replayView(q,ref)}${reviewTools(id)}</details>`;
 }
 function resultView(e){
  const scores=examScores(e,catalog);

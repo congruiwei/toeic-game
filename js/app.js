@@ -1,3 +1,4 @@
+import {playLine,stopReplay,stopClosedReplay} from './replay.js';
 import {answerText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
 import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
@@ -167,6 +168,7 @@ function home() {
  <div class="continue"><span class="continue-icon">${icon('compass', 27)}</span><div><h3>${s.session ? '上次的探险' : '自由练习'}</h3><p>${s.session ? esc(s.session.title) + ' · ' + Math.min(s.session.index + 1, s.session.items.length) + ' / ' + s.session.items.length : '按主题与题型选择练习'}</p></div>${act(s.session ? 'resume' : 'nav', s.session ? '继续学习 ' + icon('arrow', 16) : '进入练习 ' + icon('arrow', 16), 'primary', 'data-page="learn"')}</div>`;
 }
 function render() {
+  stopReplay();
   applyPrefs();
   frame();
   root.innerHTML =
@@ -211,6 +213,7 @@ function startClock() {
   tick = setInterval(update, 500);
 }
 function modal(content, cls = '') {
+  stopReplay();
   pauseClock();
   dialog.className = cls;
   dialog.innerHTML = `<div class="modal-body">${act('close', icon('close', 19), 'modal-close', 'aria-label="关闭"')}${content}<div class="dialog-notice" role="status"></div></div>`;
@@ -452,6 +455,15 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a==='sentence-play'){
+    const id=el.closest('[data-replay-id]')?.dataset.replayId;
+    const session=s.session, ref=catalog.get(id)?.ref;
+    const practiceAllowed=page==='practice' && session?.selected!=null && session.items[session.index]?.id===id;
+    const examAllowed=page==='exam' && s.exam?.phase==='done' && s.exam.units.some(unit=>unit.ids.includes(id));
+    if(ref && (practiceAllowed || examAllowed)) playLine(el,question(ref),ref,s.settings,toast);
+    return;
+  }
+  stopReplay();
   if(a==='copy-claude') {
     const text=reviewedAnswer(id);
     if(text)await copyText(text+'\n\n请用中文解释为什么选这个答案，以及我错在哪里。',modal,toast,'已复制，可粘贴给 Claude');
@@ -571,6 +583,7 @@ document.addEventListener('click', async (e) => {
 document.addEventListener('visibilitychange', () => {
   if (root.getAttribute('aria-busy') === 'true') return;
   if (document.hidden) {
+  stopReplay();
     if(page==='exam'&&exam.live){exam.suspend();page='examLobby';render();}
     pauseClock();
     hush();
@@ -600,7 +613,8 @@ window.addEventListener('storage', async (e) => {
     render();
   } catch {}
 });
-window.addEventListener('pagehide',()=>{if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
+document.addEventListener('toggle', e=>stopClosedReplay(e.target), true);
+window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};
 function requiredBanks(action,el){

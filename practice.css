@@ -175,3 +175,26 @@
 .exam-item-review { padding:8px 0; border-bottom:1px solid var(--border); overflow-wrap:anywhere; }
 .issue-field { display:grid; gap:8px; margin:12px 0; }
 .issue-field textarea { width:100%; padding:10px; font:inherit; color:var(--ink); background:var(--panel); border:1px solid var(--border); border-radius:10px; }
+
+.sentence-panel { margin-block: 12px; }
+.sentence-repeat { display:flex; align-items:center; gap:9px; min-height:44px; }
+.sentence-repeat input { height:20px; width:20px; accent-color:var(--accent); }
+.sentence-row { display:flex; align-items:center; text-align:left; gap:10px; width:100%; min-height:48px; padding:9px 6px; border-top:1px solid var(--border); line-height:1.55; }
+.sentence-row [lang=en] { flex:1; min-width:0; overflow-wrap:anywhere; }
+.sentence-row[aria-pressed=true] { background:var(--lilac); box-shadow:inset 3px 0 var(--accent); }
+.sentence-speaker,.sentence-symbol { color:var(--accent); font-weight:bold; }
+.sentence-speaker { min-width:25px; text-align:center; }
+.sentence-symbol { margin-right:6px; }
+
+.method-list button { display:grid; grid-template-columns:1fr auto; text-align:left; padding:14px 16px; min-height:65px; }
+.method-list small { color:var(--muted); }
+.method-list button span { grid-column:2; grid-row:1 / span 2; align-self:center; }
+.method-list b { grid-column:1; }
+.method-caption { font-weight:650; color:var(--accent); }
+.method-diagram { list-style:none; padding:0; margin:16px 0; display:flex; gap:20px; }
+.method-diagram li { position:relative; padding:12px 9px; background:var(--lilac); border-radius:10px; flex:1; min-width:0; overflow-wrap:anywhere; }
+.method-diagram li + li::before { content:'→'; position:absolute; top:35%; left:-17px; color:var(--accent); }
+.method-diagram b,.method-diagram span { display:block; }
+.method-diagram span { margin-top:6px; }
+.method-actions { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.method-actions label { display:flex; gap:5px; align-items:center; min-height:44px; font-size:14px; }
