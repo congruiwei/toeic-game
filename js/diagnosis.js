@@ -121,7 +121,7 @@ export function validDiagnosis(d){
   else if(d.since!==null)return false;
   if(d.active===null)return true;
   const a=d.active,c=a?.current;
-  return record(a)&&count(a.started)&&validItems(a.items,false)&&record(c)&&safeId(c.id)&&
+  return record(a)&&count(a.answerMs??0)&&count(a.started)&&validItems(a.items,false)&&record(c)&&safeId(c.id)&&
     (c.target===undefined||c.target===nextDiagnosisTarget(a.items))&&c.part===rounds[a.items.length]&&c.mode===modeOf(c.part)&&levels.includes(c.level)&&
     (c.part!==0||['meaning','english','cloze','match'].includes(c.format))&&!a.items.some(row=>row.id===c.id);
 }

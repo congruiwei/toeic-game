@@ -167,5 +167,5 @@ export function reportView(state, bank, now = Date.now()) {
       '<section class="panel report-recommend"><h2>从单词开始</h2><p>有了作答记录后，这里会推荐正确率较低的练习。</p><button class="primary" type="button" data-act="start" data-mode="vocab">练习单词</button></section>'}
     <section class="panel"><h2>各部分正确率</h2><ul class="report-rows">${[...partRows,vocab,dictation].map(rowView).join('')}</ul></section>
     <section class="panel"><h2>语法关卡正确率</h2><ul class="report-rows">${grammarRows.map(rowView).join('')}</ul></section>
-    <section class="panel"><h2>分级词汇掌握度</h2><p>间隔复习进入第 3 盒及以上的词条计为已掌握。</p><ul class="report-rows">${[...levels].map(([level,b])=>`<li><b>${level} 级</b><span>${b.mastered} / ${b.total} 词</span></li>`).join('')}</ul></section></div>`;
+    <section class="panel"><h2>分级词汇掌握度</h2><p>进入长期复习且记忆稳定度达到 7 天的词卡计为已掌握。</p><ul class="report-rows">${[...levels].map(([level,b])=>`<li><b>${level} 级</b><span>${b.mastered} / ${b.total} 词</span></li>`).join('')}</ul></section></div>`;
 }

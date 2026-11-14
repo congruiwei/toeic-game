@@ -4,6 +4,7 @@ import {bank,catalog,question} from './bank.js';
 import {beginScreen,selfAssess,markSpotCheck,screenedQueue} from './screening.js';
 import {recordStudy} from './report.js';
 import {reward} from './state.js';
+import {advance} from './review-scheduler.js';
 import {speak} from './audio.js';
 
 const esc = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -40,6 +41,11 @@ export function screenController({state,go,render,save,toast,study}) {
   function choose(id,knows) {
     const s=state();
     if(!selfAssess(s,id,knows))return;
+    if(!knows){
+      const word=s.words[id] ||= {box:0,right:0,tries:0,due:0};
+      word.fsrs=advance(word.fsrs,1,Date.now(),s.settings.retention);
+      word.due=word.fsrs.due;
+    }
     if(save()){render();pronounce();}
   }
   function action(a,el) {
@@ -66,7 +72,6 @@ export function screenController({state,go,render,save,toast,study}) {
       s.screening.run.feedback={id,selected};
       reward(s,q,ref,ok,Date.now(),{screenCheck:true});
       recordStudy(s,ref,q,ok,Date.now(),selected===UNKNOWN?'unknown':undefined);
-      if(ok) s.words[id].due=Date.now()+7*86400000;
       if(save())render();
     }
   }

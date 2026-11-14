@@ -61,6 +61,7 @@ const taskInfo = {
   reading: ['阅读', '探索文中的线索', 'reading'],
 };
 let lastRaw = null;
+let answerClock = null;
 let s = fresh(),
   page = 'home',
   tab = 'words',
@@ -100,7 +101,7 @@ function save() {
       exam.stop();
       s = newer;
       lastRaw = current;
-      clockStart = 0;
+      clockStart = 0;answerClock=null;
       if (dialog.open) close();
       page = 'home';
       render();
@@ -186,18 +187,30 @@ function render() {
           ? libraryView(s, tab, themeFilter)
           : practiceView(s);
   root.setAttribute('aria-busy', 'false');
-  if (page === 'practice') startClock();
+  if (page === 'practice' || page === 'diagnosis') startClock();
 }
-function pauseClock() {
+function pauseClock(persist=true) {
+  const current=page==='diagnosis'?s.diagnosis?.active:s.session;
+  if(answerClock!==null && current){
+    current.answerMs=(current.answerMs||0)+Math.max(0,Math.round(performance.now()-answerClock));
+    answerClock=null;
+    if(persist)save();
+  }
   if (clockStart && s.session) {
     s.session.elapsed += Math.max(0, Date.now() - clockStart);
     clockStart = 0;
-    save();
+    if(persist)save();
   }
   clearInterval(tick);
 }
 function startClock() {
+  if(page==='diagnosis'){
+    if(s.diagnosis?.active && !document.hidden && !dialog.open && answerClock===null)answerClock=performance.now();
+    return;
+  }
   const a = s.session;
+  if(a && !a.intro && a.index<a.items.length && a.selected===null && !document.hidden && !dialog.open && answerClock===null)
+    answerClock=performance.now();
   if (
     !a?.timed ||
     a.index >= a.items.length ||
@@ -230,7 +243,7 @@ function close() {
   dialog.close();
 }
 dialog.addEventListener('close', () => {
-  if (page === 'practice') startClock();
+  if (page === 'practice' || page==='diagnosis') startClock();
 });
 dialog.addEventListener('click', (e) => {
   if (e.target === dialog) close();
@@ -292,6 +305,7 @@ function settings() {
        `<label class="setting">${n}<input type="checkbox" data-pref="${v}" ${p[v] ? 'checked' : ''}></label>`,
    )
    .join('')}
+ <label class="setting">目标记忆率<select data-pref="retention">${[.85,.90,.95].map(r=>option(r,Math.round(100*r)+'%',p.retention??.90)).join('')}</select></label><p class="fine muted">目标记忆率越高，复习越频繁。</p>
  <label class="setting">朗读速度 <span><output id="rate-val">${p.rate}×</output> <input aria-label="朗读速度" type="range" min="0.75" max="1.2" step="0.05" value="${p.rate}" data-pref="rate"></span></label>
  <section id="voice-controls">${voiceControls()}</section><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p>${issueSettings(s.issues)}<div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
 }
@@ -347,9 +361,9 @@ function answer(value) {
     return;
   }
   hush();
-  pauseClock();
+  pauseClock(false);
   const ok = value.trim().toLowerCase() === q.answer.trim().toLowerCase(),
-    result = reward(s, q, r, ok);
+    result = reward(s,q,r,ok,Date.now(),{activeMs:a.answerMs||0});
   recordStudy(s,r,q,ok,Date.now(),value === UNKNOWN ? 'unknown' : undefined);
   a.selected = ok ? q.answer : value;
   a.right += Number(ok);
@@ -425,7 +439,7 @@ document.addEventListener('change', async (e) => {
   if(el.id==='exam-jump'){exam.jump(Number(el.value));return;}
   if (k) {
     s.settings[k] =
-      el.type === 'checkbox' ? el.checked : k === 'rate' ? Number(el.value) : el.value;
+      el.type === 'checkbox' ? el.checked : ['rate','retention'].includes(k) ? Number(el.value) : el.value;
     save();
     applyPrefs();
     if (k === 'rate') $('#rate-val').textContent = el.value + '×';
@@ -480,7 +494,9 @@ document.addEventListener('click', async (e) => {
     const q=question(r),unknown=a==='diag-unknown',choice=q.options[Number(i)];if(!unknown&&!choice)return;
     hush();
     const ok=!unknown && choice===q.answer, now=Date.now();
-    reward(s,q,r,ok,now,{sourceType:'diagnosis'});
+    pauseClock(false);
+    reward(s,q,r,ok,now,{sourceType:'diagnosis',activeMs:s.diagnosis.active.answerMs||0});
+    s.diagnosis.active.answerMs=0;
     recordStudy(s,r,q,ok,now,unknown?'unknown':undefined);
     answerDiagnosis(s,id,ok,catalog,now,unknown);
     diagFeedback=unknown?{ref:r,selected:UNKNOWN}:null;
@@ -581,6 +597,7 @@ document.addEventListener('click', async (e) => {
     hush();
     const b = s.session;
     b.index++;
+    b.answerMs=0;
     b.selected = null;
     const next = b.items[b.index];
     b.intro =
@@ -602,6 +619,7 @@ document.addEventListener('click', async (e) => {
   if (a === 'import') $('#import-file').click();
   if (a === 'restore' && incoming) {
     pauseClock();
+    answerClock=null;
     s = incoming;
     incoming = null;
     storageBroken = false;
@@ -636,7 +654,7 @@ window.addEventListener('storage', async (e) => {
     exam.stop();
     if(page==='exam')page='examLobby';
     s = updated;
-    clockStart = 0;
+    clockStart = 0;answerClock=null;
     clearInterval(tick);
     hush();
     if (dialog.open) close();

@@ -109,6 +109,7 @@ export function examValid(e,catalog){
   if(e.focus!==null && !ids.has(e.focus))return false;
   if(e.phase==='listening'&&catalog&&e.step>listeningScript(e.units[e.unit],catalog).length)return false;
   if(e.phase==='done' && (!e.keys || [...ids].some(id=>typeof e.keys[id]!=='string')))return false;
+  if(e.reviewMs!==undefined && (!e.reviewMs||typeof e.reviewMs!=='object'||Array.isArray(e.reviewMs)||Object.entries(e.reviewMs).some(([id,n])=>!ids.has(id)||!Number.isSafeInteger(n)||n<0)))return false;
   return [e.answers,e.times,e.answeredAt].every(m=>m&&typeof m==='object'&&!Array.isArray(m)&&Object.keys(m).every(id=>ids.has(id)))
     &&Object.values(e.answers).every(v=>typeof v==='string'&&v.length<=2000)&&Object.values(e.answeredAt).every(v=>Number.isSafeInteger(v)&&v>=0)
     &&Object.values(e.times).every(v=>Number.isSafeInteger(v)&&v>=0);

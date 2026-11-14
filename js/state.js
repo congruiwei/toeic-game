@@ -1,11 +1,12 @@
 import {validDiagnosis,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
+import {migrateReview,advance,gradeError,responseRating,reviewBand} from './review-scheduler.js';
 import {validPrediction,predictAnswer,predictionSummary} from './prediction.js';
 import {validateScreen} from './screening.js';
 import {validIssues} from './question-tools.js';
 import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
-  VERSION = 2;
+  VERSION = 3;
 export const skills = ['vocab', 'grammar', 'listening', 'reading'];
 export const labels = { vocab: '单词', grammar: '语法', listening: '听力', reading: '阅读' };
 export const forms = ['芽团', '双叶芽', '蕨羽灵', '铃花灵', '云冠灵', '星冠灵'];
@@ -23,7 +24,7 @@ export function fresh() {
     seen: {},
     session: null,
     lastVisit: 0,
-    settings: { theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false },
+    settings: { theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
   };
 }
 const record = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
@@ -38,7 +39,7 @@ function mapOk(m, fn) {
 export function decode(raw, catalog) {
   const x = JSON.parse(raw);
   // Version 1 stored every missed answer together. Its existing verdicts stay intact.
-  if (record(x) && x.version === 1) x.version = 2;
+  if (record(x) && [1,2].includes(x.version)) x.version = VERSION;
   if (!record(x) || x.version !== VERSION) throw Error('存档版本无法识别');
   if (
     !number(x.xp) ||
@@ -127,6 +128,7 @@ export function decode(raw, catalog) {
     else if(catalog && !examValid(x.exam,catalog))throw Error('模考试卷题型与题库不符');
   }
   if (catalog) reconcileBank(x, catalog);
+  migrateReview(x);
   return x;
 }
 
@@ -201,7 +203,7 @@ export const titleOf = (xp) =>
   ['初遇旅人', '词卡收藏家', '林间探索者', '浮岛领航员', '星海学者'][
     Math.min(4, Math.floor(xp / 400))
   ];
-export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false,sourceType='practice'}={}) {
+export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false,sourceType='practice',activeMs=0}={}) {
   const xp = ok ? 12 : 4,
     oldLv = levelOf(s.xp),
     oldStage = s.stage;
@@ -212,16 +214,16 @@ export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false,sourc
   s.history.push({ skill: q.skill, level: q.level, ok });
   s.history = s.history.slice(-120);
   s.seen[q.id] = (s.seen[q.id] || 0) + 1;
-  if (ok) delete s.errors[q.id];
-  else s.errors[q.id] = { misses: (s.errors[q.id]?.misses || 0) + 1, at: now, ref: { ...ref } };
+  const grade=responseRating(ok,activeMs,screenCheck);
+  gradeError(s,ref,ok,grade,now);
   if (q.skill === 'vocab') {
     if(!screenCheck && ok && s.screening?.marks[q.id]) s.screening.marks[q.id]='studied';
     const w = s.words[q.id] || { box: 0, due: 0, right: 0, tries: 0 };
-    w.box = ok ? Math.min(w.box + 1, 5) : 0;
+    w.fsrs = advance(w.fsrs,grade,now,s.settings.retention);
+    w.box = reviewBand(w.fsrs);
     w.right += Number(ok);
     w.tries++;
-    w.due =
-      now + [2 * 60000, 86400000, 3 * 86400000, 7 * 86400000, 14 * 86400000, 30 * 86400000][w.box];
+    w.due = w.fsrs.due;
     s.words[q.id] = w;
   }
   const score = estimate(s);

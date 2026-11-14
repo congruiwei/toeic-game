@@ -1,3 +1,4 @@
+import {gradeError,responseRating} from './review-scheduler.js';
 import {bank,catalog} from './bank.js';
 import {speak,hush} from './audio.js';
 import {buildExam,examIds,readingIds,listeningScript} from './exam.js';
@@ -35,7 +36,7 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
       e.keys[id]=data.answer;
       const answered=Object.hasOwn(e.answers,id);
       if(answered)s.seen[id]=(s.seen[id]||0)+1;
-      if(ok)delete s.errors[id];else s.errors[id]={misses:(s.errors[id]?.misses||0)+1,at:e.finishedAt,ref:{...ref}};
+      gradeError(s,ref,ok,responseRating(ok,e.reviewMs?.[id]??0),e.finishedAt);
       if(answered)onGrade?.(ref,data,ok,e.answeredAt[id]);
     }
     s.examForms ||= [0,0,0,0];s.examForms[e.form]++;
@@ -109,7 +110,9 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
       const id=el.dataset.id,options=catalog.get(id)?.data.options;
       const visible=e.phase==='reading'?[readingIds(e)[e.cursor]]:e.units[e.unit].ids;
       if(!visible.includes(id)||!options?.[Number(el.dataset.i)])return;
-      account();e.focus=id;e.answers[id]=options[Number(el.dataset.i)];e.answeredAt[id]=Date.now();if(!save()&&current()!==e)return;
+      account();e.reviewMs??={};
+      if(!Object.hasOwn(e.answers,id))e.reviewMs[id]=e.times[id]||0;
+      e.focus=id;e.answers[id]=options[Number(el.dataset.i)];e.answeredAt[id]=Date.now();if(!save()&&current()!==e)return;
       const group=el.closest('.lesson-choices');
       for(const b of group.querySelectorAll('button')){b.classList.toggle('exam-chosen',b===el);b.setAttribute('aria-pressed',String(b===el));}
       const selected=document.querySelector('#exam-jump option:checked');if(selected)selected.textContent=(e.cursor+1)+' · 已答';

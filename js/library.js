@@ -1,3 +1,4 @@
+import {errorDue} from './review-scheduler.js';
 import { bank, catalog, question } from './bank.js';
 import { icon } from './icons.js';
 
@@ -66,33 +67,34 @@ const errorLabels = {
   dictation: '听写', dialogue: '听力理解', reading: '阅读理解'
 };
 
-function errorsView(errors) {
+function errorsView(errors,state) {
   if (!errors.length) {
     return `<section class="lib-no-errors"><span class="lib-empty-icon">${icon('check',26)}</span>
-      <h2>错题本是空的</h2><p>答错的题会自动收在这里，复习答对后移出。</p>
+      <h2>错题本是空的</h2><p>答错的题会自动收在这里。非词汇题连续答对两次后移出。</p>
       ${startVocab}</section>`;
   }
-  return `<section class="lib-error-intro"><div><h2>待复习 <b>${errors.length}</b></h2>
-    <p>从错得最多的题开始。</p></div>
-    <button type="button" class="lib-button" data-act="start" data-mode="errors">开始复习 ${icon('play',15)}</button></section>
+  const due=errors.filter(e=>errorDue(state,e)<=Date.now()).length;
+  return `<section class="lib-error-intro"><div><h2>已到期 <b>${due}</b> / ${errors.length}</h2>
+    <p>按到期时间开始复习，也可点开单题提前练。</p></div>
+    <button type="button" class="lib-button" data-act="start" data-mode="errors" ${due ? '' : 'disabled'}>复习到期题 ${icon('play',15)}</button></section>
     <div class="lib-cards">${errors.map(err => {
       const {ref,data} = catalog.get(err.ref.id);
       const q = question({...err.ref, mode:ref.mode});
       const name = ref.mode === 'vocab' ? data.word : ref.mode === 'part2' ? data.audio : q.prompt;
       return `<button type="button" class="lib-error-row" data-act="review-one" data-id="${escape(ref.id)}">
         <span><small>${escape(errorLabels[ref.mode])} · ${q.level} 级</small>
-        <strong lang="en">${escape(name)}</strong><small>答错 ${err.misses} 次</small></span>${icon('chev',17)}</button>`;
+        <strong lang="en">${escape(name)}</strong><small>答错 ${err.misses} 次 · ${errorDue(state,err)<=Date.now()?'已到期':'下次 '+new Date(errorDue(state,err)).toLocaleString('zh-CN')} ${ref.mode!=='vocab'?'· 连续答对 '+(err.correctStreak||0)+'/2':''}</small></span>${icon('chev',17)}</button>`;
     }).join('')}</div>`;
 }
 
 export function libraryView(s, tab = 'words', filter = '') {
   const errors = Object.values(s.errors).filter(error => catalog.has(error.ref.id))
-    .sort((a,b) => b.misses - a.misses || a.at - b.at);
+    .sort((a,b)=>errorDue(s,a)-errorDue(s,b)||b.misses-a.misses);
   const tabs = [['words','单词图鉴','cards'], ['errors','错题本','note']];
   return `<div class="lib-page"><h1>学习图鉴</h1>
     <div class="lib-tabs" aria-label="图鉴分类">${tabs.map(([key,label,symbol]) =>
       `<button type="button" data-act="library-tab" data-tab="${key}" aria-pressed="${tab === key}">
         ${icon(symbol,18)}${label}${key === 'errors' && errors.length ? `<small>${errors.length}</small>` : ''}
       </button>`).join('')}</div>
-    ${tab === 'errors' ? errorsView(errors) : wordsView(s,filter)}</div>`;
+    ${tab === 'errors' ? errorsView(errors,s) : wordsView(s,filter)}</div>`;
 }

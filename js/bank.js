@@ -1,3 +1,4 @@
+import {errorDue} from './review-scheduler.js';
 import {screenedQueue} from './screening.js';
 import { difficulty } from './state.js';
 const bank = {},
@@ -171,8 +172,8 @@ export function select(s, mode, count = 5, filter = '') {
   }
   if (mode === 'errors')
     return Object.values(s.errors)
-      .filter((e) => catalog.has(e.ref.id))
-      .sort((a, b) => b.misses - a.misses || a.at - b.at)
+      .filter((e) => catalog.has(e.ref.id) && errorDue(s,e)<=Date.now())
+      .sort((a,b) => errorDue(s,a)-errorDue(s,b) || b.misses-a.misses)
       .slice(0, count)
       .map((e) => ({ ...e.ref }));
   const target = difficulty(s, skillFor(mode)),
@@ -186,7 +187,7 @@ export function select(s, mode, count = 5, filter = '') {
   const rank = (o) => {
     const { data: d, ref: r } = o,
       w = s.words[r.id];
-    if (s.errors[r.id]) return -10000;
+    if (s.errors[r.id]) return errorDue(s,s.errors[r.id])<=now ? -10000 : 10000;
     if (mode==='vocab' && ['learn','unconfirmed'].includes(s.screening?.marks[r.id])) return -4000;
     if (w && w.due <= now) return -5000;
     return (
