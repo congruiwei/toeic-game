@@ -339,7 +339,7 @@ function listening(groups) {
       expect(typeof d.answer === 'string' && /^\S+$/.test(d.answer) && wordsIn(d.answer, d.text).length === 1, path, '听写答案须为句中只出现一次的完整单词');
     }
   });
-  for(const part of [3,4])expect(groups.filter(g=>g.part===part).length>=30,'listening','Part '+part+' 至少 30 组');
+  for(const [part,minimum] of [[3,52],[4,40]])expect(groups.filter(g=>g.part===part).length>=minimum,'listening','Part '+part+' 需要至少 '+minimum+' 组');
   expect(graphics>=10 && three>0 && intents>0,'listening','需要至少 10 组图表并覆盖三人对话和意图题');
   expect(parts.has(3) && parts.has(4), 'listening', '须同时包含 Part 3 和 Part 4');
   counts['Part 3/4 组'] = Array.isArray(groups) ? groups.length : 0;
@@ -403,7 +403,7 @@ function reading(groups) {
       }
     }
   });
-  expect(part6 >=15 && single+double+triple>=45 && single>0 && double>=8 && triple>=6, 'reading', 'Part 6 需15组、Part 7 需45组，含至少8双篇及6三篇');
+  expect(part6 >=16 && single>=40 && double>=8 && triple>=12, 'reading', 'Part 6 需16组、Part 7 需40单篇、8双篇、12三篇');
   for(const [part,dist] of Object.entries(positions)){
     console.log('Part '+part+' 插句位置 [1]/[2]/[3]/[4]：'+dist.join('/'));
     expect(Math.max(...dist)-Math.min(...dist)<=1,'Part '+part,'插句位置数量差不能超过 1');

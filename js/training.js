@@ -17,7 +17,7 @@ const routes = [
   ['dictation', 'part2', '听写手记', '听原句 · 补全单词'],
 ];
 export function learnView(state) {
-  return `<div class="page-title"><div class="eyebrow"><i></i> TRAINING MAP</div><h1>练习地图</h1></div><div class="learn-grid">${routes.map(([mode, art, name, detail]) => `<button class="learn-card panel" data-act="configure" data-mode="${mode}">${tileArt(art)}<strong>${name}<small>${detail}</small></strong>${icon('chev', 17)}</button>`).join('')}</div>${state.session && state.session.index < state.session.items.length ? '<button class="primary resume-training" data-act="resume">继续上次练习 ' + icon('arrow', 16) + '</button>' : ''}`;
+  return `<div class="page-title"><div class="eyebrow"><i></i> TRAINING MAP</div><h1>练习地图</h1></div><div class="learn-grid"><button class="learn-card panel" data-act="exam-lobby">${tileArt('reading')}<strong>模拟考试<small>完整 200 题 · 半套 100 题</small></strong>${icon('chev',17)}</button>${routes.map(([mode, art, name, detail]) => `<button class="learn-card panel" data-act="configure" data-mode="${mode}">${tileArt(art)}<strong>${name}<small>${detail}</small></strong>${icon('chev', 17)}</button>`).join('')}</div>${state.session && state.session.index < state.session.items.length ? '<button class="primary resume-training" data-act="resume">继续上次练习 ' + icon('arrow', 16) + '</button>' : ''}`;
 }
 function field(id, label, values) {
   return `<label class="setting">${label}<select id="${id}">${values.map(([k, title]) => `<option value="${esc(k)}">${esc(title)}</option>`).join('')}</select></label>`;

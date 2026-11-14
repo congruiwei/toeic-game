@@ -1,3 +1,4 @@
+import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
   VERSION = 1;
 export const skills = ['vocab', 'grammar', 'listening', 'reading'];
@@ -104,6 +105,13 @@ export function decode(raw, catalog) {
       typeof s.timed !== 'boolean'
     )
       throw Error('练习进度有误');
+  }
+  if(x.examForms!==undefined && (!Array.isArray(x.examForms)||x.examForms.length!==4||!x.examForms.every(n=>number(n))))throw Error('模考记录有误');
+  if(x.exam) {
+    if(!examValid(x.exam))throw Error('模考试卷记录无效');
+    // A retired exam item should not make a player's whole backup unusable.
+    if(catalog && x.exam.units.some(unit=>unit.ids.some(id=>!catalog.has(id)))) x.exam=null;
+    else if(catalog && !examValid(x.exam,catalog))throw Error('模考试卷题型与题库不符');
   }
   if (catalog) reconcileBank(x, catalog);
   return x;

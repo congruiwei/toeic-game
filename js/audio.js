@@ -76,12 +76,12 @@ export function castVoices(turns, prefs, seed, list) {
   }
   return assigned;
 }
-export function speak(turns, prefs, fail, {seed='',preview='',onEnd,onStart}={}) {
+export function speak(turns, prefs, fail, {seed='',preview='',onEnd,onStart,castTurns=turns}={}) {
   hush();
   if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) { fail('此浏览器无法朗读。请在 Safari 中测试英语语音。'); return; }
   const raw=speechSynthesis.getVoices(),list=englishVoices(raw);
   if(raw.length && !list.length){fail('未发现可用的英语语音。请在系统设置中下载英语声音后重试。');return;}
-  const cast=castVoices(turns,prefs,seed,list), token=generation;
+  const cast=castVoices(castTurns,prefs,seed,list), token=generation;
   let started=false;
   active=turns.map(({text,speaker},i)=>{
     const u=new SpeechSynthesisUtterance(text);

@@ -1,3 +1,5 @@
+import {examController} from './exam-controller.js';
+import {examView,examLobby} from './exam-ui.js';
 import { practiceView } from './practice.js';
 import { libraryView } from './library.js';
 import { learnView, configureView } from './training.js';
@@ -61,6 +63,10 @@ let s = fresh(),
   returnBonus = false,
   storageBroken = false,
   offlineReady = false;
+const exam = examController({
+  state:()=>s, page:()=>page, show:go, redraw:render, save, notify:toast,
+  confirm:(title,detail,action,label)=>modal(`<h2>${esc(title)}</h2><p>${esc(detail)}</p>${act(action,esc(label),'primary')}`)
+});
 function toast(t) {
   const el = dialog.open ? dialog.querySelector('.dialog-notice') || $('#toast') : $('#toast');
   el.textContent = t;
@@ -74,6 +80,7 @@ function save() {
     const current = localStorage.getItem(KEY);
     if (current !== lastRaw && current) {
       const newer = decode(current, catalog);
+      exam.stop();
       s = newer;
       lastRaw = current;
       clockStart = 0;
@@ -122,6 +129,8 @@ function navItems() {
 function go(p) {
   pauseClock();
   hush();
+  if(page==='exam'&&p!=='exam')exam.suspend();
+  if(dialog.open)close();
   page = p;
   render();
   window.scrollTo(0, 0);
@@ -151,7 +160,7 @@ function render() {
   applyPrefs();
   frame();
   root.innerHTML =
-    page === 'home'
+    page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -244,6 +253,7 @@ function voiceControls(){
     <p class="fine muted">iPhone 设置 → 辅助功能 → 朗读内容（部分版本为「阅读与朗读」）→ 声音 → 英语。下载标有「增强」或「高级」的声音。返回游戏后，自动分配会优先使用可用的高音质声音。</p>`;
 }
 function settings() {
+  if(page==='exam'&&exam.live){toast('考试中如需调整设置，请先保存离开。');return;}
   const p = s.settings;
   const option = (v, n, c) => `<option value="${v}" ${v === c ? 'selected' : ''}>${n}</option>`;
   modal(`<div class="eyebrow">PREFERENCES</div><h2>小岛设置</h2><label class="setting">外观<select data-pref="theme">${[
@@ -377,6 +387,7 @@ document.addEventListener('change', async (e) => {
   const el = e.target,
     k = el.dataset.pref;
   if(el.dataset.voiceSlot){s.settings.voiceSlots ||= {};s.settings.voiceSlots[el.dataset.voiceSlot]=el.value;save();return;}
+  if(el.id==='exam-jump'){exam.jump(Number(el.value));return;}
   if (k) {
     s.settings[k] =
       el.type === 'checkbox' ? el.checked : k === 'rate' ? Number(el.value) : el.value;
@@ -411,6 +422,7 @@ document.addEventListener('click', (e) => {
   const el = e.target.closest('[data-act]');
   if (!el || el.disabled) return;
   const { act: a, mode, page: p, i, filter, id } = el.dataset;
+  if(a.startsWith('exam-')){exam.action(a,el);return;}
   if (a === 'nav') {
     if (dialog.open) close();
     go(p);
@@ -512,6 +524,7 @@ document.addEventListener('click', (e) => {
 document.addEventListener('visibilitychange', () => {
   if (root.getAttribute('aria-busy') === 'true') return;
   if (document.hidden) {
+    if(page==='exam'&&exam.live){exam.suspend();page='examLobby';render();}
     pauseClock();
     hush();
     s.lastVisit = Date.now();
@@ -527,6 +540,8 @@ window.addEventListener('storage', (e) => {
   try {
     const updated = decode(e.newValue, catalog);
     lastRaw = e.newValue;
+    exam.stop();
+    if(page==='exam')page='examLobby';
     s = updated;
     clockStart = 0;
     clearInterval(tick);
@@ -536,7 +551,7 @@ window.addEventListener('storage', (e) => {
     render();
   } catch {}
 });
-window.addEventListener('pagehide', pauseClock);
+window.addEventListener('pagehide',()=>{if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
 async function boot() {
   try {
     await loadBank(['vocab', 'part1','part2', 'grammar', 'listening', 'reading']);

@@ -48,7 +48,7 @@ function player(q, ref, answered) {
     <span class="lesson-wave" aria-hidden="true">${waveform}</span></button>`;
 }
 
-function graphic(table, evidence = '') {
+export function graphic(table, evidence = '') {
   const cells = row => row.map(cell => `<td>${mark(cell,evidence)}</td>`).join('');
   return `<div class="lesson-graphic" tabindex="0" role="region" aria-label="题目附表"><table lang="en">
     <caption>${esc(table.title || 'Reference table')}</caption>
@@ -57,7 +57,7 @@ function graphic(table, evidence = '') {
   </table></div>`;
 }
 
-function passages(q, answered) {
+export function passages(q, answered) {
   return `<div class="lesson-sources">${q.set.documents.map(doc => `
     <article class="lesson-document"><header>${icon('note',17)} ${esc(doc.type)}</header>
     <h3 lang="en">${esc(doc.title)}</h3>
