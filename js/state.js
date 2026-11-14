@@ -74,7 +74,8 @@ export function decode(raw, catalog) {
   if (
     !record(x.settings) ||
     !['auto', 'light', 'dark'].includes(x.settings.theme) ||
-    !['auto', 'en-US', 'en-GB', 'en-AU'].includes(x.settings.accent) ||
+    !['auto', 'en-US', 'en-GB', 'en-AU','en-CA'].includes(x.settings.accent) ||
+    (x.settings.voiceSlots !== undefined && (!record(x.settings.voiceSlots) || !Object.entries(x.settings.voiceSlots).every(([k,v])=>['A','B','C'].includes(k)&&typeof v==='string'&&v.length<1000))) ||
     !Number.isFinite(x.settings.rate) ||
     x.settings.rate < 0.75 ||
     x.settings.rate > 1.2 ||

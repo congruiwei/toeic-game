@@ -18,7 +18,7 @@ import {
   reward,
 } from './state.js';
 import { catalog, loadBank, select, question, formats } from './bank.js';
-import { hush, speak, tone, voices } from './audio.js';
+import { hush, speak, tone, voices, quality, voiceKey } from './audio.js';
 const $ = (s) => document.querySelector(s),
   root = $('#app'),
   dialog = $('#modal');
@@ -216,10 +216,11 @@ function accentOptions() {
   const p = s.settings,
     langs = voices();
   return [
-    ['auto', '设备默认'],
+    ['auto', '题库轮换'],
     ['en-US', '美式'],
     ['en-GB', '英式'],
     ['en-AU', '澳式'],
+    ['en-CA','加拿大式'],
   ]
     .filter(
       ([k]) =>
@@ -231,6 +232,15 @@ function accentOptions() {
       ([k, label]) => `<option value="${k}" ${k === p.accent ? 'selected' : ''}>${label}</option>`,
     )
     .join('');
+}
+function voiceControls(){
+  const list=voices(), slots=s.settings.voiceSlots||{};
+  const title=v=>esc(v.name)+' · '+esc(v.lang)+' · '+['普通','增强','高级'][quality(v)];
+  return `<h3>声音</h3><label class="setting">英语口音<select data-pref="accent">${accentOptions()}</select></label>
+    ${['A','B','C'].map((slot,i)=>`<label class="setting">说话人 ${i+1}<select data-voice-slot="${slot}"><option value="">自动分配</option>${list.map(v=>`<option value="${esc(voiceKey(v))}" ${voiceKey(v)===slots[slot]?'selected':''}>${title(v)}</option>`).join('')}</select></label>`).join('')}
+    <details><summary>英语声音与试听（${list.length}）</summary>${list.map(v=>`<div class="setting"><span>${title(v)}</span>${act('preview-voice','试听','secondary','data-voice="'+esc(voiceKey(v))+'"')}</div>`).join('') || '<p class="muted">设备尚未列出英语声音。可先点击测试声音。</p>'}</details>
+    ${act('test',icon('sound',16)+' 测试声音','secondary')}
+    <p class="fine muted">iPhone 设置 → 辅助功能 → 朗读内容（部分版本为「阅读与朗读」）→ 声音 → 英语。下载标有「增强」或「高级」的声音。返回游戏后，自动分配会优先使用可用的高音质声音。</p>`;
 }
 function settings() {
   const p = s.settings;
@@ -253,8 +263,7 @@ function settings() {
    )
    .join('')}
  <label class="setting">朗读速度 <span><output id="rate-val">${p.rate}×</output> <input aria-label="朗读速度" type="range" min="0.75" max="1.2" step="0.05" value="${p.rate}" data-pref="rate"></span></label>
- <label class="setting">英语口音<select data-pref="accent">${accentOptions()}</select></label>${act('test', icon('sound', 16) + ' 测试声音', 'secondary')}
- <p class="muted fine">口音和离线朗读取决于设备已安装的英语语音。</p><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p><div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
+ <section id="voice-controls">${voiceControls()}</section><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p><div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
 }
 let pending = null;
 function markVisit() {
@@ -348,10 +357,9 @@ function exportSave() {
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 30000);
 }
-window.speechSynthesis?.addEventListener?.('voiceschanged', () => {
-  const select = dialog.querySelector('[data-pref="accent"]');
-  if (dialog.open && select) select.innerHTML = accentOptions();
-});
+function refreshVoices(){const group=dialog.querySelector('#voice-controls');if(dialog.open && group)group.innerHTML=voiceControls();}
+window.speechSynthesis?.addEventListener?.('voiceschanged',refreshVoices);
+window.addEventListener('focus',refreshVoices);
 document.addEventListener('keydown', (e) => {
   if (
     e.key === 'Enter' &&
@@ -367,6 +375,7 @@ let incoming = null;
 document.addEventListener('change', async (e) => {
   const el = e.target,
     k = el.dataset.pref;
+  if(el.dataset.voiceSlot){s.settings.voiceSlots ||= {};s.settings.voiceSlots[el.dataset.voiceSlot]=el.value;save();return;}
   if (k) {
     s.settings[k] =
       el.type === 'checkbox' ? el.checked : k === 'rate' ? Number(el.value) : el.value;
@@ -456,7 +465,7 @@ document.addEventListener('click', (e) => {
       speak(
         a === 'play' ? q.turns : [{ text: q.options[Number(i)], speaker: 'B' }],
         s.settings,
-        toast,
+        toast, {seed:q.set?.id || q.id},
       );
       if (a === 'play') {
         el.setAttribute('aria-label', '重新播放');
@@ -479,6 +488,7 @@ document.addEventListener('click', (e) => {
     render();
     window.scrollTo(0, 0);
   }
+  if(a==='preview-voice')speak([{text:'The next train leaves at nine thirty.',speaker:'A'}],s.settings,toast,{preview:el.dataset.voice});
   if (a === 'test')
     speak(
       [{ text: 'Welcome to Sprout Island. Your sound is ready.', speaker: 'A' }],
