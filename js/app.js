@@ -1,3 +1,4 @@
+import {recordStudy,reportView} from './report.js';
 import {examController} from './exam-controller.js';
 import {examView,examLobby} from './exam-ui.js';
 import { practiceView } from './practice.js';
@@ -19,7 +20,7 @@ import {
   thresholds,
   reward,
 } from './state.js';
-import { catalog, loadBank, select, question, formats } from './bank.js';
+import { bank, catalog, loadBank, select, question, formats } from './bank.js';
 import { hush, speak, tone, voices, quality, voiceKey } from './audio.js';
 const $ = (s) => document.querySelector(s),
   root = $('#app'),
@@ -34,6 +35,7 @@ const navs = [
   ['home', 'island', '小岛'],
   ['learn', 'compass', '练习'],
   ['library', 'cards', '图鉴'],
+  ['report','chart','报告'],
 ];
 const names = {
   vocab: '单词采集',
@@ -65,6 +67,7 @@ let s = fresh(),
   offlineReady = false;
 const exam = examController({
   state:()=>s, page:()=>page, show:go, redraw:render, save, notify:toast,
+  onGrade:(ref,data,ok,at)=>recordStudy(s,ref,data,ok,at),
   confirm:(title,detail,action,label)=>modal(`<h2>${esc(title)}</h2><p>${esc(detail)}</p>${act(action,esc(label),'primary')}`)
 });
 function toast(t) {
@@ -160,7 +163,7 @@ function render() {
   applyPrefs();
   frame();
   root.innerHTML =
-    page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='report'?reportView(s,bank):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -331,6 +334,7 @@ function answer(value) {
   pauseClock();
   const ok = value.trim().toLowerCase() === q.answer.trim().toLowerCase(),
     result = reward(s, q, r, ok);
+  recordStudy(s,r,q,ok);
   a.selected = ok ? q.answer : value;
   a.right += Number(ok);
   a.gain += result.xp;

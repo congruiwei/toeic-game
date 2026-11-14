@@ -1,3 +1,4 @@
+import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
   VERSION = 1;
@@ -106,6 +107,7 @@ export function decode(raw, catalog) {
     )
       throw Error('练习进度有误');
   }
+  if(!validReport(x.report))throw Error('学习报告记录有误');
   if(x.examForms!==undefined && (!Array.isArray(x.examForms)||x.examForms.length!==4||!x.examForms.every(n=>number(n))))throw Error('模考记录有误');
   if(x.exam) {
     if(!examValid(x.exam))throw Error('模考试卷记录无效');
