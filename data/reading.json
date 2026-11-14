@@ -648,15 +648,15 @@
         "prompt": "Which expense would disappear if Tan ordered one more pot under the same delivery terms?",
         "options": [
           "The cost of every standard pot",
-          "The trip to deliver the pots",
+          "The fee for delivering the pots",
           "The four-week rental charge",
           "The charge for a service pot"
         ],
-        "answer": "The trip to deliver the pots",
+        "answer": "The fee for delivering the pots",
         "evidence": "Delivery is free for orders of five pots or more.",
         "paraphrase": "one more than four → five, qualifying for free delivery",
-        "en": "The email asks for four pots; adding one reaches the quote's free-delivery threshold.",
-        "zh": "现要四盆，再加一盆就满足报价的五盆免配送门槛。"
+        "en": "Tan asks for four pots. A fifth meets the free-delivery threshold, so the delivery charge disappears even though the trip still takes place.",
+        "zh": "Tan 现订四盆，再加一盆达到免配送费的门槛。配送仍会进行，免掉的是这笔收费。"
       },
       {
         "id": "read-plants-04",
@@ -1713,7 +1713,7 @@
         "evidence": "describe your coat to the attendant.",
         "paraphrase": "that description → the description given after losing a ticket",
         "en": "The instruction to describe a coat first appears just before [3]. The next sentence gives the attendant’s following action.",
-        "zh": "改用外观认领的步骤在 [3] 前刚出现，that description 指代清楚；接下来才轮到工作人员查找。"
+        "zh": "[3] 前刚要求失票者描述外套。补句里的 that description 就近承接这一要求，下一句再写工作人员如何查找。"
       }
     ]
   },
@@ -2742,8 +2742,8 @@
         "answer": "Its carton goes to inspection.",
         "evidence": "move the entire carton to the inspection bay",
         "paraphrase": "entire carton → failed pack and remaining packs",
-        "en": "Failure sends the whole carton, not just the tested pack, to the inspection bay.",
-        "zh": "样包未通过时，整箱都要移到检查区。"
+        "en": "A failed pack sends its whole carton to the inspection bay, where the other packs can be checked. Their condition has not yet been established.",
+        "zh": "抽检包不通过时要将它所属的整箱送检。其他包是否也有问题尚未确定。"
       },
       {
         "id": "read-blade-02",
@@ -3333,7 +3333,7 @@
     "questions": [
       {
         "id": "read-allowance-01",
-        "prompt": "Why might finance pay less than the technician amount on an itemized bill?",
+        "prompt": "Why might the labor reimbursement be less than the labor charge on an itemized bill?",
         "options": [
           "All technician costs must be paid by the contractor.",
           "Only equipment qualifies for payment.",
@@ -4008,7 +4008,7 @@
       },
       {
         "id": "read-seats-02",
-        "prompt": "Why cannot Ash's deposit transfer to Elm?",
+        "prompt": "Why can't the deposit for Ash be transferred to Elm?",
         "options": [
           "The booking has transferred once.",
           "The change is too late.",
