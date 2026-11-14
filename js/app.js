@@ -1,5 +1,6 @@
-import {predictionView,predictAnswer,predictionSummary} from './prediction.js';
-let predictionRange='30',predictionSeries='total';
+import {watchShellUpdates} from './shell-update.js';
+import {loadMethods,newMethod,methodIndex,methodById,methodCard,methodExample,methodBank} from './methods.js';
+import {predictionView,predictAnswer,predictionSummary,snapshotOnVisit} from './prediction.js';
 import {startDiagnosis,skipDiagnosis,answerDiagnosis} from './diagnosis.js';
 import {diagnosisHome,diagnosisView,diagnosisHistory,unknownDiagnosisView} from './diagnosis-ui.js';
 import {replayView,playLine,stopReplay,stopClosedReplay} from './replay.js';
@@ -29,6 +30,8 @@ import {
 } from './state.js';
 import { bank, catalog, loadBank, select, question, formats } from './bank.js';
 import { hush, speak, tone, voices, quality, voiceKey } from './audio.js';
+const openedUnder=navigator.serviceWorker?.controller;
+let predictionRange='30',predictionSeries='total';
 const $ = (s) => document.querySelector(s),
   root = $('#app'),
   dialog = $('#modal');
@@ -96,6 +99,10 @@ function save() {
   if (storageBroken) return false;
   try {
     const current = localStorage.getItem(KEY);
+    if(current!==lastRaw && visitOnlyUpdate(lastRaw,current)){
+      s.lastVisit=Math.max(s.lastVisit,JSON.parse(current).lastVisit);
+      lastRaw=current;
+    }
     if (current !== lastRaw && current) {
       const newer = decode(current, allBanks.every(k=>bank[k])?catalog:undefined);
       exam.stop();
@@ -150,6 +157,7 @@ function go(p) {
   if(page==='exam'&&p!=='exam')exam.suspend();
   if(dialog.open)close();
   page = p;
+  if(p==='learn' && !bank.vocab)loadBank(['vocab']).catch(()=>{});
   render();
   window.scrollTo(0, 0);
 }
@@ -179,7 +187,7 @@ function render() {
   applyPrefs();
   frame();
   root.innerHTML =
-    page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -187,7 +195,19 @@ function render() {
           ? libraryView(s, tab, themeFilter)
           : practiceView(s);
   root.setAttribute('aria-busy', 'false');
+  if(page==='practice')showFirstMethod();
   if (page === 'practice' || page === 'diagnosis') startClock();
+}
+// The navigation handler loads the cards before the first matching question is displayed.
+function showFirstMethod() {
+  const run=s.session, ref=run?.items[run.index];
+  if (page!=='practice' || !ref || run.selected!==null || dialog.open || s.settings.methodHints===false) return;
+  if (!['part1','part2','dialogue','grammar','reading'].includes(ref.mode)) return;
+  const card=newMethod(s,ref,catalog.get(ref.id)?.data);
+  if (!card || run.methodTrialId===ref.id) return;
+  s.methodsSeen ||= [];
+  s.methodsSeen.push(card.id);
+  if(save()) modal(methodCard(card,true));
 }
 function pauseClock(persist=true) {
   const current=page==='diagnosis'?s.diagnosis?.active:s.session;
@@ -299,6 +319,7 @@ function settings() {
    ['sound', '答题与进化音效'],
    ['motion', '角色与进化动画'],
    ['timed', '阅读计时'],
+   ['methodHints','首次遇到题型时显示方法卡'],
  ]
    .map(
      ([v, n]) =>
@@ -312,20 +333,21 @@ function settings() {
 let pending = null;
 function markVisit() {
   const now = Date.now();
+  snapshotOnVisit(s,now);
   returnBonus = s.lastVisit > 0 && now - s.lastVisit >= 6 * 3600000;
   if (returnBonus) s.xp += 8;
   s.lastVisit = now;
   if (save() && returnBonus) toast('欢迎回来！获得 8 XP');
 }
-function start(mode, filter = '', only = '', force = false, format = '') {
+function start(mode, filter = '', only = '', force = false, format = '', methodRef = null) {
   if (s.session && s.session.index < s.session.items.length && !force) {
-    pending = { mode, filter, only, format };
+    pending = { mode, filter, only, format, methodRef };
     modal(
       `<h2>切换这次练习？</h2><p>「${esc(s.session.title)}」还有未答题目。已经获得的经验和词卡都会保留。</p>${act('resume', '继续上次练习', 'secondary')} ${act('replace', '开始所选练习', 'primary')}`,
     );
     return;
   }
-  let items = only
+  let items = methodRef ? [methodRef] : only
     ? [s.errors[only]?.ref].filter(Boolean)
     : select(s, mode, 5, formats.includes(filter) ? '' : filter);
   if (mode === 'vocab' && formats.includes(format || filter))
@@ -347,6 +369,7 @@ function start(mode, filter = '', only = '', force = false, format = '') {
     elapsed: 0,
     timed: mode === 'reading' && s.settings.timed,
     intro: items[0].mode === 'grammar',
+    ...(methodRef ? {methodTrialId:methodRef.id} : {}),
   };
   save();
   go('practice');
@@ -435,6 +458,7 @@ let incoming = null;
 document.addEventListener('change', async (e) => {
   const el = e.target,
     k = el.dataset.pref;
+  if(el.hasAttribute('data-method-disable')){s.settings.methodHints=!el.checked;save();return;}
   if(el.dataset.voiceSlot){s.settings.voiceSlots ||= {};s.settings.voiceSlots[el.dataset.voiceSlot]=el.value;save();return;}
   if(el.id==='exam-jump'){exam.jump(Number(el.value));return;}
   if (k) {
@@ -472,9 +496,11 @@ document.addEventListener('click', async (e) => {
   if (!el || el.disabled) return;
   const { act: a, mode, page: p, i, filter, id } = el.dataset;
   const needed=requiredBanks(a,el).filter(k=>!bank[k]);
-  if(needed.length){
+  const needsMethods=s.settings.methodHints!==false && !methodById('photo') &&
+    ['start','configured','replace','review-one','resume'].includes(a);
+  if(needed.length || needsMethods){
     el.disabled=true;el.setAttribute('aria-busy','true');
-    try{await loadBank(needed);}catch{toast('题库未能打开，请检查连接后再试。');return;}
+    try{await Promise.all([loadBank(needed),needsMethods ? loadMethods().catch(()=>{}) : null]);}catch{toast('题库未能打开，请检查连接后再试。');return;}
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
@@ -532,6 +558,23 @@ document.addEventListener('click', async (e) => {
     if (dialog.open) close();
     go(p);
   }
+  if(a==='method-list'){
+    try{await loadMethods();}catch{toast('方法卡未能载入，请重试。');return;}
+    go('methods');return;
+  }
+  if(a==='method-open'){
+    const card=methodById(el.dataset.method);if(card) modal(methodCard(card,false));return;
+  }
+  if(a==='method-skip'){
+    if(dialog.querySelector('[data-method-disable]')?.checked){s.settings.methodHints=false;save();}
+    close();return;
+  }
+  if(a==='method-try'){
+    const id=el.dataset.method, ref=methodExample(id,catalog,s);
+    if(!ref){toast('这个方法暂时没有可用例题');return;}
+    s.methodsSeen ||= [];if(!s.methodsSeen.includes(id))s.methodsSeen.push(id);
+    start(ref.mode,'','',false,'',ref);return;
+  }
   if (a === 'configure') modal(configureView(mode, s));
   if (a === 'configured') {
     const f = $('#mode-filter')?.value || '',
@@ -553,7 +596,7 @@ document.addEventListener('click', async (e) => {
   if (a === 'replace' && pending) {
     const x = pending;
     pending = null;
-    start(x.mode, x.filter, x.only, true, x.format);
+    start(x.mode, x.filter, x.only, true, x.format, x.methodRef);
   }
   if (a === 'home' || a === 'leave') {
     if (s.session?.index >= s.session?.items.length) {
@@ -644,8 +687,24 @@ document.addEventListener('visibilitychange', () => {
     else render();
   }
 });
+// Opening another tab can update lastVisit without changing any learning state.
+// A visit-only write must not pause a live exam or cancel a listening exercise.
+function visitOnlyUpdate(before,after) {
+  if(!before||!after)return false;
+  try {
+    const a=JSON.parse(before), b=JSON.parse(after);
+    if(!Number.isSafeInteger(b.lastVisit)||b.lastVisit<0||a.lastVisit===b.lastVisit)return false;
+    delete a.lastVisit; delete b.lastVisit;
+    return JSON.stringify(a)===JSON.stringify(b);
+  } catch { return false; }
+}
 window.addEventListener('storage', async (e) => {
   if (e.key !== KEY || !e.newValue || e.newValue === lastRaw) return;
+  if(visitOnlyUpdate(lastRaw,e.newValue)){
+    s.lastVisit=Math.max(s.lastVisit,JSON.parse(e.newValue).lastVisit);
+    lastRaw=e.newValue;
+    return;
+  }
   try {
     await loadBank(allBanks);
     if(localStorage.getItem(KEY)!==e.newValue)return;
@@ -667,6 +726,7 @@ window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend(
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};
 function requiredBanks(action,el){
+  if(action==='method-try')return [methodBank(el.dataset.method)];
   if(action==='diag-open')return allBanks;
   if(action.startsWith('screen-'))return ['vocab'];
   if(action==='nav' && ['library','report'].includes(el.dataset.page) || action==='import' || action==='resume' || action==='exam-start' || action==='exam-lobby')return allBanks;
@@ -695,8 +755,11 @@ async function boot() {
   navigator.storage?.persist?.().catch(() => {});
   if ('serviceWorker' in navigator)
     navigator.serviceWorker
-      .register('./sw.js')
-      .then(() => navigator.serviceWorker.ready)
+      .register('./sw.js',{updateViaCache:'none'})
+      .then(registration=>{
+        watchShellUpdates(registration,()=>page==='home'&&!dialog.open&&!storageBroken,openedUnder);
+        return navigator.serviceWorker.ready;
+      })
       .then(() => {
         offlineReady = true;
         const status = $('#offline-status');

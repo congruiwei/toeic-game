@@ -1,5 +1,6 @@
 // Run from any directory: node scripts/validate.mjs
 import { readFile } from 'node:fs/promises';
+import { methodParts } from '../js/methods.js';
 import { vocabularyOptions, formats } from '../js/bank.js';
 
 const dataDirectory = new URL('../data/', import.meta.url);
@@ -414,7 +415,24 @@ function reading(groups) {
   counts['Part 6/7 组'] = Array.isArray(groups) ? groups.length : 0;
 }
 
-for (const [file, validate] of Object.entries({ vocab: vocabulary, part1:photographs, part2, grammar, listening, reading })) {
+function methods(rows) {
+  const required=new Set(Object.keys(methodParts));
+  scan(rows,'methods',required.size,(card,at)=>{
+    id(card,at);
+    strings(card,at,['title','lead','note','part']);
+    expect(required.delete(card.id),at,'未知或重复的方法卡 ID');
+    expect(methodParts[card.id]===card.part,at,'Part 与实际练习类型不符');
+    expect(Array.isArray(card.steps)&&card.steps.length===2,at,'图解需要两个对照节点');
+    scan(card.steps,at+'.steps',2,(step,label)=>{
+      strings(step,label,['label','text']);
+      expect(typeof step.text==='string' && /[a-z]/i.test(step.text),label,'节点缺少英文例子');
+    });
+  });
+  for(const id of required) expect(false,'methods','缺少学习方法 '+id);
+  counts['解题方法卡']=rows.length;
+}
+
+for (const [file, validate] of Object.entries({ vocab: vocabulary, part1:photographs, part2, grammar, listening, reading, methods })) {
   const name = `${file}.json`;
   try {
     validate(JSON.parse(await readFile(new URL(name, dataDirectory), 'utf8')));
@@ -432,5 +450,5 @@ if (issues.length) {
   process.exitCode = 1;
 } else {
   console.log(Object.entries(counts).map(([name, n]) => `${name} ${n}`).join(' · '));
-  console.log(`六份题库通过校验，含 ${seenIds.size} 个唯一 ID。`);
+  console.log(`题库与方法卡通过校验，含 ${seenIds.size} 个唯一 ID。`);
 }

@@ -28,11 +28,27 @@
 
 首页提供三个任选任务，「练习」可选择主题、题型或语法关卡。「图鉴」保存答对过的词卡及待复习错题。游戏没有出勤要求，离开不会扣经验或退化。
 
+## 学习入口
+
+| 想做什么 | 在哪里操作 |
+| --- | --- |
+| 承认暂时不会 | 选择题点「不知道」后可以看解析。它计入错题，报告中的「不知道」和普通选错分别统计。 |
+| 快速找出生词 | 在「练习 → 单词快筛」查看最多 20 个未学词，左滑不认识、右滑认识，也可用按钮。每 3 次自报认识，立即抽查 1 次。结束后点「练习待学词」学习生词和需要确认的词。 |
+| 记录可疑题目 | 答后点「这题有问题」，选原因并可写备注。设置中的问题报告保存在本机，可复制全部记录。 |
+| 请 Claude 解释 | 在答后点复制给 Claude 的按钮，再自行粘贴到对话。复制内容包含题目、材料、选项、你的答案、正确答案和解析。 |
+| 精听一句 | 答后展开「听力原文 · 逐句重听」，点某句即可按对应角色和当前语速播放，也可打开单句循环。 |
+| 找到练习起点 | 首页的「水平诊断」含 30 道自适应题，可分次完成。结果提供四项能力起点和本次听读参考区间，可以在报告中查看历次诊断。 |
+| 看分数变化 | 能力面板及学习报告分别显示听力、阅读参考估分和区间。报告中的趋势图可切换听力、阅读或总分，再按近 7 天、30 天或全部学习日查看。 |
+| 复习到期题 | 「图鉴 → 错题本」可练到期题，也可点单题提前练。非单词错题需要连续答对两次才移出。设置里可选 85%、90% 或 95% 的目标记忆率。 |
+| 学解题步骤 | 「练习 → 解题方法」按 Part 浏览 22 张卡并试做例题。普通练习初次遇到相应题型会提示，设置中可关闭。 |
+
+词卡采用 FSRS-6 安排下次复习，按答题结果和有效作答时间自动评级。快筛中只有通过现场抽查的词才获得 Easy 评级。[算法与离线实现](vendor/ts-fsrs/README.md)
+
 ## 模拟考试与学习报告
 
 进入「练习 → 模拟考试」。完整卷依次为 6、25、39、30、30、16、54 题，听力、阅读各 100 题。半套依次为 3、12、20、15、15、8、27 题，两部分各 50 题。完整卷阅读限时 75 分钟，半套 38 分钟。可保存离开并继续；听力从未开始的语句接续，进入阅读后可跨题跳转。成绩页显示每 Part 的正确率、每题用时和错题。共听时间在题组内均摊。[TOEIC L&R 官方题型与考试时间](https://www.iibc-global.org/english/toeic/test/lr/about/format.html)
 
-「报告」显示过去 7 天和 30 天的练习量、分 Part 和语法点的正确率，以及不同难度的已掌握词卡（SRS 第 3 盒及以上）。旧存档没有日期的记录只用于可恢复的累计统计。
+「报告」显示过去 7 天和 30 天的练习量、分 Part 和语法点的正确率，以及不同难度的已掌握词卡（进入长期复习且稳定度至少 7 天）。旧存档没有日期的记录只用于可恢复的累计统计。
 
 ## iPhone 声音与安装核对
 
@@ -74,15 +90,23 @@ node scripts/validate.mjs
 node tests/voices.mjs
 node tests/saves.mjs
 node tests/forms.mjs
-node --test tests/report.test.mjs tests/exam-edge.test.mjs
+node --test tests/*.test.mjs
+node tests/diagnosis-logic.mjs
+node tests/prediction-logic.mjs
+node tests/v6/replay-logic.mjs
+node tests/v6/methods-logic.mjs
 npm install --prefix /tmp/island-browser-test playwright
 /tmp/island-browser-test/node_modules/.bin/playwright install chromium
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/e2e.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/v6.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/shell-update.cjs
 ~~~
 
-已有 Chrome 可给最后一条命令加 PW_CHANNEL=chrome。脚本启动临时本地 HTTP 服务，模拟 iPhone 并使用可控语音事件。模考测试实际开始、回答、退出、恢复和交卷，并用测试存档推进到听力末段及阅读到期点。真实设备的系统音色与音响效果需另行试听。
+已有 Chrome 可给浏览器测试命令加 `PW_CHANNEL=chrome`。运行 `node tests/v6.cjs screen fsrs` 可单独检查快筛和复习；统一入口会在每个功能的 375、390、430px 三档各建独立上下文。脚本启动临时本地 HTTP 服务，模拟 iPhone 并使用可控语音事件。模考测试实际开始、回答、退出、恢复和交卷，并用测试存档推进到听力末段及阅读到期点。真实设备的系统音色与音响效果需另行试听。
 
-各难度题量、完整测试输出和加载速度见 [定版验收](docs/RELEASE-CHECKS.md)。复审说明和逐字段前后对照见 [按 ID 的复审清单](docs/CONTENT-REVIEW.md) 与 [CSV 明细](docs/review-detail.csv)。
+v6 的完整校验输出、三宽回归和同档估分对照见 [v6 验收记录](docs/V6-CHECKS.md)。
+
+上一版各难度题量、测试输出和加载速度见 [定版验收](docs/RELEASE-CHECKS.md)。复审说明和逐字段前后对照见 [按 ID 的复审清单](docs/CONTENT-REVIEW.md) 与 [CSV 明细](docs/review-detail.csv)。
 
 ## 发布到 GitHub Pages
 
@@ -105,6 +129,6 @@ gh api repos/congruiwei/toeic-game/pages --jq '{status, html_url, source}'
 gh api repos/congruiwei/toeic-game/pages/builds/latest --jq '{status, commit, error}'
 ```
 
-旧页面仍打开时，浏览器会等待它关闭后切换到新版离线包。请关闭所有游戏标签页和主屏幕窗口，再重新打开。存档键独立于缓存版本。[GitHub Pages 发布来源说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+从较早版本首次迁入 v6 时，若仍看到旧首页，请保持联网，待下载完成后关闭所有旧标签页和主屏幕窗口，再开一次。v6 后续更新可在联网冷启动、尚未交互的首页接管。正在练习或计时的窗口会继续原题。存档键独立于缓存版本。[GitHub Pages 发布来源说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
 文件结构、六种题库格式、加题示例、存档契约和进化算法见 [开发交接文档](docs/ARCHITECTURE.md)。

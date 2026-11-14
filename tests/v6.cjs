@@ -12,6 +12,7 @@ async function run() {
   if (!features.length) features.push(...(await fs.readdir(path.join(__dirname,'v6'))).filter(f=>f.endsWith('.cjs')).sort().map(f=>f.slice(0,-4)));
   const server = createServer(async (req,res) => {
     const name = decodeURIComponent(new URL(req.url,'http://localhost').pathname).replace(/^\/island\//,'') || 'index.html';
+    if(name==='test-blank'){res.writeHead(200,{'Content-Type':'text/html'}).end('<!doctype html><title>Fixture</title>');return;}
     const file = path.resolve(root,name);
     if (!file.startsWith(root + path.sep)) { res.writeHead(404).end(); return; }
     try { const body = await fs.readFile(file); res.writeHead(200,{'Content-Type':mime[path.extname(file)] || 'text/plain'}).end(body); }
@@ -42,7 +43,7 @@ async function run() {
         const nav=p=>page.locator('#mobile-nav [data-page="'+p+'"]').click();
         const state=()=>page.evaluate(()=>JSON.parse(localStorage.getItem('sprout-isle.save')));
         async function store(s) {
-          await page.goto(url+'manifest.webmanifest');
+          await page.goto(url+'test-blank');
           await page.evaluate(v=>v?localStorage.setItem('sprout-isle.save',JSON.stringify(v)):localStorage.clear(),s||null);
           await page.goto(url);await ready();
         }
@@ -58,6 +59,11 @@ async function run() {
           if(await page.locator('[data-act=begin]').isVisible())await act('begin');
         }
         await page.goto(url);await ready();
+        if(feature!=='methods'){
+          const progress=await state();
+          progress.settings.methodHints=false;
+          await store(progress);
+        }
         await require('./v6/'+feature+'.cjs')({page,context,width,act,nav,state,store,reset,quiz,url});
         assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'horizontal overflow');
         assert.deepEqual(errors,[]);

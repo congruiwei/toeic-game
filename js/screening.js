@@ -1,7 +1,7 @@
 // Self-reported familiarity is kept separate from actual answer history.
 export function screenedQueue(state) {
   const marks = state.screening?.marks || {};
-  return Object.keys(marks).filter(id => ['learn','unconfirmed'].includes(marks[id]));
+  return ['learn','unconfirmed'].flatMap(status => Object.keys(marks).filter(id => marks[id]===status));
 }
 export function beginScreen(state, words, random = Math.random) {
   const screen = state.screening ??= {marks: {}, run: null};

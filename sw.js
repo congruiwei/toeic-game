@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-23';
+const CACHE = 'toeic-island-shell-24';
 const files = [
   './',
   './index.html',
@@ -12,8 +12,8 @@ const files = [
   './assets/icon-192.png',
   './assets/icon-512.png',
   './report.css','./js/report.js',
-  './js/app.js','./js/exam.js','./js/exam-ui.js','./js/exam-controller.js',
-  './js/prediction.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
+  './js/shell-update.js','./js/app.js','./js/exam.js','./js/exam-ui.js','./js/exam-controller.js',
+  './js/prediction.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./data/methods.json','./js/methods.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
   './js/art.js',
   './js/audio.js',
   './js/bank.js','./js/screening.js','./js/screen-view.js',
@@ -40,6 +40,10 @@ self.addEventListener('install', (event) => {
     const part1=await (await cache.match(new URL('data/part1.json',self.registration.scope))).json();
     await cache.addAll(part1.map(q=>new URL(q.image,self.registration.scope).href));
   })());
+});
+
+self.addEventListener('message',event=>{
+  if(event.data?.type==='activate-ready-shell')event.waitUntil(self.skipWaiting());
 });
 
 self.addEventListener('activate', (event) => {

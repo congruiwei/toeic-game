@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {fresh,reward,estimate} from '../js/state.js';
-import {predictAnswer,predictionSummary,predictionView,validPrediction} from '../js/prediction.js';
+import {predictAnswer,predictionSummary,predictionView,validPrediction,snapshotOnVisit} from '../js/prediction.js';
 const epoch=new Date(2026,5,1,12).getTime(),s=fresh();
 function add(st,mode,id,level,ok,date,extra={}){
  const ref={id,mode},data={id,level,options:['A','B','C','D'],...extra};
@@ -49,3 +49,39 @@ assert.equal(Object.keys(diagnostic.prediction.days).length,1);
 const failed=fresh();
 predictAnswer(failed,{mode:'part2',id:'unknown'},{level:500,type:'response',options:['A','B','C']},false,epoch,{outcome:'unknown'});
 assert.ok(failed.prediction.L.rating<400);
+
+// Import the same version-one save into the new schema, with IDs that exist in the live bank.
+const {readFileSync}=await import('node:fs');
+const read=name=>JSON.parse(readFileSync(new URL('../data/'+name+'.json',import.meta.url)));
+const pool=[
+ read('vocab'),read('grammar').flatMap(t=>t.questions),
+ read('part2').filter(q=>q.type==='response'),read('reading').flatMap(g=>g.questions.map(q=>({...q,level:g.level})))
+];
+const old={version:1,xp:0,stage:0,branch:'vocab',stats:{vocab:0,grammar:0,listening:0,reading:0},
+ history:[],words:{},errors:{},seen:{},lastVisit:0,session:null,
+ settings:{theme:'auto',sound:true,motion:true,timed:false,rate:1,accent:'auto'}};
+const registry=new Map();
+for(let i=0;i<96;i++){
+ const slot=i%4, skill=Object.keys(old.stats)[slot],mode=['vocab','grammar','part2','reading'][slot];
+ const level=400+100*Math.floor(i/32),ok=i%9!==4;
+ const q=pool[slot].find(q=>q.level===level&&!old.seen[q.id]);assert(q,'enough independent fixture items');
+ const {id}=q,ref={id,mode};registry.set(id,{data:q,ref});old.seen[id]=1;
+ old.history.push({skill,level,ok});const gain=ok?12:4;old.xp+=gain;old.stats[skill]+=gain;
+ if(!ok)old.errors[id]={ref,at:epoch+i*1000,misses:1};
+ if(slot===0)old.words[id]={box:ok?1:0,tries:1,right:Number(ok),due:epoch+i*1000+(ok?86400000:120000)};
+ if(old.stage<5 && oldScore(old.history)>=500+old.stage*100 &&
+    Object.values(old.stats).every(x=>x>=[0,36,90,165,260,380][old.stage+1]))old.stage++;
+}
+const {decode}=await import('../js/state.js'),restored=decode(JSON.stringify(old),registry),estimateV6=predictionSummary(restored);
+assert.deepEqual([oldScore(old.history),estimateV6.total,estimateV6.low,estimateV6.high],[705,675,555,795]);
+assert.deepEqual([estimateV6.L.score,estimateV6.R.score,restored.stage,restored.xp],[310,365,3,1064]);
+assert.equal(Object.keys(restored.seen).length,96);
+console.log('Same 96-answer v1 save: 705 → 675 [555–795]; L 310 [240–380], R 365 [315–415]; XP 1064, form 4 preserved.');
+
+const visited=structuredClone(s);
+snapshotOnVisit(visited,epoch+12*86400000);
+snapshotOnVisit(visited,epoch+12*86400000);
+assert.equal(Object.keys(visited.prediction.days).length,3);
+for(const [l,r,total] of Object.values(visited.prediction.days))assert.equal(l+r,total);
+assert.ok(validPrediction({...visited.prediction,days:{'2025-01-01':[200,220]}}));
+assert.ok(!validPrediction({...visited.prediction,days:{'2025-01-01':[200,220,500]}}));

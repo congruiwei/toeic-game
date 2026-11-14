@@ -24,7 +24,8 @@ export function fresh() {
     seen: {},
     session: null,
     lastVisit: 0,
-    settings: { theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
+    methodsSeen: [],
+    settings: { methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
   };
 }
 const record = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
@@ -91,11 +92,16 @@ export function decode(raw, catalog) {
     !['sound', 'motion', 'timed'].every((k) => typeof x.settings[k] === 'boolean')
   )
     throw Error('设置值有误');
+  if (x.settings.methodHints!==undefined && typeof x.settings.methodHints!=='boolean') throw Error('方法卡设置有误');
+  if (x.methodsSeen!==undefined && (!Array.isArray(x.methodsSeen) || x.methodsSeen.length>160 || !x.methodsSeen.every(safeKey))) throw Error('方法卡记录有误');
+  x.methodsSeen ??= [];
+  x.settings.methodHints ??= true;
   if (x.session !== null) {
     const s = x.session;
     if (
       !record(s) ||
       !safeKey(s.mode) ||
+      (s.methodTrialId!==undefined && !safeKey(s.methodTrialId)) ||
       typeof s.title !== 'string' ||
       !Array.isArray(s.items) ||
       !s.items.length ||

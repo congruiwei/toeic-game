@@ -26,7 +26,7 @@ export function screenView(s) {
   const q=question({id:w.id,mode:'vocab',format:'meaning'});
   return `<section class="lesson-shell screen-session"><header class="lesson-header"><h1>${r.pending?'快筛抽查':'单词快筛'}</h1><button class="plain" data-act="nav" data-page="learn">保存离开</button></header>
   <div class="lesson-meta"><span>${r.index+1} / ${r.ids.length}</span><span>${w.level} 级</span></div>
-  <div class="lesson-panel screen-card" data-word="${esc(w.id)}"><h2 lang="en">${esc(w.word)}</h2><p lang="en">${esc(w.ipa)} · ${esc(w.pos)}</p>
+  <div class="lesson-panel screen-card" data-word="${esc(w.id)}"><h2 lang="en">${esc(w.word)}</h2>${r.pending?'':'<button type="button" class="screen-sound" data-act="screen-sound" aria-label="重听单词发音">听发音</button>'}<p lang="en">${esc(w.ipa)} · ${esc(w.pos)}</p>
   ${w.sense?`<blockquote lang="en">${esc(w.example)}</blockquote>`:''}</div>
   ${r.pending?`<p>选出这个用法的中文意思</p><div class="lesson-choices">${q.options.map((text,i)=>`<button class="lesson-option" data-act="screen-check" data-i="${i}" data-id="${esc(w.id)}">${esc(text)}</button>`).join('')}</div><button class="secondary lesson-unknown" data-act="screen-unknown" data-id="${esc(w.id)}">不知道</button>`:
     `<p class="muted screen-hint">左滑不认识 · 右滑认识</p><div class="screen-actions"><button class="secondary" data-act="screen-no" data-id="${esc(w.id)}">← 不认识</button><button class="primary" data-act="screen-yes" data-id="${esc(w.id)}">认识 →</button></div>`}
@@ -50,6 +50,7 @@ export function screenController({state,go,render,save,toast,study}) {
   }
   function action(a,el) {
     const s=state();
+    if(a==='screen-sound'){pronounce();return;}
     if(a==='screen-open'){
       const r=beginScreen(s,bank.vocab);
       if(!r && s.screening) s.screening.run=null;
@@ -77,7 +78,7 @@ export function screenController({state,go,render,save,toast,study}) {
   }
   function pointerDown(e){
     const card=e.target.closest('.screen-card');
-    if(!card||state().screening?.run?.pending||!e.isPrimary)return;
+    if(!card||e.target.closest('button')||state().screening?.run?.pending||!e.isPrimary)return;
     pointer={id:e.pointerId,x:e.clientX,y:e.clientY,word:card.dataset.word};
     card.setPointerCapture(e.pointerId);
   }

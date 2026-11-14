@@ -18,7 +18,7 @@ export function validPrediction(p){
     ||!p.days||typeof p.days!=='object'||Array.isArray(p.days))return false;
   return parts.every(k=>p[k]&&finite(p[k].rating,10,990)&&finite(p[k].evidence,0,Number.MAX_SAFE_INTEGER))
     &&Object.entries(p.exposure).every(([k,v])=>safeId(k)&&count(v)&&v>0)
-    &&Object.entries(p.days).every(([k,point])=>validDay(k)&&Array.isArray(point)&&point.length===2&&point.every(x=>Number.isInteger(x)&&finite(x,5,495)&&x%5===0));
+    &&Object.entries(p.days).every(([k,point])=>validDay(k)&&Array.isArray(point)&&[2,3].includes(point.length)&&point.slice(0,2).every(x=>Number.isInteger(x)&&finite(x,5,495)&&x%5===0)&&(point.length===2||point[2]===point[0]+point[1]));
 }
 function source(ref,data){
   const mode=ref.mode,part=({part1:1,part2:2,grammar:5})[mode]??data.set?.part??data.part??ref.part;
@@ -40,7 +40,12 @@ function update(p,key,level,ok,weight,choiceCount) {
 }
 const subscore=rating=>bound(5*Math.round(rating/10),5,495);
 function snapshot(p,now){
-  p.days[dateKey(now)]=parts.map(k=>subscore(p[k].rating));
+  const [listening,reading]=parts.map(k=>subscore(p[k].rating));
+  p.days[dateKey(now)]=[listening,reading,listening+reading];
+}
+export function snapshotOnVisit(state,now){
+  const p=state.prediction;
+  if(p && !Object.hasOwn(p.days,dateKey(now)))snapshot(p,now);
 }
 // Initialize from the evidence actually present, before the current verdict enters
 // history. Legacy skill-only history is weaker than identified independent items.
