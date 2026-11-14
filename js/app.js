@@ -1,3 +1,5 @@
+import {predictionView,predictAnswer,predictionSummary} from './prediction.js';
+let predictionRange='30',predictionSeries='total';
 import {startDiagnosis,skipDiagnosis,answerDiagnosis} from './diagnosis.js';
 import {diagnosisHome,diagnosisView,diagnosisHistory,unknownDiagnosisView} from './diagnosis-ui.js';
 import {replayView,playLine,stopReplay,stopClosedReplay} from './replay.js';
@@ -17,7 +19,6 @@ import {
   KEY,
   fresh,
   decode,
-  estimate,
   levelOf,
   titleOf,
   skills,
@@ -73,7 +74,10 @@ let s = fresh(),
   offlineReady = false;
 const exam = examController({
   state:()=>s, page:()=>page, show:go, redraw:render, save, notify:toast,
-  onGrade:(ref,data,ok,at)=>recordStudy(s,ref,data,ok,at),
+  onGrade:(ref,data,ok,at)=>{
+    recordStudy(s,ref,data,ok,at);
+    predictAnswer(s,ref,data,ok,Date.now(),{sourceType:'exam',previouslySeen:Math.max(0,(s.seen[ref.id]||0)-1)});
+  },
   confirm:(title,detail,action,label)=>modal(`<h2>${esc(title)}</h2><p>${esc(detail)}</p>${act(action,esc(label),'primary')}`)
 });
 const screening=screenController({state:()=>s,go,render,save,toast,study:()=>start('vocab','screen-queue')});
@@ -156,7 +160,7 @@ function taskTile(mode) {
   return `<button class="task ${art}" data-act="start" data-mode="${mode}"><div class="task-top"><span class="chip"><i></i>${label}</span>${tileArt(art)}</div><h3>${names[mode]}</h3><p>${desc}</p><div class="task-foot"><span>${icon('clock', 14)}${mode === 'reading' ? '约 5 分钟' : '约 3 分钟'}</span>${icon('arrow', 19)}</div></button>`;
 }
 function home() {
-  const score = estimate(s),
+  const prediction = predictionSummary(s),
     lv = levelOf(s.xp),
     date = new Intl.DateTimeFormat('zh-CN', {
       month: 'long',
@@ -165,7 +169,7 @@ function home() {
     }).format(new Date());
   return `<div class="welcome"><div><div class="eyebrow"><i></i> ISLAND DASHBOARD</div><h1>欢迎回到小岛<span class="hello-star">✦</span></h1></div>${s.session && s.session.index < s.session.items.length ? act('resume', '继续学习 ' + icon('play', 13), 'secondary top-resume') : `<small class="date">${icon('sun', 16)}${esc(date)}</small>`}</div>
  ${diagnosisHome(s)}<div class="overview"><section class="habitat">${landscape(s.stage, s.branch)}<div class="hab-text"><span class="hab-tag">${icon('leaf', 14)} 伙伴栖息地</span><h2>${forms[s.stage]}</h2><p>第 ${String(s.stage + 1).padStart(2, '0')} 形态 <b>·</b> ${s.stage ? labels[s.branch] + '特化' : '初生之芽'}</p></div><div class="hab-bottom"><div class="level"><b>Lv. ${String(lv).padStart(2, '0')}</b><span>${titleOf(s.xp)}</span></div>${meter(s.xp % 100, 100)}<div class="xp"><span>成长经验</span><b>${s.xp % 100} / 100 XP</b></div></div>${act('evolution', icon('route', 15) + '<span>进化路线</span>', 'route')}</section>
- <section class="stats panel"><div class="stats-head"><h2>${icon('chart')} 能力面板</h2>${act('evolution', icon('chev', 16), 'soft-round', 'aria-label="查看能力与进化条件"')}</div><div class="score"><div><span>预估 TOEIC 分数</span><strong>${score}<small>分</small></strong></div><small>仅供参考</small></div><div class="skills">${skills.map((k) => `<div class="skill ${k}"><i>${icon(icons[k], 16)}</i><label>${labels[k]}</label>${meter(s.stats[k], thresholds[Math.min(5, s.stage + 1)])}<b>${s.stats[k]}</b></div>`).join('')}</div></section></div>
+ <section class="stats panel"><div class="stats-head"><h2>${icon('chart')} 能力面板</h2>${act('evolution', icon('chev', 16), 'soft-round', 'aria-label="查看能力与进化条件"')}</div><div class="score"><div><span>预估 TOEIC 分数</span><strong>${prediction.low}–${prediction.high}<small>分</small></strong></div><small>仅供参考</small></div><div class="skills">${skills.map((k) => `<div class="skill ${k}"><i>${icon(icons[k], 16)}</i><label>${labels[k]}</label>${meter(s.stats[k], thresholds[Math.min(5, s.stage + 1)])}<b>${s.stats[k]}</b></div>`).join('')}</div></section></div>
  <section class="tasks">${sectionTitle('flag', '探索任务', '<span class="section-note">任选一个开始</span>')}<div class="task-grid">${tasks.map(taskTile).join('')}</div></section>
  <div class="continue"><span class="continue-icon">${icon('compass', 27)}</span><div><h3>${s.session ? '上次的探险' : '自由练习'}</h3><p>${s.session ? esc(s.session.title) + ' · ' + Math.min(s.session.index + 1, s.session.items.length) + ' / ' + s.session.items.length : '按主题与题型选择练习'}</p></div>${act(s.session ? 'resume' : 'nav', s.session ? '继续学习 ' + icon('arrow', 16) : '进入练习 ' + icon('arrow', 16), 'primary', 'data-page="learn"')}</div>`;
 }
@@ -174,7 +178,7 @@ function render() {
   applyPrefs();
   frame();
   root.innerHTML =
-    page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -459,6 +463,10 @@ document.addEventListener('click', async (e) => {
     try{await loadBank(needed);}catch{toast('题库未能打开，请检查连接后再试。');return;}
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
+  }
+  if(a==='pred-range' || a==='pred-series'){
+    if(a==='pred-range')predictionRange=el.dataset.range;else predictionSeries=el.dataset.series;
+    render();$('#prediction')?.scrollIntoView({block:'start'});return;
   }
   if(a==='diag-skip'){skipDiagnosis(s);save();render();return;}
   if(a==='diag-open'){startDiagnosis(s,catalog);if(save())go('diagnosis');return;}

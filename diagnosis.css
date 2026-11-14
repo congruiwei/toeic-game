@@ -11,3 +11,10 @@
 .diag-history {margin:12px auto;max-width:760px;padding:18px;}
 .diag-history summary {cursor:pointer;line-height:44px;}
 @media(max-width:540px){.diag-card{align-items:flex-start;flex-direction:column;}}
+
+.prediction-pane {margin:12px auto;max-width:760px;padding:18px;}
+.prediction-pane h2 {font-size:18px;margin:0;}
+.prediction-pane h2 small,.prediction-pane p {font-size:14px;color:var(--muted);}
+.prediction-range {display:flex;gap:8px;margin:12px 0;}
+.prediction-range button {min-height:44px;}
+.prediction-range [aria-pressed="true"] {background:var(--lilac);border-color:var(--accent);}

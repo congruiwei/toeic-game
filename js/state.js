@@ -1,4 +1,5 @@
 import {validDiagnosis,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
+import {validPrediction,predictAnswer,predictionSummary} from './prediction.js';
 import {validateScreen} from './screening.js';
 import {validIssues} from './question-tools.js';
 import {validReport} from './report.js';
@@ -115,6 +116,7 @@ export function decode(raw, catalog) {
   validateScreen(x,catalog);
   if(!validDiagnosis(x.diagnosis))throw Error('诊断记录有误');
   if(catalog)reconcileDiagnosis(x,catalog);
+  if(!validPrediction(x.prediction))throw Error('估分记录有误');
   if(!validIssues(x.issues))throw Error('问题报告记录有误');
   if(!validReport(x.report))throw Error('学习报告记录有误');
   if(x.examForms!==undefined && (!Array.isArray(x.examForms)||x.examForms.length!==4||!x.examForms.every(n=>number(n))))throw Error('模考记录有误');
@@ -180,13 +182,7 @@ function reconcileBank(state, catalog) {
   }
 }
 export function estimate(s) {
-  const recent = s.history.slice(-32);
-  if (!recent.length) return 400;
-  const weight = recent.reduce((a, h, i) => a + (i + 1), 0);
-  const value =
-    recent.reduce((a, h, i) => a + (i + 1) * (h.level + (h.ok ? 145 : -175)), 0) / weight;
-  const confidence = Math.min(1, recent.length / 8);
-  return Math.max(400, Math.min(900, Math.round((400 + (value - 400) * confidence) / 5) * 5));
+  return predictionSummary(s).total;
 }
 export function difficulty(s, skill) {
   const recent = s.history.filter((h) => h.skill === skill).slice(-12);
@@ -205,10 +201,11 @@ export const titleOf = (xp) =>
   ['初遇旅人', '词卡收藏家', '林间探索者', '浮岛领航员', '星海学者'][
     Math.min(4, Math.floor(xp / 400))
   ];
-export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false}={}) {
+export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false,sourceType='practice'}={}) {
   const xp = ok ? 12 : 4,
     oldLv = levelOf(s.xp),
     oldStage = s.stage;
+  predictAnswer(s,ref,q,ok,now,{sourceType,previouslySeen:s.seen[ref.id]||0});
   diagnosisPractice(s,q.skill);
   s.xp += xp;
   s.stats[q.skill] += xp;
