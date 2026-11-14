@@ -1,3 +1,4 @@
+import {UNKNOWN} from './answers.js';
 import {question} from './bank.js';
 import {icon} from './icons.js';
 
@@ -80,7 +81,7 @@ function choices(q, ref, run) {
     return `<button type="button" class="lesson-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}" data-act="answer" data-i="${i}" ${answered ? 'disabled' : ''} aria-label="${esc([letter(i),(!audioOnly ? option : ''),status].filter(Boolean).join(' '))}">
       <span class="lesson-letter">${letter(i)}</span><span>${audioOnly ? '选择 ' + letter(i) : esc(option)}</span>
       ${status ? '<span class="lesson-option-mark">' + icon(correct ? 'check' : 'close',18) + '</span>' : ''}</button>`;
-  }).join('')}</div>`;
+  }).join('')}</div>${answered ? '' : '<button type="button" class="secondary lesson-unknown" data-act="unknown">不知道</button>'}`;
 }
 
 function vocabNote(q) {
@@ -107,7 +108,7 @@ function feedback(q, ref, run) {
   const correct = ref.mode === 'dictation'
     ? normalize(run.selected) === normalize(q.answer) : run.selected === q.answer;
   return `<section class="lesson-feedback ${correct ? 'is-right' : 'is-miss'}" aria-label="答题反馈">
-    <h2>${icon(correct ? 'check' : 'note',19)} ${correct ? '答对了' : '再记一次'}</h2>
+    <h2>${icon(correct ? 'check' : 'note',19)} ${correct ? '答对了' : run.selected === UNKNOWN ? '不知道 · 已加入复习' : '再记一次'}</h2>
     <p><b>正确答案</b> <span>${esc(q.answer)}</span></p>
     ${ref.mode==='part1'?`<p><b>画面说明</b> ${esc(q.description)}</p>`:''}
     ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p></div>`}

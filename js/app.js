@@ -1,3 +1,4 @@
+import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
 import {examController} from './exam-controller.js';
 import {examView,examLobby} from './exam-ui.js';
@@ -334,7 +335,7 @@ function answer(value) {
   pauseClock();
   const ok = value.trim().toLowerCase() === q.answer.trim().toLowerCase(),
     result = reward(s, q, r, ok);
-  recordStudy(s,r,q,ok);
+  recordStudy(s,r,q,ok,Date.now(),value === UNKNOWN ? 'unknown' : undefined);
   a.selected = ok ? q.answer : value;
   a.right += Number(ok);
   a.gain += result.xp;
@@ -351,7 +352,7 @@ function answer(value) {
       block: 'nearest',
     });
   }
-  if (ok || result.leveled || result.evolved)
+  if (value !== UNKNOWN && (ok || result.leveled || result.evolved))
     tone(result.evolved ? 'evolve' : result.leveled ? 'level' : 'correct', s.settings.sound);
   if (result.evolved) evolution(true);
   else if (result.leveled) {
@@ -479,10 +480,11 @@ document.addEventListener('click', async (e) => {
     render();
     window.scrollTo(0, 0);
   }
-  if (['answer', 'submit-dict', 'play', 'listen-choice'].includes(a)) {
+  if (['answer', 'unknown', 'submit-dict', 'play', 'listen-choice'].includes(a)) {
     const ref = s.session?.items[s.session.index];
     if (!ref) return;
     const q = question(ref);
+    if (a === 'unknown' && q.options?.length && page === 'practice') answer(UNKNOWN);
     if (a === 'answer') answer(q.options[Number(i)]);
     if (a === 'submit-dict') answer($('#dict-input').value);
     if (a === 'play' || a === 'listen-choice') {

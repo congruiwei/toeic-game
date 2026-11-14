@@ -27,7 +27,7 @@ function validDay(key) {
 }
 function validCounters(map, keyCheck) {
   return object(map) && Object.entries(map).every(([key, c]) =>
-    keyCheck(key) && object(c) && count(c.total) && count(c.right) && c.right <= c.total);
+    keyCheck(key) && object(c) && count(c.total) && count(c.right) && count(c.unknown ?? 0) && c.right + (c.unknown ?? 0) <= c.total);
 }
 export function validReport(report) {
   if (report === undefined) return true;
@@ -51,21 +51,22 @@ function category(ref, data) {
   if (part >= 1 && part <= 7 && Number.isInteger(part)) return String(part);
   throw Error('学习报告遇到未知题型');
 }
-function add(map, key, ok) {
+function add(map, key, ok, outcome) {
   const c = map[key] ??= counter();
   c.total++;
   c.right += Number(ok);
+  if (outcome === 'unknown' && !ok) c.unknown = (c.unknown || 0) + 1;
 }
 
 // Call once for each newly committed practice/exam verdict.
-export function recordStudy(state, ref, data, ok, now = Date.now()) {
+export function recordStudy(state, ref, data, ok, now = Date.now(), outcome) {
   const day = new Date(now);
   if (!Number.isFinite(day.getTime()) || typeof ok !== 'boolean') throw Error('作答记录无效');
   const part = category(ref, data);
   const report = state.report ??= newReport();
-  add(report.parts, part, ok);
+  add(report.parts, part, ok, outcome);
   const topic = data.topic?.id ?? data.topicId ?? ref.topicId;
-  if (part === '5' && typeof topic === 'string' && safeId(topic)) add(report.topics, topic, ok);
+  if (part === '5' && typeof topic === 'string' && safeId(topic)) add(report.topics, topic, ok, outcome);
   const key = dateKey(day);
   report.days[key] = (report.days[key] || 0) + 1;
   // Use the newest recorded local date when the device clock or time zone moves back.
@@ -91,8 +92,8 @@ function metric(map, key, seen, oldRight) {
   const kept = map[key] || counter();
   const attempts = Math.max(seen, kept.total);
   if (attempts > kept.total && Number.isSafeInteger(oldRight) && oldRight >= kept.right && oldRight <= attempts)
-    return {attempts, right:oldRight, measured:attempts};
-  return {attempts, right:kept.right, measured:kept.total};
+    return {attempts, right:oldRight, measured:attempts, unknown:kept.unknown || 0};
+  return {attempts, right:kept.right, measured:kept.total, unknown:kept.unknown || 0};
 }
 function rate(row) {
   return row.measured ? Math.round(100 * row.right / row.measured) + '%' : '—';
@@ -102,7 +103,7 @@ function rowView(row) {
   const label = row.measured < row.attempts
     ? '有判定 ' + row.right + '/' + row.measured + ' · 共 ' + row.attempts + ' 题次'
     : row.right + ' 对 / ' + row.attempts + ' 题次';
-  return '<li><div><b>' + escape(row.name) + '</b><small>' + label + '</small></div><strong>' + rate(row) + '</strong></li>';
+  return '<li><div><b>' + escape(row.name) + '</b><small>' + label + ' · 答错 ' + (row.measured - row.right - row.unknown) + ' · 不知道 ' + row.unknown + '</small></div><strong>' + rate(row) + '</strong></li>';
 }
 function recent(report, start, end) {
   return Object.entries(report.days).reduce((sum, [d,n]) => sum + (d >= start && d <= end ? n : 0), 0);

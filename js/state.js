@@ -1,7 +1,7 @@
 import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
-  VERSION = 1;
+  VERSION = 2;
 export const skills = ['vocab', 'grammar', 'listening', 'reading'];
 export const labels = { vocab: '单词', grammar: '语法', listening: '听力', reading: '阅读' };
 export const forms = ['芽团', '双叶芽', '蕨羽灵', '铃花灵', '云冠灵', '星冠灵'];
@@ -33,6 +33,8 @@ function mapOk(m, fn) {
 }
 export function decode(raw, catalog) {
   const x = JSON.parse(raw);
+  // Version 1 stored every missed answer together. Its existing verdicts stay intact.
+  if (record(x) && x.version === 1) x.version = 2;
   if (!record(x) || x.version !== VERSION) throw Error('存档版本无法识别');
   if (
     !number(x.xp) ||
