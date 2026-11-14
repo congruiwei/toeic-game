@@ -9,7 +9,7 @@
 1. 用 Safari 打开游戏，首次打开时保持联网，在设置看到「离线题库已就绪」。
 2. 轻点「分享」。部分 Safari 布局先点「更多」，再选「分享」。
 3. 选择「添加到主屏幕」。如有「作为网页 App 打开」选项，将它打开，然后点「添加」。
-4. 从主屏幕图标打开游戏。在设置里点「测试声音」。正式听题时点「点击开始」，可随时重听。
+4. 从主屏幕图标打开游戏。在设置里点「测试声音」。普通练习点「点击开始」，可以重听；模考听力由一次点击启动，随后连续播放。
 
 页面和题库可以离线使用。朗读使用设备提供的英语语音，部分语音需要联网或预先下载。不同 iOS 版本和语音包提供的口音不同。[Apple 主屏幕网页 App 指南](https://support.apple.com/zh-cn/guide/iphone/iphea86e5236/ios)
 
@@ -17,15 +17,31 @@
 
 | 练习 | 题库规模 | 玩法 |
 | --- | --- | --- |
-| 单词 | 1000 个词，17 个主题 | 中英互选、听音辨词、例句填空、同义替换。答对收集词卡，按间隔复习 |
+| 单词 | 1087 张词卡，1026 个独立词头，44 个多义词 | 中英互选、听音辨词、例句填空、同义替换。答对收集词卡，按间隔复习 |
 | 语法 | 240 道语法题、100 道词汇题 | 先浏览时间轴或结构图，再完成 Part 5 填空并查看英中解析 |
+| Part 1 | 60 张原创插画，60 题 | 看图听四句描述，作答后看英文原句、画面说明及解析 |
 | Part 2 | 200 题 | 分开练首词辨识与问答回应，回应题朗读问题及三个选项 |
-| Part 3 / 4 | 60 组，180 道理解题和 60 道听写 | 双人、三人对话和独白，含图表联读、意图题及原文依据 |
-| Part 6 / 7 | 60 组、80 篇文稿、224 题 | 单篇、双篇及三篇材料，支持阅读计时、原文定位和同义替换 |
+| Part 3 / 4 | 92 组，276 道理解题和 92 道听写 | 双人、三人对话和独白，含图表联读、意图题及原文依据 |
+| Part 6 / 7 | 76 组、108 篇文稿、286 题 | 单篇、双篇及三篇材料，支持阅读计时、原文定位和同义替换 |
 
-所有学习材料均为本项目原创。难度标签和预估分数用于游戏内调整，界面标注「仅供参考」。本项目与 ETS 无关联。首版未收录 Part 1 图片题。
+所有学习材料均为本项目原创。难度标签和预估分数用于游戏内调整，界面标注「仅供参考」。本项目与 ETS 无关联。Part 1 为原创场景插画。
 
 首页提供三个任选任务，「练习」可选择主题、题型或语法关卡。「图鉴」保存答对过的词卡及待复习错题。游戏没有出勤要求，离开不会扣经验或退化。
+
+## 模拟考试与学习报告
+
+进入「练习 → 模拟考试」。完整卷依次为 6、25、39、30、30、16、54 题，听力、阅读各 100 题。半套依次为 3、12、20、15、15、8、27 题，两部分各 50 题。完整卷阅读限时 75 分钟，半套 38 分钟。可保存离开并继续；听力从未开始的语句接续，进入阅读后可跨题跳转。成绩页显示每 Part 的正确率、每题用时和错题。共听时间在题组内均摊。[TOEIC L&R 官方题型与考试时间](https://www.iibc-global.org/english/toeic/test/lr/about/format.html)
+
+「报告」显示过去 7 天和 30 天的练习量、分 Part 和语法点的正确率，以及不同难度的已掌握词卡（SRS 第 3 盒及以上）。旧存档没有日期的记录只用于可恢复的累计统计。
+
+## iPhone 声音与安装核对
+
+在系统「设置 → 辅助功能 → 朗读内容」（部分系统为「阅读与朗读」）中进入「声音 → 英语」，下载带「增强」或「高级」的音色，回到游戏设置试听。可分别指定说话人 1、2、3，或让游戏在可用地区语音间轮换。[Apple 语音设置说明](https://support.apple.com/en-ie/guide/iphone/iph96b214f0/ios)
+
+- 在 Safari 及主屏幕 App 各测试一次首次点击发声、语速、音量和蓝牙耳机。
+- 试听下载前后的音色列表，以三人对话检查角色一致性、美英澳加口音与系统实际发音。
+- 在线等到「离线题库已就绪」后打开飞行模式，重新启动，检查插画和已安装的本地语音。
+- 模考中途锁屏再回来，点「继续考试」确认语句接续、阅读剩余时间和答案。设备上保存最近一套成绩，换设备前可导出 JSON。
 
 ## 保存与换设备
 
@@ -43,11 +59,30 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 浏览器打开 `http://localhost:8000/`。本地文件协议无法正常加载 ES modules。Service Worker 需要 HTTPS 或 localhost；用 iPhone 真机验证离线安装时，可直接访问上方的 Pages 网址。
 
-校验题库（Node.js 18+，验证脚本使用内置模块）：
+校验题库（推荐 Node.js 22.7 或更高版本）：
 
 ```sh
 node scripts/validate.mjs
 ```
+
+## 自动化回归
+
+从仓库根目录运行。应用不依赖 Node；Playwright 仅用于开发测试。
+
+~~~sh
+node scripts/validate.mjs
+node tests/voices.mjs
+node tests/saves.mjs
+node tests/forms.mjs
+node --test tests/report.test.mjs tests/exam-edge.test.mjs
+npm install --prefix /tmp/island-browser-test playwright
+/tmp/island-browser-test/node_modules/.bin/playwright install chromium
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/e2e.cjs
+~~~
+
+已有 Chrome 可给最后一条命令加 PW_CHANNEL=chrome。脚本启动临时本地 HTTP 服务，模拟 iPhone 并使用可控语音事件。模考测试实际开始、回答、退出、恢复和交卷，并用测试存档推进到听力末段及阅读到期点。真实设备的系统音色与音响效果需另行试听。
+
+各难度题量、完整测试输出和加载速度见 [定版验收](docs/RELEASE-CHECKS.md)。复审说明和逐字段前后对照见 [按 ID 的复审清单](docs/CONTENT-REVIEW.md) 与 [CSV 明细](docs/review-detail.csv)。
 
 ## 发布到 GitHub Pages
 
@@ -72,4 +107,4 @@ gh api repos/congruiwei/toeic-game/pages/builds/latest --jq '{status, commit, er
 
 旧页面仍打开时，浏览器会等待它关闭后切换到新版离线包。请关闭所有游戏标签页和主屏幕窗口，再重新打开。存档键独立于缓存版本。[GitHub Pages 发布来源说明](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
 
-文件结构、五种题库格式、加题示例、存档契约和进化算法见 [开发交接文档](docs/ARCHITECTURE.md)。
+文件结构、六种题库格式、加题示例、存档契约和进化算法见 [开发交接文档](docs/ARCHITECTURE.md)。

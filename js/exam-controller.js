@@ -33,16 +33,17 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
     for(const id of examIds(e)){
       const {ref,data}=catalog.get(id), ok=e.answers[id]===data.answer;
       e.keys[id]=data.answer;
-      s.seen[id]=(s.seen[id]||0)+1;
+      const answered=Object.hasOwn(e.answers,id);
+      if(answered)s.seen[id]=(s.seen[id]||0)+1;
       if(ok)delete s.errors[id];else s.errors[id]={misses:(s.errors[id]?.misses||0)+1,at:e.finishedAt,ref:{...ref}};
-      if(Object.hasOwn(e.answers,id))onGrade?.(ref,data,ok,e.answeredAt[id]);
+      if(answered)onGrade?.(ref,data,ok,e.answeredAt[id]);
     }
     s.examForms ||= [0,0,0,0];s.examForms[e.form]++;
     if(save()){show('exam');}
   }
   function readingTimer(){
     const e=current();e.phase='reading';
-    if(!e.deadline)e.deadline=Date.now()+e.remaining;
+    e.deadline=Math.min(e.deadline||Infinity,Date.now()+e.remaining);
     const update=()=>{
       if(!live||current()!==e||page()!=='exam')return;
       const left=e.deadline-Date.now();if(left<=0){finish();return;}
@@ -86,7 +87,7 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
     if(Date.now()>=e.deadline){finish();return;}
     const ids=readingIds(e);
     if(!Number.isInteger(i)||i<0||i>=ids.length)return;
-    account();e.cursor=i;save();redraw();window.scrollTo(0,0);
+    account();e.cursor=i;if(!save()&&current()!==e)return;redraw();window.scrollTo(0,0);
   }
   function action(name,el){
     const s=state(),e=s.exam;
@@ -108,7 +109,7 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
       const id=el.dataset.id,options=catalog.get(id)?.data.options;
       const visible=e.phase==='reading'?[readingIds(e)[e.cursor]]:e.units[e.unit].ids;
       if(!visible.includes(id)||!options?.[Number(el.dataset.i)])return;
-      account();e.focus=id;e.answers[id]=options[Number(el.dataset.i)];e.answeredAt[id]=Date.now();save();
+      account();e.focus=id;e.answers[id]=options[Number(el.dataset.i)];e.answeredAt[id]=Date.now();if(!save()&&current()!==e)return;
       const group=el.closest('.lesson-choices');
       for(const b of group.querySelectorAll('button')){b.classList.toggle('exam-chosen',b===el);b.setAttribute('aria-pressed',String(b===el));}
       const selected=document.querySelector('#exam-jump option:checked');if(selected)selected.textContent=(e.cursor+1)+' · 已答';

@@ -82,7 +82,7 @@ function save() {
   try {
     const current = localStorage.getItem(KEY);
     if (current !== lastRaw && current) {
-      const newer = decode(current, catalog);
+      const newer = decode(current, allBanks.every(k=>bank[k])?catalog:undefined);
       exam.stop();
       s = newer;
       lastRaw = current;
@@ -422,10 +422,17 @@ document.addEventListener('change', async (e) => {
 document.addEventListener('input', (e) => {
   if (e.target.dataset.pref === 'rate') $('#rate-val').textContent = e.target.value + '×';
 });
-document.addEventListener('click', (e) => {
+document.addEventListener('click', async (e) => {
   const el = e.target.closest('[data-act]');
   if (!el || el.disabled) return;
   const { act: a, mode, page: p, i, filter, id } = el.dataset;
+  const needed=requiredBanks(a,el).filter(k=>!bank[k]);
+  if(needed.length){
+    el.disabled=true;el.setAttribute('aria-busy','true');
+    try{await loadBank(needed);}catch{toast('题库未能打开，请检查连接后再试。');return;}
+    finally{el.disabled=false;el.removeAttribute('aria-busy');}
+    if(!el.isConnected)return;
+  }
   if(a.startsWith('exam-')){exam.action(a,el);return;}
   if (a === 'nav') {
     if (dialog.open) close();
@@ -539,9 +546,11 @@ document.addEventListener('visibilitychange', () => {
     else render();
   }
 });
-window.addEventListener('storage', (e) => {
+window.addEventListener('storage', async (e) => {
   if (e.key !== KEY || !e.newValue || e.newValue === lastRaw) return;
   try {
+    await loadBank(allBanks);
+    if(localStorage.getItem(KEY)!==e.newValue)return;
     const updated = decode(e.newValue, catalog);
     lastRaw = e.newValue;
     exam.stop();
@@ -556,23 +565,28 @@ window.addEventListener('storage', (e) => {
   } catch {}
 });
 window.addEventListener('pagehide',()=>{if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
+const allBanks=['vocab','part1','part2','grammar','listening','reading'];
+const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};
+function requiredBanks(action,el){
+  if(action==='nav' && ['library','report'].includes(el.dataset.page) || action==='import' || action==='resume' || action==='exam-start' || action==='exam-lobby')return allBanks;
+  if(['start','configure','configured'].includes(action))return routeFiles[el.dataset.mode]?[routeFiles[el.dataset.mode]]:allBanks;
+  return [];
+}
 async function boot() {
   try {
-    await loadBank(['vocab', 'part1','part2', 'grammar', 'listening', 'reading']);
-  } catch {
-    root.innerHTML = '<h2>题库未能打开</h2><p>请联网后重新载入一次，以准备离线资源。</p>';
-    return;
-  }
-  try {
-    const raw = localStorage.getItem(KEY);
-    lastRaw = raw;
-    if (raw) {
-      s = decode(raw, catalog);
+    const raw=localStorage.getItem(KEY);
+    if(raw){
+      // Restoring retired IDs needs a complete catalog; a new island can render immediately.
+      await loadBank(allBanks);
+      lastRaw=localStorage.getItem(KEY);
+      if(lastRaw)s=decode(lastRaw,catalog);
     }
-  } catch {
-    storageBroken = true;
-    s = fresh();
-    toast('原存档读取失败，已保留原始记录。可从设置导入备份。');
+  } catch(error) {
+    if(allBanks.some(k=>!bank[k])) {
+      root.innerHTML='<h2>进度尚未载入</h2><p>请检查连接后重新打开，以恢复已保存的练习。</p>';
+      return;
+    }
+    storageBroken=true;s=fresh();toast('原存档读取失败，已保留原始记录。可从设置导入备份。');
   }
   markVisit();
   tasks = ['vocab', 'part2', s.history.length && Math.random() < 0.5 ? 'reading' : 'grammar'];

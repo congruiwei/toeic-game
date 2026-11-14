@@ -2,28 +2,29 @@ import { difficulty } from './state.js';
 const bank = {},
   catalog = new Map(),
   entry = (ref, data) => catalog.set(ref.id, { ref, data });
+const pending = new Map();
 export async function loadBank(files) {
-  await Promise.all(
-    files.map(async (key) => {
-      const r = await fetch('./data/' + key + '.json');
-      if (!r.ok) throw Error('无法读取题库 ' + key);
-      bank[key] = await r.json();
-    }),
-  );
-  for (const w of bank.vocab) entry({ id: w.id, mode: 'vocab' }, w);
-  for (const q of bank.part1||[]) entry({id:q.id,mode:'part1'},q);
-  for (const q of bank.part2) entry({ id: q.id, mode: 'part2' }, q);
-  for (const t of bank.grammar || [])
-    for (const q of t.questions) entry({ id: q.id, mode: 'grammar' }, { ...q, topic: t });
-  for (const set of bank.listening || []) {
-    for (const q of set.questions)
-      entry({ id: q.id, mode: 'dialogue' }, { ...q, level: set.level, set });
-    const d = set.dictation;
-    entry({ id: d.id, mode: 'dictation' }, { ...d, level: set.level, set });
-  }
-  for (const set of bank.reading || [])
-    for (const q of set.questions)
-      entry({ id: q.id, mode: 'reading' }, { ...q, level: set.level, set });
+  await Promise.all(files.map(file => {
+    if(bank[file])return;
+    if(!pending.has(file)){
+      const job=fetch('./data/'+file+'.json').then(async response=>{
+        if(!response.ok)throw Error('无法读取题库 '+file);
+        const rows=await response.json();
+        for(const row of rows){
+          if(file==='vocab'||file==='part1'||file==='part2')entry({id:row.id,mode:file},row);
+          else if(file==='grammar')for(const q of row.questions)entry({id:q.id,mode:'grammar'},{...q,topic:row});
+          else{
+            const mode=file==='reading'?'reading':'dialogue';
+            for(const q of row.questions)entry({id:q.id,mode},{...q,level:row.level,set:row});
+            if(row.dictation)entry({id:row.dictation.id,mode:'dictation'},{...row.dictation,level:row.level,set:row});
+          }
+        }
+        bank[file]=rows;
+      }).finally(()=>pending.delete(file));
+      pending.set(file,job);
+    }
+    return pending.get(file);
+  }));
 }
 export { bank, catalog };
 export const skillFor = (mode) =>
