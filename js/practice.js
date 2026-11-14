@@ -1,3 +1,4 @@
+import {reviewTools} from './question-tools.js';
 import {UNKNOWN} from './answers.js';
 import {question} from './bank.js';
 import {icon} from './icons.js';
@@ -114,6 +115,7 @@ function feedback(q, ref, run) {
     ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p></div>`}
     ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>` : ''}
     ${evidence(q,ref)}
+    ${reviewTools(ref.id)}
   </section>${ref.mode === 'vocab' ? vocabNote(q) : ''}
     <button type="button" data-act="next" class="lesson-primary">${run.index === run.items.length - 1 ? '查看本轮成果' : '下一题'} ${icon('arrow',18)}</button>`;
 }

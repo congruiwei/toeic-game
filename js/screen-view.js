@@ -1,3 +1,4 @@
+import {reviewTools} from './question-tools.js';
 import {UNKNOWN} from './answers.js';
 import {bank,catalog,question} from './bank.js';
 import {beginScreen,selfAssess,markSpotCheck,screenedQueue} from './screening.js';
@@ -13,7 +14,7 @@ export function screenView(s) {
   if(r.feedback){
     const {id,selected}=r.feedback, ref={id,mode:'vocab',format:'meaning'}, q=question(ref);
     return `<section class="lesson-shell"><h1>抽查反馈</h1><div class="lesson-panel" data-screen-feedback data-id="${esc(id)}">
-      <h2>${selected===q.answer?'答对了':'已加入待学词'}</h2><strong lang="en">${esc(q.word)}</strong><p>${esc(q.zh)}</p><blockquote lang="en">${esc(q.example)}</blockquote>
+      <h2>${selected===q.answer?'答对了':'已加入待学词'}</h2><strong lang="en">${esc(q.word)}</strong><p>${esc(q.zh)}</p><blockquote lang="en">${esc(q.example)}</blockquote>${reviewTools(id)}
       </div><button class="lesson-primary" data-act="screen-next">继续快筛</button></section>`;
   }
   if(!w){

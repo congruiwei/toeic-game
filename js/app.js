@@ -1,3 +1,4 @@
+import {answerText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
 import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
@@ -283,7 +284,7 @@ function settings() {
    )
    .join('')}
  <label class="setting">朗读速度 <span><output id="rate-val">${p.rate}×</output> <input aria-label="朗读速度" type="range" min="0.75" max="1.2" step="0.05" value="${p.rate}" data-pref="rate"></span></label>
- <section id="voice-controls">${voiceControls()}</section><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p><div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
+ <section id="voice-controls">${voiceControls()}</section><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p>${issueSettings(s.issues)}<div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
 }
 let pending = null;
 function markVisit() {
@@ -367,6 +368,18 @@ function answer(value) {
     $('#toast').classList.add('level-pop');
   }
 }
+function reviewedAnswer(id) {
+  let ref, selected, correct;
+  if(page==='practice' && s.session?.selected!=null) {
+    ref=s.session.items[s.session.index];selected=s.session.selected;
+  } else if(page==='screen' && s.screening?.run?.feedback) {
+    const check=s.screening.run.feedback;
+    ref={id:check.id,mode:'vocab',format:'meaning'};selected=check.selected;
+  } else if(page==='exam' && s.exam?.phase==='done' && Object.hasOwn(s.exam.keys,id)) {
+    ref=catalog.get(id)?.ref;selected=s.exam.answers[id];correct=s.exam.keys[id];
+  }
+  return ref && ref.id===id ? answerText(ref,question(ref),selected,correct) : null;
+}
 function exportSave() {
   const blob = new Blob([JSON.stringify(s, null, 2)], { type: 'application/json' }),
     url = URL.createObjectURL(blob),
@@ -439,6 +452,17 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a==='report-issue' && reviewedAnswer(id)) modal(issueForm(id));
+  if(a==='save-issue') {
+    const text=reviewedAnswer(id),reason=$('#issue-reason')?.value;
+    if(text && reasons.includes(reason)) {
+      (s.issues??=[]).push({id,reason,note:$('#issue-note').value.trim(),text});
+      if(save()){close();toast('已保存问题报告');}
+    }
+  }
+  if(a==='copy-issues' && s.issues?.length) await copyText(issuesText(s.issues),modal,toast,'已复制全部问题报告');
+  if(a==='clear-issues') modal('<h2>清空本机的问题报告？</h2><p>共 '+(s.issues?.length||0)+' 条。已复制的内容和练习进度会保留。</p>'+act('confirm-clear-issues','清空报告','primary'));
+  if(a==='confirm-clear-issues'){s.issues=[];if(save()){settings();toast('已清空报告');}}
   if(a.startsWith('screen-')){screening.action(a,el);return;}
   if(a.startsWith('exam-')){exam.action(a,el);return;}
   if (a === 'nav') {

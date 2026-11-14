@@ -1,3 +1,4 @@
+import {reviewTools} from './question-tools.js';
 import {question,catalog} from './bank.js';
 import {examIds,readingIds,examScores} from './exam.js';
 import {passages,graphic} from './practice.js';
@@ -34,11 +35,21 @@ export function examView(e){
    ${q.set?passages(q,false):''}<div class="lesson-panel"><h2>${esc(q.prompt)}</h2>${choices(q,e,part)}</div>
    <div class="exam-pager">${action('exam-prev','上一题',e.cursor?'':'disabled')}${action('exam-next','下一题',e.cursor<ids.length-1?'':'disabled')}${action('exam-submit','交卷')}</div></section>`;
 }
+function reviewEntry(e,id,i){
+ const {ref}=catalog.get(id),q=question(ref),answer=e.keys[id]??q.answer;
+ const verdict=e.answers[id]===answer?'正确':e.answers[id]?'错误':'未答';
+ return `<details class="exam-item-review"><summary>${i+1}. ${esc(id)} · ${duration(e.times[id]||0)} · ${verdict}</summary>
+  <h3>${esc(q.prompt)}</h3>${ref.mode==='reading'?passages(q,true):''}
+  ${q.set?.graphic?graphic(q.set.graphic):''}${q.description?'<p>'+esc(q.description)+'</p>':''}
+  <ol type="A">${q.options.map(o=>'<li>'+esc(o)+'</li>').join('')}</ol>
+  <p>我的答案　${esc(e.answers[id]||'未作答')}</p><p>正确答案　${esc(answer)}</p>
+  <p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p>${reviewTools(id)}</details>`;
+}
 function resultView(e){
  const scores=examScores(e,catalog);
  return `<section class="lesson-shell"><h1>模考成绩</h1><div class="lesson-panel"><h2>${scores.listening+scores.reading} <small>分 · 仅供参考</small></h2><p>听力 ${scores.listening} / 495　阅读 ${scores.reading} / 495</p><p class="fine muted">按本套答对比例线性估算。官方换算与试卷难度有关。</p></div>
  <div class="lesson-panel">${scores.parts.map((p,i)=>`<p>Part ${i+1}　${p.correct} / ${p.total}　${Math.round(100*p.correct/p.total)}%</p>`).join('')}</div>
- <details class="lesson-panel"><summary>逐题用时与作答</summary><p class="fine muted">组内共听材料的时间均摊，选择后停留的时间计入当前题。</p>${examIds(e).map((id,i)=>{const d=catalog.get(id).data;return `<p>${i+1}. ${esc(id)} · ${duration(e.times[id]||0)} · ${e.answers[id]===(e.keys[id]??d.answer)?'正确':e.answers[id]?'错误':'未答'}</p>`;}).join('')}</details>
- <div class="lesson-panel"><h2>错题与未答题</h2>${examIds(e).filter(id=>e.keys[id]!==e.answers[id]).map(id=>{const {ref,data}=catalog.get(id);return `<details><summary>${esc(id)} · ${esc(data.prompt||data.set?.title||'看图听句')}</summary><p>你的选择：${esc(e.answers[id]||'未答')}</p><p>答案：${esc(e.keys[id])}</p><p lang="en">${esc(data.en)}</p><p>${esc(data.zh)}</p></details>`}).join('')||'本套全部答对。'}</div>
+ <details class="lesson-panel"><summary>逐题用时与作答</summary><p class="fine muted">组内共听材料的时间均摊，选择后停留的时间计入当前题。</p>${examIds(e).map((id,i)=>reviewEntry(e,id,i)).join('')}</details>
+ <div class="lesson-panel"><h2>错题与未答题</h2>${examIds(e).map((id,i)=>e.keys[id]!==e.answers[id]?reviewEntry(e,id,i):'').join('')||'本套全部答对。'}</div>
  ${action('exam-lobby','返回模拟考试')}</section>`;
 }

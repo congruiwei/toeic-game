@@ -169,3 +169,9 @@
 .screen-actions{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .screen-actions button{min-height:54px;font-size:1rem}
 .screen-hint{text-align:center;font-size:.85rem}
+
+.review-tools { display:flex; flex-wrap:wrap; gap:8px; margin-block:14px 4px; }
+.review-tools button,.exam-item-review > summary { min-height:44px; }
+.exam-item-review { padding:8px 0; border-bottom:1px solid var(--border); overflow-wrap:anywhere; }
+.issue-field { display:grid; gap:8px; margin:12px 0; }
+.issue-field textarea { width:100%; padding:10px; font:inherit; color:var(--ink); background:var(--panel); border:1px solid var(--border); border-radius:10px; }

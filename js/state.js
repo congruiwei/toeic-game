@@ -1,4 +1,5 @@
 import {validateScreen} from './screening.js';
+import {validIssues} from './question-tools.js';
 import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
@@ -111,6 +112,7 @@ export function decode(raw, catalog) {
       throw Error('练习进度有误');
   }
   validateScreen(x,catalog);
+  if(!validIssues(x.issues))throw Error('问题报告记录有误');
   if(!validReport(x.report))throw Error('学习报告记录有误');
   if(x.examForms!==undefined && (!Array.isArray(x.examForms)||x.examForms.length!==4||!x.examForms.every(n=>number(n))))throw Error('模考记录有误');
   if(x.exam) {
