@@ -67,7 +67,7 @@ export function vocabularyOptions(word, format, words) {
   const ipa = word.ipa.replace(/[ˈˌ.\s]/gu, '');
   const byWord = new Map(words.map(w => [normalize(w.word), w]));
   function add(text, other) {
-    if (options.size >= 4 || options.has(normalize(text))) return;
+    if (options.size >= 4 || options.has(normalize(text)) || (other && normalize(other.word) === spelling)) return;
     if (word.avoidWith?.some(w => normalize(w) === normalize(other?.word || text)) || other?.avoidWith?.some(w => normalize(w) === spelling)) return;
     if (other && (senses(other.zh).some(s => known.has(s)) || normalize(other.paraphrase) === normalize(word.paraphrase))) return;
     if (format === 'sound' && (sameSound(spelling,normalize(text)) || other?.ipa.replace(/[ˈˌ.\s]/gu,'') === ipa)) return;
@@ -77,7 +77,7 @@ export function vocabularyOptions(word, format, words) {
     for (const text of seedSort(word.confusables || [], seed)) add(text, byWord.get(normalize(text)));
   }
   if (options.size < 4) {
-    const candidates = words.filter(w => w.id !== word.id).map(w => ({
+    const candidates = words.filter(w => normalize(w.word) !== spelling).map(w => ({
       word:w,
       rank: (w.pos === word.pos ? 0 : 2) + (w.theme === word.theme ? 0 : 1),
       tie:hash(seed+w.id),
@@ -102,6 +102,7 @@ export function question(ref) {
       key = f === 'meaning' ? 'zh' : f === 'match' ? 'paraphrase' : 'word';
     return {
       ...d,
+      context: d.sense && ['meaning','match'].includes(f) ? d.example : '',
       skill: 'vocab',
       answer: d[key],
       options: vocabularyOptions(d, f, bank.vocab),

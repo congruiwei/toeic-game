@@ -142,6 +142,7 @@ export function practiceView(state) {
       ${q.set && ref.mode !== 'reading' ? `<p class="lesson-source-title">${esc(q.set.title)}</p>` : ''}
       <h2 class="${ref.mode === 'vocab' && !['cloze','sound'].includes(ref.format) ? 'lesson-word' : ''}" ${['reading','grammar','dialogue','dictation'].includes(ref.mode) ? 'lang="en"' : ''}>${esc(q.prompt)}</h2>
       ${ref.mode === 'vocab' && ['meaning','match'].includes(ref.format) ? `<p class="lesson-ipa">${esc(q.ipa)} · ${esc(q.pos)}</p>` : ''}
+      ${q.context ? `<blockquote lang="en">${mark(q.context,q.word)}</blockquote>` : ''}
       ${needPlayer ? player(q, ref, answered) : ''}
       ${!needPlayer && ref.mode === 'vocab' && ['meaning','match'].includes(ref.format) ? '<button type="button" class="lesson-listen" data-act="play">'+icon('sound',16)+' 听发音</button>' : ''}
     </div>

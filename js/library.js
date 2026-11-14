@@ -31,7 +31,7 @@ function cardBody(word) {
 function wordCard(word, opened = false) {
   return `<details class="lib-card"${opened ? ' open' : ''}>
     <summary><span class="lib-mark">${icon('leaf',18)}</span>
-      <strong lang="en">${escape(word.word)}</strong>
+      <strong lang="en">${escape(word.word)}${word.sense?' · '+escape(word.sense):''}</strong>
       <span class="lib-level">${escape(word.theme)} · ${word.level}</span>
       <span class="lib-fold">${icon('chev',16)}</span></summary>
     ${cardBody(word)}

@@ -132,13 +132,16 @@ function scan(entries, location, minimum, visit) {
 function vocabulary(entries) {
   const words = new Set(), uses = new Map();
   let confused=0;
+  const grouped=new Map();
   scan(entries, 'vocab', 1000, (entry, at) => {
     id(entry, at);
     level(entry, at);
     strings(entry, at, ['word', 'ipa', 'zh', 'pos', 'theme', 'example', 'collocation', 'paraphrase']);
     if (typeof entry.word !== 'string') return;
     const key = entry.word.trim().toLowerCase();
-    expect(!words.has(key), at, `重复词条「${entry.word}」`);
+    const group=grouped.get(key)||[]; group.push(entry); grouped.set(key,group);
+    const wordCount=(entry.example||'').match(/[A-Za-z0-9]+(?:['’.-][A-Za-z0-9]+)*/g)?.length||0;
+    expect(wordCount>=8 && wordCount<=20,at,'例句需要 8–20 个词（当前 '+wordCount+'）');
     words.add(key);
     expect(wordsIn(entry.word, entry.example).length === 1, at, 'example 应含一次可用于填空的完整词头');
     if('avoidWith' in entry){
@@ -179,7 +182,12 @@ function vocabulary(entries) {
     expect(options.length===4&&options.includes(answer)&&new Set(options.map(normalize)).size===4,w.id,'生成的 '+f+' 选项无效');
     measure('Vocab '+f,{answer,options});
   }
-  counts['单词'] = words.size;
+  const poly=[...grouped.values()].filter(g=>g.length>1);
+  expect(poly.length>=40,'vocab','至少 40 个词头需要多个义项');
+  for(const g of poly) {
+    expect(g.every(x=>typeof x.sense==='string'&&x.sense.trim()) && new Set(g.map(x=>x.sense)).size===g.length && new Set(g.map(x=>x.zh)).size===g.length,g[0].word,'每个不同义项都需要唯一 sense 和释义');
+  }
+  counts['词卡'] = entries.length; counts['多义词头']=poly.length;
 }
 
 // Exact English word overlap. Skip function words, contraction fragments and the particle "up".
