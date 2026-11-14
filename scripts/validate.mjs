@@ -336,7 +336,7 @@ function reading(groups) {
   let part6 = 0, single = 0, double = 0, triple = 0;
   const kinds={vocabulary:0,negative:0,insertion:0};
   let longerSingles=0;
-  const originalShortPassages=new Set(['read-badge','read-samples','read-bikes','read-labels','read-credit']);
+  const positions={6:[0,0,0,0],7:[0,0,0,0]};
   scan(groups, 'reading', 12, (group, at) => {
     id(group, at);
     level(group, at);
@@ -351,7 +351,11 @@ function reading(groups) {
     comprehension(group, at, sources);
     if (group.part === 6) {
       part6++;
-      if(!originalShortPassages.has(group.id))expect(group.questions?.length===4,at,'新增 Part 6 需要四个空位');
+      expect(group.questions?.length===4,at,'Part 6 需要四个空位');
+      const sentences=group.questions.filter(q=>q.kind==='sentence');
+      expect(sentences.length===1,at,'每篇 Part 6 需要一项完整句子插入空');
+      const digit=sentences[0]?.prompt?.match(/\[([1-4])\]/)?.[1];
+      if(digit)positions[6][Number(digit)-1]++;
       const passage = sources.join('\n');
       const passageMarkers = new Set(passage.match(/\[\d+\]/g) || []);
       const questionMarkers = new Set();
@@ -378,6 +382,7 @@ function reading(groups) {
         if(q.kind==='negative')expect(/\bNOT\b/.test(q.prompt),q.id,'否定题应突出 NOT');
         if(q.kind==='insertion'){
           const marks=['[1]','[2]','[3]','[4]'];
+          if(marks.includes(q.answer))positions[7][marks.indexOf(q.answer)]++;
           expect(JSON.stringify(q.options)===JSON.stringify(marks),q.id,'插句选项必须固定为 [1]、[2]、[3]、[4]');
           expect(group.documents.some(doc=>marks.every(mark=>doc.text.split(mark).length===2)&&
             marks.every((mark,i)=>i===0||doc.text.indexOf(marks[i-1])<doc.text.indexOf(mark))),q.id,'同一文稿须按顺序各有一个插句位置');
@@ -386,6 +391,10 @@ function reading(groups) {
     }
   });
   expect(part6 >=15 && single+double+triple>=45 && single>0 && double>=8 && triple>=6, 'reading', 'Part 6 需15组、Part 7 需45组，含至少8双篇及6三篇');
+  for(const [part,dist] of Object.entries(positions)){
+    console.log('Part '+part+' 插句位置 [1]/[2]/[3]/[4]：'+dist.join('/'));
+    expect(Math.max(...dist)-Math.min(...dist)<=1,'Part '+part,'插句位置数量差不能超过 1');
+  }
   expect(longerSingles>=Math.ceil(single/2),'reading','至少半数单篇需要 3–4 题');
   expect(kinds.vocabulary>=20 && kinds.negative>=15 && kinds.insertion>=12,'reading','Part 7 词义、NOT、插句题数量不足');
   console.log('Part 7 专项：词义 '+kinds.vocabulary+'，NOT '+kinds.negative+'，插句 '+kinds.insertion+'；3–4 题单篇 '+longerSingles+'/'+single+'。插句排除于位置统计。');

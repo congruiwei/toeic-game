@@ -8,28 +8,13 @@
       {
         "type": "通知",
         "title": "New visitor badges",
-        "text": "Starting Monday, all visitors will need a blue badge. A member of the reception team will [1] each guest a badge at the front desk. Please keep it visible while you are in the building.\n\nBefore you leave, put the badge in the white box beside the exit. We use the same badges again the next day. [2]"
+        "text": "Before you leave, put your visitor badge in the white box beside the exit. We use the same badges again the next day. [1]\n\nVisitors arriving for a meeting can [2] in at reception. A member of the reception team will [3] each guest a blue badge at the front desk. Please keep it [4] while you are in the building so that staff can see it."
       }
     ],
     "questions": [
       {
-        "id": "read-badge-01",
-        "prompt": "Which word best completes [1]?",
-        "options": [
-          "wear",
-          "give",
-          "collect",
-          "borrow"
-        ],
-        "answer": "give",
-        "evidence": "each guest a badge at the front desk",
-        "paraphrase": "give each guest a badge → issue a badge to every visitor",
-        "en": "The receptionist gives something to someone. Give fits the pattern give each guest a badge.",
-        "zh": "前台人员把工牌发给每位访客，give 后可接人和物两个宾语。"
-      },
-      {
         "id": "read-badge-02",
-        "prompt": "Which sentence best completes [2]?",
+        "prompt": "Which sentence best completes [1]?",
         "options": [
           "The white box holds outgoing letters.",
           "Please keep your badge at home.",
@@ -40,7 +25,56 @@
         "evidence": "We use the same badges again the next day.",
         "paraphrase": "use the same badges again → collect them for reuse",
         "en": "The return box and the plan to reuse badges make a thank-you for returning them a logical closing.",
-        "zh": "出口的回收箱和次日重复使用都说明需要归还工牌，最后一句应感谢访客配合。"
+        "zh": "出口的回收箱和次日重复使用都说明需要归还工牌，最后一句应感谢访客配合。",
+        "kind": "sentence"
+      },
+      {
+        "id": "read-badge-03",
+        "prompt": "Which word best completes [2]?",
+        "options": [
+          "check",
+          "break",
+          "turn",
+          "drop"
+        ],
+        "answer": "check",
+        "evidence": "arriving for a meeting",
+        "paraphrase": "check in → register on arrival",
+        "en": "At reception, visitors check in by registering their arrival.",
+        "zh": "访客到前台登记抵达，用 check in。",
+        "kind": "word"
+      },
+      {
+        "id": "read-badge-01",
+        "prompt": "Which word best completes [3]?",
+        "options": [
+          "wear",
+          "give",
+          "collect",
+          "borrow"
+        ],
+        "answer": "give",
+        "evidence": "each guest a blue badge at the front desk",
+        "paraphrase": "give each guest a badge → issue a badge to every visitor",
+        "en": "The receptionist gives something to someone. Give fits the pattern give each guest a badge.",
+        "zh": "前台人员把工牌发给每位访客，give 后可接人和物两个宾语。",
+        "kind": "word"
+      },
+      {
+        "id": "read-badge-04",
+        "prompt": "Which word best completes [4]?",
+        "options": [
+          "hidden",
+          "visible",
+          "sealed",
+          "folded"
+        ],
+        "answer": "visible",
+        "evidence": "so that staff can see it",
+        "paraphrase": "visible → in plain sight",
+        "en": "The following purpose clause says staff need to see the badge.",
+        "zh": "后半句说明工作人员需要看到证件，故应把它戴在看得见的位置。",
+        "kind": "word"
       }
     ]
   },
@@ -53,7 +87,7 @@
       {
         "type": "邮件",
         "title": "Subject: Sample jars for the shop floor",
-        "text": "Hello team,\n\nFour sample jars arrived this morning. The supplier sent them free of charge so that customers can try the new jam. Please set them on the tasting table [1] the shop opens at nine. Everything should be in place when the first customers walk in.\n\nThere is a card beside each jar. Ask visitors to note which flavor they prefer. [2] I will use the results to decide which jam to order.\n\nBest,\nIrene"
+        "text": "Hello team,\n\nFour sample jars arrived this morning. Please set them on the tasting table [1] the shop opens at nine. Everything should be in place when the first customers walk in. The supplier sent the jars free of [2] so visitors can try the new jam.\n\nThere is a card beside each jar. Ask visitors to note which [3] they prefer, such as peach or plum. [4] I will use the results to decide which jam to order.\n\nBest,\nIrene"
       }
     ],
     "questions": [
@@ -70,11 +104,44 @@
         "evidence": "Everything should be in place when the first customers walk in.",
         "paraphrase": "in place when the first customers walk in → ready before opening",
         "en": "The team needs the tasting table ready at opening time, so setup happens before the shop opens.",
-        "zh": "第一批顾客进来时就要布置好，因此摆放试用装必须在开门之前完成。"
+        "zh": "第一批顾客进来时就要布置好，因此摆放试用装必须在开门之前完成。",
+        "kind": "word"
+      },
+      {
+        "id": "read-samples-03",
+        "prompt": "Which word best completes [2]?",
+        "options": [
+          "interest",
+          "shipping",
+          "charge",
+          "storage"
+        ],
+        "answer": "charge",
+        "evidence": "The supplier sent the jars free",
+        "paraphrase": "free of charge → without payment",
+        "en": "Free of charge is the fixed expression for something supplied without payment.",
+        "zh": "free of charge 是固定搭配，意为免费。",
+        "kind": "word"
+      },
+      {
+        "id": "read-samples-04",
+        "prompt": "Which word best completes [3]?",
+        "options": [
+          "quantity",
+          "temperature",
+          "weight",
+          "flavor"
+        ],
+        "answer": "flavor",
+        "evidence": "such as peach or plum",
+        "paraphrase": "peach or plum → two possible flavors",
+        "en": "The examples peach and plum identify flavor, not the amount or temperature of jam.",
+        "zh": "举例的桃子和李子是口味。",
+        "kind": "word"
       },
       {
         "id": "read-samples-02",
-        "prompt": "Which sentence best completes [2]?",
+        "prompt": "Which sentence best completes [4]?",
         "options": [
           "Put the completed cards in my tray at closing time.",
           "The jars are too heavy for the shelf.",
@@ -85,7 +152,8 @@
         "evidence": "I will use the results to decide which jam to order.",
         "paraphrase": "the results → the preferences on the completed cards",
         "en": "Collecting the cards gives Irene the preference data she needs for her order.",
-        "zh": "收集填好的卡片，Irene 才有依据决定订购什么口味，与上下文衔接。"
+        "zh": "收集填好的卡片，Irene 才有依据决定订购什么口味，与上下文衔接。",
+        "kind": "sentence"
       }
     ]
   },
@@ -98,13 +166,29 @@
       {
         "type": "服务说明",
         "title": "A shorter wait for bike repairs",
-        "text": "At Birch Lane Cycles, we repair both ordinary bicycles and folding models. From April onward, you may reserve a repair slot online. When you choose a time, please describe the problem as [1] as possible. A detailed description helps the mechanic select tools in advance.\n\nSome repairs take longer than the scheduled slot. If this happens, we will [2] you with a revised collection time. Please leave a phone number where you can be reached during the day."
+        "text": "At Birch Lane Cycles, appointments have two parts. First, select a time on our website. [1] When you describe the problem, be as [2] as possible. A detailed description helps the mechanic select tools in advance.\n\nPlease [3] a phone number where you can be reached during the day. Some repairs take longer than the scheduled slot. If this happens, we will [4] you with a revised collection time."
       }
     ],
     "questions": [
       {
+        "id": "read-bikes-03",
+        "prompt": "Which sentence best completes [1]?",
+        "options": [
+          "Next, tell us what needs fixing.",
+          "First, unload the new bicycle parts.",
+          "The website will reopen in a month.",
+          "The mechanic will collect the fee in cash."
+        ],
+        "answer": "Next, tell us what needs fixing.",
+        "evidence": "appointments have two parts",
+        "paraphrase": "first choose a time → next report the fault",
+        "en": "First introduces selecting a time. Next introduces the fault description explained in the following sentence.",
+        "zh": "First 引出选时段，Next 应转入紧接着要详述的故障填写步骤。",
+        "kind": "sentence"
+      },
+      {
         "id": "read-bikes-01",
-        "prompt": "Which word best completes [1]?",
+        "prompt": "Which word best completes [2]?",
         "options": [
           "precisely",
           "preciseness",
@@ -115,11 +199,28 @@
         "evidence": "A detailed description helps the mechanic select tools in advance.",
         "paraphrase": "describe precisely → give a detailed account",
         "en": "Describe is a verb and needs the adverb precisely. As … as possible keeps the adverb in its base form.",
-        "zh": "空格修饰 describe，需用副词 precisely；as … as possible 表示“尽可能……”。"
+        "zh": "空格修饰 describe，需用副词 precisely；as … as possible 表示“尽可能……”。",
+        "kind": "word"
+      },
+      {
+        "id": "read-bikes-04",
+        "prompt": "Which word best completes [3]?",
+        "options": [
+          "dial",
+          "provide",
+          "hide",
+          "disconnect"
+        ],
+        "answer": "provide",
+        "evidence": "a phone number where you can be reached",
+        "paraphrase": "provide → supply contact details",
+        "en": "The shop needs the customer to supply a reachable number for its updates.",
+        "zh": "车行需要顾客提供能联系到本人的号码。",
+        "kind": "word"
       },
       {
         "id": "read-bikes-02",
-        "prompt": "Which word best completes [2]?",
+        "prompt": "Which word best completes [4]?",
         "options": [
           "compare",
           "charge",
@@ -127,10 +228,11 @@
           "equip"
         ],
         "answer": "contact",
-        "evidence": "Please leave a phone number where you can be reached during the day.",
+        "evidence": "a phone number where you can be reached during the day.",
         "paraphrase": "can be reached → can be contacted",
         "en": "The shop asks for a reachable phone number so it can contact the customer about a changed pickup time.",
-        "zh": "店方索要白天能接通的号码，是为了在取车时间变动时联系顾客。"
+        "zh": "店方索要白天能接通的号码，是为了在取车时间变动时联系顾客。",
+        "kind": "word"
       }
     ]
   },
@@ -143,13 +245,29 @@
       {
         "type": "备忘录",
         "title": "Revised shelf labels",
-        "text": "Beginning next week, shelf labels in the stockroom will show an aisle number above the item name. The new format should make it easier for temporary staff to find supplies. Old labels already list the correct item names. [1], their lack of aisle numbers has caused delays.\n\nSupervisors will receive a packet of new labels on Friday. Replace labels only on shelves listed in the packet. Several shelves are due to be moved; [2] these shelves now would waste labels. We will identify their new locations next month."
+        "text": "Beginning next week, shelf labels will [1] the aisle number above the item name. Old labels already list the correct item names. [2], their lack of aisle numbers has caused delays.\n\nSupervisors will receive a packet of new labels on Friday. [3] Several shelves are due to be moved; [4] these shelves now would waste labels. We will identify their new locations next month."
       }
     ],
     "questions": [
       {
+        "id": "read-labels-03",
+        "prompt": "Which word best completes [1]?",
+        "options": [
+          "erase",
+          "subtract",
+          "display",
+          "withhold"
+        ],
+        "answer": "display",
+        "evidence": "above the item name",
+        "paraphrase": "display → show on the label",
+        "en": "The number will appear above the name so workers can see it.",
+        "zh": "通道编号要显示在品名上方，display 表示展示。",
+        "kind": "word"
+      },
+      {
         "id": "read-labels-01",
-        "prompt": "Which transition best completes [1]?",
+        "prompt": "Which transition best completes [2]?",
         "options": [
           "However",
           "Similarly",
@@ -160,11 +278,28 @@
         "evidence": "Old labels already list the correct item names.",
         "paraphrase": "correct names but missing location information → a contrast",
         "en": "The passage contrasts a strength of the old labels with a problem they cause. However signals that contrast.",
-        "zh": "旧标签名称正确是优点，缺少通道编号却导致延误是缺点，应用 However 表示转折。"
+        "zh": "旧标签名称正确是优点，缺少通道编号却导致延误是缺点，应用 However 表示转折。",
+        "kind": "word"
+      },
+      {
+        "id": "read-labels-04",
+        "prompt": "Which sentence best completes [3]?",
+        "options": [
+          "Remove the item name from each new label.",
+          "Give the unused packet back to the driver.",
+          "Apply them to every shelf before opening.",
+          "Apply them only to the shelves on the enclosed list."
+        ],
+        "answer": "Apply them only to the shelves on the enclosed list.",
+        "evidence": "Several shelves are due to be moved",
+        "paraphrase": "listed shelves only → avoid relabeling shelves about to move",
+        "en": "Them refers to the new labels. The exception for shelves about to move explains the limited list.",
+        "zh": "them 指刚提到的新标签。下文解释某些架子将移动，因此只应贴清单里的架子。",
+        "kind": "sentence"
       },
       {
         "id": "read-labels-02",
-        "prompt": "Which form best completes [2]?",
+        "prompt": "Which form best completes [4]?",
         "options": [
           "relabels",
           "had relabeled",
@@ -175,7 +310,8 @@
         "evidence": "Several shelves are due to be moved",
         "paraphrase": "are due to be moved → are scheduled for relocation",
         "en": "The action of relabeling is the subject of would waste. The upcoming move explains why it would be wasteful.",
-        "zh": "would waste 的主语是“现在重新贴标签”这个动作，用动名词 relabeling；这些货架还要搬动。"
+        "zh": "would waste 的主语是“现在重新贴标签”这个动作，用动名词 relabeling；这些货架还要搬动。",
+        "kind": "word"
       }
     ]
   },
@@ -188,7 +324,7 @@
       {
         "type": "邮件",
         "title": "Subject: An alternative collection date",
-        "text": "Dear studio members,\n\nA late delivery of clay has affected our Friday firing schedule. Orders marked for Friday collection can still be completed on time if necessary. To reduce pressure on the kiln team, we are asking members with flexible plans to collect on Monday instead. Members who volunteer will receive studio credit. This offer applies [1] to orders originally marked for Friday.\n\nYou need only reply if you wish to change dates. [2] Our staff will set those pieces aside for collection at the promised time. Thank you for helping us balance the workload."
+        "text": "Dear studio members,\n\nA late delivery of clay has affected our Friday firing schedule. This offer applies [1] to orders originally marked for Friday. You need only reply if you wish to change dates. [2] Our staff will set those pieces aside for collection at the promised time.\n\nMembers with flexible plans can collect on Monday [3] of Friday. If you volunteer, we will [4] studio credit to your account. This will reduce pressure on the kiln team."
       }
     ],
     "questions": [
@@ -202,10 +338,11 @@
           "previously"
         ],
         "answer": "exclusively",
-        "evidence": "Members who volunteer will receive studio credit.",
+        "evidence": "to orders originally marked for Friday.",
         "paraphrase": "applies exclusively to → is restricted to",
         "en": "The offer singles out orders originally assigned to Friday. Exclusively states this limit.",
-        "zh": "优惠对象限定为原定周五取件的订单，exclusively 表示“仅限”。"
+        "zh": "优惠对象限定为原定周五取件的订单，exclusively 表示“仅限”。",
+        "kind": "word"
       },
       {
         "id": "read-credit-02",
@@ -220,7 +357,40 @@
         "evidence": "You need only reply if you wish to change dates.",
         "paraphrase": "only reply to change dates → no reply keeps the original date",
         "en": "The sentence must identify the pieces staff will set aside and fit the rule that only volunteers need to reply.",
-        "zh": "只有想换日期的人才需回复，所以未更改日期的订单仍安排在周五；those pieces 指这些订单里的作品。"
+        "zh": "只有想换日期的人才需回复，所以未更改日期的订单仍安排在周五；those pieces 指这些订单里的作品。",
+        "kind": "sentence"
+      },
+      {
+        "id": "read-credit-03",
+        "prompt": "Which word best completes [3]?",
+        "options": [
+          "instead",
+          "beside",
+          "despite",
+          "rather"
+        ],
+        "answer": "instead",
+        "evidence": "collect on Monday",
+        "paraphrase": "instead of → as a substitute for",
+        "en": "Instead of Friday pairs the alternative Monday collection with the original date.",
+        "zh": "instead of Friday 表示改为周一领取。",
+        "kind": "word"
+      },
+      {
+        "id": "read-credit-04",
+        "prompt": "Which word best completes [4]?",
+        "options": [
+          "charge",
+          "add",
+          "lend",
+          "owe"
+        ],
+        "answer": "add",
+        "evidence": "studio credit to your account",
+        "paraphrase": "add credit → increase an account balance",
+        "en": "Volunteers receive a reward, so the studio will add credit to their accounts.",
+        "zh": "自愿改期者获得奖励，工作室把抵用额加到其账户。",
+        "kind": "word"
       }
     ]
   },
@@ -916,7 +1086,8 @@
         "evidence": "A list inside each carton",
         "paraphrase": "inside → open to reach it",
         "en": "Opening the cartons gives Kim access to the lists inside.",
-        "zh": "清单在箱内，要先打开箱子。"
+        "zh": "清单在箱内，要先打开箱子。",
+        "kind": "word"
       },
       {
         "id": "read-tea-box-02",
@@ -931,7 +1102,8 @@
         "evidence": "the shelf labels",
         "paraphrase": "match A with B → find the corresponding label",
         "en": "Match one item with another is the expression for pairing items.",
-        "zh": "match A with B 表示把两个对应的项目配起来。"
+        "zh": "match A with B 表示把两个对应的项目配起来。",
+        "kind": "word"
       },
       {
         "id": "read-tea-box-03",
@@ -946,7 +1118,8 @@
         "evidence": "it belongs to our next-door neighbor",
         "paraphrase": "belongs next door → delivered here by mistake",
         "en": "The address explains why this carton should remain closed.",
-        "zh": "该箱属于邻店，说明它被错送到了这里，因而不应拆开。"
+        "zh": "该箱属于邻店，说明它被错送到了这里，因而不应拆开。",
+        "kind": "sentence"
       },
       {
         "id": "read-tea-box-04",
@@ -961,7 +1134,8 @@
         "evidence": "noon today",
         "paraphrase": "noon → a point in time",
         "en": "An exact time such as noon takes at.",
-        "zh": "noon 是确切时点，介词用 at。"
+        "zh": "noon 是确切时点，介词用 at。",
+        "kind": "word"
       }
     ]
   },
@@ -974,7 +1148,7 @@
       {
         "type": "通知",
         "title": "Entrance mats",
-        "text": "During wet weather we place a long mat at each entrance. Before closing time, please [1] each mat from the floor. Hang it on the rail in the washroom so both sides can dry.\n\nThe mats by the café are [2] than the others. Two people should lift each one. [3] Use the cart instead of carrying them all the way to the washroom. The cart is kept [4] the stairs and the lift, in the narrow gap."
+        "text": "During wet weather we place a long mat at each entrance. Before closing time, please [1] each mat from the floor. Hang it on the rail in the washroom so both sides can dry.\n\nThe mats by the café are [2] than the others. Two people should lift each one. The washroom is a long way from the café. The cart is kept [3] the stairs and the lift, in the narrow gap. The sign in that gap reads: “[4]” Use the cart instead of carrying these mats all the way to the washroom."
       }
     ],
     "questions": [
@@ -991,7 +1165,8 @@
         "evidence": "Hang it on the rail",
         "paraphrase": "hang the mat → lift it first",
         "en": "The mats must come off the floor before staff can hang them.",
-        "zh": "要把垫子挂起来，得先将它从地上提起。"
+        "zh": "要把垫子挂起来，得先将它从地上提起。",
+        "kind": "word"
       },
       {
         "id": "read-mat-02",
@@ -1006,26 +1181,12 @@
         "evidence": "Two people should lift each one.",
         "paraphrase": "needs two lifters → greater weight",
         "en": "Than calls for a comparative, and the next sentence points to weight.",
-        "zh": "than 需要比较级，两人抬表示这些垫子更重。"
-      },
-      {
-        "id": "read-mat-03",
-        "prompt": "Which sentence fits [3]?",
-        "options": [
-          "The café will close for repairs next week.",
-          "Customers may hire umbrellas at the till.",
-          "A cart is available for the longer trip.",
-          "The rail was painted earlier this year."
-        ],
-        "answer": "A cart is available for the longer trip.",
-        "evidence": "Use the cart instead of carrying them",
-        "paraphrase": "the longer trip → the journey to the washroom",
-        "en": "Introducing the cart prepares the reader for the instruction to use it.",
-        "zh": "后句要求用推车运到清洗间，因此此处先介绍可用的推车。"
+        "zh": "than 需要比较级，两人抬表示这些垫子更重。",
+        "kind": "word"
       },
       {
         "id": "read-mat-04",
-        "prompt": "Which word fits [4]?",
+        "prompt": "Which word fits [3]?",
         "options": [
           "between",
           "under",
@@ -1036,7 +1197,24 @@
         "evidence": "the stairs and the lift, in the narrow gap",
         "paraphrase": "the gap separating two things → between them",
         "en": "Two named objects define the sides of a single gap.",
-        "zh": "楼梯和电梯是两个明确对象，推车位于两者之间。"
+        "zh": "楼梯和电梯是两个明确对象，推车位于两者之间。",
+        "kind": "word"
+      },
+      {
+        "id": "read-mat-03",
+        "prompt": "Which sentence fits [4]?",
+        "options": [
+          "The café will close for repairs next week.",
+          "Customers may hire umbrellas at the till.",
+          "A cart is available for the longer trip.",
+          "The rail was painted earlier this year."
+        ],
+        "answer": "A cart is available for the longer trip.",
+        "evidence": "Use the cart instead of carrying these mats",
+        "paraphrase": "the longer trip → the journey to the washroom",
+        "en": "Introducing the cart prepares the reader for the instruction to use it.",
+        "zh": "后句要求用推车运到清洗间，因此此处先介绍可用的推车。",
+        "kind": "sentence"
       }
     ]
   },
@@ -1066,7 +1244,8 @@
         "evidence": "one stamp to your card",
         "paraphrase": "add a stamp → mark a space",
         "en": "Add takes the pattern add something to something else.",
-        "zh": "add A to B 表示把章加盖到卡片上。"
+        "zh": "add A to B 表示把章加盖到卡片上。",
+        "kind": "word"
       },
       {
         "id": "read-stamp-02",
@@ -1081,7 +1260,8 @@
         "evidence": "but they have different numbers",
         "paraphrase": "different numbers despite similar appearance → look alike",
         "en": "Look alike means resemble each other in appearance.",
-        "zh": "卡面相似但背面号码各异，look alike 表示看起来相像。"
+        "zh": "卡面相似但背面号码各异，look alike 表示看起来相像。",
+        "kind": "word"
       },
       {
         "id": "read-stamp-03",
@@ -1096,7 +1276,8 @@
         "evidence": "We can check the branch number if a stamp is hard to read.",
         "paraphrase": "identify → recognize the issuing branch",
         "en": "The number links the explanation of checking the branch to the advice about keeping the card dry.",
-        "zh": "号码用来识别发卡门店，与下文保持卡片干燥相呼应。"
+        "zh": "号码用来识别发卡门店，与下文保持卡片干燥相呼应。",
+        "kind": "sentence"
       },
       {
         "id": "read-stamp-04",
@@ -1111,7 +1292,8 @@
         "evidence": "damaged numbers may be difficult",
         "paraphrase": "difficult to verify → hard to check",
         "en": "Difficult takes a to-infinitive to name the action that is hard.",
-        "zh": "difficult 后接不定式，说明难以执行的动作。"
+        "zh": "difficult 后接不定式，说明难以执行的动作。",
+        "kind": "word"
       }
     ]
   },
@@ -1124,7 +1306,7 @@
       {
         "type": "邮件",
         "title": "Head count for Thursday",
-        "text": "Dear hosts,\n\nPlease send a count of your guests [1] Tuesday afternoon at the latest. The kitchen needs a full day to arrange Thursday's refreshments. Include visiting speakers in your figure, even [2] they expect to stay for just one session.\n\nWe can provide dairy-free snacks if someone asks for them. [3] Please give the number needed, without listing individual names. This information will help us prepare the correct [4] of each snack."
+        "text": "Dear hosts,\n\nPlease send a count of your guests [1] Tuesday afternoon at the latest. The kitchen needs a full day to arrange Thursday's refreshments. Include visiting speakers in your figure, even [2] they expect to stay for just one session.\n\nThese figures help us prepare the correct [3] of each snack. We can also provide dairy-free snacks if someone asks for them. [4] There is no need to list individual names."
       }
     ],
     "questions": [
@@ -1141,7 +1323,8 @@
         "evidence": "Tuesday afternoon at the latest",
         "paraphrase": "at the latest → by that time",
         "en": "By sets the deadline for sending the count.",
-        "zh": "at the latest 表示最迟时间，故用 by。"
+        "zh": "at the latest 表示最迟时间，故用 by。",
+        "kind": "word"
       },
       {
         "id": "read-refreshments-02",
@@ -1156,26 +1339,12 @@
         "evidence": "they expect to stay for just one session",
         "paraphrase": "even if → regardless of a short stay",
         "en": "Even if introduces a condition that does not change the request.",
-        "zh": "即便讲者只参加一场，也要计入人数，even if 引导让步条件。"
-      },
-      {
-        "id": "read-refreshments-03",
-        "prompt": "Which sentence fits [3]?",
-        "options": [
-          "Thursday's last session ends at five.",
-          "The kitchen will send a bill on Monday.",
-          "Ask speakers to bring their own chairs.",
-          "Tell us how many guests need that option."
-        ],
-        "answer": "Tell us how many guests need that option.",
-        "evidence": "Please give the number needed, without listing individual names.",
-        "paraphrase": "that option → dairy-free snacks",
-        "en": "The preceding sentence offers dairy-free food; the following one asks for a count.",
-        "zh": "先提无乳制点心，后文要人数而不要姓名，故应询问需要这种选项的人数。"
+        "zh": "即便讲者只参加一场，也要计入人数，even if 引导让步条件。",
+        "kind": "word"
       },
       {
         "id": "read-refreshments-04",
-        "prompt": "Which word fits [4]?",
+        "prompt": "Which word fits [3]?",
         "options": [
           "quantity",
           "entry",
@@ -1183,10 +1352,27 @@
           "remark"
         ],
         "answer": "quantity",
-        "evidence": "give the number needed",
+        "evidence": "These figures help us prepare the correct",
         "paraphrase": "quantity → amount required",
         "en": "The count determines how much of each snack to prepare.",
-        "zh": "人数决定各类点心应准备多少，quantity 表示数量。"
+        "zh": "人数决定各类点心应准备多少，quantity 表示数量。",
+        "kind": "word"
+      },
+      {
+        "id": "read-refreshments-03",
+        "prompt": "Which sentence fits [4]?",
+        "options": [
+          "Thursday's last session ends at five.",
+          "The kitchen will send a bill on Monday.",
+          "Ask speakers to bring their own chairs.",
+          "Tell us how many guests need that option."
+        ],
+        "answer": "Tell us how many guests need that option.",
+        "evidence": "There is no need to list individual names.",
+        "paraphrase": "that option → dairy-free snacks",
+        "en": "The preceding sentence offers dairy-free food; the following one asks for a count.",
+        "zh": "先提无乳制点心，后文要人数而不要姓名，故应询问需要这种选项的人数。",
+        "kind": "sentence"
       }
     ]
   },
@@ -1216,7 +1402,8 @@
         "evidence": "before firing",
         "paraphrase": "glaze that was applied → glaze applied",
         "en": "The glaze receives the application. Applied is a reduced passive relative clause.",
-        "zh": "釉料是被施加的，applied 相当于 that was applied。"
+        "zh": "釉料是被施加的，applied 相当于 that was applied。",
+        "kind": "word"
       },
       {
         "id": "read-glaze-02",
@@ -1231,7 +1418,8 @@
         "evidence": "A green surface, for example, may look gray",
         "paraphrase": "apparent color → how the surface looks",
         "en": "The green-to-gray example illustrates a general effect of lighting.",
-        "zh": "绿色在不同灯下可能像灰色，是对光线影响外观颜色的举例。"
+        "zh": "绿色在不同灯下可能像灰色，是对光线影响外观颜色的举例。",
+        "kind": "sentence"
       },
       {
         "id": "read-glaze-03",
@@ -1246,7 +1434,8 @@
         "evidence": "We suggest",
         "paraphrase": "suggest trying → recommend testing",
         "en": "Suggest takes a gerund when followed directly by an action.",
-        "zh": "suggest 后直接接动作时用动名词 trying。"
+        "zh": "suggest 后直接接动作时用动名词 trying。",
+        "kind": "word"
       },
       {
         "id": "read-glaze-04",
@@ -1261,7 +1450,8 @@
         "evidence": "Please leave the panels on their stands",
         "paraphrase": "fixed positions → consistent viewing conditions",
         "en": "Keeping the panels in place makes the comparison conditions stable for different visitors.",
-        "zh": "样板留在原位，可让每位观众在一致的条件下比较。"
+        "zh": "样板留在原位，可让每位观众在一致的条件下比较。",
+        "kind": "word"
       }
     ]
   },
@@ -1291,7 +1481,8 @@
         "evidence": "before [1] it to a shelf",
         "paraphrase": "before moving → prior to moving",
         "en": "Here before is followed by an action without its own subject, so use a gerund.",
-        "zh": "before 后接无独立主语的动作，用动名词 moving。"
+        "zh": "before 后接无独立主语的动作，用动名词 moving。",
+        "kind": "word"
       },
       {
         "id": "read-receiving-02",
@@ -1306,7 +1497,8 @@
         "evidence": "using the reference printed beside the barcode",
         "paraphrase": "seal intact → carton remains unopened",
         "en": "The desk can trace the external reference without anyone opening the carton.",
-        "zh": "条码旁的外部编号足以追查订单，所以保留封条并报告编号。"
+        "zh": "条码旁的外部编号足以追查订单，所以保留封条并报告编号。",
+        "kind": "sentence"
       },
       {
         "id": "read-receiving-03",
@@ -1321,7 +1513,8 @@
         "evidence": "the desk confirms its destination",
         "paraphrase": "until confirmation → keep waiting for confirmation",
         "en": "Confirmation is the endpoint of the wait on the bench.",
-        "zh": "目的地得到确认是等待状态的终点，用 until。"
+        "zh": "目的地得到确认是等待状态的终点，用 until。",
+        "kind": "word"
       },
       {
         "id": "read-receiving-04",
@@ -1336,7 +1529,8 @@
         "evidence": "sending goods to the wrong floor",
         "paraphrase": "risk → chance of an unwanted outcome",
         "en": "Following the procedure lowers the chance of a routing mistake.",
-        "zh": "执行流程能降低错送楼层的风险，选 risk。"
+        "zh": "执行流程能降低错送楼层的风险，选 risk。",
+        "kind": "word"
       }
     ]
   },
@@ -1366,7 +1560,8 @@
         "evidence": "the item has not been reserved",
         "paraphrase": "provided that → on condition that",
         "en": "Provided that introduces the condition for an extension.",
-        "zh": "provided that 引导续借成立的条件。"
+        "zh": "provided that 引导续借成立的条件。",
+        "kind": "word"
       },
       {
         "id": "read-library-lease-02",
@@ -1381,7 +1576,8 @@
         "evidence": "The original deadline therefore remains in force until approval",
         "paraphrase": "pending request → extra time is not yet granted",
         "en": "The warning explains why the first deadline still applies.",
-        "zh": "申请待审核不等于已获延期，因此原截止时间仍然有效。"
+        "zh": "申请待审核不等于已获延期，因此原截止时间仍然有效。",
+        "kind": "sentence"
       },
       {
         "id": "read-library-lease-03",
@@ -1396,7 +1592,8 @@
         "evidence": "responsible for",
         "paraphrase": "responsible for checking → must monitor",
         "en": "For is a preposition here and takes the gerund checking.",
-        "zh": "responsible for 中 for 是介词，后接 checking。"
+        "zh": "responsible for 中 for 是介词，后接 checking。",
+        "kind": "word"
       },
       {
         "id": "read-library-lease-04",
@@ -1411,7 +1608,8 @@
         "evidence": "from the original return time",
         "paraphrase": "measured from → calculated starting at",
         "en": "Measured describes how the three-day period is calculated.",
-        "zh": "measured 说明三天时长从哪个时点计算。"
+        "zh": "measured 说明三天时长从哪个时点计算。",
+        "kind": "word"
       }
     ]
   },
@@ -1424,7 +1622,7 @@
       {
         "type": "工作指引",
         "title": "Sound check protocol",
-        "text": "Every act appearing in Hall Two must complete a sound check. Checks are scheduled in reverse performance order, so the final act [1] first. Equipment used by several acts may remain onstage, provided that it does not obstruct a marked exit.\n\nThe stage manager records a reference level for each microphone. [2] If a microphone is moved after the check, the marked level may no longer be [3]. Notify the manager of any such change before the audience is [4] to the hall."
+        "text": "Every act appearing in Hall Two must complete a sound check. Checks are scheduled in reverse performance order, so the final act [1] first. The stage manager clears the aisles before the audience is [2] to the hall. Equipment may remain onstage only if it does not obstruct an exit.\n\nThe manager records a reference level for each microphone. [3] If a microphone is moved after the check, the marked level may no longer be [4]. Notify the manager of any such change."
       }
     ],
     "questions": [
@@ -1441,11 +1639,28 @@
         "evidence": "the final act",
         "paraphrase": "final performance slot → first rehearsal slot",
         "en": "The singular subject act takes rehearses in the present tense.",
-        "zh": "主语 the final act 为单数，描述固定安排用 rehearses。"
+        "zh": "主语 the final act 为单数，描述固定安排用 rehearses。",
+        "kind": "word"
+      },
+      {
+        "id": "read-hall-sound-04",
+        "prompt": "Which form fits [2]?",
+        "options": [
+          "admitting",
+          "admission",
+          "admits",
+          "admitted"
+        ],
+        "answer": "admitted",
+        "evidence": "to the hall.",
+        "paraphrase": "is admitted → is allowed in",
+        "en": "The audience receives permission to enter; use the passive is admitted.",
+        "zh": "观众是被允许进入的一方，用被动结构 is admitted。",
+        "kind": "word"
       },
       {
         "id": "read-hall-sound-02",
-        "prompt": "Which sentence fits [2]?",
+        "prompt": "Which sentence fits [3]?",
         "options": [
           "That reading depends partly on its position.",
           "Some tickets include a printed schedule.",
@@ -1455,12 +1670,13 @@
         "answer": "That reading depends partly on its position.",
         "evidence": "If a microphone is moved after the check",
         "paraphrase": "moved → change of position",
-        "en": "The next sentence explains what happens to the reading after a microphone moves.",
-        "zh": "后句解释移动麦克风会影响读数，这里先点出位置因素。"
+        "en": "The next sentence explains how moving a microphone affects the reference reading.",
+        "zh": "下句说明移动麦克风会改变参考读数，所以先指出读数与麦克风位置有关。",
+        "kind": "sentence"
       },
       {
         "id": "read-hall-sound-03",
-        "prompt": "Which word fits [3]?",
+        "prompt": "Which word fits [4]?",
         "options": [
           "reliable",
           "spacious",
@@ -1471,22 +1687,8 @@
         "evidence": "If a microphone is moved after the check",
         "paraphrase": "no longer reliable → may no longer be accurate",
         "en": "Moving the microphone can make the earlier measurement inaccurate.",
-        "zh": "麦克风位置改变，原来的参考值可能不再可靠。"
-      },
-      {
-        "id": "read-hall-sound-04",
-        "prompt": "Which form fits [4]?",
-        "options": [
-          "admitting",
-          "admission",
-          "admits",
-          "admitted"
-        ],
-        "answer": "admitted",
-        "evidence": "the audience is [4] to the hall",
-        "paraphrase": "is admitted → is allowed in",
-        "en": "The audience receives permission to enter; use the passive is admitted.",
-        "zh": "观众是被允许进入的一方，用被动结构 is admitted。"
+        "zh": "麦克风位置改变，原来的参考值可能不再可靠。",
+        "kind": "word"
       }
     ]
   },
@@ -1499,28 +1701,13 @@
       {
         "type": "服务说明",
         "title": "Tracking reusable shipping cases",
-        "text": "Each reusable case has a metal plate carrying a permanent number. The paper shipping label, by [1], changes on every journey. When reporting a lost case, quote the permanent number so we can trace the case across successive orders.\n\nThe collection screen may show an empty date field even after a case has left your premises. [2] The date appears only once the depot scans the plate. A blank field should therefore be treated as [3] rather than as proof that the case is still with you. Retain the driver's receipt until the scan has been [4]."
+        "text": "The collection screen may show an empty date field even after a case has left your premises. [1] The date appears only once the depot scans the plate.\n\nEach reusable case has a metal plate carrying a permanent number. The paper shipping label, by [2], changes on every journey. A blank date field should be treated as [3] rather than as proof that the case is still with you. Retain the driver's receipt until the scan has been [4]."
       }
     ],
     "questions": [
       {
-        "id": "read-recovery-box-01",
-        "prompt": "Which word fits [1]?",
-        "options": [
-          "volume",
-          "measure",
-          "request",
-          "contrast"
-        ],
-        "answer": "contrast",
-        "evidence": "a permanent number",
-        "paraphrase": "permanent versus changing → by contrast",
-        "en": "By contrast introduces the changing paper label as the opposite of the fixed plate.",
-        "zh": "永久编号与每趟更换的纸标签形成对比，by contrast 是固定表达。"
-      },
-      {
         "id": "read-recovery-box-02",
-        "prompt": "Which sentence fits [2]?",
+        "prompt": "Which sentence fits [1]?",
         "options": [
           "A blank field prevents the case from moving.",
           "The collection date is printed on every plate.",
@@ -1531,7 +1718,24 @@
         "evidence": "only once the depot scans the plate",
         "paraphrase": "departs before depot scan → two distinct events",
         "en": "The case can physically leave before the depot registers its receipt.",
-        "zh": "包装箱先离开客户处，再到仓库扫码，实物流转与登记并非同时。"
+        "zh": "包装箱先离开客户处，再到仓库扫码，实物流转与登记并非同时。",
+        "kind": "sentence"
+      },
+      {
+        "id": "read-recovery-box-01",
+        "prompt": "Which word fits [2]?",
+        "options": [
+          "volume",
+          "measure",
+          "request",
+          "contrast"
+        ],
+        "answer": "contrast",
+        "evidence": "a permanent number",
+        "paraphrase": "permanent versus changing → by contrast",
+        "en": "By contrast introduces the changing paper label as the opposite of the fixed plate.",
+        "zh": "永久编号与每趟更换的纸标签形成对比，by contrast 是固定表达。",
+        "kind": "word"
       },
       {
         "id": "read-recovery-box-03",
@@ -1546,7 +1750,8 @@
         "evidence": "rather than as proof that the case is still with you",
         "paraphrase": "inconclusive → insufficient to establish a location",
         "en": "A blank date cannot establish whether the case has been collected.",
-        "zh": "日期为空不足以确定包装箱仍在客户处，inconclusive 表示没有定论。"
+        "zh": "日期为空不足以确定包装箱仍在客户处，inconclusive 表示没有定论。",
+        "kind": "word"
       },
       {
         "id": "read-recovery-box-04",
@@ -1561,7 +1766,8 @@
         "evidence": "the scan has been",
         "paraphrase": "has been recorded → entered in the system",
         "en": "The completed passive action takes has been recorded.",
-        "zh": "扫描记录被录入系统，用现在完成时被动语态 has been recorded。"
+        "zh": "扫描记录被录入系统，用现在完成时被动语态 has been recorded。",
+        "kind": "word"
       }
     ]
   },
@@ -1574,28 +1780,13 @@
       {
         "type": "采购说明",
         "title": "Register of potential suppliers",
-        "text": "An entry in our register signals only that a supplier is interested in future work. It neither commits the council to buying goods [1] gives the supplier priority over other bidders. A formal invitation will be issued separately if a project proceeds.\n\nApplicants often attach complete price lists. [2] The panel considers prices only after a specification is available, when comparisons can be made on a common [3]. We therefore ask applicants to describe their capabilities at this stage and to reserve detailed quotations for any tender to which they are [4] invited."
+        "text": "Applicants often attach complete price lists. [1] The panel considers prices only after a specification is available.\n\nAn entry in our register signals only that a supplier is interested in future work. It neither commits the council to buying goods [2] gives the supplier priority over other bidders. A formal invitation will be issued separately if a project proceeds. With a specification in hand, prices can be compared on a common [3]. We therefore ask applicants to describe their capabilities at this stage and to reserve detailed quotations for any tender to which they are [4] invited."
       }
     ],
     "questions": [
       {
-        "id": "read-interest-register-01",
-        "prompt": "Which word fits [1]?",
-        "options": [
-          "or else",
-          "but for",
-          "nor",
-          "than"
-        ],
-        "answer": "nor",
-        "evidence": "It neither commits the council",
-        "paraphrase": "neither … nor → excludes two consequences",
-        "en": "Neither introduces the first negative alternative and pairs with nor.",
-        "zh": "neither 与 nor 配对，表示两种结果都不会发生。"
-      },
-      {
         "id": "read-interest-register-02",
-        "prompt": "Which sentence fits [2]?",
+        "prompt": "Which sentence fits [1]?",
         "options": [
           "Such figures arrive too early to inform a decision.",
           "Every attachment is binding for the following year.",
@@ -1606,7 +1797,24 @@
         "evidence": "only after a specification is available",
         "paraphrase": "too early → before specifications permit comparison",
         "en": "The panel needs a common specification before price figures mean enough to compare.",
-        "zh": "委员会须等规格确定后才比较价格，因此现在提交完整价目表过早。"
+        "zh": "委员会须等规格确定后才比较价格，因此现在提交完整价目表过早。",
+        "kind": "sentence"
+      },
+      {
+        "id": "read-interest-register-01",
+        "prompt": "Which word fits [2]?",
+        "options": [
+          "or else",
+          "but for",
+          "nor",
+          "than"
+        ],
+        "answer": "nor",
+        "evidence": "It neither commits the council",
+        "paraphrase": "neither … nor → excludes two consequences",
+        "en": "Neither introduces the first negative alternative and pairs with nor.",
+        "zh": "neither 与 nor 配对，表示两种结果都不会发生。",
+        "kind": "word"
       },
       {
         "id": "read-interest-register-03",
@@ -1618,10 +1826,11 @@
           "basis"
         ],
         "answer": "basis",
-        "evidence": "when comparisons can be made on a common",
+        "evidence": "With a specification in hand, prices can be compared on a common",
         "paraphrase": "on a common basis → under comparable criteria",
         "en": "A common basis is a shared standard for comparing prices.",
-        "zh": "common basis 指共同的比较标准。"
+        "zh": "common basis 指共同的比较标准。",
+        "kind": "word"
       },
       {
         "id": "read-interest-register-04",
@@ -1636,7 +1845,8 @@
         "evidence": "they are [4] invited",
         "paraphrase": "formally invited → given an official invitation",
         "en": "Formally is the adverb modifying invited.",
-        "zh": "修饰 invited 用副词 formally，表示获得正式邀请。"
+        "zh": "修饰 invited 用副词 formally，表示获得正式邀请。",
+        "kind": "word"
       }
     ]
   },
@@ -1649,7 +1859,7 @@
       {
         "type": "告示",
         "title": "Coat counter",
-        "text": "Show us your coat ticket when you return. [1] Your ticket has the same number as the hook holding your coat. [2] If you lose it, wait until the counter closes and describe your coat to the attendant. [3] The attendant will then check the remaining coats. [4] The counter closes 20 minutes after the concert ends."
+        "text": "Show us your coat ticket when you return. Your ticket has the same number as the hook holding your coat. If you lose it, wait until the counter closes and describe your coat to the attendant. [1] The attendant will then check the remaining coats. [2] The counter closes 20 minutes after the concert ends. [3] For items left after that time, speak to the hall office the next day. [4]"
       }
     ],
     "questions": [
@@ -1709,11 +1919,11 @@
           "[3]",
           "[4]"
         ],
-        "answer": "[3]",
+        "answer": "[1]",
         "evidence": "describe your coat to the attendant.",
         "paraphrase": "that description → the description given after losing a ticket",
-        "en": "The instruction to describe a coat first appears just before [3]. The next sentence gives the attendant’s following action.",
-        "zh": "[3] 前刚要求失票者描述外套。补句里的 that description 就近承接这一要求，下一句再写工作人员如何查找。"
+        "en": "The instruction to describe a coat first appears just before [1]. The next sentence gives the attendant’s following action.",
+        "zh": "[1] 前刚要求失票者描述外套。补句里的 that description 就近承接这一要求，下一句再写工作人员如何查找。"
       }
     ]
   },
@@ -3065,7 +3275,7 @@
       {
         "type": "网站说明",
         "title": "Requesting archived minutes",
-        "text": "Our printed index gives each folder a shelf code. [1] To request a folder, enter that code exactly as printed, including the final letter. [2] Two folders can have the same number but different letters. [3] Requests received by Thursday noon are prepared for Friday viewing. [4] Later requests go into the following week's batch. A booking lets you view the folder on site; permission to copy its contents must be requested separately."
+        "text": "Our printed index gives each folder a shelf code. To request a folder, enter that code exactly as printed, including the final letter. Two folders can have the same number but different letters. [1] Requests received by Thursday noon are prepared for Friday viewing. [2] Later requests go into the following week's batch. [3] A booking lets you view the folder on site; permission to copy its contents must be requested separately. [4]"
       }
     ],
     "questions": [
@@ -3125,11 +3335,11 @@
           "[3]",
           "[4]"
         ],
-        "answer": "[3]",
+        "answer": "[1]",
         "evidence": "Two folders can have the same number but different letters.",
         "paraphrase": "that difference → distinct letters for an identical number",
-        "en": "The contrast in final letters immediately precedes [3]. After that position the passage turns to the request timetable.",
-        "zh": "that difference 指相同数字却有不同末字母，[3] 后正文转到查阅时间表。"
+        "en": "The contrast in final letters immediately precedes [1]. After that position the passage turns to the request timetable.",
+        "zh": "that difference 指相同数字却有不同末字母，[1] 后正文转到查阅时间表。"
       }
     ]
   },
