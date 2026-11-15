@@ -2,7 +2,7 @@ import {UNKNOWN} from './answers.js';
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c =>
   ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'})[c]);
-export const reasons = ['答案可能错了','有两个答案都对','解析不对','声音或显示有问题','其他'];
+export const reasons = ['答案可能错了','有两个答案都对','解析不对','声音或显示有问题','翻译不自然','其他'];
 const kindNames = {sentence:'句子插入',insertion:'句子插入位置',vocab:'词义',vocabulary:'词义',detail:'细节',inference:'推断',purpose:'主旨',negative:'排除题',intent:'意图',graphic:'图表',first:'听清首词',response:'选择回应'};
 const letter = i => String.fromCharCode(65+i);
 const tableText = table => table ? [table.title,table.headers.join(' | '),...table.rows.map(r=>r.join(' | '))].filter(Boolean).join('\n') : '';
@@ -45,7 +45,7 @@ export function validIssues(rows) {
   return rows===undefined || (Array.isArray(rows) && rows.every(r=>r && typeof r.id==='string' && /^[\w-]{1,100}$/.test(r.id) && reasons.includes(r.reason) && typeof r.note==='string' && r.note.length<=1000 && typeof r.text==='string' && r.text.length>0));
 }
 export function issueForm(id) {
-  return '<h2>报告这道题</h2><p>'+esc(id)+'</p><label class="setting">原因<select id="issue-reason">'+reasons.map(r=>'<option>'+r+'</option>').join('')+'</select></label><label class="issue-field">备注（选填）<textarea id="issue-note" rows="3" maxlength="1000"></textarea></label><button class="primary" data-act="save-issue" data-id="'+esc(id)+'">保存在本机</button>';
+  return '<h2>报告这道题</h2><p>'+esc(id)+'</p><label class="setting">原因<select id="issue-reason">'+reasons.map(r=>'<option>'+r+'</option>').join('')+'</select></label><label class="issue-field">备注（选填）<textarea id="issue-note" rows="3" maxlength="1000" placeholder="翻译问题可写明哪一句、中文或日语，以及你的建议。"></textarea></label><button class="primary" data-act="save-issue" data-id="'+esc(id)+'">保存在本机</button>';
 }
 export function issueSettings(rows=[]) {
   return '<section class="backup"><h3>问题报告（'+rows.length+'）</h3><p class="fine muted">保存在本机，导出进度时一并备份。</p>'+
