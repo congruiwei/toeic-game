@@ -22,7 +22,7 @@ function herbarium() {
 function cardBody(word) {
   return `<div class="lib-card-body">
     <p class="lib-phonetic" lang="en">${escape(word.ipa)} · ${escape(word.pos)}</p>
-    <p lang="zh-CN">${escape(word.zh)}</p><p lang="ja" data-vocab-ja="${escape(word.id)}">正在载入日语释义…</p>
+    <p lang="zh-CN">${escape(word.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${escape(word.id)}">正在载入日语释义…</p>
     <blockquote lang="en">${escape(word.example)}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
     <dl><dt>常见搭配</dt><dd lang="en">${escape(word.collocation)}</dd>
       <dt>同义替换</dt><dd lang="en">${escape(word.paraphrase)}</dd></dl>

@@ -28,11 +28,19 @@ async function run() {
       try {
         await context.addInitScript(()=>{
           const api=window.speechSynthesis;
-          const list=['en-US','en-GB','en-AU','en-CA'].map((lang,i)=>({lang,name:['Ava Premium','Daniel Enhanced','Karen','Claire'][i],voiceURI:lang}));
-          let generation=0;window.played=[];
+          const list=[...['en-US','en-GB','en-AU','en-CA'].map((lang,i)=>({lang,name:['Ava Premium','Daniel Enhanced','Karen','Claire'][i],voiceURI:lang})),
+            {lang:'ja-JP',name:'Kyoko Enhanced',voiceURI:'com.apple.voice.enhanced.ja-JP.Kyoko'},
+            {lang:'ja-JP',name:'Otoya Premium',voiceURI:'com.apple.voice.premium.ja-JP.Otoya'},
+            {lang:'ja-JP',name:'Japanese Bad News',voiceURI:'test.ja-JP.bad-news'}];
+          let generation=0;window.played=[];window.spoken=[];window.speechGestures=[];
           Object.defineProperty(window,'SpeechSynthesisUtterance',{value:class {constructor(text){this.text=text;}}});
           Object.defineProperties(api,{getVoices:{value:()=>list},cancel:{value:()=>generation++},speak:{value:u=>{
-            const ticket=generation;window.played.push(u.text);u.onstart?.();
+            const ticket=generation;window.played.push(u.text);
+            window.spoken.push({text:u.text,lang:u.lang,voice:u.voice?.name,rate:u.rate});
+            // window.event is restored after the click callback returns; userActivation
+            // alone lasts too long to catch an await before native speak().
+            window.speechGestures.push({type:window.event?.type,trusted:window.event?.isTrusted,active:navigator.userActivation?.isActive});
+            u.onstart?.();
             setTimeout(()=>{if(ticket===generation)u.onend?.();},35);
           }}});
         });

@@ -9,8 +9,8 @@ module.exports=async({page,quiz,act,nav,state,store,reset})=>{
     assert.equal(await entry.locator('[lang=en]').innerText(),item.en);
     assert.equal(await entry.locator('[lang=zh-CN]').innerText(),item.zh);
     assert.equal(await entry.locator('[lang=ja]').innerText(),item.ja);
-    assert.equal(await entry.locator('[data-act=expression-speak][data-language=en]').count(),1);
-    assert.equal(await entry.locator('[data-act=expression-speak][data-language=ja]').count(),1);
+    assert.equal(await entry.locator('button[data-act=expression-speak][data-language=en]').count(),1);
+    assert.equal(await entry.locator('button[data-act=expression-speak][data-language=ja]').count(),1);
     return entry;
   };
   const forgeCollection=async ({key,bank,id})=>{

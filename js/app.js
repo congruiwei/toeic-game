@@ -1,5 +1,5 @@
 import {collectExpression,beginExpressions,rateExpression} from './expressions.js';
-import {speakJapanese} from './japanese-audio.js';
+import {speakJapanese,japaneseVoices} from './japanese-audio.js';
 import {watchShellUpdates} from './shell-update.js';
 import {loadMethods,newMethod,methodIndex,methodById,methodCard,methodExample,methodBank} from './methods.js';
 import {predictionView,predictAnswer,predictionSummary,snapshotOnVisit} from './prediction.js';
@@ -184,12 +184,12 @@ function home() {
  <section class="tasks">${sectionTitle('flag', '探索任务', '<span class="section-note">任选一个开始</span>')}<div class="task-grid">${tasks.map(taskTile).join('')}</div></section>
  <div class="continue"><span class="continue-icon">${icon('compass', 27)}</span><div><h3>${s.session ? '上次的探险' : '自由练习'}</h3><p>${s.session ? esc(s.session.title) + ' · ' + Math.min(s.session.index + 1, s.session.items.length) + ' / ' + s.session.items.length : '按主题与题型选择练习'}</p></div>${act(s.session ? 'resume' : 'nav', s.session ? '继续学习 ' + icon('arrow', 16) : '进入练习 ' + icon('arrow', 16), 'primary', 'data-page="learn"')}</div>`;
 }
-let translationModule, translationRetry=0;
+let translationModule, translationRuntime, translationRetry=0;
 function translationUI() {
   if (!document.querySelector('link[data-translation-style]')) {
     const link=document.createElement('link');link.rel='stylesheet';link.href='./translation.css';link.dataset.translationStyle='';link.onerror=()=>link.remove();document.head.append(link);
   }
-  return translationModule ??= import('./translation-ui.js'+(translationRetry?'?retry='+translationRetry:'')).catch(error=>{translationModule=null;translationRetry++;throw error;});
+  return translationModule ??= import('./translation-ui.js'+(translationRetry?'?retry='+translationRetry:'')).then(ui=>translationRuntime=ui).catch(error=>{translationModule=null;translationRetry++;throw error;});
 }
 function hydrateTranslations(scope) {
   for(const panel of scope.querySelectorAll('[data-translation-id]')){
@@ -375,7 +375,12 @@ function voiceControls(){
     ${['A','B','C'].map((slot,i)=>`<label class="setting">说话人 ${i+1}<select data-voice-slot="${slot}"><option value="">自动分配</option>${list.map(v=>`<option value="${esc(voiceKey(v))}" ${voiceKey(v)===slots[slot]?'selected':''}>${title(v)}</option>`).join('')}</select></label>`).join('')}
     <details><summary>英语声音与试听（${list.length}）</summary>${list.map(v=>`<div class="setting"><span>${title(v)}</span>${act('preview-voice','试听','secondary','data-voice="'+esc(voiceKey(v))+'"')}</div>`).join('') || '<p class="muted">设备尚未列出英语声音。可先点击测试声音。</p>'}</details>
     ${act('test',icon('sound',16)+' 测试声音','secondary')}
-    <p class="fine muted">iPhone 设置 → 辅助功能 → 朗读内容（部分版本为「阅读与朗读」）→ 声音 → 英语。下载标有「增强」或「高级」的声音。返回游戏后，自动分配会优先使用可用的高音质声音。</p>`;
+    <p class="fine muted">iPhone 设置 → 辅助功能 → 朗读内容（部分版本为「阅读与朗读」）→ 声音 → 英语。下载标有「增强」或「高级」的声音。返回游戏后，自动分配会优先使用可用的高音质声音。</p>${japaneseVoiceControls()}`;
+}
+function japaneseVoiceControls() {
+  const list=japaneseVoices(),selected=s.settings.japaneseVoice||'';
+  const title=v=>esc(v.name)+' · '+['普通','增强','高级'][quality(v)];
+  return `<h4>日语声音</h4><label class="setting">日语<select data-pref="japaneseVoice"><option value="">自动选择高音质</option>${list.map(v=>`<option value="${esc(voiceKey(v))}" ${voiceKey(v)===selected?'selected':''}>${title(v)}</option>`).join('')}</select></label><details><summary>日语声音与试听（${list.length}）</summary>${list.map(v=>`<div class="setting"><span>${title(v)}</span>${act('preview-japanese','试听','secondary','data-voice="'+esc(voiceKey(v))+'"')}</div>`).join('')||'<p class="muted">设备尚未列出日语声音，请在系统中下载后返回。</p>'}</details><p class="fine muted">iPhone 设置 → 辅助功能 → 朗读内容（部分版本为「阅读与朗读」）→ 声音 → 日语。可下载 Kyoko、Otoya 的「增强」或「高级」声音，自动选择会优先使用高音质版本。</p>`;
 }
 function settings() {
   if(page==='exam'&&exam.live){toast('考试中如需调整设置，请先保存离开。');return;}
@@ -520,6 +525,7 @@ function refreshVoices(){const group=dialog.querySelector('#voice-controls');if(
 window.speechSynthesis?.addEventListener?.('voiceschanged',refreshVoices);
 window.addEventListener('focus',refreshVoices);
 document.addEventListener('keydown', (e) => {
+  if(['Enter',' '].includes(e.key)&&e.target.matches('[role=button][data-act]')){e.preventDefault();e.target.click();return;}
   if (
     e.key === 'Enter' &&
     e.target.id === 'dict-input' &&
@@ -580,6 +586,21 @@ document.addEventListener('click', async (e) => {
     try{await Promise.all([loadBank(needed),needsMethods ? loadMethods().catch(()=>{}) : null]);}catch{toast('题库未能打开，请检查连接后再试。');return;}
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
+  }
+  if(a==='preview-japanese'){
+    speakJapanese('ご確認いただき、ありがとうございます。',s.settings,toast,{preview:el.dataset.voice});return;
+  }
+  if(a==='translation-ja'){
+    const panel=el.closest('.translations');if(!translationAllowed(panel)||!translationRuntime)return;
+    const unit=translationRuntime.unitsForPanel(panel).find(unit=>unit.key===el.dataset.key&&unit.bank===el.dataset.bank);
+    if(unit){const text=translationRuntime.translated(unit.bank,unit.key,'ja');if(text){stopReplay();speakJapanese(text,s.settings,toast);}}
+    return;
+  }
+  if(a==='meaning-ja-speak'){
+    const id=el.dataset.vocabJa;
+    if(!((page==='library'&&el.closest('.lib-card'))||reviewedAnswer(id)))return;
+    try{stopReplay();speakJapanese(japaneseMeaning(id),s.settings,toast);}catch{toast('日语释义尚未载入，请稍后重试。');}
+    return;
   }
   if(a==='collect-expression') {
     const panel=el.closest('.translations');if(!translationAllowed(panel))return;

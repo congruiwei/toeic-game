@@ -90,7 +90,7 @@ function vocabNote(q) {
   return `<section class="lesson-panel lesson-word-note">
     <div class="lesson-meta"><span>${icon('cards', 16)} 词卡</span><span>${esc(q.theme)}</span></div>
     <div class="lesson-word-line"><h3 lang="en">${esc(q.word)}</h3><button type="button" data-act="play" class="lesson-speaker" aria-label="播放单词发音">${icon('sound',20)}</button></div>
-    <p class="lesson-ipa" lang="en">${esc(q.ipa)} · ${esc(q.pos)}</p><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p>
+    <p class="lesson-ipa" lang="en">${esc(q.ipa)} · ${esc(q.pos)}</p><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p>
     <blockquote lang="en">${mark(q.example, q.word)}</blockquote>
     <dl class="lesson-terms"><dt>常见搭配</dt><dd lang="en">${esc(q.collocation)}</dd><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>
   </section>`;

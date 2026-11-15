@@ -1,7 +1,7 @@
 import {expressionStats} from './expressions.js';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 function say(item,lang){return `<button type="button" class="secondary" data-act="expression-speak" data-key="${esc(item.key)}" data-language="${lang}">朗读${lang==='en'?'英文':'日语'}</button>`;}
-function card(item){return `<article class="panel expression-entry"><div class="translation-line"><p lang="en">${esc(item.en)}</p><p lang="zh-CN">${esc(item.zh)}</p><p lang="ja">${esc(item.ja)}</p></div><div class="expression-actions">${say(item,'en')}${say(item,'ja')}</div><small class="muted">${esc(item.sourceId)}${item.fsrs?' · 下次 '+new Date(item.fsrs.due).toLocaleDateString('zh-CN'):''}</small></article>`;}
+function card(item){return `<article class="panel expression-entry"><div class="translation-line"><p lang="en">${esc(item.en)}</p><p lang="zh-CN">${esc(item.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="expression-speak" data-key="${esc(item.key)}" data-language="ja">${esc(item.ja)}</p></div><div class="expression-actions">${say(item,'en')}${say(item,'ja')}</div><small class="muted">${esc(item.sourceId)}${item.fsrs?' · 下次 '+new Date(item.fsrs.due).toLocaleDateString('zh-CN'):''}</small></article>`;}
 export function expressionView(s,practice=false){
   const items=s.expressions?.items||[],r=s.expressions?.run,stats=expressionStats(s);
   if(practice&&r){

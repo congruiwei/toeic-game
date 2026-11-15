@@ -2,6 +2,7 @@ import {methodById} from './methods.js';
 import {sourceUnits} from './translation-source.js';
 import {catalog,question} from './bank.js';
 import {translated,loadTranslations,questionUnits,bankFor} from './translations.js';
+export {translated};
 import {replayRows} from './replay.js';
 const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 export const translationPanel = (id, study=false) => `<section class="translations" data-translation-id="${esc(id)}" ${study?'data-study-translation':''}><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>`;
@@ -12,7 +13,7 @@ export function bilingualLine(unit, {includeEnglish=true}={}) {
   const zh=translated(unit.bank,unit.key,'zh'), ja=translated(unit.bank,unit.key,'ja');
   if(!zh || !ja) return '<p class="muted">本句译文尚未下载。</p>';
   const cells = text => unit.kind==='table' ? `<div class="translation-table-row" style="--columns:${unit.columns}">${text.split(' | ').map(cell=>`<span>${esc(cell)}</span>`).join('')}</div>` : esc(text);
-  return `<div class="translation-line" data-translation-key="${esc(unit.key)}" data-translation-bank="${esc(unit.bank)}">${includeEnglish?`<div lang="en">${cells(unit.text)}</div>`:''}<div lang="zh-CN">${cells(zh)}</div><div lang="ja">${cells(ja)}</div>${unit.kind==='sentence'?`<button type="button" class="secondary expression-collect" data-act="collect-expression" data-key="${esc(unit.key)}" data-bank="${esc(unit.bank)}">收藏</button>`:''}</div>`;
+  return `<div class="translation-line" data-translation-key="${esc(unit.key)}" data-translation-bank="${esc(unit.bank)}">${includeEnglish?`<div lang="en">${cells(unit.text)}</div>`:''}<div lang="zh-CN">${cells(zh)}</div><div lang="ja" role="button" tabindex="0" class="translation-japanese" data-act="translation-ja" data-key="${esc(unit.key)}" data-bank="${esc(unit.bank)}" aria-label="朗读日语：${esc(ja)}">${cells(ja)}</div>${unit.kind==='sentence'?`<button type="button" class="secondary expression-collect" data-act="collect-expression" data-key="${esc(unit.key)}" data-bank="${esc(unit.bank)}">收藏</button>`:''}</div>`;
 }
 export function unitsForPanel(panel) {
   const id=panel.dataset.translationId;
@@ -37,7 +38,7 @@ export async function expandTranslation(panel, settings, notify, collected=[]) {
   try {
     if(units.length)await loadTranslations(units[0].bank);
     if(!panel.isConnected)return;
-    content.innerHTML=(deferred?'<p class="translation-wait">本篇还有未答题目，答完本篇后会显示填好答案的整篇中日对照。</p>':'')+languageButtons(settings.translationLanguage||'both')+units.map(unit=>{
+    content.innerHTML=(deferred?'<p class="translation-wait">本篇还有未答题目，答完本篇后会显示填好答案的整篇中日对照。</p>':'')+languageButtons(settings.translationLanguage||'both')+'<p class="fine muted">点日语行可朗读</p>'+units.map(unit=>{
       const label=unit.option===undefined?'':`<small>选项 ${String.fromCharCode(65+unit.option)}</small>`;
       return label+bilingualLine(unit);
     }).join('');
