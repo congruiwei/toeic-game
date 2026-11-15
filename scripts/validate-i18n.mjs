@@ -1,3 +1,4 @@
+import {validateGlossary,loadGlossaryInputs,glossarySummary} from './validate-glossary.mjs';
 import fs from 'node:fs';
 import {sourceUnits} from '../js/translation-source.js';
 
@@ -28,3 +29,11 @@ for(const bank of banks){
 }
 if(errors.length){console.error(errors.join('\n'));throw Error(`翻译校验失败：${errors.length} 项`);}
 console.log(`Translation validation passed: ${total} Chinese + ${total} Japanese units; aligned keys and table columns.`);
+
+const {unitsByBank,packs,glossary}=loadGlossaryInputs();
+const terminology=validateGlossary(unitsByBank,packs,glossary);
+console.log(glossarySummary(terminology));
+if(terminology.errors.length){
+  console.error(terminology.errors.map(error=>JSON.stringify(error)).join('\n'));
+  throw Error(`术语校验失败：${terminology.errors.length} 项`);
+}

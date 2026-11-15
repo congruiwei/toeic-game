@@ -1,0 +1,747 @@
+{
+  "version": 1,
+  "terms": [
+    {
+      "en": "invoice",
+      "zh": [
+        "发票",
+        "账单"
+      ],
+      "ja": [
+        "請求"
+      ],
+      "pattern": "\\binvoic(?:e[sd]?|ing)\\b"
+    },
+    {
+      "en": "receipt",
+      "zh": [
+        "收据",
+        "收条",
+        "凭据",
+        "凭证",
+        "收货单",
+        "回执",
+        "收悉",
+        "收到",
+        "签收",
+        "收款",
+        "到账"
+      ],
+      "ja": [
+        "領収",
+        "受領",
+        "受取",
+        "受け取",
+        "入金記録",
+        "入金"
+      ],
+      "pattern": "\\breceipt(?:s)?\\b"
+    },
+    {
+      "en": "reimburse",
+      "zh": [
+        "报销",
+        "偿还",
+        "退还",
+        "补偿"
+      ],
+      "ja": [
+        "精算",
+        "払い戻",
+        "補填"
+      ],
+      "pattern": "\\breimburs(?:e[ds]?|ing)\\b"
+    },
+    {
+      "en": "reimbursement",
+      "zh": [
+        "报销",
+        "偿还",
+        "退款",
+        "补偿"
+      ],
+      "ja": [
+        "精算",
+        "払い戻",
+        "補填"
+      ],
+      "pattern": "\\breimbursement(?:s)?\\b"
+    },
+    {
+      "en": "refund",
+      "zh": [
+        "退款",
+        "退还",
+        "返还"
+      ],
+      "ja": [
+        "返金",
+        "払い戻",
+        "返却"
+      ],
+      "pattern": "\\brefund(?:s|ed|ing)?\\b"
+    },
+    {
+      "en": "deadline",
+      "zh": [
+        "截止日期",
+        "截止时间",
+        "期限"
+      ],
+      "ja": [
+        "締め切り",
+        "締切",
+        "期限"
+      ],
+      "pattern": "\\bdeadline(?:s)?\\b"
+    },
+    {
+      "en": "itinerary",
+      "zh": [
+        "行程",
+        "行程表"
+      ],
+      "ja": [
+        "旅程",
+        "旅程表",
+        "日程表"
+      ],
+      "pattern": "\\bitinerar(?:y|ies)\\b"
+    },
+    {
+      "en": "reservation",
+      "zh": [
+        "预订",
+        "预约",
+        "预留"
+      ],
+      "ja": [
+        "予約",
+        "取り置き"
+      ],
+      "pattern": "\\breservation(?:s)?\\b"
+    },
+    {
+      "en": "appointment",
+      "zh": [
+        "预约",
+        "约定",
+        "任命",
+        "任用",
+        "录用",
+        "董事席位"
+      ],
+      "ja": [
+        "予約",
+        "約束",
+        "任命",
+        "採用",
+        "訪問先",
+        "予定",
+        "取締役"
+      ],
+      "pattern": "\\bappointment(?:s)?\\b"
+    },
+    {
+      "en": "reception desk",
+      "zh": [
+        "前台",
+        "接待处",
+        "接待台"
+      ],
+      "ja": [
+        "受付",
+        "フロント"
+      ],
+      "pattern": "\\breception\\s+desk(?:s)?\\b"
+    },
+    {
+      "en": "receptionist",
+      "zh": [
+        "接待员",
+        "接待人员"
+      ],
+      "ja": [
+        "受付担当",
+        "受付係"
+      ],
+      "pattern": "\\breceptionist(?:s)?\\b"
+    },
+    {
+      "en": "customer service",
+      "zh": [
+        "客户服务",
+        "客服"
+      ],
+      "ja": [
+        "カスタマーサービス",
+        "お客様窓口",
+        "顧客サービス"
+      ],
+      "pattern": "\\bcustomer\\s+service(?:s)?\\b"
+    },
+    {
+      "en": "purchase order",
+      "zh": [
+        "采购订单",
+        "订购单",
+        "采购单"
+      ],
+      "ja": [
+        "注文書",
+        "発注"
+      ],
+      "pattern": "\\bpurchase\\s+order(?:s)?\\b"
+    },
+    {
+      "en": "delivery",
+      "zh": [
+        "配送",
+        "交货",
+        "送货",
+        "交付",
+        "递送",
+        "交期",
+        "送往",
+        "送达",
+        "签收",
+        "运费",
+        "批货",
+        "货物",
+        "到货",
+        "送到"
+      ],
+      "ja": [
+        "配送",
+        "納品",
+        "配達",
+        "届け",
+        "届く",
+        "届い",
+        "届き",
+        "納期",
+        "受領",
+        "搬入",
+        "宅配",
+        "返送",
+        "送料",
+        "荷物",
+        "到着",
+        "便"
+      ],
+      "pattern": "\\bdeliver(?:y|ies)\\b"
+    },
+    {
+      "en": "shipment",
+      "zh": [
+        "货物",
+        "发货",
+        "出货",
+        "批",
+        "运输"
+      ],
+      "ja": [
+        "出荷",
+        "荷物",
+        "貨物",
+        "発送",
+        "納品",
+        "届き"
+      ],
+      "pattern": "\\bshipment(?:s)?\\b"
+    },
+    {
+      "en": "inventory",
+      "zh": [
+        "库存",
+        "存货",
+        "清单"
+      ],
+      "ja": [
+        "在庫",
+        "目録"
+      ],
+      "pattern": "\\binventor(?:y|ies)\\b"
+    },
+    {
+      "en": "warehouse",
+      "zh": [
+        "仓库"
+      ],
+      "ja": [
+        "倉庫"
+      ],
+      "pattern": "\\bwarehouse(?:s)?\\b"
+    },
+    {
+      "en": "loading bay",
+      "zh": [
+        "装卸区",
+        "装卸位",
+        "卸货区"
+      ],
+      "ja": [
+        "荷さばき場",
+        "荷積み場",
+        "搬入口"
+      ],
+      "pattern": "\\bloading\\s+bay(?:s)?\\b"
+    },
+    {
+      "en": "pallet",
+      "zh": [
+        "托盘",
+        "货盘"
+      ],
+      "ja": [
+        "パレット"
+      ],
+      "pattern": "\\bpallet(?:s)?\\b"
+    },
+    {
+      "en": "carton",
+      "zh": [
+        "纸箱",
+        "箱"
+      ],
+      "ja": [
+        "段ボール箱",
+        "箱"
+      ],
+      "pattern": "\\bcarton(?:s)?\\b"
+    },
+    {
+      "en": "packing slip",
+      "zh": [
+        "装箱单",
+        "装箱清单"
+      ],
+      "ja": [
+        "梱包明細書",
+        "納品書"
+      ],
+      "pattern": "\\bpacking\\s+slip(?:s)?\\b"
+    },
+    {
+      "en": "quotation",
+      "zh": [
+        "报价",
+        "引文",
+        "最低价"
+      ],
+      "ja": [
+        "見積",
+        "引用"
+      ],
+      "pattern": "\\bquotation(?:s)?\\b"
+    },
+    {
+      "en": "estimate",
+      "zh": [
+        "估算",
+        "估计",
+        "报价",
+        "估价",
+        "预计"
+      ],
+      "ja": [
+        "見積",
+        "推定",
+        "概算",
+        "推計",
+        "見通し"
+      ],
+      "pattern": "\\bestimat(?:e[sd]?|ing)\\b"
+    },
+    {
+      "en": "budget",
+      "zh": [
+        "预算"
+      ],
+      "ja": [
+        "予算"
+      ],
+      "pattern": "\\bbudget(?:s)?\\b"
+    },
+    {
+      "en": "expenses",
+      "zh": [
+        "费用",
+        "开支",
+        "支出",
+        "旅费",
+        "报销",
+        "维修费"
+      ],
+      "ja": [
+        "経費",
+        "費用",
+        "旅費",
+        "支出",
+        "修理費"
+      ],
+      "pattern": "\\bexpenses?\\b"
+    },
+    {
+      "en": "toll",
+      "zh": [
+        "通行费",
+        "通行费用",
+        "收费"
+      ],
+      "ja": [
+        "通行料",
+        "通行車両",
+        "通行料金"
+      ],
+      "pattern": "\\btoll(?:s)?\\b"
+    },
+    {
+      "en": "fare",
+      "zh": [
+        "车费",
+        "票价",
+        "票款",
+        "车票",
+        "付费"
+      ],
+      "ja": [
+        "運賃",
+        "タクシー代",
+        "交通費"
+      ],
+      "pattern": "\\bfare(?:s)?\\b"
+    },
+    {
+      "en": "deposit",
+      "zh": [
+        "订金",
+        "定金",
+        "押金",
+        "存款"
+      ],
+      "ja": [
+        "手付金",
+        "保証金",
+        "預金",
+        "予約金",
+        "内金",
+        "入金"
+      ],
+      "pattern": "\\bdeposit(?:s)?\\b"
+    },
+    {
+      "en": "revenue",
+      "zh": [
+        "收入",
+        "营收"
+      ],
+      "ja": [
+        "売上",
+        "収益",
+        "収入"
+      ],
+      "pattern": "\\brevenue(?:s)?\\b"
+    },
+    {
+      "en": "fiscal year",
+      "zh": [
+        "财年",
+        "财政年度"
+      ],
+      "ja": [
+        "会計年度"
+      ],
+      "pattern": "\\bfiscal\\s+year(?:s)?\\b"
+    },
+    {
+      "en": "regulation",
+      "zh": [
+        "规定",
+        "法规",
+        "规章"
+      ],
+      "ja": [
+        "規則",
+        "規制",
+        "法規"
+      ],
+      "pattern": "\\bregulation(?:s)?\\b"
+    },
+    {
+      "en": "compliance",
+      "zh": [
+        "合规",
+        "遵守"
+      ],
+      "ja": [
+        "コンプライアンス",
+        "遵守"
+      ],
+      "pattern": "\\bcompliance(?:s)?\\b"
+    },
+    {
+      "en": "license",
+      "zh": [
+        "执照",
+        "许可证",
+        "许可",
+        "驾照",
+        "牌照",
+        "驾驶资格",
+        "持证",
+        "授权",
+        "持照",
+        "资质"
+      ],
+      "ja": [
+        "免許",
+        "ライセンス",
+        "許可",
+        "資格",
+        "権利保有",
+        "ナンバープレート",
+        "許諾"
+      ],
+      "pattern": "\\blicen[cs]e(?:s|d)?\\b"
+    },
+    {
+      "en": "certificate",
+      "zh": [
+        "证书",
+        "证明书"
+      ],
+      "ja": [
+        "証明書",
+        "修了証"
+      ],
+      "pattern": "\\bcertificate(?:s)?\\b"
+    },
+    {
+      "en": "warranty",
+      "zh": [
+        "保修",
+        "保修期",
+        "保证"
+      ],
+      "ja": [
+        "保証",
+        "保証期間"
+      ],
+      "pattern": "\\bwarrant(?:y|ies)\\b"
+    },
+    {
+      "en": "maintenance",
+      "zh": [
+        "维护",
+        "保养",
+        "维修"
+      ],
+      "ja": [
+        "保守",
+        "点検",
+        "整備"
+      ],
+      "pattern": "\\bmaintenance(?:s)?\\b"
+    },
+    {
+      "en": "inspection",
+      "zh": [
+        "检查",
+        "检验",
+        "巡查"
+      ],
+      "ja": [
+        "点検",
+        "検査",
+        "視察",
+        "確認"
+      ],
+      "pattern": "\\binspection(?:s)?\\b"
+    },
+    {
+      "en": "renovation",
+      "zh": [
+        "翻新",
+        "装修",
+        "改造"
+      ],
+      "ja": [
+        "改装",
+        "改修"
+      ],
+      "pattern": "\\brenovation(?:s)?\\b"
+    },
+    {
+      "en": "construction",
+      "zh": [
+        "施工",
+        "建设",
+        "建筑"
+      ],
+      "ja": [
+        "工事",
+        "建設",
+        "施工"
+      ],
+      "pattern": "\\bconstruction(?:s)?\\b"
+    },
+    {
+      "en": "branch office",
+      "zh": [
+        "分公司",
+        "分部",
+        "分支办公室",
+        "分支办事处",
+        "分支机构"
+      ],
+      "ja": [
+        "支店",
+        "支社",
+        "営業所"
+      ],
+      "pattern": "\\bbranch\\s+office(?:s)?\\b"
+    },
+    {
+      "en": "headquarters",
+      "zh": [
+        "总部"
+      ],
+      "ja": [
+        "本社",
+        "本部"
+      ],
+      "pattern": "\\bheadquarters\\b"
+    },
+    {
+      "en": "human resources",
+      "zh": [
+        "人力资源",
+        "人事"
+      ],
+      "ja": [
+        "人事",
+        "人的資源"
+      ],
+      "pattern": "\\bhuman\\s+resources\\b"
+    },
+    {
+      "en": "applicant",
+      "zh": [
+        "申请",
+        "应聘者"
+      ],
+      "ja": [
+        "応募者",
+        "申請者",
+        "申込者",
+        "申し込んだ方",
+        "採択された方"
+      ],
+      "pattern": "\\bapplicant(?:s)?\\b"
+    },
+    {
+      "en": "vacancy",
+      "zh": [
+        "空缺",
+        "空房",
+        "空位",
+        "招聘"
+      ],
+      "ja": [
+        "欠員",
+        "空室",
+        "空き",
+        "求人",
+        "募集"
+      ],
+      "pattern": "\\bvacanc(?:y|ies)\\b"
+    },
+    {
+      "en": "promotion",
+      "zh": [
+        "晋升",
+        "促销",
+        "推广"
+      ],
+      "ja": [
+        "昇進",
+        "販促",
+        "販売促進",
+        "宣伝"
+      ],
+      "pattern": "\\bpromotion(?:s)?\\b"
+    },
+    {
+      "en": "agenda",
+      "zh": [
+        "议程"
+      ],
+      "ja": [
+        "議題",
+        "議事日程"
+      ],
+      "pattern": "\\bagenda(?:s)?\\b"
+    },
+    {
+      "en": "postpone",
+      "zh": [
+        "推迟",
+        "延期"
+      ],
+      "ja": [
+        "延期",
+        "先送り"
+      ],
+      "pattern": "\\bpostpon(?:e[sd]?|ing)\\b"
+    },
+    {
+      "en": "reschedule",
+      "zh": [
+        "改期",
+        "重新安排",
+        "调整时间"
+      ],
+      "ja": [
+        "日程を変更",
+        "予定を変更",
+        "日程を組み直",
+        "午前に変更",
+        "変更"
+      ],
+      "pattern": "\\breschedul(?:e[sd]?|ing)\\b"
+    },
+    {
+      "en": "tentative",
+      "zh": [
+        "暂定",
+        "初步"
+      ],
+      "ja": [
+        "仮",
+        "暫定"
+      ],
+      "pattern": "\\btentative(?:s)?\\b"
+    }
+  ],
+  "exceptions": [
+    {
+      "bank": "reading",
+      "lang": "ja",
+      "key": "read-receiving/documents/0/text/2",
+      "term": "carton",
+      "source": "Once a carton is shelved, enter its shelf code in the delivery record.",
+      "translation": "棚に置いたら、その棚のコードを納品記録に入力してください。",
+      "reason": "前一句已明确 carton；日语以“棚に置いたら”承接该箱子，省略重复主语，未省略上架后登记货架代码的动作。"
+    },
+    {
+      "bank": "reading",
+      "lang": "ja",
+      "key": "read-interest-register/documents/0/text/7",
+      "term": "applicant",
+      "source": "We therefore ask applicants to describe their capabilities at this stage and to reserve detailed quotations for any tender to which they are formally invited.",
+      "translation": "そのため、現段階では対応可能な業務をご説明いただき、詳細な見積もりは正式に参加を求められた入札時にご提出ください。",
+      "reason": "本告知的收件人即申请者；日语“ご説明いただき”自然向同一申请者提出请求，省略重复的称呼，不改变受众。"
+    }
+  ]
+}
