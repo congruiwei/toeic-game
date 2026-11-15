@@ -14,7 +14,7 @@ export function responseRating(correct, activeMs=0, verified=false) {
 function packed(card,grade) {
   return {...card,due:card.due.getTime(),last_review:card.last_review?.getTime(),lastRating:grade};
 }
-function validCard(c) {
+export function validCard(c) {
   return c && timestamp(c.due) && [0,1,2,3].includes(c.state) &&
     [c.reps,c.lapses,c.learning_steps,c.elapsed_days,c.scheduled_days].every(nonnegative) &&
     Number.isFinite(c.stability)&&c.stability>=0&&c.stability<=36500 &&

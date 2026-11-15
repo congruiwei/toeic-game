@@ -1,3 +1,5 @@
+import {collectExpression,beginExpressions,rateExpression} from './expressions.js';
+import {speakJapanese} from './japanese-audio.js';
 import {watchShellUpdates} from './shell-update.js';
 import {loadMethods,newMethod,methodIndex,methodById,methodCard,methodExample,methodBank} from './methods.js';
 import {predictionView,predictAnswer,predictionSummary,snapshotOnVisit} from './prediction.js';
@@ -145,7 +147,7 @@ function navItems() {
       act(
         'nav',
         icon(i) + '<span>' + n + '</span>',
-        (page === 'practice' ? 'learn' : page) === p ? 'active' : '',
+        (['practice','expressions'].includes(page) ? 'learn' : page) === p ? 'active' : '',
         `data-page="${p}"`,
       ),
     )
@@ -196,7 +198,7 @@ function hydrateTranslations(scope) {
     panel.toggleAttribute('data-defer-passage',Boolean(pendingPassage));
   }
   if(scope.querySelector('.translations,[data-replay-id]')) translationUI().then(ui=>{
-    if(scope.isConnected)ui.mountTranslations(scope,s.settings,toast);
+    if(scope.isConnected)ui.mountTranslations(scope,s.settings,toast,s.expressions?.items);
   }).catch(()=>toast('翻译界面暂时未能打开，请重试。'));
 }
 let pendingWord=null;
@@ -233,13 +235,28 @@ function hydrateWordMeanings(scope) {
     });
   }
 }
+let expressionUI, expressionPractice=false;
+async function openExpressions(practice=false) {
+  try{
+    expressionUI ??= await import('./expression-ui.js');
+    await translationUI();
+    expressionPractice=practice;go('expressions');
+  }catch{toast('表达本暂时未能打开，联网后请重试。');}
+}
+function translationAllowed(panel) {
+  if(!panel?.isConnected || (page==='exam' && s.exam?.phase!=='done'))return false;
+  const id=panel.dataset.translationId;
+  const study=(panel.hasAttribute('data-study-translation')&&page==='library') || (panel.hasAttribute('data-translation-method')&&panel.closest('[data-method-card]')&&methodById(id));
+  const diagnosed=page==='report'&&s.diagnosis?.results.some(result=>result.items.some(item=>item.id===id));
+  return Boolean(study||diagnosed||reviewedAnswer(id));
+}
 function render() {
   stopReplay();
   applyPrefs();
   frame();
   if(wordLanguagePending())return;
   root.innerHTML =
-    page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='expressions'?expressionUI.expressionView(s,expressionPractice):page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -536,7 +553,7 @@ document.addEventListener('change', async (e) => {
   }
   if (el.id === 'import-file' && el.files[0]) {
     try {
-      if (el.files[0].size > 5e6) throw Error('文件过大');
+      if (el.files[0].size > 25e6) throw Error('文件过大（最多 25 MB）');
       const candidate = decode(await el.files[0].text(), catalog);
       incoming = candidate;
       modal(
@@ -564,13 +581,47 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a==='collect-expression') {
+    const panel=el.closest('.translations');if(!translationAllowed(panel))return;
+    try{
+      const ui=await translationUI();if(!translationAllowed(panel))return;
+      const unit=ui.unitsForPanel(panel).find(unit=>unit.key===el.dataset.key&&unit.bank===el.dataset.bank&&unit.kind==='sentence');
+      if(!unit)return;
+      const {translated}=await import('./translations.js');if(!translationAllowed(panel))return;
+      if(collectExpression(s,unit,translated(unit.bank,unit.key,'zh'),translated(unit.bank,unit.key,'ja'))&&save()){
+        for(const button of document.querySelectorAll('[data-act=collect-expression]'))if(button.dataset.key===unit.key){button.textContent='已收藏';button.disabled=true;}
+        toast('已收藏到表达本');
+      }
+    }catch(error){toast(error.message);}
+    return;
+  }
+  if(a==='expression-open'){await openExpressions();return;}
+  if(a==='expression-resume'&&s.expressions?.run){await openExpressions(true);return;}
+  if(a==='expression-start'){
+    if(beginExpressions(s,el.dataset.direction)&&save())await openExpressions(true);
+    return;
+  }
+  if(a==='expression-flip'&&page==='expressions'){
+    const run=s.expressions?.run;
+    if(run&&run.index<run.keys.length){run.flipped=true;if(save())render();}
+    return;
+  }
+  if(a==='expression-rate'&&page==='expressions'){
+    if(rateExpression(s,Number(el.dataset.grade))&&save())render();return;
+  }
+  if(a==='expression-speak'&&page==='expressions'){
+    const item=s.expressions.items.find(item=>item.key===el.dataset.key);if(!item)return;
+    const run=s.expressions.run,shown=!expressionPractice||run?.flipped||el.dataset.language===(run?.direction==='ja-en'?'ja':'en');
+    if(!shown)return;
+    if(el.dataset.language==='ja')speakJapanese(item.ja,s.settings,toast);
+    else if(el.dataset.language==='en')speak([{speaker:'A',text:item.en}],s.settings,toast);
+    return;
+  }
   if(a==='load-word-meanings'){hydrateWordMeanings(document);return;}
   if(a==='translate') {
-    const panel=el.closest('.translations'),id=panel?.dataset.translationId;
-    const study=(panel?.hasAttribute('data-study-translation') && page==='library') || (panel?.hasAttribute('data-translation-method') && panel.closest('[data-method-card]') && methodById(id));
-    const diagnosed=page==='report' && s.diagnosis?.results.some(result=>result.items.some(item=>item.id===id));
-    if(panel && (study || diagnosed || reviewedAnswer(id))) {
-      try{await (await translationUI()).expandTranslation(panel,s.settings,toast);}catch{toast('翻译界面暂时无法载入，联网后请重试。');}
+    const panel=el.closest('.translations');
+    if(translationAllowed(panel)) {
+      try{await (await translationUI()).expandTranslation(panel,s.settings,toast,s.expressions?.items);}catch{toast('翻译界面暂时无法载入，联网后请重试。');}
     }
     return;
   }

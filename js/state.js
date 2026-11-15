@@ -1,3 +1,4 @@
+import {migrateExpressions} from './expressions.js';
 import {migratePrediction} from './prediction-migration.js';
 import {validDiagnosis,restoreDiagnosisRanges,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
 import {migrateReview,advance,gradeError,responseRating,reviewBand} from './review-scheduler.js';
@@ -15,6 +16,7 @@ export const thresholds = [0, 36, 90, 165, 260, 380];
 export function fresh() {
   return {
     version: VERSION,
+    expressions:{version:1,items:[],run:null},
     stats: { vocab: 0, grammar: 0, listening: 0, reading: 0 },
     xp: 0,
     stage: 0,
@@ -147,6 +149,7 @@ export function decode(raw, catalog) {
   }
   if (catalog) reconcileBank(x, catalog);
   migrateReview(x);
+  migrateExpressions(x);
   return x;
 }
 

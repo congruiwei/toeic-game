@@ -1,3 +1,4 @@
+import {expressionStats} from './expressions.js';
 const LEVELS = [400, 500, 600, 700, 800, 900];
 const CATEGORIES = ['1', '2', '3', '4', '5', '6', '7', 'vocab', 'dictation'];
 const PART_NAMES = ['照片描述', '问答', '对话', '独白', '句子填空', '短文填空', '阅读理解'];
@@ -158,6 +159,7 @@ export function reportView(state, bank, now = Date.now()) {
   const t = new Date(now), today=dateKey(t), week=recent(report,dayAt(t,-6),today), month=recent(report,dayAt(t,-29),today);
   const hasLegacy = [...partRows,vocab,dictation].some(row => row.attempts > 0)
     && Object.values(seen).reduce((sum,n)=>sum+n,0) > Object.values(report.parts).reduce((sum,c)=>sum+c.total,0);
+  const expressions=expressionStats(state,now);
   const mastered = [...levels.values()].reduce((sum,b)=>sum+b.mastered,0);
   return `<div class="study-report"><div class="page-title"><h1>学习报告</h1></div>
     <section class="panel report-volume"><h2>近期练习</h2><div class="report-kpis">
@@ -165,6 +167,7 @@ export function reportView(state, bank, now = Date.now()) {
     </div>${hasLegacy?'<p>旧记录没有作答日期，已知的累计次数仍保留在下方。</p>':''}</section>
     ${recommended.length?`<section class="panel report-recommend"><h2>建议再练</h2>${recommended.map(weak=>`<div class="report-target"><p>${escape(weak.name)} · 正确率 ${rate(weak)}（${weak.right}/${weak.measured}）</p><button type="button" class="secondary" data-act="start" data-mode="${weak.mode}" data-filter="${escape(weak.filter)}">练习${escape(weak.name)}</button></div>`).join('')}</section>`:
       '<section class="panel report-recommend"><h2>从单词开始</h2><p>有了作答记录后，这里会推荐正确率较低的练习。</p><button class="primary" type="button" data-act="start" data-mode="vocab">练习单词</button></section>'}
+    <section class="panel report-section"><h2>三语表达</h2><p>收藏 ${expressions.total} · 已掌握 ${expressions.mastered}</p><p class="fine muted">记忆稳定度达到 7 天的表达计为已掌握。</p><button class="secondary" data-act="expression-open">打开表达本</button></section>
     <section class="panel"><h2>各部分正确率</h2><ul class="report-rows">${[...partRows,vocab,dictation].map(rowView).join('')}</ul></section>
     <section class="panel"><h2>语法关卡正确率</h2><ul class="report-rows">${grammarRows.map(rowView).join('')}</ul></section>
     <section class="panel"><h2>分级词汇掌握度</h2><p>进入长期复习且记忆稳定度达到 7 天的词卡计为已掌握。</p><ul class="report-rows">${[...levels].map(([level,b])=>`<li><b>${level} 级</b><span>${b.mastered} / ${b.total} 词</span></li>`).join('')}</ul></section></div>`;
