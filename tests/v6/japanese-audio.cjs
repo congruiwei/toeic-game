@@ -31,6 +31,9 @@ module.exports=async({page,act,nav,state,quiz})=>{
   });
 
   await act('settings');
+  for(const summary of await page.locator('#voice-controls details > summary').all()){
+    assert((await summary.boundingBox()).height>=44,'voice disclosure targets are at least 44px tall');
+  }
   const selection=page.locator('[data-pref=japaneseVoice]');
   await selection.waitFor();
   const choices=await selection.locator('option').evaluateAll(options=>options.map(option=>({value:option.value,text:option.textContent})));

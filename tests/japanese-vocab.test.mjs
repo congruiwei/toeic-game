@@ -97,8 +97,14 @@ test('real Japanese aliases and the hidden first sense of a spelling cannot beco
   assert.ok(!options.includes(meaning('v-account-report')),'other sense of the same headword is never a distractor');
 });
 
-test('all 2174 Japanese questions have one stable correct option, four unique options, and no equivalent Japanese distractor', () => {
-  for (const w of words) for (const format of ['meaning-ja','english-ja']) {
+test('all 2174 Japanese questions have unique stable answers, safe distractors, and balanced lengths and positions', t => {
+  const formats = ['meaning-ja','english-ja'];
+  const distributions = Object.fromEntries(formats.map(format => [format, {
+    total:0, longest:0, varied:0, shortestOnly:0, positions:[0,0,0,0],
+  }]));
+  // Match scripts/validate.mjs: Unicode characters after NFKC and space normalization.
+  const optionLength = text => [...text.normalize('NFKC').trim().replace(/\s+/gu,' ').toLowerCase()].length;
+  for (const w of words) for (const format of formats) {
     const ref={id:w.id,mode:'vocab',format},q=question(ref),answer=format==='meaning-ja'?meaning(w.id):w.word;
     assert.equal(q.answer,answer,w.id);
     assert.equal(q.prompt,format==='meaning-ja'?w.word:meaning(w.id));
@@ -106,6 +112,14 @@ test('all 2174 Japanese questions have one stable correct option, four unique op
     assert.equal(new Set(q.options.map(normalize)).size,4,w.id+format);
     assert.equal(q.options.filter(o=>o===answer).length,1,w.id+format);
     assert.deepEqual(q.options,question(JSON.parse(JSON.stringify(ref))).options,'saved reference retains options');
+    const r=distributions[format],at=q.options.indexOf(answer),lengths=q.options.map(optionLength);
+    const length=lengths[at],lo=Math.min(...lengths),hi=Math.max(...lengths);
+    r.total++;r.positions[at]++;
+    if(length===hi)r.longest++;
+    if(lo!==hi){
+      r.varied++;
+      if(length===lo && lengths.filter(n=>n===lo).length===1)r.shortestOnly++;
+    }
     for(const opt of q.options.filter(o=>o!==answer)) {
       if(format==='meaning-ja')assert.equal(conflictingJapaneseMeanings(answer,opt),false,w.id+' '+opt);
       else {
@@ -118,6 +132,18 @@ test('all 2174 Japanese questions have one stable correct option, four unique op
       }
     }
     if(w.sense && format==='meaning-ja')assert.equal(q.context,w.example);
+  }
+  for(const [format,r] of Object.entries(distributions)){
+    const summary=`${format}: longest ${r.longest}/${r.total}, unique shortest ${r.shortestOnly}/${r.varied}, A/B/C/D ${r.positions.join('/')}`;
+    assert.equal(r.total,words.length,summary);
+    assert.ok(r.longest<=.4*r.total,summary+'; longest including ties must be <=40%');
+    assert.ok(r.shortestOnly<=.35*r.varied,summary+'; unique shortest must be <=35%, excluding all-equal rows');
+    const expected=r.total/4;
+    const chi=r.positions.reduce((sum,n)=>sum+(n-expected)**2/expected,0);
+    // These are the main validator's four-option position warning thresholds.
+    assert.ok(r.positions.every(n=>Math.abs(n-expected)/r.total<=.12),summary+'; position deviation exceeds 12 percentage points');
+    assert.ok(chi<=11.35,summary+`; position chi-square ${chi.toFixed(3)} exceeds 11.35`);
+    t.diagnostic(summary+`; position chi-square ${chi.toFixed(3)}`);
   }
   assert.ok(!calls.some(url=>url.endsWith('/ja/vocab.json')),'large example pack is never requested');
 });

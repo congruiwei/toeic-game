@@ -2,6 +2,7 @@
 import { readFile } from 'node:fs/promises';
 import { methodParts } from '../js/methods.js';
 import { vocabularyOptions, formats } from '../js/bank.js';
+import { validateI18nFiles } from './validate-i18n.mjs';
 
 const dataDirectory = new URL('../data/', import.meta.url);
 const picturePaths=[];
@@ -445,6 +446,9 @@ for(const path of picturePaths){
 }
 for (const target of levels) expect(presentLevels.has(target), '题库', `未包含 ${target} 级练习`);
 reportDistributions();
+const translations = validateI18nFiles(dataDirectory);
+for (const summary of translations.summaries) console.log(summary);
+issues.push(...translations.errors.map(error => 'i18n: ' + JSON.stringify(error)));
 if (issues.length) {
   console.error(issues.join('\n'));
   process.exitCode = 1;

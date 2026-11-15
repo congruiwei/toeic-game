@@ -38,7 +38,7 @@ async function main(){
  for(const width of [375,390,430]){await page.setViewportSize({width,height:812});assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));}
  await page.setViewportSize({width:375,height:812});console.log('PASS home at 375/390/430px');
  await action('settings');await page.locator('[data-pref=methodHints]').uncheck();await page.locator('[data-voice-slot=B]').selectOption('en-GB');
- await page.locator('#voice-controls summary').click();await action('preview-voice');assert((await state()).settings.voiceSlots.B==='en-GB');await action('close');
+ await page.locator('#voice-controls summary').filter({hasText:'英语声音与试听'}).click();await action('preview-voice');assert((await state()).settings.voiceSlots.B==='en-GB');await action('close');
  console.log('PASS manual voice selection and audition');
  async function quiz(mode,filter){
    await nav('learn');await page.locator('[data-act=configure][data-mode='+mode+']').click();
