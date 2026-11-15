@@ -34,7 +34,7 @@ function diagram(topic) {
   const {kind, steps, caption} = topic.diagram;
   return `<section class="lesson-panel lesson-brief">
     <div class="lesson-meta"><span>${icon('grammar', 17)} 语法图解</span><span>${icon('clock', 15)} 约 30 秒</span></div>
-    <h2>${esc(topic.title)}</h2>
+    <h2 data-ja-term="${esc(topic.id)}">${esc(topic.title)}</h2>
     <ol class="lesson-diagram ${kind === 'timeline' ? 'is-timeline' : 'is-flow'}">
       ${steps.map(step => `<li><span class="diagram-point" aria-hidden="true"></span><b>${esc(step.label)}</b><span>${esc(step.detail)}</span></li>`).join('')}
     </ol>

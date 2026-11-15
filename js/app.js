@@ -191,6 +191,12 @@ function translationUI() {
   }
   return translationModule ??= import('./translation-ui.js'+(translationRetry?'?retry='+translationRetry:'')).then(ui=>translationRuntime=ui).catch(error=>{translationModule=null;translationRetry++;throw error;});
 }
+let termsModule, termsRetry=0;
+function hydrateTerms(scope) {
+  if(!scope.querySelector('[data-ja-term]'))return;
+  termsModule ??= import('./japanese-terms.js'+(termsRetry?'?retry='+termsRetry:'')).catch(error=>{termsModule=null;termsRetry++;throw error;});
+  termsModule.then(module=>module.mountTerms(scope)).catch(()=>toast('日语术语尚未下载，联网后重新打开即可。'));
+}
 function hydrateTranslations(scope) {
   for(const panel of scope.querySelectorAll('[data-translation-id]')){
     const entry=catalog.get(panel.dataset.translationId),run=s.session;
@@ -265,6 +271,7 @@ function render() {
           : practiceView(s);
   hydrateTranslations(root);
   hydrateWordMeanings(root);
+  hydrateTerms(root);
   root.setAttribute('aria-busy', 'false');
   if(page==='practice')showFirstMethod();
   if (page === 'practice' || page === 'diagnosis') startClock();
@@ -331,6 +338,7 @@ function modal(content, cls = '') {
   dialog.scrollTop = 0;
   hydrateTranslations(dialog);
   hydrateWordMeanings(dialog);
+  hydrateTerms(dialog);
 }
 function close() {
   dialog.close();

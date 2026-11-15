@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-30';
+const CACHE = 'toeic-island-shell-31';
 const files = [
   './',
   './index.html',
@@ -14,7 +14,7 @@ const files = [
   './translation.css','./js/translations.js','./js/translation-ui.js','./js/translation-source.js',
   './report.css','./js/report.js',
   './js/shell-update.js','./js/app.js','./js/exam.js','./js/exam-ui.js','./js/exam-controller.js',
-  './js/prediction.js','./js/prediction-migration.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./data/methods.json','./js/methods.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
+  './js/prediction.js','./js/prediction-migration.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./data/methods.json','./js/methods.js','./js/japanese-terms.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
   './js/art.js',
   './js/audio.js','./js/japanese-audio.js','./js/expressions.js','./js/expression-ui.js',
   './js/bank.js','./js/vocabulary-language.js','./js/screening.js','./js/screen-view.js',

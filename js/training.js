@@ -20,8 +20,8 @@ const routes = [
 export function learnView(state) {
   return `<div class="page-title"><div class="eyebrow"><i></i> TRAINING MAP</div><h1>练习地图</h1></div><div class="learn-grid"><button class="learn-card panel" data-act="expression-open">${tileArt('vocab')}<strong>表达本<small>收藏职场句子 · 中日英切换复习</small></strong>${icon('chev',17)}</button><button class="learn-card panel" data-act="method-list">${tileArt('grammar')}<strong>方法<small>按题型查看解题图卡</small></strong>${icon('chev',17)}</button><button class="learn-card panel" data-act="screen-open">${tileArt('vocab')}<strong>单词快筛<small>${state.screening?.run?.index < state.screening?.run?.ids?.length ? '继续上次快筛' : '滑动筛选 20 个未学词'}</small></strong>${icon('chev',17)}</button>${screenedQueue(state).length ? `<button class="learn-card panel" data-act="screen-learn">${tileArt('vocab')}<strong>待学词<small>${screenedQueue(state).length} 张待学习或确认</small></strong>${icon('chev',17)}</button>` : ''}<button class="learn-card panel" data-act="exam-lobby">${tileArt('reading')}<strong>模拟考试<small>完整 200 题 · 半套 100 题</small></strong>${icon('chev',17)}</button>${routes.map(([mode, art, name, detail]) => `<button class="learn-card panel" data-act="configure" data-mode="${mode}">${tileArt(art)}<strong>${name}<small>${detail}</small></strong>${icon('chev', 17)}</button>`).join('')}</div>${state.session && state.session.index < state.session.items.length ? '<button class="primary resume-training" data-act="resume">继续上次练习 ' + icon('arrow', 16) + '</button>' : ''}`;
 }
-function field(id, label, values) {
-  return `<label class="setting">${label}<select id="${id}">${values.map(([k, title]) => `<option value="${esc(k)}">${esc(title)}</option>`).join('')}</select></label>`;
+function field(id, label, values, terms=false) {
+  return `<label class="setting">${label}<select id="${id}">${values.map(([k, title]) => `<option value="${esc(k)}" ${terms?`data-ja-term="${esc(k)}"`:""}>${esc(title)}</option>`).join('')}</select></label>`;
 }
 export function configureView(mode, state) {
   const route = routes.find((x) => x[0] === mode);
@@ -50,6 +50,7 @@ export function configureView(mode, state) {
       'mode-filter',
       '语法关卡',
       bank.grammar.map((t) => [t.id, t.title]),
+      true,
     );
   if (mode === 'part2')
     fields = field('mode-filter', '练习重点', [
