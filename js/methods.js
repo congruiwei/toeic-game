@@ -85,7 +85,7 @@ export function methodCard(card,automatic) {
   return `<article class="method-card" data-auto="${automatic}" data-method-card="${esc(card.id)}"><p class="method-caption">Part ${esc(card.part)} · 解题方法</p>
     <h2>${esc(card.title)}</h2><p>${esc(card.lead)}</p>
     <ol class="method-diagram">${card.steps.map(step=>`<li><b>${esc(step.label)}</b><span lang="en">${esc(step.text)}</span></li>`).join('')}</ol>
-    <p>${esc(card.note)}</p><div class="method-actions">${automatic?
+    <p>${esc(card.note)}</p><section class="translations" data-translation-method data-translation-id="${esc(card.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section><div class="method-actions">${automatic?
       '<button class="primary" data-act="method-skip">试一题 · 继续当前练习</button><button class="secondary" data-act="method-skip">跳过</button><label><input type="checkbox" data-method-disable> 关闭首次提示</label>':
       `<button class="primary" data-act="method-try" data-method="${esc(card.id)}">试一题</button>`}
     </div></article>`;

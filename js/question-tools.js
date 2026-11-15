@@ -39,7 +39,7 @@ export function claudeText(ref, q, selected, correct = q.answer) {
   return answerText(ref, q, selected, correct) + '\n\n' + request;
 }
 export function reviewTools(id) {
-  return '<div class="review-tools"><button type="button" class="secondary" data-act="report-issue" data-id="'+esc(id)+'">这题有问题</button><button type="button" class="secondary" data-act="copy-claude" data-id="'+esc(id)+'">复制问 Claude</button></div>';
+  return '<section class="translations" data-translation-id="'+esc(id)+'"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section><div class="review-tools"><button type="button" class="secondary" data-act="report-issue" data-id="'+esc(id)+'">这题有问题</button><button type="button" class="secondary" data-act="copy-claude" data-id="'+esc(id)+'">复制问 Claude</button></div>';
 }
 export function validIssues(rows) {
   return rows===undefined || (Array.isArray(rows) && rows.every(r=>r && typeof r.id==='string' && /^[\w-]{1,100}$/.test(r.id) && reasons.includes(r.reason) && typeof r.note==='string' && r.note.length<=1000 && typeof r.text==='string' && r.text.length>0));

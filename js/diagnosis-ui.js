@@ -19,7 +19,7 @@ export function diagnosisHistory(s){
   const rs=s.diagnosis?.results||[];
   if(!rs.length)return '';
   return '<section class="panel diag-history"><h2>水平诊断记录</h2>'+rs.slice().reverse().map((r,i)=>
-    '<details'+(i===0?' open':'')+'><summary>第 '+(rs.length-i)+' 次 · '+esc(new Date(r.at).toLocaleString('zh-CN',{year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}))+'</summary>'+results(r)+'</details>').join('')+'</section>';
+    '<details'+(i===0?' open':'')+'><summary>第 '+(rs.length-i)+' 次 · '+esc(new Date(r.at).toLocaleString('zh-CN',{year:'numeric',month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}))+'</summary>'+results(r)+'<details class="diagnosis-review"><summary>查看已答题目的中日对照</summary>'+r.items.map(item=>'<div><p>'+esc(item.part===0?'单词':'Part '+item.part)+' · '+esc(item.id)+'</p><section class="translations" data-translation-id="'+esc(item.id)+'"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section></div>').join('')+'</details></details>').join('')+'</section>';
 }
 export function unknownDiagnosisView(ref,q){
   const body=ref.mode==='vocab'

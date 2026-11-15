@@ -182,6 +182,23 @@ function home() {
  <section class="tasks">${sectionTitle('flag', '探索任务', '<span class="section-note">任选一个开始</span>')}<div class="task-grid">${tasks.map(taskTile).join('')}</div></section>
  <div class="continue"><span class="continue-icon">${icon('compass', 27)}</span><div><h3>${s.session ? '上次的探险' : '自由练习'}</h3><p>${s.session ? esc(s.session.title) + ' · ' + Math.min(s.session.index + 1, s.session.items.length) + ' / ' + s.session.items.length : '按主题与题型选择练习'}</p></div>${act(s.session ? 'resume' : 'nav', s.session ? '继续学习 ' + icon('arrow', 16) : '进入练习 ' + icon('arrow', 16), 'primary', 'data-page="learn"')}</div>`;
 }
+let translationModule, translationRetry=0;
+function translationUI() {
+  if (!document.querySelector('link[data-translation-style]')) {
+    const link=document.createElement('link');link.rel='stylesheet';link.href='./translation.css';link.dataset.translationStyle='';link.onerror=()=>link.remove();document.head.append(link);
+  }
+  return translationModule ??= import('./translation-ui.js'+(translationRetry?'?retry='+translationRetry:'')).catch(error=>{translationModule=null;translationRetry++;throw error;});
+}
+function hydrateTranslations(scope) {
+  for(const panel of scope.querySelectorAll('[data-translation-id]')){
+    const entry=catalog.get(panel.dataset.translationId),run=s.session;
+    const pendingPassage=page==='practice'&&run?.selected!=null&&entry?.ref.mode==='reading'&&entry.data.set.part===6&&run.items.slice(run.index+1).some(ref=>catalog.get(ref.id)?.data.set?.id===entry.data.set.id);
+    panel.toggleAttribute('data-defer-passage',Boolean(pendingPassage));
+  }
+  if(scope.querySelector('.translations,[data-replay-id]')) translationUI().then(ui=>{
+    if(scope.isConnected)ui.mountTranslations(scope,s.settings,toast);
+  }).catch(()=>toast('翻译界面暂时未能打开，请重试。'));
+}
 function render() {
   stopReplay();
   applyPrefs();
@@ -194,6 +211,7 @@ function render() {
         : page === 'library'
           ? libraryView(s, tab, themeFilter)
           : practiceView(s);
+  hydrateTranslations(root);
   root.setAttribute('aria-busy', 'false');
   if(page==='practice')showFirstMethod();
   if (page === 'practice' || page === 'diagnosis') startClock();
@@ -258,6 +276,7 @@ function modal(content, cls = '') {
   dialog.innerHTML = `<div class="modal-body">${act('close', icon('close', 19), 'modal-close', 'aria-label="关闭"')}${content}<div class="dialog-notice" role="status"></div></div>`;
   if (!dialog.open) dialog.showModal();
   dialog.scrollTop = 0;
+  hydrateTranslations(dialog);
 }
 function close() {
   dialog.close();
@@ -320,12 +339,14 @@ function settings() {
    ['motion', '角色与进化动画'],
    ['timed', '阅读计时'],
    ['methodHints','首次遇到题型时显示方法卡'],
+   ['translationExpanded','翻译默认展开'],
  ]
    .map(
      ([v, n]) =>
        `<label class="setting">${n}<input type="checkbox" data-pref="${v}" ${p[v] ? 'checked' : ''}></label>`,
    )
    .join('')}
+ <label class="setting">翻译语言<select data-pref="translationLanguage">${[['zh','中'],['ja','日'],['both','中日']].map(([v,n])=>option(v,n,p.translationLanguage||'both')).join('')}</select></label>
  <label class="setting">目标记忆率<select data-pref="retention">${[.85,.90,.95].map(r=>option(r,Math.round(100*r)+'%',p.retention??.90)).join('')}</select></label><p class="fine muted">目标记忆率越高，复习越频繁。</p>
  <label class="setting">朗读速度 <span><output id="rate-val">${p.rate}×</output> <input aria-label="朗读速度" type="range" min="0.75" max="1.2" step="0.05" value="${p.rate}" data-pref="rate"></span></label>
  <section id="voice-controls">${voiceControls()}</section><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p>${issueSettings(s.issues)}<div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
@@ -466,6 +487,7 @@ document.addEventListener('change', async (e) => {
       el.type === 'checkbox' ? el.checked : ['rate','retention'].includes(k) ? Number(el.value) : el.value;
     save();
     applyPrefs();
+    if(k==='translationLanguage' && document.querySelector('.translations'))translationUI().then(ui=>ui.applyTranslationLanguage(document,s.settings.translationLanguage)).catch(()=>toast('翻译界面暂时无法载入，联网后请重试。'));
     if (k === 'rate') $('#rate-val').textContent = el.value + '×';
     return;
   }
@@ -503,6 +525,20 @@ document.addEventListener('click', async (e) => {
     try{await Promise.all([loadBank(needed),needsMethods ? loadMethods().catch(()=>{}) : null]);}catch{toast('题库未能打开，请检查连接后再试。');return;}
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
+  }
+  if(a==='translate') {
+    const panel=el.closest('.translations'),id=panel?.dataset.translationId;
+    const study=(panel?.hasAttribute('data-study-translation') && page==='library') || (panel?.hasAttribute('data-translation-method') && panel.closest('[data-method-card]') && methodById(id));
+    const diagnosed=page==='report' && s.diagnosis?.results.some(result=>result.items.some(item=>item.id===id));
+    if(panel && (study || diagnosed || reviewedAnswer(id))) {
+      try{await (await translationUI()).expandTranslation(panel,s.settings,toast);}catch{toast('翻译界面暂时无法载入，联网后请重试。');}
+    }
+    return;
+  }
+  if(a==='translation-language' && ['zh','ja','both'].includes(el.dataset.language)) {
+    s.settings.translationLanguage=el.dataset.language;
+    if(save())try{(await translationUI()).applyTranslationLanguage(document,s.settings.translationLanguage);}catch{toast('翻译界面暂时无法载入，联网后请重试。');}
+    return;
   }
   if(a==='pred-range' || a==='pred-series'){
     if(a==='pred-range')predictionRange=el.dataset.range;else predictionSeries=el.dataset.series;
@@ -721,7 +757,7 @@ window.addEventListener('storage', async (e) => {
     render();
   } catch {}
 });
-document.addEventListener('toggle', e=>stopClosedReplay(e.target), true);
+document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open)hydrateTranslations(e.target);}, true);
 window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};

@@ -23,7 +23,7 @@ function cardBody(word) {
   return `<div class="lib-card-body">
     <p class="lib-phonetic" lang="en">${escape(word.ipa)} · ${escape(word.pos)}</p>
     <p>${escape(word.zh)}</p>
-    <blockquote lang="en">${escape(word.example)}</blockquote>
+    <blockquote lang="en">${escape(word.example)}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
     <dl><dt>常见搭配</dt><dd lang="en">${escape(word.collocation)}</dd>
       <dt>同义替换</dt><dd lang="en">${escape(word.paraphrase)}</dd></dl>
   </div>`;

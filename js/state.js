@@ -7,7 +7,7 @@ import {validIssues} from './question-tools.js';
 import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
-  VERSION = 3;
+  VERSION = 4;
 export const skills = ['vocab', 'grammar', 'listening', 'reading'];
 export const labels = { vocab: '单词', grammar: '语法', listening: '听力', reading: '阅读' };
 export const forms = ['芽团', '双叶芽', '蕨羽灵', '铃花灵', '云冠灵', '星冠灵'];
@@ -26,7 +26,7 @@ export function fresh() {
     session: null,
     lastVisit: 0,
     methodsSeen: [],
-    settings: { methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
+    settings: { translationLanguage:"both", translationExpanded:false, methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
   };
 }
 const record = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
@@ -41,7 +41,7 @@ function mapOk(m, fn) {
 export function decode(raw, catalog) {
   const x = JSON.parse(raw);
   // Version 1 stored every missed answer together. Its existing verdicts stay intact.
-  if (record(x) && [1,2].includes(x.version)) x.version = VERSION;
+  if (record(x) && [1,2,3].includes(x.version)) x.version = VERSION;
   if (!record(x) || x.version !== VERSION) throw Error('存档版本无法识别');
   if (
     !number(x.xp) ||
@@ -95,6 +95,10 @@ export function decode(raw, catalog) {
     throw Error('设置值有误');
   if (x.settings.methodHints!==undefined && typeof x.settings.methodHints!=='boolean') throw Error('方法卡设置有误');
   if (x.methodsSeen!==undefined && (!Array.isArray(x.methodsSeen) || x.methodsSeen.length>160 || !x.methodsSeen.every(safeKey))) throw Error('方法卡记录有误');
+  if (x.settings.translationLanguage!==undefined && !['zh','ja','both'].includes(x.settings.translationLanguage)) throw Error('翻译语言设置有误');
+  if (x.settings.translationExpanded!==undefined && typeof x.settings.translationExpanded!=='boolean') throw Error('翻译展开设置有误');
+  x.settings.translationLanguage ??= 'both';
+  x.settings.translationExpanded ??= false;
   x.methodsSeen ??= [];
   x.settings.methodHints ??= true;
   if (x.session !== null) {

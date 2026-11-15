@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-26';
+const CACHE = 'toeic-island-shell-27';
 const files = [
   './',
   './index.html',
@@ -11,6 +11,7 @@ const files = [
   './assets/icon-180.png',
   './assets/icon-192.png',
   './assets/icon-512.png',
+  './translation.css','./js/translations.js','./js/translation-ui.js','./js/translation-source.js',
   './report.css','./js/report.js',
   './js/shell-update.js','./js/app.js','./js/exam.js','./js/exam-ui.js','./js/exam-controller.js',
   './js/prediction.js','./js/prediction-migration.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./data/methods.json','./js/methods.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
@@ -60,15 +61,15 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-async function updateBank(request, cache) {
+async function updateBank(request, cache, translation=false) {
   // Adding records to an existing file requires no service-worker edit.
   const controller = new AbortController();
-  const timer = setTimeout(() => controller.abort(), 2500);
+  const timer = setTimeout(() => controller.abort(), translation?15000:2500);
   try {
     const response = await fetch(request, { cache: 'no-cache', signal: controller.signal });
     if (response.ok) {
       const rows = await response.clone().json();
-      if (Array.isArray(rows) && rows.length) {
+      if (translation ? rows?.version===1 && rows.entries && !Array.isArray(rows.entries) && typeof rows.entries==='object' : Array.isArray(rows) && rows.length) {
         await cache.put(request, response.clone());
         return response;
       }
@@ -87,6 +88,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE);
+      if (request.url.startsWith(new URL('data/i18n/',self.registration.scope).href)) {
+        return updateBank(request,await caches.open('toeic-island-translations-v1'),true);
+      }
       if (request.url.startsWith(new URL('data/', self.registration.scope).href)) {
         return updateBank(request, cache);
       }
