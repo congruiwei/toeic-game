@@ -21,7 +21,7 @@
 
 ## 翻译体积与离线边界
 
-七个中文包共559,469字节，七个日文包共695,507字节，合计1,254,976字节（UTF-8原始文件，未压缩）。另有53,214字节的日语词义小包、1,881字节的日语术语小包。数据按题库下载，正文包不进入首页或安装预缓存。
+七个中文包共559,469字节，七个日文包共695,513字节，合计1,254,982字节（UTF-8原始文件，未压缩）。另有53,214字节的日语词义小包、1,881字节的日语术语小包。数据按题库下载，正文包不进入首页或安装预缓存。
 
 首次展开Part 2实测只请求中日两个文件；同页重复展开复用内存。关闭页面后断网重开，翻译从独立Cache Storage恢复。未下载的阅读翻译提示联网，并在同一页恢复网络后正常重试。真实SW升级保留已缓存译文。收藏快照无需重新下载译文，也随备份跨设备保存。
 
@@ -92,7 +92,7 @@ Japanese derived meanings: 1087 exact entries; Japanese titles: 17 grammar + 22 
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 14893.240025
+ℹ duration_ms 17646.424365
 ```
 
 原独立入口 `voices.mjs`、`saves.mjs`、`forms.mjs`、`diagnosis-logic.mjs`、`prediction-logic.mjs`、`v6/replay-logic.mjs`、`v6/methods-logic.mjs` 均通过；覆盖四口音独立角色、下架ID旧档迁移、四套不重复全卷、24种半卷配额、自适应诊断、词卡不影响估分、平滑日曲线、分句及全部22张方法卡对应例题。`scripts/build-vocab-meanings.mjs --check`通过。
@@ -199,5 +199,7 @@ PASS i18n 430px: real shell activation removes the old shell and preserves all t
 - 语速、静音状态、蓝牙耳机和锁屏返回后的系统声音行为。
 - 联网展开某题型译文后，彻底关闭、飞行模式重新打开，检查译文及收藏复习；未下载的包应提示联网。
 - 深色模式、日文字形、长句换行和底部Home条；导出收藏及练习进度，再导入同一备份。
+
+最终3条日语自然度修订后，主校验、全部75个逻辑测试与交卷回顾三宽测试再次通过。
 
 翻译审校的实际修改与重点复核列表见 [BILINGUAL_QA.md](BILINGUAL_QA.md)。已知源英文疑点 `read-bikes` 保留到独立内容修订，本轮没有改动英文原题。
