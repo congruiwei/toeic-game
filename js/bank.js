@@ -1,3 +1,5 @@
+import { japaneseMeaning, conflictingJapaneseMeanings, vocabularyFormatAt, selectVocabularyFormat, semanticSlotsBefore } from './vocabulary-language.js';
+export { ensureVocabLanguage, ensureVocabMeanings, japaneseMeaning } from './vocabulary-language.js';
 import {errorDue} from './review-scheduler.js';
 import {screenedQueue} from './screening.js';
 import { difficulty } from './state.js';
@@ -32,6 +34,7 @@ export { bank, catalog };
 export const skillFor = (mode) =>
   ({ vocab: 'vocab', grammar: 'grammar', reading: 'reading' })[mode] || 'listening';
 export const formats = ['meaning', 'english', 'sound', 'cloze', 'match'];
+export const vocabularyFormats = [...formats, 'meaning-ja', 'english-ja'];
 function hash(str) {
   let n = 2166136261;
   for (const c of str) n = Math.imul(n ^ c.charCodeAt(0), 16777619);
@@ -60,8 +63,12 @@ function sameSound(a,b) {
 
 // Used both by the lesson and by the bank validator. Seeds keep a question stable on resume.
 export function vocabularyOptions(word, format, words) {
-  const key = format === 'meaning' ? 'zh' : format === 'match' ? 'paraphrase' : 'word';
-  const answer = word[key], seed = word.id + ':' + format;
+  const japanese = ['meaning-ja', 'english-ja'].includes(format);
+  const baseFormat = japanese ? format.slice(0, -3) : format;
+  const key = baseFormat === 'meaning' ? 'zh' : baseFormat === 'match' ? 'paraphrase' : 'word';
+  const value = item => format === 'meaning-ja' ? japaneseMeaning(item.id) : item[key];
+  const answer = value(word), seed = word.id + ':' + format;
+  const targetMeaning = japanese ? japaneseMeaning(word.id) : null;
   if (format === 'cloze' && word.clozeDistractors?.length === 3) {
     return seedSort([answer, ...word.clozeDistractors], seed);
   }
@@ -70,14 +77,27 @@ export function vocabularyOptions(word, format, words) {
   const spelling = normalize(word.word);
   const ipa = word.ipa.replace(/[ˈˌ.\s]/gu, '');
   const byWord = new Map(words.map(w => [normalize(w.word), w]));
+  const allSenses = new Map();
+  if (japanese) for (const other of words) {
+    const head = normalize(other.word);
+    if (!allSenses.has(head)) allSenses.set(head, []);
+    allSenses.get(head).push(other);
+  }
   function add(text, other) {
     if (options.size >= 4 || options.has(normalize(text)) || (other && normalize(other.word) === spelling)) return;
     if (word.avoidWith?.some(w => normalize(w) === normalize(other?.word || text)) || other?.avoidWith?.some(w => normalize(w) === spelling)) return;
     if (other && (senses(other.zh).some(s => known.has(s)) || normalize(other.paraphrase) === normalize(word.paraphrase))) return;
+    if (japanese) {
+      // A spelling option can denote any of its senses, not only the final
+      // record in byWord. Unknown external confusables cannot be vetted.
+      if (!other) return;
+      const meanings = format === 'english-ja' ? allSenses.get(normalize(other.word)) : [other];
+      if (meanings.some(candidate => conflictingJapaneseMeanings(targetMeaning, japaneseMeaning(candidate.id)))) return;
+    }
     if (format === 'sound' && (sameSound(spelling,normalize(text)) || other?.ipa.replace(/[ˈˌ.\s]/gu,'') === ipa)) return;
     options.set(normalize(text),text);
   }
-  if (format === 'sound' || format === 'english') {
+  if (format === 'sound' || baseFormat === 'english') {
     for (const text of seedSort(word.confusables || [], seed)) add(text, byWord.get(normalize(text)));
   }
   if (options.size < 4) {
@@ -87,10 +107,11 @@ export function vocabularyOptions(word, format, words) {
       tie:hash(seed+w.id),
     })).sort((a,b) => a.rank-b.rank || a.tie-b.tie);
     for (const {word:other} of candidates) {
-      add(other[key],other);
+      add(value(other),other);
       if (options.size === 4) break;
     }
   }
+  if (japanese && options.size !== 4) throw new Error('日语词义题缺少三个无歧义干扰项：' + word.id);
   return seedSort([...options.values()],seed);
 }
 export const blank = (text, word) =>
@@ -103,16 +124,20 @@ export function question(ref) {
   if (!d) return null;
   if (ref.mode === 'vocab') {
     const f = ref.format || 'meaning',
-      key = f === 'meaning' ? 'zh' : f === 'match' ? 'paraphrase' : 'word';
+      key = f === 'meaning' ? 'zh' : f === 'match' ? 'paraphrase' : 'word',
+      ja = ['meaning-ja', 'english-ja'].includes(f) ? japaneseMeaning(d.id) : null;
     return {
       ...d,
-      context: d.sense && ['meaning','match'].includes(f) ? d.example : '',
+      context: d.sense && ['meaning','meaning-ja','match'].includes(f) ? d.example : '',
       skill: 'vocab',
-      answer: d[key],
+      answer: f === 'meaning-ja' ? ja : d[key],
+      ...(ja ? {meaningJa: ja} : {}),
       options: vocabularyOptions(d, f, bank.vocab),
       prompt: {
         meaning: d.word,
         english: d.zh,
+        'meaning-ja': d.word,
+        'english-ja': ja,
         sound: '听发音，选出对应的单词。',
         cloze: blank(d.example, d.word),
         match: d.word,
@@ -120,6 +145,8 @@ export function question(ref) {
       instruction: {
         meaning: '选择正确的中文释义',
         english: '选择对应的英文单词',
+        'meaning-ja': '选择正确的日语释义',
+        'english-ja': '根据日语释义选择英文单词',
         sound: '听音辨词',
         cloze: '为例句选择合适的单词',
         match: '选择意思相近的表达',
@@ -167,8 +194,10 @@ export function question(ref) {
   };
 }
 export function select(s, mode, count = 5, filter = '') {
+  const shift = Object.values(s.words).reduce((n, w) => n + w.tries, 0);
+  const preference = s.settings?.vocabLanguage || 'both';
   if(mode==='vocab' && filter==='screen-queue'){
-    return screenedQueue(s).filter(id=>catalog.has(id)).slice(0,count).map(id=>({mode:'vocab',id,format:'meaning'}));
+    return screenedQueue(s).filter(id=>catalog.has(id)).slice(0,count).map((id,i)=>({mode:'vocab',id,format:selectVocabularyFormat('meaning',preference,semanticSlotsBefore(shift)+i)}));
   }
   if (mode === 'errors')
     return Object.values(s.errors)
@@ -207,11 +236,10 @@ export function select(s, mode, count = 5, filter = '') {
     const topic = pool[0].data.topic.id;
     pool = pool.filter((o) => o.data.topic.id === topic);
   }
-  const shift = Object.values(s.words).reduce((n, w) => n + w.tries, 0);
   return pool
     .slice(0, count)
     .map((o, i) => ({
       ...o.ref,
-      ...(mode === 'vocab' ? { format: formats[(i + shift) % formats.length] } : {}),
+      ...(mode === 'vocab' ? { format: vocabularyFormatAt(formats, i + shift, preference) } : {}),
     }));
 }

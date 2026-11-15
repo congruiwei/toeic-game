@@ -22,7 +22,7 @@ function herbarium() {
 function cardBody(word) {
   return `<div class="lib-card-body">
     <p class="lib-phonetic" lang="en">${escape(word.ipa)} · ${escape(word.pos)}</p>
-    <p>${escape(word.zh)}</p>
+    <p lang="zh-CN">${escape(word.zh)}</p><p lang="ja" data-vocab-ja="${escape(word.id)}">正在载入日语释义…</p>
     <blockquote lang="en">${escape(word.example)}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
     <dl><dt>常见搭配</dt><dd lang="en">${escape(word.collocation)}</dd>
       <dt>同义替换</dt><dd lang="en">${escape(word.paraphrase)}</dd></dl>
@@ -79,7 +79,7 @@ function errorsView(errors,state) {
     <button type="button" class="lib-button" data-act="start" data-mode="errors" ${due ? '' : 'disabled'}>复习到期题 ${icon('play',15)}</button></section>
     <div class="lib-cards">${errors.map(err => {
       const {ref,data} = catalog.get(err.ref.id);
-      const q = question({...err.ref, mode:ref.mode});
+      const q = ref.mode==='vocab'?{prompt:data.word,level:data.level}:question({...err.ref, mode:ref.mode});
       const name = ref.mode === 'vocab' ? data.word : ref.mode === 'part2' ? data.audio : q.prompt;
       return `<button type="button" class="lib-error-row" data-act="review-one" data-id="${escape(ref.id)}">
         <span><small>${escape(errorLabels[ref.mode])} · ${q.level} 级</small>

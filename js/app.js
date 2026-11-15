@@ -28,7 +28,7 @@ import {
   thresholds,
   reward,
 } from './state.js';
-import { bank, catalog, loadBank, select, question, formats } from './bank.js';
+import { bank, catalog, loadBank, select, question, formats, vocabularyFormats, ensureVocabLanguage, ensureVocabMeanings, japaneseMeaning } from './bank.js';
 import { hush, speak, tone, voices, quality, voiceKey } from './audio.js';
 const openedUnder=navigator.serviceWorker?.controller;
 let predictionRange='30',predictionSeries='total';
@@ -199,10 +199,45 @@ function hydrateTranslations(scope) {
     if(scope.isConnected)ui.mountTranslations(scope,s.settings,toast);
   }).catch(()=>toast('翻译界面暂时未能打开，请重试。'));
 }
+let pendingWord=null;
+function wordLanguagePending() {
+  const ref=s.session?.items[s.session.index];
+  if(page!=='practice'||ref?.mode!=='vocab'||!['meaning-ja','english-ja'].includes(ref.format))return false;
+  try{japaneseMeaning(ref.id);return false;}catch(error){if(error.code!=='VOCAB_JA_NOT_READY')throw error;}
+  root.innerHTML='<section class="lesson-shell"><p role="status">正在载入日语词义…</p><button class="secondary" data-act="home">保存离开</button></section>';
+  root.setAttribute('aria-busy','true');
+  const key=ref.id+':'+ref.format;
+  if(pendingWord!==key){
+    pendingWord=key;
+    ensureVocabLanguage(ref).then(()=>{
+      if(pendingWord!==key)return;
+      pendingWord=null;
+      if(page==='practice')render();
+    }).catch(error=>{
+      if(pendingWord!==key)return;
+      pendingWord=null;
+      if(page==='practice'){
+        root.setAttribute('aria-busy','false');
+        root.innerHTML='<section class="lesson-shell"><p>'+esc(error.message)+'</p><p>练习进度已保留。</p><button class="primary" data-act="resume">重新载入</button> <button class="secondary" data-act="home">回到小岛</button></section>';
+      }
+    });
+  }
+  return true;
+}
+function hydrateWordMeanings(scope) {
+  const nodes=[...scope.querySelectorAll('[data-vocab-ja]')];if(!nodes.length)return;
+  const fill=()=>{for(const node of nodes)if(node.isConnected)node.textContent=japaneseMeaning(node.dataset.vocabJa);};
+  try{fill();}catch{
+    ensureVocabMeanings().then(fill).catch(()=>{
+      for(const node of nodes)if(node.isConnected)node.innerHTML='<button class="secondary" data-act="load-word-meanings">日语释义未下载 · 点击重试</button>';
+    });
+  }
+}
 function render() {
   stopReplay();
   applyPrefs();
   frame();
+  if(wordLanguagePending())return;
   root.innerHTML =
     page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
@@ -212,6 +247,7 @@ function render() {
           ? libraryView(s, tab, themeFilter)
           : practiceView(s);
   hydrateTranslations(root);
+  hydrateWordMeanings(root);
   root.setAttribute('aria-busy', 'false');
   if(page==='practice')showFirstMethod();
   if (page === 'practice' || page === 'diagnosis') startClock();
@@ -277,6 +313,7 @@ function modal(content, cls = '') {
   if (!dialog.open) dialog.showModal();
   dialog.scrollTop = 0;
   hydrateTranslations(dialog);
+  hydrateWordMeanings(dialog);
 }
 function close() {
   dialog.close();
@@ -346,6 +383,7 @@ function settings() {
        `<label class="setting">${n}<input type="checkbox" data-pref="${v}" ${p[v] ? 'checked' : ''}></label>`,
    )
    .join('')}
+ <label class="setting">单词题释义语言<select data-pref="vocabLanguage">${[['zh','中文'],['ja','日语'],['both','混合']].map(([v,n])=>option(v,n,p.vocabLanguage||'both')).join('')}</select></label>
  <label class="setting">翻译语言<select data-pref="translationLanguage">${[['zh','中'],['ja','日'],['both','中日']].map(([v,n])=>option(v,n,p.translationLanguage||'both')).join('')}</select></label>
  <label class="setting">目标记忆率<select data-pref="retention">${[.85,.90,.95].map(r=>option(r,Math.round(100*r)+'%',p.retention??.90)).join('')}</select></label><p class="fine muted">目标记忆率越高，复习越频繁。</p>
  <label class="setting">朗读速度 <span><output id="rate-val">${p.rate}×</output> <input aria-label="朗读速度" type="range" min="0.75" max="1.2" step="0.05" value="${p.rate}" data-pref="rate"></span></label>
@@ -370,8 +408,8 @@ function start(mode, filter = '', only = '', force = false, format = '', methodR
   }
   let items = methodRef ? [methodRef] : only
     ? [s.errors[only]?.ref].filter(Boolean)
-    : select(s, mode, 5, formats.includes(filter) ? '' : filter);
-  if (mode === 'vocab' && formats.includes(format || filter))
+    : select(s, mode, 5, vocabularyFormats.includes(filter) ? '' : filter);
+  if (mode === 'vocab' && vocabularyFormats.includes(format || filter))
     items = items.map((r) => ({ ...r, format: format || filter }));
   if (!items.length) {
     toast('这里暂时没有待复习的题目');
@@ -526,6 +564,7 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a==='load-word-meanings'){hydrateWordMeanings(document);return;}
   if(a==='translate') {
     const panel=el.closest('.translations'),id=panel?.dataset.translationId;
     const study=(panel?.hasAttribute('data-study-translation') && page==='library') || (panel?.hasAttribute('data-translation-method') && panel.closest('[data-method-card]') && methodById(id));

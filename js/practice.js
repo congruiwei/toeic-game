@@ -81,7 +81,7 @@ function choices(q, ref, run) {
     const wrong = answered && option === run.selected && !correct;
     const status = correct ? '正确答案' : wrong ? '你的选择' : '';
     return `<button type="button" class="lesson-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}" data-act="answer" data-i="${i}" ${answered ? 'disabled' : ''} aria-label="${esc([letter(i),(!audioOnly ? option : ''),status].filter(Boolean).join(' '))}">
-      <span class="lesson-letter">${letter(i)}</span><span>${audioOnly ? '选择 ' + letter(i) : esc(option)}</span>
+      <span class="lesson-letter">${letter(i)}</span><span lang="${ref.format==='meaning-ja'?'ja':ref.format==='meaning'?'zh-CN':'en'}">${audioOnly ? '选择 ' + letter(i) : esc(option)}</span>
       ${status ? '<span class="lesson-option-mark">' + icon(correct ? 'check' : 'close',18) + '</span>' : ''}</button>`;
   }).join('')}</div>${answered ? '' : '<button type="button" class="secondary lesson-unknown" data-act="unknown">不知道</button>'}`;
 }
@@ -90,7 +90,7 @@ function vocabNote(q) {
   return `<section class="lesson-panel lesson-word-note">
     <div class="lesson-meta"><span>${icon('cards', 16)} 词卡</span><span>${esc(q.theme)}</span></div>
     <div class="lesson-word-line"><h3 lang="en">${esc(q.word)}</h3><button type="button" data-act="play" class="lesson-speaker" aria-label="播放单词发音">${icon('sound',20)}</button></div>
-    <p class="lesson-ipa" lang="en">${esc(q.ipa)} · ${esc(q.pos)}</p><p>${esc(q.zh)}</p>
+    <p class="lesson-ipa" lang="en">${esc(q.ipa)} · ${esc(q.pos)}</p><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p>
     <blockquote lang="en">${mark(q.example, q.word)}</blockquote>
     <dl class="lesson-terms"><dt>常见搭配</dt><dd lang="en">${esc(q.collocation)}</dd><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>
   </section>`;
@@ -104,7 +104,7 @@ function feedback(q, ref, run) {
     <h2>${icon(correct ? 'check' : 'note',19)} ${correct ? '答对了' : run.selected === UNKNOWN ? '不知道 · 已加入复习' : '再记一次'}</h2>
     <p><b>正确答案</b> <span>${esc(q.answer)}</span></p>
     ${ref.mode==='part1'?`<p><b>画面说明</b> ${esc(q.description)}</p>`:''}
-    ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p></div>`}
+    ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${esc(q.en)}</p><p lang="zh-CN">${esc(q.zh)}</p></div>`}
     ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>` : ''}
     ${replayView(q,ref)}
     ${reviewTools(ref.id)}
@@ -137,11 +137,11 @@ export function practiceView(state) {
     ${ref.mode === 'dialogue' && q.set.graphic ? graphic(q.set.graphic) : ''}
     <div class="lesson-panel lesson-question">
       ${q.set && ref.mode !== 'reading' ? `<p class="lesson-source-title">${esc(q.set.title)}</p>` : ''}
-      <h2 class="${ref.mode === 'vocab' && !['cloze','sound'].includes(ref.format) ? 'lesson-word' : ''}" ${['reading','grammar','dialogue','dictation'].includes(ref.mode) ? 'lang="en"' : ''}>${esc(q.prompt)}</h2>
-      ${ref.mode === 'vocab' && ['meaning','match'].includes(ref.format) ? `<p class="lesson-ipa">${esc(q.ipa)} · ${esc(q.pos)}</p>` : ''}
+      <h2 class="${ref.mode === 'vocab' && !['cloze','sound'].includes(ref.format) ? 'lesson-word' : ''}" lang="${ref.format==='english-ja'?'ja':ref.format==='english'?'zh-CN':['reading','grammar','dialogue','dictation','vocab'].includes(ref.mode)?'en':'zh-CN'}">${esc(q.prompt)}</h2>
+      ${ref.mode === 'vocab' && ['meaning','meaning-ja','match'].includes(ref.format) ? `<p class="lesson-ipa">${esc(q.ipa)} · ${esc(q.pos)}</p>` : ''}
       ${q.context ? `<blockquote lang="en">${mark(q.context,q.word)}</blockquote>` : ''}
       ${needPlayer ? player(q, ref, answered) : ''}
-      ${!needPlayer && ref.mode === 'vocab' && ['meaning','match'].includes(ref.format) ? '<button type="button" class="lesson-listen" data-act="play">'+icon('sound',16)+' 听发音</button>' : ''}
+      ${!needPlayer && ref.mode === 'vocab' && ['meaning','meaning-ja','match'].includes(ref.format) ? '<button type="button" class="lesson-listen" data-act="play">'+icon('sound',16)+' 听发音</button>' : ''}
     </div>
     ${choices(q, ref, run)}
     ${answered ? feedback(q, ref, run) : ''}

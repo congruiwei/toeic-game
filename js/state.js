@@ -26,7 +26,7 @@ export function fresh() {
     session: null,
     lastVisit: 0,
     methodsSeen: [],
-    settings: { translationLanguage:"both", translationExpanded:false, methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
+    settings: { vocabLanguage:"both", translationLanguage:"both", translationExpanded:false, methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
   };
 }
 const record = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
@@ -97,6 +97,8 @@ export function decode(raw, catalog) {
   if (x.methodsSeen!==undefined && (!Array.isArray(x.methodsSeen) || x.methodsSeen.length>160 || !x.methodsSeen.every(safeKey))) throw Error('方法卡记录有误');
   if (x.settings.translationLanguage!==undefined && !['zh','ja','both'].includes(x.settings.translationLanguage)) throw Error('翻译语言设置有误');
   if (x.settings.translationExpanded!==undefined && typeof x.settings.translationExpanded!=='boolean') throw Error('翻译展开设置有误');
+  if(x.settings.vocabLanguage!==undefined && !['zh','ja','both'].includes(x.settings.vocabLanguage))throw Error('单词题释义语言有误');
+  x.settings.vocabLanguage ??= 'both';
   x.settings.translationLanguage ??= 'both';
   x.settings.translationExpanded ??= false;
   x.methodsSeen ??= [];

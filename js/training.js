@@ -39,6 +39,8 @@ export function configureView(mode, state) {
         ['', '混合练习'],
         ['meaning', '英文选中文'],
         ['english', '中文选英文'],
+        ['meaning-ja','英文选日语'],
+        ['english-ja','日语选英文'],
         ['sound', '听音辨词'],
         ['cloze', '例句填空'],
         ['match', '同义替换'],
