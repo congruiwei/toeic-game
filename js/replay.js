@@ -11,6 +11,8 @@ export function splitSentences(text) {
   for (const match of text.matchAll(/[.!?]+(?:["'”’)]*)(?=\s|$)/g)) {
     const end = match.index + match[0].length;
     const segment = text.slice(start, end).trim();
+    // A quoted abbreviation or quoted question may continue into the surrounding sentence.
+    if (/["”’]$/.test(match[0]) && /^[a-z]/.test(text.slice(end).trimStart())) continue;
     if (match[0] === '.' && end < text.length) {
       const next = text.slice(end).trimStart();
       if (/(?:\b(?:Mr|Mrs|Ms|Dr|Prof|Sr|Jr|St|e\.g|i\.e)|\b[A-Z])\.$/.test(segment)) continue;
