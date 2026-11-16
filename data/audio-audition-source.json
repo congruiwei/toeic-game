@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "model": "Kokoro-82M v1.0",
+  "sources": [
+    {
+      "label": "Kokoro 作者：声音等级与日语 CC BY 来源",
+      "url": "https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md"
+    },
+    {
+      "label": "Kokoro 作者：v1.0 模型卡、Apache-2.0 与训练数据署名",
+      "url": "https://huggingface.co/hexgrad/Kokoro-82M"
+    },
+    {
+      "label": "Koniwa 作者：TNC 手袋を買いに原始朗读元数据",
+      "url": "https://github.com/koniwa/koniwa/blob/master/data/tnc/tnc__tebukurowokaini.json"
+    },
+    {
+      "label": "Koniwa 作者：TNC 蜘蛛の糸原始朗读元数据",
+      "url": "https://github.com/koniwa/koniwa/blob/master/data/tnc/tnc__kumonoito.json"
+    },
+    {
+      "label": "Creative Commons：CC BY 3.0 许可",
+      "url": "https://creativecommons.org/licenses/by/3.0/"
+    }
+  ],
+  "voices": [
+    {
+      "id": "af_heart",
+      "name": "Heart",
+      "lang": "en-US",
+      "group": "us-female",
+      "gender": "female",
+      "grade": "A"
+    },
+    {
+      "id": "af_bella",
+      "name": "Bella",
+      "lang": "en-US",
+      "group": "us-female",
+      "gender": "female",
+      "grade": "A-"
+    },
+    {
+      "id": "af_nicole",
+      "name": "Nicole",
+      "lang": "en-US",
+      "group": "us-female",
+      "gender": "female",
+      "grade": "B-"
+    },
+    {
+      "id": "am_fenrir",
+      "name": "Fenrir",
+      "lang": "en-US",
+      "group": "us-male",
+      "gender": "male",
+      "grade": "C+"
+    },
+    {
+      "id": "am_michael",
+      "name": "Michael",
+      "lang": "en-US",
+      "group": "us-male",
+      "gender": "male",
+      "grade": "C+"
+    },
+    {
+      "id": "am_puck",
+      "name": "Puck",
+      "lang": "en-US",
+      "group": "us-male",
+      "gender": "male",
+      "grade": "C+"
+    },
+    {
+      "id": "bf_emma",
+      "name": "Emma",
+      "lang": "en-GB",
+      "group": "uk-female",
+      "gender": "female",
+      "grade": "B-"
+    },
+    {
+      "id": "bf_isabella",
+      "name": "Isabella",
+      "lang": "en-GB",
+      "group": "uk-female",
+      "gender": "female",
+      "grade": "C"
+    },
+    {
+      "id": "bm_fable",
+      "name": "Fable",
+      "lang": "en-GB",
+      "group": "uk-male",
+      "gender": "male",
+      "grade": "C"
+    },
+    {
+      "id": "bm_george",
+      "name": "George",
+      "lang": "en-GB",
+      "group": "uk-male",
+      "gender": "male",
+      "grade": "C"
+    },
+    {
+      "id": "jf_alpha",
+      "name": "Alpha",
+      "lang": "ja-JP",
+      "group": "ja",
+      "gender": "female",
+      "grade": "C+"
+    },
+    {
+      "id": "jf_tebukuro",
+      "name": "Tebukuro",
+      "lang": "ja-JP",
+      "group": "ja",
+      "gender": "female",
+      "grade": "C",
+      "attribution": {
+        "name": "テレビ西日本（朗読：四位 知加子）「手袋を買いに」／Koniwa tnc",
+        "url": "https://www.youtube.com/watch?v=XrsgPQSoMog",
+        "license": "CC BY 3.0"
+      }
+    },
+    {
+      "id": "jm_kumo",
+      "name": "Kumo",
+      "lang": "ja-JP",
+      "group": "ja",
+      "gender": "male",
+      "grade": "C-",
+      "attribution": {
+        "name": "テレビ西日本（朗読：田久保 尚英）「蜘蛛の糸」／Koniwa tnc",
+        "url": "https://www.youtube.com/watch?v=0gs2UkcR84I",
+        "license": "CC BY 3.0"
+      }
+    }
+  ],
+  "samples": [
+    {
+      "id": "en-part2",
+      "title": "Part 2：野餐准备与时间",
+      "language": "en",
+      "kind": "part2",
+      "segments": [
+        {
+          "key": "p2-060/audio/0",
+          "text": "Who's bringing the tea for the picnic?"
+        },
+        {
+          "key": "p2-060/options/0/0",
+          "text": "We need four tea bags."
+        },
+        {
+          "key": "p2-060/options/1/0",
+          "text": "Lunch starts at half past twelve."
+        },
+        {
+          "key": "p2-060/options/2/0",
+          "text": "Jill's bringing a pot of tea."
+        }
+      ]
+    },
+    {
+      "id": "en-part3",
+      "title": "Part 3：预约办公室窗户测量",
+      "language": "en",
+      "kind": "part3",
+      "segments": [
+        {
+          "key": "p3-g09/turns/0/0",
+          "text": "I'd like someone to measure my office windows for new blinds.",
+          "speaker": "A"
+        },
+        {
+          "key": "p3-g09/turns/1/0",
+          "text": "Our installer can visit on Tuesday morning or Thursday afternoon.",
+          "speaker": "B"
+        },
+        {
+          "key": "p3-g09/turns/2/0",
+          "text": "Thursday is better because I have meetings all morning on Tuesday.",
+          "speaker": "A"
+        },
+        {
+          "key": "p3-g09/turns/3/0",
+          "text": "I'll book that visit and send a text with the installer's name.",
+          "speaker": "B"
+        }
+      ]
+    },
+    {
+      "id": "en-part4",
+      "title": "Part 4：商店收银与取货广播",
+      "language": "en",
+      "kind": "part4",
+      "segments": [
+        {
+          "key": "p4-g01/turns/0/0",
+          "text": "Good afternoon, shoppers.",
+          "speaker": "A"
+        },
+        {
+          "key": "p4-g01/turns/0/1",
+          "text": "Our upstairs checkout is closed for the rest of the day.",
+          "speaker": "A"
+        },
+        {
+          "key": "p4-g01/turns/0/2",
+          "text": "Please pay for all items at the front counter on the ground floor.",
+          "speaker": "A"
+        },
+        {
+          "key": "p4-g01/turns/0/3",
+          "text": "If you are picking up an online order, go to the small desk beside the front counter.",
+          "speaker": "A"
+        },
+        {
+          "key": "p4-g01/turns/0/4",
+          "text": "Have your order number ready.",
+          "speaker": "A"
+        },
+        {
+          "key": "p4-g01/turns/0/5",
+          "text": "Thank you for shopping with us.",
+          "speaker": "A"
+        }
+      ]
+    },
+    {
+      "id": "en-vocab-receipt",
+      "title": "词卡例句：收据与报销",
+      "language": "en",
+      "kind": "vocab",
+      "segments": [
+        {
+          "key": "v-receipt/example/0",
+          "text": "Could you email me the receipt so I can claim the taxi fare?"
+        }
+      ]
+    },
+    {
+      "id": "en-vocab-fare",
+      "title": "词卡例句：船票价格与包含项目",
+      "language": "en",
+      "kind": "vocab",
+      "segments": [
+        {
+          "key": "v-fare/example/0",
+          "text": "Our ferry fare covers passage only; the six-dollar ticket pays for the crossing and includes no excursion."
+        }
+      ]
+    },
+    {
+      "id": "ja-invoice",
+      "title": "日语：礼貌询问发票合计",
+      "language": "ja",
+      "kind": "japanese",
+      "segments": [
+        {
+          "key": "p2-012/audio/0",
+          "text": "請求書の合計金額を確認していただけますか。"
+        }
+      ]
+    },
+    {
+      "id": "ja-receipt",
+      "title": "日语：索取收据以报销",
+      "language": "ja",
+      "kind": "japanese",
+      "segments": [
+        {
+          "key": "v-receipt/example/0",
+          "text": "タクシー代を精算したいので、領収書をメールで送っていただけますか。"
+        }
+      ]
+    },
+    {
+      "id": "ja-announcement",
+      "title": "日语：收银台营业结束广播",
+      "language": "ja",
+      "kind": "japanese",
+      "segments": [
+        {
+          "key": "p4-g01/turns/0/1",
+          "text": "上階のレジは本日の営業を終了いたしました。"
+        }
+      ]
+    },
+    {
+      "id": "ja-approval",
+      "title": "日语：书面批准与商务敬语",
+      "language": "ja",
+      "kind": "japanese",
+      "segments": [
+        {
+          "key": "read-proof/documents/0/text/3",
+          "text": "最終校正データの書面によるご承認をいただいてから、印刷を開始します。"
+        }
+      ]
+    },
+    {
+      "id": "ja-price",
+      "title": "日语：追加修改的金额",
+      "language": "ja",
+      "kind": "japanese",
+      "segments": [
+        {
+          "key": "read-proof/documents/0/text/1",
+          "text": "お客様のご希望でさらに修正する場合は、1回 $35 です。",
+          "spoken": "お客様のご希望でさらに修正する場合は、いっかい三十五ドルです。"
+        }
+      ]
+    }
+  ]
+}

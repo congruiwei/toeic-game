@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-34';
+const CACHE = 'toeic-island-shell-35';
 const files = [
   './',
   './index.html',
@@ -82,12 +82,28 @@ async function updateBank(request, cache, translation=false) {
   return (await cache.match(request)) || Response.error();
 }
 
+// The optional audition is fetched only when visited. Its object-shaped JSON
+// is neither a question-bank array nor a translation pack; audio is not prefetched.
+const auditionFiles = new Set(['audition.html','audition.css','js/audition.js',
+  'data/audio-audition-source.json','data/audio-audition-manifest.json']
+  .map(path=>new URL(path,self.registration.scope).pathname));
+async function auditionResource(request,cache) {
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),10000);
+  try {
+    const response=await fetch(request,{cache:'no-cache',signal:controller.signal});
+    if(response.ok){await cache.put(request,response.clone());return response;}
+  } catch { /* A previously opened audition can still display its controls offline. */ }
+  finally { clearTimeout(timer); }
+  return (await cache.match(request)) || Response.error();
+}
+
 self.addEventListener('fetch', (event) => {
   const { request } = event;
   if (request.method !== 'GET' || !request.url.startsWith(self.registration.scope)) return;
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE);
+      if(auditionFiles.has(new URL(request.url).pathname))return auditionResource(request,cache);
       if (request.url.startsWith(new URL('data/i18n/',self.registration.scope).href)) {
         return updateBank(request,await caches.open('toeic-island-translations-v1'),true);
       }

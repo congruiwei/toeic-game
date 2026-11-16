@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7fb">
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./audition.css">
+  <title>声音试听 · 芽语岛</title>
+</head>
+<body>
+  <header class="audition-header">
+    <a class="back-link" href="./index.html">‹ 返回芽语岛</a>
+    <span class="page-label">声音实验室</span>
+  </header>
+  <main id="audition-main">
+    <section class="hero">
+      <span class="eyebrow">听听哪一种更适合你</span>
+      <h1>Kokoro 本地合成试听</h1>
+      <p>用相同样本比较声音，留下喜欢的候选。正式对话会在后续按选定声音分配说话人。</p>
+      <div class="hero-note">这是模型合成语音，不是真人录音。偏好单独保存在本机。</div>
+    </section>
+    <div id="audition-notice" class="notice" role="status" aria-live="polite"></div>
+    <div id="audition-content" aria-busy="true"><section class="panel loading-panel"><p>正在读取声音和样本清单…</p></section></div>
+    <noscript><section class="panel">请启用 JavaScript 后打开试听页。</section></noscript>
+    <footer class="source-footer" id="audition-sources"></footer>
+  </main>
+  <section class="player-bar" aria-label="试听播放器">
+    <div class="player-inner">
+      <div id="audition-status" role="status" aria-live="polite" data-state="idle">选一个样本，点击开始试听</div>
+      <div class="rate-row"><label for="audition-rate">语速 <output id="audition-rate-value" for="audition-rate">1.00×</output></label><input id="audition-rate" type="range" min="0.75" max="1.2" step="0.05" value="1" aria-label="试听语速"></div>
+      <div class="player-actions">
+        <button id="audition-play-current" class="button primary" data-act="audition-current" disabled>播放选中样本</button>
+        <button id="audition-pause" class="button secondary" data-act="audition-pause" disabled>暂停</button>
+        <button id="audition-replay" class="button secondary" data-act="audition-replay" disabled>重播</button>
+      </div>
+      <audio id="audition-audio" preload="none" playsinline></audio>
+    </div>
+  </section>
+  <script type="module" src="./js/audition.js"></script>
+</body>
+</html>

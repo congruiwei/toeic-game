@@ -375,3 +375,9 @@ node tests/v6.cjs
 `node scripts/validate.mjs` 同时验证题库和翻译：完整源 key 集合、无空译文、非英文复制、逐句／表格列对齐、50 条术语规则、释义派生包一致性及39个标题。专名和必要语境变化以精确例外记录，不能用宽泛词表免除检查。机器检查保证结构，语义和商务日语自然度仍需要逐句审校。
 
 `node --test tests/*.test.mjs` 检查源句拆分、翻译缓存、术语、日语词义选项、存档迁移、FSRS、语音筛选等；`tests/v6.cjs` 对全部功能执行375/390/430px回归（390px深色）。`tests/i18n-offline.cjs` 使用真实SW测试断网冷启动和缓存升级，`tests/performance.cjs` 保留可复现的5次冷加载测量。具体命令见README，完整审校和实测结果见 [BILINGUAL_QA.md](BILINGUAL_QA.md)。
+
+### 独立Kokoro试听（音色尚待选择）
+
+`audition.html`只负责试听与记录候选，不修改正式练习的朗读或`sprout-isle.save`。自己的偏好键为`toeic-island-audition-v1`。`data/audio-audition-source.json`保存原题／日语译文的精确key与文本、官方候选等级，`spoken`可显式覆盖数字或特殊读法；`data/audio-audition-manifest.json`按`clips[voiceId][sampleId]`定位完整样本及`segments`逐句音频。每条含`src/duration/bytes/sha256`，源文件SHA与完成标记防止半份或跨文本版本发布。
+
+音频在`audio/audition/`，点击才下载，使用同一个HTMLAudioElement播放与双人试配。系统日语通过直接点击触发speechSynthesis。SW35为试听五个页面／清单资源提供按访问更新的专用分支；未加入安装预缓存，也不把对象清单当成题库数组处理。AAC、模型生成工具及外部环境的说明见 [KOKORO-AUDITION.md](KOKORO-AUDITION.md)。正式全库音频、离线批量下载与点读将在完成选声后实施。

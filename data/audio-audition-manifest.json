@@ -1,0 +1,2279 @@
+{
+  "version": 1,
+  "model": "Kokoro-82M v1.0",
+  "complete": true,
+  "generation": {
+    "recipe": "audition-v1-misaki-094-trim55-pad80-120-lufs16-aac48",
+    "modelSha256": "beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a",
+    "voicesSha256": "bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d",
+    "packages": {
+      "kokoro-onnx": "0.6.1",
+      "misaki": "0.9.4",
+      "onnxruntime": "1.23.2",
+      "soundfile": "0.14.0",
+      "numpy": "2.5.5"
+    },
+    "encoding": "lufs16-tp3-aac48-decoded-4x-peak095",
+    "sourceSha256": "e7811d8cb9ffba903d63571ea57b002c556fd9f4e64c5664efcd04ebd74393ff"
+  },
+  "clips": {
+    "af_heart": {
+      "en-part2": {
+        "src": "./audio/audition/af_heart/en-part2.m4a",
+        "duration": 8.0,
+        "bytes": 49591,
+        "sha256": "7c7b1e9507666ec3750bbe20977a19be86f2579175d1c21d685a0161433236c3",
+        "decodedPeak": 0.744783,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_heart/en-part2-01.m4a",
+            "duration": 1.86,
+            "bytes": 12690,
+            "sha256": "1e20463b2e0bff5304903cf3988cc75505fd23f7895798a66d90349ccbcc2e8f",
+            "decodedPeak": 0.715208,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part2-02.m4a",
+            "duration": 1.42,
+            "bytes": 10252,
+            "sha256": "8f74d267d86ff03375b95e12e3b971a46b10827b56a32edc38658d422e0943d0",
+            "decodedPeak": 0.68587,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part2-03.m4a",
+            "duration": 1.84,
+            "bytes": 12536,
+            "sha256": "c9a8af6a9e902f2843551d9966d980293b6e352a4f790878e1cff1f08b9e7f82",
+            "decodedPeak": 0.711779,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part2-04.m4a",
+            "duration": 1.6,
+            "bytes": 11196,
+            "sha256": "b9c425c815ff4444f259f35bf8ce2c33e1ee2c41204fc94f57bd7e404f57ff23",
+            "decodedPeak": 0.697019,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/af_heart/en-part3.m4a",
+        "duration": 15.6,
+        "bytes": 98226,
+        "sha256": "d692996715f33dea99e409548841887f5362ec1561fea870822232ef24a9f03d",
+        "decodedPeak": 0.943593,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_heart/en-part3-01.m4a",
+            "duration": 3.5,
+            "bytes": 22210,
+            "sha256": "5b9995f36ac99b7e36442fee46dc7cb8d751fe6b6ae48b8a301c41af3eb8bdd2",
+            "decodedPeak": 0.757306,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part3-02.m4a",
+            "duration": 4.0,
+            "bytes": 25766,
+            "sha256": "c94630e41adc1382668581c9598b03af016c30b5bd13ae44b3b9391e7841183d",
+            "decodedPeak": 0.737407,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part3-03.m4a",
+            "duration": 3.7,
+            "bytes": 23863,
+            "sha256": "e01003ff585317e668ba2cbc018aa5bbe7cd9ce4ce0780117748bc07a95ce344",
+            "decodedPeak": 0.733021,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part3-04.m4a",
+            "duration": 3.4,
+            "bytes": 21644,
+            "sha256": "b521dd9c94f93146c33dd0c12954da01c773eada9057b3ea6de26e30e3702aaf",
+            "decodedPeak": 0.738334,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/af_heart/en-part4.m4a",
+        "duration": 16.8,
+        "bytes": 111054,
+        "sha256": "3ed351a64a5c4237f5158d50b8221c95183f23b42f97e2503bdae346112e5384",
+        "decodedPeak": 0.832707,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_heart/en-part4-01.m4a",
+            "duration": 1.56,
+            "bytes": 10843,
+            "sha256": "740f09dda189e5e97ac84cc62b2bcfa7f35fd2e08e3eba5affb45997d66e286d",
+            "decodedPeak": 0.660273,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part4-02.m4a",
+            "duration": 2.84,
+            "bytes": 18673,
+            "sha256": "a3c48bc8b9bc5bf8ef62d54f3508dfc6c09379ad8f239dce81d357d4fe820646",
+            "decodedPeak": 0.73204,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part4-03.m4a",
+            "duration": 3.5,
+            "bytes": 22652,
+            "sha256": "14a2a893c389fd5f3243dd4c37402cbb35186c3dd32c7b201b25924935ab293a",
+            "decodedPeak": 0.759668,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part4-04.m4a",
+            "duration": 4.7,
+            "bytes": 29781,
+            "sha256": "d9376ec77fb6c3214cf03263aec088be05bbf3e10a3273ae9e2669ba281e5437",
+            "decodedPeak": 0.650977,
+            "headroomDb": -1.352,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part4-05.m4a",
+            "duration": 1.55,
+            "bytes": 10852,
+            "sha256": "db024e3b992d86cd9edcf9e63734024d128baf91f7fdd34feec9fa03f9c1b065",
+            "decodedPeak": 0.696474,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/af_heart/en-part4-06.m4a",
+            "duration": 1.54,
+            "bytes": 10711,
+            "sha256": "d9ba563c693283212608c648ddd07ed9b81e56613a0d5d8d33de0ddaed0f9aab",
+            "decodedPeak": 0.707957,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/af_heart/en-vocab-receipt-01.m4a",
+        "duration": 3.3,
+        "bytes": 21301,
+        "sha256": "b80d9f2fc1374e9448c62a4651a5e72842389f13daa5dc0f277569e24c487036",
+        "decodedPeak": 0.727952,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_heart/en-vocab-receipt-01.m4a",
+            "duration": 3.3,
+            "bytes": 21301,
+            "sha256": "b80d9f2fc1374e9448c62a4651a5e72842389f13daa5dc0f277569e24c487036",
+            "decodedPeak": 0.727952,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/af_heart/en-vocab-fare-01.m4a",
+        "duration": 6.6,
+        "bytes": 41676,
+        "sha256": "97fb1365c86ef99ecc22a8db605c1fe2385ee9509d41cfd5be0038face7c1356",
+        "decodedPeak": 0.742128,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_heart/en-vocab-fare-01.m4a",
+            "duration": 6.6,
+            "bytes": 41676,
+            "sha256": "97fb1365c86ef99ecc22a8db605c1fe2385ee9509d41cfd5be0038face7c1356",
+            "decodedPeak": 0.742128,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "af_bella": {
+      "en-part2": {
+        "src": "./audio/audition/af_bella/en-part2.m4a",
+        "duration": 7.8,
+        "bytes": 49452,
+        "sha256": "2d56bf8d8277ce73e2dc5f227fe0e4a5eb17677ab0d1693dbc118ccbacd1fcf6",
+        "decodedPeak": 0.722268,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_bella/en-part2-01.m4a",
+            "duration": 1.75,
+            "bytes": 11962,
+            "sha256": "1534a40959da9336ca6f4135b4b743ccb4455a01f0322b221e3daeb0706524f5",
+            "decodedPeak": 0.690985,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part2-02.m4a",
+            "duration": 1.37,
+            "bytes": 9806,
+            "sha256": "fddd9f507ab7e509172034fd1df94e2d768a1b8cced9e76f6e63907c7c367ade",
+            "decodedPeak": 0.695407,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part2-03.m4a",
+            "duration": 1.87,
+            "bytes": 12748,
+            "sha256": "3d265e195aa9fa1e7a4076aecc69151e6279939bdee014bdcc96d287180c05c1",
+            "decodedPeak": 0.699034,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part2-04.m4a",
+            "duration": 1.55,
+            "bytes": 10873,
+            "sha256": "2fd461098725fb82809579013644406fb08c5f3b52f79f7662821aacbc18eb35",
+            "decodedPeak": 0.705084,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/af_bella/en-part3.m4a",
+        "duration": 16.6,
+        "bytes": 106321,
+        "sha256": "89065c0d0ee9fa0503398c56e5b8d63a53c8ad7028bd8be0d9cfc595eed5a9cd",
+        "decodedPeak": 0.761026,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_bella/en-part3-01.m4a",
+            "duration": 3.7,
+            "bytes": 23869,
+            "sha256": "9938eea292ac56dc68af5fb9594635b76a13ba9f63a3d5d1beb38c4cbcc93cc4",
+            "decodedPeak": 0.873851,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part3-02.m4a",
+            "duration": 4.2,
+            "bytes": 26793,
+            "sha256": "350b9e01a4c75bf12f5c5f8a9845716e057072ffe2b4441de6ee41bff2e64e29",
+            "decodedPeak": 0.638379,
+            "headroomDb": -1.152,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part3-03.m4a",
+            "duration": 4.0,
+            "bytes": 25428,
+            "sha256": "e57b604e263057ebda9ee2ca143411cc9ad7c29ea612f24efc5a67c31f9c377c",
+            "decodedPeak": 0.736132,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part3-04.m4a",
+            "duration": 3.7,
+            "bytes": 23729,
+            "sha256": "69a993db785d08bf4c85badd9de5e8cd37f6de1dc179623e2705331ffc3127e5",
+            "decodedPeak": 0.764938,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/af_bella/en-part4.m4a",
+        "duration": 16.8,
+        "bytes": 112097,
+        "sha256": "e074b0ccbb3af3ec625f8aa605a11f25958c02b1f600ab5725a1b91776392ec9",
+        "decodedPeak": 0.892083,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_bella/en-part4-01.m4a",
+            "duration": 1.61,
+            "bytes": 11194,
+            "sha256": "91632126301cd91adbc00a6ac7c234199130332005caa850a76d8a7a2405f5f0",
+            "decodedPeak": 0.727597,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part4-02.m4a",
+            "duration": 2.97,
+            "bytes": 19469,
+            "sha256": "60d386f68b980b2bd4b91eac0966039c442ce65a40ce7dab1cf488c20aab949d",
+            "decodedPeak": 0.713036,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part4-03.m4a",
+            "duration": 3.5,
+            "bytes": 22361,
+            "sha256": "326dda556c8c68c6b5096d343aa0a064f9ef3a883aac8e9cfe349740b11df6c5",
+            "decodedPeak": 0.718251,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part4-04.m4a",
+            "duration": 4.7,
+            "bytes": 29852,
+            "sha256": "d6806bbe73589f309137377ffa03a197db430f1b360f30b916c6c4ec4b482861",
+            "decodedPeak": 0.90993,
+            "headroomDb": -0.707,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part4-05.m4a",
+            "duration": 1.39,
+            "bytes": 9728,
+            "sha256": "a3d4064896e95133e0dfb58da7a1f2c470f968f839dc8296791b219bf1a3109e",
+            "decodedPeak": 0.687988,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/af_bella/en-part4-06.m4a",
+            "duration": 1.42,
+            "bytes": 10004,
+            "sha256": "fd88fd13cd6366030c2f2f2e504bbea77279cf362897e1d722fe08f6fc624477",
+            "decodedPeak": 0.879593,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/af_bella/en-vocab-receipt-01.m4a",
+        "duration": 3.5,
+        "bytes": 22738,
+        "sha256": "b0fc591fef9397d33e6c00e255f2144f24a6c3fd9cdff912f7babad49f436df7",
+        "decodedPeak": 0.732159,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_bella/en-vocab-receipt-01.m4a",
+            "duration": 3.5,
+            "bytes": 22738,
+            "sha256": "b0fc591fef9397d33e6c00e255f2144f24a6c3fd9cdff912f7babad49f436df7",
+            "decodedPeak": 0.732159,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/af_bella/en-vocab-fare-01.m4a",
+        "duration": 6.9,
+        "bytes": 43268,
+        "sha256": "e1c15b28a2e8f8bf1892c7ef7ea2345dea80b27f3993e8c72ec15147dfb5f273",
+        "decodedPeak": 0.740572,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_bella/en-vocab-fare-01.m4a",
+            "duration": 6.9,
+            "bytes": 43268,
+            "sha256": "e1c15b28a2e8f8bf1892c7ef7ea2345dea80b27f3993e8c72ec15147dfb5f273",
+            "decodedPeak": 0.740572,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "af_nicole": {
+      "en-part2": {
+        "src": "./audio/audition/af_nicole/en-part2.m4a",
+        "duration": 10.0,
+        "bytes": 63079,
+        "sha256": "886c0c8cc42d4fccb2136c7fba237215003225234f585e6ed2caf8ea0eb2515f",
+        "decodedPeak": 0.815104,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_nicole/en-part2-01.m4a",
+            "duration": 2.29,
+            "bytes": 15213,
+            "sha256": "48880b3f6039f3dc21f9d396c6ae0154aae94038202d5a9a1e8a524093878d2e",
+            "decodedPeak": 0.712088,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part2-02.m4a",
+            "duration": 1.77,
+            "bytes": 12213,
+            "sha256": "504f94f8cd77322dcfad6ec9b44e962a64a1d312f97fc440c7cc4eedd66768f1",
+            "decodedPeak": 0.704585,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part2-03.m4a",
+            "duration": 2.56,
+            "bytes": 16978,
+            "sha256": "c6e9083415e08dc6012e18524929ec268de24645a83137db8d37ecff8ae76e10",
+            "decodedPeak": 0.691532,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part2-04.m4a",
+            "duration": 2.09,
+            "bytes": 13837,
+            "sha256": "8e4a7ab95f183e52dacd5f701589ca6d14112a69236e758c8dd3a7be8040abcc",
+            "decodedPeak": 0.710575,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/af_nicole/en-part3.m4a",
+        "duration": 23.3,
+        "bytes": 147631,
+        "sha256": "768b818c770ade9155855499ca75d9daa6229a26ab5193f32fdec0303c8fcae0",
+        "decodedPeak": 0.770765,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_nicole/en-part3-01.m4a",
+            "duration": 5.1,
+            "bytes": 31995,
+            "sha256": "6ae0218fae39ccdd6ab0898ca4fe4ffbf2e09c0fc561368d7dafc5caa0b06213",
+            "decodedPeak": 0.742041,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part3-02.m4a",
+            "duration": 6.3,
+            "bytes": 39446,
+            "sha256": "c3da30b3389ba7d53d6edd331a090fc5214e65b83bd119464570e06572835dff",
+            "decodedPeak": 0.800097,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part3-03.m4a",
+            "duration": 5.9,
+            "bytes": 37515,
+            "sha256": "24124b21daa9e7d174d1fee44fc095cb5f34bd0e4a8bc59dc6296114935049a7",
+            "decodedPeak": 0.762468,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part3-04.m4a",
+            "duration": 5.0,
+            "bytes": 32002,
+            "sha256": "fc4d53a3fd82bc03472e4d945f762ee21b62c01204f725966a4c413a23d44349",
+            "decodedPeak": 0.751504,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/af_nicole/en-part4.m4a",
+        "duration": 23.2,
+        "bytes": 153125,
+        "sha256": "ec43d91ed1a3e017674d4efcf8186fa2187cce1be55e25d4541f0cd1b12f6071",
+        "decodedPeak": 0.813913,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_nicole/en-part4-01.m4a",
+            "duration": 1.99,
+            "bytes": 13482,
+            "sha256": "07cf5370940f4cc1dbf0f134354e7a937c4f9061c27f6011721d8ccf7247b4d1",
+            "decodedPeak": 0.708303,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part4-02.m4a",
+            "duration": 4.3,
+            "bytes": 27436,
+            "sha256": "966a354c1b2b6d0b87fbd9acf28e4d432e76108bcd0b249d0f9e357e6357c5b2",
+            "decodedPeak": 0.816042,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part4-03.m4a",
+            "duration": 5.2,
+            "bytes": 32929,
+            "sha256": "f2313f8ed2c72496b1bc0ed15401804ec5cfcee15e50731b203d72ee478b94fa",
+            "decodedPeak": 0.736415,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part4-04.m4a",
+            "duration": 7.1,
+            "bytes": 44469,
+            "sha256": "e2bb50acae7f4be3c89ce01ddbc3ad10e237b7a59aa9da40e29f344bf47b2519",
+            "decodedPeak": 0.869365,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part4-05.m4a",
+            "duration": 1.69,
+            "bytes": 11668,
+            "sha256": "20726f096e3091d6c8666e2b008a37f2bf1a52c8a18404fff04b792050664bed",
+            "decodedPeak": 0.696068,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/af_nicole/en-part4-06.m4a",
+            "duration": 1.88,
+            "bytes": 12760,
+            "sha256": "8297fae8da7c5a397844bf6de871ecb5b1723208175d2d4618b63e8cfd36b273",
+            "decodedPeak": 0.71226,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/af_nicole/en-vocab-receipt-01.m4a",
+        "duration": 5.1,
+        "bytes": 32327,
+        "sha256": "4a691397e1854e5135d1352f4bebf0a9dc153d2320440a8999fe89e4f6307b19",
+        "decodedPeak": 0.7378,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_nicole/en-vocab-receipt-01.m4a",
+            "duration": 5.1,
+            "bytes": 32327,
+            "sha256": "4a691397e1854e5135d1352f4bebf0a9dc153d2320440a8999fe89e4f6307b19",
+            "decodedPeak": 0.7378,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/af_nicole/en-vocab-fare-01.m4a",
+        "duration": 9.6,
+        "bytes": 59931,
+        "sha256": "f297b1fc457272b3016f2b5dbc6bf35c14506080b4fa07a75e6b4bac252690e3",
+        "decodedPeak": 0.766573,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/af_nicole/en-vocab-fare-01.m4a",
+            "duration": 9.6,
+            "bytes": 59931,
+            "sha256": "f297b1fc457272b3016f2b5dbc6bf35c14506080b4fa07a75e6b4bac252690e3",
+            "decodedPeak": 0.766573,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "am_fenrir": {
+      "en-part2": {
+        "src": "./audio/audition/am_fenrir/en-part2.m4a",
+        "duration": 7.7,
+        "bytes": 44088,
+        "sha256": "69d0af8cc9b96a5dba72a6b1c91b5538442a8e59d9511da36909386eddb96219",
+        "decodedPeak": 0.779726,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_fenrir/en-part2-01.m4a",
+            "duration": 1.77,
+            "bytes": 12939,
+            "sha256": "40f88afcacfe21d09a1551d02f8c6f54c55ad4d429b420aec1f79bd47c7da447",
+            "decodedPeak": 0.70643,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part2-02.m4a",
+            "duration": 1.37,
+            "bytes": 10510,
+            "sha256": "49556a8c698551a5e97ed76b911c8a972c608ca99317c58efb9225cf3593dd3b",
+            "decodedPeak": 0.703634,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part2-03.m4a",
+            "duration": 1.74,
+            "bytes": 12315,
+            "sha256": "02ddf971bde2b30582e544e93bc596d74bd21c4d370dc8e0e151f1e999461d1f",
+            "decodedPeak": 0.68273,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part2-04.m4a",
+            "duration": 1.53,
+            "bytes": 11089,
+            "sha256": "e9eab769cc5e906763d46d64abd0e6632faa3c3c66564806b54347f5ff6f8d04",
+            "decodedPeak": 0.681481,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/am_fenrir/en-part3.m4a",
+        "duration": 15.7,
+        "bytes": 97941,
+        "sha256": "aed987fa679ce58721b8815eef0888bf4c79a54042b7a898149c43ffedc1aa7b",
+        "decodedPeak": 0.797355,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_fenrir/en-part3-01.m4a",
+            "duration": 3.4,
+            "bytes": 22332,
+            "sha256": "f6a26af061d614604c1b84a369eb82f24b9455ab00f94176e8dd597cbec724a0",
+            "decodedPeak": 0.783898,
+            "headroomDb": -0.95,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part3-02.m4a",
+            "duration": 4.0,
+            "bytes": 27471,
+            "sha256": "eee8aef3f504225ea810c8e54d42f758702bdd38b8f1bf41d6fcfa4b23e57c06",
+            "decodedPeak": 0.737803,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part3-03.m4a",
+            "duration": 3.8,
+            "bytes": 24388,
+            "sha256": "f60d0feee374c4f366f3dbed96d9d39866765661c4bf21d62a4605fadd1b37ca",
+            "decodedPeak": 0.735958,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part3-04.m4a",
+            "duration": 3.4,
+            "bytes": 24289,
+            "sha256": "e1b819535713b6ded092b64499a47a0fe9bba437a7ba16a34a748659b80f04a4",
+            "decodedPeak": 0.756387,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/am_fenrir/en-part4.m4a",
+        "duration": 16.7,
+        "bytes": 107329,
+        "sha256": "dfaa428e9c5bb33ff8b19cec881473d49642fd55ba58684debb91810f5c8a880",
+        "decodedPeak": 0.77242,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_fenrir/en-part4-01.m4a",
+            "duration": 1.38,
+            "bytes": 10148,
+            "sha256": "0d5f7bc6462de14acf8fb5fa085257e878b33296ab620569a89e696b4793014d",
+            "decodedPeak": 0.691466,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part4-02.m4a",
+            "duration": 2.86,
+            "bytes": 22058,
+            "sha256": "dc8967860c5bef35866ef389658ed5c6e5a0341f995a9eeb2471896019aff365",
+            "decodedPeak": 0.730687,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part4-03.m4a",
+            "duration": 3.6,
+            "bytes": 22947,
+            "sha256": "61b11575a89bc17adb23784054b98c59e4025cda0c64ef20cb7f1d5a43dc3c75",
+            "decodedPeak": 0.754508,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part4-04.m4a",
+            "duration": 4.9,
+            "bytes": 32017,
+            "sha256": "048b41464351ede93b01be99b0e5c654594d5e2d7bfc60683f8715bc5e12afbf",
+            "decodedPeak": 0.744667,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part4-05.m4a",
+            "duration": 1.44,
+            "bytes": 11081,
+            "sha256": "bf92eae422f81b6c5c049981a7276bfdc4264274edeaf30103f57b7ff5b49d24",
+            "decodedPeak": 0.708777,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/am_fenrir/en-part4-06.m4a",
+            "duration": 1.38,
+            "bytes": 10393,
+            "sha256": "b8e220f88dd9f4a51d3a1ef1aaeba5d94940d562d013259170d6581353c0af94",
+            "decodedPeak": 0.694568,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/am_fenrir/en-vocab-receipt-01.m4a",
+        "duration": 3.3,
+        "bytes": 23743,
+        "sha256": "84b48121526cd0b16b890d753d526ebdd54b79936bc17741abfda830b8c5cabe",
+        "decodedPeak": 0.734617,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_fenrir/en-vocab-receipt-01.m4a",
+            "duration": 3.3,
+            "bytes": 23743,
+            "sha256": "84b48121526cd0b16b890d753d526ebdd54b79936bc17741abfda830b8c5cabe",
+            "decodedPeak": 0.734617,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/am_fenrir/en-vocab-fare-01.m4a",
+        "duration": 6.6,
+        "bytes": 45855,
+        "sha256": "25b2a49e050ffaed6e65c0ef6930d181e423b38cf8a4f82dfcea4655a5a45056",
+        "decodedPeak": 0.770672,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_fenrir/en-vocab-fare-01.m4a",
+            "duration": 6.6,
+            "bytes": 45855,
+            "sha256": "25b2a49e050ffaed6e65c0ef6930d181e423b38cf8a4f82dfcea4655a5a45056",
+            "decodedPeak": 0.770672,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "am_michael": {
+      "en-part2": {
+        "src": "./audio/audition/am_michael/en-part2.m4a",
+        "duration": 8.5,
+        "bytes": 51062,
+        "sha256": "90a83f7736ba97fff6969018def1a3e66fae3027f806617d0026fb0cc605d225",
+        "decodedPeak": 0.845363,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_michael/en-part2-01.m4a",
+            "duration": 1.96,
+            "bytes": 13271,
+            "sha256": "7b78214d0256bd1bf6763e989bd3dfe5b6b8aeed700043474a23aaf3b61dfb64",
+            "decodedPeak": 0.720302,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part2-02.m4a",
+            "duration": 1.6,
+            "bytes": 11169,
+            "sha256": "cb5b56017a05f35be1e059d2f106499eae453d9b63c5ad6f409057f1d3d14a7f",
+            "decodedPeak": 0.707062,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part2-03.m4a",
+            "duration": 2.07,
+            "bytes": 13892,
+            "sha256": "047fcff21e5046ce98a1b0121019a76f8d99ac0bd060f32ac2cfb3ddcf37682d",
+            "decodedPeak": 0.71159,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part2-04.m4a",
+            "duration": 1.66,
+            "bytes": 11417,
+            "sha256": "3bddf201655022550b045fdee68bcb79a5ec9d1b57d22dafa511f36c09eb718f",
+            "decodedPeak": 0.710002,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/am_michael/en-part3.m4a",
+        "duration": 17.6,
+        "bytes": 110845,
+        "sha256": "1ba1fed6863d5be7be7bc62362774bf7873a243c6c4f9bec8ca277b2f34d533b",
+        "decodedPeak": 0.906428,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_michael/en-part3-01.m4a",
+            "duration": 3.8,
+            "bytes": 24624,
+            "sha256": "811955889b2ce32bdf9d23795f0fc2964db860be20f6be6ac68289a65af48bfa",
+            "decodedPeak": 0.75008,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part3-02.m4a",
+            "duration": 4.5,
+            "bytes": 28294,
+            "sha256": "830f38df354f405d6e745a22c0f614bef1898694e4647fffb0f13434c00f7648",
+            "decodedPeak": 0.729408,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part3-03.m4a",
+            "duration": 4.5,
+            "bytes": 28630,
+            "sha256": "cd0c3d1fe4376b6c800fd4605179a06267b4a397d045fb52b0242f153bba0340",
+            "decodedPeak": 0.750252,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part3-04.m4a",
+            "duration": 3.8,
+            "bytes": 24289,
+            "sha256": "cf11e68a060ecc869e6fcf75b73e2659730c3514df52d8f822a662e09367da03",
+            "decodedPeak": 0.761126,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/am_michael/en-part4.m4a",
+        "duration": 18.5,
+        "bytes": 122047,
+        "sha256": "847e8d54edf787c5ef055298ae0ac7dac59951bdf54605af2cb18572e9835e28",
+        "decodedPeak": 0.863967,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_michael/en-part4-01.m4a",
+            "duration": 1.65,
+            "bytes": 11475,
+            "sha256": "7e0b203f8e95ba9d3db29deb611b092e48c1ab7cd89c5e446cf0b0a07ffbfe60",
+            "decodedPeak": 0.711733,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part4-02.m4a",
+            "duration": 3.2,
+            "bytes": 20645,
+            "sha256": "f7bc580a47e16b44c55100afd3d61d65a1155ec686a4ed507e330d9898817dc8",
+            "decodedPeak": 0.782912,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part4-03.m4a",
+            "duration": 3.8,
+            "bytes": 24439,
+            "sha256": "7efa42d71c176c63548e54ebc517f029825e68740ba6abbc30e06f463b1e81ff",
+            "decodedPeak": 0.853975,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part4-04.m4a",
+            "duration": 5.3,
+            "bytes": 33447,
+            "sha256": "0af904a49527e62bb3ac6634dc81b54ae3931e70bf3313f31f0c18f74647aa1a",
+            "decodedPeak": 0.940245,
+            "headroomDb": -1.469,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part4-05.m4a",
+            "duration": 1.78,
+            "bytes": 12158,
+            "sha256": "fc9d1e5f8ea6243ba9ac0547c57b6e55887922cd36c982bea2a63fc7cf69e06b",
+            "decodedPeak": 0.703796,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/am_michael/en-part4-06.m4a",
+            "duration": 1.67,
+            "bytes": 11632,
+            "sha256": "38d2090f888ed3c57970e40306030835623b58698d2403112e8516381c980fde",
+            "decodedPeak": 0.708778,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/am_michael/en-vocab-receipt-01.m4a",
+        "duration": 3.7,
+        "bytes": 23426,
+        "sha256": "597d496ce4cfede0e332dc7056143954482976a3e294b1eb75ed39c0c99d8fd2",
+        "decodedPeak": 0.735654,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_michael/en-vocab-receipt-01.m4a",
+            "duration": 3.7,
+            "bytes": 23426,
+            "sha256": "597d496ce4cfede0e332dc7056143954482976a3e294b1eb75ed39c0c99d8fd2",
+            "decodedPeak": 0.735654,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/am_michael/en-vocab-fare-01.m4a",
+        "duration": 7.1,
+        "bytes": 45536,
+        "sha256": "91b6bfcad539d2d116e283fa7d37a46b1a17b5791874275b142e63ea036729e7",
+        "decodedPeak": 0.780664,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_michael/en-vocab-fare-01.m4a",
+            "duration": 7.1,
+            "bytes": 45536,
+            "sha256": "91b6bfcad539d2d116e283fa7d37a46b1a17b5791874275b142e63ea036729e7",
+            "decodedPeak": 0.780664,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "am_puck": {
+      "en-part2": {
+        "src": "./audio/audition/am_puck/en-part2.m4a",
+        "duration": 7.9,
+        "bytes": 45307,
+        "sha256": "e368e98810f6ddd6e772785bae342ccc8db0dc776bccfaa4dc59c79226ce8446",
+        "decodedPeak": 0.729821,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_puck/en-part2-01.m4a",
+            "duration": 1.79,
+            "bytes": 13350,
+            "sha256": "d24304daf094e4a6d987bc4dfa92637e0f8c44c9cb9d12b814c1b44799a4ce33",
+            "decodedPeak": 0.700032,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part2-02.m4a",
+            "duration": 1.46,
+            "bytes": 11027,
+            "sha256": "6b0734091f85548f9f7938e79e91783800b9af5941fbca1178bfbb5ac8a46b10",
+            "decodedPeak": 0.708713,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part2-03.m4a",
+            "duration": 1.79,
+            "bytes": 12673,
+            "sha256": "4e02d6f4f315df3ee76b0e8f3a0885de831f2814b86051a1e85c9e7e633059e0",
+            "decodedPeak": 0.698304,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part2-04.m4a",
+            "duration": 1.58,
+            "bytes": 12377,
+            "sha256": "429a9520eea2b96bc526c575e8fbbeeebd3ff4f3e0955e3b8cd01d6c6736084a",
+            "decodedPeak": 0.69812,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/am_puck/en-part3.m4a",
+        "duration": 15.3,
+        "bytes": 97317,
+        "sha256": "4f4a2375bf050ae1ecc0e4c18e2bdbe69d303761cc843fa97f8c928679fa047f",
+        "decodedPeak": 0.783633,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_puck/en-part3-01.m4a",
+            "duration": 3.2,
+            "bytes": 23126,
+            "sha256": "5a835c7e58b465cb49ec9d68c1a1124dd47b8e1aebe2c039fbc8bf7720542a38",
+            "decodedPeak": 0.793978,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part3-02.m4a",
+            "duration": 3.9,
+            "bytes": 27274,
+            "sha256": "5d35f6ef05aecbc3c6cd86e68bcb19846060f9334fe767da467ff6285ffb36a1",
+            "decodedPeak": 0.716993,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part3-03.m4a",
+            "duration": 3.7,
+            "bytes": 26733,
+            "sha256": "7ce4a66d7c225f26f95b36513e2610ebc00888553182573bea08623e1f81bae8",
+            "decodedPeak": 0.729069,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part3-04.m4a",
+            "duration": 3.4,
+            "bytes": 24024,
+            "sha256": "39aea437a3650494de21c3f575db4339e5116036a79c188be99f261d9466d277",
+            "decodedPeak": 0.754439,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/am_puck/en-part4.m4a",
+        "duration": 17.0,
+        "bytes": 108727,
+        "sha256": "24c5d6036954fd6e249d5a1ab6e789f9ff63076ac39cdd5552c9388290ed21c9",
+        "decodedPeak": 0.768523,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_puck/en-part4-01.m4a",
+            "duration": 1.5,
+            "bytes": 11351,
+            "sha256": "5ef6512fa7df204ac8c56475aa368eb9cab37058c55366df147f43d9fa8952d5",
+            "decodedPeak": 0.681435,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part4-02.m4a",
+            "duration": 2.97,
+            "bytes": 21232,
+            "sha256": "61ad08d9d87373ecf267486aad8854f200d71fef7fa826a6d04167a4e2df5aaa",
+            "decodedPeak": 0.692918,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part4-03.m4a",
+            "duration": 3.7,
+            "bytes": 25906,
+            "sha256": "924b4692ca035c47ff7fce14696bd3ecad6444ff6302d1d03ed76076e70cbb63",
+            "decodedPeak": 0.729415,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part4-04.m4a",
+            "duration": 4.7,
+            "bytes": 34773,
+            "sha256": "70c1bd2958e52ce117b5bd94ebbf2d9740e805e34bcd44f9909d0a5fc7d0127d",
+            "decodedPeak": 0.785853,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part4-05.m4a",
+            "duration": 1.44,
+            "bytes": 10759,
+            "sha256": "3a407311e3e91c4f8afc398cc4971649ee364c52a8559628a5bf1fb0b0500bb7",
+            "decodedPeak": 0.701226,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/am_puck/en-part4-06.m4a",
+            "duration": 1.5,
+            "bytes": 11070,
+            "sha256": "ae9e460644e2087075a09b95ce163f6ce9d0a88e50ffe4853cd80b197217afe7",
+            "decodedPeak": 0.680595,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/am_puck/en-vocab-receipt-01.m4a",
+        "duration": 3.3,
+        "bytes": 23378,
+        "sha256": "80832200e3ee5f32eeda015ca803c9e7ca7068087839f19c856b8004fa7e3a00",
+        "decodedPeak": 0.722277,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_puck/en-vocab-receipt-01.m4a",
+            "duration": 3.3,
+            "bytes": 23378,
+            "sha256": "80832200e3ee5f32eeda015ca803c9e7ca7068087839f19c856b8004fa7e3a00",
+            "decodedPeak": 0.722277,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/am_puck/en-vocab-fare-01.m4a",
+        "duration": 6.5,
+        "bytes": 43314,
+        "sha256": "3bee05a409aac912c43c4dd6bf6a8c197df35d2eb9bad500949e99efab1cb20b",
+        "decodedPeak": 0.841222,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/am_puck/en-vocab-fare-01.m4a",
+            "duration": 6.5,
+            "bytes": 43314,
+            "sha256": "3bee05a409aac912c43c4dd6bf6a8c197df35d2eb9bad500949e99efab1cb20b",
+            "decodedPeak": 0.841222,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "bf_emma": {
+      "en-part2": {
+        "src": "./audio/audition/bf_emma/en-part2.m4a",
+        "duration": 8.8,
+        "bytes": 54792,
+        "sha256": "d057ab3577cddbf296cdc98409dc054f7960187412a7e56effec71b7daeb39b5",
+        "decodedPeak": 0.743107,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_emma/en-part2-01.m4a",
+            "duration": 1.97,
+            "bytes": 13367,
+            "sha256": "d4e2761a1569b0ced29508629338a7e95057cade2b9190ef999dfa4903b03aa3",
+            "decodedPeak": 0.671648,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part2-02.m4a",
+            "duration": 1.63,
+            "bytes": 11326,
+            "sha256": "b39e453042792e583e08f0a0266324bf97d77f0e451e65c75255e61b06ecbfa5",
+            "decodedPeak": 0.683267,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part2-03.m4a",
+            "duration": 2.17,
+            "bytes": 14490,
+            "sha256": "84d9eb021f71fd4fdce29ba0c2c443b9c2f3b45c09ea3a347fcad554bc4b5d55",
+            "decodedPeak": 0.667294,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part2-04.m4a",
+            "duration": 1.76,
+            "bytes": 12145,
+            "sha256": "30c45b6f12a27e4bf0a8bcecd5a570e51576f2ebe0a14bacc37b21945e910fad",
+            "decodedPeak": 0.694206,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/bf_emma/en-part3.m4a",
+        "duration": 15.0,
+        "bytes": 96774,
+        "sha256": "525cbeb0bf731200e0d3ae662e0cf153cc142a031a087dd3a597dfbeb3701958",
+        "decodedPeak": 0.747703,
+        "headroomDb": -0.812,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_emma/en-part3-01.m4a",
+            "duration": 3.3,
+            "bytes": 21119,
+            "sha256": "40d1ecb58b7006c6b29e70bee63aa4e064ab20386f261ded6c2a0083d0e3da36",
+            "decodedPeak": 0.758544,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part3-02.m4a",
+            "duration": 3.7,
+            "bytes": 24337,
+            "sha256": "f326edeaff432d46926a5f6138784ec30e24766b2e78b15a92b14100e4a8930b",
+            "decodedPeak": 0.749831,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part3-03.m4a",
+            "duration": 3.6,
+            "bytes": 22906,
+            "sha256": "4f8df508eaa0b3ff2a5289e20b58e04de9b39c08cbd1ef08bab0d9c3eb003548",
+            "decodedPeak": 0.734839,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part3-04.m4a",
+            "duration": 3.3,
+            "bytes": 21687,
+            "sha256": "5286e95329ce9d9900fc5e47ad2642b7ba5591388c2df9b6636819cf1f680404",
+            "decodedPeak": 0.746941,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/bf_emma/en-part4.m4a",
+        "duration": 17.0,
+        "bytes": 116356,
+        "sha256": "d7e0102a642a12c7142ad8fea918bfcb4095fc86b86710cafc18e2f984aade05",
+        "decodedPeak": 0.785058,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_emma/en-part4-01.m4a",
+            "duration": 1.61,
+            "bytes": 11096,
+            "sha256": "88e74893121829b0bdc0170854e1c6c0c20a2ecdb5a5e38ed5739cc729b5a72c",
+            "decodedPeak": 0.691608,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part4-02.m4a",
+            "duration": 2.94,
+            "bytes": 19305,
+            "sha256": "68a30ddfaa2d366f48cee8939123c96314af631061a86393b2d7fe9e50e1648a",
+            "decodedPeak": 0.696931,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part4-03.m4a",
+            "duration": 3.4,
+            "bytes": 21900,
+            "sha256": "3c299ab34f3d19663b6b78c5aa4554a6610ba8f4ef736533f3f5c21b8a4cd302",
+            "decodedPeak": 0.762562,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part4-04.m4a",
+            "duration": 4.5,
+            "bytes": 29519,
+            "sha256": "5fce0a49229c1e289348f9b25392d0c5ebe344c815fd2d355a013b8c68ad68e7",
+            "decodedPeak": 0.754897,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part4-05.m4a",
+            "duration": 1.72,
+            "bytes": 12069,
+            "sha256": "8417a735f507a6804102864b21cf1196f24506bedfc39b025ad7801f05c39a43",
+            "decodedPeak": 0.68863,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/bf_emma/en-part4-06.m4a",
+            "duration": 1.61,
+            "bytes": 11166,
+            "sha256": "7dfffd0cb2a753af90ac5e2a51643816aa2dd10dad0549cdfba03b3cf0cea503",
+            "decodedPeak": 0.684753,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/bf_emma/en-vocab-receipt-01.m4a",
+        "duration": 2.94,
+        "bytes": 19209,
+        "sha256": "c22e3cee99e5506d9a465056f153ea14f1f272ddcd5bb4dc9001b13ee94f3e7c",
+        "decodedPeak": 0.687501,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_emma/en-vocab-receipt-01.m4a",
+            "duration": 2.94,
+            "bytes": 19209,
+            "sha256": "c22e3cee99e5506d9a465056f153ea14f1f272ddcd5bb4dc9001b13ee94f3e7c",
+            "decodedPeak": 0.687501,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/bf_emma/en-vocab-fare-01.m4a",
+        "duration": 5.9,
+        "bytes": 37884,
+        "sha256": "4795e27876af06d3f39a390ad79d18b34079d18c3be98233b70f79c78fe15def",
+        "decodedPeak": 0.759013,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_emma/en-vocab-fare-01.m4a",
+            "duration": 5.9,
+            "bytes": 37884,
+            "sha256": "4795e27876af06d3f39a390ad79d18b34079d18c3be98233b70f79c78fe15def",
+            "decodedPeak": 0.759013,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "bf_isabella": {
+      "en-part2": {
+        "src": "./audio/audition/bf_isabella/en-part2.m4a",
+        "duration": 9.0,
+        "bytes": 56266,
+        "sha256": "6ce9cb357b12c7c40f5d7e082f8ae9507041660a74dc5eea40017bc4c1338a99",
+        "decodedPeak": 0.830914,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_isabella/en-part2-01.m4a",
+            "duration": 2.04,
+            "bytes": 13763,
+            "sha256": "01ecfdbafd96d178479546b04493d600f5580fc964eed647b3aeb085ccf753ea",
+            "decodedPeak": 0.6607,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part2-02.m4a",
+            "duration": 1.71,
+            "bytes": 11833,
+            "sha256": "6e362a0e1b39306d597e12f2a925f8706c783e3cd5b6e67773e55a6dde45f461",
+            "decodedPeak": 0.672539,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part2-03.m4a",
+            "duration": 2.21,
+            "bytes": 14834,
+            "sha256": "e3e294aef69c80b708908f4b1daf949efcfc86a5d2fd6437a0565bcf48f50084",
+            "decodedPeak": 0.709901,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part2-04.m4a",
+            "duration": 1.8,
+            "bytes": 12419,
+            "sha256": "9290748aaeaec1b1603c66e1cac1da6e6243aaa56e723e4e3951ffe365e57902",
+            "decodedPeak": 0.695381,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/bf_isabella/en-part3.m4a",
+        "duration": 15.3,
+        "bytes": 96554,
+        "sha256": "a18537e46e350dc7c4a62ee26542e71640f9f85e9f8c0732fefc79c6f18d071d",
+        "decodedPeak": 0.883049,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_isabella/en-part3-01.m4a",
+            "duration": 3.3,
+            "bytes": 21042,
+            "sha256": "cecd8fbb8f549a66c6e41bfc16bb3f2b1fc5d41733c019630efe7407bbd52b68",
+            "decodedPeak": 0.713737,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part3-02.m4a",
+            "duration": 3.8,
+            "bytes": 24496,
+            "sha256": "2ed5bdbf9cefd4117a60daa6ca19aea86a1fbc7467f14b7e658a5843d0fa7a87",
+            "decodedPeak": 0.73952,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part3-03.m4a",
+            "duration": 3.6,
+            "bytes": 23599,
+            "sha256": "38ffa6fef2913ae9c555a9ec15e1a16beac73f07a2b340466ccc5bcf39f93dc4",
+            "decodedPeak": 0.712596,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part3-04.m4a",
+            "duration": 3.5,
+            "bytes": 23162,
+            "sha256": "b77c4dfd55c30f76138385b6d345f08d977e6272b72cf78b136014f995424871",
+            "decodedPeak": 0.733188,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/bf_isabella/en-part4.m4a",
+        "duration": 17.4,
+        "bytes": 112853,
+        "sha256": "4a1dc59dd4d11df81254787987a56591863b6ed9f2c6df89c3961ee87c3e73b7",
+        "decodedPeak": 0.755621,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_isabella/en-part4-01.m4a",
+            "duration": 1.79,
+            "bytes": 12207,
+            "sha256": "0307b107d07996f400381a8f5723c429badbadf83386963ede8cad157ec25a1c",
+            "decodedPeak": 0.712131,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part4-02.m4a",
+            "duration": 2.94,
+            "bytes": 19880,
+            "sha256": "9b91877c15c0d60c1ecaaaec45b58d4d12f7700253edf3517981ac9c3b308eda",
+            "decodedPeak": 0.694552,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part4-03.m4a",
+            "duration": 3.4,
+            "bytes": 21958,
+            "sha256": "d0761b1c916aa3f9d9e6253e8252a59453e66c1149a7d160a2903cd638041366",
+            "decodedPeak": 0.731436,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part4-04.m4a",
+            "duration": 4.6,
+            "bytes": 29549,
+            "sha256": "9e278ce7da79a002d43d353d3d3313a9fa9ed07ed5ac1f5229701ff13485b902",
+            "decodedPeak": 0.737163,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part4-05.m4a",
+            "duration": 1.78,
+            "bytes": 12212,
+            "sha256": "2ce7303d8d04f7de17f2aeca823cc45a7ef43dee9501dbd0dbfafc60155564ba",
+            "decodedPeak": 0.679631,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/bf_isabella/en-part4-06.m4a",
+            "duration": 1.76,
+            "bytes": 12168,
+            "sha256": "b01cf3740955519f53385e03ac50ae43e00edf03b75f4a5dc22815ae869f9bb4",
+            "decodedPeak": 0.694907,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/bf_isabella/en-vocab-receipt-01.m4a",
+        "duration": 3.1,
+        "bytes": 20376,
+        "sha256": "16f4da37e767acb08426b398bc84d9942ec30e40c121b4c22fa36e569c352999",
+        "decodedPeak": 0.743669,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_isabella/en-vocab-receipt-01.m4a",
+            "duration": 3.1,
+            "bytes": 20376,
+            "sha256": "16f4da37e767acb08426b398bc84d9942ec30e40c121b4c22fa36e569c352999",
+            "decodedPeak": 0.743669,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/bf_isabella/en-vocab-fare-01.m4a",
+        "duration": 6.1,
+        "bytes": 38645,
+        "sha256": "709a521aedcf87dd73075902cab84fd1806376b691cdf90d76101cac41d62a97",
+        "decodedPeak": 0.777645,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bf_isabella/en-vocab-fare-01.m4a",
+            "duration": 6.1,
+            "bytes": 38645,
+            "sha256": "709a521aedcf87dd73075902cab84fd1806376b691cdf90d76101cac41d62a97",
+            "decodedPeak": 0.777645,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "bm_fable": {
+      "en-part2": {
+        "src": "./audio/audition/bm_fable/en-part2.m4a",
+        "duration": 11.2,
+        "bytes": 66752,
+        "sha256": "4ab99dc29981057a87762df278ee0d8d1aabce71d058f44ec882936332595859",
+        "decodedPeak": 0.78161,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_fable/en-part2-01.m4a",
+            "duration": 2.53,
+            "bytes": 18230,
+            "sha256": "617be78c6245654ec8512eb5446dd2edbfa2a8c969e51b96b9399fa5f5ed2b7d",
+            "decodedPeak": 0.688727,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part2-02.m4a",
+            "duration": 2.14,
+            "bytes": 15313,
+            "sha256": "9e8624ea6fd913c20ece549691d83ffa33edc67430a45946fa86902f64f9e7a5",
+            "decodedPeak": 0.700868,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part2-03.m4a",
+            "duration": 2.95,
+            "bytes": 20750,
+            "sha256": "bbc382f848d64e9dc8df410f3ea28f3b07937b0d6a77db5aa467dd7bc06506b3",
+            "decodedPeak": 0.712229,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part2-04.m4a",
+            "duration": 2.37,
+            "bytes": 16191,
+            "sha256": "fccefbff3bd4f27f6f2814b0e519640a7ce9944ac7ddbb0467fc0f3a4f649622",
+            "decodedPeak": 0.678806,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/bm_fable/en-part3.m4a",
+        "duration": 18.2,
+        "bytes": 112025,
+        "sha256": "abc850044a3c50f9ec75bcb8ee27e786fbc48548b61177051c2db4b17ad36918",
+        "decodedPeak": 0.907754,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_fable/en-part3-01.m4a",
+            "duration": 4.1,
+            "bytes": 25466,
+            "sha256": "411fe02179f54963ef4e05f9936ac3280a844574df001eb05d034eefdf0b7074",
+            "decodedPeak": 0.773812,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part3-02.m4a",
+            "duration": 4.5,
+            "bytes": 28604,
+            "sha256": "57f42e5fff372ca6f318f83df551cfd0c131c40d4f116f39d3e778d73d50f761",
+            "decodedPeak": 0.771196,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part3-03.m4a",
+            "duration": 4.4,
+            "bytes": 27908,
+            "sha256": "2db256b646dafe9312cbb11d066ad9e6edb54e5858684740fa53a186606f6476",
+            "decodedPeak": 0.801946,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part3-04.m4a",
+            "duration": 4.1,
+            "bytes": 25724,
+            "sha256": "f31ee62bb43a18cb7e507fbae6d045223a0e345cbb4abcd088b40096d679984d",
+            "decodedPeak": 0.839969,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/bm_fable/en-part4.m4a",
+        "duration": 20.7,
+        "bytes": 131816,
+        "sha256": "3e916a43a45fc3043c15313e5234d05f92aa3c9da13aebd01b5f4665c427ac91",
+        "decodedPeak": 0.86109,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_fable/en-part4-01.m4a",
+            "duration": 2.38,
+            "bytes": 16455,
+            "sha256": "2035796df04088c58ff4d7f1ac1e5f84880802bb3903e6876dcbb41f2cda392f",
+            "decodedPeak": 0.706003,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part4-02.m4a",
+            "duration": 3.6,
+            "bytes": 22833,
+            "sha256": "928e535acb4a6dd988303afba35566ed6c46c6802cac119886728cb5bfb65aaa",
+            "decodedPeak": 0.772468,
+            "headroomDb": -0.827,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part4-03.m4a",
+            "duration": 4.1,
+            "bytes": 25612,
+            "sha256": "aa210ae977cad6e82c26a2bb4f5a362843fc69e0db8536c79aa8c4d009567679",
+            "decodedPeak": 0.746769,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part4-04.m4a",
+            "duration": 5.1,
+            "bytes": 33665,
+            "sha256": "18eac1f5fd1bbd55c498d52bdc1804845fae8a1c7a8b4a82a01cdd8a33ed1000",
+            "decodedPeak": 0.795092,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part4-05.m4a",
+            "duration": 2.22,
+            "bytes": 14880,
+            "sha256": "0ff65325b7eddd6502e07c91a65d73edeff73e727b494a1cedd1f6b39acac7b1",
+            "decodedPeak": 0.713751,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/bm_fable/en-part4-06.m4a",
+            "duration": 2.25,
+            "bytes": 15319,
+            "sha256": "b3f50dd3f804ea3df3721f500d7e1e8792e031f49f054cf0464ca978d04cd685",
+            "decodedPeak": 0.723272,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/bm_fable/en-vocab-receipt-01.m4a",
+        "duration": 3.8,
+        "bytes": 23930,
+        "sha256": "ebb196741729cf3c08834b6777b0ff0b2262190da384d2a9c833790b83526a9d",
+        "decodedPeak": 0.793705,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_fable/en-vocab-receipt-01.m4a",
+            "duration": 3.8,
+            "bytes": 23930,
+            "sha256": "ebb196741729cf3c08834b6777b0ff0b2262190da384d2a9c833790b83526a9d",
+            "decodedPeak": 0.793705,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/bm_fable/en-vocab-fare-01.m4a",
+        "duration": 6.7,
+        "bytes": 42152,
+        "sha256": "d7ebb2e96371a3148c59d30a465f0f118fb77adc879db429e488ecd735fc0ab0",
+        "decodedPeak": 0.813672,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_fable/en-vocab-fare-01.m4a",
+            "duration": 6.7,
+            "bytes": 42152,
+            "sha256": "d7ebb2e96371a3148c59d30a465f0f118fb77adc879db429e488ecd735fc0ab0",
+            "decodedPeak": 0.813672,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "bm_george": {
+      "en-part2": {
+        "src": "./audio/audition/bm_george/en-part2.m4a",
+        "duration": 9.9,
+        "bytes": 61559,
+        "sha256": "e1dc5de32dbdef3544addfd31b50399ae270fa762bf1e0b0e489d7aaadf775c6",
+        "decodedPeak": 0.81045,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_george/en-part2-01.m4a",
+            "duration": 2.29,
+            "bytes": 15285,
+            "sha256": "e34fcb20aa423241d4a39c181d6db948e3ca4fbb9a45516fb610aee9ec11810b",
+            "decodedPeak": 0.696965,
+            "headroomDb": 0.0,
+            "key": "p2-060/audio/0"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part2-02.m4a",
+            "duration": 1.8,
+            "bytes": 12342,
+            "sha256": "35ed05f6b83de240a0e7f46e1bc97cbcaab655d2b0efcaea827aaebde429af46",
+            "decodedPeak": 0.711204,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/0/0"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part2-03.m4a",
+            "duration": 2.42,
+            "bytes": 16446,
+            "sha256": "2b1066b1be4a435f751d516fe73835e9856c50108bac3584507626eb391b063f",
+            "decodedPeak": 0.732468,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/1/0"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part2-04.m4a",
+            "duration": 2.17,
+            "bytes": 14505,
+            "sha256": "5a302a58d9075666ffafc2f668eec4eb8d8d346d20d785becf264192a88a52b9",
+            "decodedPeak": 0.866573,
+            "headroomDb": 0.0,
+            "key": "p2-060/options/2/0"
+          }
+        ]
+      },
+      "en-part3": {
+        "src": "./audio/audition/bm_george/en-part3.m4a",
+        "duration": 18.6,
+        "bytes": 116973,
+        "sha256": "8f4e915cd9b93f562af02bbe0295ccc9d68bd8f9cea1658176d02be3810e3186",
+        "decodedPeak": 0.680854,
+        "headroomDb": -0.857,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_george/en-part3-01.m4a",
+            "duration": 4.0,
+            "bytes": 25806,
+            "sha256": "ed5a3af4f7ad8db08d39a7d8fc14c6589029ea6fbf1ca37f2008ed7edd24e175",
+            "decodedPeak": 0.725006,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part3-02.m4a",
+            "duration": 4.8,
+            "bytes": 30660,
+            "sha256": "1dd209a362c8e72139d79a89e05b6f1f5cfbd2c50f42547eccda8bcaa9abcfd7",
+            "decodedPeak": 0.731313,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/1/0"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part3-03.m4a",
+            "duration": 4.5,
+            "bytes": 28553,
+            "sha256": "66099f6e309313ccea3a7096a9ef575d36083c0fa9a07617cc1f01460237622e",
+            "decodedPeak": 0.736065,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/2/0"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part3-04.m4a",
+            "duration": 4.2,
+            "bytes": 27210,
+            "sha256": "306cd4f3bf07d54004b111c7a260fb2c5564dbe7db1ce82d221660b5cd29af7e",
+            "decodedPeak": 0.736405,
+            "headroomDb": 0.0,
+            "key": "p3-g09/turns/3/0"
+          }
+        ]
+      },
+      "en-part4": {
+        "src": "./audio/audition/bm_george/en-part4.m4a",
+        "duration": 20.6,
+        "bytes": 136988,
+        "sha256": "b2ce06e75130978ed99ce579bfacf3a1ba4dbcd851d408fa376778a97787d22f",
+        "decodedPeak": 0.742952,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_george/en-part4-01.m4a",
+            "duration": 2.04,
+            "bytes": 13567,
+            "sha256": "93c7b39147618b8f05fd408a82fa8038a841be41a6dc10c7f4fd29e86686dd57",
+            "decodedPeak": 0.712144,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/0"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part4-02.m4a",
+            "duration": 3.6,
+            "bytes": 23531,
+            "sha256": "bdefa9ead329e216cf78633bec7508023bd778c41f9fbd3aadfe20e7d3735cb7",
+            "decodedPeak": 0.756526,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part4-03.m4a",
+            "duration": 4.2,
+            "bytes": 26980,
+            "sha256": "6eb939662b5f0c5e253d948b02427a1eeceafa54493d0d7af5bab1449bf4ac68",
+            "decodedPeak": 0.738317,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/2"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part4-04.m4a",
+            "duration": 5.5,
+            "bytes": 34692,
+            "sha256": "495a17e8c35f7376afea524eaccf40f90bdc72914d77cb010ee828522d785d8b",
+            "decodedPeak": 0.74434,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/3"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part4-05.m4a",
+            "duration": 2.22,
+            "bytes": 14676,
+            "sha256": "0f407cbe583d10fe7b5a94bbff79f4189a07cf0e7ac0bd0e2c7712b0c432c7f3",
+            "decodedPeak": 0.67497,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/4"
+          },
+          {
+            "src": "./audio/audition/bm_george/en-part4-06.m4a",
+            "duration": 1.81,
+            "bytes": 12265,
+            "sha256": "7618f632fe329fd6cac9a4f5e40bb6e1488661964481eaad83e44fbf29c67b72",
+            "decodedPeak": 0.701487,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/5"
+          }
+        ]
+      },
+      "en-vocab-receipt": {
+        "src": "./audio/audition/bm_george/en-vocab-receipt-01.m4a",
+        "duration": 4.1,
+        "bytes": 26312,
+        "sha256": "69b16d2d319992b72ed8b50bff9240687677774da40cb55b58e6ba511c444e95",
+        "decodedPeak": 0.735161,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_george/en-vocab-receipt-01.m4a",
+            "duration": 4.1,
+            "bytes": 26312,
+            "sha256": "69b16d2d319992b72ed8b50bff9240687677774da40cb55b58e6ba511c444e95",
+            "decodedPeak": 0.735161,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "en-vocab-fare": {
+        "src": "./audio/audition/bm_george/en-vocab-fare-01.m4a",
+        "duration": 7.0,
+        "bytes": 44737,
+        "sha256": "e14dc7957b237ff14303c78306b4e735cd8c470d6ed5ff8e06d05cd8c5f26239",
+        "decodedPeak": 0.739664,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/bm_george/en-vocab-fare-01.m4a",
+            "duration": 7.0,
+            "bytes": 44737,
+            "sha256": "e14dc7957b237ff14303c78306b4e735cd8c470d6ed5ff8e06d05cd8c5f26239",
+            "decodedPeak": 0.739664,
+            "headroomDb": 0.0,
+            "key": "v-fare/example/0"
+          }
+        ]
+      }
+    },
+    "jf_alpha": {
+      "ja-invoice": {
+        "src": "./audio/audition/jf_alpha/ja-invoice-01.m4a",
+        "duration": 3.7,
+        "bytes": 23789,
+        "sha256": "1257ec73029a34b52df5e309ea3dad03cf5038469e3280ec33c9104975735129",
+        "decodedPeak": 0.93227,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_alpha/ja-invoice-01.m4a",
+            "duration": 3.7,
+            "bytes": 23789,
+            "sha256": "1257ec73029a34b52df5e309ea3dad03cf5038469e3280ec33c9104975735129",
+            "decodedPeak": 0.93227,
+            "headroomDb": 0.0,
+            "key": "p2-012/audio/0"
+          }
+        ]
+      },
+      "ja-receipt": {
+        "src": "./audio/audition/jf_alpha/ja-receipt-01.m4a",
+        "duration": 4.9,
+        "bytes": 30969,
+        "sha256": "b0b37ed48200998bf691be8b0abb91a47c1db3b62e430f30529e068ac4d7a24e",
+        "decodedPeak": 0.813283,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_alpha/ja-receipt-01.m4a",
+            "duration": 4.9,
+            "bytes": 30969,
+            "sha256": "b0b37ed48200998bf691be8b0abb91a47c1db3b62e430f30529e068ac4d7a24e",
+            "decodedPeak": 0.813283,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "ja-announcement": {
+        "src": "./audio/audition/jf_alpha/ja-announcement-01.m4a",
+        "duration": 3.7,
+        "bytes": 23931,
+        "sha256": "eed6c3cb115ee6e5e9766a0005ade998a2a56374bfd2b03b7718e73e7e24b096",
+        "decodedPeak": 0.743107,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_alpha/ja-announcement-01.m4a",
+            "duration": 3.7,
+            "bytes": 23931,
+            "sha256": "eed6c3cb115ee6e5e9766a0005ade998a2a56374bfd2b03b7718e73e7e24b096",
+            "decodedPeak": 0.743107,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          }
+        ]
+      },
+      "ja-approval": {
+        "src": "./audio/audition/jf_alpha/ja-approval-01.m4a",
+        "duration": 5.6,
+        "bytes": 35146,
+        "sha256": "536b133dcaa3f9cf8369057dc7d2428a81d3edd54c41a14cfb0519f642a0ca33",
+        "decodedPeak": 0.862923,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_alpha/ja-approval-01.m4a",
+            "duration": 5.6,
+            "bytes": 35146,
+            "sha256": "536b133dcaa3f9cf8369057dc7d2428a81d3edd54c41a14cfb0519f642a0ca33",
+            "decodedPeak": 0.862923,
+            "headroomDb": 0.0,
+            "key": "read-proof/documents/0/text/3"
+          }
+        ]
+      },
+      "ja-price": {
+        "src": "./audio/audition/jf_alpha/ja-price-01.m4a",
+        "duration": 4.7,
+        "bytes": 29821,
+        "sha256": "8f805d10dade58267150d4d65a4d1341c988493db259357992b5046678471713",
+        "decodedPeak": 0.76294,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_alpha/ja-price-01.m4a",
+            "duration": 4.7,
+            "bytes": 29821,
+            "sha256": "8f805d10dade58267150d4d65a4d1341c988493db259357992b5046678471713",
+            "decodedPeak": 0.76294,
+            "headroomDb": 0.0,
+            "key": "read-proof/documents/0/text/1"
+          }
+        ]
+      }
+    },
+    "jf_tebukuro": {
+      "ja-invoice": {
+        "src": "./audio/audition/jf_tebukuro/ja-invoice-01.m4a",
+        "duration": 4.2,
+        "bytes": 27050,
+        "sha256": "f68ba026040255e8b3d70395195e77896b8362e025293bb6f3d993078733b34a",
+        "decodedPeak": 0.779106,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_tebukuro/ja-invoice-01.m4a",
+            "duration": 4.2,
+            "bytes": 27050,
+            "sha256": "f68ba026040255e8b3d70395195e77896b8362e025293bb6f3d993078733b34a",
+            "decodedPeak": 0.779106,
+            "headroomDb": 0.0,
+            "key": "p2-012/audio/0"
+          }
+        ]
+      },
+      "ja-receipt": {
+        "src": "./audio/audition/jf_tebukuro/ja-receipt-01.m4a",
+        "duration": 6.0,
+        "bytes": 37642,
+        "sha256": "529daf651196b0293c6fdd8016754cf28a80ff527aad9bdfad8cad226d3464ab",
+        "decodedPeak": 0.871683,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_tebukuro/ja-receipt-01.m4a",
+            "duration": 6.0,
+            "bytes": 37642,
+            "sha256": "529daf651196b0293c6fdd8016754cf28a80ff527aad9bdfad8cad226d3464ab",
+            "decodedPeak": 0.871683,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "ja-announcement": {
+        "src": "./audio/audition/jf_tebukuro/ja-announcement-01.m4a",
+        "duration": 4.2,
+        "bytes": 26837,
+        "sha256": "9829eef8b5ef1d3b26a7b413e7aafc1ed55a5ac7d891b51a7e83676df1aa1fac",
+        "decodedPeak": 0.731424,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_tebukuro/ja-announcement-01.m4a",
+            "duration": 4.2,
+            "bytes": 26837,
+            "sha256": "9829eef8b5ef1d3b26a7b413e7aafc1ed55a5ac7d891b51a7e83676df1aa1fac",
+            "decodedPeak": 0.731424,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          }
+        ]
+      },
+      "ja-approval": {
+        "src": "./audio/audition/jf_tebukuro/ja-approval-01.m4a",
+        "duration": 6.3,
+        "bytes": 39761,
+        "sha256": "88f18e87c2dff40c2975223eb05fe485d1ce3a6b39fa83e810e6e713b74426e2",
+        "decodedPeak": 0.738614,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_tebukuro/ja-approval-01.m4a",
+            "duration": 6.3,
+            "bytes": 39761,
+            "sha256": "88f18e87c2dff40c2975223eb05fe485d1ce3a6b39fa83e810e6e713b74426e2",
+            "decodedPeak": 0.738614,
+            "headroomDb": 0.0,
+            "key": "read-proof/documents/0/text/3"
+          }
+        ]
+      },
+      "ja-price": {
+        "src": "./audio/audition/jf_tebukuro/ja-price-01.m4a",
+        "duration": 6.0,
+        "bytes": 37974,
+        "sha256": "335c8f935a20d134418fdf9db623b53fcd6cd32b4dc31011355286bba8f449bc",
+        "decodedPeak": 0.758937,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jf_tebukuro/ja-price-01.m4a",
+            "duration": 6.0,
+            "bytes": 37974,
+            "sha256": "335c8f935a20d134418fdf9db623b53fcd6cd32b4dc31011355286bba8f449bc",
+            "decodedPeak": 0.758937,
+            "headroomDb": 0.0,
+            "key": "read-proof/documents/0/text/1"
+          }
+        ]
+      }
+    },
+    "jm_kumo": {
+      "ja-invoice": {
+        "src": "./audio/audition/jm_kumo/ja-invoice-01.m4a",
+        "duration": 4.0,
+        "bytes": 25501,
+        "sha256": "9a76a451fcb43e0c05f5c045aa6ce6549910d55b599a4b44b0a1bf3b319ade07",
+        "decodedPeak": 0.743299,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jm_kumo/ja-invoice-01.m4a",
+            "duration": 4.0,
+            "bytes": 25501,
+            "sha256": "9a76a451fcb43e0c05f5c045aa6ce6549910d55b599a4b44b0a1bf3b319ade07",
+            "decodedPeak": 0.743299,
+            "headroomDb": 0.0,
+            "key": "p2-012/audio/0"
+          }
+        ]
+      },
+      "ja-receipt": {
+        "src": "./audio/audition/jm_kumo/ja-receipt-01.m4a",
+        "duration": 5.1,
+        "bytes": 32606,
+        "sha256": "8bb6d10b77f98d5b541853696affbecbe3ebe9a7d00888133365b34dd263afd3",
+        "decodedPeak": 0.723056,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jm_kumo/ja-receipt-01.m4a",
+            "duration": 5.1,
+            "bytes": 32606,
+            "sha256": "8bb6d10b77f98d5b541853696affbecbe3ebe9a7d00888133365b34dd263afd3",
+            "decodedPeak": 0.723056,
+            "headroomDb": 0.0,
+            "key": "v-receipt/example/0"
+          }
+        ]
+      },
+      "ja-announcement": {
+        "src": "./audio/audition/jm_kumo/ja-announcement-01.m4a",
+        "duration": 4.1,
+        "bytes": 26285,
+        "sha256": "da1d45f48775efee4186ce9aaf0d92e72fc806ef8c9ce3ddaaf1fa29484a0642",
+        "decodedPeak": 0.727532,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jm_kumo/ja-announcement-01.m4a",
+            "duration": 4.1,
+            "bytes": 26285,
+            "sha256": "da1d45f48775efee4186ce9aaf0d92e72fc806ef8c9ce3ddaaf1fa29484a0642",
+            "decodedPeak": 0.727532,
+            "headroomDb": 0.0,
+            "key": "p4-g01/turns/0/1"
+          }
+        ]
+      },
+      "ja-approval": {
+        "src": "./audio/audition/jm_kumo/ja-approval-01.m4a",
+        "duration": 6.2,
+        "bytes": 39101,
+        "sha256": "a4763124fe7925f4ac1643c1c626586545ae673f64ed4fcd483bdc8f00bc21b8",
+        "decodedPeak": 0.737537,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jm_kumo/ja-approval-01.m4a",
+            "duration": 6.2,
+            "bytes": 39101,
+            "sha256": "a4763124fe7925f4ac1643c1c626586545ae673f64ed4fcd483bdc8f00bc21b8",
+            "decodedPeak": 0.737537,
+            "headroomDb": 0.0,
+            "key": "read-proof/documents/0/text/3"
+          }
+        ]
+      },
+      "ja-price": {
+        "src": "./audio/audition/jm_kumo/ja-price-01.m4a",
+        "duration": 5.6,
+        "bytes": 35131,
+        "sha256": "315cc2d852f189dccebee95099f60bac09a89528369ca28bc3b438996ebe0ea1",
+        "decodedPeak": 0.870469,
+        "headroomDb": 0.0,
+        "segments": [
+          {
+            "src": "./audio/audition/jm_kumo/ja-price-01.m4a",
+            "duration": 5.6,
+            "bytes": 35131,
+            "sha256": "315cc2d852f189dccebee95099f60bac09a89528369ca28bc3b438996ebe0ea1",
+            "decodedPeak": 0.870469,
+            "headroomDb": 0.0,
+            "key": "read-proof/documents/0/text/1"
+          }
+        ]
+      }
+    }
+  },
+  "totals": {
+    "voices": 13,
+    "samples": 65,
+    "files": 205,
+    "bytes": 6711713,
+    "duration": 1034.27
+  }
+}
