@@ -4,7 +4,7 @@
 
 ## 可执行词表
 
-`data/i18n/glossary.json` 包含 49 项自动检查规则，结构为 `{version:1,terms:[{en,zh:[tokens],ja:[tokens],pattern}],exceptions:[...]}`。`pattern` 是英文匹配正则，使用不区分大小写的匹配；它明确列出单复数及动词词形，例如 reimburse/reimbursed/reimbursing、itinerary/itineraries、warranty/warranties，不用任意子串去匹配别的单词。中日候选按子串检测，因此日语可用「精算」「払い戻」「見積」等词干自然活用。
+`data/i18n/glossary.json` 包含 50 项自动检查规则，结构为 `{version:1,terms:[{en,zh:[tokens],ja:[tokens],pattern}],exceptions:[...]}`。`pattern` 是英文匹配正则，使用不区分大小写的匹配；它明确列出单复数及动词词形，例如 reimburse/reimbursed/reimbursing、itinerary/itineraries、warranty/warranties，不用任意子串去匹配别的单词。中日候选按子串检测，因此日语可用「精算」「払い戻」「見積」等词干自然活用。
 
 | English | 中文候选／词干 | 日本語候補／語幹 |
 | --- | --- | --- |
@@ -21,6 +21,7 @@
 | receptionist | 接待员；接待人员 | 受付担当；受付係 |
 | customer service | 客户服务；客服 | カスタマーサービス；お客様窓口；顧客サービス |
 | purchase order | 采购订单；订购单；采购单 | 注文書；発注 |
+| supplier | 供应商；供货商；供货方 | 仕入先；仕入れ先；納入業者；配送業者；業者；メーカー |
 | delivery | 配送；交货；送货；交付；递送；交期；送往；送达；签收；运费；批货；货物；到货；送到 | 配送；納品；配達；届け；届く；届い；届き；納期；受領；搬入；宅配；返送；送料；荷物；到着；便 |
 | shipment | 货物；发货；出货；批；运输 | 出荷；荷物；貨物；発送；納品；届き |
 | inventory | 库存；存货；清单 | 在庫；目録 |
@@ -64,6 +65,7 @@
 - reimburse 员工已垫费用时用报销／精算；客户退费语境可用退还／払い戻す。refund 不要求同时出现“报销”。
 - deposit 按上下文区分订金／内金・予約金、可退押金／保証金、银行存款／預金・入金；不将所有 deposit 改为具有特定法律含义的“定金”。
 - reservation 可表示席位预约，也可指商品预留／取り置き。delivery 可指配送行为、交货时间、运费或一批到货；shipment 同样可能表示发货或所发货物。
+- supplier / suppliers 按商家角色翻译：明确采购关系通常用「仕入先／仕入れ先」，尚未建立采购关系的投标候选可用「業者」，交付物品或试用设备的一方可用「納入業者」。只有上下文明确其职责是运输配送时才用「配送業者」，明确为生产厂家时才用「メーカー」；送货、检验或提供保修本身均不足以证明该商家是制造厂。投资者持有供货公司的股票，也不意味着该公司是投资者自己的仕入先。「業者」属于保留上下文角色的自然概括，不因此将原文中的商家全部机械替换为同一种角色。
 - `sourceUnits` 生成的全部七类题库、两种语言均需扫描。仅检查新增行不足以证明旧库用词一致。
 - 源题引用英文词来问词义时，译文应保留该英文考查词。扫描器仅在 `/prompt/` 单元的明确句式中处理，如 `“invoice” is closest in meaning` 或 `What does “receipt” mean/refer to`；译文还必须用引号保留同一表达。只豁免被问表达内部的具体命中，不跳过整题；普通引语、选项、对话、例句、表格和引号外重复词均照常检查。
 - 表格按 ` | ` 切分后逐列对应检查，不跨列借用词干；例如 `Invoice | Receipt` 译成 `收据 | 发票` 会在两列分别报错。
@@ -100,7 +102,7 @@
 
 模块导出纯函数 `validateGlossary(unitsByBank, packs, glossary)`，不在函数内读文件。`unitsByBank[bank]` 是 `sourceUnits(bank, records)` 的结果，`packs[lang][bank]` 是对应译文 JSON；空题库也需提供空数组和空 `entries`。返回 `{errors, stats}`，其中 `hits` 统计每个语言、单元列和术语的命中组合，`occurrences` 另计同一词在一列内的重复出现次数。`loadGlossaryInputs()` 可读取仓库实际输入，`glossarySummary(result)` 可供总校验器输出统计。导入模块不会自行启动 CLI。
 
-本轮基线为 7699 个中文单位和 7699 个日文单位、49 条规则、684 + 684 个术语与单元列命中组合、2 条精确例外；以后题库更新应以最新运行结果为准。回归测试入口为 `node --test tests/glossary.test.mjs`，包含实际全库、invoice/receipt 误译、合法活用、英文单词边界、表格对调、引用范围、例外过期和规则格式检查。
+本轮基线为 7699 个中文单位和 7699 个日文单位、50 条规则、743 + 743 个术语与单元列命中组合、2 条精确例外；以后题库更新应以最新运行结果为准。回归测试入口为 `node --test tests/glossary.test.mjs`，包含实际全库、invoice/receipt 误译、合法活用、英文单词边界、表格对调、引用范围、例外过期和规则格式检查。
 
 ## 精确锁定的两条语境省略
 

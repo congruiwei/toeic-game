@@ -5,6 +5,11 @@ const esc = value => String(value ?? '').replace(/[&<>"']/g, c =>
 export const reasons = ['答案可能错了','有两个答案都对','解析不对','声音或显示有问题','翻译不自然','其他'];
 const kindNames = {sentence:'句子插入',insertion:'句子插入位置',vocab:'词义',vocabulary:'词义',detail:'细节',inference:'推断',purpose:'主旨',negative:'排除题',intent:'意图',graphic:'图表',first:'听清首词',response:'选择回应'};
 const letter = i => String.fromCharCode(65+i);
+// An explicit answer-key correction supersedes only the known erroneous snapshot.
+// Ordinary archived answers keep their original meaning; historical scores are untouched.
+export function reviewAnswer(q, archived = q.answer) {
+  return q.correctedFrom === archived ? q.answer : archived;
+}
 const tableText = table => table ? [table.title,table.headers.join(' | '),...table.rows.map(r=>r.join(' | '))].filter(Boolean).join('\n') : '';
 function annotated(value, options) {
   if(value === UNKNOWN)return '不知道';

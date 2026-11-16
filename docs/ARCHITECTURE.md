@@ -33,6 +33,7 @@
 | `prompt` | string | 题干或作答指令 |
 | `options` | string[] | 顺序即显示顺序，Part 2 回应题也是朗读顺序；选项去重 |
 | `answer` | string | 正确选项的完整文字，逐字匹配 |
+| `correctedFrom` | string（可选） | 明确判错的旧答案；须仍在选项中且不同于 answer。旧模考只有命中此值时，回顾、复制、问题报告才改用当前正答，并标明原成绩保留；不改已保存 keys、成绩和经验 |
 | `en`、`zh` | string | 英文解析、中文解析，指出决定答案的具体信息 |
 | `evidence` | string | 听力、阅读使用；一段来源内可精确搜索的连续文字，保留原标点和大小写 |
 | `paraphrase` | string | 听力、阅读使用；说明原文如何转换为选项里的表达 |
@@ -344,7 +345,7 @@ node tests/v6.cjs
 | `data/i18n/ja/vocab-meanings.json` | 1087 个日语释义的轻量派生包，单词题与详情不必下载例句全集 |
 | `scripts/build-vocab-meanings.mjs` | 从日语 vocab 包生成释义小包；`--check` 只校验是否同步 |
 | `data/i18n/ja/terms.json`、`js/japanese-terms.js` | 17 个语法主题、22 个方法标题的日语标签；遇到带标记的标题才加载 |
-| `data/i18n/glossary.json`、`scripts/validate-glossary.mjs` | 49 条上下文术语规则；表格按单元格检测，例外必须精确记录源句、译句及理由 |
+| `data/i18n/glossary.json`、`scripts/validate-glossary.mjs` | 50 条上下文术语规则；表格按单元格检测，例外必须精确记录源句、译句及理由 |
 | `data/i18n/literals.json` | 英文专名确实无需翻译的精确例外，不以整篇豁免代替译文 |
 | `js/translations.js` | 按语言和 bank 合并并发请求，缓存成功结果；失败可重试，网络不可用时读 Cache Storage |
 | `js/translation-ui.js`、`translation.css` | 懒加载的逐句／逐行渲染、语言切换、收藏；正确设置 `lang=zh-CN` 与 `lang=ja` |
@@ -371,6 +372,6 @@ node tests/v6.cjs
 
 ### 翻译校验与回归
 
-`node scripts/validate.mjs` 同时验证题库和翻译：完整源 key 集合、无空译文、非英文复制、逐句／表格列对齐、49 条术语规则、释义派生包一致性及39个标题。专名和必要语境变化以精确例外记录，不能用宽泛词表免除检查。机器检查保证结构，语义和商务日语自然度仍需要逐句审校。
+`node scripts/validate.mjs` 同时验证题库和翻译：完整源 key 集合、无空译文、非英文复制、逐句／表格列对齐、50 条术语规则、释义派生包一致性及39个标题。专名和必要语境变化以精确例外记录，不能用宽泛词表免除检查。机器检查保证结构，语义和商务日语自然度仍需要逐句审校。
 
 `node --test tests/*.test.mjs` 检查源句拆分、翻译缓存、术语、日语词义选项、存档迁移、FSRS、语音筛选等；`tests/v6.cjs` 对全部功能执行375/390/430px回归（390px深色）。`tests/i18n-offline.cjs` 使用真实SW测试断网冷启动和缓存升级，`tests/performance.cjs` 保留可复现的5次冷加载测量。具体命令见README，完整审校和实测结果见 [BILINGUAL_QA.md](BILINGUAL_QA.md)。

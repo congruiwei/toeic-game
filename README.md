@@ -51,7 +51,7 @@
 - **日语朗读：** 点日语译文、词义或表达本中的日语即可朗读；表达本另有英／日朗读按钮。设置的「声音」中可以选择、试听日语音色，自动模式优先高音质 Kyoko / Otoya。
 - **纠正译文：** 答后点「这题有问题 → 翻译不自然」，备注具体句子和语言；设置里可以复制全部问题报告，再自行交给审校者。
 
-两种语言各有 7699 条对齐记录，另有 39 个日语术语标签；[术语表](docs/glossary.md)统一 49 项常见表达。首次展开按题库分包下载，首页与首题不请求译文。尚未下载的译文需要先联网打开一次；导出进度会保存收藏句子的三语快照，不会打包整套翻译缓存。[翻译数据格式](docs/I18N_DATA.md)及[审校与验收记录](docs/BILINGUAL_QA.md)供后续维护。
+两种语言各有 7699 条对齐记录，另有 39 个日语术语标签；[术语表](docs/glossary.md)统一 50 项常见表达。首次展开按题库分包下载，首页与首题不请求译文。尚未下载的译文需要先联网打开一次；导出进度会保存收藏句子的三语快照，不会打包整套翻译缓存。[翻译数据格式](docs/I18N_DATA.md)及[审校与验收记录](docs/BILINGUAL_QA.md)供后续维护。
 
 词卡采用 FSRS-6 安排下次复习，按答题结果和有效作答时间自动评级。快筛中只有通过现场抽查的词才获得 Easy 评级。[算法与离线实现](vendor/ts-fsrs/README.md)
 
@@ -118,7 +118,7 @@ NODE_PATH=/tmp/island-browser-test/node_modules node tests/performance.cjs
 
 已有 Chrome 可给浏览器测试命令加 `PW_CHANNEL=chrome`。运行 `node tests/v6.cjs screen fsrs` 可单独检查快筛和复习；统一入口会在每个功能的 375、390、430px 三档各建独立上下文。脚本启动临时本地 HTTP 服务，模拟 iPhone 并使用可控语音事件。模考测试实际开始、回答、退出、恢复和交卷，并用测试存档推进到听力末段及阅读到期点。真实设备的系统音色与音响效果需另行试听。
 
-中日功能回归包含答前隐藏、答后显示、三语言切换、模考隔离、日语题型、收藏及备份、FSRS、日语点击朗读、术语标签和翻译问题报告。`tests/i18n-offline.cjs` 另启真实 Service Worker，检查离线冷启动与升级保留翻译缓存。`tests/performance.cjs` 用 2 Mbps / 80 ms 网络、5 次冷启动记录首页及首题中位数。详细结果见 [双语测试与性能](docs/BILINGUAL-CHECKS.md)，翻译修订与后续复核项见 [双语自查](docs/BILINGUAL_QA.md)。
+中日功能回归包含答前隐藏、答后显示、三语言切换、模考隔离、日语题型、收藏及备份、FSRS、日语点击朗读、术语标签和翻译问题报告。`tests/i18n-offline.cjs` 另启真实 Service Worker，检查离线冷启动与升级保留翻译缓存。`tests/performance.cjs` 用 2 Mbps / 80 ms 网络、5 次冷启动记录首页及首题中位数。最新答案与日语修订见 [修正记录](docs/ANSWER-JA-CORRECTIONS.md)。详细结果见 [双语测试与性能](docs/BILINGUAL-CHECKS.md)，翻译修订与后续复核项见 [双语自查](docs/BILINGUAL_QA.md)。
 
 估分模拟与测试输出见 [估分修正验收](docs/PREDICTION-CHECKS.md)。
 

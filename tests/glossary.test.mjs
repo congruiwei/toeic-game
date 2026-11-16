@@ -25,7 +25,7 @@ test('the full seven banks and both languages pass with exactly two reviewed omi
   assert.deepEqual(result.errors, []);
   const count = GLOSSARY_BANKS.reduce((n, bank) => n + actual.unitsByBank[bank].length, 0);
   assert.deepEqual(result.stats.units, { zh: count, ja: count });
-  assert.equal(result.stats.rules, 49);
+  assert.equal(result.stats.rules, 50);
   assert(result.stats.hits.zh > 600 && result.stats.hits.ja > 600);
   assert.equal(result.stats.exceptions, 2);
 });

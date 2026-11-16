@@ -111,6 +111,10 @@ function answers(question, location) {
   const normalized = options.flatMap((option, i) => string(option, `${location}.options[${i}]`) ? [option.trim().toLowerCase()] : []);
   expect(new Set(normalized).size === normalized.length, location, '选项重复');
   expect(options.includes(question.answer), location, 'answer 必须和某一选项逐字一致');
+  if (question.correctedFrom !== undefined) {
+    expect(typeof question.correctedFrom === 'string' && options.includes(question.correctedFrom) && question.correctedFrom !== question.answer,
+      location, 'correctedFrom 须为明确被更正的旧答案，仍在选项内且不同于现答案');
+  }
 }
 
 function cite(question, sources, location) {

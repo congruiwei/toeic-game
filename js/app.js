@@ -6,7 +6,7 @@ import {predictionView,predictAnswer,predictionSummary,snapshotOnVisit} from './
 import {startDiagnosis,skipDiagnosis,answerDiagnosis} from './diagnosis.js';
 import {diagnosisHome,diagnosisView,diagnosisHistory,unknownDiagnosisView} from './diagnosis-ui.js';
 import {replayView,playLine,stopReplay,stopClosedReplay} from './replay.js';
-import {reviewTools,answerText,claudeText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
+import {reviewTools,reviewAnswer,answerText,claudeText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
 import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
@@ -514,7 +514,7 @@ function reviewedAnswer(id, format = answerText) {
     const check=s.screening.run.feedback;
     ref={id:check.id,mode:'vocab',format:'meaning'};selected=check.selected;
   } else if(page==='exam' && s.exam?.phase==='done' && Object.hasOwn(s.exam.keys,id)) {
-    ref=catalog.get(id)?.ref;selected=s.exam.answers[id];correct=s.exam.keys[id];
+    ref=catalog.get(id)?.ref;selected=s.exam.answers[id];correct=ref?reviewAnswer(question(ref),s.exam.keys[id]):undefined;
   }
   return ref && ref.id===id ? format(ref,question(ref),selected,correct) : null;
 }
