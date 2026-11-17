@@ -664,7 +664,52 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-004/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:part1:p1-004/options/1/0",
+      "comparison": {
+        "audioSha256": "be650c54195b6fc5d83c143647c6e4f2e5b4a687f665b57f63a4f176ce28b279",
+        "recognized": "Water is flowing from a contorted plant.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Water is flowing from a can toward a plant.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "water",
+          "is",
+          "flowing",
+          "from",
+          "a",
+          "can",
+          "toward",
+          "a",
+          "plant"
+        ],
+        "normalizedRecognized": [
+          "water",
+          "is",
+          "flowing",
+          "from",
+          "a",
+          "contorted",
+          "plant"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "98a051b2d75b691c831f57710223f6e458edbc3bff5f1189e1b9cf912c33ce4e"
+        }
+      }
     },
     "p1-004/options/2/0": {
       "key": "p1-004/options/2/0",
@@ -3132,7 +3177,7 @@
       "sha256": "b34a6bd912542442ad1181684830a628f0aba3c1c00edd3811f017270cf79f52",
       "voiceId": "af_heart",
       "fingerprint": "56b6c84a03a985e94998650c2c6e2576ea81ef2e51c6413412a8ba373cc9c830",
-      "status": "review",
+      "status": "matched",
       "expected": "A wheel is resting upright on a worktable.",
       "spoken": "A wheel is resting upright on a worktable.",
       "recognized": "A wheel is resting upright on a work table.",
@@ -3172,7 +3217,54 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-019/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:part1:p1-019/options/2/0",
+      "comparison": {
+        "audioSha256": "b34a6bd912542442ad1181684830a628f0aba3c1c00edd3811f017270cf79f52",
+        "recognized": "A wheel is resting upright on a work table.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A wheel is resting upright on a worktable.",
+        "reasons": [
+          "reviewed-compound-boundary:worktable"
+        ],
+        "normalizedExpected": [
+          "a",
+          "wheel",
+          "is",
+          "resting",
+          "upright",
+          "on",
+          "a",
+          "work",
+          "table"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "wheel",
+          "is",
+          "resting",
+          "upright",
+          "on",
+          "a",
+          "work",
+          "table"
+        ],
+        "proofExpected": "t:a | t:wheel | t:is | t:resting | t:upright | t:on | t:a | t:work | t:table",
+        "proofRecognized": "t:a | t:wheel | t:is | t:resting | t:upright | t:on | t:a | t:work | t:table",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "70a9072fd2a529d132c469a989073a2f82e7440bdadce149042c5cf1325d620e"
+        }
+      }
     },
     "p1-019/options/3/0": {
       "key": "p1-019/options/3/0",
@@ -3713,7 +3805,7 @@
       "sha256": "3db823bc7a58e82050a54c5c1364d0e81d1b67cc444bf27786ef41c3500e7757",
       "voiceId": "am_puck",
       "fingerprint": "eda4105b0002bf02144ab5af8d660406bebab3dee012526faf2e69b081c8b48b",
-      "status": "review",
+      "status": "matched",
       "expected": "A windowpane is being lowered onto the floor.",
       "spoken": "A windowpane is being lowered onto the floor.",
       "recognized": "a window pane is being lowered onto the floor.",
@@ -3753,7 +3845,54 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-023/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:part1:p1-023/options/0/0",
+      "comparison": {
+        "audioSha256": "3db823bc7a58e82050a54c5c1364d0e81d1b67cc444bf27786ef41c3500e7757",
+        "recognized": "a window pane is being lowered onto the floor.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A windowpane is being lowered onto the floor.",
+        "reasons": [
+          "reviewed-compound-boundary:windowpane"
+        ],
+        "normalizedExpected": [
+          "a",
+          "window",
+          "pane",
+          "is",
+          "being",
+          "lowered",
+          "onto",
+          "the",
+          "floor"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "window",
+          "pane",
+          "is",
+          "being",
+          "lowered",
+          "onto",
+          "the",
+          "floor"
+        ],
+        "proofExpected": "t:a | t:window | t:pane | t:is | t:being | t:lowered | t:onto | t:the | t:floor",
+        "proofRecognized": "t:a | t:window | t:pane | t:is | t:being | t:lowered | t:onto | t:the | t:floor",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f67ec38457712a87982ec2cb7b6d1f41a0bea734a51e1992708add47d90f8975"
+        }
+      }
     },
     "p1-023/options/1/0": {
       "key": "p1-023/options/1/0",
@@ -13875,7 +14014,7 @@
         "recognized": "The lamp stands next to an open laptop.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.125,
       "phonemeErrorRate": null,
@@ -13886,7 +14025,53 @@
           "recognized": "the"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-038/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:part1:p1-038/options/3/0",
+      "comparison": {
+        "audioSha256": "be873212ca0221f3af5236c48c5fa547d6728efd88d7efdfa3586104c0857676",
+        "recognized": "The lamp stands next to an open laptop.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A lamp stands next to an open laptop.",
+        "reasons": [
+          "user-allowed-article:expected-a",
+          "user-allowed-article:recognized-the"
+        ],
+        "normalizedExpected": [
+          "a",
+          "lamp",
+          "stands",
+          "next",
+          "to",
+          "an",
+          "open",
+          "laptop"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "lamp",
+          "stands",
+          "next",
+          "to",
+          "an",
+          "open",
+          "laptop"
+        ],
+        "proofExpected": "t:lamp | t:stands | t:next | t:to | t:an | t:open | t:laptop",
+        "proofRecognized": "t:lamp | t:stands | t:next | t:to | t:an | t:open | t:laptop",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "cfcb231a3b8f19862d8743c16c38850508436559cc4ef3cd1f9b2c0aa5369b61"
+        }
+      }
     },
     "p1-048/options/1/0": {
       "key": "p1-048/options/1/0",
@@ -13994,7 +14179,50 @@
           "recognized": "is falling"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-050/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:part1:p1-050/options/2/0",
+      "comparison": {
+        "audioSha256": "8d42b478088198d565fb35c4a3c52553591fcc452e3287f7cb4434c5bed8c07c",
+        "recognized": "The glass is falling beneath the table.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A glass has fallen beneath the table.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "a",
+          "glass",
+          "has",
+          "fallen",
+          "beneath",
+          "the",
+          "table"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "glass",
+          "is",
+          "falling",
+          "beneath",
+          "the",
+          "table"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f13773b5dbe71f69258fa54cebaffb93ca85184990f679cbb8cf6270eaaca579"
+        }
+      }
     },
     "p1-052/options/1/0": {
       "key": "p1-052/options/1/0",
@@ -14043,7 +14271,7 @@
         "recognized": "worker is partway up a ladder.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2857,
       "phonemeErrorRate": null,
@@ -14054,7 +14282,52 @@
           "recognized": "part way"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-052/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:part1:p1-052/options/1/0",
+      "comparison": {
+        "audioSha256": "4de01bbcc52ac263694f40910bd4ec70f6144c082e5165abc63f263ee2d2c36c",
+        "recognized": "A worker is part way up a ladder.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A worker is partway up a ladder.",
+        "reasons": [
+          "reviewed-compound-boundary:partway"
+        ],
+        "normalizedExpected": [
+          "a",
+          "worker",
+          "is",
+          "part",
+          "way",
+          "up",
+          "a",
+          "ladder"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "worker",
+          "is",
+          "part",
+          "way",
+          "up",
+          "a",
+          "ladder"
+        ],
+        "proofExpected": "t:a | t:worker | t:is | t:part | t:way | t:up | t:a | t:ladder",
+        "proofRecognized": "t:a | t:worker | t:is | t:part | t:way | t:up | t:a | t:ladder",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "b03e4a93c4d55d009ccaf7e0f9d306ee371af385ae954044e258c8d42b9d60b7"
+        }
+      }
     }
   },
   "generation": {

@@ -19,7 +19,7 @@ export const AUDIO_METADATA_REPORTS=Object.freeze([
   'regenerations.json','retries.json','audit-summary.json','generation-run.json',
   'benchmark.json','benchmark-asr.json','benchmark-asr-batch.json',
   'normalization-review.json','pronunciation-review.json','archive.json',
-  'unpublished-optional.json','validation.json','retry-coverage-error.json',
+  'unpublished-optional.json','validation.json','retry-coverage-error.json','quality-review.json',
 ]);
 export async function unexpectedAudioMetadata(root,index){
   const allowedFiles=new Set(AUDIO_METADATA_REPORTS.map(name=>'./data/audio/'+name));
@@ -119,9 +119,21 @@ export function m4aMetadata(buffer){
   return found;
 }
 
+export function validComparisonEvidence(clip,record){
+  if(!clip||!record)return false;
+  const c=record.comparison;if(c===undefined||c===null)return true;
+  if(!c||typeof c!=='object'||c.ruleVersion!=='strict-audio-equivalence-1'||c.audioSha256!==clip?.sha256||
+    c.expectedSpoken!==clip.spoken||c.recognized!==record.recognized||c.language!==clip.language||
+    !Array.isArray(c.reasons)||!c.reasons.length||!c.reasons.every(reason=>typeof reason==='string'&&reason.trim())||typeof c.equivalent!=='boolean'||
+    c.equivalent!==(record.status==='matched')||c.provenance?.sourceTextSha256!==sha(clip.text))return false;
+  if(!['ruleFileSha256','normalizerFileSha256'].every(name=>typeof c.provenance[name]==='string'&&/^[a-f0-9]{64}$/.test(c.provenance[name])))return false;
+  return !c.equivalent||typeof c.proofExpected==='string'&&!!c.proofExpected.trim()&&c.proofExpected===c.proofRecognized;
+}
+
 export function validASREvidence(clip,record){
   if(!clip||!record||record.sha256!==clip.sha256||record.expected!==clip.text||record.spoken!==clip.spoken||
     typeof record.recognized!=='string'||!record.recognized.trim()||!['matched','review','accepted'].includes(record.status)||record.recognitionGeneration?.prompt!==null)return false;
+  if(!validComparisonEvidence(clip,record))return false;
   const generation=record.recognitionGeneration;
   if(!generation.model||!/^[a-f0-9]{64}$/.test(generation.modelSha256||'')||generation.device!=='cpu'||generation.computeType!=='int8'||generation.conditionOnPreviousText!==false||generation.vadFilter!==false)return false;
   if(record.recognitionMethod==='individual-beam5')return record.singleFileVerification===true&&record.recognitionGeneration.beamSize===5;

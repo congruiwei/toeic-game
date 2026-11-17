@@ -40,6 +40,9 @@ evidence_spec=importlib.util.spec_from_file_location('audio_evidence',Path(__fil
 evidence=importlib.util.module_from_spec(evidence_spec)
 evidence_spec.loader.exec_module(evidence)
 actual_evidence=evidence.valid_asr
+comparison_spec=importlib.util.spec_from_file_location('audio_comparison',Path(__file__).with_name('audio-compare.py'))
+comparison_engine=importlib.util.module_from_spec(comparison_spec)
+comparison_spec.loader.exec_module(comparison_engine)
 
 
 def generator_stopped(work, producer_pid=None):
@@ -141,6 +144,7 @@ def main():
     if work==ROOT or ROOT in work.parents:
         p.error('ASR models and caches must remain outside the repository')
     model_dir=work/'models'/args.model
+    pronunciation_overrides=read(OUT/'overrides.json',{'entries':{}})['entries']
     cache=work/'tmp/bank-asr'
     cache.mkdir(parents=True,exist_ok=True)
     writer_lock=(work/'bank-audit.lock').open('a')
@@ -217,7 +221,7 @@ def main():
         if not result['recognized'].strip():raise EmptyTranscriptError(result)
         return result
 
-    def compare(clip,result,language):
+    def compare(clip,result,language,phoneme_override=False):
         nonlocal ja
         expected,heard=normalized(clip['spoken'],language),normalized(result['recognized'],language)
         errors=distance(expected,heard)
@@ -233,10 +237,15 @@ def main():
             a,b=[phone_cache[t] for t in texts]
             phoneme_rate=round(distance(a,b)/max(len(a),1),4)
         if not result['recognized'].strip():raise EmptyTranscriptError(result)
-        status='matched' if errors==0 or phoneme_rate==0 else 'review'
+        comparison=comparison_engine.compare(clip['spoken'],result['recognized'],language,
+            normalizer=bank.normalize,source_text=clip['text'],phoneme_override=phoneme_override)
+        comparison['audioSha256']=clip['sha256']
+        # Old WER/CER and G2P distance remain diagnostic values, never a fuzzy
+        # acceptance threshold. Only an explicit equivalence proof can pass.
+        status='matched' if comparison['equivalent'] else 'review'
         return {'status':status,'metric':'WER' if language=='en' else 'CER',
             'errorRate':round(errors/max(len(expected),1),4),'phonemeErrorRate':phoneme_rate,
-            'differences':differences(expected,heard)}
+            'differences':differences(expected,heard),'comparison':comparison}
 
     def save_result(alias,result,screen=None):
         clip,language=alias['clip'],alias['language']
@@ -249,7 +258,7 @@ def main():
         if screen:
             record['screening']=dict(screen['screening'],recognized=screen['recognized'],
                 normalizedExact=normalized(clip['spoken'],language)==normalized(screen['recognized'],language))
-        record.update(compare(clip,result,language))
+        record.update(compare(clip,result,language,alias.get('phonemeOverride',False)))
         alias['report']['records'][alias['key']]=record
         atomic(alias['target'],alias['report'])
 
@@ -370,7 +379,8 @@ def main():
                     continue
                 token=(language,clip['sha256'])
                 if time.monotonic()-failed_at.get(token,-1000)<60: continue
-                alias={'key':key,'clip':clip,'language':language,'report':report,'target':target}
+                alias={'key':key,'clip':clip,'language':language,'report':report,'target':target,
+                    'phonemeOverride':bool(pronunciation_overrides.get(f'{language}:{name}:{key}',{}).get('phonemes'))}
                 if token not in pending: pending[token]={'clip':clip,'language':language,'aliases':[]}
                 pending[token]['aliases'].append(alias)
             atomic(target,report)
@@ -397,6 +407,8 @@ def main():
                     continue
             if args.individual_only:
                 finalize(item)
+                if single_calls and single_calls % 10 == 0:
+                    flush_stats()
                 continue
             try:
                 wave=decode_audio(str(checked_audio(item)),sampling_rate=16000)

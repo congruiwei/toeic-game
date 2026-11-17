@@ -4,8 +4,30 @@ from pathlib import Path
 import re
 
 
+def valid_comparison(clip,record):
+    comparison=record.get('comparison')
+    if comparison is None:return True  # Existing audited archives predate these rules.
+    if not isinstance(comparison,dict):return False
+    if (comparison.get('ruleVersion')!='strict-audio-equivalence-1' or
+            comparison.get('audioSha256')!=clip.get('sha256') or
+            comparison.get('expectedSpoken')!=clip.get('spoken') or
+            comparison.get('recognized')!=record.get('recognized') or
+            comparison.get('language')!=clip.get('language') or
+            not isinstance(comparison.get('reasons'),list) or not comparison['reasons'] or
+            not all(isinstance(reason,str) and reason.strip() for reason in comparison['reasons']) or
+            type(comparison.get('equivalent')) is not bool or
+            comparison['equivalent']!=(record.get('status')=='matched')):return False
+    provenance=comparison.get('provenance',{})
+    if not isinstance(provenance,dict) or provenance.get('sourceTextSha256')!=hashlib.sha256(clip.get('text','').encode()).hexdigest():return False
+    if not all(isinstance(provenance.get(name),str) and re.fullmatch('[a-f0-9]{64}',provenance[name]) for name in ['ruleFileSha256','normalizerFileSha256']):return False
+    if comparison['equivalent']:
+        return isinstance(comparison.get('proofExpected'),str) and bool(comparison['proofExpected'].strip()) and comparison['proofExpected']==comparison.get('proofRecognized')
+    return True
+
+
 def valid_asr(clip,record):
     if not isinstance(clip,dict) or not isinstance(record,dict):return False
+    if not valid_comparison(clip,record):return False
     generation=record.get('recognitionGeneration')
     if not isinstance(generation,dict):return False
     if not (record.get('sha256')==clip.get('sha256') and record.get('expected')==clip.get('text') and

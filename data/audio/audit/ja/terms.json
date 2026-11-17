@@ -1464,7 +1464,112 @@
           "recognized": "計"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-time"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-time",
+      "comparison": {
+        "audioSha256": "8b436b29dafd9fa11a09c11e61509141e5aa2afa7dfd67a43737af05a022d28b",
+        "recognized": "過去計と現在完了計",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "かこけいと現在完了形",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "カコケイトゲンザイカンリョオケエ",
+        "normalizedRecognized": "カコケエトゲンザイカンリョオケエ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "226f927828a7b0b4e4a0bf7c80594a36960d15bf495b54534a619a9ddb606276"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "か",
+              "reading": "カ",
+              "normalized": "カ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "こ",
+              "reading": "コ",
+              "normalized": "コ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "けいと",
+              "reading": "ケイト",
+              "normalized": "ケイト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "現在",
+              "reading": "ゲンザイ",
+              "normalized": "ゲンザイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "完了",
+              "reading": "カンリョー",
+              "normalized": "カンリョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "形",
+              "reading": "ケー",
+              "normalized": "ケエ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "過去",
+              "reading": "カコ",
+              "normalized": "カコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "計",
+              "reading": "ケー",
+              "normalized": "ケエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "現在",
+              "reading": "ゲンザイ",
+              "normalized": "ゲンザイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "完了",
+              "reading": "カンリョー",
+              "normalized": "カンリョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "計",
+              "reading": "ケー",
+              "normalized": "ケエ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "gram-conditional": {
       "key": "gram-conditional",
@@ -1523,7 +1628,76 @@
           "recognized": "家 庭 放 課 校"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-conditional"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-conditional",
+      "comparison": {
+        "audioSha256": "d3c47f715b7f89e368df7197ff609cd98c74a782201e8c4373f4b1d6a3c0c5ed",
+        "recognized": "家庭放課校",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "仮定法過去",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "カテエホオカコ",
+        "normalizedRecognized": "カテエホオカコオ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "650f67302a1b874aebf33e4b5b90880d83a26d2cd33e69454c2af6f39daa9ee3"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "仮定",
+              "reading": "カテー",
+              "normalized": "カテエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "法",
+              "reading": "ホー",
+              "normalized": "ホオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "過去",
+              "reading": "カコ",
+              "normalized": "カコ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "家庭",
+              "reading": "カテー",
+              "normalized": "カテエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "放課",
+              "reading": "ホーカ",
+              "normalized": "ホオカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "校",
+              "reading": "コー",
+              "normalized": "コオ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "gram-word-form": {
       "key": "gram-word-form",
@@ -1589,7 +1763,106 @@
           "recognized": "分"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-word-form"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-word-form",
+      "comparison": {
+        "audioSha256": "ce312ef336e6c397414764935f5014f6c55cdd337df9c05a1b072da43b58e5a0",
+        "recognized": "品質と分中の位置",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "品詞と文中の位置",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ヒンシトブンチュウノイチ",
+        "normalizedRecognized": "ヒンシツトブンチュウノイチ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d4f4d747f3d7c132da17167c4c089c5aa7fbca6f2ff099316702f836afa22eef"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "品詞",
+              "reading": "ヒンシ",
+              "normalized": "ヒンシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "文中",
+              "reading": "ブンチュー",
+              "normalized": "ブンチュウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "位置",
+              "reading": "イチ",
+              "normalized": "イチ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "品質",
+              "reading": "ヒンシツ",
+              "normalized": "ヒンシツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "分",
+              "reading": "ブン",
+              "normalized": "ブン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "中",
+              "reading": "チュー",
+              "normalized": "チュウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "位置",
+              "reading": "イチ",
+              "normalized": "イチ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "gram-preposition": {
       "key": "gram-preposition",
@@ -1692,7 +1965,70 @@
           "recognized": "駿 道 隊"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-passive"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-passive",
+      "comparison": {
+        "audioSha256": "d7c5e8985652aaa94ca52c15b8d704b3d3f78feddf6272531c2a34fb264a2abc",
+        "recognized": "駿道隊",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "受動態",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ジュドオタイ",
+        "normalizedRecognized": "シュンドオタイ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "33e6a54e9bb13e0740b2e85131c99c290c2eebc3e817c6c8371a2668b17c8308"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "受動",
+              "reading": "ジュドー",
+              "normalized": "ジュドオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "態",
+              "reading": "タイ",
+              "normalized": "タイ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "駿",
+              "reading": "シュン",
+              "normalized": "シュン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "道",
+              "reading": "ドー",
+              "normalized": "ドオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "隊",
+              "reading": "タイ",
+              "normalized": "タイ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "gram-inversion": {
       "key": "gram-inversion",
@@ -1758,7 +2094,82 @@
           "recognized": "共 町"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-inversion"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-inversion",
+      "comparison": {
+        "audioSha256": "807259c93b187150936ca6c54e5bafa7cfe019ce0fdcd88ec50908aca18f3e75",
+        "recognized": "当地と共町",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "倒置と強調",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "トオチトキョオチョオ",
+        "normalizedRecognized": "トオチトトモマチ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d22a82831db4bc82133630da40c3f7f470486037a676899e1fa56090f414fc82"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "倒置",
+              "reading": "トーチ",
+              "normalized": "トオチ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "強調",
+              "reading": "キョーチョー",
+              "normalized": "キョオチョオ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "当地",
+              "reading": "トーチ",
+              "normalized": "トオチ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "共",
+              "reading": "トモ",
+              "normalized": "トモ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "町",
+              "reading": "マチ",
+              "normalized": "マチ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "gram-agreement": {
       "key": "gram-agreement",
@@ -1824,7 +2235,94 @@
           "recognized": "位 置"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-agreement"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-agreement",
+      "comparison": {
+        "audioSha256": "1138ba8d0c02aea733b92d9012c24782f2a6f2d02de56efa0f4a47d4c72bb1b1",
+        "recognized": "仕事同士の位置",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "主語と動詞の一致",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "シュゴトドオシノイッチ",
+        "normalizedRecognized": "シゴトドオシノイチ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "b5edec944327a1edfec15e2fbb4a85d326bf057f972e8fd6bec80573eeb87ee5"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "主語",
+              "reading": "シュゴ",
+              "normalized": "シュゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "動詞",
+              "reading": "ドーシ",
+              "normalized": "ドオシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "一致",
+              "reading": "イッチ",
+              "normalized": "イッチ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "仕事",
+              "reading": "シゴト",
+              "normalized": "シゴト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "同士",
+              "reading": "ドーシ",
+              "normalized": "ドオシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "位置",
+              "reading": "イチ",
+              "normalized": "イチ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "gram-sequence": {
       "key": "gram-sequence",
@@ -1888,7 +2386,112 @@
           "recognized": "計"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-sequence"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-sequence",
+      "comparison": {
+        "audioSha256": "e3de228819e1a44b7ce4a5552abe6963a7396d5680a24341919e4a4aff36cd39",
+        "recognized": "未来証言と過去完了計",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "未来表現と過去完了形",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ミライヒョオゲントカコカンリョオケエ",
+        "normalizedRecognized": "ミライショオゲントカコカンリョオケエ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "7cd96bc531b29bf178a112003f99a28851fbf67d839e6cc51a453cc51e954282"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "未来",
+              "reading": "ミライ",
+              "normalized": "ミライ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "表現",
+              "reading": "ヒョーゲン",
+              "normalized": "ヒョオゲン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "過去",
+              "reading": "カコ",
+              "normalized": "カコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "完了",
+              "reading": "カンリョー",
+              "normalized": "カンリョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "形",
+              "reading": "ケー",
+              "normalized": "ケエ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "未来",
+              "reading": "ミライ",
+              "normalized": "ミライ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "証言",
+              "reading": "ショーゲン",
+              "normalized": "ショオゲン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "過去",
+              "reading": "カコ",
+              "normalized": "カコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "完了",
+              "reading": "カンリョー",
+              "normalized": "カンリョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "計",
+              "reading": "ケー",
+              "normalized": "ケエ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "gram-linkers": {
       "key": "gram-linkers",
@@ -1952,7 +2555,106 @@
           "recognized": "し"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-linkers"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-linkers",
+      "comparison": {
+        "audioSha256": "72c46a0f164f4c4801456872d548a2b8bad1306e463abf8a5e179ad882104ce5",
+        "recognized": "レンチ軸と接続し",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "前置詞句と接続詞",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ゼンチシクトセツゾクシ",
+        "normalizedRecognized": "レンチジクトセツゾクシ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "911fd7b261ff5058a6c366e602dfd2902def39b62496d97670727fc6915f264c"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "前置",
+              "reading": "ゼンチ",
+              "normalized": "ゼンチ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "詞",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "句",
+              "reading": "ク",
+              "normalized": "ク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "接続",
+              "reading": "セツゾク",
+              "normalized": "セツゾク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "詞",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "レンチ",
+              "reading": "レンチ",
+              "normalized": "レンチ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "軸",
+              "reading": "ジク",
+              "normalized": "ジク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "接続",
+              "reading": "セツゾク",
+              "normalized": "セツゾク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "first-word": {
       "key": "first-word",
@@ -2013,7 +2715,82 @@
           "recognized": "童"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:first-word"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:first-word",
+      "comparison": {
+        "audioSha256": "b9a0206a4bb9376b00913ded427843e01fe4c3b64e2d58e25acdf55ceb6112d3",
+        "recognized": "文童の聞き取り",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "文頭の聞き取り",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ブントオノキキトリ",
+        "normalizedRecognized": "ブンドオノキキトリ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "45715ea8f3a10e8a890cb4aec64ee9b78d5b9da5eac8d71bd2677d5c14ccd307"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "文頭",
+              "reading": "ブントー",
+              "normalized": "ブントオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "聞き取り",
+              "reading": "キキトリ",
+              "normalized": "キキトリ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "文",
+              "reading": "ブン",
+              "normalized": "ブン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "童",
+              "reading": "ドー",
+              "normalized": "ドオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "聞き取り",
+              "reading": "キキトリ",
+              "normalized": "キキトリ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "indirect": {
       "key": "indirect",
@@ -2074,7 +2851,64 @@
           "recognized": "関 節 音"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:indirect"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:indirect",
+      "comparison": {
+        "audioSha256": "7711ce76475cb401d44ff3783fdb5067d94c6a38c3ac9fdeb75a532bc7fd978b",
+        "recognized": "関節音",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "間接応答",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "カンセツオオトオ",
+        "normalizedRecognized": "カンセツオン",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d980ecf198550562791fb7c5c1b9a3516cd24373058eeac70d60256240a00e6a"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "間接",
+              "reading": "カンセツ",
+              "normalized": "カンセツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "応答",
+              "reading": "オートー",
+              "normalized": "オオトオ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "関節",
+              "reading": "カンセツ",
+              "normalized": "カンセツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "音",
+              "reading": "オン",
+              "normalized": "オン",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "tense": {
       "key": "tense",
@@ -2135,7 +2969,70 @@
           "recognized": "事 成"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:tense"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:tense",
+      "comparison": {
+        "audioSha256": "83966a7d7b74c17924fa3572926915468322dc51be6f2d41b162aef211b4af97",
+        "recognized": "事成問題",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "時制問題",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ジセエモンダイ",
+        "normalizedRecognized": "コトセエモンダイ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "3e5e8fc3a45dd81e4a0614d6523bf30e6caf336b13975b8fd6ffe96841ce87b1"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "時制",
+              "reading": "ジセー",
+              "normalized": "ジセエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "事",
+              "reading": "コト",
+              "normalized": "コト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "成",
+              "reading": "セー",
+              "normalized": "セエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "link": {
       "key": "link",
@@ -2255,7 +3152,148 @@
           "recognized": "ご"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p6-insert"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p6-insert",
+      "comparison": {
+        "audioSha256": "4db43384df25270259591059112a4db25e59105ca1ffa6dea721060a4f915641",
+        "recognized": "文総入問題の指示ごと接続表現",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "文挿入問題の指示語と接続表現",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ブンソオニュウモンダイノシジゴトセツゾクヒョオゲン",
+        "normalizedRecognized": "ブンソオイリモンダイノシジゴトセツゾクヒョオゲン",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ee4f33127f6f68873ab8627250ccc6c246c07744bf7a3688b78ad5a4353e5415"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "文",
+              "reading": "ブン",
+              "normalized": "ブン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "挿入",
+              "reading": "ソーニュー",
+              "normalized": "ソオニュウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "指示",
+              "reading": "シジ",
+              "normalized": "シジ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "語",
+              "reading": "ゴ",
+              "normalized": "ゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "接続",
+              "reading": "セツゾク",
+              "normalized": "セツゾク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "表現",
+              "reading": "ヒョーゲン",
+              "normalized": "ヒョオゲン",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "文",
+              "reading": "ブン",
+              "normalized": "ブン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "総",
+              "reading": "ソー",
+              "normalized": "ソオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "入",
+              "reading": "イリ",
+              "normalized": "イリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "指示",
+              "reading": "シジ",
+              "normalized": "シジ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ごと",
+              "reading": "ゴト",
+              "normalized": "ゴト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "接続",
+              "reading": "セツゾク",
+              "normalized": "セツゾク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "表現",
+              "reading": "ヒョーゲン",
+              "normalized": "ヒョオゲン",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p7-not": {
       "key": "p7-not",
@@ -2316,7 +3354,155 @@
           "recognized": "証 語"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-not"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-not",
+      "comparison": {
+        "audioSha256": "6204787afebefeedcf36045912560b1e6f904bb7f01418c84d5acb53896ca588",
+        "recognized": "NOT問題の選択肢の証語",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "エヌ オー ティー 問題の選択肢の照合",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "エヌオオティイモンダイノセンタクシノショオゴオ",
+        "normalizedRecognized": "エヌオオティイモンダイノセンタクシノアカシゴ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "acc36fcc27e96be41df0829ac5cfc66381eb46601d0c0bbd28eed38ceeb5a6b7"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "エヌ",
+              "reading": "エヌ",
+              "normalized": "エヌ",
+              "method": "literal-kana"
+            },
+            {
+              "surface": "オー",
+              "reading": "オー",
+              "normalized": "オオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ティー",
+              "reading": "ティー",
+              "normalized": "ティイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "選択",
+              "reading": "センタク",
+              "normalized": "センタク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "肢",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "照合",
+              "reading": "ショーゴー",
+              "normalized": "ショオゴオ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "エヌ",
+              "reading": "エヌ",
+              "normalized": "エヌ",
+              "method": "literal-kana"
+            },
+            {
+              "surface": "オー",
+              "reading": "オー",
+              "normalized": "オオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ティー",
+              "reading": "ティー",
+              "normalized": "ティイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "選択",
+              "reading": "センタク",
+              "normalized": "センタク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "肢",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "証",
+              "reading": "アカシ",
+              "normalized": "アカシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "語",
+              "reading": "ゴ",
+              "normalized": "ゴ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p7-syn": {
       "key": "p7-syn",
@@ -2432,7 +3618,94 @@
           "recognized": "一"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-position"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-position",
+      "comparison": {
+        "audioSha256": "f912d91405936cc44e42eb9563efbc21796d7fc8bac9059a8f7be22b7ee696e0",
+        "recognized": "文総入一問題",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "文挿入位置問題",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ブンソオニュウイチモンダイ",
+        "normalizedRecognized": "ブンソオイリイチモンダイ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "5c203b603d5b69a8a5e6bed79dd8ae9e1fe90528b5e911d5bfa37e8c449c74cc"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "文",
+              "reading": "ブン",
+              "normalized": "ブン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "挿入",
+              "reading": "ソーニュー",
+              "normalized": "ソオニュウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "位置",
+              "reading": "イチ",
+              "normalized": "イチ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "文",
+              "reading": "ブン",
+              "normalized": "ブン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "総",
+              "reading": "ソー",
+              "normalized": "ソオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "入",
+              "reading": "イリ",
+              "normalized": "イリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "一",
+              "reading": "イチ",
+              "normalized": "イチ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p7-multi": {
       "key": "p7-multi",
@@ -2493,7 +3766,100 @@
           "recognized": "集"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-multi"
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-multi",
+      "comparison": {
+        "audioSha256": "1b30b91fe5cf062c768a1773608e6b4e9cee64f4bc946ad0ee693a0b818a70ba",
+        "recognized": "複数文書の集合問題",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "複数文書の照合問題",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "フクスウブンショノショオゴオモンダイ",
+        "normalizedRecognized": "フクスウブンショノシュウゴオモンダイ",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bf9629a78b57c315635053ff20de21a8c503c5ff39d7ea7ec6f9e774d363ac0d"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "複数",
+              "reading": "フクスー",
+              "normalized": "フクスウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "文書",
+              "reading": "ブンショ",
+              "normalized": "ブンショ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "照合",
+              "reading": "ショーゴー",
+              "normalized": "ショオゴオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "複数",
+              "reading": "フクスー",
+              "normalized": "フクスウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "文書",
+              "reading": "ブンショ",
+              "normalized": "ブンショ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "集合",
+              "reading": "シューゴー",
+              "normalized": "シュウゴオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "問題",
+              "reading": "モンダイ",
+              "normalized": "モンダイ",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     }
   },
   "generation": {

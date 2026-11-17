@@ -44963,7 +44963,7 @@
         "recognized": "can collect it at the side counter of Lane Print after 2pm today.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1875,
       "phonemeErrorRate": null,
@@ -44974,7 +44974,66 @@
           "recognized": "twopm"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-print/documents/0/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-print/documents/0/text/1",
+      "comparison": {
+        "audioSha256": "0b45f859d7723eeedccbacc38bcda9cbd2c1f02807b45560a8e7e072811b78e5",
+        "recognized": "You can collect it at the side counter of lane print after 2pm today.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "You can collect it at the side counter of Lane Print after two p.m. today.",
+        "reasons": [
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "you",
+          "can",
+          "collect",
+          "it",
+          "at",
+          "the",
+          "side",
+          "counter",
+          "of",
+          "lane",
+          "print",
+          "after",
+          "two",
+          "meridiempm",
+          "today"
+        ],
+        "normalizedRecognized": [
+          "you",
+          "can",
+          "collect",
+          "it",
+          "at",
+          "the",
+          "side",
+          "counter",
+          "of",
+          "lane",
+          "print",
+          "after",
+          "two",
+          "meridiempm",
+          "today"
+        ],
+        "proofExpected": "t:you | t:can | t:collect | t:it | t:at | t:the | t:side | t:counter | t:of | t:lane | t:print | t:after | t:two | t:meridiempm | t:today",
+        "proofRecognized": "t:you | t:can | t:collect | t:it | t:at | t:the | t:side | t:counter | t:of | t:lane | t:print | t:after | t:two | t:meridiempm | t:today",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f61e716044970c8eb4d31dc941492e11d6eddb84dc22600bdf637b0ac242284f"
+        }
+      }
     },
     "read-printer/documents/0/text/0": {
       "key": "read-printer/documents/0/text/0",
@@ -45022,7 +45081,7 @@
         "recognized": "842 Ben, the printer by the Lyft has run out of label rolls.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1333,
       "phonemeErrorRate": null,
@@ -45033,7 +45092,67 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "cf8cb4c9d994583e9f9efc0e83db5fe2a3bdad6e82158ec85d834a55bfc564c8",
+        "recognized": "842 Ben. The printer by the lift has run out of label rolls.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eight forty-two Ben: The printer by the lift has run out of label rolls.",
+        "reasons": [
+          "source-anchored-clock:842→8:42",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "eight",
+          "forty",
+          "two",
+          "ben",
+          "the",
+          "printer",
+          "by",
+          "the",
+          "lift",
+          "has",
+          "run",
+          "out",
+          "of",
+          "label",
+          "rolls"
+        ],
+        "normalizedRecognized": [
+          "eight",
+          "forty",
+          "two",
+          "ben",
+          "the",
+          "printer",
+          "by",
+          "the",
+          "lift",
+          "has",
+          "run",
+          "out",
+          "of",
+          "label",
+          "rolls"
+        ],
+        "proofExpected": "t:eight | t:forty | t:two | t:ben | t:the | t:printer | t:by | t:the | t:lift | t:has | t:run | t:out | t:of | t:label | t:rolls",
+        "proofRecognized": "t:eight | t:forty | t:two | t:ben | t:the | t:printer | t:by | t:the | t:lift | t:has | t:run | t:out | t:of | t:label | t:rolls",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "686e3182a8c0b97edd3f3954cc5d6bff2fc984f3d21e4a3cb76e632fd763f36a"
+        }
+      }
     },
     "read-printer/documents/0/text/2": {
       "key": "read-printer/documents/0/text/2",
@@ -45083,7 +45202,7 @@
         "recognized": "843 HANA, the office printer only takes plain paper.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1818,
       "phonemeErrorRate": null,
@@ -45094,7 +45213,59 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/2",
+      "comparison": {
+        "audioSha256": "d9d2b2fd84a3d9a389c2ae21b6502b387c234972432d16fd9457151fae7390ca",
+        "recognized": "843 Hana. The office printer only takes plain paper.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eight forty-three Hana: The office printer only takes plain paper.",
+        "reasons": [
+          "source-anchored-clock:843→8:43",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "eight",
+          "forty",
+          "three",
+          "hana",
+          "the",
+          "office",
+          "printer",
+          "only",
+          "takes",
+          "plain",
+          "paper"
+        ],
+        "normalizedRecognized": [
+          "eight",
+          "forty",
+          "three",
+          "hana",
+          "the",
+          "office",
+          "printer",
+          "only",
+          "takes",
+          "plain",
+          "paper"
+        ],
+        "proofExpected": "t:eight | t:forty | t:three | t:hana | t:the | t:office | t:printer | t:only | t:takes | t:plain | t:paper",
+        "proofRecognized": "t:eight | t:forty | t:three | t:hana | t:the | t:office | t:printer | t:only | t:takes | t:plain | t:paper",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "7b800384e4c1634105958c1c554bf02acec5f900adb1b1d298ec800f561444b0"
+        }
+      }
     },
     "read-printer/documents/0/text/4": {
       "key": "read-printer/documents/0/text/4",
@@ -45142,7 +45313,7 @@
         "recognized": "844 BEN, found it, thanks.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2857,
       "phonemeErrorRate": null,
@@ -45153,7 +45324,51 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/4"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/4",
+      "comparison": {
+        "audioSha256": "25204d5563a55b85ce677c098365fc5c53e611a4812c5a04ba7967a0af5d84e5",
+        "recognized": "844-BEN, found it thanks.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eight forty-four Ben: Found it, thanks.",
+        "reasons": [
+          "source-anchored-clock:844→8:44",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "eight",
+          "forty",
+          "four",
+          "ben",
+          "found",
+          "it",
+          "thanks"
+        ],
+        "normalizedRecognized": [
+          "eight",
+          "forty",
+          "four",
+          "ben",
+          "found",
+          "it",
+          "thanks"
+        ],
+        "proofExpected": "t:eight | t:forty | t:four | t:ben | t:found | t:it | t:thanks",
+        "proofRecognized": "t:eight | t:forty | t:four | t:ben | t:found | t:it | t:thanks",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "cd49bc439d208682e96b63518153daab5acd095e23d7659920e9565ac70d9284"
+        }
+      }
     },
     "read-printer/documents/0/text/6": {
       "key": "read-printer/documents/0/text/6",
@@ -45201,7 +45416,7 @@
         "recognized": "846 HANA, good.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.4,
       "phonemeErrorRate": null,
@@ -45212,7 +45427,47 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/6"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-printer/documents/0/text/6",
+      "comparison": {
+        "audioSha256": "4e21b8d903dde5ba14494388a765469fc9ab83de2dd2fc48f1633bff56b22108",
+        "recognized": "846 HANA. Good.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eight forty-six Hana: Good.",
+        "reasons": [
+          "source-anchored-clock:846→8:46",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "eight",
+          "forty",
+          "six",
+          "hana",
+          "good"
+        ],
+        "normalizedRecognized": [
+          "eight",
+          "forty",
+          "six",
+          "hana",
+          "good"
+        ],
+        "proofExpected": "t:eight | t:forty | t:six | t:hana | t:good",
+        "proofRecognized": "t:eight | t:forty | t:six | t:hana | t:good",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "707f25a41aa05f23a9d904cab76781cce3233424ea86ef99f12d04f08a98181f"
+        }
+      }
     },
     "read-orientation/documents/0/text/0": {
       "key": "read-orientation/documents/0/text/0",
@@ -45274,7 +45529,7 @@
         "recognized": "",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3617,
       "phonemeErrorRate": null,
@@ -45315,7 +45570,135 @@
           "recognized": "point one five"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-orientation/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-orientation/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "5225c68f974a111cef31d339b54bcd018ce87a11be1267ca4d9f88ac5369ede6",
+        "recognized": "9 o'clock to 9.30 welcome and building tour, reception 9.30 to 10.15 safe lifting demonstration, loading bay 10.15 to 10.30 break, staff room 10.30 to 11.15 customer calls practice, room C please bring your training folder to all sessions.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "nine o clock to nine thirty Welcome and building tour , Reception nine thirty to ten fifteen Safe lifting demonstration , Loading Bay ten fifteen to ten thirty Break , Staff Room ten thirty to eleven fifteen Customer calls practice , Room C Please bring your training folder to all sessions.",
+        "reasons": [
+          "source-anchored-contextual-letter:C",
+          "source-anchored-clock:9.30→9:30",
+          "source-anchored-clock:10.15→10:15",
+          "source-anchored-clock:10.30→10:30",
+          "source-anchored-clock:11.15→11:15",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "nine",
+          "o",
+          "clock",
+          "to",
+          "nine",
+          "thirty",
+          "welcome",
+          "and",
+          "building",
+          "tour",
+          "reception",
+          "nine",
+          "thirty",
+          "to",
+          "ten",
+          "fifteen",
+          "safe",
+          "lifting",
+          "demonstration",
+          "loading",
+          "bay",
+          "ten",
+          "fifteen",
+          "to",
+          "ten",
+          "thirty",
+          "break",
+          "staff",
+          "room",
+          "ten",
+          "thirty",
+          "to",
+          "eleven",
+          "fifteen",
+          "customer",
+          "calls",
+          "practice",
+          "room",
+          "letterc",
+          "please",
+          "bring",
+          "your",
+          "training",
+          "folder",
+          "to",
+          "all",
+          "sessions"
+        ],
+        "normalizedRecognized": [
+          "nine",
+          "o",
+          "clock",
+          "to",
+          "nine",
+          "thirty",
+          "welcome",
+          "and",
+          "building",
+          "tour",
+          "reception",
+          "nine",
+          "thirty",
+          "to",
+          "ten",
+          "fifteen",
+          "safe",
+          "lifting",
+          "demonstration",
+          "loading",
+          "bay",
+          "ten",
+          "fifteen",
+          "to",
+          "ten",
+          "thirty",
+          "break",
+          "staff",
+          "room",
+          "ten",
+          "thirty",
+          "to",
+          "eleven",
+          "fifteen",
+          "customer",
+          "calls",
+          "practice",
+          "room",
+          "letterc",
+          "please",
+          "bring",
+          "your",
+          "training",
+          "folder",
+          "to",
+          "all",
+          "sessions"
+        ],
+        "proofExpected": "t:nine | t:o | t:clock | t:to | t:nine | t:thirty | t:welcome | t:and | t:building | t:tour | t:reception | t:nine | t:thirty | t:to | t:ten | t:fifteen | t:safe | t:lifting | t:demonstration | t:loading | t:bay | t:ten | t:fifteen | t:to | t:ten | t:thirty | t:break | t:staff | t:room | t:ten | t:thirty | t:to | t:eleven | t:fifteen | t:customer | t:calls | t:practice | t:room | t:letterc | t:please | t:bring | t:your | t:training | t:folder | t:to | t:all | t:sessions",
+        "proofRecognized": "t:nine | t:o | t:clock | t:to | t:nine | t:thirty | t:welcome | t:and | t:building | t:tour | t:reception | t:nine | t:thirty | t:to | t:ten | t:fifteen | t:safe | t:lifting | t:demonstration | t:loading | t:bay | t:ten | t:fifteen | t:to | t:ten | t:thirty | t:break | t:staff | t:room | t:ten | t:thirty | t:to | t:eleven | t:fifteen | t:customer | t:calls | t:practice | t:room | t:letterc | t:please | t:bring | t:your | t:training | t:folder | t:to | t:all | t:sessions",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "3b00a639da6a989d4e5fce4511a1624c8e3f0942b732055e31a8838363c05a65"
+        }
+      }
     },
     "read-staging/documents/1/text/0": {
       "key": "read-staging/documents/1/text/0",
@@ -45379,7 +45762,62 @@
           "recognized": "receipts"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/1/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/1/text/0",
+      "comparison": {
+        "audioSha256": "ae801890b3666c5d9514d4a161a7cace3dd5520b1993e03fa23dd2f44dad8903",
+        "recognized": "1010 East Branch. Three narrow stands delivered. Receipts signed by Lee.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "ten ten , East branch: three narrow stands delivered; receipt signed by Lee.",
+        "reasons": [
+          "source-anchored-clock:1010→10:10",
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "ten",
+          "ten",
+          "east",
+          "branch",
+          "three",
+          "narrow",
+          "stands",
+          "delivered",
+          "receipt",
+          "signed",
+          "by",
+          "lee"
+        ],
+        "normalizedRecognized": [
+          "ten",
+          "ten",
+          "east",
+          "branch",
+          "three",
+          "narrow",
+          "stands",
+          "delivered",
+          "receipts",
+          "signed",
+          "by",
+          "lee"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "077062dd58a19bd4e6748075338db6b0a07a594455443bec8cdecd632455bb5b"
+        }
+      }
     },
     "read-staging/documents/1/text/1": {
       "key": "read-staging/documents/1/text/1",
@@ -45429,7 +45867,7 @@
         "recognized": "1055, West Branch, 3 narrow stands delivered, receipt signed by Dara.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2308,
       "phonemeErrorRate": null,
@@ -45440,7 +45878,63 @@
           "recognized": "one thousand and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "bc05fa1a5b229e30505f1f68d51d318c2181669e80905f65bcee63e03cc6bd9d",
+        "recognized": "1055 West Branch. Three narrow stands delivered. Receipt signed by Dara.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "ten fifty-five , West branch: three narrow stands delivered; receipt signed by Dara.",
+        "reasons": [
+          "source-anchored-clock:1055→10:55",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "ten",
+          "fifty",
+          "five",
+          "west",
+          "branch",
+          "three",
+          "narrow",
+          "stands",
+          "delivered",
+          "receipt",
+          "signed",
+          "by",
+          "dara"
+        ],
+        "normalizedRecognized": [
+          "ten",
+          "fifty",
+          "five",
+          "west",
+          "branch",
+          "three",
+          "narrow",
+          "stands",
+          "delivered",
+          "receipt",
+          "signed",
+          "by",
+          "dara"
+        ],
+        "proofExpected": "t:ten | t:fifty | t:five | t:west | t:branch | t:three | t:narrow | t:stands | t:delivered | t:receipt | t:signed | t:by | t:dara",
+        "proofRecognized": "t:ten | t:fifty | t:five | t:west | t:branch | t:three | t:narrow | t:stands | t:delivered | t:receipt | t:signed | t:by | t:dara",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d8adccb9db867dfe8f9abddf7f1f70dd006a8252f4b46d7fb94632ba7b10f008"
+        }
+      }
     },
     "read-staging/documents/2/text/0": {
       "key": "read-staging/documents/2/text/0",
@@ -45504,7 +45998,66 @@
           "recognized": "hours"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/2/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/2/text/0",
+      "comparison": {
+        "audioSha256": "e607e182c97ee0b34f9e7610b79c949323e2418fd7430670d72326f0edd59927",
+        "recognized": "1115 Lee we can assemble hours this afternoon if the numbers are corrected",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eleven fifteen Lee: We can assemble ours this afternoon if the numbers are corrected.",
+        "reasons": [
+          "source-anchored-clock:1115→11:15",
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "eleven",
+          "fifteen",
+          "lee",
+          "we",
+          "can",
+          "assemble",
+          "ours",
+          "this",
+          "afternoon",
+          "if",
+          "the",
+          "numbers",
+          "are",
+          "corrected"
+        ],
+        "normalizedRecognized": [
+          "eleven",
+          "fifteen",
+          "lee",
+          "we",
+          "can",
+          "assemble",
+          "hours",
+          "this",
+          "afternoon",
+          "if",
+          "the",
+          "numbers",
+          "are",
+          "corrected"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "44375a011a9d2ecb2f53deced5ac2bcca170f3ebafebeb4b38316e52972732b5"
+        }
+      }
     },
     "read-staging/documents/2/text/1": {
       "key": "read-staging/documents/2/text/1",
@@ -45552,7 +46105,7 @@
         "recognized": "1117 Dara. I have checked the stock room here.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.7778,
       "phonemeErrorRate": null,
@@ -45568,7 +46121,58 @@
           "recognized": "stock room"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/2/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/2/text/1",
+      "comparison": {
+        "audioSha256": "361595a8bb0b6810efd8aff635ce65ffe2422ed8a7231e3a2f7f4794c3263c1a",
+        "recognized": "1117 Dara. I have checked the stock room here.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eleven seventeen Dara: I have checked the stockroom here.",
+        "reasons": [
+          "source-anchored-clock:1117→11:17",
+          "author-number-and-input-normalization",
+          "reviewed-compound-boundary:stockroom"
+        ],
+        "normalizedExpected": [
+          "eleven",
+          "seventeen",
+          "dara",
+          "i",
+          "have",
+          "checked",
+          "the",
+          "stock",
+          "room",
+          "here"
+        ],
+        "normalizedRecognized": [
+          "eleven",
+          "seventeen",
+          "dara",
+          "i",
+          "have",
+          "checked",
+          "the",
+          "stock",
+          "room",
+          "here"
+        ],
+        "proofExpected": "t:eleven | t:seventeen | t:dara | t:i | t:have | t:checked | t:the | t:stock | t:room | t:here",
+        "proofRecognized": "t:eleven | t:seventeen | t:dara | t:i | t:have | t:checked | t:the | t:stock | t:room | t:here",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e759743db36792cf5f6deb848de40817923edf5729e5dd177a250fbd30a42469"
+        }
+      }
     },
     "read-staging/documents/2/text/4": {
       "key": "read-staging/documents/2/text/4",
@@ -45618,7 +46222,7 @@
         "recognized": "1120 Lee, yes please.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -45629,7 +46233,47 @@
           "recognized": "one thousand one hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/2/text/4"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-staging/documents/2/text/4",
+      "comparison": {
+        "audioSha256": "e9acdb8108632361098ae4fde59c3c8e0ab2d4ed26bc693bc30f52487c040e83",
+        "recognized": "1120 Lee. Yes, please.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eleven twenty Lee: Yes, please.",
+        "reasons": [
+          "source-anchored-clock:1120→11:20",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "eleven",
+          "twenty",
+          "lee",
+          "yes",
+          "please"
+        ],
+        "normalizedRecognized": [
+          "eleven",
+          "twenty",
+          "lee",
+          "yes",
+          "please"
+        ],
+        "proofExpected": "t:eleven | t:twenty | t:lee | t:yes | t:please",
+        "proofRecognized": "t:eleven | t:twenty | t:lee | t:yes | t:please",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8172ed7ff082c2a8a61277c4958bb350f6a2889669ef40ab16a9d9667acfbb96"
+        }
+      }
     },
     "read-proof/documents/1/text/1": {
       "key": "read-proof/documents/1/text/1",
@@ -45684,7 +46328,7 @@
         "recognized": "We sent you an outdated meeting time in our original file. Please change 815 to 845 on page 2.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1818,
       "phonemeErrorRate": null,
@@ -45700,7 +46344,82 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-proof/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-proof/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "c1d4162273c651605904c519318b5018c61a56be01c503ab3af82ad0206c2800",
+        "recognized": "We sent you an outdated meeting time in our original file. Please change 815 to 845 on page 2.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "We sent you an outdated meeting time in our original file; please change eight fifteen to eight forty-five on page two.",
+        "reasons": [
+          "source-anchored-clock:815→8:15",
+          "source-anchored-clock:845→8:45",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "we",
+          "sent",
+          "you",
+          "an",
+          "outdated",
+          "meeting",
+          "time",
+          "in",
+          "our",
+          "original",
+          "file",
+          "please",
+          "change",
+          "eight",
+          "fifteen",
+          "to",
+          "eight",
+          "forty",
+          "five",
+          "on",
+          "page",
+          "two"
+        ],
+        "normalizedRecognized": [
+          "we",
+          "sent",
+          "you",
+          "an",
+          "outdated",
+          "meeting",
+          "time",
+          "in",
+          "our",
+          "original",
+          "file",
+          "please",
+          "change",
+          "eight",
+          "fifteen",
+          "to",
+          "eight",
+          "forty",
+          "five",
+          "on",
+          "page",
+          "two"
+        ],
+        "proofExpected": "t:we | t:sent | t:you | t:an | t:outdated | t:meeting | t:time | t:in | t:our | t:original | t:file | t:please | t:change | t:eight | t:fifteen | t:to | t:eight | t:forty | t:five | t:on | t:page | t:two",
+        "proofRecognized": "t:we | t:sent | t:you | t:an | t:outdated | t:meeting | t:time | t:in | t:our | t:original | t:file | t:please | t:change | t:eight | t:fifteen | t:to | t:eight | t:forty | t:five | t:on | t:page | t:two",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8c0ecc7fdb840d42d6de8678e8c4b4bc5c6732ad4bb15d22a4b4f7593d24be22"
+        }
+      }
     },
     "read-tea-box/documents/0/text/0": {
       "key": "read-tea-box/documents/0/text/0",
@@ -45751,7 +46470,7 @@
         "recognized": "Hi Kim, the delivery by the back door is for the T-shelf.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0769,
       "phonemeErrorRate": null,
@@ -45762,7 +46481,62 @@
           "recognized": "t"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-tea-box/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-tea-box/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "c1e8c8b9c998b63d7a405e601c3b7922aef91216c3d8e67e79efb04989938cab",
+        "recognized": "Hi Kim, the delivery by the back door is for the T-Shelf.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Hi Kim, The delivery by the back door is for the tea shelf.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:tea=t"
+        ],
+        "normalizedExpected": [
+          "hi",
+          "kim",
+          "the",
+          "delivery",
+          "by",
+          "the",
+          "back",
+          "door",
+          "is",
+          "for",
+          "the",
+          "tea",
+          "shelf"
+        ],
+        "normalizedRecognized": [
+          "hi",
+          "kim",
+          "the",
+          "delivery",
+          "by",
+          "the",
+          "back",
+          "door",
+          "is",
+          "for",
+          "the",
+          "t",
+          "shelf"
+        ],
+        "proofExpected": "t:hi | t:kim | t:the | t:delivery | t:by | t:the | t:back | t:door | t:is | t:for | t:the | p:T IY | t:shelf",
+        "proofRecognized": "t:hi | t:kim | t:the | t:delivery | t:by | t:the | t:back | t:door | t:is | t:for | t:the | p:T IY | t:shelf",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "93f14cf2334f4c962abf35894cb0f1d41c2b41839c9dcfaf77982569b02da8a5"
+        }
+      }
     },
     "read-tea-box/documents/0/text/2": {
       "key": "read-tea-box/documents/0/text/2",
@@ -45812,7 +46586,7 @@
         "recognized": "list inside each carton shows which tease it contains.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1,
       "phonemeErrorRate": null,
@@ -45823,7 +46597,56 @@
           "recognized": "tease"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-tea-box/documents/0/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-tea-box/documents/0/text/2",
+      "comparison": {
+        "audioSha256": "7b1be265dad936d96aa22b3475cd324067058952b7d31294fb6030ed20714d7c",
+        "recognized": "A list inside each carton shows which tease it contains.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A list inside each carton shows which teas it contains.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:teas=tease"
+        ],
+        "normalizedExpected": [
+          "a",
+          "list",
+          "inside",
+          "each",
+          "carton",
+          "shows",
+          "which",
+          "teas",
+          "it",
+          "contains"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "list",
+          "inside",
+          "each",
+          "carton",
+          "shows",
+          "which",
+          "tease",
+          "it",
+          "contains"
+        ],
+        "proofExpected": "t:a | t:list | t:inside | t:each | t:carton | t:shows | t:which | p:T IY Z | t:it | t:contains",
+        "proofRecognized": "t:a | t:list | t:inside | t:each | t:carton | t:shows | t:which | p:T IY Z | t:it | t:contains",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "eb5f10c7575b44827805e38d626efbfd1eab7922f8e59881bb76aa1786a46720"
+        }
+      }
     },
     "read-tea-box/documents/0/text/8": {
       "key": "read-tea-box/documents/0/text/8",
@@ -45873,7 +46696,7 @@
         "recognized": "Joe.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -45884,7 +46707,38 @@
           "recognized": "joe"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-tea-box/documents/0/text/8"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-tea-box/documents/0/text/8",
+      "comparison": {
+        "audioSha256": "2871b5e07571f6e77bdf57c57e37d85de290c7c7c801210c7c12185514ebd96d",
+        "recognized": "Joe.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Jo",
+        "reasons": [
+          "cmu-identical-pronunciation-set:jo=joe"
+        ],
+        "normalizedExpected": [
+          "jo"
+        ],
+        "normalizedRecognized": [
+          "joe"
+        ],
+        "proofExpected": "p:JH OW",
+        "proofRecognized": "p:JH OW",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "78ae3ce3f04fbd00860f777693b1b173ae8d58915fd54c02100ff39967a1201c"
+        }
+      }
     },
     "read-mat/documents/0/text/0": {
       "key": "read-mat/documents/0/text/0",
@@ -45986,7 +46840,56 @@
           "recognized": "cafe"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-mat/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-mat/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "d326da77f6f6168dd6734043bbb787e75c9843d035050880b4e9cd7f39e0036a",
+        "recognized": "The mats by the cafe are heavier than the others.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The mats by the café are heavier than the others.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "mats",
+          "by",
+          "the",
+          "café",
+          "are",
+          "heavier",
+          "than",
+          "the",
+          "others"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "mats",
+          "by",
+          "the",
+          "cafe",
+          "are",
+          "heavier",
+          "than",
+          "the",
+          "others"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "7b964867f9bcb0876959cee08de11db2459064f67e2044fc27a26cad281b4e3b"
+        }
+      }
     },
     "read-mat/documents/0/text/5": {
       "key": "read-mat/documents/0/text/5",
@@ -46045,7 +46948,54 @@
           "recognized": "cafe"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-mat/documents/0/text/5"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-mat/documents/0/text/5",
+      "comparison": {
+        "audioSha256": "1255f3459ba0000c74d7ede554b6d5457c585dcb0d8087bde07b083299624168",
+        "recognized": "The washroom is a long way from the cafe.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The washroom is a long way from the café.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "washroom",
+          "is",
+          "a",
+          "long",
+          "way",
+          "from",
+          "the",
+          "café"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "washroom",
+          "is",
+          "a",
+          "long",
+          "way",
+          "from",
+          "the",
+          "cafe"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "1ae646ce0bcf60c713ef7f0ce564564c72ccea9885010e744f202eeb4864047b"
+        }
+      }
     },
     "read-mat/documents/0/text/6": {
       "key": "read-mat/documents/0/text/6",
@@ -46136,7 +47086,7 @@
         "recognized": "Equipment may remain on stage only if it does not obstruct an exit.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1667,
       "phonemeErrorRate": null,
@@ -46147,7 +47097,62 @@
           "recognized": "on stage"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hall-sound/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hall-sound/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "763202b284dc3ceda0ac2bc64bf1e6731eb5604740fe7cb322efd66b0676d1ea",
+        "recognized": "Equipment may remain on stage, only if it does not obstruct an exit.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Equipment may remain onstage only if it does not obstruct an exit.",
+        "reasons": [
+          "reviewed-compound-boundary:onstage"
+        ],
+        "normalizedExpected": [
+          "equipment",
+          "may",
+          "remain",
+          "on",
+          "stage",
+          "only",
+          "if",
+          "it",
+          "does",
+          "not",
+          "obstruct",
+          "an",
+          "exit"
+        ],
+        "normalizedRecognized": [
+          "equipment",
+          "may",
+          "remain",
+          "on",
+          "stage",
+          "only",
+          "if",
+          "it",
+          "does",
+          "not",
+          "obstruct",
+          "an",
+          "exit"
+        ],
+        "proofExpected": "t:equipment | t:may | t:remain | t:on | t:stage | t:only | t:if | t:it | t:does | t:not | t:obstruct | t:an | t:exit",
+        "proofRecognized": "t:equipment | t:may | t:remain | t:on | t:stage | t:only | t:if | t:it | t:does | t:not | t:obstruct | t:an | t:exit",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "81573b46c6fa192ae2fff6f55a26b43fda3d54363b52b5ed9811da080c03b2c0"
+        }
+      }
     },
     "read-keys/documents/0/text/0": {
       "key": "read-keys/documents/0/text/0",
@@ -46211,7 +47216,56 @@
           "recognized": "covered"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-keys/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-keys/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "8b8d94e1b023dc2e459770fe8325097fe2e92b9e3eb5cd5fd737e2943ded67b9",
+        "recognized": "Joules, who has the key to the little supply covered.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Jules: Who has the key to the little supply cupboard?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "jules",
+          "who",
+          "has",
+          "the",
+          "key",
+          "to",
+          "the",
+          "little",
+          "supply",
+          "cupboard"
+        ],
+        "normalizedRecognized": [
+          "joules",
+          "who",
+          "has",
+          "the",
+          "key",
+          "to",
+          "the",
+          "little",
+          "supply",
+          "covered"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d1046bd3361879aa845bf4c59f8a8bb10f6dc4fc71ce1a2488497d74810d8662"
+        }
+      }
     },
     "read-keys/documents/0/text/1": {
       "key": "read-keys/documents/0/text/1",
@@ -46273,7 +47327,42 @@
           "recognized": "anna"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-keys/documents/0/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-keys/documents/0/text/1",
+      "comparison": {
+        "audioSha256": "e78c4a2d8a1b1c0fc8793cd91d6dbdf11659442c9e03f1a25275e14c423e0923",
+        "recognized": "Anna, I do.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Ana: I do.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "ana",
+          "i",
+          "do"
+        ],
+        "normalizedRecognized": [
+          "anna",
+          "i",
+          "do"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "a6d02b911d087020421dfe77125e2a5c8896185e688e88341fd01330efb17788"
+        }
+      }
     },
     "read-keys/documents/0/text/5": {
       "key": "read-keys/documents/0/text/5",
@@ -46334,7 +47423,42 @@
           "recognized": "anna"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-keys/documents/0/text/5"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-keys/documents/0/text/5",
+      "comparison": {
+        "audioSha256": "2ef83dff5fc1ffdf68a15514b9d91c5772d1daa041260d3dfc18f04607bf0b3d",
+        "recognized": "Anna, stay there.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Ana: Stay there.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "ana",
+          "stay",
+          "there"
+        ],
+        "normalizedRecognized": [
+          "anna",
+          "stay",
+          "there"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9bdb248f0ff50ec51c5255fe45238be705ee9fdb8ab7659ed093a7a0ec71ce30"
+        }
+      }
     },
     "read-flowers/documents/0/text/5": {
       "key": "read-flowers/documents/0/text/5",
@@ -46393,7 +47517,42 @@
           "recognized": "read"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-flowers/documents/0/text/5"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-flowers/documents/0/text/5",
+      "comparison": {
+        "audioSha256": "67dc1e18ff8ac6e32fa2b0530f3bbd769044a402a3638a99c3a769ec8b229ae9",
+        "recognized": "Lena, read flowers.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Lena, Reed Flowers",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "lena",
+          "reed",
+          "flowers"
+        ],
+        "normalizedRecognized": [
+          "lena",
+          "read",
+          "flowers"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "0ed17f878f36b5de303818bdae943a2e716de99c4f228d94ced6a0957da1e0c5"
+        }
+      }
     },
     "read-minute/documents/0/text/0": {
       "key": "read-minute/documents/0/text/0",
@@ -46441,7 +47600,7 @@
         "recognized": "We will meet at the dispatch desk at 8.40 tomorrow.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1818,
       "phonemeErrorRate": null,
@@ -46452,7 +47611,59 @@
           "recognized": "point four"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-minute/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-minute/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "a0a666df0ccbdfe2a789d6cbffbd5a56b7b793379a78854240d0898962525b34",
+        "recognized": "We will meet at the dispatch desk at 8.40 tomorrow.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "We will meet at the dispatch desk at eight forty tomorrow.",
+        "reasons": [
+          "source-anchored-clock:8.40→8:40",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "we",
+          "will",
+          "meet",
+          "at",
+          "the",
+          "dispatch",
+          "desk",
+          "at",
+          "eight",
+          "forty",
+          "tomorrow"
+        ],
+        "normalizedRecognized": [
+          "we",
+          "will",
+          "meet",
+          "at",
+          "the",
+          "dispatch",
+          "desk",
+          "at",
+          "eight",
+          "forty",
+          "tomorrow"
+        ],
+        "proofExpected": "t:we | t:will | t:meet | t:at | t:the | t:dispatch | t:desk | t:at | t:eight | t:forty | t:tomorrow",
+        "proofRecognized": "t:we | t:will | t:meet | t:at | t:the | t:dispatch | t:desk | t:at | t:eight | t:forty | t:tomorrow",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6b667bb01fa10c53a55c6e2595dec5fec0aac4987610faf3874f2e538ed5f300"
+        }
+      }
     },
     "read-minute/documents/0/text/3": {
       "key": "read-minute/documents/0/text/3",
@@ -46502,7 +47713,7 @@
         "recognized": "will finish by 8.50 in time for the vans to leave at 9",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1333,
       "phonemeErrorRate": null,
@@ -46513,7 +47724,67 @@
           "recognized": "point five"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-minute/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-minute/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "4c6c86fdee87c857e6d5db64d3aa99b78b11ca72b568c4f7599b4f9189a82683",
+        "recognized": "We will finish by 8.50, in time for the vans to leave at 9.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "We will finish by eight fifty, in time for the vans to leave at nine.",
+        "reasons": [
+          "source-anchored-clock:8.50→8:50",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "we",
+          "will",
+          "finish",
+          "by",
+          "eight",
+          "fifty",
+          "in",
+          "time",
+          "for",
+          "the",
+          "vans",
+          "to",
+          "leave",
+          "at",
+          "nine"
+        ],
+        "normalizedRecognized": [
+          "we",
+          "will",
+          "finish",
+          "by",
+          "eight",
+          "fifty",
+          "in",
+          "time",
+          "for",
+          "the",
+          "vans",
+          "to",
+          "leave",
+          "at",
+          "nine"
+        ],
+        "proofExpected": "t:we | t:will | t:finish | t:by | t:eight | t:fifty | t:in | t:time | t:for | t:the | t:vans | t:to | t:leave | t:at | t:nine",
+        "proofRecognized": "t:we | t:will | t:finish | t:by | t:eight | t:fifty | t:in | t:time | t:for | t:the | t:vans | t:to | t:leave | t:at | t:nine",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "40fbbbbbcc31d05a995d9ea45579294cf6db4715b9850ab8da6934af3e21178f"
+        }
+      }
     },
     "read-receipt/documents/0/text/1": {
       "key": "read-receipt/documents/0/text/1",
@@ -46563,7 +47834,7 @@
         "recognized": "use these details to locate the sale.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.125,
       "phonemeErrorRate": null,
@@ -46574,7 +47845,52 @@
           "recognized": "sail"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-receipt/documents/0/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-receipt/documents/0/text/1",
+      "comparison": {
+        "audioSha256": "adf718b4ef451ece0bdb305b15d6f9229974f9588c2557c43405dcdcfa75b884",
+        "recognized": "We use these details to locate the sail.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "We use these details to locate the sale.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:sale=sail"
+        ],
+        "normalizedExpected": [
+          "we",
+          "use",
+          "these",
+          "details",
+          "to",
+          "locate",
+          "the",
+          "sale"
+        ],
+        "normalizedRecognized": [
+          "we",
+          "use",
+          "these",
+          "details",
+          "to",
+          "locate",
+          "the",
+          "sail"
+        ],
+        "proofExpected": "t:we | t:use | t:these | t:details | t:to | t:locate | t:the | p:S EY L",
+        "proofRecognized": "t:we | t:use | t:these | t:details | t:to | t:locate | t:the | p:S EY L",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d208a814e4e22bbfd120dab8b60cd73bc499cef2f1a671b596ded108956c8eb7"
+        }
+      }
     },
     "read-sound-check/documents/0/text/0": {
       "key": "read-sound-check/documents/0/text/0",
@@ -46633,7 +47949,47 @@
           "recognized": "now"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-check/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-check/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "124b15484eac8e1b860b830d20166d7b54d7279c697841702f52245ee9edecdd",
+        "recognized": "Now, I tested Guide 14.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Nell: I tested guide fourteen.",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "nell",
+          "i",
+          "tested",
+          "guide",
+          "fourteen"
+        ],
+        "normalizedRecognized": [
+          "now",
+          "i",
+          "tested",
+          "guide",
+          "fourteen"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "1299e95ac3450bfa8f41d05ef4837e9f270ab578f637c61d5721cc296aaf24cf"
+        }
+      }
     },
     "read-coupon/documents/0/text/2": {
       "key": "read-coupon/documents/0/text/2",
@@ -46683,7 +48039,7 @@
         "recognized": "offer is available on weekdays until 10.30 am.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2727,
       "phonemeErrorRate": null,
@@ -46694,7 +48050,57 @@
           "recognized": "point three am"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-coupon/documents/0/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-coupon/documents/0/text/2",
+      "comparison": {
+        "audioSha256": "7298ae4992bf5668948df2a077438fa9cf7eedf9a06acd9c72ce87f80d688dbd",
+        "recognized": "The offer is available on weekdays until 10.30 am.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The offer is available on weekdays until ten thirty a.m.",
+        "reasons": [
+          "source-anchored-clock:10.30→10:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "the",
+          "offer",
+          "is",
+          "available",
+          "on",
+          "weekdays",
+          "until",
+          "ten",
+          "thirty",
+          "meridiemam"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "offer",
+          "is",
+          "available",
+          "on",
+          "weekdays",
+          "until",
+          "ten",
+          "thirty",
+          "meridiemam"
+        ],
+        "proofExpected": "t:the | t:offer | t:is | t:available | t:on | t:weekdays | t:until | t:ten | t:thirty | t:meridiemam",
+        "proofRecognized": "t:the | t:offer | t:is | t:available | t:on | t:weekdays | t:until | t:ten | t:thirty | t:meridiemam",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "7c7025cd7ef0bc4498a3b473cbfd478009da77785a38fb269933c56e57ae1701"
+        }
+      }
     },
     "read-packing-paper/documents/0/text/0": {
       "key": "read-packing-paper/documents/0/text/0",
@@ -46828,7 +48234,7 @@
         "recognized": "Both your stationary business and Hazel Press remain on the paper goods list.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0769,
       "phonemeErrorRate": null,
@@ -46839,7 +48245,62 @@
           "recognized": "stationary"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-market/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-market/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "cd243df9bb86805cd99e96204f31c12d17da0d8ea7d71e2aa0133e742defb8a5",
+        "recognized": "Both your stationary business and Hazel Press remain on the paper goods list.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Both your stationery business and Hazel Press remain on the paper-goods list.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:stationery=stationary"
+        ],
+        "normalizedExpected": [
+          "both",
+          "your",
+          "stationery",
+          "business",
+          "and",
+          "hazel",
+          "press",
+          "remain",
+          "on",
+          "the",
+          "paper",
+          "goods",
+          "list"
+        ],
+        "normalizedRecognized": [
+          "both",
+          "your",
+          "stationary",
+          "business",
+          "and",
+          "hazel",
+          "press",
+          "remain",
+          "on",
+          "the",
+          "paper",
+          "goods",
+          "list"
+        ],
+        "proofExpected": "t:both | t:your | p:S T EY SH AH N EH R IY | t:business | t:and | t:hazel | t:press | t:remain | t:on | t:the | t:paper | t:goods | t:list",
+        "proofRecognized": "t:both | t:your | p:S T EY SH AH N EH R IY | t:business | t:and | t:hazel | t:press | t:remain | t:on | t:the | t:paper | t:goods | t:list",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6e53a3c74568204976f184c56e5c95438e43e9c21ded8184fc51ffb6c9bfddef"
+        }
+      }
     },
     "read-waiver/documents/0/text/7": {
       "key": "read-waiver/documents/0/text/7",
@@ -46943,7 +48404,38 @@
           "recognized": "solid"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-keyrings/documents/1/text/4"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-keyrings/documents/1/text/4",
+      "comparison": {
+        "audioSha256": "1e1351834c0bd9994e7b243dd941e12511f7469d92a87767b6b02347e98ac81b",
+        "recognized": "Solid.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Sol",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "sol"
+        ],
+        "normalizedRecognized": [
+          "solid"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "361847a8cfe5a8ddf3acd7a13c38b42b0649e7642bed9d44709076e29440afb9"
+        }
+      }
     },
     "read-oven/documents/1/text/1": {
       "key": "read-oven/documents/1/text/1",
@@ -47034,7 +48526,7 @@
         "recognized": "I'll collect the equipment at 8.30 and take it back after lunch.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1429,
       "phonemeErrorRate": null,
@@ -47045,7 +48537,63 @@
           "recognized": "point three"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-oven/documents/1/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-oven/documents/1/text/2",
+      "comparison": {
+        "audioSha256": "b9f074074efbcfec607af8f7633ad5e3f7b3259966c19a526966f0c81ffe20f1",
+        "recognized": "I'll collect the equipment at 8.30 and take it back after lunch.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "I'll collect the equipment at eight thirty and take it back after lunch.",
+        "reasons": [
+          "source-anchored-clock:8.30→8:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "i'll",
+          "collect",
+          "the",
+          "equipment",
+          "at",
+          "eight",
+          "thirty",
+          "and",
+          "take",
+          "it",
+          "back",
+          "after",
+          "lunch"
+        ],
+        "normalizedRecognized": [
+          "i'll",
+          "collect",
+          "the",
+          "equipment",
+          "at",
+          "eight",
+          "thirty",
+          "and",
+          "take",
+          "it",
+          "back",
+          "after",
+          "lunch"
+        ],
+        "proofExpected": "t:i'll | t:collect | t:the | t:equipment | t:at | t:eight | t:thirty | t:and | t:take | t:it | t:back | t:after | t:lunch",
+        "proofRecognized": "t:i'll | t:collect | t:the | t:equipment | t:at | t:eight | t:thirty | t:and | t:take | t:it | t:back | t:after | t:lunch",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6065b8cc606c359bc0cee5159ca59b4be090ef1598d27ab4a514ec15e0ab6c98"
+        }
+      }
     },
     "read-bus-bay/documents/1/text/1": {
       "key": "read-bus-bay/documents/1/text/1",
@@ -47136,7 +48684,7 @@
         "recognized": "Our gate accepts deliveries until 1630 on weekdays.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.5556,
       "phonemeErrorRate": null,
@@ -47147,7 +48695,55 @@
           "recognized": "one thousand six hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-copper/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-copper/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "5c9437c378a9454376341a419c2df17d1159f6b1767beedb5b5e98698c64d100",
+        "recognized": "Our gate accepts deliveries until 1630 on weekdays.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Our gate accepts deliveries until sixteen thirty on weekdays.",
+        "reasons": [
+          "source-anchored-clock:1630→16:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "our",
+          "gate",
+          "accepts",
+          "deliveries",
+          "until",
+          "sixteen",
+          "thirty",
+          "on",
+          "weekdays"
+        ],
+        "normalizedRecognized": [
+          "our",
+          "gate",
+          "accepts",
+          "deliveries",
+          "until",
+          "sixteen",
+          "thirty",
+          "on",
+          "weekdays"
+        ],
+        "proofExpected": "t:our | t:gate | t:accepts | t:deliveries | t:until | t:sixteen | t:thirty | t:on | t:weekdays",
+        "proofRecognized": "t:our | t:gate | t:accepts | t:deliveries | t:until | t:sixteen | t:thirty | t:on | t:weekdays",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "47242927acdb106e3d6f14478241bbf0efc235dcfffc23e1bd0b863ca82b6985"
+        }
+      }
     },
     "read-copper/documents/1/text/3": {
       "key": "read-copper/documents/1/text/3",
@@ -47195,7 +48791,7 @@
         "recognized": "I will reach your gate at 1625.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.5556,
       "phonemeErrorRate": null,
@@ -47206,7 +48802,55 @@
           "recognized": "one thousand six hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-copper/documents/1/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-copper/documents/1/text/3",
+      "comparison": {
+        "audioSha256": "d2a3c08a8e904c8c66673ab5c7f9f9f8676077394e70645115782ddeb57fe864",
+        "recognized": "I will reach your gate at 1625.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "I will reach your gate at sixteen twenty-five.",
+        "reasons": [
+          "source-anchored-clock:1625→16:25",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "i",
+          "will",
+          "reach",
+          "your",
+          "gate",
+          "at",
+          "sixteen",
+          "twenty",
+          "five"
+        ],
+        "normalizedRecognized": [
+          "i",
+          "will",
+          "reach",
+          "your",
+          "gate",
+          "at",
+          "sixteen",
+          "twenty",
+          "five"
+        ],
+        "proofExpected": "t:i | t:will | t:reach | t:your | t:gate | t:at | t:sixteen | t:twenty | t:five",
+        "proofRecognized": "t:i | t:will | t:reach | t:your | t:gate | t:at | t:sixteen | t:twenty | t:five",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9139cf69a44eb4a0eeb5554e630fafdac5e06c35cdbfeee142b53060aee3f217"
+        }
+      }
     },
     "read-seats/documents/0/text/0": {
       "key": "read-seats/documents/0/text/0",
@@ -47265,7 +48909,51 @@
           "recognized": "dollars"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-seats/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-seats/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "fb9c9e8d4fad582c5e13f5076c3014e029f20329426a2e9831986e7e39671faa",
+        "recognized": "Pay a $60 deposit per booking.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Pay a sixty-dollar deposit per booking.",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "pay",
+          "a",
+          "sixty",
+          "dollar",
+          "deposit",
+          "per",
+          "booking"
+        ],
+        "normalizedRecognized": [
+          "pay",
+          "a",
+          "sixty",
+          "dollars",
+          "deposit",
+          "per",
+          "booking"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "0588da95c00b503495e0d3a60740c79577dd23da7ca97e94f3de61f550d5450e"
+        }
+      }
     },
     "read-seats/documents/1/text/2": {
       "key": "read-seats/documents/1/text/2",
@@ -47324,7 +49012,71 @@
           "recognized": "dollars"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-seats/documents/1/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-seats/documents/1/text/2",
+      "comparison": {
+        "audioSha256": "4278c1d5b6cfb4bb9718c2bf80c83df98d66f54181430eff14d03b55ff12e69e",
+        "recognized": "Elm is available at $200 and we understand a fresh $60 deposit is required.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Elm is available at two hundred dollars, and we understand a fresh sixty-dollar deposit is required.",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "elm",
+          "is",
+          "available",
+          "at",
+          "two",
+          "hundred",
+          "dollars",
+          "and",
+          "we",
+          "understand",
+          "a",
+          "fresh",
+          "sixty",
+          "dollar",
+          "deposit",
+          "is",
+          "required"
+        ],
+        "normalizedRecognized": [
+          "elm",
+          "is",
+          "available",
+          "at",
+          "two",
+          "hundred",
+          "dollars",
+          "and",
+          "we",
+          "understand",
+          "a",
+          "fresh",
+          "sixty",
+          "dollars",
+          "deposit",
+          "is",
+          "required"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "080ce2114b13aac8019d4db2a0a9fd8e75392bf76a3a938686f15d9b7a78ea87"
+        }
+      }
     },
     "read-fabric/documents/1/text/3": {
       "key": "read-fabric/documents/1/text/3",
@@ -47374,7 +49126,7 @@
         "recognized": "driver has left all seven rolls in receiving.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1111,
       "phonemeErrorRate": null,
@@ -47385,7 +49137,54 @@
           "recognized": "roles"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-fabric/documents/1/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-fabric/documents/1/text/3",
+      "comparison": {
+        "audioSha256": "ec3de3060b332534e0f7ac6aab6a7d94d86ff7d67fdeef1b3039f877131ae472",
+        "recognized": "The driver has left all seven roles in receiving.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The driver has left all seven rolls in receiving.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:rolls=roles"
+        ],
+        "normalizedExpected": [
+          "the",
+          "driver",
+          "has",
+          "left",
+          "all",
+          "seven",
+          "rolls",
+          "in",
+          "receiving"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "driver",
+          "has",
+          "left",
+          "all",
+          "seven",
+          "roles",
+          "in",
+          "receiving"
+        ],
+        "proofExpected": "t:the | t:driver | t:has | t:left | t:all | t:seven | p:R OW L Z | t:in | t:receiving",
+        "proofRecognized": "t:the | t:driver | t:has | t:left | t:all | t:seven | p:R OW L Z | t:in | t:receiving",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "943aaf1389f6fc7287b4bd63380cb0a47203447428c97d3be858d1256a61c13d"
+        }
+      }
     },
     "read-fabric/documents/2/text/2": {
       "key": "read-fabric/documents/2/text/2",
@@ -47485,7 +49284,7 @@
         "recognized": "A travel period counts only if a coordinator assigns the volunteer to accompany fare equipment.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0667,
       "phonemeErrorRate": null,
@@ -47496,7 +49295,66 @@
           "recognized": "fare"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "9aa46418cf0b1bf8a05ffcf4477df998a8b64b8974170d57ce222a682b00b757",
+        "recognized": "A travel period counts only if a coordinator assigns the volunteer to accompany fare equipment.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A travel period counts only if a coordinator assigns the volunteer to accompany fair equipment.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:fair=fare"
+        ],
+        "normalizedExpected": [
+          "a",
+          "travel",
+          "period",
+          "counts",
+          "only",
+          "if",
+          "a",
+          "coordinator",
+          "assigns",
+          "the",
+          "volunteer",
+          "to",
+          "accompany",
+          "fair",
+          "equipment"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "travel",
+          "period",
+          "counts",
+          "only",
+          "if",
+          "a",
+          "coordinator",
+          "assigns",
+          "the",
+          "volunteer",
+          "to",
+          "accompany",
+          "fare",
+          "equipment"
+        ],
+        "proofExpected": "t:a | t:travel | t:period | t:counts | t:only | t:if | t:a | t:coordinator | t:assigns | t:the | t:volunteer | t:to | t:accompany | p:F EH R | t:equipment",
+        "proofRecognized": "t:a | t:travel | t:period | t:counts | t:only | t:if | t:a | t:coordinator | t:assigns | t:the | t:volunteer | t:to | t:accompany | p:F EH R | t:equipment",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9ebba39c5d9609c4abfed1b1f863609d9d717fa8367a46674b83705d9276aa35"
+        }
+      }
     },
     "read-hours/documents/1/text/1": {
       "key": "read-hours/documents/1/text/1",
@@ -47547,7 +49405,7 @@
         "recognized": "9.30 to 12.00'clock helped visitors find talks.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2,
       "phonemeErrorRate": null,
@@ -47558,7 +49416,57 @@
           "recognized": "point three"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "cb7c0251779b0c755f4920b7aab0a3c31ffd4bef01d77b5bc600c8dd8fe63371",
+        "recognized": "9.30 to 12. O'clock helped visitors find talks.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "nine thirty to twelve o clock Helped visitors find talks.",
+        "reasons": [
+          "source-anchored-clock:9.30→9:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "nine",
+          "thirty",
+          "to",
+          "twelve",
+          "o",
+          "clock",
+          "helped",
+          "visitors",
+          "find",
+          "talks"
+        ],
+        "normalizedRecognized": [
+          "nine",
+          "thirty",
+          "to",
+          "twelve",
+          "o",
+          "clock",
+          "helped",
+          "visitors",
+          "find",
+          "talks"
+        ],
+        "proofExpected": "t:nine | t:thirty | t:to | t:twelve | t:o | t:clock | t:helped | t:visitors | t:find | t:talks",
+        "proofRecognized": "t:nine | t:thirty | t:to | t:twelve | t:o | t:clock | t:helped | t:visitors | t:find | t:talks",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "5378cf852ce3113d06108b36af9d5f534fa0a0bbbc7b62d3fc46c7831ab3c350"
+        }
+      }
     },
     "read-hours/documents/1/text/2": {
       "key": "read-hours/documents/1/text/2",
@@ -47609,7 +49517,7 @@
         "recognized": "12.00'clock to 12.30 meal break.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.25,
       "phonemeErrorRate": null,
@@ -47620,7 +49528,53 @@
           "recognized": "point three"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/2",
+      "comparison": {
+        "audioSha256": "464a8d02dd9fc7f83f75b9bdf3de4937a6110ac523481be18493dc29603b360f",
+        "recognized": "12 o'clock to 12.30 meal break.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "twelve o clock to twelve thirty Meal break.",
+        "reasons": [
+          "source-anchored-clock:12.30→12:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "twelve",
+          "o",
+          "clock",
+          "to",
+          "twelve",
+          "thirty",
+          "meal",
+          "break"
+        ],
+        "normalizedRecognized": [
+          "twelve",
+          "o",
+          "clock",
+          "to",
+          "twelve",
+          "thirty",
+          "meal",
+          "break"
+        ],
+        "proofExpected": "t:twelve | t:o | t:clock | t:to | t:twelve | t:thirty | t:meal | t:break",
+        "proofRecognized": "t:twelve | t:o | t:clock | t:to | t:twelve | t:thirty | t:meal | t:break",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "5b1a7ecd41ca3492cf0d28e42b4871da4bc4ba086508f09d0f65b072d0e943d9"
+        }
+      }
     },
     "read-hours/documents/1/text/3": {
       "key": "read-hours/documents/1/text/3",
@@ -47670,7 +49624,7 @@
         "recognized": "1230-1330, accompanied sound equipment to the second site.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.8333,
       "phonemeErrorRate": null,
@@ -47686,7 +49640,62 @@
           "recognized": "one thousand three hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/3",
+      "comparison": {
+        "audioSha256": "9ef60ae83420d7b4090b37af063108b3a6e10e02e9194f44e3d1e606810e0412",
+        "recognized": "1230 to 1330, accompanied sound equipment to the second site.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "twelve thirty to thirteen thirty Accompanied sound equipment to the second site.",
+        "reasons": [
+          "source-anchored-clock:1230→12:30",
+          "source-anchored-clock:1330→13:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "twelve",
+          "thirty",
+          "to",
+          "thirteen",
+          "thirty",
+          "accompanied",
+          "sound",
+          "equipment",
+          "to",
+          "the",
+          "second",
+          "site"
+        ],
+        "normalizedRecognized": [
+          "twelve",
+          "thirty",
+          "to",
+          "thirteen",
+          "thirty",
+          "accompanied",
+          "sound",
+          "equipment",
+          "to",
+          "the",
+          "second",
+          "site"
+        ],
+        "proofExpected": "t:twelve | t:thirty | t:to | t:thirteen | t:thirty | t:accompanied | t:sound | t:equipment | t:to | t:the | t:second | t:site",
+        "proofRecognized": "t:twelve | t:thirty | t:to | t:thirteen | t:thirty | t:accompanied | t:sound | t:equipment | t:to | t:the | t:second | t:site",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "3c320d31c97a9cfc44d7d68bce216b7812730e0844ce358e72ce4780a9114c55"
+        }
+      }
     },
     "read-hours/documents/1/text/4": {
       "key": "read-hours/documents/1/text/4",
@@ -47734,7 +49743,7 @@
         "recognized": "1330-1415, assisted visitors at the second site.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.9091,
       "phonemeErrorRate": null,
@@ -47750,7 +49759,60 @@
           "recognized": "one thousand four hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/4"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/1/text/4",
+      "comparison": {
+        "audioSha256": "883ed545fbd9a86baaa1e822975fea63168b79ade9226cfe99a96d34fc4ca448",
+        "recognized": "1330-1415, assisted visitors at the second site.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "thirteen thirty to fourteen fifteen Assisted visitors at the second site.",
+        "reasons": [
+          "source-anchored-clock:1330→13:30",
+          "source-anchored-clock:1415→14:15",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "thirteen",
+          "thirty",
+          "to",
+          "fourteen",
+          "fifteen",
+          "assisted",
+          "visitors",
+          "at",
+          "the",
+          "second",
+          "site"
+        ],
+        "normalizedRecognized": [
+          "thirteen",
+          "thirty",
+          "to",
+          "fourteen",
+          "fifteen",
+          "assisted",
+          "visitors",
+          "at",
+          "the",
+          "second",
+          "site"
+        ],
+        "proofExpected": "t:thirteen | t:thirty | t:to | t:fourteen | t:fifteen | t:assisted | t:visitors | t:at | t:the | t:second | t:site",
+        "proofRecognized": "t:thirteen | t:thirty | t:to | t:fourteen | t:fifteen | t:assisted | t:visitors | t:at | t:the | t:second | t:site",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e9fb121876f4bdf6746388a744aa371be9d96d9b96641fdd246bcb367721d4c9"
+        }
+      }
     },
     "read-hours/documents/2/text/0": {
       "key": "read-hours/documents/2/text/0",
@@ -47798,7 +49860,7 @@
         "recognized": "745 coordinator, please ride with the sound equipment at 1230 and hand it to the second site technician.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3333,
       "phonemeErrorRate": null,
@@ -47814,7 +49876,80 @@
           "recognized": "one thousand two hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/2/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/2/text/0",
+      "comparison": {
+        "audioSha256": "c87e60307d90383db692acddedc75731fc382b407b6240943b3275b318de13ae",
+        "recognized": "745 coordinator. Please ride with the sound equipment at 1230 and hand it to the second site technician.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "seven forty-five Coordinator: Please ride with the sound equipment at twelve thirty and hand it to the second-site technician.",
+        "reasons": [
+          "source-anchored-clock:745→7:45",
+          "source-anchored-clock:1230→12:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "seven",
+          "forty",
+          "five",
+          "coordinator",
+          "please",
+          "ride",
+          "with",
+          "the",
+          "sound",
+          "equipment",
+          "at",
+          "twelve",
+          "thirty",
+          "and",
+          "hand",
+          "it",
+          "to",
+          "the",
+          "second",
+          "site",
+          "technician"
+        ],
+        "normalizedRecognized": [
+          "seven",
+          "forty",
+          "five",
+          "coordinator",
+          "please",
+          "ride",
+          "with",
+          "the",
+          "sound",
+          "equipment",
+          "at",
+          "twelve",
+          "thirty",
+          "and",
+          "hand",
+          "it",
+          "to",
+          "the",
+          "second",
+          "site",
+          "technician"
+        ],
+        "proofExpected": "t:seven | t:forty | t:five | t:coordinator | t:please | t:ride | t:with | t:the | t:sound | t:equipment | t:at | t:twelve | t:thirty | t:and | t:hand | t:it | t:to | t:the | t:second | t:site | t:technician",
+        "proofRecognized": "t:seven | t:forty | t:five | t:coordinator | t:please | t:ride | t:with | t:the | t:sound | t:equipment | t:at | t:twelve | t:thirty | t:and | t:hand | t:it | t:to | t:the | t:second | t:site | t:technician",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "33fccc20adafeca347080794510fba880c5ec826c0f2536d7920c475de7ed96f"
+        }
+      }
     },
     "read-hours/documents/2/text/1": {
       "key": "read-hours/documents/2/text/1",
@@ -47862,7 +49997,7 @@
         "recognized": "747 Dev, understood.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.4,
       "phonemeErrorRate": null,
@@ -47873,7 +50008,47 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/2/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/2/text/1",
+      "comparison": {
+        "audioSha256": "d968acb6520bf46029d66d7bab0cb3aea76ba645faaeae595c96b4a15ec1bcd4",
+        "recognized": "747 Dev. Understood.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "seven forty-seven Dev: Understood.",
+        "reasons": [
+          "source-anchored-clock:747→7:47",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "seven",
+          "forty",
+          "seven",
+          "dev",
+          "understood"
+        ],
+        "normalizedRecognized": [
+          "seven",
+          "forty",
+          "seven",
+          "dev",
+          "understood"
+        ],
+        "proofExpected": "t:seven | t:forty | t:seven | t:dev | t:understood",
+        "proofRecognized": "t:seven | t:forty | t:seven | t:dev | t:understood",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ee8ffa4e0aba3bce8424cf98d29eed786a6b6eec9621784d32076af25a7e3dec"
+        }
+      }
     },
     "read-hours/documents/2/text/3": {
       "key": "read-hours/documents/2/text/3",
@@ -47921,7 +50096,7 @@
         "recognized": "749 coordinator, yes.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.4,
       "phonemeErrorRate": null,
@@ -47932,7 +50107,47 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/2/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-hours/documents/2/text/3",
+      "comparison": {
+        "audioSha256": "63fc08c5bd6b4ac2c155f6da30043b93808d39984ea672773b47d4c885d53456",
+        "recognized": "749 coordinator, yes.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "seven forty-nine Coordinator: Yes.",
+        "reasons": [
+          "source-anchored-clock:749→7:49",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "seven",
+          "forty",
+          "nine",
+          "coordinator",
+          "yes"
+        ],
+        "normalizedRecognized": [
+          "seven",
+          "forty",
+          "nine",
+          "coordinator",
+          "yes"
+        ],
+        "proofExpected": "t:seven | t:forty | t:nine | t:coordinator | t:yes",
+        "proofRecognized": "t:seven | t:forty | t:nine | t:coordinator | t:yes",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "0feb47c79da0236709cadd9aa70533336c2d04b988df7efe582345cbd6eedcce"
+        }
+      }
     },
     "read-rent-credit/documents/0/text/3": {
       "key": "read-rent-credit/documents/0/text/3",
@@ -47993,7 +50208,62 @@
           "recognized": "higher"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "a6619e433b43779229088d6bdf209f8f9acf21757a1bc775d675d199c20d4c39",
+        "recognized": "No credit is due for a fault first reported after the higher ends.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "No credit is due for a fault first reported after the hire ends.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "no",
+          "credit",
+          "is",
+          "due",
+          "for",
+          "a",
+          "fault",
+          "first",
+          "reported",
+          "after",
+          "the",
+          "hire",
+          "ends"
+        ],
+        "normalizedRecognized": [
+          "no",
+          "credit",
+          "is",
+          "due",
+          "for",
+          "a",
+          "fault",
+          "first",
+          "reported",
+          "after",
+          "the",
+          "higher",
+          "ends"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "70516df0555024158966dd76dfa20bdb614c0922bb590203a12e9ee5bbd01a00"
+        }
+      }
     },
     "read-rent-credit/documents/1/text/0": {
       "key": "read-rent-credit/documents/1/text/0",
@@ -48041,7 +50311,7 @@
         "recognized": "905, customer reports the press is producing uneven folds.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1818,
       "phonemeErrorRate": null,
@@ -48052,7 +50322,59 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/0",
+      "comparison": {
+        "audioSha256": "38750fc6d97719b5b8f40e3c748deaa90c68b2523746667e1c7ae1890cbeaacd",
+        "recognized": "905, customer reports the press is producing uneven folds.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "nine oh five Customer reports the press is producing uneven folds.",
+        "reasons": [
+          "source-anchored-clock:905→9:05",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "nine",
+          "oh",
+          "five",
+          "customer",
+          "reports",
+          "the",
+          "press",
+          "is",
+          "producing",
+          "uneven",
+          "folds"
+        ],
+        "normalizedRecognized": [
+          "nine",
+          "oh",
+          "five",
+          "customer",
+          "reports",
+          "the",
+          "press",
+          "is",
+          "producing",
+          "uneven",
+          "folds"
+        ],
+        "proofExpected": "t:nine | t:oh | t:five | t:customer | t:reports | t:the | t:press | t:is | t:producing | t:uneven | t:folds",
+        "proofRecognized": "t:nine | t:oh | t:five | t:customer | t:reports | t:the | t:press | t:is | t:producing | t:uneven | t:folds",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "0aa7536981b6f3b0b1aa1a06b3a8cb69cd65f5cab6686e4a7d2b8902a5ddb06c"
+        }
+      }
     },
     "read-rent-credit/documents/1/text/1": {
       "key": "read-rent-credit/documents/1/text/1",
@@ -48100,7 +50422,7 @@
         "recognized": "930 technician confirms the press cannot be used.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2222,
       "phonemeErrorRate": null,
@@ -48111,7 +50433,55 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "a3afe63960f673bd90930d6d6574e90274926e5cc34f17a701ba77c09725d5eb",
+        "recognized": "930 technician confirms the press cannot be used.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "nine thirty Technician confirms the press cannot be used.",
+        "reasons": [
+          "source-anchored-clock:930→9:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "nine",
+          "thirty",
+          "technician",
+          "confirms",
+          "the",
+          "press",
+          "cannot",
+          "be",
+          "used"
+        ],
+        "normalizedRecognized": [
+          "nine",
+          "thirty",
+          "technician",
+          "confirms",
+          "the",
+          "press",
+          "cannot",
+          "be",
+          "used"
+        ],
+        "proofExpected": "t:nine | t:thirty | t:technician | t:confirms | t:the | t:press | t:cannot | t:be | t:used",
+        "proofRecognized": "t:nine | t:thirty | t:technician | t:confirms | t:the | t:press | t:cannot | t:be | t:used",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "15bf14db7f09e959b97f3aa2f69b623f385a91d3a5e23929963053833c27981f"
+        }
+      }
     },
     "read-rent-credit/documents/1/text/2": {
       "key": "read-rent-credit/documents/1/text/2",
@@ -48166,7 +50536,7 @@
         "recognized": "1150 technician marks replacement ready at the customer's agreed collection point and notifies the customer.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2941,
       "phonemeErrorRate": null,
@@ -48177,7 +50547,69 @@
           "recognized": "one thousand one hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/2",
+      "comparison": {
+        "audioSha256": "f19605d55837d78ea93fa59923adcc33faf00ab67cea6a888e5f532617dd8a83",
+        "recognized": "1150 technician marks replacement ready at the customer's agreed collection point and notifies the customer.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "eleven fifty Technician marks replacement ready at the customer's agreed collection point and notifies the customer.",
+        "reasons": [
+          "source-anchored-clock:1150→11:50",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "eleven",
+          "fifty",
+          "technician",
+          "marks",
+          "replacement",
+          "ready",
+          "at",
+          "the",
+          "customer's",
+          "agreed",
+          "collection",
+          "point",
+          "and",
+          "notifies",
+          "the",
+          "customer"
+        ],
+        "normalizedRecognized": [
+          "eleven",
+          "fifty",
+          "technician",
+          "marks",
+          "replacement",
+          "ready",
+          "at",
+          "the",
+          "customer's",
+          "agreed",
+          "collection",
+          "point",
+          "and",
+          "notifies",
+          "the",
+          "customer"
+        ],
+        "proofExpected": "t:eleven | t:fifty | t:technician | t:marks | t:replacement | t:ready | t:at | t:the | t:customer's | t:agreed | t:collection | t:point | t:and | t:notifies | t:the | t:customer",
+        "proofRecognized": "t:eleven | t:fifty | t:technician | t:marks | t:replacement | t:ready | t:at | t:the | t:customer's | t:agreed | t:collection | t:point | t:and | t:notifies | t:the | t:customer",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "96242b9e9318fd455fb1530c130df7df8e424bf2501b6d207c6a4afcda94a413"
+        }
+      }
     },
     "read-rent-credit/documents/1/text/3": {
       "key": "read-rent-credit/documents/1/text/3",
@@ -48227,7 +50659,7 @@
         "recognized": "1235 customer signs for the replacement.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.625,
       "phonemeErrorRate": null,
@@ -48238,7 +50670,53 @@
           "recognized": "one thousand two hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/1/text/3",
+      "comparison": {
+        "audioSha256": "8f7a1bd8645e6cfc14814c88c519aa5c70d671a433d51316b96d4640d28c187e",
+        "recognized": "1235 customer signs for the replacement.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "twelve thirty-five Customer signs for the replacement.",
+        "reasons": [
+          "source-anchored-clock:1235→12:35",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "twelve",
+          "thirty",
+          "five",
+          "customer",
+          "signs",
+          "for",
+          "the",
+          "replacement"
+        ],
+        "normalizedRecognized": [
+          "twelve",
+          "thirty",
+          "five",
+          "customer",
+          "signs",
+          "for",
+          "the",
+          "replacement"
+        ],
+        "proofExpected": "t:twelve | t:thirty | t:five | t:customer | t:signs | t:for | t:the | t:replacement",
+        "proofRecognized": "t:twelve | t:thirty | t:five | t:customer | t:signs | t:for | t:the | t:replacement",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "a6e8a9288e9e6e83f3ea6c216c17bbd1223994e330b06658b533afc3a88fc21b"
+        }
+      }
     },
     "read-rent-credit/documents/2/text/1": {
       "key": "read-rent-credit/documents/2/text/1",
@@ -48288,7 +50766,7 @@
         "recognized": "The press had already stopped at 8.40, but we tried adjusting it before calling your desk.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1176,
       "phonemeErrorRate": null,
@@ -48299,7 +50777,71 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/2/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-rent-credit/documents/2/text/1",
+      "comparison": {
+        "audioSha256": "14289ddb3bea893f94a968149b3bfa98a0d081419d652c537bfb6dd1a1dd53ac",
+        "recognized": "The press had already stopped at 840, but we tried adjusting it before calling your desk.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The press had already stopped at eight forty, but we tried adjusting it before calling your desk.",
+        "reasons": [
+          "source-anchored-clock:840→8:40",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "the",
+          "press",
+          "had",
+          "already",
+          "stopped",
+          "at",
+          "eight",
+          "forty",
+          "but",
+          "we",
+          "tried",
+          "adjusting",
+          "it",
+          "before",
+          "calling",
+          "your",
+          "desk"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "press",
+          "had",
+          "already",
+          "stopped",
+          "at",
+          "eight",
+          "forty",
+          "but",
+          "we",
+          "tried",
+          "adjusting",
+          "it",
+          "before",
+          "calling",
+          "your",
+          "desk"
+        ],
+        "proofExpected": "t:the | t:press | t:had | t:already | t:stopped | t:at | t:eight | t:forty | t:but | t:we | t:tried | t:adjusting | t:it | t:before | t:calling | t:your | t:desk",
+        "proofRecognized": "t:the | t:press | t:had | t:already | t:stopped | t:at | t:eight | t:forty | t:but | t:we | t:tried | t:adjusting | t:it | t:before | t:calling | t:your | t:desk",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "5e7dd82b13ca84fff44cf36d66a38f83f9b322430ad05039fddc043df2837c56"
+        }
+      }
     },
     "read-poll/documents/1/text/2": {
       "key": "read-poll/documents/1/text/2",
@@ -48347,7 +50889,7 @@
         "recognized": "Mara, one of the nine voting members, left at 1410.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.4545,
       "phonemeErrorRate": null,
@@ -48358,7 +50900,59 @@
           "recognized": "one thousand four hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-poll/documents/1/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-poll/documents/1/text/2",
+      "comparison": {
+        "audioSha256": "f17050ce3935ce06a0beb918ab71323494a4a86dd1e28171e1c9fc2b675f538e",
+        "recognized": "Mara, one of the nine voting members, left at 1410.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Mara, one of the nine voting members, left at fourteen ten.",
+        "reasons": [
+          "source-anchored-clock:1410→14:10",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "mara",
+          "one",
+          "of",
+          "the",
+          "nine",
+          "voting",
+          "members",
+          "left",
+          "at",
+          "fourteen",
+          "ten"
+        ],
+        "normalizedRecognized": [
+          "mara",
+          "one",
+          "of",
+          "the",
+          "nine",
+          "voting",
+          "members",
+          "left",
+          "at",
+          "fourteen",
+          "ten"
+        ],
+        "proofExpected": "t:mara | t:one | t:of | t:the | t:nine | t:voting | t:members | t:left | t:at | t:fourteen | t:ten",
+        "proofRecognized": "t:mara | t:one | t:of | t:the | t:nine | t:voting | t:members | t:left | t:at | t:fourteen | t:ten",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2e09ae18c6194d267e26befb1cc491c6f13e4d759bf29c68f97dac0cabede2d9"
+        }
+      }
     },
     "read-poll/documents/1/text/3": {
       "key": "read-poll/documents/1/text/3",
@@ -48406,7 +51000,7 @@
         "recognized": "The secretary recorded no other departures or arrivals before the vote at 1420.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3571,
       "phonemeErrorRate": null,
@@ -48417,7 +51011,65 @@
           "recognized": "one thousand four hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-poll/documents/1/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-poll/documents/1/text/3",
+      "comparison": {
+        "audioSha256": "2bcff08a48acdc163d0edfaf3a090e687b49162d719d2f23e32a8af31f0f70bb",
+        "recognized": "The secretary recorded no other departures or arrivals before the vote at 1420.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The secretary recorded no other departures or arrivals before the vote at fourteen twenty.",
+        "reasons": [
+          "source-anchored-clock:1420→14:20",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "the",
+          "secretary",
+          "recorded",
+          "no",
+          "other",
+          "departures",
+          "or",
+          "arrivals",
+          "before",
+          "the",
+          "vote",
+          "at",
+          "fourteen",
+          "twenty"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "secretary",
+          "recorded",
+          "no",
+          "other",
+          "departures",
+          "or",
+          "arrivals",
+          "before",
+          "the",
+          "vote",
+          "at",
+          "fourteen",
+          "twenty"
+        ],
+        "proofExpected": "t:the | t:secretary | t:recorded | t:no | t:other | t:departures | t:or | t:arrivals | t:before | t:the | t:vote | t:at | t:fourteen | t:twenty",
+        "proofRecognized": "t:the | t:secretary | t:recorded | t:no | t:other | t:departures | t:or | t:arrivals | t:before | t:the | t:vote | t:at | t:fourteen | t:twenty",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "1c2756c6590215a98fa925dd65d5c351da730103af967e7b5d617e185cbf787d"
+        }
+      }
     },
     "read-poll/documents/2/text/0": {
       "key": "read-poll/documents/2/text/0",
@@ -48478,7 +51130,77 @@
           "recognized": "one thousand four hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-poll/documents/2/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-poll/documents/2/text/0",
+      "comparison": {
+        "audioSha256": "a366358d2cd91540ba7eff982dde6fc036641fbb6cc77a26780be08ce1aa9d39",
+        "recognized": "At 1424 members voted in favor of the funding motion, three voted against and one abstained.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "At fourteen twenty, four members voted in favor of the funding motion, three voted against and one abstained.",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "at",
+          "fourteen",
+          "twenty",
+          "four",
+          "members",
+          "voted",
+          "in",
+          "favor",
+          "of",
+          "the",
+          "funding",
+          "motion",
+          "three",
+          "voted",
+          "against",
+          "and",
+          "one",
+          "abstained"
+        ],
+        "normalizedRecognized": [
+          "at",
+          "one",
+          "thousand",
+          "four",
+          "hundred",
+          "and",
+          "twenty",
+          "four",
+          "members",
+          "voted",
+          "in",
+          "favor",
+          "of",
+          "the",
+          "funding",
+          "motion",
+          "three",
+          "voted",
+          "against",
+          "and",
+          "one",
+          "abstained"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d45500e35389c1556565f67f39777c0606e358f09309a2b7105c0eb60e724b51"
+        }
+      }
     },
     "read-sandwich/documents/0/text/1": {
       "key": "read-sandwich/documents/0/text/1",
@@ -48526,7 +51248,7 @@
         "recognized": "Collect the food from the bakery counter between 11.30 and noon.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1667,
       "phonemeErrorRate": null,
@@ -48537,7 +51259,61 @@
           "recognized": "point three"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-sandwich/documents/0/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-sandwich/documents/0/text/1",
+      "comparison": {
+        "audioSha256": "1558ba576368b9abfaf72c133e8bf136e553ea6879b4483b79250c84bd7a5ae3",
+        "recognized": "Collect the food from the bakery counter between 11.30 and noon.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Collect the food from the bakery counter between eleven thirty and noon.",
+        "reasons": [
+          "source-anchored-clock:11.30→11:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "collect",
+          "the",
+          "food",
+          "from",
+          "the",
+          "bakery",
+          "counter",
+          "between",
+          "eleven",
+          "thirty",
+          "and",
+          "noon"
+        ],
+        "normalizedRecognized": [
+          "collect",
+          "the",
+          "food",
+          "from",
+          "the",
+          "bakery",
+          "counter",
+          "between",
+          "eleven",
+          "thirty",
+          "and",
+          "noon"
+        ],
+        "proofExpected": "t:collect | t:the | t:food | t:from | t:the | t:bakery | t:counter | t:between | t:eleven | t:thirty | t:and | t:noon",
+        "proofRecognized": "t:collect | t:the | t:food | t:from | t:the | t:bakery | t:counter | t:between | t:eleven | t:thirty | t:and | t:noon",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "4ed587412f781198532c4fcb9a9ba344834654a1b9d517f90cd72ff0b83b6127"
+        }
+      }
     },
     "read-broom/documents/0/text/1": {
       "key": "read-broom/documents/0/text/1",
@@ -48585,7 +51361,7 @@
         "recognized": "The brush with a plain wooden handle is for dusting work tops before paint cans are opened.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.125,
       "phonemeErrorRate": null,
@@ -48596,7 +51372,70 @@
           "recognized": "work tops"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-broom/documents/0/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-broom/documents/0/text/1",
+      "comparison": {
+        "audioSha256": "710db3fba45cd72bd0ca9351126898a851207f98523f38b0b53b5bde1c90d169",
+        "recognized": "The brush with a plain wooden handle is for dusting work tops before paint cans are opened.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The brush with a plain wooden handle is for dusting worktops before paint cans are opened.",
+        "reasons": [
+          "reviewed-compound-boundary:worktops"
+        ],
+        "normalizedExpected": [
+          "the",
+          "brush",
+          "with",
+          "a",
+          "plain",
+          "wooden",
+          "handle",
+          "is",
+          "for",
+          "dusting",
+          "work",
+          "tops",
+          "before",
+          "paint",
+          "cans",
+          "are",
+          "opened"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "brush",
+          "with",
+          "a",
+          "plain",
+          "wooden",
+          "handle",
+          "is",
+          "for",
+          "dusting",
+          "work",
+          "tops",
+          "before",
+          "paint",
+          "cans",
+          "are",
+          "opened"
+        ],
+        "proofExpected": "t:the | t:brush | t:with | t:a | t:plain | t:wooden | t:handle | t:is | t:for | t:dusting | t:work | t:tops | t:before | t:paint | t:cans | t:are | t:opened",
+        "proofRecognized": "t:the | t:brush | t:with | t:a | t:plain | t:wooden | t:handle | t:is | t:for | t:dusting | t:work | t:tops | t:before | t:paint | t:cans | t:are | t:opened",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2b9e8e9c2fb1bbb0a99cbff15182da838a920a2a9822ebbfa0654bdf867381bf"
+        }
+      }
     },
     "read-buoy/documents/0/text/0": {
       "key": "read-buoy/documents/0/text/0",
@@ -48646,7 +51485,7 @@
         "recognized": "8.15, the maintenance team covered the light sensor to simulate darkness.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2308,
       "phonemeErrorRate": null,
@@ -48657,7 +51496,63 @@
           "recognized": "point one five"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-buoy/documents/0/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-buoy/documents/0/text/0",
+      "comparison": {
+        "audioSha256": "98eea954078b7293004fa8e43981f4b37de98e84678a715d49b4deb3cd43ac4e",
+        "recognized": "At 8.15, the maintenance team covered the light sensor to simulate darkness.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "At eight fifteen the maintenance team covered the light sensor to simulate darkness.",
+        "reasons": [
+          "source-anchored-clock:8.15→8:15",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "at",
+          "eight",
+          "fifteen",
+          "the",
+          "maintenance",
+          "team",
+          "covered",
+          "the",
+          "light",
+          "sensor",
+          "to",
+          "simulate",
+          "darkness"
+        ],
+        "normalizedRecognized": [
+          "at",
+          "eight",
+          "fifteen",
+          "the",
+          "maintenance",
+          "team",
+          "covered",
+          "the",
+          "light",
+          "sensor",
+          "to",
+          "simulate",
+          "darkness"
+        ],
+        "proofExpected": "t:at | t:eight | t:fifteen | t:the | t:maintenance | t:team | t:covered | t:the | t:light | t:sensor | t:to | t:simulate | t:darkness",
+        "proofRecognized": "t:at | t:eight | t:fifteen | t:the | t:maintenance | t:team | t:covered | t:the | t:light | t:sensor | t:to | t:simulate | t:darkness",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d859e2a664f5b97f9bf57bfc0a33debc99f3c54eb6a2124eb205c62524aa26ac"
+        }
+      }
     },
     "read-buoy/documents/0/text/2": {
       "key": "read-buoy/documents/0/text/2",
@@ -48705,7 +51600,7 @@
         "recognized": "At 8.20, the team uncovered the sensor and the beacon went out immediately.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1429,
       "phonemeErrorRate": null,
@@ -48716,7 +51611,65 @@
           "recognized": "point two"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-buoy/documents/0/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-buoy/documents/0/text/2",
+      "comparison": {
+        "audioSha256": "b32e3f5edbb8fb44c35f36ba73c9aa6cd6ccdae7cd1a82f5a550b83e0ea5c8e7",
+        "recognized": "At 8.20, the team uncovered the sensor and the beacon went out immediately.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "At eight twenty the team uncovered the sensor, and the beacon went out immediately.",
+        "reasons": [
+          "source-anchored-clock:8.20→8:20",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "at",
+          "eight",
+          "twenty",
+          "the",
+          "team",
+          "uncovered",
+          "the",
+          "sensor",
+          "and",
+          "the",
+          "beacon",
+          "went",
+          "out",
+          "immediately"
+        ],
+        "normalizedRecognized": [
+          "at",
+          "eight",
+          "twenty",
+          "the",
+          "team",
+          "uncovered",
+          "the",
+          "sensor",
+          "and",
+          "the",
+          "beacon",
+          "went",
+          "out",
+          "immediately"
+        ],
+        "proofExpected": "t:at | t:eight | t:twenty | t:the | t:team | t:uncovered | t:the | t:sensor | t:and | t:the | t:beacon | t:went | t:out | t:immediately",
+        "proofRecognized": "t:at | t:eight | t:twenty | t:the | t:team | t:uncovered | t:the | t:sensor | t:and | t:the | t:beacon | t:went | t:out | t:immediately",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "0f95d54867579f48c59717484a0ad2133b34e14f08f2e89fcb6d4b94292c7201"
+        }
+      }
     },
     "read-return-window/documents/0/text/4": {
       "key": "read-return-window/documents/0/text/4",
@@ -48766,7 +51719,7 @@
         "recognized": "a replacement pays, the original exhibitor will receive written confirmation that its fee has been canceled.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0588,
       "phonemeErrorRate": null,
@@ -48777,7 +51730,70 @@
           "recognized": "cancelled"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-return-window/documents/0/text/4"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-return-window/documents/0/text/4",
+      "comparison": {
+        "audioSha256": "b9c8b69b9556049adeecbcbebaf0ea8bb585a4ae7b3b8052e38408427973aceb",
+        "recognized": "Once a replacement pays, the original exhibitor will receive written confirmation that its fee has been cancelled.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Once a replacement pays, the original exhibitor will receive written confirmation that its fee has been canceled.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:canceled=cancelled"
+        ],
+        "normalizedExpected": [
+          "once",
+          "a",
+          "replacement",
+          "pays",
+          "the",
+          "original",
+          "exhibitor",
+          "will",
+          "receive",
+          "written",
+          "confirmation",
+          "that",
+          "its",
+          "fee",
+          "has",
+          "been",
+          "canceled"
+        ],
+        "normalizedRecognized": [
+          "once",
+          "a",
+          "replacement",
+          "pays",
+          "the",
+          "original",
+          "exhibitor",
+          "will",
+          "receive",
+          "written",
+          "confirmation",
+          "that",
+          "its",
+          "fee",
+          "has",
+          "been",
+          "cancelled"
+        ],
+        "proofExpected": "t:once | t:a | t:replacement | t:pays | t:the | t:original | t:exhibitor | t:will | t:receive | t:written | t:confirmation | t:that | t:its | t:fee | t:has | t:been | p:K AE N S AH L D",
+        "proofRecognized": "t:once | t:a | t:replacement | t:pays | t:the | t:original | t:exhibitor | t:will | t:receive | t:written | t:confirmation | t:that | t:its | t:fee | t:has | t:been | p:K AE N S AH L D",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "54de937a2551e26c8a4b7a9b2d5ca4f1b95b1eb500273c66bc2ff9abc3f42ae4"
+        }
+      }
     },
     "read-banding/documents/0/text/2": {
       "key": "read-banding/documents/0/text/2",
@@ -48838,7 +51854,65 @@
           "recognized": "point six dollars"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-banding/documents/0/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-banding/documents/0/text/2",
+      "comparison": {
+        "audioSha256": "482cba2248a369fd920e8ffbbf2a6703b6ac40386e0726ffc12d9789e18ffb38",
+        "recognized": "Units 100 and 1 through 200 cost $1.60 each.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Units one hundred and one through two hundred cost one dollar sixty cents each.",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "units",
+          "one",
+          "hundred",
+          "and",
+          "one",
+          "through",
+          "two",
+          "hundred",
+          "cost",
+          "one",
+          "dollar",
+          "sixty",
+          "cents",
+          "each"
+        ],
+        "normalizedRecognized": [
+          "units",
+          "one",
+          "hundred",
+          "and",
+          "one",
+          "through",
+          "two",
+          "hundred",
+          "cost",
+          "one",
+          "point",
+          "six",
+          "dollars",
+          "each"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "a20e72c25bc62be2beb7528077a17be3ad8966db988a86573ff6a90d24ead3f8"
+        }
+      }
     },
     "read-shuttle-bags/documents/0/text/1": {
       "key": "read-shuttle-bags/documents/0/text/1",
@@ -48899,7 +51973,55 @@
           "recognized": "tag"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-shuttle-bags/documents/0/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-shuttle-bags/documents/0/text/1",
+      "comparison": {
+        "audioSha256": "a534bd1985e8384e9e7d60c365bb48bac48d0a1dac45d6c0a7d79b223f9c59b9",
+        "recognized": "Each tag bag costs $5, regardless of size.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Each tagged bag costs five dollars, regardless of size.",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "each",
+          "tagged",
+          "bag",
+          "costs",
+          "five",
+          "dollars",
+          "regardless",
+          "of",
+          "size"
+        ],
+        "normalizedRecognized": [
+          "each",
+          "tag",
+          "bag",
+          "costs",
+          "five",
+          "dollars",
+          "regardless",
+          "of",
+          "size"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "78dced5a85ccaf2c25d4d63442a85d2889f8ce77117dcfcca6defb944c50355a"
+        }
+      }
     },
     "read-shuttle-bags/documents/0/text/3": {
       "key": "read-shuttle-bags/documents/0/text/3",
@@ -48947,7 +52069,7 @@
         "recognized": "When checking in at the hotel, show your stamped counterslip to claim the bags.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1333,
       "phonemeErrorRate": null,
@@ -48958,7 +52080,66 @@
           "recognized": "counterslip"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-shuttle-bags/documents/0/text/3"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-shuttle-bags/documents/0/text/3",
+      "comparison": {
+        "audioSha256": "6ba5c875bacb339306ee999f48f3224314e6162863a833adcf9ddda410fe27fc",
+        "recognized": "When checking in at the hotel, show your stamped counterslip to claim the bags.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "When checking in at the hotel, show your stamped counter slip to claim the bags.",
+        "reasons": [
+          "reviewed-compound-boundary:counterslip"
+        ],
+        "normalizedExpected": [
+          "when",
+          "checking",
+          "in",
+          "at",
+          "the",
+          "hotel",
+          "show",
+          "your",
+          "stamped",
+          "counter",
+          "slip",
+          "to",
+          "claim",
+          "the",
+          "bags"
+        ],
+        "normalizedRecognized": [
+          "when",
+          "checking",
+          "in",
+          "at",
+          "the",
+          "hotel",
+          "show",
+          "your",
+          "stamped",
+          "counter",
+          "slip",
+          "to",
+          "claim",
+          "the",
+          "bags"
+        ],
+        "proofExpected": "t:when | t:checking | t:in | t:at | t:the | t:hotel | t:show | t:your | t:stamped | t:counter | t:slip | t:to | t:claim | t:the | t:bags",
+        "proofRecognized": "t:when | t:checking | t:in | t:at | t:the | t:hotel | t:show | t:your | t:stamped | t:counter | t:slip | t:to | t:claim | t:the | t:bags",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ec89b36ebbcfe1d0070c9f360454f3a75cef4cb8b12f1aeda7990ab409888254"
+        }
+      }
     },
     "read-shuttle-bags/documents/1/text/1": {
       "key": "read-shuttle-bags/documents/1/text/1",
@@ -49092,7 +52273,7 @@
         "recognized": "930 take my bag and both of Pat's bags to the station counter.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1333,
       "phonemeErrorRate": null,
@@ -49103,7 +52284,65 @@
           "recognized": "hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-shuttle-bags/documents/2/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-shuttle-bags/documents/2/text/0",
+      "comparison": {
+        "audioSha256": "332d5f4e40f7cc971ef98c84a05539ae22ad0c17bc8e0c1db8caaa8ebbeb5088",
+        "recognized": "930, take my bag and both of Pat's bags to the station counter.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "nine thirty , take my bag and both of Pat's bags to the station counter.",
+        "reasons": [
+          "source-anchored-clock:930→9:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "nine",
+          "thirty",
+          "take",
+          "my",
+          "bag",
+          "and",
+          "both",
+          "of",
+          "pat's",
+          "bags",
+          "to",
+          "the",
+          "station",
+          "counter"
+        ],
+        "normalizedRecognized": [
+          "nine",
+          "thirty",
+          "take",
+          "my",
+          "bag",
+          "and",
+          "both",
+          "of",
+          "pat's",
+          "bags",
+          "to",
+          "the",
+          "station",
+          "counter"
+        ],
+        "proofExpected": "t:nine | t:thirty | t:take | t:my | t:bag | t:and | t:both | t:of | t:pat's | t:bags | t:to | t:the | t:station | t:counter",
+        "proofRecognized": "t:nine | t:thirty | t:take | t:my | t:bag | t:and | t:both | t:of | t:pat's | t:bags | t:to | t:the | t:station | t:counter",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ede1e46c4da92ffc6c9f67096633962ffa1b01028d958d051800334b50365df7"
+        }
+      }
     },
     "read-sound-bag/documents/1/text/0": {
       "key": "read-sound-bag/documents/1/text/0",
@@ -49162,7 +52401,43 @@
           "recognized": "in h o"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/1/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/1/text/0",
+      "comparison": {
+        "audioSha256": "2f89afe72290415ea3f2cc12b0fce349de31264a1f6eee7bf839ed75a21e10ac",
+        "recognized": "Borrower, in H.O.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Borrower: Ina Cho.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "borrower",
+          "ina",
+          "cho"
+        ],
+        "normalizedRecognized": [
+          "borrower",
+          "in",
+          "h",
+          "lettero"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "c64f316b80ed815ea3967a468fb28e843d88ace0f5497f402a9243887ee6ce2a"
+        }
+      }
     },
     "read-sound-bag/documents/1/text/1": {
       "key": "read-sound-bag/documents/1/text/1",
@@ -49210,7 +52485,7 @@
         "recognized": "Set B collected at 9.20 for a panel discussion.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2,
       "phonemeErrorRate": null,
@@ -49221,7 +52496,57 @@
           "recognized": "point two"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "7451ecf4628f57fb6d56898a52c794994135a8d05ad507eb65e9b72013a43b57",
+        "recognized": "Set B collected at 9.20 for a panel discussion.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Set B collected at nine twenty for a panel discussion.",
+        "reasons": [
+          "source-anchored-clock:9.20→9:20",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "set",
+          "b",
+          "collected",
+          "at",
+          "nine",
+          "twenty",
+          "for",
+          "a",
+          "panel",
+          "discussion"
+        ],
+        "normalizedRecognized": [
+          "set",
+          "b",
+          "collected",
+          "at",
+          "nine",
+          "twenty",
+          "for",
+          "a",
+          "panel",
+          "discussion"
+        ],
+        "proofExpected": "t:set | t:b | t:collected | t:at | t:nine | t:twenty | t:for | t:a | t:panel | t:discussion",
+        "proofRecognized": "t:set | t:b | t:collected | t:at | t:nine | t:twenty | t:for | t:a | t:panel | t:discussion",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bbed303c86dbfb0b7fe048c4a38427edecc84aa078b34ad9d5c4224d41bf5874"
+        }
+      }
     },
     "read-sound-bag/documents/2/text/0": {
       "key": "read-sound-bag/documents/2/text/0",
@@ -49280,7 +52605,69 @@
           "recognized": "in a"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/2/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/2/text/0",
+      "comparison": {
+        "audioSha256": "6d96c3baa162247c9a57db609d6e3257d0522e0101d754630fd6cbba5d34c878",
+        "recognized": "In a, the large speaker and the microphone used by the chair are back at the hall.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Ina: The large speaker and the microphone used by the chair are back at the hall.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "ina",
+          "the",
+          "large",
+          "speaker",
+          "and",
+          "the",
+          "microphone",
+          "used",
+          "by",
+          "the",
+          "chair",
+          "are",
+          "back",
+          "at",
+          "the",
+          "hall"
+        ],
+        "normalizedRecognized": [
+          "in",
+          "a",
+          "the",
+          "large",
+          "speaker",
+          "and",
+          "the",
+          "microphone",
+          "used",
+          "by",
+          "the",
+          "chair",
+          "are",
+          "back",
+          "at",
+          "the",
+          "hall"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "0a33e2a58131b9553bdfef5f005b7dcfb0d5f429bbf83229794dcdad1365f0b6"
+        }
+      }
     },
     "read-sound-bag/documents/2/text/6": {
       "key": "read-sound-bag/documents/2/text/6",
@@ -49339,7 +52726,41 @@
           "recognized": "n a"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/2/text/6"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-sound-bag/documents/2/text/6",
+      "comparison": {
+        "audioSha256": "f08adf08106ffabbf91878d537de0098afaad52288b1e7ba4ddf34dc59fb6770",
+        "recognized": "N.A. Thanks.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Ina: Thanks.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "ina",
+          "thanks"
+        ],
+        "normalizedRecognized": [
+          "n",
+          "lettera",
+          "thanks"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "472f0be3164aa438aa808b8cadd46b799a3d3e917a03fe6a73884d65f66fe630"
+        }
+      }
     },
     "read-film-vote/documents/1/text/1": {
       "key": "read-film-vote/documents/1/text/1",
@@ -49389,7 +52810,7 @@
         "recognized": "available for a 20 minute discussion between 18 o'clock and 1930",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3571,
       "phonemeErrorRate": null,
@@ -49400,7 +52821,65 @@
           "recognized": "one thousand nine hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-film-vote/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-film-vote/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "7803e9e394ceae434233aa0036ac159428915569bda81dcbe7c029dd4f9a2e60",
+        "recognized": "Director available for a 20-minute discussion between 18 o'clock and 1930.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Director available for a twenty-minute discussion between eighteen o clock and nineteen thirty.",
+        "reasons": [
+          "source-anchored-clock:1930→19:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "director",
+          "available",
+          "for",
+          "a",
+          "twenty",
+          "minute",
+          "discussion",
+          "between",
+          "eighteen",
+          "o",
+          "clock",
+          "and",
+          "nineteen",
+          "thirty"
+        ],
+        "normalizedRecognized": [
+          "director",
+          "available",
+          "for",
+          "a",
+          "twenty",
+          "minute",
+          "discussion",
+          "between",
+          "eighteen",
+          "o",
+          "clock",
+          "and",
+          "nineteen",
+          "thirty"
+        ],
+        "proofExpected": "t:director | t:available | t:for | t:a | t:twenty | t:minute | t:discussion | t:between | t:eighteen | t:o | t:clock | t:and | t:nineteen | t:thirty",
+        "proofRecognized": "t:director | t:available | t:for | t:a | t:twenty | t:minute | t:discussion | t:between | t:eighteen | t:o | t:clock | t:and | t:nineteen | t:thirty",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ff049a4965546767c394f8afdcada481e52d8fb54c574c9edac61fd1f97ec90b"
+        }
+      }
     },
     "read-film-vote/documents/1/text/4": {
       "key": "read-film-vote/documents/1/text/4",
@@ -49451,7 +52930,7 @@
         "recognized": "Doors open at 1740",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -49462,7 +52941,47 @@
           "recognized": "one thousand seven hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-film-vote/documents/1/text/4"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-film-vote/documents/1/text/4",
+      "comparison": {
+        "audioSha256": "a10c9f88128f3cd1cd54188546f6a9f3372147bd90e172c8ead66a29d3f5654b",
+        "recognized": "Doors open at 1740.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Doors open at seventeen forty.",
+        "reasons": [
+          "source-anchored-clock:1740→17:40",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "doors",
+          "open",
+          "at",
+          "seventeen",
+          "forty"
+        ],
+        "normalizedRecognized": [
+          "doors",
+          "open",
+          "at",
+          "seventeen",
+          "forty"
+        ],
+        "proofExpected": "t:doors | t:open | t:at | t:seventeen | t:forty",
+        "proofRecognized": "t:doors | t:open | t:at | t:seventeen | t:forty",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "a8284df8d1b9052e824129290b3855dc83b27903260d2bcee82379232cdd6d12"
+        }
+      }
     },
     "read-film-vote/documents/2/text/1": {
       "key": "read-film-vote/documents/2/text/1",
@@ -49517,7 +53036,7 @@
         "recognized": "The director confirmed she will be in the hall from the moment. The doors open and can stay until 1930 as planned.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2174,
       "phonemeErrorRate": null,
@@ -49528,7 +53047,83 @@
           "recognized": "one thousand nine hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-film-vote/documents/2/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-film-vote/documents/2/text/1",
+      "comparison": {
+        "audioSha256": "99a04ba527a2b6e55ef9132bb0cc43abf4f9a07023c3edd613a199941b3e3107",
+        "recognized": "The director confirmed she will be in the hall from the moment. The doors open and can stay until 1930 as planned.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The director confirmed she will be in the hall from the moment the doors open and can stay until nineteen thirty as planned.",
+        "reasons": [
+          "source-anchored-clock:1930→19:30",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "the",
+          "director",
+          "confirmed",
+          "she",
+          "will",
+          "be",
+          "in",
+          "the",
+          "hall",
+          "from",
+          "the",
+          "moment",
+          "the",
+          "doors",
+          "open",
+          "and",
+          "can",
+          "stay",
+          "until",
+          "nineteen",
+          "thirty",
+          "as",
+          "planned"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "director",
+          "confirmed",
+          "she",
+          "will",
+          "be",
+          "in",
+          "the",
+          "hall",
+          "from",
+          "the",
+          "moment",
+          "the",
+          "doors",
+          "open",
+          "and",
+          "can",
+          "stay",
+          "until",
+          "nineteen",
+          "thirty",
+          "as",
+          "planned"
+        ],
+        "proofExpected": "t:the | t:director | t:confirmed | t:she | t:will | t:be | t:in | t:the | t:hall | t:from | t:the | t:moment | t:the | t:doors | t:open | t:and | t:can | t:stay | t:until | t:nineteen | t:thirty | t:as | t:planned",
+        "proofRecognized": "t:the | t:director | t:confirmed | t:she | t:will | t:be | t:in | t:the | t:hall | t:from | t:the | t:moment | t:the | t:doors | t:open | t:and | t:can | t:stay | t:until | t:nineteen | t:thirty | t:as | t:planned",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d14c3501e63308bdc26d3609e3a8f2cae425b32c329a523b32eebde610081fd2"
+        }
+      }
     },
     "read-crate-hire/documents/1/text/0": {
       "key": "read-crate-hire/documents/1/text/0",
@@ -49576,7 +53171,7 @@
         "recognized": "Four crates returned to the counter at 1640 Tuesday.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.5,
       "phonemeErrorRate": null,
@@ -49587,7 +53182,57 @@
           "recognized": "one thousand six hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/1/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/1/text/0",
+      "comparison": {
+        "audioSha256": "824226ad6fe697cfc2b77ea0cec5027549dfa07d5be0fd1d2d22269c9db5b0a2",
+        "recognized": "Four crates returned to the counter at 1640 Tuesday.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Four crates returned to the counter at sixteen forty Tuesday.",
+        "reasons": [
+          "source-anchored-clock:1640→16:40",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "four",
+          "crates",
+          "returned",
+          "to",
+          "the",
+          "counter",
+          "at",
+          "sixteen",
+          "forty",
+          "tuesday"
+        ],
+        "normalizedRecognized": [
+          "four",
+          "crates",
+          "returned",
+          "to",
+          "the",
+          "counter",
+          "at",
+          "sixteen",
+          "forty",
+          "tuesday"
+        ],
+        "proofExpected": "t:four | t:crates | t:returned | t:to | t:the | t:counter | t:at | t:sixteen | t:forty | t:tuesday",
+        "proofRecognized": "t:four | t:crates | t:returned | t:to | t:the | t:counter | t:at | t:sixteen | t:forty | t:tuesday",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bce12c6585c9d9570704a50336503dda0f94e7c5299ba2218e1f4ba6874c806b"
+        }
+      }
     },
     "read-crate-hire/documents/1/text/1": {
       "key": "read-crate-hire/documents/1/text/1",
@@ -49646,7 +53291,58 @@
           "recognized": "one thousand six hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "d2910d4e31fe3e8b0af61af8236c8165cd1aa8f2e785a2d6de919174aa5640e2",
+        "recognized": "Two crates set outside Gate G, 1650 Tuesday.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Two crates set outside Gate G at sixteen fifty Tuesday.",
+        "reasons": [
+          "source-anchored-contextual-letter:G",
+          "source-anchored-clock:1650→16:50",
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "two",
+          "crates",
+          "set",
+          "outside",
+          "gate",
+          "letterg",
+          "at",
+          "sixteen",
+          "fifty",
+          "tuesday"
+        ],
+        "normalizedRecognized": [
+          "two",
+          "crates",
+          "set",
+          "outside",
+          "gate",
+          "g",
+          "sixteen",
+          "fifty",
+          "tuesday"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "4f60303c46b32c7f13d1091bf59d53cbdb799feacd7286b72cd1fae69ba6b4d5"
+        }
+      }
     },
     "read-crate-hire/documents/1/text/2": {
       "key": "read-crate-hire/documents/1/text/2",
@@ -49694,7 +53390,7 @@
         "recognized": "Truck driver called at Gate G at 9.20 Wednesday and collected both.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1538,
       "phonemeErrorRate": null,
@@ -49705,7 +53401,64 @@
           "recognized": "point two"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/1/text/2"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/1/text/2",
+      "comparison": {
+        "audioSha256": "6e62f6e491b4263fc6774b8c87a5c85f864347fe360e8b888447703c295203dc",
+        "recognized": "Truck driver called at Gate G at 9.20 Wednesday, and collected both.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Truck driver called at Gate G at nine twenty Wednesday and collected both.",
+        "reasons": [
+          "source-anchored-contextual-letter:G",
+          "source-anchored-clock:9.20→9:20",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "truck",
+          "driver",
+          "called",
+          "at",
+          "gate",
+          "letterg",
+          "at",
+          "nine",
+          "twenty",
+          "wednesday",
+          "and",
+          "collected",
+          "both"
+        ],
+        "normalizedRecognized": [
+          "truck",
+          "driver",
+          "called",
+          "at",
+          "gate",
+          "letterg",
+          "at",
+          "nine",
+          "twenty",
+          "wednesday",
+          "and",
+          "collected",
+          "both"
+        ],
+        "proofExpected": "t:truck | t:driver | t:called | t:at | t:gate | t:letterg | t:at | t:nine | t:twenty | t:wednesday | t:and | t:collected | t:both",
+        "proofRecognized": "t:truck | t:driver | t:called | t:at | t:gate | t:letterg | t:at | t:nine | t:twenty | t:wednesday | t:and | t:collected | t:both",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "4758058ac01885a0543c3911d06a09de03cc8ed0f9f89e82120216e087ee1532"
+        }
+      }
     },
     "read-crate-hire/documents/2/text/0": {
       "key": "read-crate-hire/documents/2/text/0",
@@ -49753,7 +53506,7 @@
         "recognized": "Your collection is confirmed for gate F at 1645 Tuesday.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.4167,
       "phonemeErrorRate": null,
@@ -49764,7 +53517,62 @@
           "recognized": "one thousand six hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/2/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/2/text/0",
+      "comparison": {
+        "audioSha256": "2cdf26c54e4032019c8fcb896569063c1666fcde46c22ed1d6ed1f4c1ac8bdc1",
+        "recognized": "Your collection is confirmed for Gate F at 1645 Tuesday.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Your collection is confirmed for Gate F at sixteen forty-five Tuesday.",
+        "reasons": [
+          "source-anchored-contextual-letter:F",
+          "source-anchored-clock:1645→16:45",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "your",
+          "collection",
+          "is",
+          "confirmed",
+          "for",
+          "gate",
+          "letterf",
+          "at",
+          "sixteen",
+          "forty",
+          "five",
+          "tuesday"
+        ],
+        "normalizedRecognized": [
+          "your",
+          "collection",
+          "is",
+          "confirmed",
+          "for",
+          "gate",
+          "letterf",
+          "at",
+          "sixteen",
+          "forty",
+          "five",
+          "tuesday"
+        ],
+        "proofExpected": "t:your | t:collection | t:is | t:confirmed | t:for | t:gate | t:letterf | t:at | t:sixteen | t:forty | t:five | t:tuesday",
+        "proofRecognized": "t:your | t:collection | t:is | t:confirmed | t:for | t:gate | t:letterf | t:at | t:sixteen | t:forty | t:five | t:tuesday",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "327fea6958149752272477c244d3ae35c7d374a49c9f7de894aaa3838dca04c0"
+        }
+      }
     },
     "read-crate-hire/documents/2/text/1": {
       "key": "read-crate-hire/documents/2/text/1",
@@ -49812,7 +53620,7 @@
         "recognized": "Please place any crates for collection inside the marked area at that gate by 1645.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2941,
       "phonemeErrorRate": null,
@@ -49823,7 +53631,71 @@
           "recognized": "one thousand six hundred and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/2/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-crate-hire/documents/2/text/1",
+      "comparison": {
+        "audioSha256": "2913bf6a9beda58e71fe8a04d913870e5bf833766245d5f04eacbd592e823217",
+        "recognized": "Please place any crates for collection inside the marked area at that gate by 1645.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Please place any crates for collection inside the marked area at that gate by sixteen forty-five.",
+        "reasons": [
+          "source-anchored-clock:1645→16:45",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "please",
+          "place",
+          "any",
+          "crates",
+          "for",
+          "collection",
+          "inside",
+          "the",
+          "marked",
+          "area",
+          "at",
+          "that",
+          "gate",
+          "by",
+          "sixteen",
+          "forty",
+          "five"
+        ],
+        "normalizedRecognized": [
+          "please",
+          "place",
+          "any",
+          "crates",
+          "for",
+          "collection",
+          "inside",
+          "the",
+          "marked",
+          "area",
+          "at",
+          "that",
+          "gate",
+          "by",
+          "sixteen",
+          "forty",
+          "five"
+        ],
+        "proofExpected": "t:please | t:place | t:any | t:crates | t:for | t:collection | t:inside | t:the | t:marked | t:area | t:at | t:that | t:gate | t:by | t:sixteen | t:forty | t:five",
+        "proofRecognized": "t:please | t:place | t:any | t:crates | t:for | t:collection | t:inside | t:the | t:marked | t:area | t:at | t:that | t:gate | t:by | t:sixteen | t:forty | t:five",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "edf24782a53c291c37dc91075749088cd5393253ba14e97cbd97ebdeedaa3fd2"
+        }
+      }
     },
     "read-donor-match/documents/0/text/1": {
       "key": "read-donor-match/documents/0/text/1",
@@ -49873,7 +53745,7 @@
         "recognized": "gifts received in the galleries account on Saturday or Sunday qualify.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1538,
       "phonemeErrorRate": null,
@@ -49884,7 +53756,60 @@
           "recognized": "galleries"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-donor-match/documents/0/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-donor-match/documents/0/text/1",
+      "comparison": {
+        "audioSha256": "f0be6488fcac5cb77fa60244fad4bd57100abf50c2e95a9e74e63255b608637b",
+        "recognized": "Only gifts received in the galleries account on Saturday or Sunday qualify.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Only gifts received in the gallery's account on Saturday or Sunday qualify.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:gallery's=galleries"
+        ],
+        "normalizedExpected": [
+          "only",
+          "gifts",
+          "received",
+          "in",
+          "the",
+          "gallery's",
+          "account",
+          "on",
+          "saturday",
+          "or",
+          "sunday",
+          "qualify"
+        ],
+        "normalizedRecognized": [
+          "only",
+          "gifts",
+          "received",
+          "in",
+          "the",
+          "galleries",
+          "account",
+          "on",
+          "saturday",
+          "or",
+          "sunday",
+          "qualify"
+        ],
+        "proofExpected": "t:only | t:gifts | t:received | t:in | t:the | p:G AE L ER IY Z | t:account | t:on | t:saturday | t:or | t:sunday | t:qualify",
+        "proofRecognized": "t:only | t:gifts | t:received | t:in | t:the | p:G AE L ER IY Z | t:account | t:on | t:saturday | t:or | t:sunday | t:qualify",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "48e76db4a25b85c88247c0dee26a4f61acaf376daab9147bd099a3cafaa7d7e7"
+        }
+      }
     },
     "read-donor-match/documents/0/text/4": {
       "key": "read-donor-match/documents/0/text/4",
@@ -49975,7 +53900,7 @@
         "recognized": "Saturday 10-05, $170 gallery gift.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1818,
       "phonemeErrorRate": null,
@@ -49986,7 +53911,59 @@
           "recognized": "point zero"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:reading:read-donor-match/documents/1/text/1"
+      "retryEvidence": "./data/audio/retries.json#en:reading:read-donor-match/documents/1/text/1",
+      "comparison": {
+        "audioSha256": "b2fb8e59fe54fbe4aa03479f234d4f2f777aeca03ef7c0c5379ba73d6d3b0186",
+        "recognized": "Saturday 10.05 $170 gallery gift",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Saturday ten oh five , one hundred and seventy dollars, gallery gift.",
+        "reasons": [
+          "source-anchored-clock:10.05→10:05",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "saturday",
+          "ten",
+          "oh",
+          "five",
+          "one",
+          "hundred",
+          "and",
+          "seventy",
+          "dollars",
+          "gallery",
+          "gift"
+        ],
+        "normalizedRecognized": [
+          "saturday",
+          "ten",
+          "oh",
+          "five",
+          "one",
+          "hundred",
+          "and",
+          "seventy",
+          "dollars",
+          "gallery",
+          "gift"
+        ],
+        "proofExpected": "t:saturday | t:ten | t:oh | t:five | t:one | t:hundred | t:and | t:seventy | t:dollars | t:gallery | t:gift",
+        "proofRecognized": "t:saturday | t:ten | t:oh | t:five | t:one | t:hundred | t:and | t:seventy | t:dollars | t:gallery | t:gift",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "cb71fad68cbfdc8905555c1d833c9b47aa28e2f0cf9d475f76d759caab02d189"
+        }
+      }
     }
   },
   "generation": {

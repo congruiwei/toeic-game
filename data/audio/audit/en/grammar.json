@@ -29093,7 +29093,7 @@
         "recognized": "The appointment is at 9.15 on Thursday morning.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3333,
       "phonemeErrorRate": null,
@@ -29104,7 +29104,55 @@
           "recognized": "point one five"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-preposition-01/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-preposition-01/sentence/0",
+      "comparison": {
+        "audioSha256": "d35a9c92bd11df4d8aacf6da00d727bb192dcd0dc4cd1c60f2d42313eecf379b",
+        "recognized": "The appointment is at 9.15 on Thursday morning.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The appointment is at nine fifteen on Thursday morning.",
+        "reasons": [
+          "source-anchored-clock:9.15→9:15",
+          "author-number-and-input-normalization"
+        ],
+        "normalizedExpected": [
+          "the",
+          "appointment",
+          "is",
+          "at",
+          "nine",
+          "fifteen",
+          "on",
+          "thursday",
+          "morning"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "appointment",
+          "is",
+          "at",
+          "nine",
+          "fifteen",
+          "on",
+          "thursday",
+          "morning"
+        ],
+        "proofExpected": "t:the | t:appointment | t:is | t:at | t:nine | t:fifteen | t:on | t:thursday | t:morning",
+        "proofRecognized": "t:the | t:appointment | t:is | t:at | t:nine | t:fifteen | t:on | t:thursday | t:morning",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ad7ade3a714c1d2709ad42f0ca3d256d8c9a9184f8b6c0ba9d2e177103da1bdb"
+        }
+      }
     },
     "gram-preposition-02/sentence/0": {
       "key": "gram-preposition-02/sentence/0",
@@ -29163,7 +29211,48 @@
           "recognized": "cafe"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-preposition-02/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-preposition-02/sentence/0",
+      "comparison": {
+        "audioSha256": "2c5735e23c6917a8ef79cede20f9331cb8204c5d6257e944d06a151124c149b8",
+        "recognized": "The new cafe opens on Monday.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The new café opens on Monday.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "new",
+          "café",
+          "opens",
+          "on",
+          "monday"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "new",
+          "cafe",
+          "opens",
+          "on",
+          "monday"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "240185a1e1a8063a1d73db2c49b95c81cf7833f80afeaef34b3bd1b69fa39230"
+        }
+      }
     },
     "gram-relative-04/sentence/0": {
       "key": "gram-relative-04/sentence/0",
@@ -29222,7 +29311,56 @@
           "recognized": "cafe"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-relative-04/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-relative-04/sentence/0",
+      "comparison": {
+        "audioSha256": "b3039a21823a9d927ef0c15c2d1c9cd3d8447026e5cae724389980a1b6a926cc",
+        "recognized": "The cafe where we usually meet will reopen next week.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The café where we usually meet will reopen next week.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "café",
+          "where",
+          "we",
+          "usually",
+          "meet",
+          "will",
+          "reopen",
+          "next",
+          "week"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "cafe",
+          "where",
+          "we",
+          "usually",
+          "meet",
+          "will",
+          "reopen",
+          "next",
+          "week"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "3a4ce1fd79645fab79dadf8610c425f58797e1df56275c58709d041eba3112b8"
+        }
+      }
     },
     "gram-passive-15/sentence/0": {
       "key": "gram-passive-15/sentence/0",
@@ -29283,7 +29421,62 @@
           "recognized": "open"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-passive-15/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-passive-15/sentence/0",
+      "comparison": {
+        "audioSha256": "457a4a64f043c01221389232713bacf518eeb7ed10ff6d7daf531b556227ffbf",
+        "recognized": "Last Friday, the temporary bridge was open to cyclists for the first time.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Last Friday the temporary bridge was opened to cyclists for the first time.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "last",
+          "friday",
+          "the",
+          "temporary",
+          "bridge",
+          "was",
+          "opened",
+          "to",
+          "cyclists",
+          "for",
+          "the",
+          "first",
+          "time"
+        ],
+        "normalizedRecognized": [
+          "last",
+          "friday",
+          "the",
+          "temporary",
+          "bridge",
+          "was",
+          "open",
+          "to",
+          "cyclists",
+          "for",
+          "the",
+          "first",
+          "time"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "966cb4bbba93817e29c5c09de78657db2d7c9be28cfab2f95d6ef03a4a30ebcd"
+        }
+      }
     },
     "gram-pronouns-03/sentence/0": {
       "key": "gram-pronouns-03/sentence/0",
@@ -29344,7 +29537,60 @@
           "recognized": "locker self"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-pronouns-03/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-pronouns-03/sentence/0",
+      "comparison": {
+        "audioSha256": "d7af1cd96f5929b3c63742673b436548d937fc79bd5eddc84b91c7f9b7284d49",
+        "recognized": "The owner checked the locker self without asking a technician to come.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The owner checked the lock herself, without asking a technician to come.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "owner",
+          "checked",
+          "the",
+          "lock",
+          "herself",
+          "without",
+          "asking",
+          "a",
+          "technician",
+          "to",
+          "come"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "owner",
+          "checked",
+          "the",
+          "locker",
+          "self",
+          "without",
+          "asking",
+          "a",
+          "technician",
+          "to",
+          "come"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f6844a5d622d9208d234f8d28fbf5beec003bd91373dcf89cbb7c4daa7d1a593"
+        }
+      }
     },
     "gram-pronouns-06/sentence/0": {
       "key": "gram-pronouns-06/sentence/0",
@@ -29446,7 +29692,58 @@
           "recognized": "form s misplace"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-modifiers-12/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-modifiers-12/sentence/0",
+      "comparison": {
+        "audioSha256": "d2e97eace52ee2e26e220280e9e8776b311a9761298befa4e4a20df9d5563d81",
+        "recognized": "The form's misplace during the move had to be printed again.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The forms misplaced during the move had to be printed again.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "forms",
+          "misplaced",
+          "during",
+          "the",
+          "move",
+          "had",
+          "to",
+          "be",
+          "printed",
+          "again"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "form's",
+          "misplace",
+          "during",
+          "the",
+          "move",
+          "had",
+          "to",
+          "be",
+          "printed",
+          "again"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "1c1a6764e7320dc906d751d1ae24f52f66b52bcc7d3e1888593caaf11d46d127"
+        }
+      }
     },
     "gram-quantity-04/sentence/0": {
       "key": "gram-quantity-04/sentence/0",
@@ -29496,7 +29793,7 @@
         "recognized": "have two little spare fabric left to cover a whole chair. Even a cushion would use it all.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0526,
       "phonemeErrorRate": null,
@@ -29507,7 +29804,74 @@
           "recognized": "two"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-quantity-04/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-quantity-04/sentence/0",
+      "comparison": {
+        "audioSha256": "9a51be43937a0429ed2cbd646e3f928f51edb7cd068233225f279d293e2345d2",
+        "recognized": "We have two little spare fabric left to cover a whole chair, even a cushion would use it all.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "We have too little spare fabric left to cover a whole chair; even a cushion would use it all.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:too=two"
+        ],
+        "normalizedExpected": [
+          "we",
+          "have",
+          "too",
+          "little",
+          "spare",
+          "fabric",
+          "left",
+          "to",
+          "cover",
+          "a",
+          "whole",
+          "chair",
+          "even",
+          "a",
+          "cushion",
+          "would",
+          "use",
+          "it",
+          "all"
+        ],
+        "normalizedRecognized": [
+          "we",
+          "have",
+          "two",
+          "little",
+          "spare",
+          "fabric",
+          "left",
+          "to",
+          "cover",
+          "a",
+          "whole",
+          "chair",
+          "even",
+          "a",
+          "cushion",
+          "would",
+          "use",
+          "it",
+          "all"
+        ],
+        "proofExpected": "t:we | t:have | p:T UW | t:little | t:spare | t:fabric | t:left | t:to | t:cover | t:a | t:whole | t:chair | t:even | t:a | t:cushion | t:would | t:use | t:it | t:all",
+        "proofRecognized": "t:we | t:have | p:T UW | t:little | t:spare | t:fabric | t:left | t:to | t:cover | t:a | t:whole | t:chair | t:even | t:a | t:cushion | t:would | t:use | t:it | t:all",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "b2cd7e7fe931938012323821c21170be8afafe4fd9808480b68d0d10050a46fc"
+        }
+      }
     },
     "gram-quantity-06/sentence/0": {
       "key": "gram-quantity-06/sentence/0",
@@ -29557,7 +29921,7 @@
         "recognized": "The manual covers all three sizes listed in the catalog.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1,
       "phonemeErrorRate": null,
@@ -29568,7 +29932,56 @@
           "recognized": "catalog"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-quantity-06/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-quantity-06/sentence/0",
+      "comparison": {
+        "audioSha256": "cf0020efc9e07af4ea6ddd827f7dac4034d747b9dabaea7cf6c7e590eb901621",
+        "recognized": "The manual covers all three sizes listed in the catalog.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The manual covers all three sizes listed in the catalogue.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:catalogue=catalog"
+        ],
+        "normalizedExpected": [
+          "the",
+          "manual",
+          "covers",
+          "all",
+          "three",
+          "sizes",
+          "listed",
+          "in",
+          "the",
+          "catalogue"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "manual",
+          "covers",
+          "all",
+          "three",
+          "sizes",
+          "listed",
+          "in",
+          "the",
+          "catalog"
+        ],
+        "proofExpected": "t:the | t:manual | t:covers | t:all | t:three | t:sizes | t:listed | t:in | t:the | p:K AE T AH L AO G",
+        "proofRecognized": "t:the | t:manual | t:covers | t:all | t:three | t:sizes | t:listed | t:in | t:the | p:K AE T AH L AO G",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f22c9543c83d8a3bd95461c8a3dbd88d3bc36b907529ad050a2b9e67be2380f9"
+        }
+      }
     },
     "gram-lexis-25/sentence/0": {
       "key": "gram-lexis-25/sentence/0",
@@ -29627,7 +30040,72 @@
           "recognized": "glacier"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-25/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-25/sentence/0",
+      "comparison": {
+        "audioSha256": "725f00538057b856198874dd1454524da15d7a4096e640c83aee86d7d43009a6",
+        "recognized": "The glass is too wide for its frame, so the glacier will trim two millimeters off one edge.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The glass is too wide for its frame, so the glazier will trim two millimeters off one edge.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "glass",
+          "is",
+          "too",
+          "wide",
+          "for",
+          "its",
+          "frame",
+          "so",
+          "the",
+          "glazier",
+          "will",
+          "trim",
+          "two",
+          "millimeters",
+          "off",
+          "one",
+          "edge"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "glass",
+          "is",
+          "too",
+          "wide",
+          "for",
+          "its",
+          "frame",
+          "so",
+          "the",
+          "glacier",
+          "will",
+          "trim",
+          "two",
+          "millimeters",
+          "off",
+          "one",
+          "edge"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "258ba1330ab125dafab8caf3907d989e7e729555ffcedb0c9fff0dd1456aa5f1"
+        }
+      }
     },
     "gram-lexis-26/sentence/0": {
       "key": "gram-lexis-26/sentence/0",
@@ -29677,7 +30155,7 @@
         "recognized": "prevent a wait at the machine, the office will stagger brakes so that each team leaves at a different time.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0476,
       "phonemeErrorRate": null,
@@ -29688,7 +30166,78 @@
           "recognized": "brakes"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-26/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-26/sentence/0",
+      "comparison": {
+        "audioSha256": "a43b5a9670185bac27fd522ff50be8c988daffa9ab021552d79546e5f55d5af2",
+        "recognized": "To prevent a wait at the machine, the office will stagger brakes so that each team leaves at a different time.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "To prevent a wait at the machine, the office will stagger breaks so that each team leaves at a different time.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:breaks=brakes"
+        ],
+        "normalizedExpected": [
+          "to",
+          "prevent",
+          "a",
+          "wait",
+          "at",
+          "the",
+          "machine",
+          "the",
+          "office",
+          "will",
+          "stagger",
+          "breaks",
+          "so",
+          "that",
+          "each",
+          "team",
+          "leaves",
+          "at",
+          "a",
+          "different",
+          "time"
+        ],
+        "normalizedRecognized": [
+          "to",
+          "prevent",
+          "a",
+          "wait",
+          "at",
+          "the",
+          "machine",
+          "the",
+          "office",
+          "will",
+          "stagger",
+          "brakes",
+          "so",
+          "that",
+          "each",
+          "team",
+          "leaves",
+          "at",
+          "a",
+          "different",
+          "time"
+        ],
+        "proofExpected": "t:to | t:prevent | t:a | t:wait | t:at | t:the | t:machine | t:the | t:office | t:will | t:stagger | p:B R EY K S | t:so | t:that | t:each | t:team | t:leaves | t:at | t:a | t:different | t:time",
+        "proofRecognized": "t:to | t:prevent | t:a | t:wait | t:at | t:the | t:machine | t:the | t:office | t:will | t:stagger | p:B R EY K S | t:so | t:that | t:each | t:team | t:leaves | t:at | t:a | t:different | t:time",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ff0a44cc10a1c07688888b64ab8a8dcc0b470627f6b11fb6684e37e9bd5728f8"
+        }
+      }
     },
     "gram-lexis-52/sentence/0": {
       "key": "gram-lexis-52/sentence/0",
@@ -29749,7 +30298,74 @@
           "recognized": "root"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-52/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-52/sentence/0",
+      "comparison": {
+        "audioSha256": "d58399849a7a4bd32cece114a929409c175ab86badbea0bdd75707b7bfe4ce72",
+        "recognized": "A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "a",
+          "rigid",
+          "wall",
+          "blocks",
+          "the",
+          "route",
+          "shown",
+          "on",
+          "the",
+          "old",
+          "plan",
+          "so",
+          "the",
+          "engineer",
+          "drew",
+          "a",
+          "detour",
+          "around",
+          "it"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "rigid",
+          "wall",
+          "blocks",
+          "the",
+          "root",
+          "shown",
+          "on",
+          "the",
+          "old",
+          "plan",
+          "so",
+          "the",
+          "engineer",
+          "drew",
+          "a",
+          "detour",
+          "around",
+          "it"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "38db924f3c5ce81d9d779668a025e06ef0be2fba1824b1388b56826bc0df6cf3"
+        }
+      }
     },
     "gram-lexis-78/sentence/0": {
       "key": "gram-lexis-78/sentence/0",
@@ -29799,7 +30415,7 @@
         "recognized": "unit runs on batteries and fits inside a toolbox, making it portable enough for field work.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.125,
       "phonemeErrorRate": null,
@@ -29810,7 +30426,70 @@
           "recognized": "field work"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-78/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-78/sentence/0",
+      "comparison": {
+        "audioSha256": "59df0f0e0662446f4b20477eb627ce5e3804971a30300071c79d4fad1df28947",
+        "recognized": "The unit runs on batteries and fits inside a toolbox, making it portable enough for field work.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The unit runs on batteries and fits inside a toolbox, making it portable enough for fieldwork.",
+        "reasons": [
+          "reviewed-compound-boundary:fieldwork"
+        ],
+        "normalizedExpected": [
+          "the",
+          "unit",
+          "runs",
+          "on",
+          "batteries",
+          "and",
+          "fits",
+          "inside",
+          "a",
+          "toolbox",
+          "making",
+          "it",
+          "portable",
+          "enough",
+          "for",
+          "field",
+          "work"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "unit",
+          "runs",
+          "on",
+          "batteries",
+          "and",
+          "fits",
+          "inside",
+          "a",
+          "toolbox",
+          "making",
+          "it",
+          "portable",
+          "enough",
+          "for",
+          "field",
+          "work"
+        ],
+        "proofExpected": "t:the | t:unit | t:runs | t:on | t:batteries | t:and | t:fits | t:inside | t:a | t:toolbox | t:making | t:it | t:portable | t:enough | t:for | t:field | t:work",
+        "proofRecognized": "t:the | t:unit | t:runs | t:on | t:batteries | t:and | t:fits | t:inside | t:a | t:toolbox | t:making | t:it | t:portable | t:enough | t:for | t:field | t:work",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6ffc1e7472704925fe6667df37aff1e07ff5fc4364498730a0544ef522c57134"
+        }
+      }
     },
     "gram-lexis-90/sentence/0": {
       "key": "gram-lexis-90/sentence/0",
@@ -29867,7 +30546,7 @@
         "recognized": "extra order is conditional on receiving a deposit by noon. Without the deposit, it will be cancelled.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0556,
       "phonemeErrorRate": null,
@@ -29878,7 +30557,72 @@
           "recognized": "canceled"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-90/sentence/0"
+      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-90/sentence/0",
+      "comparison": {
+        "audioSha256": "89ac61538c7fac180d489775cb533744dd27ae5d476a4c5bef75821c052d063e",
+        "recognized": "The extra order is conditional on receiving a deposit by noon. Without the deposit, it will be canceled.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The extra order is conditional on receiving a deposit by noon; without the deposit it will be cancelled.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:cancelled=canceled"
+        ],
+        "normalizedExpected": [
+          "the",
+          "extra",
+          "order",
+          "is",
+          "conditional",
+          "on",
+          "receiving",
+          "a",
+          "deposit",
+          "by",
+          "noon",
+          "without",
+          "the",
+          "deposit",
+          "it",
+          "will",
+          "be",
+          "cancelled"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "extra",
+          "order",
+          "is",
+          "conditional",
+          "on",
+          "receiving",
+          "a",
+          "deposit",
+          "by",
+          "noon",
+          "without",
+          "the",
+          "deposit",
+          "it",
+          "will",
+          "be",
+          "canceled"
+        ],
+        "proofExpected": "t:the | t:extra | t:order | t:is | t:conditional | t:on | t:receiving | t:a | t:deposit | t:by | t:noon | t:without | t:the | t:deposit | t:it | t:will | t:be | p:K AE N S AH L D",
+        "proofRecognized": "t:the | t:extra | t:order | t:is | t:conditional | t:on | t:receiving | t:a | t:deposit | t:by | t:noon | t:without | t:the | t:deposit | t:it | t:will | t:be | p:K AE N S AH L D",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9bf7dbddccd97b79abb31ddeac696796a443b47f19da32c3be6284bd00bef5c6"
+        }
+      }
     }
   },
   "generation": {

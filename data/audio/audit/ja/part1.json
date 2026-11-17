@@ -181,7 +181,178 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-001/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-001/options/3/0",
+      "comparison": {
+        "audioSha256": "3d17772c3ce7cdb01d3649db1ea4c0c7aa7b0bd253c511126834ca84f36b3e55",
+        "recognized": "箱の上に余地登っている人がいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "箱の上によじ登っている人がいます。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ハコノウエニヨジノボッテイルヒトガイマス",
+        "normalizedRecognized": "ハコノウエニヨチノボッテイルヒトガイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6493f46b938e6659be09b47a004d77b28f71a620334025cc65565954ed87ecaa"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "箱",
+              "reading": "ハコ",
+              "normalized": "ハコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "よじ登っ",
+              "reading": "ヨジノボッ",
+              "normalized": "ヨジノボッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "箱",
+              "reading": "ハコ",
+              "normalized": "ハコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "余地",
+              "reading": "ヨチ",
+              "normalized": "ヨチ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "登っ",
+              "reading": "ノボッ",
+              "normalized": "ノボッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-002/options/0/0": {
       "key": "p1-002/options/0/0",
@@ -463,7 +634,178 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-003/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-003/options/1/0",
+      "comparison": {
+        "audioSha256": "b0327dbb07240808049654b78f3be057dd462db3359d57c9ee4113de649cb5f0",
+        "recognized": "代謝のとってを握っている人がいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "台車の取っ手を握っている人がいます。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ダイシャノトッテオニギッテイルヒトガイマス",
+        "normalizedRecognized": "タイシャノトッテオニギッテイルヒトガイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "1f6a48fda2e774ebd834248a1e0bed27ada613d9ba556d08bd16788536860091"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "台車",
+              "reading": "ダイシャ",
+              "normalized": "ダイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "取っ手",
+              "reading": "トッテ",
+              "normalized": "トッテ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "握っ",
+              "reading": "ニギッ",
+              "normalized": "ニギッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "代謝",
+              "reading": "タイシャ",
+              "normalized": "タイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "とっ",
+              "reading": "トッ",
+              "normalized": "トッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "握っ",
+              "reading": "ニギッ",
+              "normalized": "ニギッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-003/options/2/0": {
       "key": "p1-003/options/2/0",
@@ -974,7 +1316,222 @@
           "expected": "絵 が 表",
           "recognized": "笑 顔 も 手"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "b0429fc32bfd31e3ea2862b715136ebe578f9d27cfb80b83cef014568e410716",
+        "recognized": "笑顔も手を下にして床に置かれています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "絵が表を下にして床に置かれています。",
+        "reasons": [
+          "non-equivalent-morae-remain",
+          "ambiguous-contextual-kanji:表",
+          "phoneme-override-not-proven-by-dictionary-reading"
+        ],
+        "normalizedExpected": "エガヒョオオシタニシテユカニオカレテイマス",
+        "normalizedRecognized": "エガオモテオシタニシテユカニオカレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "69e808d622274557ff1571213ddd9ea052789dbcff045da904cf8ab214199ce2"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "絵",
+              "reading": "エ",
+              "normalized": "エ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "表",
+              "reading": "ヒョー",
+              "normalized": "ヒョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "下",
+              "reading": "シタ",
+              "normalized": "シタ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "床",
+              "reading": "ユカ",
+              "normalized": "ユカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "笑顔",
+              "reading": "エガオ",
+              "normalized": "エガオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "も",
+              "reading": "モ",
+              "normalized": "モ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "手",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "下",
+              "reading": "シタ",
+              "normalized": "シタ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "床",
+              "reading": "ユカ",
+              "normalized": "ユカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-006/options/1/0": {
       "key": "p1-006/options/1/0",
@@ -1245,7 +1802,220 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-007/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-007/options/2/0",
+      "comparison": {
+        "audioSha256": "faa950c12a5f5a33f83342256506f7a0d324decf3e1f0900205cb8c2f0303e28",
+        "recognized": "作業員が棚の間に向かって手を伸ばしています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "作業員が棚の缶に向かって手を伸ばしています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "サギョオインガタナノカンニムカッテテオノバシテイマス",
+        "normalizedRecognized": "サギョオインガタナノアイダニムカッテテオノバシテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2500bac523231ddb55a1d9755fadab3fe0048af88ba621fd7c5772dd333f203d"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "棚",
+              "reading": "タナ",
+              "normalized": "タナ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "缶",
+              "reading": "カン",
+              "normalized": "カン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "向かっ",
+              "reading": "ムカッ",
+              "normalized": "ムカッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "手",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "伸ばし",
+              "reading": "ノバシ",
+              "normalized": "ノバシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "棚",
+              "reading": "タナ",
+              "normalized": "タナ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "間",
+              "reading": "アイダ",
+              "normalized": "アイダ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "向かっ",
+              "reading": "ムカッ",
+              "normalized": "ムカッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "手",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "伸ばし",
+              "reading": "ノバシ",
+              "normalized": "ノバシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-007/options/3/0": {
       "key": "p1-007/options/3/0",
@@ -1964,7 +2734,174 @@
           "expected": "空",
           "recognized": "か ら"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "6171b63e9c212a132ed0f97639b2126fb2a9478e089f243d43b8796d93bdbdbb",
+        "recognized": "からのカップを積み重ねている人がいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "空のカップを積み重ねている人がいます。",
+        "reasons": [
+          "non-equivalent-morae-remain",
+          "ambiguous-contextual-kanji:空",
+          "phoneme-override-not-proven-by-dictionary-reading"
+        ],
+        "normalizedExpected": "ソラノカップオツミカサネテイルヒトガイマス",
+        "normalizedRecognized": "カラノカップオツミカサネテイルヒトガイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "45ae799510ae0fad2a38a4ce1d71a7355599a35273f7b979aeed42535058e342"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "空",
+              "reading": "ソラ",
+              "normalized": "ソラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "カップ",
+              "reading": "カップ",
+              "normalized": "カップ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "積み重ね",
+              "reading": "ツミカサネ",
+              "normalized": "ツミカサネ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "から",
+              "reading": "カラ",
+              "normalized": "カラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "カップ",
+              "reading": "カップ",
+              "normalized": "カップ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "積み重ね",
+              "reading": "ツミカサネ",
+              "normalized": "ツミカサネ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-012/options/0/0": {
       "key": "p1-012/options/0/0",
@@ -2522,7 +3459,211 @@
           "expected": "押",
           "recognized": ""
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "cab8b379467902528af998b88b6657624e7972b7b005851172afbea7ee647a8a",
+        "recognized": "作業委員が2台のからの代謝をしています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "作業員が二台の空の台車を押しています。",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-morae-remain",
+          "ambiguous-contextual-kanji:空",
+          "phoneme-override-not-proven-by-dictionary-reading"
+        ],
+        "normalizedExpected": "サギョオインガニダイノソラノダイシャオオシテイマス",
+        "normalizedRecognized": "サギョオイインガニダイノカラノタイシャオシテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d8d4bc0627a44925be0a056ee4a911db5114d19b85d07b4d32885139207eb391"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "二",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "台",
+              "reading": "ダイ",
+              "normalized": "ダイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "空",
+              "reading": "ソラ",
+              "normalized": "ソラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "台車",
+              "reading": "ダイシャ",
+              "normalized": "ダイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "押し",
+              "reading": "オシ",
+              "normalized": "オシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "委員",
+              "reading": "イイン",
+              "normalized": "イイン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "二",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "台",
+              "reading": "ダイ",
+              "normalized": "ダイ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "から",
+              "reading": "カラ",
+              "normalized": "カラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "代謝",
+              "reading": "タイシャ",
+              "normalized": "タイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-015/options/0/0": {
       "key": "p1-015/options/0/0",
@@ -3104,7 +4245,160 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-018/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-018/options/0/0",
+      "comparison": {
+        "audioSha256": "e2ef55ca9c75f6ce1bff816dfd815ce40acaeba35e47aaaa68661f9af1b6fcaf",
+        "recognized": "スクリーンがつつ上にまかれています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "スクリーンが筒状に巻かれています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "スクリインガツツジョオニマカレテイマス",
+        "normalizedRecognized": "スクリインガツツウエニマカレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "4a080f37d33831af4b17b386fbe099190d45fb37a04f65f78de627f6bb9b6a15"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "スクリーン",
+              "reading": "スクリーン",
+              "normalized": "スクリイン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "筒",
+              "reading": "ツツ",
+              "normalized": "ツツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "状",
+              "reading": "ジョー",
+              "normalized": "ジョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "巻か",
+              "reading": "マカ",
+              "normalized": "マカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "スクリーン",
+              "reading": "スクリーン",
+              "normalized": "スクリイン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "つつ",
+              "reading": "ツツ",
+              "normalized": "ツツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "まか",
+              "reading": "マカ",
+              "normalized": "マカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-018/options/1/0": {
       "key": "p1-018/options/1/0",
@@ -3629,7 +4923,160 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-021/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-021/options/0/0",
+      "comparison": {
+        "audioSha256": "9bce9cb3dd95b97ecf8322f6634ef1cac50841101f5fed1aebf2441f7253ce43",
+        "recognized": "人の横にキャタスが立っています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "人の横に脚立が立っています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ヒトノヨコニキャタツガタッテイマス",
+        "normalizedRecognized": "ヒトノヨコニキャタスガタッテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "cdb5e8e42f1c5e46b5128be4d149130a074a2ab4b3bdb1dce96b492cccda84a1"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "横",
+              "reading": "ヨコ",
+              "normalized": "ヨコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "脚立",
+              "reading": "キャタツ",
+              "normalized": "キャタツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "立っ",
+              "reading": "タッ",
+              "normalized": "タッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "横",
+              "reading": "ヨコ",
+              "normalized": "ヨコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "キャタス",
+              "reading": "キャタス",
+              "normalized": "キャタス",
+              "method": "literal-kana"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "立っ",
+              "reading": "タッ",
+              "normalized": "タッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-021/options/1/0": {
       "key": "p1-021/options/1/0",
@@ -3934,7 +5381,196 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-022/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-022/options/3/0",
+      "comparison": {
+        "audioSha256": "eee34aaab224a58b7ac9f41fa2fd0733bb5dae6ddf2f3771b699110a4691dabe",
+        "recognized": "テーブルの近くで家具を持っている人がいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "テーブルの近くでかごを持っている人がいます。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "テエブルノチカクデカゴオモッテイルヒトガイマス",
+        "normalizedRecognized": "テエブルノチカクデカグオモッテイルヒトガイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bcac43ac7186b664835d49a9bc90504bb917c25b2dd3395179a600909c6a6cd0"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "テーブル",
+              "reading": "テーブル",
+              "normalized": "テエブル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "近く",
+              "reading": "チカク",
+              "normalized": "チカク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "かご",
+              "reading": "カゴ",
+              "normalized": "カゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "持っ",
+              "reading": "モッ",
+              "normalized": "モッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "テーブル",
+              "reading": "テーブル",
+              "normalized": "テエブル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "近く",
+              "reading": "チカク",
+              "normalized": "チカク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "家具",
+              "reading": "カグ",
+              "normalized": "カグ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "持っ",
+              "reading": "モッ",
+              "normalized": "モッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-023/options/0/0": {
       "key": "p1-023/options/0/0",
@@ -4476,7 +6112,167 @@
           "recognized": "て"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-025/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-025/options/3/0",
+      "comparison": {
+        "audioSha256": "3e8af2bd94caae8e13793968cc0e888a43def8533acfd601578b9d7719d5d024",
+        "recognized": "1人が靴を一層くて渡しています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "ひとりが靴をいっそく手渡しています。",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ヒトリガクツオイッソクテワタシテイマス",
+        "normalizedRecognized": "ヒトリガクツオイッソオクテワタシテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e043ab18cd35439f5bf79deb6dbec57d7b40c751684d66aad12f2a0c2f486af1"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "ひとり",
+              "reading": "ヒトリ",
+              "normalized": "ヒトリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "靴",
+              "reading": "クツ",
+              "normalized": "クツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いっそ",
+              "reading": "イッソ",
+              "normalized": "イッソ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "く",
+              "reading": "ク",
+              "normalized": "ク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "手渡し",
+              "reading": "テワタシ",
+              "normalized": "テワタシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "ひとり",
+              "reading": "ヒトリ",
+              "normalized": "ヒトリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "靴",
+              "reading": "クツ",
+              "normalized": "クツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "一層",
+              "reading": "イッソー",
+              "normalized": "イッソオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "く",
+              "reading": "ク",
+              "normalized": "ク",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "渡し",
+              "reading": "ワタシ",
+              "normalized": "ワタシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-026/options/0/0": {
       "key": "p1-026/options/0/0",
@@ -4810,7 +6606,197 @@
           "expected": "立",
           "recognized": "建"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "63adf9a6236edf97e670c596c873336e8845bb16a645a6f535804393ded192c6",
+        "recognized": "本画縁を下にして建てられています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "本が縁を下にして立てられています。",
+        "reasons": [
+          "non-equivalent-morae-remain",
+          "phoneme-override-not-proven-by-dictionary-reading"
+        ],
+        "normalizedExpected": "ホンガエンオシタニシテタテラレテイマス",
+        "normalizedRecognized": "ホンエエンオシタニシテタテラレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8836bdbd63ce568903850e9fdcac618523eb8ba7a24d37c0ab8c558e9dc0c05a"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "本",
+              "reading": "ホン",
+              "normalized": "ホン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "縁",
+              "reading": "エン",
+              "normalized": "エン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "下",
+              "reading": "シタ",
+              "normalized": "シタ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "立て",
+              "reading": "タテ",
+              "normalized": "タテ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "本",
+              "reading": "ホン",
+              "normalized": "ホン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "画",
+              "reading": "エ",
+              "normalized": "エ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "縁",
+              "reading": "エン",
+              "normalized": "エン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "下",
+              "reading": "シタ",
+              "normalized": "シタ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "建て",
+              "reading": "タテ",
+              "normalized": "タテ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-027/options/3/0": {
       "key": "p1-027/options/3/0",
@@ -5221,7 +7207,246 @@
           "expected": "コ ー ン",
           "recognized": "幸 運"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "9aa69b3ae00c35b3fc5527778e60a3580cccffb5de3a87ce85985c677f35d33f",
+        "recognized": "2つの幸運の間を自転車で通っている人がいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "二つのコーンの間を自転車で通っている人がいます。",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-morae-remain",
+          "phoneme-override-not-proven-by-dictionary-reading"
+        ],
+        "normalizedExpected": "フタツノコオンノアイダオジテンシャデカヨッテイルヒトガイマス",
+        "normalizedRecognized": "フタツノコオウンノアイダオジテンシャデカヨッテイルヒトガイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "feb9a6e225d5eb3a1b5d6c94992c33046ec2f0aaa7c6ea9850bb7a4b2adf36ab"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "二",
+              "reading": "フタ",
+              "normalized": "フタ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "つ",
+              "reading": "ツ",
+              "normalized": "ツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "コーン",
+              "reading": "コーン",
+              "normalized": "コオン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "間",
+              "reading": "アイダ",
+              "normalized": "アイダ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "自転",
+              "reading": "ジテン",
+              "normalized": "ジテン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "車",
+              "reading": "シャ",
+              "normalized": "シャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "通っ",
+              "reading": "カヨッ",
+              "normalized": "カヨッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "二",
+              "reading": "フタ",
+              "normalized": "フタ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "つ",
+              "reading": "ツ",
+              "normalized": "ツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "幸運",
+              "reading": "コーウン",
+              "normalized": "コオウン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "間",
+              "reading": "アイダ",
+              "normalized": "アイダ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "自転",
+              "reading": "ジテン",
+              "normalized": "ジテン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "車",
+              "reading": "シャ",
+              "normalized": "シャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "通っ",
+              "reading": "カヨッ",
+              "normalized": "カヨッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-031/options/3/0": {
       "key": "p1-031/options/3/0",
@@ -5603,7 +7828,174 @@
           "expected": "上 方",
           "recognized": "情 報"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "fd766fc6555d2eef0cf5dc0903e5ff7998cf490775db9b8c843c1774d74a1404",
+        "recognized": "棚の情報に時計が取り付けられています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "棚の上方に時計が取り付けられています。",
+        "reasons": [
+          "non-equivalent-morae-remain",
+          "ambiguous-contextual-kanji:上方",
+          "phoneme-override-not-proven-by-dictionary-reading"
+        ],
+        "normalizedExpected": "タナノカミガタニトケエガトリツケラレテイマス",
+        "normalizedRecognized": "タナノジョオホオニトケエガトリツケラレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "79392479c35d134497eac95dcaefed5b013b41b05532260131a9455560bf741b"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "棚",
+              "reading": "タナ",
+              "normalized": "タナ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上方",
+              "reading": "カミガタ",
+              "normalized": "カミガタ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "時計",
+              "reading": "トケー",
+              "normalized": "トケエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "取り付け",
+              "reading": "トリツケ",
+              "normalized": "トリツケ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "棚",
+              "reading": "タナ",
+              "normalized": "タナ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "情報",
+              "reading": "ジョーホー",
+              "normalized": "ジョオホオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "時計",
+              "reading": "トケー",
+              "normalized": "トケエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "取り付け",
+              "reading": "トリツケ",
+              "normalized": "トリツケ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-035/options/1/0": {
       "key": "p1-035/options/1/0",
@@ -12172,7 +14564,228 @@
           "expected": "か が め",
           "recognized": "鏡"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "06f36eb41f175a56dccc11a95d72325e20594599acf65b1edf0f30bd4e31ada1",
+        "recognized": "2人が開いたダンボール箱の上に身を鏡ています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "ふたりが開いた段ボール箱の上に身をかがめています。",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-morae-remain",
+          "phoneme-override-not-proven-by-dictionary-reading"
+        ],
+        "normalizedExpected": "フタリガヒライタダンボオルハコノウエニミオカガメテイマス",
+        "normalizedRecognized": "フタリガヒライタダンボオルハコノウエニミオカガミテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f19abb8963949e807fd9af69dcefcfbb1204148ce4112727bfb0252446e62d20"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "ふたり",
+              "reading": "フタリ",
+              "normalized": "フタリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "開い",
+              "reading": "ヒライ",
+              "normalized": "ヒライ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "た",
+              "reading": "タ",
+              "normalized": "タ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "段",
+              "reading": "ダン",
+              "normalized": "ダン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ボール",
+              "reading": "ボール",
+              "normalized": "ボオル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "箱",
+              "reading": "ハコ",
+              "normalized": "ハコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "身",
+              "reading": "ミ",
+              "normalized": "ミ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "かがめ",
+              "reading": "カガメ",
+              "normalized": "カガメ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "ふたり",
+              "reading": "フタリ",
+              "normalized": "フタリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "開い",
+              "reading": "ヒライ",
+              "normalized": "ヒライ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "た",
+              "reading": "タ",
+              "normalized": "タ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ダンボール",
+              "reading": "ダンボール",
+              "normalized": "ダンボオル",
+              "method": "literal-kana"
+            },
+            {
+              "surface": "箱",
+              "reading": "ハコ",
+              "normalized": "ハコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "身",
+              "reading": "ミ",
+              "normalized": "ミ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "鏡",
+              "reading": "カガミ",
+              "normalized": "カガミ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-060/options/0/0": {
       "key": "p1-060/options/0/0",
@@ -12321,7 +14934,172 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-028/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-028/options/0/0",
+      "comparison": {
+        "audioSha256": "1b1fc341a25c2d727365351f397b66ed95f54db5600efccea1f95fd8eebf3f2f",
+        "recognized": "作業員が代謝から荷物を下ろしています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "作業員が台車から荷物を降ろしています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "サギョオインガダイシャカラニモツオオロシテイマス",
+        "normalizedRecognized": "サギョオインガタイシャカラニモツオオロシテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bee728d6f88473617f049ef40996e186934e9114004470b6bd2dbc436aa38c6c"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "台車",
+              "reading": "ダイシャ",
+              "normalized": "ダイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "から",
+              "reading": "カラ",
+              "normalized": "カラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "荷物",
+              "reading": "ニモツ",
+              "normalized": "ニモツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "降ろし",
+              "reading": "オロシ",
+              "normalized": "オロシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "代謝",
+              "reading": "タイシャ",
+              "normalized": "タイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "から",
+              "reading": "カラ",
+              "normalized": "カラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "荷物",
+              "reading": "ニモツ",
+              "normalized": "ニモツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "下ろし",
+              "reading": "オロシ",
+              "normalized": "オロシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-028/options/3/0": {
       "key": "p1-028/options/3/0",
@@ -12379,7 +15157,178 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-028/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-028/options/3/0",
+      "comparison": {
+        "audioSha256": "200f2c95cb14b7cd5e69057c5cbbf330d59f4503b9a712a5c9444dff3bdad617",
+        "recognized": "代謝のとってが平らに折り畳まれています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "台車の取っ手が平らに折り畳まれています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ダイシャノトッテガタイラニオリタタマレテイマス",
+        "normalizedRecognized": "タイシャノトッテガタイラニオリタタマレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "08fb00521bed0f4a1eb8604372296af52675846c9570fc9663cdce9cfffb4375"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "台車",
+              "reading": "ダイシャ",
+              "normalized": "ダイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "取っ手",
+              "reading": "トッテ",
+              "normalized": "トッテ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "平ら",
+              "reading": "タイラ",
+              "normalized": "タイラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "折り畳ま",
+              "reading": "オリタタマ",
+              "normalized": "オリタタマ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "代謝",
+              "reading": "タイシャ",
+              "normalized": "タイシャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "とっ",
+              "reading": "トッ",
+              "normalized": "トッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "平ら",
+              "reading": "タイラ",
+              "normalized": "タイラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "折り畳ま",
+              "reading": "オリタタマ",
+              "normalized": "オリタタマ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-029/options/0/0": {
       "key": "p1-029/options/0/0",
@@ -12427,7 +15376,154 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-029/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-029/options/0/0",
+      "comparison": {
+        "audioSha256": "6148a39492daf7f8931f1230c9316088fd51902fb6ce6b61bbd0ca7aebc24bf7",
+        "recognized": "重担を広げている人がいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "じゅうたんを広げている人がいます。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ジュウタンオヒロゲテイルヒトガイマス",
+        "normalizedRecognized": "エタンオヒロゲテイルヒトガイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e620e83390fc3461aeae5a228164cb54723b2197d272d59aa6a597dac0404681"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "じゅうたん",
+              "reading": "ジュータン",
+              "normalized": "ジュウタン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "広げ",
+              "reading": "ヒロゲ",
+              "normalized": "ヒロゲ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "重",
+              "reading": "エ",
+              "normalized": "エ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "担",
+              "reading": "タン",
+              "normalized": "タン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "広げ",
+              "reading": "ヒロゲ",
+              "normalized": "ヒロゲ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-029/options/2/0": {
       "key": "p1-029/options/2/0",
@@ -12475,7 +15571,178 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-029/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-029/options/2/0",
+      "comparison": {
+        "audioSha256": "02edda24e9bccb85b9131b95e991b9b3fc889bb75b38d80267213b4a912f0c13",
+        "recognized": "重担がソファの背にかけられています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "じゅうたんがソファの背にかけられています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ジュウタンガソファノセニカケラレテイマス",
+        "normalizedRecognized": "エタンガソファノセニカケラレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "b8d279dc9ab192d9245d234761a684b5accad5672d302e8be777ee3b3390f5b7"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "じゅうたん",
+              "reading": "ジュータン",
+              "normalized": "ジュウタン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ソファ",
+              "reading": "ソファ",
+              "normalized": "ソファ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "背",
+              "reading": "セ",
+              "normalized": "セ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "かけ",
+              "reading": "カケ",
+              "normalized": "カケ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "重",
+              "reading": "エ",
+              "normalized": "エ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "担",
+              "reading": "タン",
+              "normalized": "タン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ソファ",
+              "reading": "ソファ",
+              "normalized": "ソファ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "背",
+              "reading": "セ",
+              "normalized": "セ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "かけ",
+              "reading": "カケ",
+              "normalized": "カケ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-031/options/1/0": {
       "key": "p1-031/options/1/0",
@@ -12523,7 +15790,220 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-031/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-031/options/1/0",
+      "comparison": {
+        "audioSha256": "3e0f70af3fb3e23ecc99e0c784b82dcc1c48025cb26e2a3c753d77155452c3d0",
+        "recognized": "幸運が自転車のサドルの上でバランスを保っています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "コーンが自転車のサドルの上でバランスを保っています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "コオンガジテンシャノサドルノウエデバランスオタモッテイマス",
+        "normalizedRecognized": "コオウンガジテンシャノサドルノウエデバランスオタモッテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "a63088f62148a6c88793b3a40aa7a8b9ef33408c8415aa0a580c1b3491da6e8b"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "コーン",
+              "reading": "コーン",
+              "normalized": "コオン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "自転",
+              "reading": "ジテン",
+              "normalized": "ジテン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "車",
+              "reading": "シャ",
+              "normalized": "シャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "サドル",
+              "reading": "サドル",
+              "normalized": "サドル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "バランス",
+              "reading": "バランス",
+              "normalized": "バランス",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "保っ",
+              "reading": "タモッ",
+              "normalized": "タモッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "幸運",
+              "reading": "コーウン",
+              "normalized": "コオウン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "自転",
+              "reading": "ジテン",
+              "normalized": "ジテン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "車",
+              "reading": "シャ",
+              "normalized": "シャ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "サドル",
+              "reading": "サドル",
+              "normalized": "サドル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "バランス",
+              "reading": "バランス",
+              "normalized": "バランス",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "保っ",
+              "reading": "タモッ",
+              "normalized": "タモッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-031/options/2/0": {
       "key": "p1-031/options/2/0",
@@ -12619,7 +16099,202 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-033/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-033/options/0/0",
+      "comparison": {
+        "audioSha256": "38cfa2204c57554b4d6e71f1efba7a6b1ce10fd98eaf60bd11d3de7cbd4d9917",
+        "recognized": "バケツを持って橋号を登っている人がいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "バケツを持ってはしごを上っている人がいます。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "バケツオモッテハシゴオノボッテイルヒトガイマス",
+        "normalizedRecognized": "バケツオモッテハシゴオオノボッテイルヒトガイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bf9537222038241570c9e56b50634487c51c3e8264baffc747a8f06a29ae46c8"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "バケツ",
+              "reading": "バケツ",
+              "normalized": "バケツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "持っ",
+              "reading": "モッ",
+              "normalized": "モッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "はしご",
+              "reading": "ハシゴ",
+              "normalized": "ハシゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上っ",
+              "reading": "ノボッ",
+              "normalized": "ノボッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "バケツ",
+              "reading": "バケツ",
+              "normalized": "バケツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "持っ",
+              "reading": "モッ",
+              "normalized": "モッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "橋",
+              "reading": "ハシ",
+              "normalized": "ハシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "号",
+              "reading": "ゴー",
+              "normalized": "ゴオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "登っ",
+              "reading": "ノボッ",
+              "normalized": "ノボッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "いる",
+              "reading": "イル",
+              "normalized": "イル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "人",
+              "reading": "ヒト",
+              "normalized": "ヒト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-033/options/2/0": {
       "key": "p1-033/options/2/0",
@@ -12677,7 +16352,166 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-033/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-033/options/2/0",
+      "comparison": {
+        "audioSha256": "e530738a7186046e30e6a0058e07c6755c94599e1587a5c9718ef6aa42e20c0d",
+        "recognized": "バケツが端ごの断にかかっています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "バケツがはしごの段に掛かっています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "バケツガハシゴノダンニカカッテイマス",
+        "normalizedRecognized": "バケツガタンゴノダンニカカッテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "b3f13d1ccdc865f1628337303566981c2c83dbd315ff8ab43f7123213eb7f2a2"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "バケツ",
+              "reading": "バケツ",
+              "normalized": "バケツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "はしご",
+              "reading": "ハシゴ",
+              "normalized": "ハシゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "段",
+              "reading": "ダン",
+              "normalized": "ダン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "掛かっ",
+              "reading": "カカッ",
+              "normalized": "カカッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "バケツ",
+              "reading": "バケツ",
+              "normalized": "バケツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "端",
+              "reading": "タン",
+              "normalized": "タン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ご",
+              "reading": "ゴ",
+              "normalized": "ゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "断",
+              "reading": "ダン",
+              "normalized": "ダン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "かかっ",
+              "reading": "カカッ",
+              "normalized": "カカッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-033/options/3/0": {
       "key": "p1-033/options/3/0",
@@ -12725,7 +16559,184 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-033/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-033/options/3/0",
+      "comparison": {
+        "audioSha256": "6cac1bc7772741d41f6d96030925b007f75bbf185795aefb48de7194a6dfe4c6",
+        "recognized": "端子がバケツにまたがるように置かれています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "はしごがバケツにまたがるように置かれています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ハシゴガバケツニマタガルヨオニオカレテイマス",
+        "normalizedRecognized": "タンシガバケツニマタガルヨオニオカレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "006436b353f29fdef456cc14965ecdef37d63abf968e1713b5ea9434bff711da"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "はしご",
+              "reading": "ハシゴ",
+              "normalized": "ハシゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "バケツ",
+              "reading": "バケツ",
+              "normalized": "バケツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "またがる",
+              "reading": "マタガル",
+              "normalized": "マタガル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "よう",
+              "reading": "ヨー",
+              "normalized": "ヨオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "端子",
+              "reading": "タンシ",
+              "normalized": "タンシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "バケツ",
+              "reading": "バケツ",
+              "normalized": "バケツ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "またがる",
+              "reading": "マタガル",
+              "normalized": "マタガル",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "よう",
+              "reading": "ヨー",
+              "normalized": "ヨオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-034/options/1/0": {
       "key": "p1-034/options/1/0",
@@ -12819,7 +16830,7 @@
       "sha256": "5d712faccd9a4e155a7aa5f1e74efa9be8d57900ebe3af4a8cf4169ca7c6b5d5",
       "voiceId": "jf_alpha",
       "fingerprint": "76075ba931719291fa96ccc2e37e7d1cb46219151c3fa2c4e67a577d58084b2c",
-      "status": "review",
+      "status": "matched",
       "expected": "作業員が中央の椅子を折り畳んでいます。",
       "spoken": "作業員が中央の椅子を折り畳んでいます。",
       "recognized": "作業員が中央の椅子を折りたたんでいます。",
@@ -12859,7 +16870,172 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-041/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-041/options/0/0",
+      "comparison": {
+        "audioSha256": "5d712faccd9a4e155a7aa5f1e74efa9be8d57900ebe3af4a8cf4169ca7c6b5d5",
+        "recognized": "作業員が中央の椅子を折りたたんでいます。",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "作業員が中央の椅子を折り畳んでいます。",
+        "reasons": [
+          "exact-japanese-reading"
+        ],
+        "normalizedExpected": "サギョオインガチュウオオノイスオオリタタンデイマス",
+        "normalizedRecognized": "サギョオインガチュウオオノイスオオリタタンデイマス",
+        "proofExpected": "サギョオインガチュウオオノイスオオリタタンデイマス",
+        "proofRecognized": "サギョオインガチュウオオノイスオオリタタンデイマス",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "92cac4583ccd513b22e3445002092378a19e1829dc8594785e807eaf1fb40e9d"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "中央",
+              "reading": "チューオー",
+              "normalized": "チュウオオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "椅子",
+              "reading": "イス",
+              "normalized": "イス",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "折り畳ん",
+              "reading": "オリタタン",
+              "normalized": "オリタタン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "中央",
+              "reading": "チューオー",
+              "normalized": "チュウオオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "椅子",
+              "reading": "イス",
+              "normalized": "イス",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "折りたたん",
+              "reading": "オリタタン",
+              "normalized": "オリタタン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-041/options/2/0": {
       "key": "p1-041/options/2/0",
@@ -12907,7 +17083,166 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-041/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-041/options/2/0",
+      "comparison": {
+        "audioSha256": "d2e8911762c9c9b162b444ed033d085a22e936e19c323cbe768e4e387feb188a",
+        "recognized": "椅子が迎え合うように置かれています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "椅子が向かい合うように置かれています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "イスガムカイアウヨオニオカレテイマス",
+        "normalizedRecognized": "イスガムカエアウヨオニオカレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "71194abd1127248e01fa62c8f4e3ae142424a2632a21694f68d0288ca33bb3f7"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "椅子",
+              "reading": "イス",
+              "normalized": "イス",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "向かい合う",
+              "reading": "ムカイアウ",
+              "normalized": "ムカイアウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "よう",
+              "reading": "ヨー",
+              "normalized": "ヨオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "椅子",
+              "reading": "イス",
+              "normalized": "イス",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "迎え",
+              "reading": "ムカエ",
+              "normalized": "ムカエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "合う",
+              "reading": "アウ",
+              "normalized": "アウ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "よう",
+              "reading": "ヨー",
+              "normalized": "ヨオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-042/options/1/0": {
       "key": "p1-042/options/1/0",
@@ -12960,7 +17295,148 @@
           "recognized": "こ"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-042/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-042/options/1/0",
+      "comparison": {
+        "audioSha256": "a2ae5c3b1fd70dd6a633c1a4d9f96b6953a3d0a15d2a73c347b6ac69dc29857d",
+        "recognized": "幸運が入れこに重ねられています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "コーンが入れ子に重ねられています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "コオンガイレコニカサネラレテイマス",
+        "normalizedRecognized": "コオウンガイレコニカサネラレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2f0910af1137b5a92ea5036ed5d797005e9b070d66a8523494759af64667bcf1"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "コーン",
+              "reading": "コーン",
+              "normalized": "コオン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "入れ子",
+              "reading": "イレコ",
+              "normalized": "イレコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "重ね",
+              "reading": "カサネ",
+              "normalized": "カサネ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "幸運",
+              "reading": "コーウン",
+              "normalized": "コオウン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "入れこ",
+              "reading": "イレコ",
+              "normalized": "イレコ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "重ね",
+              "reading": "カサネ",
+              "normalized": "カサネ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "られ",
+              "reading": "ラレ",
+              "normalized": "ラレ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-043/options/0/0": {
       "key": "p1-043/options/0/0",
@@ -13008,7 +17484,196 @@
           "recognized": "上"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-043/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-043/options/0/0",
+      "comparison": {
+        "audioSha256": "00dc201c1d819f045cda83dc69d2a1a8533250dfa0c2836d84e3136cc3001036",
+        "recognized": "鍵が上に差し込まれたままになっています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "鍵が錠に差し込まれたままになっています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "カギガジョオニサシコマレタママニナッテイマス",
+        "normalizedRecognized": "カギガウエニサシコマレタママニナッテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e1b6b565e9838d2fa01b66afec7fd160d97558100f374ca731ee8f797d5f06a7"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "鍵",
+              "reading": "カギ",
+              "normalized": "カギ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "錠",
+              "reading": "ジョー",
+              "normalized": "ジョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "差し込ま",
+              "reading": "サシコマ",
+              "normalized": "サシコマ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "た",
+              "reading": "タ",
+              "normalized": "タ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "まま",
+              "reading": "ママ",
+              "normalized": "ママ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "なっ",
+              "reading": "ナッ",
+              "normalized": "ナッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "鍵",
+              "reading": "カギ",
+              "normalized": "カギ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "上",
+              "reading": "ウエ",
+              "normalized": "ウエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "差し込ま",
+              "reading": "サシコマ",
+              "normalized": "サシコマ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "た",
+              "reading": "タ",
+              "normalized": "タ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "まま",
+              "reading": "ママ",
+              "normalized": "ママ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "なっ",
+              "reading": "ナッ",
+              "normalized": "ナッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-052/options/0/0": {
       "key": "p1-052/options/0/0",
@@ -13066,7 +17731,196 @@
           "recognized": "端 号"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-052/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-052/options/0/0",
+      "comparison": {
+        "audioSha256": "664f45542f5086ecb9d81e63e0c602317a2ff3f8c7733cf337f9344d3b79f0b4",
+        "recognized": "作業員が端号水平に持って運んでいます",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "作業員がはしごを水平に持って運んでいます。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "サギョオインガハシゴオスイヘエニモッテハコンデイマス",
+        "normalizedRecognized": "サギョオインガタンゴオスイヘエニモッテハコンデイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "96be0925e1cd517b975894514b23785585f74b2b71753e76de97c21a01d3f278"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "はしご",
+              "reading": "ハシゴ",
+              "normalized": "ハシゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "水平",
+              "reading": "スイヘー",
+              "normalized": "スイヘエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "持っ",
+              "reading": "モッ",
+              "normalized": "モッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "運ん",
+              "reading": "ハコン",
+              "normalized": "ハコン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "端",
+              "reading": "タン",
+              "normalized": "タン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "号",
+              "reading": "ゴー",
+              "normalized": "ゴオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "水平",
+              "reading": "スイヘー",
+              "normalized": "スイヘエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "持っ",
+              "reading": "モッ",
+              "normalized": "モッ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "運ん",
+              "reading": "ハコン",
+              "normalized": "ハコン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "で",
+              "reading": "デ",
+              "normalized": "デ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-052/options/3/0": {
       "key": "p1-052/options/3/0",
@@ -13124,7 +17978,208 @@
           "recognized": "端 子"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-052/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-052/options/3/0",
+      "comparison": {
+        "audioSha256": "1791406bb587f2b34d629c0afc7a891cbc491bfe3681b8d7e6fc35b00500acd5",
+        "recognized": "端子が折り畳まれて床に平らに置かれています",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "はしごが折り畳まれて床に平らに置かれています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ハシゴガオリタタマレテユカニタイラニオカレテイマス",
+        "normalizedRecognized": "タンシガオリタタマレテユカニタイラニオカレテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "c291f128f8e3c73f08acdb226a2c5a6cd670c37fcde4018a346b92fdee75559e"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "はしご",
+              "reading": "ハシゴ",
+              "normalized": "ハシゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "折り畳ま",
+              "reading": "オリタタマ",
+              "normalized": "オリタタマ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "床",
+              "reading": "ユカ",
+              "normalized": "ユカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "平ら",
+              "reading": "タイラ",
+              "normalized": "タイラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "端子",
+              "reading": "タンシ",
+              "normalized": "タンシ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "折り畳ま",
+              "reading": "オリタタマ",
+              "normalized": "オリタタマ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "床",
+              "reading": "ユカ",
+              "normalized": "ユカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "平ら",
+              "reading": "タイラ",
+              "normalized": "タイラ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "置か",
+              "reading": "オカ",
+              "normalized": "オカ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "れ",
+              "reading": "レ",
+              "normalized": "レ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     },
     "p1-054/options/1/0": {
       "key": "p1-054/options/1/0",
@@ -13227,7 +18282,244 @@
           "recognized": "使 お"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-054/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#ja:part1:p1-054/options/2/0",
+      "comparison": {
+        "audioSha256": "5508aa092a5ce28a90cc9ef0f339a743b05d9f61a6851f3d10779483b0f1bfe0",
+        "recognized": "一人の作業員が机の後ろの席に使おうとしています。",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "ja",
+        "expectedSpoken": "ひとりの作業員が机の後ろの席に着こうとしています。",
+        "reasons": [
+          "non-equivalent-morae-remain"
+        ],
+        "normalizedExpected": "ヒトリノサギョオインガツクエノウシロノセキニツコオトシテイマス",
+        "normalizedRecognized": "ヒトリノサギョオインガツクエノウシロノセキニツカオオトシテイマス",
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "30d7c85997e50862bd03d1bc48fd496b2e61660f58afc4a3983bf0ec797b7463"
+        },
+        "readingTrace": {
+          "expected": [
+            {
+              "surface": "ひとり",
+              "reading": "ヒトリ",
+              "normalized": "ヒトリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "机",
+              "reading": "ツクエ",
+              "normalized": "ツクエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "後ろ",
+              "reading": "ウシロ",
+              "normalized": "ウシロ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "席",
+              "reading": "セキ",
+              "normalized": "セキ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "着こう",
+              "reading": "ツコー",
+              "normalized": "ツコオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ],
+          "recognized": [
+            {
+              "surface": "一人",
+              "reading": "ヒトリ",
+              "normalized": "ヒトリ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "作業",
+              "reading": "サギョー",
+              "normalized": "サギョオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "机",
+              "reading": "ツクエ",
+              "normalized": "ツクエ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "後ろ",
+              "reading": "ウシロ",
+              "normalized": "ウシロ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "の",
+              "reading": "ノ",
+              "normalized": "ノ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "席",
+              "reading": "セキ",
+              "normalized": "セキ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "に",
+              "reading": "ニ",
+              "normalized": "ニ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "使おう",
+              "reading": "ツカオー",
+              "normalized": "ツカオオ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "し",
+              "reading": "シ",
+              "normalized": "シ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "て",
+              "reading": "テ",
+              "normalized": "テ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "い",
+              "reading": "イ",
+              "normalized": "イ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "ます",
+              "reading": "マス",
+              "normalized": "マス",
+              "method": "unidic-pron"
+            }
+          ]
+        }
+      }
     }
   },
   "generation": {

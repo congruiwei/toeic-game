@@ -138961,7 +138961,48 @@
           "expected": "desk",
           "recognized": "desks"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "99bd4fa5853b520d8075b631085601e7c3afa6f1ee854dba3ecc974ff724d35c",
+        "recognized": "Which desks should the customer use?",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Which desk should the customer use?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "which",
+          "desk",
+          "should",
+          "the",
+          "customer",
+          "use"
+        ],
+        "normalizedRecognized": [
+          "which",
+          "desks",
+          "should",
+          "the",
+          "customer",
+          "use"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8495319e1d31ac406252143b739b66f0ca13fa625f59407dc404368b4ff32cb3"
+        }
+      }
     },
     "p3-g28/turns/4/0": {
       "key": "p3-g28/turns/4/0",
@@ -139041,7 +139082,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2,
       "phonemeErrorRate": null,
@@ -139051,7 +139092,46 @@
           "expected": "canceled",
           "recognized": "cancelled"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "a9b5524b3076f04add419211f6ce4f5cf7b3d3177a1d9cfc0e8624cccf2fa93f",
+        "recognized": "Morning tours will be cancelled.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Morning tours will be canceled.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:canceled=cancelled"
+        ],
+        "normalizedExpected": [
+          "morning",
+          "tours",
+          "will",
+          "be",
+          "canceled"
+        ],
+        "normalizedRecognized": [
+          "morning",
+          "tours",
+          "will",
+          "be",
+          "cancelled"
+        ],
+        "proofExpected": "t:morning | t:tours | t:will | t:be | p:K AE N S AH L D",
+        "proofRecognized": "t:morning | t:tours | t:will | t:be | p:K AE N S AH L D",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "93853dfeeddd22eba016c62a3fb65878aaba30c5ebebf087511c2890edc49409"
+        }
+      }
     },
     "p3-g30/turns/4/1": {
       "key": "p3-g30/turns/4/1",
@@ -139089,7 +139169,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0769,
       "phonemeErrorRate": null,
@@ -139099,7 +139179,62 @@
           "expected": "waits",
           "recognized": "weights"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "1cba02822bc3f2a5bf2983279d5622041b9a94a9cb13d1c9d8eed10776f63c30",
+        "recognized": "First separate weights for trays from stops caused by a full packing queue.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "First separate waits for trays from stops caused by a full packing queue.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:waits=weights"
+        ],
+        "normalizedExpected": [
+          "first",
+          "separate",
+          "waits",
+          "for",
+          "trays",
+          "from",
+          "stops",
+          "caused",
+          "by",
+          "a",
+          "full",
+          "packing",
+          "queue"
+        ],
+        "normalizedRecognized": [
+          "first",
+          "separate",
+          "weights",
+          "for",
+          "trays",
+          "from",
+          "stops",
+          "caused",
+          "by",
+          "a",
+          "full",
+          "packing",
+          "queue"
+        ],
+        "proofExpected": "t:first | t:separate | p:W EY T S | t:for | t:trays | t:from | t:stops | t:caused | t:by | t:a | t:full | t:packing | t:queue",
+        "proofRecognized": "t:first | t:separate | p:W EY T S | t:for | t:trays | t:from | t:stops | t:caused | t:by | t:a | t:full | t:packing | t:queue",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "21c73c6ee5b37a6c507a375d4df0ba3df08c1ab41b2df4931ae6d9348c8a8490"
+        }
+      }
     },
     "p3-g35-q1/prompt/1": {
       "key": "p3-g35-q1/prompt/1",
@@ -139147,7 +139282,50 @@
           "expected": "bench",
           "recognized": "ben"
         }
-      ]
+      ],
+      "comparison": {
+        "audioSha256": "814abd76da417f4cde146a0818b49264b6ac71a8f16049526e4f34ceb19dc706",
+        "recognized": "which Ben should the late student use.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Which bench should the late student use?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "which",
+          "bench",
+          "should",
+          "the",
+          "late",
+          "student",
+          "use"
+        ],
+        "normalizedRecognized": [
+          "which",
+          "ben",
+          "should",
+          "the",
+          "late",
+          "student",
+          "use"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": true,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "79d701455b49536d26a49d43f6358b82b4cc2c4755fd92c244e6e33baf8e243a"
+        }
+      }
     },
     "p4-g01-q2/prompt/0": {
       "key": "p4-g01-q2/prompt/0",
@@ -139256,7 +139434,42 @@
           "recognized": "numbers"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g01-q3/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g01-q3/options/0/0",
+      "comparison": {
+        "audioSha256": "4d401e08035ce96faa987e013bb5efd01dfa4c75616a8e024bddb7b30870066e",
+        "recognized": "in order numbers.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "An order number",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "an",
+          "order",
+          "number"
+        ],
+        "normalizedRecognized": [
+          "in",
+          "order",
+          "numbers"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "0aad0feed5fdc3fd6f69171b94b59d1ec3cfcbf5a93825bdf9e3ebdee5afbf07"
+        }
+      }
     },
     "p4-g01-q3/options/1/0": {
       "key": "p4-g01-q3/options/1/0",
@@ -139322,7 +139535,41 @@
           "recognized": "numbers"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g01-q3/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g01-q3/options/1/0",
+      "comparison": {
+        "audioSha256": "003cbdfdaa8e2aaa657c39896f85c42e507d7e941971521b6d3ac8098c1ccef4",
+        "recognized": "Locker numbers.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A locker number",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "a",
+          "locker",
+          "number"
+        ],
+        "normalizedRecognized": [
+          "locker",
+          "numbers"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "78c7096556086c2067f8de5c52ac6d67e334dba6dd11092d72a69917e60f0e84"
+        }
+      }
     },
     "p3-g02-q2/options/3/0": {
       "key": "p3-g02-q2/options/3/0",
@@ -139499,7 +139746,7 @@
         "recognized": "Buy a yellow sign.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.25,
       "phonemeErrorRate": null,
@@ -139510,7 +139757,43 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g02-q2/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g02-q2/options/1/0",
+      "comparison": {
+        "audioSha256": "f7f46e494ad713ae3a21e5e2870f87109712bbc841294b7902eb8d12709b735b",
+        "recognized": "by Yellow Sign.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "By a yellow sign",
+        "reasons": [
+          "user-allowed-article:expected-a"
+        ],
+        "normalizedExpected": [
+          "by",
+          "a",
+          "yellow",
+          "sign"
+        ],
+        "normalizedRecognized": [
+          "by",
+          "yellow",
+          "sign"
+        ],
+        "proofExpected": "t:by | t:yellow | t:sign",
+        "proofRecognized": "t:by | t:yellow | t:sign",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "96a1cf0d860b7aae595f321c031fcc7171f4c2dfac09c999737630ba5d83a390"
+        }
+      }
     },
     "p4-g02-q3/options/1/0": {
       "key": "p4-g02-q3/options/1/0",
@@ -139657,7 +139940,50 @@
           "recognized": "stay"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g04-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g04-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "9f1a035a7b5a3b20a061fc23bc5eeb277586e2cd103ae200ec055056f73de9d0",
+        "recognized": "The sponsor may need a larger stay.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The sponsor may need a larger stage",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "sponsor",
+          "may",
+          "need",
+          "a",
+          "larger",
+          "stage"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "sponsor",
+          "may",
+          "need",
+          "a",
+          "larger",
+          "stay"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "250c94007ae0db8d423dcb1f04a6bdfbaede5dd4e56f167bbb034eef618ed7bc"
+        }
+      }
     },
     "p4-g04/turns/0/2": {
       "key": "p4-g04/turns/0/2",
@@ -139716,7 +140042,56 @@
           "recognized": "return"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g04/turns/0/2"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g04/turns/0/2",
+      "comparison": {
+        "audioSha256": "43237314045a0143d5be1c0eaf38eb6bcaf4205a59c96f055bdc473892e2025f",
+        "recognized": "That is encouraging, but two return trays had loose corners.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "That is encouraging, but two returned trays had loose corners.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "that",
+          "is",
+          "encouraging",
+          "but",
+          "two",
+          "returned",
+          "trays",
+          "had",
+          "loose",
+          "corners"
+        ],
+        "normalizedRecognized": [
+          "that",
+          "is",
+          "encouraging",
+          "but",
+          "two",
+          "return",
+          "trays",
+          "had",
+          "loose",
+          "corners"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ed2f193307e2b612ff41b1fdb2d739e8c4ba88ed800e1d576c8701344523db54"
+        }
+      }
     },
     "p3-g05/turns/2/0": {
       "key": "p3-g05/turns/2/0",
@@ -139777,7 +140152,52 @@
           "recognized": "assume"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g05/turns/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g05/turns/2/0",
+      "comparison": {
+        "audioSha256": "a52895c32990b43d5710efdf7d74c08f09fb608779e4550d3f3f8f956e40d7f5",
+        "recognized": "I assume the store crew would install them.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "I assumed the store crew would install them.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "i",
+          "assumed",
+          "the",
+          "store",
+          "crew",
+          "would",
+          "install",
+          "them"
+        ],
+        "normalizedRecognized": [
+          "i",
+          "assume",
+          "the",
+          "store",
+          "crew",
+          "would",
+          "install",
+          "them"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "19b62dbfa92f216b14b9917968756706d27a881714e8224b5d45faac25a77fc4"
+        }
+      }
     },
     "p3-g05-q1/options/3/0": {
       "key": "p3-g05-q1/options/3/0",
@@ -139965,7 +140385,60 @@
           "recognized": "ask"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g05/turns/0/2"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g05/turns/0/2",
+      "comparison": {
+        "audioSha256": "d076f10d38fae46a5bc250905e6fd34f0c787f8f93e8bfdea7a52c1b858c90dd",
+        "recognized": "You ask to pause it while our large kiln is being replaced.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "You asked to pause it while our large kiln is being replaced.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "you",
+          "asked",
+          "to",
+          "pause",
+          "it",
+          "while",
+          "our",
+          "large",
+          "kiln",
+          "is",
+          "being",
+          "replaced"
+        ],
+        "normalizedRecognized": [
+          "you",
+          "ask",
+          "to",
+          "pause",
+          "it",
+          "while",
+          "our",
+          "large",
+          "kiln",
+          "is",
+          "being",
+          "replaced"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e2760d088801f8815ab803f12be51a01e00fe2bef51767f50519070a4e6c8734"
+        }
+      }
     },
     "p4-g05-q1/options/0/0": {
       "key": "p4-g05-q1/options/0/0",
@@ -140013,7 +140486,7 @@
         "recognized": "A membership course has been cancelled.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1667,
       "phonemeErrorRate": null,
@@ -140024,7 +140497,48 @@
           "recognized": "cancelled"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g05-q1/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g05-q1/options/0/0",
+      "comparison": {
+        "audioSha256": "27e2162669a7c4488753c3d78e285c09234e3064ab3108e3b5056280318b002d",
+        "recognized": "A membership course has been cancelled.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A membership course has been canceled",
+        "reasons": [
+          "cmu-identical-pronunciation-set:canceled=cancelled"
+        ],
+        "normalizedExpected": [
+          "a",
+          "membership",
+          "course",
+          "has",
+          "been",
+          "canceled"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "membership",
+          "course",
+          "has",
+          "been",
+          "cancelled"
+        ],
+        "proofExpected": "t:a | t:membership | t:course | t:has | t:been | p:K AE N S AH L D",
+        "proofRecognized": "t:a | t:membership | t:course | t:has | t:been | p:K AE N S AH L D",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ec9f455c34a5d700cdb0e5cd9a6719244882c0bbfa7f2de5dc163f69f55720b7"
+        }
+      }
     },
     "p4-g05-q2/options/2/0": {
       "key": "p4-g05-q2/options/2/0",
@@ -140083,7 +140597,48 @@
           "recognized": "set"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g05-q2/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g05-q2/options/2/0",
+      "comparison": {
+        "audioSha256": "27f6f199d350ba21964a93257882ccf6464a1825ee6a41b00e39e9ca8ebaf1e4",
+        "recognized": "Set the member a new wheel.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Sent the member a new wheel",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "sent",
+          "the",
+          "member",
+          "a",
+          "new",
+          "wheel"
+        ],
+        "normalizedRecognized": [
+          "set",
+          "the",
+          "member",
+          "a",
+          "new",
+          "wheel"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "3c3872a31662fca22bd8dd2b245d14f9685e4f11915f53a530089eb5bf1c08ac"
+        }
+      }
     },
     "p3-g06-q3/options/3/0": {
       "key": "p3-g06-q3/options/3/0",
@@ -140187,7 +140742,46 @@
           "recognized": "visitors"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g07-q2/prompt/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g07-q2/prompt/0",
+      "comparison": {
+        "audioSha256": "e68e1c82735c81d4df5f96b6e472dc56647d477b04faef2b98f3344f2f244985",
+        "recognized": "What must the visitors show?",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "What must the visitor show?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "what",
+          "must",
+          "the",
+          "visitor",
+          "show"
+        ],
+        "normalizedRecognized": [
+          "what",
+          "must",
+          "the",
+          "visitors",
+          "show"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "02c7f3cf8fb68c697e4216ef6f4e1f633fdf3c6560768adc64713f37de83f7ef"
+        }
+      }
     },
     "p3-g07-q2/options/3/0": {
       "key": "p3-g07-q2/options/3/0",
@@ -140248,7 +140842,41 @@
           "recognized": "assigned"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g07-q2/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g07-q2/options/3/0",
+      "comparison": {
+        "audioSha256": "f091470c7be3722b3cfb53deaa005752c7ae256be38b2421aff2c20bf980fdaf",
+        "recognized": "assigned waiver.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A signed waiver",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "a",
+          "signed",
+          "waiver"
+        ],
+        "normalizedRecognized": [
+          "assigned",
+          "waiver"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "96f06f53ea4d71f96d63bd25b6c0b41b5e96ee217648f89b86c7bee3a0d11528"
+        }
+      }
     },
     "p3-g08-q1/options/1/0": {
       "key": "p3-g08-q1/options/1/0",
@@ -140395,7 +141023,47 @@
           "recognized": "point one five"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11/turns/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11/turns/2/0",
+      "comparison": {
+        "audioSha256": "247abe87c9a36c4f767d66a55ad2dfd072ab9210c50d7aa54bc5d1e04cc2e8a6",
+        "recognized": "It's already 6.15.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "It's already six fifteen.",
+        "reasons": [
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "it's",
+          "already",
+          "six",
+          "fifteen"
+        ],
+        "normalizedRecognized": [
+          "it's",
+          "already",
+          "six",
+          "point",
+          "one",
+          "five"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2ba7a49489df3c8c8bb557df22d2963eca21fc0e5f678a3b105152e92b147c04"
+        }
+      }
     },
     "p3-g11-q1/options/3/0": {
       "key": "p3-g11-q1/options/3/0",
@@ -140445,7 +141113,7 @@
         "recognized": "locker",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.5,
       "phonemeErrorRate": null,
@@ -140456,7 +141124,39 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "062407560e79ce8969ee50f240b0e5e024105d3a0bc96f38b81f9b6cd6fe361e",
+        "recognized": "Locker",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A locker",
+        "reasons": [
+          "user-allowed-article:expected-a"
+        ],
+        "normalizedExpected": [
+          "a",
+          "locker"
+        ],
+        "normalizedRecognized": [
+          "locker"
+        ],
+        "proofExpected": "t:locker",
+        "proofRecognized": "t:locker",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "590cf2d66dec10bf4fc0e14cdd982a53525dc3ad5588cd7603ef6a7f21265020"
+        }
+      }
     },
     "p3-g11-q2/options/2/0": {
       "key": "p3-g11-q2/options/2/0",
@@ -140517,7 +141217,42 @@
           "recognized": "is"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11-q2/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11-q2/options/2/0",
+      "comparison": {
+        "audioSha256": "ec9d2fb6a89743909f2abf209f9dfe31d282e8b766ab9e00616f43d9a899efff",
+        "recognized": "It is closed.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "It has closed.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "it",
+          "has",
+          "closed"
+        ],
+        "normalizedRecognized": [
+          "it",
+          "is",
+          "closed"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ba3536f7e7e29e9da2b133a752a96e82bedf6517afb02f21ed07a3250b0517d2"
+        }
+      }
     },
     "p3-g11-q2/options/3/0": {
       "key": "p3-g11-q2/options/3/0",
@@ -140621,7 +141356,44 @@
           "recognized": "clothes"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11-q3/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g11-q3/options/0/0",
+      "comparison": {
+        "audioSha256": "b293cad02ca1056ba35979da0c9d600cc0950a7ac932b86d756802ec64e42cd5",
+        "recognized": "inside the clothes shop.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Inside the closed shop",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "inside",
+          "the",
+          "closed",
+          "shop"
+        ],
+        "normalizedRecognized": [
+          "inside",
+          "the",
+          "clothes",
+          "shop"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "47f08c670cda05782edbcf20818139988fc50b1dd14f84d9173b2b608492ee1a"
+        }
+      }
     },
     "p3-g12-q1/options/2/0": {
       "key": "p3-g12-q1/options/2/0",
@@ -140714,7 +141486,7 @@
         "recognized": "Its switch does not work.",
         "normalizedExact": true
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.4,
       "phonemeErrorRate": null,
@@ -140725,7 +141497,46 @@
           "recognized": "it is"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g12-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g12-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "99f305e0d217657b78fc78c052aa5178af786fa024a53d296be8e72b99499923",
+        "recognized": "It's switch does not work.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Its switch does not work.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:its=it's"
+        ],
+        "normalizedExpected": [
+          "its",
+          "switch",
+          "does",
+          "not",
+          "work"
+        ],
+        "normalizedRecognized": [
+          "it's",
+          "switch",
+          "does",
+          "not",
+          "work"
+        ],
+        "proofExpected": "p:IH T S | t:switch | t:does | t:not | t:work",
+        "proofRecognized": "p:IH T S | t:switch | t:does | t:not | t:work",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "1230d83e2ee4ad7a5cc2a0a3842bd2cc22dd7ba22d29db3b5eaba06765cae15b"
+        }
+      }
     },
     "p3-g12-q2/options/0/0": {
       "key": "p3-g12-q2/options/0/0",
@@ -140872,7 +141683,48 @@
           "recognized": "with"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g14/turns/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g14/turns/1/0",
+      "comparison": {
+        "audioSha256": "2bac839a3c96faf9079da4233a19cfbdb605a262089ded6f09db36c8c2494273",
+        "recognized": "with the small editing booth work.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Would the small editing booth work?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "would",
+          "the",
+          "small",
+          "editing",
+          "booth",
+          "work"
+        ],
+        "normalizedRecognized": [
+          "with",
+          "the",
+          "small",
+          "editing",
+          "booth",
+          "work"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2c3604410c2bd2ac41d947fc3ce34f61a3a42e20b4b411727337946972e57275"
+        }
+      }
     },
     "p3-g14/turns/1/1": {
       "key": "p3-g14/turns/1/1",
@@ -140931,7 +141783,44 @@
           "recognized": "is"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g14/turns/1/1"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g14/turns/1/1",
+      "comparison": {
+        "audioSha256": "eca92ab40fefced0d8ccb9b172b5cfc29be741e02c379e765a83209cef365722",
+        "recognized": "It is soft walls.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "It has soft walls.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "it",
+          "has",
+          "soft",
+          "walls"
+        ],
+        "normalizedRecognized": [
+          "it",
+          "is",
+          "soft",
+          "walls"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "76f5819aebd53c649bf729cb3416f880aa281986ba9bcf1f1a60c38ce31b1036"
+        }
+      }
     },
     "p3-g15/turns/1/1": {
       "key": "p3-g15/turns/1/1",
@@ -140990,7 +141879,50 @@
           "recognized": "up"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g15/turns/1/1"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g15/turns/1/1",
+      "comparison": {
+        "audioSha256": "523a637c92e40b40eac75a458e88b3615b74982653442d25d375d9f4236ce200",
+        "recognized": "Walk up beside the tram stop instead.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Walk out beside the tram stop instead.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "walk",
+          "out",
+          "beside",
+          "the",
+          "tram",
+          "stop",
+          "instead"
+        ],
+        "normalizedRecognized": [
+          "walk",
+          "up",
+          "beside",
+          "the",
+          "tram",
+          "stop",
+          "instead"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d12a08411e498f9e662e1d8e460e9ab89bec24b49e8b5e8209385cc07239d0f8"
+        }
+      }
     },
     "p3-g15-d/text/0": {
       "key": "p3-g15-d/text/0",
@@ -141039,7 +141971,50 @@
           "recognized": "up"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g15-d/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g15-d/text/0",
+      "comparison": {
+        "audioSha256": "523a637c92e40b40eac75a458e88b3615b74982653442d25d375d9f4236ce200",
+        "recognized": "Walk up beside the tram stop instead.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Walk out beside the tram stop instead.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "walk",
+          "out",
+          "beside",
+          "the",
+          "tram",
+          "stop",
+          "instead"
+        ],
+        "normalizedRecognized": [
+          "walk",
+          "up",
+          "beside",
+          "the",
+          "tram",
+          "stop",
+          "instead"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d12a08411e498f9e662e1d8e460e9ab89bec24b49e8b5e8209385cc07239d0f8"
+        }
+      }
     },
     "p3-g15-q1/prompt/0": {
       "key": "p3-g15-q1/prompt/0",
@@ -141100,7 +142075,52 @@
           "recognized": "root"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g15-q1/prompt/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g15-q1/prompt/0",
+      "comparison": {
+        "audioSha256": "259a5ea8bf905d8e8b82f2149873eafbb9eb760f83ea1ec1b37b575bc1154bdd",
+        "recognized": "Why does the original root need to change?",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Why does the original route need to change?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "why",
+          "does",
+          "the",
+          "original",
+          "route",
+          "need",
+          "to",
+          "change"
+        ],
+        "normalizedRecognized": [
+          "why",
+          "does",
+          "the",
+          "original",
+          "root",
+          "need",
+          "to",
+          "change"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9a541b965d7b1c674fe0fb074c58eacaf8adf8a9cc2cbd2bcaac024a489b67f4"
+        }
+      }
     },
     "p3-g16-q2/options/1/0": {
       "key": "p3-g16-q2/options/1/0",
@@ -141247,7 +142267,48 @@
           "recognized": "you"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g17-q2/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g17-q2/options/0/0",
+      "comparison": {
+        "audioSha256": "87c8f6811d8e7e169d9c8b37232642f114fa44aceacdb5d174f0f04996634362",
+        "recognized": "the person you took the photograph.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The person who took the photograph",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "person",
+          "who",
+          "took",
+          "the",
+          "photograph"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "person",
+          "you",
+          "took",
+          "the",
+          "photograph"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "090e11c9d794a8d472fb571bcda6e6e543c7ad1f889a65c83b0fe09a7e2f8797"
+        }
+      }
     },
     "p3-g18/turns/2/1": {
       "key": "p3-g18/turns/2/1",
@@ -141340,7 +142401,7 @@
         "recognized": "canceled her second lesson, not her first one.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1111,
       "phonemeErrorRate": null,
@@ -141351,7 +142412,54 @@
           "recognized": "cancelled"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g19/turns/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g19/turns/2/0",
+      "comparison": {
+        "audioSha256": "0a8ec0aacc87f7aaa9260a6141c031fdc949bb2c5853a584abbd0706037be065",
+        "recognized": "She cancelled her second lesson, not her first one.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "She canceled her second lesson, not her first one.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:canceled=cancelled"
+        ],
+        "normalizedExpected": [
+          "she",
+          "canceled",
+          "her",
+          "second",
+          "lesson",
+          "not",
+          "her",
+          "first",
+          "one"
+        ],
+        "normalizedRecognized": [
+          "she",
+          "cancelled",
+          "her",
+          "second",
+          "lesson",
+          "not",
+          "her",
+          "first",
+          "one"
+        ],
+        "proofExpected": "t:she | p:K AE N S AH L D | t:her | t:second | t:lesson | t:not | t:her | t:first | t:one",
+        "proofRecognized": "t:she | p:K AE N S AH L D | t:her | t:second | t:lesson | t:not | t:her | t:first | t:one",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ec8d660901ec9347382718a6b9ef03651411793afe2c2840d9cba157b22ead41"
+        }
+      }
     },
     "p3-g19-q2/prompt/0": {
       "key": "p3-g19-q2/prompt/0",
@@ -141412,7 +142520,46 @@
           "recognized": "effect"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g19-q2/prompt/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g19-q2/prompt/0",
+      "comparison": {
+        "audioSha256": "fd8cbcbc666e8d388251e71dc471d2eae28ccfd20c3c4c7637f134ab6edb864e",
+        "recognized": "What did the cancellation effect?",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "What did the cancellation affect?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "what",
+          "did",
+          "the",
+          "cancellation",
+          "affect"
+        ],
+        "normalizedRecognized": [
+          "what",
+          "did",
+          "the",
+          "cancellation",
+          "effect"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "7d04d9b2863f08a4bff532d2892e23d90cb7e0634645f3ea71ae46a0c299a4f3"
+        }
+      }
     },
     "p3-g20-q2/options/3/0": {
       "key": "p3-g20-q2/options/3/0",
@@ -141516,7 +142663,66 @@
           "recognized": "code"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g21/turns/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g21/turns/0/0",
+      "comparison": {
+        "audioSha256": "68858059ca44dbf0623aa71eb6c5db74b004c771dbdd64d5d823c5b1dc6143e7",
+        "recognized": "I need the code I checked at the theater, but I lost the paper ticket.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "I need the coat I checked at the theater, but I lost the paper ticket.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "i",
+          "need",
+          "the",
+          "coat",
+          "i",
+          "checked",
+          "at",
+          "the",
+          "theater",
+          "but",
+          "i",
+          "lost",
+          "the",
+          "paper",
+          "ticket"
+        ],
+        "normalizedRecognized": [
+          "i",
+          "need",
+          "the",
+          "code",
+          "i",
+          "checked",
+          "at",
+          "the",
+          "theater",
+          "but",
+          "i",
+          "lost",
+          "the",
+          "paper",
+          "ticket"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "ded2148c8855fce2e7027d249e81f0c3121c0e0a9a6e95c44ab030296b54764b"
+        }
+      }
     },
     "p3-g21/turns/1/0": {
       "key": "p3-g21/turns/1/0",
@@ -141620,7 +142826,50 @@
           "recognized": "chain"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g21-q3/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g21-q3/options/1/0",
+      "comparison": {
+        "audioSha256": "f676f77f5f92437ccb141c3580d8ba3fcbb6b0ef4d0e913ecfbf849d54f17ab1",
+        "recognized": "Select a coat for a costume chain.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Select a coat for a costume change",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "select",
+          "a",
+          "coat",
+          "for",
+          "a",
+          "costume",
+          "change"
+        ],
+        "normalizedRecognized": [
+          "select",
+          "a",
+          "coat",
+          "for",
+          "a",
+          "costume",
+          "chain"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bf7a752aba234c970c50b7e7b4d251a44e9a4f66b84f1fc44b5b30bfd615d2fc"
+        }
+      }
     },
     "p3-g23/turns/5/1": {
       "key": "p3-g23/turns/5/1",
@@ -141668,7 +142917,7 @@
         "recognized": "Their credits will appear if those colleagues come to first class.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.0833,
       "phonemeErrorRate": null,
@@ -141679,7 +142928,59 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g23/turns/5/1"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g23/turns/5/1",
+      "comparison": {
+        "audioSha256": "2c86e89a2eef0059f81366e8281c16fa3444e7f5dbf5508d0b3853f0532cb128",
+        "recognized": "Their credits will appear if those colleagues come to first class.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Their credits will appear if those colleagues come to a first class.",
+        "reasons": [
+          "user-allowed-article:expected-a"
+        ],
+        "normalizedExpected": [
+          "their",
+          "credits",
+          "will",
+          "appear",
+          "if",
+          "those",
+          "colleagues",
+          "come",
+          "to",
+          "a",
+          "first",
+          "class"
+        ],
+        "normalizedRecognized": [
+          "their",
+          "credits",
+          "will",
+          "appear",
+          "if",
+          "those",
+          "colleagues",
+          "come",
+          "to",
+          "first",
+          "class"
+        ],
+        "proofExpected": "t:their | t:credits | t:will | t:appear | t:if | t:those | t:colleagues | t:come | t:to | t:first | t:class",
+        "proofRecognized": "t:their | t:credits | t:will | t:appear | t:if | t:those | t:colleagues | t:come | t:to | t:first | t:class",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9baf123cdbe9b3ec3b89f098373fd89a9e76b7291298efc92578235e01ecdc1d"
+        }
+      }
     },
     "p3-g23-q1/options/3/0": {
       "key": "p3-g23-q1/options/3/0",
@@ -141743,7 +143044,47 @@
           "recognized": "appear"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g23-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g23-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "4bf27d74a637b8a1fd6b64d8745aac6d935b81acf7125aafbf180abbafa772fd",
+        "recognized": "if your credits appear than expected.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Fewer credits appeared than expected.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "fewer",
+          "credits",
+          "appeared",
+          "than",
+          "expected"
+        ],
+        "normalizedRecognized": [
+          "if",
+          "your",
+          "credits",
+          "appear",
+          "than",
+          "expected"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "7394c55414db31cfdfb44ca94887ffb99adb648cdfcd0655d0f15fb85e36e2d8"
+        }
+      }
     },
     "p3-g23-q3/prompt/0": {
       "key": "p3-g23-q3/prompt/0",
@@ -141835,7 +143176,39 @@
           "recognized": "alright"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g29-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g29-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "e8bc9e360676a0efdc1a72da24b34bee45282f06826615c8834f368b35ddeb19",
+        "recognized": "Alright.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "R.",
+        "reasons": [
+          "source-anchored-letter:R",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "letterr"
+        ],
+        "normalizedRecognized": [
+          "alright"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+        }
+      }
     },
     "p3-g29-q1/options/3/0": {
       "key": "p3-g29-q1/options/3/0",
@@ -141884,7 +143257,39 @@
           "recognized": "and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g29-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g29-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "885fa8d10996348069f25d0c1ebbd0f379054ac9def4b0826d8332a99761ec71",
+        "recognized": "And",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "N.",
+        "reasons": [
+          "source-anchored-letter:N",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "lettern"
+        ],
+        "normalizedRecognized": [
+          "and"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8ce86a6ae65d3692e7305e2c58ac62eebd97d3d943e093f577da25c36988246b"
+        }
+      }
     },
     "p3-g29-q3/prompt/0": {
       "key": "p3-g29-q3/prompt/0",
@@ -141943,7 +143348,48 @@
           "recognized": "proceed"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g29-q3/prompt/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g29-q3/prompt/0",
+      "comparison": {
+        "audioSha256": "f8f0b2aade52e89e89edfcad4d4fc1e7bd80295c1862d814231ec40899bc6d2e",
+        "recognized": "What will proceed the final statement?",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "What will precede the final statement?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "what",
+          "will",
+          "precede",
+          "the",
+          "final",
+          "statement"
+        ],
+        "normalizedRecognized": [
+          "what",
+          "will",
+          "proceed",
+          "the",
+          "final",
+          "statement"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d03bbdf1ce327dd3e1b207ff422490ff7589d68c5cb17309c4080b96d5072437"
+        }
+      }
     },
     "p3-g29-q3/options/1/0": {
       "key": "p3-g29-q3/options/1/0",
@@ -142036,7 +143482,7 @@
         "recognized": "glass-making demonstration?",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.6667,
       "phonemeErrorRate": null,
@@ -142047,7 +143493,44 @@
           "recognized": "glass making"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g09-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g09-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "714e4a3f607043fdc2299cf12b8bf2192f6fc74d249bf286a4857d739578e694",
+        "recognized": "a glass-making demonstration.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A glassmaking demonstration",
+        "reasons": [
+          "reviewed-compound-boundary:glassmaking"
+        ],
+        "normalizedExpected": [
+          "a",
+          "glass",
+          "making",
+          "demonstration"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "glass",
+          "making",
+          "demonstration"
+        ],
+        "proofExpected": "t:a | t:glass | t:making | t:demonstration",
+        "proofRecognized": "t:a | t:glass | t:making | t:demonstration",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "04d14ad290cb7582baf53b33c5c305fbddea2eb7b61091b7671870fef98f5fb3"
+        }
+      }
     },
     "p4-g10-q1/options/1/0": {
       "key": "p4-g10-q1/options/1/0",
@@ -142113,7 +143596,41 @@
           "recognized": "cards"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "7cfcf209c69f19d60d4db50bee13ad0b454578c5737e2f11b308111d630ec6ea",
+        "recognized": "library cards",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A library card",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "a",
+          "library",
+          "card"
+        ],
+        "normalizedRecognized": [
+          "library",
+          "cards"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "254d56bdbe9db9701447add2508450c8c4045a7a320a3814b4d9d0a6b800665b"
+        }
+      }
     },
     "p4-g10-q1/options/2/0": {
       "key": "p4-g10-q1/options/2/0",
@@ -142174,7 +143691,42 @@
           "recognized": "let us garf"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "50804fb31b05de46b02368adf2538f0db029cf23895f8653a3a793f7f0b4692d",
+        "recognized": "Let's garf.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A scarf",
+        "reasons": [
+          "contraction:let's",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "a",
+          "scarf"
+        ],
+        "normalizedRecognized": [
+          "let",
+          "us",
+          "garf"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "d715371ad91ae1274c7d26ab693cbc36f0583a7edaa0f2e8b24ffb088b319536"
+        }
+      }
     },
     "p4-g10-q3/options/1/0": {
       "key": "p4-g10-q3/options/1/0",
@@ -142224,7 +143776,7 @@
         "recognized": "a library card.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.25,
       "phonemeErrorRate": null,
@@ -142235,7 +143787,43 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q3/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q3/options/1/0",
+      "comparison": {
+        "audioSha256": "19a394eec8cd6ea366d2133c5659c307cc4ce723a86f8988096b0b10f8951e66",
+        "recognized": "Show library card.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Show a library card",
+        "reasons": [
+          "user-allowed-article:expected-a"
+        ],
+        "normalizedExpected": [
+          "show",
+          "a",
+          "library",
+          "card"
+        ],
+        "normalizedRecognized": [
+          "show",
+          "library",
+          "card"
+        ],
+        "proofExpected": "t:show | t:library | t:card",
+        "proofRecognized": "t:show | t:library | t:card",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "92f0aa90000a5735fabe2c2b0abbf9c0d85d983b1468426a6c56bfd54d462035"
+        }
+      }
     },
     "p4-g10-q3/options/2/0": {
       "key": "p4-g10-q3/options/2/0",
@@ -142296,7 +143884,45 @@
           "recognized": "print a"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q3/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g10-q3/options/2/0",
+      "comparison": {
+        "audioSha256": "56cf99e9f4494c8985100bc51e6f82b35c64719f0dc8d6406298b0824c0fcacd",
+        "recognized": "Give the print a number.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Give the printer number",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "give",
+          "the",
+          "printer",
+          "number"
+        ],
+        "normalizedRecognized": [
+          "give",
+          "the",
+          "print",
+          "a",
+          "number"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "08de4f3a76bd7ecc1f8ee4ec99e6000f103e5e701de9c938be6755f2611d0268"
+        }
+      }
     },
     "p4-g11-q3/options/0/0": {
       "key": "p4-g11-q3/options/0/0",
@@ -142344,7 +143970,7 @@
         "recognized": "They're borrowed rackets.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.6667,
       "phonemeErrorRate": null,
@@ -142355,7 +143981,42 @@
           "recognized": "they are"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g11-q3/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g11-q3/options/0/0",
+      "comparison": {
+        "audioSha256": "dc4057e84f419dc8ebf972553fc5f9d0c889ae0ce84af60f8cb4540116e54b48",
+        "recognized": "They're borrowed rackets.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Their borrowed rackets",
+        "reasons": [
+          "cmu-identical-pronunciation-set:their=they're"
+        ],
+        "normalizedExpected": [
+          "their",
+          "borrowed",
+          "rackets"
+        ],
+        "normalizedRecognized": [
+          "they're",
+          "borrowed",
+          "rackets"
+        ],
+        "proofExpected": "p:DH EH R | t:borrowed | t:rackets",
+        "proofRecognized": "p:DH EH R | t:borrowed | t:rackets",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f7174c5bc4237dd108b6f1cb5cb5df4f8e18a12a9d132af8401a23fa51d6d11d"
+        }
+      }
     },
     "p4-g11-q3/options/1/0": {
       "key": "p4-g11-q3/options/1/0",
@@ -142403,7 +144064,7 @@
         "recognized": "They're water bottles.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.6667,
       "phonemeErrorRate": null,
@@ -142414,7 +144075,42 @@
           "recognized": "they are"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g11-q3/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g11-q3/options/1/0",
+      "comparison": {
+        "audioSha256": "d03607c5b3448e29ef1c14350bf0db306f79ae70876f5e0fce86208a81f9e128",
+        "recognized": "They're water bottles.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Their water bottles",
+        "reasons": [
+          "cmu-identical-pronunciation-set:their=they're"
+        ],
+        "normalizedExpected": [
+          "their",
+          "water",
+          "bottles"
+        ],
+        "normalizedRecognized": [
+          "they're",
+          "water",
+          "bottles"
+        ],
+        "proofExpected": "p:DH EH R | t:water | t:bottles",
+        "proofRecognized": "p:DH EH R | t:water | t:bottles",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "da117fdb4d621b7905c56419dea998151ac849c09fef6f3fea67521885b6188d"
+        }
+      }
     },
     "p4-g12-q2/options/0/0": {
       "key": "p4-g12-q2/options/0/0",
@@ -142462,7 +144158,7 @@
         "recognized": "Plane.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -142473,7 +144169,38 @@
           "recognized": "plane"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g12-q2/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g12-q2/options/0/0",
+      "comparison": {
+        "audioSha256": "0e1187ee2ef988aaa6dbf3c801cbef5bfb90aa8beed12a33d587a61e4eb2f5c6",
+        "recognized": "Plane",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Plain",
+        "reasons": [
+          "cmu-identical-pronunciation-set:plain=plane"
+        ],
+        "normalizedExpected": [
+          "plain"
+        ],
+        "normalizedRecognized": [
+          "plane"
+        ],
+        "proofExpected": "p:P L EY N",
+        "proofRecognized": "p:P L EY N",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8b854ade2cd01bdca1aa982f6ecff0086f70e3d2140d7fae2786a2e4150eeb4c"
+        }
+      }
     },
     "p4-g13-q1/options/1/0": {
       "key": "p4-g13-q1/options/1/0",
@@ -142532,7 +144259,44 @@
           "recognized": "and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g13-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g13-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "d64845b7b75a6c868424b9e6ea40b2ebc5e7925cdacad5a0876d870f8fd2d768",
+        "recognized": "and oven needs repair.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "An oven needs repair.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "an",
+          "oven",
+          "needs",
+          "repair"
+        ],
+        "normalizedRecognized": [
+          "and",
+          "oven",
+          "needs",
+          "repair"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "3ed350bf4cfe79093f059e4d5c06de2711835e282ec523491530f2af95bddc6c"
+        }
+      }
     },
     "p4-g13-q1/options/2/0": {
       "key": "p4-g13-q1/options/2/0",
@@ -142593,7 +144357,50 @@
           "recognized": "is"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g13-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g13-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "f29fdb3cd94c1562a910b152a336bbfcac706df93dff1a577f20314a30be1537",
+        "recognized": "The shop is sold out of salad.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The shop has sold out of salad.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "shop",
+          "has",
+          "sold",
+          "out",
+          "of",
+          "salad"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "shop",
+          "is",
+          "sold",
+          "out",
+          "of",
+          "salad"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "b7056ab53ec2c7b4ffdbbcb5c3e112f5e9818d03c2a990e6843b8133a4f30994"
+        }
+      }
     },
     "p4-g13-q3/options/1/0": {
       "key": "p4-g13-q3/options/1/0",
@@ -142655,7 +144462,44 @@
           "recognized": "ovens"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g13-q3/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g13-q3/options/1/0",
+      "comparison": {
+        "audioSha256": "bab4490357e775e4b368e7515071cc0a69730e0159568ffd754b0098468b874a",
+        "recognized": "by the bread ovens.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "By the bread oven",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "by",
+          "the",
+          "bread",
+          "oven"
+        ],
+        "normalizedRecognized": [
+          "by",
+          "the",
+          "bread",
+          "ovens"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "72e5620b609ec054629cb69830056ac2266d82724b99074c295d7541d8693c68"
+        }
+      }
     },
     "p4-g14-q1/options/0/0": {
       "key": "p4-g14-q1/options/0/0",
@@ -142716,7 +144560,44 @@
           "recognized": "repairs"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g14-q1/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g14-q1/options/0/0",
+      "comparison": {
+        "audioSha256": "1c685a14672c77b4dcbc91335c4208864747bdf83a10b4b700ba5fb1e8224a03",
+        "recognized": "The clock repairs staff.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The clock repair staff",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "clock",
+          "repair",
+          "staff"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "clock",
+          "repairs",
+          "staff"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "66a701e2ba9d47ebfc3d00c52b6887f8f2c99982ee3e6dfc4b73902218194614"
+        }
+      }
     },
     "p4-g14-q3/options/0/0": {
       "key": "p4-g14-q3/options/0/0",
@@ -142766,7 +144647,7 @@
         "recognized": "its cleaning is finished",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.4,
       "phonemeErrorRate": null,
@@ -142777,7 +144658,46 @@
           "recognized": "it is"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g14-q3/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g14-q3/options/0/0",
+      "comparison": {
+        "audioSha256": "f8b5d8dcaceaf626b0044f4e469a0bfd03b4a55a95fc5be5ac0cfc124e2ee1fa",
+        "recognized": "after it's cleaning is finished",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "After its cleaning is finished",
+        "reasons": [
+          "cmu-identical-pronunciation-set:its=it's"
+        ],
+        "normalizedExpected": [
+          "after",
+          "its",
+          "cleaning",
+          "is",
+          "finished"
+        ],
+        "normalizedRecognized": [
+          "after",
+          "it's",
+          "cleaning",
+          "is",
+          "finished"
+        ],
+        "proofExpected": "t:after | p:IH T S | t:cleaning | t:is | t:finished",
+        "proofRecognized": "t:after | p:IH T S | t:cleaning | t:is | t:finished",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "77118a9dd8d85785b107ea868ea32916008052ff52f470208e6ba22262f24da9"
+        }
+      }
     },
     "p4-g17/turns/0/4": {
       "key": "p4-g17/turns/0/4",
@@ -142881,7 +144801,41 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g22-q2/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g22-q2/options/3/0",
+      "comparison": {
+        "audioSha256": "82cb7af41d75255bfdec32b83d302a8d301e9fe388ec303e7ff010e97a2d3606",
+        "recognized": "Continue normal.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Continue normal work",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "continue",
+          "normal",
+          "work"
+        ],
+        "normalizedRecognized": [
+          "continue",
+          "normal"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "37ca0e2ff7fb95484779a0fc20de1e9661d6956a13370c4b201eb5786798351c"
+        }
+      }
     },
     "p4-g25/turns/0/2": {
       "key": "p4-g25/turns/0/2",
@@ -142985,7 +144939,52 @@
           "recognized": "pay"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g25-q3/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g25-q3/options/2/0",
+      "comparison": {
+        "audioSha256": "298226f1c6584543e74e6453b6a93f8ddc419e363f29a1a3eb1e81eb743ec860",
+        "recognized": "to reduce the staffing plan to one pay.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "To reduce the staffing plan to one page",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "to",
+          "reduce",
+          "the",
+          "staffing",
+          "plan",
+          "to",
+          "one",
+          "page"
+        ],
+        "normalizedRecognized": [
+          "to",
+          "reduce",
+          "the",
+          "staffing",
+          "plan",
+          "to",
+          "one",
+          "pay"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "503ba93f0792f64a1e89a6ffe1da125d8ab446265dcb699c62dd793a6a3f68da"
+        }
+      }
     },
     "p4-g26-q1/options/0/0": {
       "key": "p4-g26-q1/options/0/0",
@@ -143089,7 +145088,40 @@
           "recognized": "i ate"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g26-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g26-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "8c947d72ee0173f0068925c1f3cb67da5b35b7d2889466d9c30f2e41a8f99f1e",
+        "recognized": "I ate.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A. eight",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "lettera",
+          "eight"
+        ],
+        "normalizedRecognized": [
+          "i",
+          "ate"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "553a0fddbb387723578263570e63a83955482ae44f45bac9a90c65ddc058329f"
+        }
+      }
     },
     "p4-g27/turns/0/3": {
       "key": "p4-g27/turns/0/3",
@@ -143146,7 +145178,7 @@
         "recognized": "the second, they sent payment issues directly to the account's office, which kept a separate list.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1176,
       "phonemeErrorRate": null,
@@ -143157,7 +145189,70 @@
           "recognized": "account s"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g27/turns/0/3"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g27/turns/0/3",
+      "comparison": {
+        "audioSha256": "5440eb73b7d65b4feed785e8b5f1c498ba9c2dc0586da3616da8084a69d3fd39",
+        "recognized": "During the second, they sent payment issues directly to the account's office, which kept a separate list.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "During the second they sent payment issues directly to the accounts office, which kept a separate list.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:accounts=account's"
+        ],
+        "normalizedExpected": [
+          "during",
+          "the",
+          "second",
+          "they",
+          "sent",
+          "payment",
+          "issues",
+          "directly",
+          "to",
+          "the",
+          "accounts",
+          "office",
+          "which",
+          "kept",
+          "a",
+          "separate",
+          "list"
+        ],
+        "normalizedRecognized": [
+          "during",
+          "the",
+          "second",
+          "they",
+          "sent",
+          "payment",
+          "issues",
+          "directly",
+          "to",
+          "the",
+          "account's",
+          "office",
+          "which",
+          "kept",
+          "a",
+          "separate",
+          "list"
+        ],
+        "proofExpected": "t:during | t:the | t:second | t:they | t:sent | t:payment | t:issues | t:directly | t:to | t:the | p:AH K AW N T S | t:office | t:which | t:kept | t:a | t:separate | t:list",
+        "proofRecognized": "t:during | t:the | t:second | t:they | t:sent | t:payment | t:issues | t:directly | t:to | t:the | p:AH K AW N T S | t:office | t:which | t:kept | t:a | t:separate | t:list",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2b05cd6ba37952cfbc057300c7699181c41b80228b77c589aa4589a65102fe6d"
+        }
+      }
     },
     "p4-g27-q1/options/1/0": {
       "key": "p4-g27-q1/options/1/0",
@@ -143218,7 +145313,50 @@
           "recognized": "account"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g27-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g27-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "e66dafec1c16b71585d4f594fef6cdfd8ce59b325051f8fff46a844593251416",
+        "recognized": "Account staff took over the desk entirely.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Accounts staff took over the desk entirely.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "accounts",
+          "staff",
+          "took",
+          "over",
+          "the",
+          "desk",
+          "entirely"
+        ],
+        "normalizedRecognized": [
+          "account",
+          "staff",
+          "took",
+          "over",
+          "the",
+          "desk",
+          "entirely"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "823e88bb03c2417a67397193003ad1adb2e92690ce3f25608ca94fd35e9e51c1"
+        }
+      }
     },
     "p4-g27-q2/prompt/0": {
       "key": "p4-g27-q2/prompt/0",
@@ -143320,7 +145458,49 @@
           "recognized": "emerged"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g27-q3/prompt/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g27-q3/prompt/0",
+      "comparison": {
+        "audioSha256": "8936871a75cb2e263cce5592fe8fdc5ed3dce24d9383df32257398cc284a305b",
+        "recognized": "What date should emerged case retain?",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "What date should a merged case retain?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "what",
+          "date",
+          "should",
+          "a",
+          "merged",
+          "case",
+          "retain"
+        ],
+        "normalizedRecognized": [
+          "what",
+          "date",
+          "should",
+          "emerged",
+          "case",
+          "retain"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "c1e30082a615c062dfcfa1318e86af33c73264f92abc38703f42389f3f522a96"
+        }
+      }
     },
     "p4-g28/turns/0/1": {
       "key": "p4-g28/turns/0/1",
@@ -143386,7 +145566,52 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g28/turns/0/1"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g28/turns/0/1",
+      "comparison": {
+        "audioSha256": "f6eb508276ebe77b842bfcf99a5ee447ca4a3814d3c7e83f4ec9675c3a13bddc",
+        "recognized": "for being held for teacher until Friday.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Four are being held for a teacher until Friday.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "four",
+          "are",
+          "being",
+          "held",
+          "for",
+          "a",
+          "teacher",
+          "until",
+          "friday"
+        ],
+        "normalizedRecognized": [
+          "for",
+          "being",
+          "held",
+          "for",
+          "teacher",
+          "until",
+          "friday"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "c8d513fd6afcf788d8823deb81298463dd566e44ea8d3e1e3b83a0a521a39dfa"
+        }
+      }
     },
     "p4-g28-q2/options/0/0": {
       "key": "p4-g28-q2/options/0/0",
@@ -143448,7 +145673,50 @@
           "recognized": "call her"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g28-q2/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g28-q2/options/0/0",
+      "comparison": {
+        "audioSha256": "a868ddefdeb861e873eb0acd079c81073d0556ba765b8ca5c3d044bb29ffef3f",
+        "recognized": "Promise the four books to call her.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Promise the four books to a caller",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "promise",
+          "the",
+          "four",
+          "books",
+          "to",
+          "a",
+          "caller"
+        ],
+        "normalizedRecognized": [
+          "promise",
+          "the",
+          "four",
+          "books",
+          "to",
+          "call",
+          "her"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9b20b9bf6ac7f12f0a505eebb4a9c3fac27c4da2de1f5816f39a1080166edd03"
+        }
+      }
     },
     "p4-g28-q2/options/2/0": {
       "key": "p4-g28-q2/options/2/0",
@@ -143498,7 +145766,7 @@
         "recognized": "the teacher's pick-up date.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3333,
       "phonemeErrorRate": null,
@@ -143509,7 +145777,48 @@
           "recognized": "pick up"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g28-q2/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g28-q2/options/2/0",
+      "comparison": {
+        "audioSha256": "9276ef3c79baffae106fec38186b0040387d0471e4f1f2abaf048f080eca46d9",
+        "recognized": "Change the teacher's pick-up date.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Change the teacher's pickup date",
+        "reasons": [
+          "reviewed-compound-boundary:pickup"
+        ],
+        "normalizedExpected": [
+          "change",
+          "the",
+          "teacher's",
+          "pick",
+          "up",
+          "date"
+        ],
+        "normalizedRecognized": [
+          "change",
+          "the",
+          "teacher's",
+          "pick",
+          "up",
+          "date"
+        ],
+        "proofExpected": "t:change | t:the | t:teacher's | t:pick | t:up | t:date",
+        "proofRecognized": "t:change | t:the | t:teacher's | t:pick | t:up | t:date",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "674acc962a83e5f1ee37820fea96a2c273ee467a179262fd22779816108c987b"
+        }
+      }
     },
     "p4-g29-q1/options/0/0": {
       "key": "p4-g29-q1/options/0/0",
@@ -143558,7 +145867,40 @@
           "recognized": "i"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g29-q1/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g29-q1/options/0/0",
+      "comparison": {
+        "audioSha256": "86e7fed2ea2136ccd43aa3d0cf0333c6c2a56edbc3100c977fdb56264098d435",
+        "recognized": "I",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A.",
+        "reasons": [
+          "source-anchored-letter:A",
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "lettera"
+        ],
+        "normalizedRecognized": [
+          "letteri"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd"
+        }
+      }
     },
     "p4-g29-q1/options/2/0": {
       "key": "p4-g29-q1/options/2/0",
@@ -143596,7 +145938,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -143607,7 +145949,39 @@
           "recognized": "see"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g29-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g29-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "6bb547a5f5b10925ec9ed6300cd9277db526c29a5b9749c690c8fe6719ce9cde",
+        "recognized": "See.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "C.",
+        "reasons": [
+          "source-anchored-letter:C",
+          "cmu-identical-pronunciation-set:letterc=see"
+        ],
+        "normalizedExpected": [
+          "letterc"
+        ],
+        "normalizedRecognized": [
+          "see"
+        ],
+        "proofExpected": "p:S IY",
+        "proofRecognized": "p:S IY",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d"
+        }
+      }
     },
     "p3-g31-q1/options/3/0": {
       "key": "p3-g31-q1/options/3/0",
@@ -143655,7 +146029,42 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g31-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g31-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "883d97eb3325f0fe1f466d9889b1a798b034530c45c97eadabc0dd07929a86b2",
+        "recognized": "and Orchard Walk.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "An orchard walk",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "an",
+          "orchard",
+          "walk"
+        ],
+        "normalizedRecognized": [
+          "and",
+          "orchard",
+          "walk"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "35d4d0896480727019fd2325e2dd58ba94f521046f5878db4b6a9dd2249848cd"
+        }
+      }
     },
     "p3-g32-q1/options/2/0": {
       "key": "p3-g32-q1/options/2/0",
@@ -143716,7 +146125,45 @@
           "recognized": "inquis to"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g32-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g32-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "8280c726ac3885d6d9401b37fde7cbec3c43c484ebd615c8aea305b997a9d63e",
+        "recognized": "the inquis-to-pale.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The ink was too pale.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "ink",
+          "was",
+          "too",
+          "pale"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "inquis",
+          "to",
+          "pale"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "c4e6d03ceb552dcfdf284aaf3ab2d521acbe7fb650cd1df3ba2655fe3d387c16"
+        }
+      }
     },
     "p3-g32-q3/options/0/0": {
       "key": "p3-g32-q3/options/0/0",
@@ -143777,7 +146224,48 @@
           "recognized": "praise"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g32-q3/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g32-q3/options/0/0",
+      "comparison": {
+        "audioSha256": "a9af57738be1e3a6958b3b498915dbfec1e8d992c850451f0000e4c5e7954a12",
+        "recognized": "to hang up a praise sign.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "To hang up a price sign",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "to",
+          "hang",
+          "up",
+          "a",
+          "price",
+          "sign"
+        ],
+        "normalizedRecognized": [
+          "to",
+          "hang",
+          "up",
+          "a",
+          "praise",
+          "sign"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9ac9adc43e682a7d5cdf4c60371d96b348aef67c637770fde4135656529f764f"
+        }
+      }
     },
     "p3-g35/turns/0/0": {
       "key": "p3-g35/turns/0/0",
@@ -143879,7 +146367,48 @@
           "recognized": "any of"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g35/turns/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g35/turns/2/0",
+      "comparison": {
+        "audioSha256": "94c4dcc851f2e32049825fd6ea9ad139284bf8944e0103081c84260305dc9a80",
+        "recognized": "Do any of the whole toolbox.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Do I need the whole toolbox?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "do",
+          "i",
+          "need",
+          "the",
+          "whole",
+          "toolbox"
+        ],
+        "normalizedRecognized": [
+          "do",
+          "any",
+          "of",
+          "the",
+          "whole",
+          "toolbox"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "feb7b573f44fca52589d424bbb84dda7fa9992fea71b7048d87c68babf25e190"
+        }
+      }
     },
     "p3-g35-q2/options/2/0": {
       "key": "p3-g35-q2/options/2/0",
@@ -144014,7 +146543,39 @@
           "recognized": "kiehl"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/0/0",
+      "comparison": {
+        "audioSha256": "9569a7bde8dcf6d08efaa18f90c0b839a69ad1ecd2d2db436a453ea0f3ca24ef",
+        "recognized": "Kiehl.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Q.",
+        "reasons": [
+          "source-anchored-letter:Q",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "letterq"
+        ],
+        "normalizedRecognized": [
+          "kiehl"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260"
+        }
+      }
     },
     "p3-g38-q1/options/1/0": {
       "key": "p3-g38-q1/options/1/0",
@@ -144063,7 +146624,39 @@
           "recognized": "alright"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "e8bc9e360676a0efdc1a72da24b34bee45282f06826615c8834f368b35ddeb19",
+        "recognized": "Alright.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "R.",
+        "reasons": [
+          "source-anchored-letter:R",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "letterr"
+        ],
+        "normalizedRecognized": [
+          "alright"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
+        }
+      }
     },
     "p3-g38-q1/options/2/0": {
       "key": "p3-g38-q1/options/2/0",
@@ -144112,7 +146705,39 @@
           "recognized": "bye"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "893a6deb568386a269c48553a3fea1a8090b59706994b494a0737a9d69ddad0a",
+        "recognized": "Bye.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "P.",
+        "reasons": [
+          "source-anchored-letter:P",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "letterp"
+        ],
+        "normalizedRecognized": [
+          "bye"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "5c62e091b8c0565f1bafad0dad5934276143ae2ccef7a5381e8ada5b1a8d26d2"
+        }
+      }
     },
     "p3-g38-q1/options/3/0": {
       "key": "p3-g38-q1/options/3/0",
@@ -144161,7 +146786,39 @@
           "recognized": "nice"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g38-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "5a9ae618fed844923c9b2528326bef72625ee11e9009b4c401403ea0793e3a02",
+        "recognized": "Nice.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "S.",
+        "reasons": [
+          "source-anchored-letter:S",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "letters"
+        ],
+        "normalizedRecognized": [
+          "nice"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643"
+        }
+      }
     },
     "p3-g39-q3/options/2/0": {
       "key": "p3-g39-q3/options/2/0",
@@ -144211,7 +146868,7 @@
         "recognized": "Ask for replacement bench.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.2,
       "phonemeErrorRate": null,
@@ -144222,7 +146879,45 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g39-q3/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g39-q3/options/2/0",
+      "comparison": {
+        "audioSha256": "bdd3be2f47e4f227d7a5cdc2087e664541c746c956fec4b13874cbca337e28ea",
+        "recognized": "Ask for replacement bench.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Ask for a replacement bench",
+        "reasons": [
+          "user-allowed-article:expected-a"
+        ],
+        "normalizedExpected": [
+          "ask",
+          "for",
+          "a",
+          "replacement",
+          "bench"
+        ],
+        "normalizedRecognized": [
+          "ask",
+          "for",
+          "replacement",
+          "bench"
+        ],
+        "proofExpected": "t:ask | t:for | t:replacement | t:bench",
+        "proofRecognized": "t:ask | t:for | t:replacement | t:bench",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "bea756ed899b04c538ce30b36117f2cdf63f32583a260244cf41f1c79266de53"
+        }
+      }
     },
     "p3-g39-q3/options/3/0": {
       "key": "p3-g39-q3/options/3/0",
@@ -144326,7 +147021,46 @@
           "recognized": "pattern"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g40-q3/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g40-q3/options/1/0",
+      "comparison": {
+        "audioSha256": "d8519498e398824008d5c3140bb62c4a20b7b85d0a2ce411a0af7f4a5547c2b7",
+        "recognized": "to remove the pattern section.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "To remove the patterned section",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "to",
+          "remove",
+          "the",
+          "patterned",
+          "section"
+        ],
+        "normalizedRecognized": [
+          "to",
+          "remove",
+          "the",
+          "pattern",
+          "section"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "c430539fabefe73cc3d635e6c5190f3853a3c3011d23677f58b7a069ecf5411c"
+        }
+      }
     },
     "p3-g41-q2/prompt/0": {
       "key": "p3-g41-q2/prompt/0",
@@ -144514,7 +147248,50 @@
           "recognized": "hide"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g43-q2/prompt/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g43-q2/prompt/0",
+      "comparison": {
+        "audioSha256": "b03df6ee9563cbf57c8bab5222cf3e1b81f23d5c1f2773c2152804bd47060db2",
+        "recognized": "What does hide a useful distinction imply?",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "What does “hides a useful distinction” imply?",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "what",
+          "does",
+          "hides",
+          "a",
+          "useful",
+          "distinction",
+          "imply"
+        ],
+        "normalizedRecognized": [
+          "what",
+          "does",
+          "hide",
+          "a",
+          "useful",
+          "distinction",
+          "imply"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f01906c13c5382c83ec76b3921c28a41304b9986806b97d13bcc4b84842383fc"
+        }
+      }
     },
     "p3-g44-q1/options/2/0": {
       "key": "p3-g44-q1/options/2/0",
@@ -144573,7 +147350,46 @@
           "recognized": "guess the"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g44-q1/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g44-q1/options/2/0",
+      "comparison": {
+        "audioSha256": "32f0af59d06ea3210c04c78ab58261d8e1416a5eb5af48ec0b92b7666d52ba1e",
+        "recognized": "Guess the next year's workshop.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Guests at next year's workshop",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "guests",
+          "at",
+          "next",
+          "year's",
+          "workshop"
+        ],
+        "normalizedRecognized": [
+          "guess",
+          "the",
+          "next",
+          "year's",
+          "workshop"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "dcaf6f037477b1c89b0df7cbcbdca801a653eb3d028079a627b7e6045ab99503"
+        }
+      }
     },
     "p3-g46-q1/options/1/0": {
       "key": "p3-g46-q1/options/1/0",
@@ -144611,7 +147427,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -144622,7 +147438,39 @@
           "recognized": "see"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g46-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g46-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "9cdcae45d82753975f7a5bb281ccde01003007fcc08510340d2723a8cddacc8e",
+        "recognized": "See.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "C.",
+        "reasons": [
+          "source-anchored-letter:C",
+          "cmu-identical-pronunciation-set:letterc=see"
+        ],
+        "normalizedExpected": [
+          "letterc"
+        ],
+        "normalizedRecognized": [
+          "see"
+        ],
+        "proofExpected": "p:S IY",
+        "proofRecognized": "p:S IY",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d"
+        }
+      }
     },
     "p3-g47/turns/4/0": {
       "key": "p3-g47/turns/4/0",
@@ -144683,7 +147531,56 @@
           "recognized": "tear"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g47/turns/4/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g47/turns/4/0",
+      "comparison": {
+        "audioSha256": "7bd46bbdac81a812a713fa625ffe52f530a156b8897cae0652dad593b8da0dcd",
+        "recognized": "We should measure the full tear before comparing net weights.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "We should measure the full tare before comparing net weights.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "we",
+          "should",
+          "measure",
+          "the",
+          "full",
+          "tare",
+          "before",
+          "comparing",
+          "net",
+          "weights"
+        ],
+        "normalizedRecognized": [
+          "we",
+          "should",
+          "measure",
+          "the",
+          "full",
+          "tear",
+          "before",
+          "comparing",
+          "net",
+          "weights"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20"
+        }
+      }
     },
     "p3-g47-d/text/0": {
       "key": "p3-g47-d/text/0",
@@ -144744,7 +147641,56 @@
           "recognized": "tear"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g47-d/text/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g47-d/text/0",
+      "comparison": {
+        "audioSha256": "7bd46bbdac81a812a713fa625ffe52f530a156b8897cae0652dad593b8da0dcd",
+        "recognized": "We should measure the full tear before comparing net weights.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "We should measure the full tare before comparing net weights.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "we",
+          "should",
+          "measure",
+          "the",
+          "full",
+          "tare",
+          "before",
+          "comparing",
+          "net",
+          "weights"
+        ],
+        "normalizedRecognized": [
+          "we",
+          "should",
+          "measure",
+          "the",
+          "full",
+          "tear",
+          "before",
+          "comparing",
+          "net",
+          "weights"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20"
+        }
+      }
     },
     "p3-g47-q1/options/3/0": {
       "key": "p3-g47-q1/options/3/0",
@@ -144803,7 +147749,50 @@
           "recognized": "lids"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g47-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g47-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "b9304bcfac240680135ee64c64c62d10642536603fb3c8212cbcdb10ab23f7c6",
+        "recognized": "The lids weight remained in the result.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The lid's weight remained in the result.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "the",
+          "lid's",
+          "weight",
+          "remained",
+          "in",
+          "the",
+          "result"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "lids",
+          "weight",
+          "remained",
+          "in",
+          "the",
+          "result"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "9e1dfb0a134c461390156ae760adcfafb25072d8578739de93febd1127779995"
+        }
+      }
     },
     "p3-g48-q3/options/2/0": {
       "key": "p3-g48-q3/options/2/0",
@@ -144851,7 +147840,7 @@
         "recognized": "The catalog entry.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3333,
       "phonemeErrorRate": null,
@@ -144862,7 +147851,42 @@
           "recognized": "catalog"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g48-q3/options/2/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g48-q3/options/2/0",
+      "comparison": {
+        "audioSha256": "156b738354e4c51bdd3293e3b71756a732992eb5c34b0995cbe2f605cad83399",
+        "recognized": "The Catalog Entry",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "The catalogue entry",
+        "reasons": [
+          "cmu-identical-pronunciation-set:catalogue=catalog"
+        ],
+        "normalizedExpected": [
+          "the",
+          "catalogue",
+          "entry"
+        ],
+        "normalizedRecognized": [
+          "the",
+          "catalog",
+          "entry"
+        ],
+        "proofExpected": "t:the | p:K AE T AH L AO G | t:entry",
+        "proofRecognized": "t:the | p:K AE T AH L AO G | t:entry",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "00bd671f6369dc6fa46227c461ea6176ad47298b3610dd6e234048912dd8f980"
+        }
+      }
     },
     "p3-g51-q1/options/2/0": {
       "key": "p3-g51-q1/options/2/0",
@@ -144966,7 +147990,46 @@
           "recognized": "vs"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g51-q1/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p3-g51-q1/options/3/0",
+      "comparison": {
+        "audioSha256": "62b084621c3bbfd95756ea202f89c636d40ec119bb0680d7d5d6d05a7cbd2a7f",
+        "recognized": "Staff Hours vs. Elapsed downtime.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Staff-hours versus elapsed downtime",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "staff",
+          "hours",
+          "versus",
+          "elapsed",
+          "downtime"
+        ],
+        "normalizedRecognized": [
+          "staff",
+          "hours",
+          "vs",
+          "elapsed",
+          "downtime"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "2554822523f905016a25175a6f850f27b932dbb582f1e96127982b01c2a57c86"
+        }
+      }
     },
     "p4-g31-q3/options/2/0": {
       "key": "p4-g31-q3/options/2/0",
@@ -145057,7 +148120,7 @@
         "recognized": "It's small number lets us find your seat in the system.",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.3636,
       "phonemeErrorRate": null,
@@ -145073,7 +148136,59 @@
           "recognized": "let us"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g33/turns/0/4"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g33/turns/0/4",
+      "comparison": {
+        "audioSha256": "59f0f6b4160e520ab94712aa69717d3ef8f52543d233afd9ba11f21b4caf5fc8",
+        "recognized": "It's small number. Let's us find your seat in the system.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Its small number lets us find your seat in the system.",
+        "reasons": [
+          "cmu-identical-pronunciation-set:its=it's",
+          "cmu-identical-pronunciation-set:lets=let's"
+        ],
+        "normalizedExpected": [
+          "its",
+          "small",
+          "number",
+          "lets",
+          "us",
+          "find",
+          "your",
+          "seat",
+          "in",
+          "the",
+          "system"
+        ],
+        "normalizedRecognized": [
+          "it's",
+          "small",
+          "number",
+          "let's",
+          "us",
+          "find",
+          "your",
+          "seat",
+          "in",
+          "the",
+          "system"
+        ],
+        "proofExpected": "p:IH T S | t:small | t:number | p:L EH T S | t:us | t:find | t:your | t:seat | t:in | t:the | t:system",
+        "proofRecognized": "p:IH T S | t:small | t:number | p:L EH T S | t:us | t:find | t:your | t:seat | t:in | t:the | t:system",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "406a9d8f1d1c32ff7a6ef0a070f70b919beffb300e093dfeb7235501b3d7803f"
+        }
+      }
     },
     "p4-g34-q1/options/0/0": {
       "key": "p4-g34-q1/options/0/0",
@@ -145177,7 +148292,40 @@
           "recognized": "pockets"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g34-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g34-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "52e7ffb1e587083d4f62b670faa9dc13321fe421633aad8b5eb9be88191177a7",
+        "recognized": "Seed Pockets",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Seed packets",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "seed",
+          "packets"
+        ],
+        "normalizedRecognized": [
+          "seed",
+          "pockets"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "813c2ec88a40adb0c808aec2796280e2aed563eefe38e1549f64f61e007f63b4"
+        }
+      }
     },
     "p4-g37/turns/0/3": {
       "key": "p4-g37/turns/0/3",
@@ -145238,7 +148386,58 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g37/turns/0/3"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g37/turns/0/3",
+      "comparison": {
+        "audioSha256": "4b1c0932a956b004935fd4d2d6f9536af599b23b0831fe9651d2b9a6caac4c10",
+        "recognized": "Before drawing conclusions about attendance, add the side gate scan total.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Before drawing conclusions about attendance, add the side gate's scan total.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "before",
+          "drawing",
+          "conclusions",
+          "about",
+          "attendance",
+          "add",
+          "the",
+          "side",
+          "gate's",
+          "scan",
+          "total"
+        ],
+        "normalizedRecognized": [
+          "before",
+          "drawing",
+          "conclusions",
+          "about",
+          "attendance",
+          "add",
+          "the",
+          "side",
+          "gate",
+          "scan",
+          "total"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "794edfc65daec8661f0a07913739d3e5048513af625fc9bb178453b4195b7841"
+        }
+      }
     },
     "p4-g37-q1/options/1/0": {
       "key": "p4-g37-q1/options/1/0",
@@ -145299,7 +148498,48 @@
           "recognized": "entrance"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g37-q1/options/1/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g37-q1/options/1/0",
+      "comparison": {
+        "audioSha256": "1380f63e2d2e79a436508bf2ee259a31dd0dde428abfdcb2ef71fc6183b7caff",
+        "recognized": "It missed entrance using phone passes.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "It missed entrants using phone passes.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "it",
+          "missed",
+          "entrants",
+          "using",
+          "phone",
+          "passes"
+        ],
+        "normalizedRecognized": [
+          "it",
+          "missed",
+          "entrance",
+          "using",
+          "phone",
+          "passes"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "66745d10a154edd83e33196bce963d2f8c165e6594e5e852d9ce14cbcc010544"
+        }
+      }
     },
     "p4-g40-q1/options/0/0": {
       "key": "p4-g40-q1/options/0/0",
@@ -145360,7 +148600,50 @@
           "recognized": "move"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g40-q1/options/0/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g40-q1/options/0/0",
+      "comparison": {
+        "audioSha256": "1e3d41b85d0d389c412c2f0f4464041de05c80662be5bba2efa23e8dee60dbf7",
+        "recognized": "Packaging complaints move to a separate list.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "Packaging complaints moved to a separate list.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "packaging",
+          "complaints",
+          "moved",
+          "to",
+          "a",
+          "separate",
+          "list"
+        ],
+        "normalizedRecognized": [
+          "packaging",
+          "complaints",
+          "move",
+          "to",
+          "a",
+          "separate",
+          "list"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "1a2d23ca76edbbf77abdbad53f633a3b616b9e9373d2a1cbb95b272bcd65cee8"
+        }
+      }
     },
     "p4-g40-q2/options/3/0": {
       "key": "p4-g40-q2/options/3/0",
@@ -145419,7 +148702,51 @@
           "recognized": "your classification"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g40-q2/options/3/0"
+      "retryEvidence": "./data/audio/retries.json#en:listening:p4-g40-q2/options/3/0",
+      "comparison": {
+        "audioSha256": "b56e4eb9a99aab6edc4c89a0e11ed3591edac34c4f8e9e17b5df89c7f2626f29",
+        "recognized": "A lower reported rate may reflect your classification.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A lower reported rate may reflect reclassification.",
+        "reasons": [
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "a",
+          "lower",
+          "reported",
+          "rate",
+          "may",
+          "reflect",
+          "reclassification"
+        ],
+        "normalizedRecognized": [
+          "a",
+          "lower",
+          "reported",
+          "rate",
+          "may",
+          "reflect",
+          "your",
+          "classification"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "3b158559df12aa03f1d23ac053ebd35c22feb7f0f2251f853e7aa0b8fc9d9e54"
+        }
+      }
     }
   },
   "generation": {

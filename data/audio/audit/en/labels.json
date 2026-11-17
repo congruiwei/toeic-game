@@ -290,7 +290,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -301,7 +301,39 @@
           "recognized": "see"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_heart/C"
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_heart/C",
+      "comparison": {
+        "audioSha256": "9cdcae45d82753975f7a5bb281ccde01003007fcc08510340d2723a8cddacc8e",
+        "recognized": "See.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "C.",
+        "reasons": [
+          "source-anchored-letter:C",
+          "cmu-identical-pronunciation-set:letterc=see"
+        ],
+        "normalizedExpected": [
+          "letterc"
+        ],
+        "normalizedRecognized": [
+          "see"
+        ],
+        "proofExpected": "p:S IY",
+        "proofRecognized": "p:S IY",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "acbbb708385721a6275edb28b2265071ab2c596d66c45e0f095ca22a55c6fb7d"
+        }
+      }
     },
     "labels/am_puck/A": {
       "key": "labels/am_puck/A",
@@ -362,7 +394,39 @@
           "recognized": "bye"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/A"
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/A",
+      "comparison": {
+        "audioSha256": "4c13e50e5a0f4e8fa820809c8c8698b1eb5f8e0cf36c9e37c796f7eb91103145",
+        "recognized": "Bye.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A.",
+        "reasons": [
+          "source-anchored-letter:A",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "lettera"
+        ],
+        "normalizedRecognized": [
+          "bye"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991"
+        }
+      }
     },
     "labels/am_puck/B": {
       "key": "labels/am_puck/B",
@@ -423,7 +487,39 @@
           "recognized": "bye"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/B"
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/B",
+      "comparison": {
+        "audioSha256": "f189462ea3880f809b0538fbb7418a07964820d5792df88ede4d233f7d671506",
+        "recognized": "Bye.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "B.",
+        "reasons": [
+          "source-anchored-letter:B",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "letterb"
+        ],
+        "normalizedRecognized": [
+          "bye"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "be651d5a8e97690fbb1fafd9b89ea7bb5458b27b1d24a449c67ca762317ac1df"
+        }
+      }
     },
     "labels/am_puck/C": {
       "key": "labels/am_puck/C",
@@ -473,7 +569,7 @@
         "recognized": "hey",
         "normalizedExact": false
       },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -484,7 +580,39 @@
           "recognized": "see"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/C"
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/C",
+      "comparison": {
+        "audioSha256": "4345eec0b66510ab54f319efdc107fd66d7fd0d034a36aa5ee5353c32b2593aa",
+        "recognized": "See?",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "C.",
+        "reasons": [
+          "source-anchored-letter:C",
+          "cmu-identical-pronunciation-set:letterc=see"
+        ],
+        "normalizedExpected": [
+          "letterc"
+        ],
+        "normalizedRecognized": [
+          "see"
+        ],
+        "proofExpected": "p:S IY",
+        "proofRecognized": "p:S IY",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "acbbb708385721a6275edb28b2265071ab2c596d66c45e0f095ca22a55c6fb7d"
+        }
+      }
     },
     "labels/am_puck/D": {
       "key": "labels/am_puck/D",
@@ -543,7 +671,39 @@
           "recognized": "day"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/D"
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/D",
+      "comparison": {
+        "audioSha256": "a7eb6223a1d962fbdb21ae133aaf967533bfa5495110686d859318fea6164292",
+        "recognized": "Day.",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "D.",
+        "reasons": [
+          "source-anchored-letter:D",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "letterd"
+        ],
+        "normalizedRecognized": [
+          "day"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "f9e487799dfc7882b1a0db047999249489d02726b2c82055cb68a6bb0311f118"
+        }
+      }
     },
     "labels/af_bella/A": {
       "key": "labels/af_bella/A",
@@ -592,7 +752,40 @@
           "recognized": "i"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_bella/A"
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_bella/A",
+      "comparison": {
+        "audioSha256": "86e7fed2ea2136ccd43aa3d0cf0333c6c2a56edbc3100c977fdb56264098d435",
+        "recognized": "I",
+        "equivalent": false,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "A.",
+        "reasons": [
+          "source-anchored-letter:A",
+          "author-number-and-input-normalization",
+          "non-equivalent-segments-remain"
+        ],
+        "normalizedExpected": [
+          "lettera"
+        ],
+        "normalizedRecognized": [
+          "letteri"
+        ],
+        "proofExpected": null,
+        "proofRecognized": null,
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991"
+        }
+      }
     },
     "labels/af_bella/C": {
       "key": "labels/af_bella/C",
@@ -630,7 +823,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 1.0,
       "phonemeErrorRate": null,
@@ -641,7 +834,39 @@
           "recognized": "see"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_bella/C"
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_bella/C",
+      "comparison": {
+        "audioSha256": "6bb547a5f5b10925ec9ed6300cd9277db526c29a5b9749c690c8fe6719ce9cde",
+        "recognized": "See.",
+        "equivalent": true,
+        "ruleVersion": "strict-audio-equivalence-1",
+        "language": "en",
+        "expectedSpoken": "C.",
+        "reasons": [
+          "source-anchored-letter:C",
+          "cmu-identical-pronunciation-set:letterc=see"
+        ],
+        "normalizedExpected": [
+          "letterc"
+        ],
+        "normalizedRecognized": [
+          "see"
+        ],
+        "proofExpected": "p:S IY",
+        "proofRecognized": "p:S IY",
+        "provenance": {
+          "comparison": "exact transforms only; no edit-distance acceptance",
+          "cmudict": "1.1.3",
+          "fugashi": "1.5.2",
+          "unidic": "1.1.0",
+          "pykakasi": "2.3.0",
+          "normalizer": "normalize",
+          "phonemeOverride": false,
+          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "sourceTextSha256": "acbbb708385721a6275edb28b2265071ab2c596d66c45e0f095ca22a55c6fb7d"
+        }
+      }
     }
   },
   "generation": {
