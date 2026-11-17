@@ -1,0 +1,565 @@
+{
+  "version": 1,
+  "id": "e5861d881fefe269456e8d3e4b287676bb0ee4b78d5369f9e02988482e6e52b9",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 20.9415,
+  "elapsedSeconds": 8.258,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.6,
+      "sha256": "8bfa0a46a9fa8ab4c2953ec0b76ad2cf3fddf2390d61a4c13756d21f66a583f1",
+      "src": "./audio/generated/ja/jf_alpha/a62fe6d4bcccf1d20675935db279688a.m4a"
+    },
+    {
+      "offset": 4.2,
+      "end": 7.0586875,
+      "sha256": "ac450e3db750349f17fc471b0cb62115deb1b3ad79db2f78a5e9a90b79424207",
+      "src": "./audio/generated/ja/jf_alpha/dace78f79fc27c36c8bd7fa4fe5f4921.m4a"
+    },
+    {
+      "offset": 7.658687499999999,
+      "end": 10.6880625,
+      "sha256": "7f914ef673bd8c7ea89a9445fe439cfb5ce8ac1f1428f4718c41b96b797fac0c",
+      "src": "./audio/generated/ja/jf_alpha/7c387853cdce18527c7e93585039f0d1.m4a"
+    },
+    {
+      "offset": 11.288062499999999,
+      "end": 12.73875,
+      "sha256": "8a63f3837547c022e7150e116be932217c78117a530946090f2aaf601a824c2c",
+      "src": "./audio/generated/ja/jf_alpha/f280c8221185d8cb67d71873b156bd76.m4a"
+    },
+    {
+      "offset": 13.33875,
+      "end": 15.344124999999998,
+      "sha256": "bda02ca4cb7f0527d3642674204dda2c2c0c3a8b82a6671651242ce00aab0535",
+      "src": "./audio/generated/ja/jf_alpha/21d2110e9647ea65dbfb894cce885d93.m4a"
+    },
+    {
+      "offset": 15.944124999999998,
+      "end": 17.778812499999997,
+      "sha256": "b80fd2b8ff76b852059d62ac668db1329919b0392d52023c57dd18ae31b00c7d",
+      "src": "./audio/generated/ja/jf_alpha/31630da6f04b472559485b1840795e52.m4a"
+    },
+    {
+      "offset": 18.3788125,
+      "end": 20.3415,
+      "sha256": "48b5ad217f96ed7d4e7b4e81cc2a07d6a2a0cff5868d60a528ddbe477be97a3d",
+      "src": "./audio/generated/ja/jf_alpha/32e305636f731b8b008997e336c4d77b.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "日",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.7904077768325806
+    },
+    {
+      "word": "曜",
+      "start": 0.62,
+      "end": 0.96,
+      "probability": 0.9940246939659119
+    },
+    {
+      "word": "日",
+      "start": 0.96,
+      "end": 1.14,
+      "probability": 0.9989269375801086
+    },
+    {
+      "word": "の",
+      "start": 1.14,
+      "end": 1.26,
+      "probability": 0.9750512838363647
+    },
+    {
+      "word": "8",
+      "start": 1.26,
+      "end": 1.46,
+      "probability": 0.9309003949165344
+    },
+    {
+      "word": "時",
+      "start": 1.46,
+      "end": 1.64,
+      "probability": 0.994907796382904
+    },
+    {
+      "word": "に",
+      "start": 1.64,
+      "end": 1.78,
+      "probability": 0.9928526282310486
+    },
+    {
+      "word": "カ",
+      "start": 1.78,
+      "end": 1.96,
+      "probability": 0.9303200840950012
+    },
+    {
+      "word": "ウ",
+      "start": 1.96,
+      "end": 2.06,
+      "probability": 0.9977765679359436
+    },
+    {
+      "word": "ン",
+      "start": 2.06,
+      "end": 2.1,
+      "probability": 0.9836822152137756
+    },
+    {
+      "word": "ター",
+      "start": 2.1,
+      "end": 2.26,
+      "probability": 0.9979795813560486
+    },
+    {
+      "word": "で",
+      "start": 2.26,
+      "end": 2.44,
+      "probability": 0.9893926382064819
+    },
+    {
+      "word": "注",
+      "start": 2.44,
+      "end": 2.66,
+      "probability": 0.9873809814453125
+    },
+    {
+      "word": "文",
+      "start": 2.66,
+      "end": 2.86,
+      "probability": 0.9935011267662048
+    },
+    {
+      "word": "する",
+      "start": 2.86,
+      "end": 3.14,
+      "probability": 0.9049916863441467
+    },
+    {
+      "word": "人、",
+      "start": 3.14,
+      "end": 3.36,
+      "probability": 0.9617795944213867
+    },
+    {
+      "word": "平",
+      "start": 3.94,
+      "end": 4.44,
+      "probability": 0.7365185022354126
+    },
+    {
+      "word": "日",
+      "start": 4.44,
+      "end": 4.66,
+      "probability": 0.9962533712387085
+    },
+    {
+      "word": "の",
+      "start": 4.66,
+      "end": 4.84,
+      "probability": 0.8967627882957458
+    },
+    {
+      "word": "9",
+      "start": 4.84,
+      "end": 4.98,
+      "probability": 0.9684613943099976
+    },
+    {
+      "word": "時",
+      "start": 4.98,
+      "end": 5.12,
+      "probability": 0.9988940358161926
+    },
+    {
+      "word": "に",
+      "start": 5.12,
+      "end": 5.24,
+      "probability": 0.9983360171318054
+    },
+    {
+      "word": "カ",
+      "start": 5.24,
+      "end": 5.44,
+      "probability": 0.9846901893615723
+    },
+    {
+      "word": "ウ",
+      "start": 5.44,
+      "end": 5.54,
+      "probability": 0.9993209838867188
+    },
+    {
+      "word": "ン",
+      "start": 5.54,
+      "end": 5.58,
+      "probability": 0.9994276165962219
+    },
+    {
+      "word": "ター",
+      "start": 5.58,
+      "end": 5.74,
+      "probability": 0.9994300007820129
+    },
+    {
+      "word": "で",
+      "start": 5.74,
+      "end": 5.9,
+      "probability": 0.9916024804115295
+    },
+    {
+      "word": "注",
+      "start": 5.9,
+      "end": 6.14,
+      "probability": 0.9935728311538696
+    },
+    {
+      "word": "文",
+      "start": 6.14,
+      "end": 6.38,
+      "probability": 0.9989357590675354
+    },
+    {
+      "word": "する",
+      "start": 6.38,
+      "end": 6.6,
+      "probability": 0.9916960597038269
+    },
+    {
+      "word": "人、",
+      "start": 6.6,
+      "end": 6.84,
+      "probability": 0.9934250116348267
+    },
+    {
+      "word": "この",
+      "start": 7.46,
+      "end": 7.92,
+      "probability": 0.8781202435493469
+    },
+    {
+      "word": "サ",
+      "start": 7.92,
+      "end": 8.18,
+      "probability": 0.9888518452644348
+    },
+    {
+      "word": "ービ",
+      "start": 8.18,
+      "end": 8.36,
+      "probability": 0.9984947144985199
+    },
+    {
+      "word": "ス",
+      "start": 8.36,
+      "end": 8.5,
+      "probability": 0.9995400905609131
+    },
+    {
+      "word": "で",
+      "start": 8.5,
+      "end": 8.64,
+      "probability": 0.9988262057304382
+    },
+    {
+      "word": "提",
+      "start": 8.64,
+      "end": 8.92,
+      "probability": 0.9928612112998962
+    },
+    {
+      "word": "供",
+      "start": 8.92,
+      "end": 9.08,
+      "probability": 0.9993298947811127
+    },
+    {
+      "word": "さ",
+      "start": 9.08,
+      "end": 9.32,
+      "probability": 0.9914161562919617
+    },
+    {
+      "word": "れる",
+      "start": 9.32,
+      "end": 9.5,
+      "probability": 0.9971174001693726
+    },
+    {
+      "word": "も",
+      "start": 9.5,
+      "end": 9.62,
+      "probability": 0.8087747097015381
+    },
+    {
+      "word": "のは",
+      "start": 9.62,
+      "end": 9.88,
+      "probability": 0.9997301697731018
+    },
+    {
+      "word": "何",
+      "start": 9.88,
+      "end": 10.06,
+      "probability": 0.8394356369972229
+    },
+    {
+      "word": "ですか。",
+      "start": 10.06,
+      "end": 10.46,
+      "probability": 0.9946381449699402
+    },
+    {
+      "word": "小",
+      "start": 11.16,
+      "end": 11.56,
+      "probability": 0.044196438044309616
+    },
+    {
+      "word": "サ",
+      "start": 11.56,
+      "end": 11.82,
+      "probability": 0.9358816146850586
+    },
+    {
+      "word": "イ",
+      "start": 11.82,
+      "end": 11.88,
+      "probability": 0.9979578256607056
+    },
+    {
+      "word": "ズ",
+      "start": 11.88,
+      "end": 11.98,
+      "probability": 0.9992823004722595
+    },
+    {
+      "word": "の",
+      "start": 11.98,
+      "end": 12.12,
+      "probability": 0.9719142317771912
+    },
+    {
+      "word": "ジ",
+      "start": 12.12,
+      "end": 12.28,
+      "probability": 0.9478546977043152
+    },
+    {
+      "word": "ュ",
+      "start": 12.28,
+      "end": 12.34,
+      "probability": 0.996575653553009
+    },
+    {
+      "word": "ー",
+      "start": 12.34,
+      "end": 12.38,
+      "probability": 0.9919033646583557
+    },
+    {
+      "word": "ス",
+      "start": 12.38,
+      "end": 12.58,
+      "probability": 0.9991427659988403
+    },
+    {
+      "word": " 無",
+      "start": 13.06,
+      "end": 13.58,
+      "probability": 0.9822854995727539
+    },
+    {
+      "word": "料",
+      "start": 13.58,
+      "end": 13.76,
+      "probability": 0.9618325233459473
+    },
+    {
+      "word": "の",
+      "start": 13.76,
+      "end": 13.94,
+      "probability": 0.9884451627731323
+    },
+    {
+      "word": "温",
+      "start": 13.94,
+      "end": 14.18,
+      "probability": 0.85394287109375
+    },
+    {
+      "word": "か",
+      "start": 14.18,
+      "end": 14.48,
+      "probability": 0.9876976609230042
+    },
+    {
+      "word": "い",
+      "start": 14.48,
+      "end": 14.58,
+      "probability": 0.9954956769943237
+    },
+    {
+      "word": "朝",
+      "start": 14.58,
+      "end": 14.8,
+      "probability": 0.2832857668399811
+    },
+    {
+      "word": "食",
+      "start": 14.8,
+      "end": 15.12,
+      "probability": 0.9914352297782898
+    },
+    {
+      "word": "2",
+      "start": 15.76,
+      "end": 16.16,
+      "probability": 0.5637847185134888
+    },
+    {
+      "word": "枚",
+      "start": 16.16,
+      "end": 16.34,
+      "probability": 0.9882393479347229
+    },
+    {
+      "word": "目",
+      "start": 16.34,
+      "end": 16.54,
+      "probability": 0.9952326416969299
+    },
+    {
+      "word": "の",
+      "start": 16.54,
+      "end": 16.66,
+      "probability": 0.9981876015663147
+    },
+    {
+      "word": "朝",
+      "start": 16.66,
+      "end": 16.88,
+      "probability": 0.9956722259521484
+    },
+    {
+      "word": "食",
+      "start": 16.88,
+      "end": 17.18,
+      "probability": 0.9995869994163513
+    },
+    {
+      "word": "カ",
+      "start": 17.18,
+      "end": 17.36,
+      "probability": 0.9675579071044922
+    },
+    {
+      "word": "ード",
+      "start": 17.36,
+      "end": 17.6,
+      "probability": 0.9978783130645752
+    },
+    {
+      "word": " テ",
+      "start": 17.6,
+      "end": 18.56,
+      "probability": 0.69661845266819
+    },
+    {
+      "word": "ーブ",
+      "start": 18.56,
+      "end": 18.76,
+      "probability": 0.9965145587921143
+    },
+    {
+      "word": "ル",
+      "start": 18.76,
+      "end": 18.9,
+      "probability": 0.999380350112915
+    },
+    {
+      "word": "サ",
+      "start": 18.9,
+      "end": 19.1,
+      "probability": 0.9899252653121948
+    },
+    {
+      "word": "ービ",
+      "start": 19.1,
+      "end": 19.26,
+      "probability": 0.9974533021450043
+    },
+    {
+      "word": "ス",
+      "start": 19.26,
+      "end": 19.42,
+      "probability": 0.9994756579399109
+    },
+    {
+      "word": "の",
+      "start": 19.42,
+      "end": 19.54,
+      "probability": 0.9929435849189758
+    },
+    {
+      "word": "割",
+      "start": 19.54,
+      "end": 19.72,
+      "probability": 0.9554691910743713
+    },
+    {
+      "word": "引",
+      "start": 19.72,
+      "end": 20.04,
+      "probability": 0.9567487239837646
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.46,
+      "text": "日曜日の8時にカウンターで注文する人、平日の9時にカウンターで注文する人、このサービスで提供されるものは何ですか。",
+      "avgLogprob": -0.13205225434568194,
+      "noSpeechProb": 0.06429513543844223
+    },
+    {
+      "start": 11.16,
+      "end": 15.12,
+      "text": "小サイズのジュース 無料の温かい朝食",
+      "avgLogprob": -0.26386499404907227,
+      "noSpeechProb": 0.3598268926143646
+    },
+    {
+      "start": 15.76,
+      "end": 20.04,
+      "text": "2枚目の朝食カード テーブルサービスの割引",
+      "avgLogprob": -0.26386499404907227,
+      "noSpeechProb": 0.3598268926143646
+    }
+  ]
+}

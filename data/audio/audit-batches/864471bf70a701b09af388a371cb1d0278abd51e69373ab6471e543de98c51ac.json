@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "id": "864471bf70a701b09af388a371cb1d0278abd51e69373ab6471e543de98c51ac",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 8.8960625,
+  "elapsedSeconds": 3.289,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.0026875,
+      "sha256": "210b3f781662f07edf19a75e195b7acfbe7d7a2a47ad744952b7cc631820cc59",
+      "src": "./audio/generated/en/af_bella/3e3e9ac145f0b8598163da00bfaa0e99.m4a"
+    },
+    {
+      "offset": 3.6026875,
+      "end": 8.2960625,
+      "sha256": "e554c75086c2bce48066916539412d491599336aee45618ac5237fa1dd5d4ed8",
+      "src": "./audio/generated/en/af_bella/606bb8c8d991f681fff83471c25867f4.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9387645721435547
+    },
+    {
+      "word": " driver",
+      "start": 0.54,
+      "end": 0.86,
+      "probability": 0.9868631362915039
+    },
+    {
+      "word": " will",
+      "start": 0.86,
+      "end": 1.26,
+      "probability": 0.9918900728225708
+    },
+    {
+      "word": " follow",
+      "start": 1.26,
+      "end": 1.58,
+      "probability": 0.99623042345047
+    },
+    {
+      "word": " the",
+      "start": 1.58,
+      "end": 1.76,
+      "probability": 0.9962253570556641
+    },
+    {
+      "word": " printed",
+      "start": 1.76,
+      "end": 2.02,
+      "probability": 0.9843495488166809
+    },
+    {
+      "word": " timetable.",
+      "start": 2.02,
+      "end": 2.78,
+      "probability": 0.9879549741744995
+    },
+    {
+      "word": " Staff",
+      "start": 3.48,
+      "end": 3.88,
+      "probability": 0.98770672082901
+    },
+    {
+      "word": " at",
+      "start": 3.88,
+      "end": 4.06,
+      "probability": 0.9949555993080139
+    },
+    {
+      "word": " the",
+      "start": 4.06,
+      "end": 4.14,
+      "probability": 0.9944755434989929
+    },
+    {
+      "word": " hotel",
+      "start": 4.14,
+      "end": 4.38,
+      "probability": 0.9103530049324036
+    },
+    {
+      "word": " desk",
+      "start": 4.38,
+      "end": 4.88,
+      "probability": 0.9965524673461914
+    },
+    {
+      "word": " can",
+      "start": 4.88,
+      "end": 5.36,
+      "probability": 0.9691353440284729
+    },
+    {
+      "word": " exchange",
+      "start": 5.36,
+      "end": 5.78,
+      "probability": 0.9933966398239136
+    },
+    {
+      "word": " unused",
+      "start": 5.78,
+      "end": 6.22,
+      "probability": 0.9963603615760803
+    },
+    {
+      "word": " tickets",
+      "start": 6.22,
+      "end": 6.78,
+      "probability": 0.9906761646270752
+    },
+    {
+      "word": " until",
+      "start": 6.78,
+      "end": 7.16,
+      "probability": 0.9831418991088867
+    },
+    {
+      "word": " a",
+      "start": 7.16,
+      "end": 7.3,
+      "probability": 0.9825534224510193
+    },
+    {
+      "word": " bus",
+      "start": 7.3,
+      "end": 7.5,
+      "probability": 0.9919247031211853
+    },
+    {
+      "word": " departs.",
+      "start": 7.5,
+      "end": 8.24,
+      "probability": 0.9970737993717194
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.78,
+      "text": " The driver will follow the printed timetable.",
+      "avgLogprob": -0.16138533353805543,
+      "noSpeechProb": 0.006819858215749264
+    },
+    {
+      "start": 3.48,
+      "end": 8.24,
+      "text": " Staff at the hotel desk can exchange unused tickets until a bus departs.",
+      "avgLogprob": -0.16138533353805543,
+      "noSpeechProb": 0.006819858215749264
+    }
+  ]
+}

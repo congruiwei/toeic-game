@@ -1,0 +1,645 @@
+{
+  "version": 1,
+  "id": "dffa21b25d8b8ed30407612fada3cd02270f00cf4f5ccab4098545bfbe32662c",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.856062500000004,
+  "elapsedSeconds": 5.489,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 4.752000000000001,
+      "sha256": "4bfefaee5449b75cdb6753d34c28a9171ddc3e3b7beea2cee196562ebed5bbf3",
+      "src": "./audio/generated/ja/jf_alpha/bb3e1475eda640df1780dbcb7a3092e6.m4a"
+    },
+    {
+      "offset": 5.352,
+      "end": 7.3146875,
+      "sha256": "901e13df1aeb1eb43a726d7c6cfe73a5336eee21cacd3c9c62c331770ceb8b3f",
+      "src": "./audio/generated/ja/jf_alpha/fb724d2759771f1888b1acd1ced6f888.m4a"
+    },
+    {
+      "offset": 7.914687499999999,
+      "end": 14.1866875,
+      "sha256": "d53a03a51490bd0c34c58f932ed444d4d25d1b45ddce9ae93b544c70ee21878d",
+      "src": "./audio/generated/ja/jf_alpha/b858dbca63744db53c15afbf0f66d621.m4a"
+    },
+    {
+      "offset": 14.7866875,
+      "end": 16.5360625,
+      "sha256": "c7f9a1ef98510ef97c49689b10acd1c5664b57df722d26873cda9e0e937596c0",
+      "src": "./audio/generated/ja/jf_alpha/4f0309cf18a01d09cf8bda93a7614527.m4a"
+    },
+    {
+      "offset": 17.1360625,
+      "end": 22.256062500000002,
+      "sha256": "cc66a445e09cd81723ca4031eda37226b644b7288c50c0f87119d90d0083f2c0",
+      "src": "./audio/generated/ja/jf_alpha/d1bdf8394a51b78fb06ac7b108b708b7.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "黒",
+      "start": 0.0,
+      "end": 0.72,
+      "probability": 0.9560641944408417
+    },
+    {
+      "word": "い",
+      "start": 0.72,
+      "end": 0.84,
+      "probability": 0.9856641292572021
+    },
+    {
+      "word": "フ",
+      "start": 0.84,
+      "end": 1.02,
+      "probability": 0.9720768332481384
+    },
+    {
+      "word": "ォ",
+      "start": 1.02,
+      "end": 1.02,
+      "probability": 0.9939125180244446
+    },
+    {
+      "word": "ル",
+      "start": 1.02,
+      "end": 1.08,
+      "probability": 0.9957422614097595
+    },
+    {
+      "word": "ダ",
+      "start": 1.08,
+      "end": 1.24,
+      "probability": 0.990301251411438
+    },
+    {
+      "word": "ー",
+      "start": 1.24,
+      "end": 1.38,
+      "probability": 0.9759848117828369
+    },
+    {
+      "word": "は",
+      "start": 1.38,
+      "end": 1.5,
+      "probability": 0.9873895645141602
+    },
+    {
+      "word": "在",
+      "start": 1.5,
+      "end": 1.74,
+      "probability": 0.6383727788925171
+    },
+    {
+      "word": "庫",
+      "start": 1.74,
+      "end": 1.92,
+      "probability": 0.9475723206996918
+    },
+    {
+      "word": "切",
+      "start": 1.92,
+      "end": 2.1,
+      "probability": 0.6736018657684326
+    },
+    {
+      "word": "れ",
+      "start": 2.1,
+      "end": 2.24,
+      "probability": 0.9843276739120483
+    },
+    {
+      "word": "です",
+      "start": 2.24,
+      "end": 2.42,
+      "probability": 0.9494984745979309
+    },
+    {
+      "word": "が",
+      "start": 2.42,
+      "end": 2.58,
+      "probability": 0.9832520484924316
+    },
+    {
+      "word": "青",
+      "start": 2.58,
+      "end": 2.84,
+      "probability": 0.5675508975982666
+    },
+    {
+      "word": "い",
+      "start": 2.84,
+      "end": 2.98,
+      "probability": 0.9965559244155884
+    },
+    {
+      "word": "も",
+      "start": 2.98,
+      "end": 3.08,
+      "probability": 0.7685272097587585
+    },
+    {
+      "word": "のは",
+      "start": 3.08,
+      "end": 3.36,
+      "probability": 0.999243974685669
+    },
+    {
+      "word": "強",
+      "start": 3.36,
+      "end": 3.6,
+      "probability": 0.7417271733283997
+    },
+    {
+      "word": "発",
+      "start": 3.6,
+      "end": 3.86,
+      "probability": 0.9678006768226624
+    },
+    {
+      "word": "想",
+      "start": 3.86,
+      "end": 4.06,
+      "probability": 0.3678669035434723
+    },
+    {
+      "word": "で",
+      "start": 4.06,
+      "end": 4.22,
+      "probability": 0.7618816494941711
+    },
+    {
+      "word": "きます。",
+      "start": 4.22,
+      "end": 4.6,
+      "probability": 0.9976893663406372
+    },
+    {
+      "word": "売",
+      "start": 5.1800000000000015,
+      "end": 5.58,
+      "probability": 0.9054041504859924
+    },
+    {
+      "word": "却",
+      "start": 5.58,
+      "end": 5.82,
+      "probability": 0.9591686725616455
+    },
+    {
+      "word": "収",
+      "start": 5.82,
+      "end": 6.14,
+      "probability": 0.896257221698761
+    },
+    {
+      "word": "入",
+      "start": 6.14,
+      "end": 6.32,
+      "probability": 0.9950609803199768
+    },
+    {
+      "word": "売",
+      "start": 6.32,
+      "end": 6.56,
+      "probability": 0.9327951669692993
+    },
+    {
+      "word": "上",
+      "start": 6.56,
+      "end": 6.82,
+      "probability": 0.6020499467849731
+    },
+    {
+      "word": "金。",
+      "start": 6.82,
+      "end": 7.2,
+      "probability": 0.9736347198486328
+    },
+    {
+      "word": "各",
+      "start": 7.96,
+      "end": 8.18,
+      "probability": 0.6665435433387756
+    },
+    {
+      "word": "海",
+      "start": 8.18,
+      "end": 8.48,
+      "probability": 0.4439849853515625
+    },
+    {
+      "word": "岸",
+      "start": 8.48,
+      "end": 8.62,
+      "probability": 0.6119667887687683
+    },
+    {
+      "word": "の",
+      "start": 8.62,
+      "end": 8.78,
+      "probability": 0.9919840693473816
+    },
+    {
+      "word": "大",
+      "start": 8.78,
+      "end": 9.0,
+      "probability": 0.5408048033714294
+    },
+    {
+      "word": "金",
+      "start": 9.0,
+      "end": 9.22,
+      "probability": 0.9202237725257874
+    },
+    {
+      "word": "を",
+      "start": 9.22,
+      "end": 9.42,
+      "probability": 0.9963257908821106
+    },
+    {
+      "word": "含",
+      "start": 9.42,
+      "end": 9.56,
+      "probability": 0.9909067749977112
+    },
+    {
+      "word": "む",
+      "start": 9.56,
+      "end": 9.8,
+      "probability": 0.9949164390563965
+    },
+    {
+      "word": "目",
+      "start": 9.8,
+      "end": 9.96,
+      "probability": 0.3818814158439636
+    },
+    {
+      "word": "用",
+      "start": 9.96,
+      "end": 10.24,
+      "probability": 0.3058472275733948
+    },
+    {
+      "word": "費",
+      "start": 10.24,
+      "end": 10.42,
+      "probability": 0.954384446144104
+    },
+    {
+      "word": "の",
+      "start": 10.42,
+      "end": 10.54,
+      "probability": 0.9959884285926819
+    },
+    {
+      "word": "美",
+      "start": 10.54,
+      "end": 10.74,
+      "probability": 0.9645658135414124
+    },
+    {
+      "word": "術",
+      "start": 10.74,
+      "end": 10.92,
+      "probability": 0.9993190169334412
+    },
+    {
+      "word": "品",
+      "start": 10.92,
+      "end": 11.2,
+      "probability": 0.9660911560058594
+    },
+    {
+      "word": "販",
+      "start": 11.2,
+      "end": 11.46,
+      "probability": 0.9939412474632263
+    },
+    {
+      "word": "売",
+      "start": 11.46,
+      "end": 11.7,
+      "probability": 0.9916213750839233
+    },
+    {
+      "word": "の",
+      "start": 11.7,
+      "end": 11.86,
+      "probability": 0.9864791035652161
+    },
+    {
+      "word": "前",
+      "start": 11.86,
+      "end": 12.08,
+      "probability": 0.6312126517295837
+    },
+    {
+      "word": "収",
+      "start": 12.08,
+      "end": 12.36,
+      "probability": 0.6686087995767593
+    },
+    {
+      "word": "益",
+      "start": 12.36,
+      "end": 12.5,
+      "probability": 0.9723123908042908
+    },
+    {
+      "word": "は",
+      "start": 12.5,
+      "end": 12.72,
+      "probability": 0.9906918406486511
+    },
+    {
+      "word": "図",
+      "start": 12.72,
+      "end": 12.92,
+      "probability": 0.9462812840938568
+    },
+    {
+      "word": "書",
+      "start": 12.92,
+      "end": 13.12,
+      "probability": 0.9900085926055908
+    },
+    {
+      "word": "館",
+      "start": 13.12,
+      "end": 13.28,
+      "probability": 0.9874560534954071
+    },
+    {
+      "word": "益",
+      "start": 13.28,
+      "end": 13.44,
+      "probability": 0.9638505280017853
+    },
+    {
+      "word": "付",
+      "start": 13.44,
+      "end": 13.66,
+      "probability": 0.7006960511207581
+    },
+    {
+      "word": "します。",
+      "start": 13.66,
+      "end": 13.92,
+      "probability": 0.5788216590881348
+    },
+    {
+      "word": "統",
+      "start": 14.86,
+      "end": 15.02,
+      "probability": 0.9203416705131531
+    },
+    {
+      "word": "合",
+      "start": 15.02,
+      "end": 15.26,
+      "probability": 0.9954280853271484
+    },
+    {
+      "word": "する",
+      "start": 15.26,
+      "end": 15.52,
+      "probability": 0.9901410937309265
+    },
+    {
+      "word": "合",
+      "start": 15.52,
+      "end": 15.74,
+      "probability": 0.7459076046943665
+    },
+    {
+      "word": "併",
+      "start": 15.74,
+      "end": 15.98,
+      "probability": 0.9503558576107025
+    },
+    {
+      "word": "する。",
+      "start": 15.98,
+      "end": 16.3,
+      "probability": 0.9927753210067749
+    },
+    {
+      "word": "重",
+      "start": 17.14,
+      "end": 17.38,
+      "probability": 0.7674612402915955
+    },
+    {
+      "word": "複",
+      "start": 17.38,
+      "end": 17.56,
+      "probability": 0.9668530623118082
+    },
+    {
+      "word": "する",
+      "start": 17.56,
+      "end": 17.88,
+      "probability": 0.9976351261138916
+    },
+    {
+      "word": "に",
+      "start": 17.88,
+      "end": 18.06,
+      "probability": 0.9902237057685852
+    },
+    {
+      "word": "部",
+      "start": 18.06,
+      "end": 18.28,
+      "probability": 0.43399742245674133
+    },
+    {
+      "word": "署",
+      "start": 18.28,
+      "end": 18.44,
+      "probability": 0.914178192615509
+    },
+    {
+      "word": "を",
+      "start": 18.44,
+      "end": 18.58,
+      "probability": 0.9324292540550232
+    },
+    {
+      "word": "一",
+      "start": 18.58,
+      "end": 18.7,
+      "probability": 0.51298588514328
+    },
+    {
+      "word": "人",
+      "start": 18.7,
+      "end": 18.92,
+      "probability": 0.9967856407165527
+    },
+    {
+      "word": "の",
+      "start": 18.92,
+      "end": 19.02,
+      "probability": 0.9988535642623901
+    },
+    {
+      "word": "管",
+      "start": 19.02,
+      "end": 19.2,
+      "probability": 0.9907689690589905
+    },
+    {
+      "word": "理",
+      "start": 19.2,
+      "end": 19.38,
+      "probability": 0.9993639588356018
+    },
+    {
+      "word": "者",
+      "start": 19.38,
+      "end": 19.5,
+      "probability": 0.9694855213165283
+    },
+    {
+      "word": "の",
+      "start": 19.5,
+      "end": 19.62,
+      "probability": 0.9972654581069946
+    },
+    {
+      "word": "下",
+      "start": 19.62,
+      "end": 19.78,
+      "probability": 0.9862970113754272
+    },
+    {
+      "word": "に",
+      "start": 19.78,
+      "end": 19.98,
+      "probability": 0.9972983002662659
+    },
+    {
+      "word": "ある",
+      "start": 19.98,
+      "end": 20.18,
+      "probability": 0.9910565614700317
+    },
+    {
+      "word": "一",
+      "start": 20.18,
+      "end": 20.48,
+      "probability": 0.5089936256408691
+    },
+    {
+      "word": "つ",
+      "start": 20.48,
+      "end": 20.68,
+      "probability": 0.9881994724273682
+    },
+    {
+      "word": "の",
+      "start": 20.68,
+      "end": 20.82,
+      "probability": 0.9988898634910583
+    },
+    {
+      "word": "部",
+      "start": 20.82,
+      "end": 20.96,
+      "probability": 0.9968435764312744
+    },
+    {
+      "word": "門",
+      "start": 20.96,
+      "end": 21.1,
+      "probability": 0.9973909854888916
+    },
+    {
+      "word": "へ",
+      "start": 21.1,
+      "end": 21.26,
+      "probability": 0.9964072108268738
+    },
+    {
+      "word": "統",
+      "start": 21.26,
+      "end": 21.46,
+      "probability": 0.9961320161819458
+    },
+    {
+      "word": "合",
+      "start": 21.46,
+      "end": 21.66,
+      "probability": 0.9983939528465271
+    },
+    {
+      "word": "します。",
+      "start": 21.66,
+      "end": 21.9,
+      "probability": 0.9936724901199341
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.6,
+      "text": "黒いフォルダーは在庫切れですが青いものは強発想できます。",
+      "avgLogprob": -0.19847668253351003,
+      "noSpeechProb": 0.036997076123952866
+    },
+    {
+      "start": 5.1800000000000015,
+      "end": 7.2,
+      "text": "売却収入売上金。",
+      "avgLogprob": -0.19847668253351003,
+      "noSpeechProb": 0.036997076123952866
+    },
+    {
+      "start": 7.96,
+      "end": 13.92,
+      "text": "各海岸の大金を含む目用費の美術品販売の前収益は図書館益付します。",
+      "avgLogprob": -0.19847668253351003,
+      "noSpeechProb": 0.036997076123952866
+    },
+    {
+      "start": 14.86,
+      "end": 16.3,
+      "text": "統合する合併する。",
+      "avgLogprob": -0.19847668253351003,
+      "noSpeechProb": 0.036997076123952866
+    },
+    {
+      "start": 17.14,
+      "end": 21.9,
+      "text": "重複するに部署を一人の管理者の下にある一つの部門へ統合します。",
+      "avgLogprob": -0.19847668253351003,
+      "noSpeechProb": 0.036997076123952866
+    }
+  ]
+}

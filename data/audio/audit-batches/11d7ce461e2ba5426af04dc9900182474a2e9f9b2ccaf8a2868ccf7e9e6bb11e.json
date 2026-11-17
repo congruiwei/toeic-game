@@ -1,0 +1,155 @@
+{
+  "version": 1,
+  "id": "11d7ce461e2ba5426af04dc9900182474a2e9f9b2ccaf8a2868ccf7e9e6bb11e",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.6587499999999995,
+  "elapsedSeconds": 3.741,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.2533750000000001,
+      "sha256": "a100858f7fc93628923c53d9b219c2a58bb73de1647ca6c3d236f3f36f01c9f4",
+      "src": "./audio/generated/en/am_puck/8cde45497d60b1be7b349bf735383907.m4a"
+    },
+    {
+      "offset": 1.8533750000000002,
+      "end": 7.05875,
+      "sha256": "9f09865d6d0addda19dffe71659111186c81e7e39c7da345c0b95f09c139c163",
+      "src": "./audio/generated/en/am_puck/0a880783940f642109522bbc4be95a05.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Package.",
+      "start": 0.0,
+      "end": 0.96,
+      "probability": 0.7850212454795837
+    },
+    {
+      "word": " Your",
+      "start": 1.76,
+      "end": 2.02,
+      "probability": 0.9724288582801819
+    },
+    {
+      "word": " sealed",
+      "start": 2.02,
+      "end": 2.32,
+      "probability": 0.9817692041397095
+    },
+    {
+      "word": " package",
+      "start": 2.32,
+      "end": 2.7,
+      "probability": 0.9924076199531555
+    },
+    {
+      "word": " contains",
+      "start": 2.7,
+      "end": 3.26,
+      "probability": 0.9978768825531006
+    },
+    {
+      "word": " the",
+      "start": 3.26,
+      "end": 3.5,
+      "probability": 0.9969481825828552
+    },
+    {
+      "word": " samples",
+      "start": 3.5,
+      "end": 3.88,
+      "probability": 0.9950750470161438
+    },
+    {
+      "word": " and",
+      "start": 3.88,
+      "end": 4.26,
+      "probability": 0.9376870393753052
+    },
+    {
+      "word": " is",
+      "start": 4.26,
+      "end": 4.38,
+      "probability": 0.9972653388977051
+    },
+    {
+      "word": " waiting",
+      "start": 4.38,
+      "end": 4.66,
+      "probability": 0.9989373087882996
+    },
+    {
+      "word": " for",
+      "start": 4.66,
+      "end": 4.9,
+      "probability": 0.9968681931495667
+    },
+    {
+      "word": " you",
+      "start": 4.9,
+      "end": 5.04,
+      "probability": 0.998852014541626
+    },
+    {
+      "word": " to",
+      "start": 5.04,
+      "end": 5.14,
+      "probability": 0.9912283420562744
+    },
+    {
+      "word": " unwrap",
+      "start": 5.14,
+      "end": 5.64,
+      "probability": 0.9935718178749084
+    },
+    {
+      "word": " it",
+      "start": 5.64,
+      "end": 5.82,
+      "probability": 0.9895098209381104
+    },
+    {
+      "word": " at",
+      "start": 5.82,
+      "end": 5.94,
+      "probability": 0.9959346055984497
+    },
+    {
+      "word": " reception.",
+      "start": 5.94,
+      "end": 6.3,
+      "probability": 0.9853740930557251
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.3,
+      "text": " Package. Your sealed package contains the samples and is waiting for you to unwrap it at reception.",
+      "avgLogprob": -0.24401510382692018,
+      "noSpeechProb": 0.007243575528264046
+    }
+  ]
+}

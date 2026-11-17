@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "id": "63cae0692656d829d49cd824e2f21423a92ceef495cd6900a6e452e697324266",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.9201875,
+  "elapsedSeconds": 7.086,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.477375,
+      "sha256": "17a9195a84b59d5cee035aed19c6461f72e9e25a03de75e35aabfbfcc62f2e7a",
+      "src": "./audio/generated/en/am_puck/2938aa59ad28cb41e59303e8fd325253.m4a"
+    },
+    {
+      "offset": 6.077375,
+      "end": 6.80275,
+      "sha256": "e3a23ce9423798830b8fcbc0847a650ccf2b96b0c407f1b3a5ff925cc0557b88",
+      "src": "./audio/generated/en/af_bella/3beeebbca5ed8645c1e18d50c53054ad.m4a"
+    },
+    {
+      "offset": 7.402749999999999,
+      "end": 12.266749999999998,
+      "sha256": "8a2daac79f4683c6b348ff564f8c7ebb2f77d0332205691eacb3e395c1a7fd01",
+      "src": "./audio/generated/en/af_bella/1a1facac590ce4da74b99d3a65f5b6e3.m4a"
+    },
+    {
+      "offset": 12.866749999999998,
+      "end": 13.592124999999998,
+      "sha256": "e647526b19e7348a02f84cd15c2d33f8edb618f361c47ac8e235a36dfb0a9d46",
+      "src": "./audio/generated/en/af_bella/2dee3ac1350a8794e9444d21bfaea64d.m4a"
+    },
+    {
+      "offset": 14.192124999999997,
+      "end": 19.738812499999998,
+      "sha256": "0d5f214f4de5363e58ec43d2864a66a687e7daf2123c02ac81a88e264b748872",
+      "src": "./audio/generated/en/af_bella/0cc453412e7de32e8042ecee5aa21e5d.m4a"
+    },
+    {
+      "offset": 20.3388125,
+      "end": 21.3201875,
+      "sha256": "d42a1130ddb4d8002bc8024f64697b63e99e5ec93f687031634e53bf0d752d47",
+      "src": "./audio/generated/en/af_bella/1c14223a44449ea3829d798be56e23f9.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " At",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.7706471681594849
+    },
+    {
+      "word": " customs",
+      "start": 0.62,
+      "end": 0.96,
+      "probability": 0.8976477384567261
+    },
+    {
+      "word": " the",
+      "start": 0.96,
+      "end": 1.28,
+      "probability": 0.5860444903373718
+    },
+    {
+      "word": " importer",
+      "start": 1.28,
+      "end": 1.68,
+      "probability": 0.9867545962333679
+    },
+    {
+      "word": " paid",
+      "start": 1.68,
+      "end": 1.98,
+      "probability": 0.9777112603187561
+    },
+    {
+      "word": " the",
+      "start": 1.98,
+      "end": 2.16,
+      "probability": 0.9965503215789795
+    },
+    {
+      "word": " assessed",
+      "start": 2.16,
+      "end": 2.5,
+      "probability": 0.965286910533905
+    },
+    {
+      "word": " duty",
+      "start": 2.5,
+      "end": 2.84,
+      "probability": 0.9949052333831787
+    },
+    {
+      "word": " before",
+      "start": 2.84,
+      "end": 3.26,
+      "probability": 0.9857335090637207
+    },
+    {
+      "word": " the",
+      "start": 3.26,
+      "end": 3.46,
+      "probability": 0.9960656762123108
+    },
+    {
+      "word": " officer",
+      "start": 3.46,
+      "end": 3.84,
+      "probability": 0.9859667420387268
+    },
+    {
+      "word": " released",
+      "start": 3.84,
+      "end": 4.3,
+      "probability": 0.9398636221885681
+    },
+    {
+      "word": " the",
+      "start": 4.3,
+      "end": 4.48,
+      "probability": 0.9955444931983948
+    },
+    {
+      "word": " shipment.",
+      "start": 4.48,
+      "end": 4.8,
+      "probability": 0.9977667331695557
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.8,
+      "text": " At customs the importer paid the assessed duty before the officer released the shipment.",
+      "avgLogprob": -0.28742489689274836,
+      "noSpeechProb": 0.00963567290455103
+    }
+  ]
+}

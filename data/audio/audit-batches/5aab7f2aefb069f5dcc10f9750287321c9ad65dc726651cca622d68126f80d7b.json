@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "id": "5aab7f2aefb069f5dcc10f9750287321c9ad65dc726651cca622d68126f80d7b",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 2.0666875,
+  "elapsedSeconds": 4.359,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.4666875,
+      "sha256": "2c03367f7931e3e577147fa6da06121824eea4ad61273fcc6a6be446219a246a",
+      "src": "./audio/generated/ja/jf_alpha/b43b1ef1eaaf867880984ffd91e590d5.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "科",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.5389731526374817
+    },
+    {
+      "word": "学",
+      "start": 0.62,
+      "end": 0.88,
+      "probability": 0.9861947298049927
+    },
+    {
+      "word": "用",
+      "start": 0.88,
+      "end": 1.14,
+      "probability": 0.276943176984787
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.14,
+      "text": "科学用",
+      "avgLogprob": -0.6036695837974548,
+      "noSpeechProb": 0.06017906591296196
+    }
+  ]
+}

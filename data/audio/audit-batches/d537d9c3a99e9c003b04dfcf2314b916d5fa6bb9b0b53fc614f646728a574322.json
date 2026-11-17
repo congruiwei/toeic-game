@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "id": "d537d9c3a99e9c003b04dfcf2314b916d5fa6bb9b0b53fc614f646728a574322",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.1040624999999995,
+  "elapsedSeconds": 2.722,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.1306875,
+      "sha256": "77a30a1b443a4597d0dec9b2bc5ba088cbbf4ec9056f80f5fbbfd2cceec4e1f9",
+      "src": "./audio/generated/ja/jf_alpha/69367ba3c3083c8afc3115f6fe288302.m4a"
+    },
+    {
+      "offset": 3.7306875,
+      "end": 6.5040625,
+      "sha256": "167aec181ec32465965bd68ea38cff1fc0e58dbc25cbee418774f84b64265585",
+      "src": "./audio/generated/ja/jf_alpha/d4a8b0f749f0f66b66fffea8bf9f871f.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "使",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.7982471585273743
+    },
+    {
+      "word": "用",
+      "start": 0.66,
+      "end": 0.88,
+      "probability": 0.9994833469390869
+    },
+    {
+      "word": "期",
+      "start": 0.88,
+      "end": 1.06,
+      "probability": 0.8687728047370911
+    },
+    {
+      "word": "間",
+      "start": 1.06,
+      "end": 1.24,
+      "probability": 0.9981853365898132
+    },
+    {
+      "word": "が",
+      "start": 1.24,
+      "end": 1.4,
+      "probability": 0.9899249076843262
+    },
+    {
+      "word": "最近",
+      "start": 1.4,
+      "end": 1.78,
+      "probability": 0.9549142122268677
+    },
+    {
+      "word": "短",
+      "start": 1.78,
+      "end": 2.14,
+      "probability": 0.974072128534317
+    },
+    {
+      "word": "縮",
+      "start": 2.14,
+      "end": 2.34,
+      "probability": 0.9969552457332611
+    },
+    {
+      "word": "さ",
+      "start": 2.34,
+      "end": 2.5,
+      "probability": 0.9874022603034973
+    },
+    {
+      "word": "れた",
+      "start": 2.5,
+      "end": 2.68,
+      "probability": 0.9962743520736694
+    },
+    {
+      "word": "から、",
+      "start": 2.68,
+      "end": 2.94,
+      "probability": 0.98836749792099
+    },
+    {
+      "word": "更",
+      "start": 3.62,
+      "end": 3.98,
+      "probability": 0.7689144015312195
+    },
+    {
+      "word": "新",
+      "start": 3.98,
+      "end": 4.24,
+      "probability": 0.9894245862960815
+    },
+    {
+      "word": "数",
+      "start": 4.24,
+      "end": 4.52,
+      "probability": 0.996483564376831
+    },
+    {
+      "word": "を",
+      "start": 4.52,
+      "end": 4.68,
+      "probability": 0.9940096139907837
+    },
+    {
+      "word": "全",
+      "start": 4.68,
+      "end": 4.82,
+      "probability": 0.4906077980995178
+    },
+    {
+      "word": "て",
+      "start": 4.82,
+      "end": 5.08,
+      "probability": 0.9965607523918152
+    },
+    {
+      "word": "20",
+      "start": 5.08,
+      "end": 5.26,
+      "probability": 0.3694971799850464
+    },
+    {
+      "word": "に",
+      "start": 5.26,
+      "end": 5.52,
+      "probability": 0.9791385531425476
+    },
+    {
+      "word": "数",
+      "start": 5.52,
+      "end": 5.76,
+      "probability": 0.991028904914856
+    },
+    {
+      "word": "え",
+      "start": 5.76,
+      "end": 5.96,
+      "probability": 0.9919909834861755
+    },
+    {
+      "word": "た",
+      "start": 5.96,
+      "end": 6.08,
+      "probability": 0.9978777170181274
+    },
+    {
+      "word": "から。",
+      "start": 6.08,
+      "end": 6.28,
+      "probability": 0.995893120765686
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.28,
+      "text": "使用期間が最近短縮されたから、更新数を全て20に数えたから。",
+      "avgLogprob": -0.23088559408982595,
+      "noSpeechProb": 0.007279783952981234
+    }
+  ]
+}

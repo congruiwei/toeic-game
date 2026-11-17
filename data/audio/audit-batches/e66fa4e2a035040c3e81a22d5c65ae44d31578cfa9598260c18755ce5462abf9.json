@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "id": "e66fa4e2a035040c3e81a22d5c65ae44d31578cfa9598260c18755ce5462abf9",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.909375,
+  "elapsedSeconds": 2.902,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.832,
+      "sha256": "e66dafec1c16b71585d4f594fef6cdfd8ce59b325051f8fff46a844593251416",
+      "src": "./audio/generated/en/af_heart/e8df9ccdfa3e38dad55662bf86173c0a.m4a"
+    },
+    {
+      "offset": 3.432,
+      "end": 5.309375,
+      "sha256": "d329700db4617a22b08d9de2f0b8c2f14959925202eab2dacd40b6cbef3d12cd",
+      "src": "./audio/generated/en/af_heart/6024915dc60e72a23da47f9145fc70fd.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Account",
+      "start": 0.0,
+      "end": 0.74,
+      "probability": 0.9456438422203064
+    },
+    {
+      "word": " staff",
+      "start": 0.74,
+      "end": 1.08,
+      "probability": 0.9944447875022888
+    },
+    {
+      "word": " took",
+      "start": 1.08,
+      "end": 1.38,
+      "probability": 0.9971742630004883
+    },
+    {
+      "word": " over",
+      "start": 1.38,
+      "end": 1.56,
+      "probability": 0.9974017143249512
+    },
+    {
+      "word": " the",
+      "start": 1.56,
+      "end": 1.68,
+      "probability": 0.9988528490066528
+    },
+    {
+      "word": " desk",
+      "start": 1.68,
+      "end": 1.98,
+      "probability": 0.9982289671897888
+    },
+    {
+      "word": " entirely.",
+      "start": 1.98,
+      "end": 2.58,
+      "probability": 0.9959248304367065
+    },
+    {
+      "word": " All",
+      "start": 3.48,
+      "end": 3.68,
+      "probability": 0.9965400695800781
+    },
+    {
+      "word": " complaints",
+      "start": 3.68,
+      "end": 4.08,
+      "probability": 0.9958949089050293
+    },
+    {
+      "word": " were",
+      "start": 4.08,
+      "end": 4.3,
+      "probability": 0.9870179295539856
+    },
+    {
+      "word": " recorded",
+      "start": 4.3,
+      "end": 4.64,
+      "probability": 0.9923117756843567
+    },
+    {
+      "word": " twice.",
+      "start": 4.64,
+      "end": 4.92,
+      "probability": 0.9972681999206543
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.58,
+      "text": " Account staff took over the desk entirely.",
+      "avgLogprob": -0.2479707034010636,
+      "noSpeechProb": 0.005879140459001064
+    },
+    {
+      "start": 3.48,
+      "end": 4.92,
+      "text": " All complaints were recorded twice.",
+      "avgLogprob": -0.2479707034010636,
+      "noSpeechProb": 0.005879140459001064
+    }
+  ]
+}

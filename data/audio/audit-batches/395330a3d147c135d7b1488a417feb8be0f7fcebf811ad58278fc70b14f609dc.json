@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "id": "395330a3d147c135d7b1488a417feb8be0f7fcebf811ad58278fc70b14f609dc",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.496125,
+  "elapsedSeconds": 5.726,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.373375,
+      "sha256": "79ab872b5860db48d066254b80f174d6e9f7199426037f3089cd4dac85bd36b5",
+      "src": "./audio/generated/en/am_puck/be52ce433e5a019ee2fa3ff83ed3a373.m4a"
+    },
+    {
+      "offset": 6.973375,
+      "end": 7.9120625,
+      "sha256": "295e2625b00c6b988329d1d3d8503ee42e8b8c8b71c18121defe893f1bcd20b1",
+      "src": "./audio/generated/en/af_bella/92d85305a9c7f8aaa7ed11ce1ce38412.m4a"
+    },
+    {
+      "offset": 8.5120625,
+      "end": 14.2294375,
+      "sha256": "50d8f2ad48ba108ca3151f2c14d051f56ca40e02b2f0351db166d45048999d2a",
+      "src": "./audio/generated/en/af_bella/bf2cd1ef106c491533814427fb029f90.m4a"
+    },
+    {
+      "offset": 14.8294375,
+      "end": 15.7254375,
+      "sha256": "7745a92ba48fd6036dc0be6ebfbcce350c9a3096a6d5f9a63250349f47780857",
+      "src": "./audio/generated/en/af_bella/7774d848f1ac80e16d87e1ae4e04cc7c.m4a"
+    },
+    {
+      "offset": 16.3254375,
+      "end": 22.896124999999998,
+      "sha256": "b369ba7fa7f3b5010d04dea0a50ddab9f7a7365af2948237aea6c1bf0118f66a",
+      "src": "./audio/generated/en/af_bella/1055876a1a9cd41748019cd9ae2a76b4.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.9343190789222717
+    },
+    {
+      "word": " final",
+      "start": 0.56,
+      "end": 0.86,
+      "probability": 0.980343222618103
+    },
+    {
+      "word": " count",
+      "start": 0.86,
+      "end": 1.2,
+      "probability": 0.9846640229225159
+    },
+    {
+      "word": " was",
+      "start": 1.2,
+      "end": 1.46,
+      "probability": 0.9957048296928406
+    },
+    {
+      "word": " accurate",
+      "start": 1.46,
+      "end": 1.86,
+      "probability": 0.995635449886322
+    },
+    {
+      "word": " to",
+      "start": 1.86,
+      "end": 2.06,
+      "probability": 0.997624933719635
+    },
+    {
+      "word": " the",
+      "start": 2.06,
+      "end": 2.16,
+      "probability": 0.9956728219985962
+    },
+    {
+      "word": " last",
+      "start": 2.16,
+      "end": 2.44,
+      "probability": 0.9982251524925232
+    },
+    {
+      "word": " unit,",
+      "start": 2.44,
+      "end": 2.8,
+      "probability": 0.9961457252502441
+    },
+    {
+      "word": " matching",
+      "start": 3.06,
+      "end": 3.48,
+      "probability": 0.9968632459640503
+    },
+    {
+      "word": " every",
+      "start": 3.48,
+      "end": 3.88,
+      "probability": 0.9972240924835205
+    },
+    {
+      "word": " recorded",
+      "start": 3.88,
+      "end": 4.32,
+      "probability": 0.991832971572876
+    },
+    {
+      "word": " item",
+      "start": 4.32,
+      "end": 4.74,
+      "probability": 0.9950641989707947
+    },
+    {
+      "word": " to",
+      "start": 4.74,
+      "end": 4.94,
+      "probability": 0.9990962743759155
+    },
+    {
+      "word": " actual",
+      "start": 4.94,
+      "end": 5.34,
+      "probability": 0.9942675232887268
+    },
+    {
+      "word": " stock.",
+      "start": 5.34,
+      "end": 5.84,
+      "probability": 0.9948207139968872
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.84,
+      "text": " The final count was accurate to the last unit, matching every recorded item to actual stock.",
+      "avgLogprob": -0.19545782180059523,
+      "noSpeechProb": 0.008301548659801483
+    }
+  ]
+}

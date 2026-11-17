@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "id": "d503aed4148749c6c32946b72edb9ba1ec8fd40eab765084af83d18aecde3e16",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.277374999999999,
+  "elapsedSeconds": 2.964,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.2346875,
+      "sha256": "6fce948aed0b2e9056d07f1485501fc5cdee5839584031ff923ee544a25d423b",
+      "src": "./audio/generated/ja/jf_alpha/f5a76a796832be7d5e576cf188cf133e.m4a"
+    },
+    {
+      "offset": 2.8346875000000002,
+      "end": 4.6266875,
+      "sha256": "bd9533fd05519b89742b96be896bf5245efdb6e5340ff58db8402116a44082c4",
+      "src": "./audio/generated/ja/jf_alpha/7c8050beb3e752514546668926a029c1.m4a"
+    },
+    {
+      "offset": 5.2266875,
+      "end": 6.677375,
+      "sha256": "09c17a024e18361b2b8de70e6dac304ef9569f882166753ddba99c3bfd990721",
+      "src": "./audio/generated/ja/jf_alpha/0be9d6938c5504d872590c3e71d624ec.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "取",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.47165411710739136
+    },
+    {
+      "word": "り",
+      "start": 0.62,
+      "end": 0.8,
+      "probability": 0.9019119143486023
+    },
+    {
+      "word": "寄",
+      "start": 0.8,
+      "end": 0.86,
+      "probability": 0.9934479594230652
+    },
+    {
+      "word": "せ",
+      "start": 0.86,
+      "end": 1.02,
+      "probability": 0.99581378698349
+    },
+    {
+      "word": "が",
+      "start": 1.02,
+      "end": 1.16,
+      "probability": 0.9587215185165405
+    },
+    {
+      "word": "必",
+      "start": 1.16,
+      "end": 1.32,
+      "probability": 0.9882150888442993
+    },
+    {
+      "word": "要",
+      "start": 1.32,
+      "end": 1.58,
+      "probability": 0.9994258880615234
+    },
+    {
+      "word": "だから。",
+      "start": 1.58,
+      "end": 1.94,
+      "probability": 0.9752561450004578
+    },
+    {
+      "word": "選",
+      "start": 2.96,
+      "end": 3.08,
+      "probability": 0.6425384283065796
+    },
+    {
+      "word": "択",
+      "start": 3.08,
+      "end": 3.34,
+      "probability": 0.9972631633281708
+    },
+    {
+      "word": "が",
+      "start": 3.34,
+      "end": 3.56,
+      "probability": 0.9862684011459351
+    },
+    {
+      "word": "必",
+      "start": 3.56,
+      "end": 3.72,
+      "probability": 0.9980090260505676
+    },
+    {
+      "word": "要",
+      "start": 3.72,
+      "end": 3.98,
+      "probability": 0.9996170997619629
+    },
+    {
+      "word": "だから。",
+      "start": 3.98,
+      "end": 4.34,
+      "probability": 0.9962531328201294
+    },
+    {
+      "word": "点",
+      "start": 5.28,
+      "end": 5.44,
+      "probability": 0.5846171379089355
+    },
+    {
+      "word": "が",
+      "start": 5.44,
+      "end": 5.68,
+      "probability": 0.9917357563972473
+    },
+    {
+      "word": "閉",
+      "start": 5.68,
+      "end": 5.82,
+      "probability": 0.7749630212783813
+    },
+    {
+      "word": "ま",
+      "start": 5.82,
+      "end": 6.04,
+      "probability": 0.990952730178833
+    },
+    {
+      "word": "った",
+      "start": 6.04,
+      "end": 6.1,
+      "probability": 0.9916225075721741
+    },
+    {
+      "word": "から。",
+      "start": 6.1,
+      "end": 6.34,
+      "probability": 0.9968313574790955
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.34,
+      "text": "取り寄せが必要だから。選択が必要だから。点が閉まったから。",
+      "avgLogprob": -0.2158538164763615,
+      "noSpeechProb": 0.03615361824631691
+    }
+  ]
+}

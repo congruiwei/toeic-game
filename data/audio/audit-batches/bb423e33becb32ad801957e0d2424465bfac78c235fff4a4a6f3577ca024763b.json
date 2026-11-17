@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "id": "bb423e33becb32ad801957e0d2424465bfac78c235fff4a4a6f3577ca024763b",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 8.42675,
+  "elapsedSeconds": 4.353,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.373375,
+      "sha256": "9fb7d0e845778a72de53e28c43db0a3ac78f62e5901477445990a0dafd92a6a9",
+      "src": "./audio/generated/en/af_bella/43387dd93d5d4808b16bb017dfd7d486.m4a"
+    },
+    {
+      "offset": 6.973375,
+      "end": 7.82675,
+      "sha256": "b99ef747cc0a5ae924adef4373c57b81bbf0ede20a911521fcb13a68c6d9d9ec",
+      "src": "./audio/generated/en/am_puck/0bbe3d243ce549290f014527fabd4f57.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Enter",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.8522512912750244
+    },
+    {
+      "word": " the",
+      "start": 0.64,
+      "end": 0.8,
+      "probability": 0.994164764881134
+    },
+    {
+      "word": " fare",
+      "start": 0.8,
+      "end": 1.06,
+      "probability": 0.9064642786979675
+    },
+    {
+      "word": " under",
+      "start": 1.06,
+      "end": 1.28,
+      "probability": 0.9815934300422668
+    },
+    {
+      "word": " travel",
+      "start": 1.28,
+      "end": 1.66,
+      "probability": 0.9387087225914001
+    },
+    {
+      "word": " expense",
+      "start": 1.66,
+      "end": 2.06,
+      "probability": 0.9841596484184265
+    },
+    {
+      "word": " on",
+      "start": 2.06,
+      "end": 2.38,
+      "probability": 0.9873319268226624
+    },
+    {
+      "word": " the",
+      "start": 2.38,
+      "end": 2.48,
+      "probability": 0.9973438382148743
+    },
+    {
+      "word": " claim",
+      "start": 2.48,
+      "end": 2.88,
+      "probability": 0.9945671558380127
+    },
+    {
+      "word": " alongside",
+      "start": 2.88,
+      "end": 3.68,
+      "probability": 0.3349308669567108
+    },
+    {
+      "word": " the",
+      "start": 3.68,
+      "end": 4.06,
+      "probability": 0.993883490562439
+    },
+    {
+      "word": " other",
+      "start": 4.06,
+      "end": 4.26,
+      "probability": 0.9986358284950256
+    },
+    {
+      "word": " costs",
+      "start": 4.26,
+      "end": 4.7,
+      "probability": 0.9909861087799072
+    },
+    {
+      "word": " you",
+      "start": 4.7,
+      "end": 5.0,
+      "probability": 0.9463849067687988
+    },
+    {
+      "word": " personally",
+      "start": 5.0,
+      "end": 5.46,
+      "probability": 0.9932199120521545
+    },
+    {
+      "word": " incurred",
+      "start": 5.46,
+      "end": 6.08,
+      "probability": 0.9935379028320312
+    },
+    {
+      "word": " profit",
+      "start": 6.68,
+      "end": 7.28,
+      "probability": 0.12580621242523193
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.08,
+      "text": " Enter the fare under travel expense on the claim alongside the other costs you personally incurred",
+      "avgLogprob": -0.24707855089851047,
+      "noSpeechProb": 0.003441200591623783
+    },
+    {
+      "start": 6.68,
+      "end": 7.28,
+      "text": " profit",
+      "avgLogprob": -0.24707855089851047,
+      "noSpeechProb": 0.003441200591623783
+    }
+  ]
+}

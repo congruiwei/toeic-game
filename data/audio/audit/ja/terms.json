@@ -1,0 +1,2519 @@
+{
+  "version": 1,
+  "language": "ja",
+  "bank": "terms",
+  "records": {
+    "gram-conjunction": {
+      "key": "gram-conjunction",
+      "src": "./audio/generated/ja/jf_alpha/1f72bea03420e22764406232f8020fa3.m4a",
+      "sha256": "5ae0760702d995fbfbed16e8c3ac5b1d862ebf578b8d6fa6f7b54d500c2e9741",
+      "voiceId": "jf_alpha",
+      "fingerprint": "a7cf4115dc999868f5517fb0eac90e61b6f7ea095cf3f119275011f714f74773",
+      "expected": "接続詞と論理関係",
+      "spoken": "接続詞と論理関係",
+      "recognized": "接続詞と論理関係、",
+      "segments": [
+        {
+          "start": -0.038687499999999986,
+          "end": 0.2613125000000007,
+          "text": "接",
+          "probability": 0.7234933376312256
+        },
+        {
+          "start": 0.2613125000000007,
+          "end": 0.5813125000000001,
+          "text": "続",
+          "probability": 0.874552309513092
+        },
+        {
+          "start": 0.5813125000000001,
+          "end": 0.7413125000000003,
+          "text": "詞",
+          "probability": 0.39683937281370163
+        },
+        {
+          "start": 0.7413125000000003,
+          "end": 0.8413125000000008,
+          "text": "と",
+          "probability": 0.9970541000366211
+        },
+        {
+          "start": 0.8413125000000008,
+          "end": 1.0213125000000005,
+          "text": "論",
+          "probability": 0.9972534775733948
+        },
+        {
+          "start": 1.0213125000000005,
+          "end": 1.1813125000000007,
+          "text": "理",
+          "probability": 0.9797535538673401
+        },
+        {
+          "start": 1.1813125000000007,
+          "end": 1.3813125000000008,
+          "text": "関",
+          "probability": 0.9946958422660828
+        },
+        {
+          "start": 1.3813125000000008,
+          "end": 1.7413125000000003,
+          "text": "係、",
+          "probability": 0.9955493211746216
+        }
+      ],
+      "recognitionMethod": "batch-beam1",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 1,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
+        "wordTimestamps": true,
+        "batchSeconds": 24,
+        "leadingPadSeconds": 0.4,
+        "gapSeconds": 0.6,
+        "boundaryToleranceSeconds": 0.12,
+        "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+      },
+      "singleFileVerification": false,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 5.0986875,
+        "end": 6.976062499999999,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "接続詞と論理関係、",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "gram-relative": {
+      "key": "gram-relative",
+      "src": "./audio/generated/ja/jf_alpha/60a3382d8f502c6fe5bb50880a2a3735.m4a",
+      "sha256": "2f1c538febc5766860700d6f50553b5e8db5fff88af71c52a368a731dbdd2d53",
+      "voiceId": "jf_alpha",
+      "fingerprint": "ca512837fdf00cf9e9b4aa7ca7c33166152457a47e9d5495535d35e3cda320eb",
+      "expected": "関係代名詞と関係副詞",
+      "spoken": "関係代名詞と関係副詞",
+      "recognized": "関係大名詞と関係副詩",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.32,
+          "text": "関係大名詞と関係副詩",
+          "avgLogprob": -0.3542652080456416,
+          "noSpeechProb": 0.07883011549711227
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 7.576062499999999,
+        "end": 9.922749999999999,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "関係大名詞と関係副詩、",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.2,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "代",
+          "recognized": "大"
+        },
+        {
+          "operation": "replace",
+          "expected": "詞",
+          "recognized": "詩"
+        }
+      ]
+    },
+    "gram-comparison": {
+      "key": "gram-comparison",
+      "src": "./audio/generated/ja/jf_alpha/a171189ca7530593961a5c2d74bd9200.m4a",
+      "sha256": "7e35103c3661db5285d4829ca055d7d816c81372498d02f66516ec94010c70ac",
+      "voiceId": "jf_alpha",
+      "fingerprint": "a10aaa84543f2796af2d5fc4dc4a366d88f76adc18d66b50ab3d2fe9feb97ecb",
+      "expected": "比較級と最上級",
+      "spoken": "比較級と最上級",
+      "recognized": "比較級と最上級、",
+      "segments": [
+        {
+          "start": 0.05725000000000158,
+          "end": 0.2972500000000018,
+          "text": "比較",
+          "probability": 0.7975428104400635
+        },
+        {
+          "start": 0.2972500000000018,
+          "end": 0.6172500000000021,
+          "text": "級",
+          "probability": 0.4001460671424866
+        },
+        {
+          "start": 0.6172500000000021,
+          "end": 0.8172500000000014,
+          "text": "と",
+          "probability": 0.9968967437744141
+        },
+        {
+          "start": 0.8172500000000014,
+          "end": 1.0172500000000007,
+          "text": "最",
+          "probability": 0.560805082321167
+        },
+        {
+          "start": 1.0172500000000007,
+          "end": 1.2372500000000013,
+          "text": "上",
+          "probability": 0.9603968262672424
+        },
+        {
+          "start": 1.2372500000000013,
+          "end": 1.457250000000002,
+          "text": "級、",
+          "probability": 0.9991821646690369
+        }
+      ],
+      "recognitionMethod": "batch-beam1",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 1,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
+        "wordTimestamps": true,
+        "batchSeconds": 24,
+        "leadingPadSeconds": 0.4,
+        "gapSeconds": 0.6,
+        "boundaryToleranceSeconds": 0.12,
+        "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+      },
+      "singleFileVerification": false,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 10.522749999999998,
+        "end": 12.186749999999998,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "比較級と最上級、",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "gram-pronouns": {
+      "key": "gram-pronouns",
+      "src": "./audio/generated/ja/jf_alpha/ed24bfd8b9997c4e5dba14b715dce71f.m4a",
+      "sha256": "cc7bb9bd0d1b56d477a85547b0261d6eb10815c6c1ec2708eb123e1b2e35e368",
+      "voiceId": "jf_alpha",
+      "fingerprint": "db68ebeb1cf237e6c7159ab672c1823d6b1aec29d352d3e92cc758a6867bab82",
+      "expected": "代名詞の格と指示関係",
+      "spoken": "代名詞の格と指示関係",
+      "recognized": "大名詞の各都指示関係",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "大名詞の各都指示関係",
+          "avgLogprob": -0.3204841375350952,
+          "noSpeechProb": 0.07969429343938828
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 14.752124999999998,
+        "end": 16.842812499999997,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "名詞の各と指示関係、",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.3,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "代",
+          "recognized": "大"
+        },
+        {
+          "operation": "replace",
+          "expected": "格 と",
+          "recognized": "各 都"
+        }
+      ]
+    },
+    "gram-nonfinite": {
+      "key": "gram-nonfinite",
+      "src": "./audio/generated/ja/jf_alpha/fdcb08f15d8ae221f6b3e1a15efd6faf.m4a",
+      "sha256": "fe7e9208a55f30cfdb53963cd7bee3c21d2669ca754d2ecb4a9a7cbfb8af05b0",
+      "voiceId": "jf_alpha",
+      "fingerprint": "cc678b5c6968c6ec9204ff0029d53f5d97e52683f5e0bbf0faa71e764039f469",
+      "expected": "動名詞と不定詞",
+      "spoken": "動名詞と不定詞",
+      "recognized": "同名詞と不定詞",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "同名詞と不定詞",
+          "avgLogprob": -0.6951470226049423,
+          "noSpeechProb": 0.11268065869808197
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 17.4428125,
+        "end": 19.0215,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "同名詞と不定詞、",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.1429,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "動",
+          "recognized": "同"
+        }
+      ]
+    },
+    "gram-modifiers": {
+      "key": "gram-modifiers",
+      "src": "./audio/generated/ja/jf_alpha/0a2d318bb7101c57b61e7e1c6e12010a.m4a",
+      "sha256": "db9f580b72d4ec893d94001ca1182ac65e03f034dd1c039b6ad8960f52230193",
+      "voiceId": "jf_alpha",
+      "fingerprint": "0e69bda1e9440d0ce9ac9b4bc36c3f0aa22a61717b54dc31b6315a932a84498e",
+      "expected": "分詞の形容詞用法",
+      "spoken": "分詞の形容詞用法",
+      "recognized": "分子の形容詞用法",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "分子の形容詞用法",
+          "avgLogprob": -0.33669022222359973,
+          "noSpeechProb": 0.029521040618419647
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 19.6215,
+        "end": 21.413500000000003,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "文詞の形容詞用法。",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.125,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "詞",
+          "recognized": "子"
+        }
+      ]
+    },
+    "gram-quantity": {
+      "key": "gram-quantity",
+      "src": "./audio/generated/ja/jf_alpha/2dafd79ae5ecd08a3e34298404f28d59.m4a",
+      "sha256": "b216defbaec83ec992df6894f65b5cffd82c673477c646a1f5c3e9dee8d4cb6d",
+      "voiceId": "jf_alpha",
+      "fingerprint": "18ac38eff305829b0b3e92c246176950159fb73c7b78b26eb6965880c24279aa",
+      "expected": "数量表現と可算・不可算名詞",
+      "spoken": "数量表現と可算・不可算名詞",
+      "recognized": "数量表現と加算不可算名詞",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.24,
+          "text": "数量表現と加算不可算名詞",
+          "avgLogprob": -0.42853170074522495,
+          "noSpeechProb": 0.04403485357761383
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 2.621375,
+        "end": 5.2240625000000005,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "数量表現と加算深算名詞、",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0833,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "可",
+          "recognized": "加"
+        }
+      ]
+    },
+    "gram-lexis": {
+      "key": "gram-lexis",
+      "src": "./audio/generated/ja/jf_alpha/3da7530f20914aaf379f58c38fe0430b.m4a",
+      "sha256": "a769bd11fc42f9f3077f0577bbb1f545f14cd439921fa858a5855e250588c769",
+      "voiceId": "jf_alpha",
+      "fingerprint": "89235f7a0236037b5b23e31dea4a372afff0d01902b5769263f093d2bca6f624",
+      "expected": "ビジネス語彙の使い分け",
+      "spoken": "ビジネス語彙の使い分け",
+      "recognized": "ビジネスごいの使い訳",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "ビジネスごいの使い訳",
+          "avgLogprob": -0.2877175052960714,
+          "noSpeechProb": 0.02238348126411438
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 10.949437499999998,
+        "end": 12.784124999999998,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-crosses-file-boundary"
+        ],
+        "recognized": "ビジネス語の使い分け、",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.3636,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "語 彙",
+          "recognized": "ご い"
+        },
+        {
+          "operation": "replace",
+          "expected": "分 け",
+          "recognized": "訳"
+        }
+      ]
+    },
+    "photo": {
+      "key": "photo",
+      "src": "./audio/generated/ja/jf_alpha/c5d5b9404cc2bec6bd5b7150ed22379a.m4a",
+      "sha256": "637c158487cf5ff9ece681535f1716465fc7ca8a4f18743a9a2c122a4d84133b",
+      "voiceId": "jf_alpha",
+      "fingerprint": "3a698a31f2ddd7d0b2cc2d1a3e20b13fd21e9bf0b8b68a1917fa19546b4e7fda",
+      "expected": "人物描写と物の描写",
+      "spoken": "人物描写と物の描写",
+      "recognized": "人物病者と物の病者",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "人物病者と物の病者",
+          "avgLogprob": -0.3213103413581848,
+          "noSpeechProb": 0.08204105496406555
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 13.384124999999997,
+        "end": 15.602812499999997,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "人物病者と物の病者、",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.4444,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "描 写",
+          "recognized": "病 者"
+        },
+        {
+          "operation": "replace",
+          "expected": "描 写",
+          "recognized": "病 者"
+        }
+      ]
+    },
+    "photo-state": {
+      "key": "photo-state",
+      "src": "./audio/generated/ja/jf_alpha/62d98c17a5dbbbfc25870f3a688e0fc8.m4a",
+      "sha256": "d63e8de0ca034a43c724912d6e1f8283aa2dd375fb1f96f126e1a68ec137dbaf",
+      "voiceId": "jf_alpha",
+      "fingerprint": "6ccb9a504780f5671e2390387c114862bb96933cef079bf26aee12f532e1f188",
+      "expected": "進行中の動作と完了した状態",
+      "spoken": "進行中の動作と完了した状態",
+      "recognized": "進行中の動作と完了した状態。",
+      "segments": [
+        {
+          "start": 0.11718750000000355,
+          "end": 0.2771875000000037,
+          "text": "進",
+          "probability": 0.7672895789146423
+        },
+        {
+          "start": 0.2771875000000037,
+          "end": 0.5571875000000048,
+          "text": "行",
+          "probability": 0.975288450717926
+        },
+        {
+          "start": 0.5571875000000048,
+          "end": 0.7971875000000033,
+          "text": "中",
+          "probability": 0.9985332489013672
+        },
+        {
+          "start": 0.7971875000000033,
+          "end": 0.977187500000003,
+          "text": "の",
+          "probability": 0.9991590976715088
+        },
+        {
+          "start": 0.977187500000003,
+          "end": 1.1571875000000027,
+          "text": "動",
+          "probability": 0.9926084876060486
+        },
+        {
+          "start": 1.1571875000000027,
+          "end": 1.3771875000000016,
+          "text": "作",
+          "probability": 0.9877111315727234
+        },
+        {
+          "start": 1.3771875000000016,
+          "end": 1.5171875000000021,
+          "text": "と",
+          "probability": 0.9971754550933838
+        },
+        {
+          "start": 1.5171875000000021,
+          "end": 1.7971875000000033,
+          "text": "完了",
+          "probability": 0.9706329703330994
+        },
+        {
+          "start": 1.7971875000000033,
+          "end": 2.1571875000000027,
+          "text": "した",
+          "probability": 0.9968705773353577
+        },
+        {
+          "start": 2.1571875000000027,
+          "end": 2.3771875000000016,
+          "text": "状",
+          "probability": 0.9920606911182404
+        },
+        {
+          "start": 2.3771875000000016,
+          "end": 2.6771875000000023,
+          "text": "態。",
+          "probability": 0.9986991882324219
+        }
+      ],
+      "recognitionMethod": "batch-beam1",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 1,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
+        "wordTimestamps": true,
+        "batchSeconds": 24,
+        "leadingPadSeconds": 0.4,
+        "gapSeconds": 0.6,
+        "boundaryToleranceSeconds": 0.12,
+        "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+      },
+      "singleFileVerification": false,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 16.202812499999997,
+        "end": 19.061499999999995,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "進行中の動作と完了した状態。",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "sounds": {
+      "key": "sounds",
+      "src": "./audio/generated/ja/jf_alpha/7a7792e6482b3a0cb9cff3d42a6fc2ba.m4a",
+      "sha256": "857e34e72a8dfbc2f158c6af6801f13c15b5f427a7c1d20689c457ab886745aa",
+      "voiceId": "jf_alpha",
+      "fingerprint": "d2a3f6ab7d9dc52bfb4a922fb96084bf705352a71e37e3d9eb185992c486428d",
+      "expected": "類似音のひっかけ",
+      "spoken": "類似音のひっかけ",
+      "recognized": "ルイジオンの引っ掛け",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "ルイジオンの引っ掛け",
+          "avgLogprob": -0.32100813516548704,
+          "noSpeechProb": 0.023845894262194633
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 0.4,
+        "end": 1.936,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding",
+          "invalid-word-timestamp"
+        ],
+        "recognized": "イジオンの引っ掛",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.875,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "類 似 音",
+          "recognized": "ル イ ジ オ ン"
+        },
+        {
+          "operation": "replace",
+          "expected": "ひ",
+          "recognized": "引"
+        },
+        {
+          "operation": "replace",
+          "expected": "か",
+          "recognized": "掛"
+        }
+      ]
+    },
+    "echo": {
+      "key": "echo",
+      "src": "./audio/generated/ja/jf_alpha/9d9e86f4d871e09e165a6420da109526.m4a",
+      "sha256": "441fb3a8731ab8c632fc129ff7150a4e83253f536bd88fdeebfe377829d392f3",
+      "voiceId": "jf_alpha",
+      "fingerprint": "2b99a2fd2b884ef3b9096f9f22a47302187e41d43d80a2c5c8d42e67c14253db",
+      "expected": "同じ語の繰り返しによるひっかけ",
+      "spoken": "同じ語の繰り返しによるひっかけ",
+      "recognized": "同じ語の繰り返しによる引っ掛け",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "同じ語の繰り返しによる引っ掛け",
+          "avgLogprob": -0.2611699274608067,
+          "noSpeechProb": 0.017978699877858162
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 2.536,
+        "end": 4.84,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding",
+          "invalid-word-timestamp"
+        ],
+        "recognized": "同じ語の繰り返しによる引っ",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.1333,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "ひ",
+          "recognized": "引"
+        },
+        {
+          "operation": "replace",
+          "expected": "か",
+          "recognized": "掛"
+        }
+      ]
+    },
+    "preview": {
+      "key": "preview",
+      "src": "./audio/generated/ja/jf_alpha/eb29b1177312acd238ce47a62f362d1c.m4a",
+      "sha256": "51627e189b2aa68d74840b23e9c2f2062f77f25de77214b926c96e0b775212c1",
+      "voiceId": "jf_alpha",
+      "fingerprint": "fc563a884030b970ec08223941a623d8fb457417835974eba176ae530faffa77",
+      "expected": "先読み",
+      "spoken": "先読み",
+      "recognized": "先読み",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.0,
+          "text": "先読み",
+          "avgLogprob": -0.42979553767613005,
+          "noSpeechProb": 0.07367411255836487
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 5.4399999999999995,
+        "end": 6.4639999999999995,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "invalid-word-timestamp",
+          "word-in-padding",
+          "word-crosses-file-boundary"
+        ],
+        "recognized": "先読み。",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": []
+    },
+    "keywords": {
+      "key": "keywords",
+      "src": "./audio/generated/ja/jf_alpha/07c60a79b10343e699f91e9fd7079dcb.m4a",
+      "sha256": "f36eaaf124f45dd1f1cb192767e39962d8f045f99e16f4aad0779da211271205",
+      "voiceId": "jf_alpha",
+      "fingerprint": "34603c980a33faabf3fd3e41c61e67a3a86cec61f1d3de3e8e853c0f10d47af8",
+      "expected": "キーワードの聞き取り",
+      "spoken": "キーワードの聞き取り",
+      "recognized": "キーワードの聞き取り",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "キーワードの聞き取り",
+          "avgLogprob": -0.2970165287454923,
+          "noSpeechProb": 0.150006502866745
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 7.063999999999999,
+        "end": 8.6426875,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "invalid-word-timestamp",
+          "word-in-padding"
+        ],
+        "recognized": "キーワードの聞き取",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": []
+    },
+    "graphic": {
+      "key": "graphic",
+      "src": "./audio/generated/ja/jf_alpha/54f06185638f97c0796c9e3955d07ccb.m4a",
+      "sha256": "bb33ae9c0ae7e22764a5287e4a256afeadaebe2741b032628f4249a28fcb8e14",
+      "voiceId": "jf_alpha",
+      "fingerprint": "bc5b8694a17e39f7699e214f1d4eb31e41316f21b703397c71d988ddcdabfc56",
+      "expected": "図表問題",
+      "spoken": "図表問題",
+      "recognized": "図表問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "図表問題",
+          "avgLogprob": -0.516069735799517,
+          "noSpeechProb": 0.23949846625328064
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 9.242687499999999,
+        "end": 10.394687499999998,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "invalid-word-timestamp",
+          "word-in-padding"
+        ],
+        "recognized": "図表問題。",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": []
+    },
+    "intent": {
+      "key": "intent",
+      "src": "./audio/generated/ja/jf_alpha/f2d091d314ef069960c060557c206f1d.m4a",
+      "sha256": "777bcd95ba3c13c737d99aad95c6e834737173d9976d0aa74f01135512250465",
+      "voiceId": "jf_alpha",
+      "fingerprint": "fd3e360a6f113479b1eb5faf293c3a667673d0f56c82dd2c87890528400ad74d",
+      "expected": "発言意図問題",
+      "spoken": "発言意図問題",
+      "recognized": "発言糸問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "発言糸問題",
+          "avgLogprob": -0.4156789742410183,
+          "noSpeechProb": 0.07362528145313263
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 10.994687499999998,
+        "end": 12.445374999999999,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "invalid-word-timestamp"
+        ],
+        "recognized": "発言糸問題。",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.3333,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "意 図",
+          "recognized": "糸"
+        }
+      ]
+    },
+    "p5-choice": {
+      "key": "p5-choice",
+      "src": "./audio/generated/ja/jf_alpha/3498830389a7acc8a6527fb93b918aee.m4a",
+      "sha256": "ec3b3862a79d5190ae9e0b74ea14a61d998aeefac97aadcddfaa841297a4e7c0",
+      "voiceId": "jf_alpha",
+      "fingerprint": "3cd6f999abdb7ea713f1a20787c5beffcdf01808a63311575b64cea95b39907e",
+      "expected": "選択肢から見抜く出題ポイント",
+      "spoken": "選択肢から見抜く出題ポイント",
+      "recognized": "選択肢から見抜く出題ポイント",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.24,
+          "text": "選択肢から見抜く出題ポイント",
+          "avgLogprob": -0.27209850152333576,
+          "noSpeechProb": 0.01320300530642271
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 13.045374999999998,
+        "end": 15.562749999999998,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "invalid-word-timestamp"
+        ],
+        "recognized": "選択肢から見抜く出題ポイント。",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": []
+    },
+    "word-form": {
+      "key": "word-form",
+      "src": "./audio/generated/ja/jf_alpha/e1dfe60ee21bbbc146023c00667b64ac.m4a",
+      "sha256": "a25e4d871483f592d9061c964c49900134ef9681388ae1905190fda6cc661c65",
+      "voiceId": "jf_alpha",
+      "fingerprint": "75445b4d1e3e5b12516d24119d4b8955142d5c6e1ccdd995394fee0bc9bc3199",
+      "expected": "品詞問題",
+      "spoken": "品詞問題",
+      "recognized": "品紙問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.0,
+          "text": "品紙問題",
+          "avgLogprob": -0.7089045218058995,
+          "noSpeechProb": 0.14265990257263184
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 16.16275,
+        "end": 17.31475,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "invalid-word-timestamp"
+        ],
+        "recognized": "品詞問題。",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.25,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "詞",
+          "recognized": "紙"
+        }
+      ]
+    },
+    "lexis": {
+      "key": "lexis",
+      "src": "./audio/generated/ja/jf_alpha/e7c7fa9a3149c4540e7a4efc891f4e0b.m4a",
+      "sha256": "7ac412a4ed9d8b1e73a50d23cdeb0a7728d7adad828f4b2e6fc152738f8346ca",
+      "voiceId": "jf_alpha",
+      "fingerprint": "8486acf14cc539482e3533a1d9d9451216eb09463f8b66d98b88f0884608f48d",
+      "expected": "語彙・コロケーション問題",
+      "spoken": "語彙・コロケーション問題",
+      "recognized": "5位コロケーション問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "5位コロケーション問題",
+          "avgLogprob": -0.38549161702394485,
+          "noSpeechProb": 0.05462063103914261
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
+        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
+        "offset": 0.4,
+        "end": 2.021375,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "イコロケーション問題",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.1818,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "語 彙",
+          "recognized": "五 位"
+        }
+      ]
+    },
+    "p7-detail": {
+      "key": "p7-detail",
+      "src": "./audio/generated/ja/jf_alpha/d177bcae48245964c82f3e0d6347b712.m4a",
+      "sha256": "3b64137cf19da2346645b7ac4b4051eecb751cd9fa60a409ee4026c0044d1ead",
+      "voiceId": "jf_alpha",
+      "fingerprint": "73f533834ca6d40e5af0296e4f71d2acd502651e1588426754a62d246e64f995",
+      "expected": "詳細情報問題",
+      "spoken": "詳細情報問題",
+      "recognized": "詳細情報問題",
+      "segments": [
+        {
+          "start": -0.06943749999999937,
+          "end": 0.33056250000000276,
+          "text": "詳",
+          "probability": 0.989868700504303
+        },
+        {
+          "start": 0.33056250000000276,
+          "end": 0.5505625000000016,
+          "text": "細",
+          "probability": 0.9974451065063477
+        },
+        {
+          "start": 0.5505625000000016,
+          "end": 0.8105625000000032,
+          "text": "情",
+          "probability": 0.9924969673156738
+        },
+        {
+          "start": 0.8105625000000032,
+          "end": 1.0105625000000025,
+          "text": "報",
+          "probability": 0.9992536902427673
+        },
+        {
+          "start": 1.0105625000000025,
+          "end": 1.3905625000000015,
+          "text": "問題",
+          "probability": 0.9966212511062622
+        }
+      ],
+      "recognitionMethod": "batch-beam1",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 1,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
+        "wordTimestamps": true,
+        "batchSeconds": 24,
+        "leadingPadSeconds": 0.4,
+        "gapSeconds": 0.6,
+        "boundaryToleranceSeconds": 0.12,
+        "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+      },
+      "singleFileVerification": false,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
+        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
+        "offset": 19.149437499999998,
+        "end": 20.8134375,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "詳細情報問題",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "p6-context": {
+      "key": "p6-context",
+      "src": "./audio/generated/ja/jf_alpha/2038440cc6e06eea22b204e81b1d5b01.m4a",
+      "sha256": "348025fba9f7b3b667bfa5b63736ec86dbfdb386d60244985540227dc3847e62",
+      "voiceId": "jf_alpha",
+      "fingerprint": "d6535077d24c11167cc5e35fe2f0044725a6cc54263617550b284e1e0e196fa1",
+      "expected": "文脈を読む空所補充",
+      "spoken": "文脈を読む空所補充",
+      "recognized": "文脈を読む空書補充",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "文脈を読む空書補充",
+          "avgLogprob": -0.3338797017931938,
+          "noSpeechProb": 0.06061980500817299
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.1111,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "所",
+          "recognized": "書"
+        }
+      ]
+    },
+    "gram-time": {
+      "key": "gram-time",
+      "src": "./audio/generated/ja/jf_alpha/ea5df6c831dc0c9562db09cc7927ec87.m4a",
+      "sha256": "8b436b29dafd9fa11a09c11e61509141e5aa2afa7dfd67a43737af05a022d28b",
+      "voiceId": "jf_alpha",
+      "fingerprint": "0b1411cef0d1d4046511a4bcdb53fb93051ac87280a62131f7554c3f1e27df76",
+      "expected": "過去形と現在完了形",
+      "spoken": "かこけいと現在完了形",
+      "recognized": "過去計と現在完了計",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "過去計と現在完了計",
+          "avgLogprob": -0.35126566886901855,
+          "noSpeechProb": 0.02092248760163784
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65",
+        "evidence": "./data/audio/audit-batches/b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65.json",
+        "offset": 18.1228125,
+        "end": 20.298812499999997,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "過去計と現在完了計。",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.5,
+      "phonemeErrorRate": 0.04,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "か こ け い",
+          "recognized": "過 去 計"
+        },
+        {
+          "operation": "replace",
+          "expected": "形",
+          "recognized": "計"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-time"
+    },
+    "gram-conditional": {
+      "key": "gram-conditional",
+      "src": "./audio/generated/ja/jf_alpha/8820d81c1959422ed8df67481ae85c6d.m4a",
+      "sha256": "d3c47f715b7f89e368df7197ff609cd98c74a782201e8c4373f4b1d6a3c0c5ed",
+      "voiceId": "jf_alpha",
+      "fingerprint": "973261600f06211bc4fb417caa728b385ed4bc2864f1b1581753fc4e269062e1",
+      "expected": "仮定法過去",
+      "spoken": "仮定法過去",
+      "recognized": "家庭放課校",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "家庭放課校",
+          "avgLogprob": -0.4608074247837067,
+          "noSpeechProb": 0.05113577842712402
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65",
+        "evidence": "./data/audio/audit-batches/b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65.json",
+        "offset": 20.8988125,
+        "end": 22.1788125,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "家庭法加工。",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": 0.0833,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "仮 定 法 過 去",
+          "recognized": "家 庭 放 課 校"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-conditional"
+    },
+    "gram-word-form": {
+      "key": "gram-word-form",
+      "src": "./audio/generated/ja/jf_alpha/37da243bd0d4f5e1cb873f77d49392bc.m4a",
+      "sha256": "ce312ef336e6c397414764935f5014f6c55cdd337df9c05a1b072da43b58e5a0",
+      "voiceId": "jf_alpha",
+      "fingerprint": "14e963437cdd9f04643baffb99bb1da60657d84ac41cf816dc83537a3cf0b68b",
+      "expected": "品詞と文中の位置",
+      "spoken": "品詞と文中の位置",
+      "recognized": "品質と分中の位置",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "品質と分中の位置",
+          "avgLogprob": -0.53415601903742,
+          "noSpeechProb": 0.07274162024259567
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 0.4,
+        "end": 1.9786875,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "子と文中の位",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.25,
+      "phonemeErrorRate": 0.1667,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "詞",
+          "recognized": "質"
+        },
+        {
+          "operation": "replace",
+          "expected": "文",
+          "recognized": "分"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-word-form"
+    },
+    "gram-preposition": {
+      "key": "gram-preposition",
+      "src": "./audio/generated/ja/jf_alpha/76bfbb3f1432f4080f691e08cc97abc2.m4a",
+      "sha256": "289033c96699f915c53fe0a62f141d60dfd22f68fc34474c0338dd39e1400abc",
+      "voiceId": "jf_alpha",
+      "fingerprint": "2493971f50256e3b884ebdc892405f5228252c6533cf29a6b9ca05e6498bfefa",
+      "expected": "時・場所を表す前置詞",
+      "spoken": "時・場所を表す前置詞",
+      "recognized": "自場所を表す前置し",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "自場所を表す前置し",
+          "avgLogprob": -0.5173506736755371,
+          "noSpeechProb": 0.029794789850711823
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.2222,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "時",
+          "recognized": "自"
+        },
+        {
+          "operation": "replace",
+          "expected": "詞",
+          "recognized": "し"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-preposition"
+    },
+    "gram-passive": {
+      "key": "gram-passive",
+      "src": "./audio/generated/ja/jf_alpha/6aeaa293aa48199b87c6cde7f0876a80.m4a",
+      "sha256": "d7c5e8985652aaa94ca52c15b8d704b3d3f78feddf6272531c2a34fb264a2abc",
+      "voiceId": "jf_alpha",
+      "fingerprint": "3a7b220818f6d9692b682b4861d18c601bb291c2602f89a359bff009f384ee75",
+      "expected": "受動態",
+      "spoken": "受動態",
+      "recognized": "駿道隊",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.0,
+          "text": "駿道隊",
+          "avgLogprob": -0.7079955413937569,
+          "noSpeechProb": 0.04987670108675957
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 2,
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": 0.25,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "受 動 態",
+          "recognized": "駿 道 隊"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-passive"
+    },
+    "gram-inversion": {
+      "key": "gram-inversion",
+      "src": "./audio/generated/ja/jf_alpha/3c5d58fc3c6c78326681d04ba4fd3923.m4a",
+      "sha256": "807259c93b187150936ca6c54e5bafa7cfe019ce0fdcd88ec50908aca18f3e75",
+      "voiceId": "jf_alpha",
+      "fingerprint": "9a90851784610c994a77c8c40cb35f6746dcde17e846e52c360fc67086a15e1e",
+      "expected": "倒置と強調",
+      "spoken": "倒置と強調",
+      "recognized": "当地と共町",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "当地と共町",
+          "avgLogprob": -0.8932482401529948,
+          "noSpeechProb": 0.12445182353258133
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
+        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
+        "offset": 12.786749999999998,
+        "end": 14.152124999999998,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "統治と強調、",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.8,
+      "phonemeErrorRate": 0.5,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "倒 置",
+          "recognized": "当 地"
+        },
+        {
+          "operation": "replace",
+          "expected": "強 調",
+          "recognized": "共 町"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-inversion"
+    },
+    "gram-agreement": {
+      "key": "gram-agreement",
+      "src": "./audio/generated/ja/jf_alpha/9a15487e6c389372ddc9a62e03b45f3b.m4a",
+      "sha256": "1138ba8d0c02aea733b92d9012c24782f2a6f2d02de56efa0f4a47d4c72bb1b1",
+      "voiceId": "jf_alpha",
+      "fingerprint": "447d4ecc7eb8ad7c37f3d3c391dadb21f0cfac9a933a3ee6e75dab58a7f282eb",
+      "expected": "主語と動詞の一致",
+      "spoken": "主語と動詞の一致",
+      "recognized": "仕事同士の位置",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "仕事同士の位置",
+          "avgLogprob": -0.22136777639389038,
+          "noSpeechProb": 0.0693233534693718
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 0.4,
+        "end": 2.021375,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "事同士の位置、",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.875,
+      "phonemeErrorRate": 0.1176,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "主 語 と 動 詞",
+          "recognized": "仕 事 同 士"
+        },
+        {
+          "operation": "replace",
+          "expected": "一 致",
+          "recognized": "位 置"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-agreement"
+    },
+    "gram-sequence": {
+      "key": "gram-sequence",
+      "src": "./audio/generated/ja/jf_alpha/fc294ae0411cda598d9a75c1855698fb.m4a",
+      "sha256": "e3de228819e1a44b7ce4a5552abe6963a7396d5680a24341919e4a4aff36cd39",
+      "voiceId": "jf_alpha",
+      "fingerprint": "76e6c5b7391d39c2c3e36d36c48eda326bd2ef0eb0d7d593eb527c1b1ea30972",
+      "expected": "未来表現と過去完了形",
+      "spoken": "未来表現と過去完了形",
+      "recognized": "未来証言と過去完了計",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "未来証言と過去完了計",
+          "avgLogprob": -0.3409517630934715,
+          "noSpeechProb": 0.0658540353178978
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 5.8240625,
+        "end": 8.04275,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "未来証言と過去完了計、",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.3,
+      "phonemeErrorRate": 0.0357,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "表 現",
+          "recognized": "証 言"
+        },
+        {
+          "operation": "replace",
+          "expected": "形",
+          "recognized": "計"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-sequence"
+    },
+    "gram-linkers": {
+      "key": "gram-linkers",
+      "src": "./audio/generated/ja/jf_alpha/dcc3b3f922e5cfc050f849820333b916.m4a",
+      "sha256": "72c46a0f164f4c4801456872d548a2b8bad1306e463abf8a5e179ad882104ce5",
+      "voiceId": "jf_alpha",
+      "fingerprint": "bebf9018342f6c69ad1cf9c1e99d713b7c387f9c8bade970980be3480065e5dd",
+      "expected": "前置詞句と接続詞",
+      "spoken": "前置詞句と接続詞",
+      "recognized": "レンチ軸と接続し",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "レンチ軸と接続し",
+          "avgLogprob": -0.41599105795224506,
+          "noSpeechProb": 0.030800852924585342
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 8.64275,
+        "end": 10.349437499999999,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "連地績と接続し、",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.625,
+      "phonemeErrorRate": 0.0952,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "前 置 詞 句",
+          "recognized": "レ ン チ 軸"
+        },
+        {
+          "operation": "replace",
+          "expected": "詞",
+          "recognized": "し"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-linkers"
+    },
+    "first-word": {
+      "key": "first-word",
+      "src": "./audio/generated/ja/jf_alpha/8395aecba7062f100817bd16f9add5ab.m4a",
+      "sha256": "b9a0206a4bb9376b00913ded427843e01fe4c3b64e2d58e25acdf55ceb6112d3",
+      "voiceId": "jf_alpha",
+      "fingerprint": "34788eb0c0ee88de60ebcd96bd041eca0c7cb6d9f6be11443afb9b682f950e9d",
+      "expected": "文頭の聞き取り",
+      "spoken": "文頭の聞き取り",
+      "recognized": "文童の聞き取り",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "文童の聞き取り",
+          "avgLogprob": -0.45097724957899615,
+          "noSpeechProb": 0.03792646899819374
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 19.661499999999997,
+        "end": 21.240187499999998,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "文党の聞き取",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.1429,
+      "phonemeErrorRate": 0.1053,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "頭",
+          "recognized": "童"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:first-word"
+    },
+    "indirect": {
+      "key": "indirect",
+      "src": "./audio/generated/ja/jf_alpha/e1579029cd4e9c2bd5d8c732cd1419d0.m4a",
+      "sha256": "7711ce76475cb401d44ff3783fdb5067d94c6a38c3ac9fdeb75a532bc7fd978b",
+      "voiceId": "jf_alpha",
+      "fingerprint": "47d787d3ec94d70b657de8f6fc37c99b2184e230a444e812d1f7849762e2cc31",
+      "expected": "間接応答",
+      "spoken": "間接応答",
+      "recognized": "関節音",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "関節音",
+          "avgLogprob": -0.5670165845326015,
+          "noSpeechProb": 0.08464229851961136
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
+        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
+        "offset": 21.8401875,
+        "end": 23.1201875,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "関節応答",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": 0.3333,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "間 接 応 答",
+          "recognized": "関 節 音"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:indirect"
+    },
+    "tense": {
+      "key": "tense",
+      "src": "./audio/generated/ja/jf_alpha/3d6f2ad43a9f0e861778fb79b516ea8e.m4a",
+      "sha256": "83966a7d7b74c17924fa3572926915468322dc51be6f2d41b162aef211b4af97",
+      "voiceId": "jf_alpha",
+      "fingerprint": "4540d85eb0d417d8d5efd24503a00ba95549e661043a33be30c5194e73c0f01a",
+      "expected": "時制問題",
+      "spoken": "時制問題",
+      "recognized": "事成問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 1.0,
+          "text": "事成問題",
+          "avgLogprob": -0.7691489656766256,
+          "noSpeechProb": 0.16996340453624725
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
+        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
+        "offset": 17.91475,
+        "end": 19.066750000000003,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "invalid-word-timestamp"
+        ],
+        "recognized": "自製問題。",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.5,
+      "phonemeErrorRate": 0.3636,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "時 制",
+          "recognized": "事 成"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:tense"
+    },
+    "link": {
+      "key": "link",
+      "src": "./audio/generated/ja/jf_alpha/ba255c4b6072eb0ffe5cbe1dd03e5293.m4a",
+      "sha256": "1327cf1c6186075a56115b00d0071bd314c856d35e9ffa387b0db59190fa0d6c",
+      "voiceId": "jf_alpha",
+      "fingerprint": "174e61883c76f6d323109b02aef39d995f9c0bd057ddf8584236093a5541c5d3",
+      "expected": "前置詞と接続詞の区別",
+      "spoken": "前置詞と接続詞の区別",
+      "recognized": "全地市と接続市の区別",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "全地市と接続市の区別",
+          "avgLogprob": -0.45562288590839933,
+          "noSpeechProb": 0.11053532361984253
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.4,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "前 置 詞",
+          "recognized": "全 地 市"
+        },
+        {
+          "operation": "replace",
+          "expected": "詞",
+          "recognized": "市"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:link"
+    },
+    "p6-insert": {
+      "key": "p6-insert",
+      "src": "./audio/generated/ja/jf_alpha/29f33a0f838c527a7c9794119f5e0c36.m4a",
+      "sha256": "4db43384df25270259591059112a4db25e59105ca1ffa6dea721060a4f915641",
+      "voiceId": "jf_alpha",
+      "fingerprint": "48031672caa319d832d04f845684ff55b6af0c64ca1d5479f80aaef7284f87ed",
+      "expected": "文挿入問題の指示語と接続表現",
+      "spoken": "文挿入問題の指示語と接続表現",
+      "recognized": "文総入問題の指示ごと接続表現",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 3.0,
+          "text": "文総入問題の指示ごと接続表現",
+          "avgLogprob": -0.3532884822172277,
+          "noSpeechProb": 0.04170596972107887
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
+        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
+        "offset": 2.621375,
+        "end": 5.693375,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-crosses-file-boundary"
+        ],
+        "recognized": "文総入問題の指示ごと接続表現",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.1429,
+      "phonemeErrorRate": 0.1026,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "挿",
+          "recognized": "総"
+        },
+        {
+          "operation": "replace",
+          "expected": "語",
+          "recognized": "ご"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p6-insert"
+    },
+    "p7-not": {
+      "key": "p7-not",
+      "src": "./audio/generated/ja/jf_alpha/a9d449d356cb1ae4e08dbcf9cf465f15.m4a",
+      "sha256": "6204787afebefeedcf36045912560b1e6f904bb7f01418c84d5acb53896ca588",
+      "voiceId": "jf_alpha",
+      "fingerprint": "5db3fc65113a70e4d557369e6763a7bd42eb6cea76e6d116b3094c1089e6d8da",
+      "expected": "NOT問題の選択肢の照合",
+      "spoken": "エヌ オー ティー 問題の選択肢の照合",
+      "recognized": "NOT問題の選択肢の証語",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 4.4,
+          "text": "NOT問題の選択肢の証語",
+          "avgLogprob": -0.4199676029384136,
+          "noSpeechProb": 0.022635208442807198
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
+        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
+        "offset": 8.856062499999998,
+        "end": 11.586749999999999,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-crosses-file-boundary"
+        ],
+        "recognized": "NOT問題の選択肢の証拠",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.125,
+      "phonemeErrorRate": 0.1765,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "照 合",
+          "recognized": "証 語"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-not"
+    },
+    "p7-syn": {
+      "key": "p7-syn",
+      "src": "./audio/generated/ja/jf_alpha/cd3b00eedb9d089340c6b7fc1dbbc2f9.m4a",
+      "sha256": "def56b5baae531007213424851547bd80e0af88d9a0ab157b08374344216cd2a",
+      "voiceId": "jf_alpha",
+      "fingerprint": "8ec12792de98aaa0825b676b97be5c6341f45d583a62886c99dff0dd6cacea11",
+      "expected": "同義語・言い換え問題",
+      "spoken": "同義語・言い換え問題",
+      "recognized": "同儀語言い換え問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "同儀語言い換え問題",
+          "avgLogprob": -0.5535973062117895,
+          "noSpeechProb": 0.031063878908753395
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "matched",
+      "metric": "CER",
+      "errorRate": 0.1111,
+      "phonemeErrorRate": 0.0,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "義",
+          "recognized": "儀"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-syn"
+    },
+    "p7-position": {
+      "key": "p7-position",
+      "src": "./audio/generated/ja/jf_alpha/5e1256700edf3b13572d1daec0c1f5ab.m4a",
+      "sha256": "f912d91405936cc44e42eb9563efbc21796d7fc8bac9059a8f7be22b7ee696e0",
+      "voiceId": "jf_alpha",
+      "fingerprint": "ddf55773260fc42dfaa4a8449c525103bb69c30335bd21d575fc820867199d75",
+      "expected": "文挿入位置問題",
+      "spoken": "文挿入位置問題",
+      "recognized": "文総入一問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "文総入一問題",
+          "avgLogprob": -0.5727505154079862,
+          "noSpeechProb": 0.07388576865196228
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
+        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
+        "offset": 14.322749999999997,
+        "end": 15.901437499999997,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-crosses-file-boundary",
+          "word-in-padding"
+        ],
+        "recognized": "文総入1問題",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.4286,
+      "phonemeErrorRate": 0.2222,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "挿",
+          "recognized": "総"
+        },
+        {
+          "operation": "replace",
+          "expected": "位 置",
+          "recognized": "一"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-position"
+    },
+    "p7-multi": {
+      "key": "p7-multi",
+      "src": "./audio/generated/ja/jf_alpha/97f35cadf676dda77b6b076db0eb000f.m4a",
+      "sha256": "1b30b91fe5cf062c768a1773608e6b4e9cee64f4bc946ad0ee693a0b818a70ba",
+      "voiceId": "jf_alpha",
+      "fingerprint": "5d516f2d1eccb0af6fda029c32aa8cd3c17ed6c76cd75a5441f491b6aa5b74b4",
+      "expected": "複数文書の照合問題",
+      "spoken": "複数文書の照合問題",
+      "recognized": "複数文書の集合問題",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": "複数文書の集合問題",
+          "avgLogprob": -0.3135480055442223,
+          "noSpeechProb": 0.17512854933738708
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
+        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
+        "offset": 16.501437499999998,
+        "end": 18.549437499999996,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "数文書の証拠問題",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "CER",
+      "errorRate": 0.1111,
+      "phonemeErrorRate": 0.0385,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "照",
+          "recognized": "集"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-multi"
+    }
+  },
+  "generation": {
+    "individual": {
+      "model": "whisper-small",
+      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "device": "cpu",
+      "computeType": "int8",
+      "packages": {
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.9.0",
+        "av": "16.0.1"
+      },
+      "beamSize": 5,
+      "conditionOnPreviousText": false,
+      "prompt": null,
+      "vadFilter": false
+    },
+    "screening": null,
+    "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
+  },
+  "sourceSha256": "8aa409e2e809672e6ed61f4a86c0947b716aae2144f223ff6a5b76d6d16b5504"
+}

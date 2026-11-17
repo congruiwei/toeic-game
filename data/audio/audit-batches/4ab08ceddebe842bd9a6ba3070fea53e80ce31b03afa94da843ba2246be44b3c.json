@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "id": "4ab08ceddebe842bd9a6ba3070fea53e80ce31b03afa94da843ba2246be44b3c",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 8.2560625,
+  "elapsedSeconds": 3.484,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.117375,
+      "sha256": "264cb7de84003706303b1c3e243a639a92a6022b15e6c98218ef7629d901e9c7",
+      "src": "./audio/generated/en/am_puck/2a9bb9b544578790ee3c2467a714f8ee.m4a"
+    },
+    {
+      "offset": 6.717375,
+      "end": 7.6560625,
+      "sha256": "001ee6e3f28d28b2ba230ab31e716e01e7a47063e4d261a9ebcd65dbed397812",
+      "src": "./audio/generated/en/am_puck/5d259b35f0993714e93574022c5d3446.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.8945911526679993
+    },
+    {
+      "word": " shop",
+      "start": 0.56,
+      "end": 0.76,
+      "probability": 0.984798014163971
+    },
+    {
+      "word": " will",
+      "start": 0.76,
+      "end": 0.98,
+      "probability": 0.9951477646827698
+    },
+    {
+      "word": " display",
+      "start": 0.98,
+      "end": 1.3,
+      "probability": 0.998636782169342
+    },
+    {
+      "word": " the",
+      "start": 1.3,
+      "end": 1.54,
+      "probability": 0.9969004392623901
+    },
+    {
+      "word": " bags",
+      "start": 1.54,
+      "end": 1.92,
+      "probability": 0.9866699576377869
+    },
+    {
+      "word": " on",
+      "start": 1.92,
+      "end": 2.18,
+      "probability": 0.9920869469642639
+    },
+    {
+      "word": " illuminated",
+      "start": 2.18,
+      "end": 2.58,
+      "probability": 0.986426591873169
+    },
+    {
+      "word": " stands",
+      "start": 2.58,
+      "end": 3.12,
+      "probability": 0.9850634336471558
+    },
+    {
+      "word": " throughout",
+      "start": 3.12,
+      "end": 3.64,
+      "probability": 0.9888527393341064
+    },
+    {
+      "word": " the",
+      "start": 3.64,
+      "end": 3.88,
+      "probability": 0.9980401396751404
+    },
+    {
+      "word": " exhibition",
+      "start": 3.88,
+      "end": 4.34,
+      "probability": 0.9954599738121033
+    },
+    {
+      "word": " for",
+      "start": 4.34,
+      "end": 4.62,
+      "probability": 0.9928292632102966
+    },
+    {
+      "word": " visitors",
+      "start": 4.62,
+      "end": 5.02,
+      "probability": 0.9973132014274597
+    },
+    {
+      "word": " to",
+      "start": 5.02,
+      "end": 5.3,
+      "probability": 0.9975937008857727
+    },
+    {
+      "word": " admire.",
+      "start": 5.3,
+      "end": 5.66,
+      "probability": 0.998828113079071
+    },
+    {
+      "word": " Catalogue",
+      "start": 6.58,
+      "end": 7.32,
+      "probability": 0.5317263007164001
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.66,
+      "text": " The shop will display the bags on illuminated stands throughout the exhibition for visitors to admire.",
+      "avgLogprob": -0.2785552727679412,
+      "noSpeechProb": 0.0021045950707048178
+    },
+    {
+      "start": 6.58,
+      "end": 7.32,
+      "text": " Catalogue",
+      "avgLogprob": -0.2785552727679412,
+      "noSpeechProb": 0.0021045950707048178
+    }
+  ]
+}

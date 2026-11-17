@@ -1,0 +1,577 @@
+{
+  "version": 1,
+  "id": "f069e73e147ae4659e5ee22c7c7114932b609e6b5db6a36c894534293506ad9e",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.986812500000003,
+  "elapsedSeconds": 4.916,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.277375,
+      "sha256": "2aedf0623b43de562f0b5fdadc37b2802d90092ed578f6cf391df6c4bc53774e",
+      "src": "./audio/generated/ja/jf_alpha/96dd0ee6b5aa0063e26a1702c532d11f.m4a"
+    },
+    {
+      "offset": 2.8773750000000002,
+      "end": 4.9680625,
+      "sha256": "aada82d5d65def7d37901e3fc3a6926bd96aca830e4eb693f1aaa8aee532d99f",
+      "src": "./audio/generated/ja/jf_alpha/e650e7f2f4984cd2f6901d06e81941a3.m4a"
+    },
+    {
+      "offset": 5.5680625,
+      "end": 9.2374375,
+      "sha256": "fd1b5f1969290dfd5606eb75ba97d4bd586fecbcf52c3175d71a850d5b1fb040",
+      "src": "./audio/generated/ja/jf_alpha/d80cd0b5c46a931bb33704ccbf712630.m4a"
+    },
+    {
+      "offset": 9.8374375,
+      "end": 14.104125,
+      "sha256": "9e18f9d774ac8696bc56c0b943677d44dc4df2db7541a3e2b63f3f96ad88d261",
+      "src": "./audio/generated/ja/jf_alpha/4016cb74204830a8e2c2abefcf68a2fc.m4a"
+    },
+    {
+      "offset": 14.704125,
+      "end": 17.136125,
+      "sha256": "a0ee1f0341b506ead4f2787ebc4b533e77743dff0116a5af409f4a7ba45e4af2",
+      "src": "./audio/generated/ja/jf_alpha/b105e3a01051c19f0721ceed4f39212f.m4a"
+    },
+    {
+      "offset": 17.736125,
+      "end": 22.3868125,
+      "sha256": "e350d78194f12271b79c47b530db37194254f106e066b784626dc87321233bb1",
+      "src": "./audio/generated/ja/jf_alpha/56d91268329c50918d006ab5509642c0.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "別",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.5723596215248108
+    },
+    {
+      "word": "の",
+      "start": 0.68,
+      "end": 0.92,
+      "probability": 0.9900188446044922
+    },
+    {
+      "word": "招",
+      "start": 0.92,
+      "end": 1.14,
+      "probability": 0.7629550993442535
+    },
+    {
+      "word": "待",
+      "start": 1.14,
+      "end": 1.36,
+      "probability": 0.9944732785224915
+    },
+    {
+      "word": "状",
+      "start": 1.36,
+      "end": 1.6,
+      "probability": 0.8882636725902557
+    },
+    {
+      "word": "を",
+      "start": 1.6,
+      "end": 1.8,
+      "probability": 0.9909945130348206
+    },
+    {
+      "word": "送",
+      "start": 1.8,
+      "end": 1.96,
+      "probability": 0.8697014451026917
+    },
+    {
+      "word": "る",
+      "start": 1.96,
+      "end": 2.24,
+      "probability": 0.9974488615989685
+    },
+    {
+      "word": " 来",
+      "start": 2.9,
+      "end": 3.14,
+      "probability": 0.8865282535552979
+    },
+    {
+      "word": "場",
+      "start": 3.14,
+      "end": 3.36,
+      "probability": 0.7135745882987976
+    },
+    {
+      "word": "者",
+      "start": 3.36,
+      "end": 3.56,
+      "probability": 0.9229134917259216
+    },
+    {
+      "word": "名",
+      "start": 3.56,
+      "end": 3.8,
+      "probability": 0.9562795162200928
+    },
+    {
+      "word": "簿",
+      "start": 3.8,
+      "end": 3.96,
+      "probability": 0.9663922488689423
+    },
+    {
+      "word": "を",
+      "start": 3.96,
+      "end": 4.12,
+      "probability": 0.9732866883277893
+    },
+    {
+      "word": "更",
+      "start": 4.12,
+      "end": 4.26,
+      "probability": 0.9688220620155334
+    },
+    {
+      "word": "新",
+      "start": 4.26,
+      "end": 4.48,
+      "probability": 0.9854378700256348
+    },
+    {
+      "word": "する",
+      "start": 4.48,
+      "end": 4.82,
+      "probability": 0.9967712759971619
+    },
+    {
+      "word": "桃",
+      "start": 5.340000000000002,
+      "end": 5.78,
+      "probability": 0.628227099776268
+    },
+    {
+      "word": "の",
+      "start": 5.78,
+      "end": 6.08,
+      "probability": 0.969508707523346
+    },
+    {
+      "word": "ジャ",
+      "start": 6.08,
+      "end": 6.22,
+      "probability": 0.8860423564910889
+    },
+    {
+      "word": "ム",
+      "start": 6.22,
+      "end": 6.34,
+      "probability": 0.9961884617805481
+    },
+    {
+      "word": "の",
+      "start": 6.34,
+      "end": 6.5,
+      "probability": 0.9913088083267212
+    },
+    {
+      "word": "瓶",
+      "start": 6.5,
+      "end": 6.68,
+      "probability": 0.9508026043574015
+    },
+    {
+      "word": "に",
+      "start": 6.68,
+      "end": 6.9,
+      "probability": 0.9887685775756836
+    },
+    {
+      "word": "使",
+      "start": 6.9,
+      "end": 7.1,
+      "probability": 0.9762109518051147
+    },
+    {
+      "word": "う",
+      "start": 7.1,
+      "end": 7.3,
+      "probability": 0.9988648891448975
+    },
+    {
+      "word": "シ",
+      "start": 7.3,
+      "end": 7.48,
+      "probability": 0.977013885974884
+    },
+    {
+      "word": "ール",
+      "start": 7.48,
+      "end": 7.62,
+      "probability": 0.9851893782615662
+    },
+    {
+      "word": "を",
+      "start": 7.62,
+      "end": 7.8,
+      "probability": 0.9800057411193848
+    },
+    {
+      "word": "ひ",
+      "start": 7.8,
+      "end": 7.92,
+      "probability": 0.5666480660438538
+    },
+    {
+      "word": "と",
+      "start": 7.92,
+      "end": 8.02,
+      "probability": 0.9946451187133789
+    },
+    {
+      "word": "巻",
+      "start": 8.02,
+      "end": 8.14,
+      "probability": 0.9416376948356628
+    },
+    {
+      "word": "き",
+      "start": 8.14,
+      "end": 8.92,
+      "probability": 0.6478864550590515
+    },
+    {
+      "word": "お願いします",
+      "start": 8.92,
+      "end": 8.92,
+      "probability": 0.5141902565956116
+    },
+    {
+      "word": " 終",
+      "start": 9.84,
+      "end": 10.12,
+      "probability": 0.16304709017276764
+    },
+    {
+      "word": "盟",
+      "start": 10.12,
+      "end": 10.34,
+      "probability": 0.39189334213733673
+    },
+    {
+      "word": "の",
+      "start": 10.34,
+      "end": 10.54,
+      "probability": 0.9325545430183411
+    },
+    {
+      "word": "図",
+      "start": 10.54,
+      "end": 10.68,
+      "probability": 0.9884604215621948
+    },
+    {
+      "word": "は",
+      "start": 10.68,
+      "end": 10.92,
+      "probability": 0.9973114728927612
+    },
+    {
+      "word": "丸",
+      "start": 10.92,
+      "end": 11.2,
+      "probability": 0.737835094332695
+    },
+    {
+      "word": "なので",
+      "start": 11.2,
+      "end": 11.52,
+      "probability": 0.9818799495697021
+    },
+    {
+      "word": "表",
+      "start": 11.52,
+      "end": 11.8,
+      "probability": 0.3992462158203125
+    },
+    {
+      "word": "から",
+      "start": 11.8,
+      "end": 12.1,
+      "probability": 0.9951057434082031
+    },
+    {
+      "word": "その",
+      "start": 12.1,
+      "end": 12.4,
+      "probability": 0.9932942390441895
+    },
+    {
+      "word": "形",
+      "start": 12.4,
+      "end": 12.64,
+      "probability": 0.9661652445793152
+    },
+    {
+      "word": "を",
+      "start": 12.64,
+      "end": 13.0,
+      "probability": 0.9984867572784424
+    },
+    {
+      "word": "選",
+      "start": 13.0,
+      "end": 13.2,
+      "probability": 0.9933131337165833
+    },
+    {
+      "word": "んで",
+      "start": 13.2,
+      "end": 13.44,
+      "probability": 0.9929969906806946
+    },
+    {
+      "word": "ください",
+      "start": 13.44,
+      "end": 13.9,
+      "probability": 0.9583964347839355
+    },
+    {
+      "word": "シ",
+      "start": 14.5,
+      "end": 14.94,
+      "probability": 0.709706723690033
+    },
+    {
+      "word": "ール",
+      "start": 14.94,
+      "end": 15.16,
+      "probability": 0.998432457447052
+    },
+    {
+      "word": "は",
+      "start": 15.16,
+      "end": 15.34,
+      "probability": 0.9583726525306702
+    },
+    {
+      "word": "瓶",
+      "start": 15.34,
+      "end": 15.54,
+      "probability": 0.9980141321818033
+    },
+    {
+      "word": "の",
+      "start": 15.54,
+      "end": 15.74,
+      "probability": 0.9876065850257874
+    },
+    {
+      "word": "本",
+      "start": 15.74,
+      "end": 15.96,
+      "probability": 0.9922382235527039
+    },
+    {
+      "word": "体",
+      "start": 15.96,
+      "end": 16.16,
+      "probability": 0.9962270259857178
+    },
+    {
+      "word": "に",
+      "start": 16.16,
+      "end": 16.34,
+      "probability": 0.9082219004631042
+    },
+    {
+      "word": "貼",
+      "start": 16.34,
+      "end": 16.48,
+      "probability": 0.924625813961029
+    },
+    {
+      "word": "ります",
+      "start": 16.48,
+      "end": 16.76,
+      "probability": 0.9864764213562012
+    },
+    {
+      "word": "か",
+      "start": 16.76,
+      "end": 16.96,
+      "probability": 0.6771982312202454
+    },
+    {
+      "word": " お",
+      "start": 16.96,
+      "end": 17.9,
+      "probability": 0.6768466830253601
+    },
+    {
+      "word": "客",
+      "start": 17.9,
+      "end": 18.06,
+      "probability": 0.9982976317405701
+    },
+    {
+      "word": "様",
+      "start": 18.06,
+      "end": 18.36,
+      "probability": 0.7967272996902466
+    },
+    {
+      "word": "が",
+      "start": 18.36,
+      "end": 18.58,
+      "probability": 0.9956400394439697
+    },
+    {
+      "word": "賃",
+      "start": 18.58,
+      "end": 18.82,
+      "probability": 0.5953563824295998
+    },
+    {
+      "word": "列",
+      "start": 18.82,
+      "end": 19.04,
+      "probability": 0.7890952229499817
+    },
+    {
+      "word": "を",
+      "start": 19.04,
+      "end": 19.28,
+      "probability": 0.9965478777885437
+    },
+    {
+      "word": "見",
+      "start": 19.28,
+      "end": 19.44,
+      "probability": 0.8863480687141418
+    },
+    {
+      "word": "下",
+      "start": 19.44,
+      "end": 19.62,
+      "probability": 0.943045437335968
+    },
+    {
+      "word": "ろ",
+      "start": 19.62,
+      "end": 19.68,
+      "probability": 0.9803952574729919
+    },
+    {
+      "word": "した",
+      "start": 19.68,
+      "end": 19.86,
+      "probability": 0.9956064820289612
+    },
+    {
+      "word": "時",
+      "start": 19.86,
+      "end": 20.14,
+      "probability": 0.686509370803833
+    },
+    {
+      "word": "に",
+      "start": 20.14,
+      "end": 20.32,
+      "probability": 0.9988905787467957
+    },
+    {
+      "word": "見",
+      "start": 20.32,
+      "end": 20.54,
+      "probability": 0.9917024970054626
+    },
+    {
+      "word": "える",
+      "start": 20.54,
+      "end": 20.76,
+      "probability": 0.9932435154914856
+    },
+    {
+      "word": "よう",
+      "start": 20.76,
+      "end": 20.96,
+      "probability": 0.43583768606185913
+    },
+    {
+      "word": "蓋",
+      "start": 20.96,
+      "end": 21.2,
+      "probability": 0.8347273766994476
+    },
+    {
+      "word": "に",
+      "start": 21.2,
+      "end": 21.36,
+      "probability": 0.9773798584938049
+    },
+    {
+      "word": "貼",
+      "start": 21.36,
+      "end": 21.5,
+      "probability": 0.9696553647518158
+    },
+    {
+      "word": "って",
+      "start": 21.5,
+      "end": 21.68,
+      "probability": 0.9819937348365784
+    },
+    {
+      "word": "ください",
+      "start": 21.68,
+      "end": 22.04,
+      "probability": 0.9564927816390991
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.82,
+      "text": "別の招待状を送る 来場者名簿を更新する",
+      "avgLogprob": -0.2400343914358121,
+      "noSpeechProb": 0.03151463717222214
+    },
+    {
+      "start": 5.340000000000002,
+      "end": 13.9,
+      "text": "桃のジャムの瓶に使うシールをひと巻きお願いします 終盟の図は丸なので表からその形を選んでください",
+      "avgLogprob": -0.2400343914358121,
+      "noSpeechProb": 0.03151463717222214
+    },
+    {
+      "start": 14.5,
+      "end": 22.04,
+      "text": "シールは瓶の本体に貼りますか お客様が賃列を見下ろした時に見えるよう蓋に貼ってください",
+      "avgLogprob": -0.2400343914358121,
+      "noSpeechProb": 0.03151463717222214
+    }
+  ]
+}

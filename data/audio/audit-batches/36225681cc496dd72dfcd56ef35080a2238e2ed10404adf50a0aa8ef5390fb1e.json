@@ -1,0 +1,394 @@
+{
+  "version": 1,
+  "id": "36225681cc496dd72dfcd56ef35080a2238e2ed10404adf50a0aa8ef5390fb1e",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.648187500000002,
+  "elapsedSeconds": 4.166,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.04,
+      "sha256": "9b3c16eb46cc7fe597a993abc9bfd7010e0e4fb20f3fc72a25db9bf1073f25ae",
+      "src": "./audio/generated/en/af_heart/82848f62ecd72c22ddc90ceb32250cba.m4a"
+    },
+    {
+      "offset": 1.6400000000000001,
+      "end": 5.309375,
+      "sha256": "21a4fa3b1f78be347ccdf4cfed9e624babad24a43ae8dd980cce84239dd94f8c",
+      "src": "./audio/generated/en/af_heart/cf92790606e3f754f83e2c186a8994fa.m4a"
+    },
+    {
+      "offset": 5.909375,
+      "end": 6.76275,
+      "sha256": "b1d800161b17381d6dd6c8dc0f4f1009a65bf913a95d27d16ecfa8e2282276e1",
+      "src": "./audio/generated/en/am_puck/21e25ebfeb35641fe502700dc498a7ab.m4a"
+    },
+    {
+      "offset": 7.362749999999999,
+      "end": 12.952124999999999,
+      "sha256": "6c715eb415e7b17946bc0b9b4ce62d3f96233a32f741132abc7768fac0f75151",
+      "src": "./audio/generated/en/am_puck/7b6c6bbc51544521de70f5146fd1bd6b.m4a"
+    },
+    {
+      "offset": 13.552124999999998,
+      "end": 14.362812499999999,
+      "sha256": "b99dca4ac2241a4f94bfb418b6eb10e59c558899ac4d788d03b95c5c4209d925",
+      "src": "./audio/generated/en/af_bella/da3f8fa92529b6fc73978b18436c50c6.m4a"
+    },
+    {
+      "offset": 14.962812499999998,
+      "end": 20.7655,
+      "sha256": "c0e852fa4aa02800521e21d18fb221bb49cea11785615854898cb789bc4677fc",
+      "src": "./audio/generated/en/af_bella/b48444d665b23b525eed969a96a1a4c4.m4a"
+    },
+    {
+      "offset": 21.3655,
+      "end": 22.0481875,
+      "sha256": "6cdbd71b49f29512b443ba64318c8a5a0ada60cff1b07c5b130ced4eab25fbbe",
+      "src": "./audio/generated/en/af_bella/9a12359eacbda158e5caaa44a960cb68.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Bill,",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.3850875496864319
+    },
+    {
+      "word": " we",
+      "start": 1.3,
+      "end": 1.78,
+      "probability": 0.9233551621437073
+    },
+    {
+      "word": " will",
+      "start": 1.78,
+      "end": 1.9,
+      "probability": 0.9870918989181519
+    },
+    {
+      "word": " bill",
+      "start": 1.9,
+      "end": 2.1,
+      "probability": 0.9703879356384277
+    },
+    {
+      "word": " your",
+      "start": 2.1,
+      "end": 2.26,
+      "probability": 0.9935488104820251
+    },
+    {
+      "word": " company",
+      "start": 2.26,
+      "end": 2.58,
+      "probability": 0.992396891117096
+    },
+    {
+      "word": " directly",
+      "start": 2.58,
+      "end": 3.1,
+      "probability": 0.9963131546974182
+    },
+    {
+      "word": " for",
+      "start": 3.1,
+      "end": 3.64,
+      "probability": 0.8640051484107971
+    },
+    {
+      "word": " the",
+      "start": 3.64,
+      "end": 3.74,
+      "probability": 0.9894634485244751
+    },
+    {
+      "word": " meeting",
+      "start": 3.74,
+      "end": 3.92,
+      "probability": 0.994013249874115
+    },
+    {
+      "word": " room",
+      "start": 3.92,
+      "end": 4.3,
+      "probability": 0.9916621446609497
+    },
+    {
+      "word": " and",
+      "start": 4.3,
+      "end": 4.54,
+      "probability": 0.9935706853866577
+    },
+    {
+      "word": " projector.",
+      "start": 4.54,
+      "end": 4.98,
+      "probability": 0.9825541377067566
+    },
+    {
+      "word": " Interest.",
+      "start": 5.82,
+      "end": 6.5,
+      "probability": 0.9281335771083832
+    },
+    {
+      "word": " Several",
+      "start": 7.08,
+      "end": 7.74,
+      "probability": 0.9889765381813049
+    },
+    {
+      "word": " visitors",
+      "start": 7.74,
+      "end": 8.1,
+      "probability": 0.9935895204544067
+    },
+    {
+      "word": " expressed",
+      "start": 8.1,
+      "end": 8.62,
+      "probability": 0.9924020767211914
+    },
+    {
+      "word": " interest",
+      "start": 8.62,
+      "end": 9.16,
+      "probability": 0.9979748129844666
+    },
+    {
+      "word": " in",
+      "start": 9.16,
+      "end": 9.46,
+      "probability": 0.9952524900436401
+    },
+    {
+      "word": " buying",
+      "start": 9.46,
+      "end": 9.72,
+      "probability": 0.9987786412239075
+    },
+    {
+      "word": " the",
+      "start": 9.72,
+      "end": 9.92,
+      "probability": 0.9978771209716797
+    },
+    {
+      "word": " display",
+      "start": 9.92,
+      "end": 10.18,
+      "probability": 0.9828552007675171
+    },
+    {
+      "word": " model",
+      "start": 10.18,
+      "end": 10.66,
+      "probability": 0.9987952709197998
+    },
+    {
+      "word": " and",
+      "start": 10.66,
+      "end": 10.98,
+      "probability": 0.9666407704353333
+    },
+    {
+      "word": " asked",
+      "start": 10.98,
+      "end": 11.26,
+      "probability": 0.9843037724494934
+    },
+    {
+      "word": " us",
+      "start": 11.26,
+      "end": 11.46,
+      "probability": 0.9917905330657959
+    },
+    {
+      "word": " for",
+      "start": 11.46,
+      "end": 11.62,
+      "probability": 0.9989413619041443
+    },
+    {
+      "word": " quotations.",
+      "start": 11.62,
+      "end": 12.24,
+      "probability": 0.9961362481117249
+    },
+    {
+      "word": " Interest.",
+      "start": 13.44,
+      "end": 14.18,
+      "probability": 0.9920943677425385
+    },
+    {
+      "word": " Our",
+      "start": 14.98,
+      "end": 15.14,
+      "probability": 0.9928724765777588
+    },
+    {
+      "word": " savings",
+      "start": 15.14,
+      "end": 15.44,
+      "probability": 0.9803787469863892
+    },
+    {
+      "word": " balance",
+      "start": 15.44,
+      "end": 15.92,
+      "probability": 0.9914315938949585
+    },
+    {
+      "word": " earns",
+      "start": 15.92,
+      "end": 16.28,
+      "probability": 0.9775631427764893
+    },
+    {
+      "word": " interest",
+      "start": 16.28,
+      "end": 16.78,
+      "probability": 0.9963573813438416
+    },
+    {
+      "word": " at",
+      "start": 16.78,
+      "end": 17.02,
+      "probability": 0.9954332113265991
+    },
+    {
+      "word": " a",
+      "start": 17.02,
+      "end": 17.12,
+      "probability": 0.9935046434402466
+    },
+    {
+      "word": " fixed",
+      "start": 17.12,
+      "end": 17.4,
+      "probability": 0.9978163242340088
+    },
+    {
+      "word": " annual",
+      "start": 17.4,
+      "end": 17.82,
+      "probability": 0.9974249601364136
+    },
+    {
+      "word": " percentage",
+      "start": 17.82,
+      "end": 18.2,
+      "probability": 0.9961889386177063
+    },
+    {
+      "word": " rate,",
+      "start": 18.2,
+      "end": 18.72,
+      "probability": 0.9980493783950806
+    },
+    {
+      "word": " paid",
+      "start": 19.12,
+      "end": 19.4,
+      "probability": 0.9876918196678162
+    },
+    {
+      "word": " monthly",
+      "start": 19.4,
+      "end": 19.82,
+      "probability": 0.9984980821609497
+    },
+    {
+      "word": " by",
+      "start": 19.82,
+      "end": 20.14,
+      "probability": 0.994026780128479
+    },
+    {
+      "word": " the",
+      "start": 20.14,
+      "end": 20.24,
+      "probability": 0.99680495262146
+    },
+    {
+      "word": " bank.",
+      "start": 20.24,
+      "end": 20.5,
+      "probability": 0.9745756387710571
+    },
+    {
+      "word": " Sound.",
+      "start": 21.44,
+      "end": 21.72,
+      "probability": 0.9829698801040649
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.98,
+      "text": " Bill, we will bill your company directly for the meeting room and projector.",
+      "avgLogprob": -0.30069659394877296,
+      "noSpeechProb": 0.037866443395614624
+    },
+    {
+      "start": 5.82,
+      "end": 6.5,
+      "text": " Interest.",
+      "avgLogprob": -0.30069659394877296,
+      "noSpeechProb": 0.037866443395614624
+    },
+    {
+      "start": 7.08,
+      "end": 12.24,
+      "text": " Several visitors expressed interest in buying the display model and asked us for quotations.",
+      "avgLogprob": -0.30069659394877296,
+      "noSpeechProb": 0.037866443395614624
+    },
+    {
+      "start": 13.44,
+      "end": 14.18,
+      "text": " Interest.",
+      "avgLogprob": -0.30069659394877296,
+      "noSpeechProb": 0.037866443395614624
+    },
+    {
+      "start": 14.98,
+      "end": 20.5,
+      "text": " Our savings balance earns interest at a fixed annual percentage rate, paid monthly by the bank.",
+      "avgLogprob": -0.30069659394877296,
+      "noSpeechProb": 0.037866443395614624
+    },
+    {
+      "start": 21.44,
+      "end": 21.72,
+      "text": " Sound.",
+      "avgLogprob": -0.30069659394877296,
+      "noSpeechProb": 0.037866443395614624
+    }
+  ]
+}

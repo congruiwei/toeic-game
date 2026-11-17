@@ -1,0 +1,654 @@
+{
+  "version": 1,
+  "id": "550f0d3348108c22a4b800f01fe693415d79f0dcde218fafe6b85ef5d9b1d166",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.976312500000006,
+  "elapsedSeconds": 5.513,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.4906875,
+      "sha256": "fd56964593697ee8af2e17da1c40f00a0dc329942bdd81a00f700f4c3444d0d7",
+      "src": "./audio/generated/ja/jf_alpha/9ba8b4852a5b7ace7846094728cc49f9.m4a"
+    },
+    {
+      "offset": 3.0906875,
+      "end": 5.0960625,
+      "sha256": "7c0660924f570b49916d38f24aa6326c3722080d212695ac93bca6ab21157fdf",
+      "src": "./audio/generated/ja/jf_alpha/d85dd239a39ae24abdbe856a661b2af9.m4a"
+    },
+    {
+      "offset": 5.6960625,
+      "end": 7.6587499999999995,
+      "sha256": "a5c73f7394dcd58b961deed18eb5b738aec7d70b7e24a3a68e5956a73b63e968",
+      "src": "./audio/generated/ja/jf_alpha/a37adc527a2d35d3530ca88c4a981cad.m4a"
+    },
+    {
+      "offset": 8.25875,
+      "end": 10.392125,
+      "sha256": "3c9b1620d98ab4f890a87f61bf9b658824ca140df2ce11901c98f7d6c73b635a",
+      "src": "./audio/generated/ja/jf_alpha/26ba8d20c0f05e88278eed7c83d87418.m4a"
+    },
+    {
+      "offset": 10.992125,
+      "end": 13.3388125,
+      "sha256": "18d0bb922adf01ac55fe24326a95aa8f4be9a9f5ca80fb716d96c26fabf69cbc",
+      "src": "./audio/generated/ja/jf_alpha/6e11aa4a239d4d9410657420d90824f7.m4a"
+    },
+    {
+      "offset": 13.9388125,
+      "end": 15.8161875,
+      "sha256": "be803948ef19514f1e4d01ed1c676f704ed83526e4caf0bb0101f6e0fa58da62",
+      "src": "./audio/generated/ja/jf_alpha/520732bf40c7c990ade614496e5f0983.m4a"
+    },
+    {
+      "offset": 16.4161875,
+      "end": 18.1655625,
+      "sha256": "af61c0096acc6d081fd31684b8887ae0749a4e43b284b4450cf1c42a126bbb85",
+      "src": "./audio/generated/ja/jf_alpha/32e1d66bd1ed3b4f60d3bfc8853f506e.m4a"
+    },
+    {
+      "offset": 18.7655625,
+      "end": 20.642937500000002,
+      "sha256": "f1eec45c7bd5ad307a3d29a78826a08461a104aaeed377843e70ce92fad8e31e",
+      "src": "./audio/generated/ja/jf_alpha/c97c5f5cac769bd4852f90136eb84bf2.m4a"
+    },
+    {
+      "offset": 21.242937500000004,
+      "end": 23.376312500000004,
+      "sha256": "984a91e2557997bf975b531cfab6db00ec3364ea57154c2f65e56f0f7f1f9c33",
+      "src": "./audio/generated/ja/jf_alpha/4171d923f2647b65f121e1d035c54a83.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "ベ",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.6076221466064453
+    },
+    {
+      "word": "ンチ",
+      "start": 0.62,
+      "end": 0.86,
+      "probability": 0.9977016746997833
+    },
+    {
+      "word": "の",
+      "start": 0.86,
+      "end": 1.0,
+      "probability": 0.9556336998939514
+    },
+    {
+      "word": "足",
+      "start": 1.0,
+      "end": 1.2,
+      "probability": 0.8697465658187866
+    },
+    {
+      "word": "に",
+      "start": 1.2,
+      "end": 1.38,
+      "probability": 0.988982617855072
+    },
+    {
+      "word": "日",
+      "start": 1.38,
+      "end": 1.54,
+      "probability": 0.29204636812210083
+    },
+    {
+      "word": "々",
+      "start": 1.54,
+      "end": 1.62,
+      "probability": 0.9796088337898254
+    },
+    {
+      "word": "が",
+      "start": 1.62,
+      "end": 1.8,
+      "probability": 0.9830222725868225
+    },
+    {
+      "word": "入",
+      "start": 1.8,
+      "end": 1.98,
+      "probability": 0.8566910028457642
+    },
+    {
+      "word": "った",
+      "start": 1.98,
+      "end": 2.28,
+      "probability": 0.9938530921936035
+    },
+    {
+      "word": "座",
+      "start": 2.28,
+      "end": 3.32,
+      "probability": 0.8690887987613678
+    },
+    {
+      "word": "席",
+      "start": 3.32,
+      "end": 3.52,
+      "probability": 0.9837264716625214
+    },
+    {
+      "word": "の",
+      "start": 3.52,
+      "end": 3.72,
+      "probability": 0.943571150302887
+    },
+    {
+      "word": "配",
+      "start": 3.72,
+      "end": 3.94,
+      "probability": 0.4248078763484955
+    },
+    {
+      "word": "達",
+      "start": 3.94,
+      "end": 4.1,
+      "probability": 0.9709182977676392
+    },
+    {
+      "word": "が",
+      "start": 4.1,
+      "end": 4.36,
+      "probability": 0.9894331097602844
+    },
+    {
+      "word": "遅",
+      "start": 4.36,
+      "end": 4.56,
+      "probability": 0.9742062985897064
+    },
+    {
+      "word": "れた",
+      "start": 4.56,
+      "end": 4.84,
+      "probability": 0.9899335503578186
+    },
+    {
+      "word": "小",
+      "start": 5.579999999999999,
+      "end": 5.94,
+      "probability": 0.07829726487398148
+    },
+    {
+      "word": "都",
+      "start": 5.94,
+      "end": 6.14,
+      "probability": 0.18060815334320068
+    },
+    {
+      "word": "外",
+      "start": 6.14,
+      "end": 6.32,
+      "probability": 0.3916090130805969
+    },
+    {
+      "word": "の",
+      "start": 6.32,
+      "end": 6.48,
+      "probability": 0.9898619651794434
+    },
+    {
+      "word": "ネ",
+      "start": 6.48,
+      "end": 6.6,
+      "probability": 0.8554540872573853
+    },
+    {
+      "word": "ジ",
+      "start": 6.6,
+      "end": 6.72,
+      "probability": 0.9911618232727051
+    },
+    {
+      "word": "が",
+      "start": 6.72,
+      "end": 6.86,
+      "probability": 0.9926599860191345
+    },
+    {
+      "word": "一",
+      "start": 6.86,
+      "end": 7.04,
+      "probability": 0.6085218787193298
+    },
+    {
+      "word": "本",
+      "start": 7.04,
+      "end": 7.18,
+      "probability": 0.9786374568939209
+    },
+    {
+      "word": "ない",
+      "start": 7.18,
+      "end": 7.46,
+      "probability": 0.7723631262779236
+    },
+    {
+      "word": "ベ",
+      "start": 8.12,
+      "end": 8.48,
+      "probability": 0.5098875164985657
+    },
+    {
+      "word": "ンチ",
+      "start": 8.48,
+      "end": 8.7,
+      "probability": 0.9997037947177887
+    },
+    {
+      "word": "が",
+      "start": 8.7,
+      "end": 8.86,
+      "probability": 0.9891696572303772
+    },
+    {
+      "word": "平",
+      "start": 8.86,
+      "end": 9.08,
+      "probability": 0.9550663232803345
+    },
+    {
+      "word": "ら",
+      "start": 9.08,
+      "end": 9.26,
+      "probability": 0.9435511231422424
+    },
+    {
+      "word": "に",
+      "start": 9.26,
+      "end": 9.4,
+      "probability": 0.9958309531211853
+    },
+    {
+      "word": "折",
+      "start": 9.4,
+      "end": 9.54,
+      "probability": 0.9041785895824432
+    },
+    {
+      "word": "り",
+      "start": 9.54,
+      "end": 9.68,
+      "probability": 0.9741597175598145
+    },
+    {
+      "word": "た",
+      "start": 9.68,
+      "end": 9.74,
+      "probability": 0.7020329236984253
+    },
+    {
+      "word": "ため",
+      "start": 9.74,
+      "end": 9.94,
+      "probability": 0.6475641131401062
+    },
+    {
+      "word": "ない",
+      "start": 9.94,
+      "end": 10.28,
+      "probability": 0.9523651003837585
+    },
+    {
+      "word": "スト",
+      "start": 10.86,
+      "end": 11.22,
+      "probability": 0.9446303248405457
+    },
+    {
+      "word": "ラ",
+      "start": 11.22,
+      "end": 11.42,
+      "probability": 0.9976274371147156
+    },
+    {
+      "word": "ップ",
+      "start": 11.42,
+      "end": 11.58,
+      "probability": 0.9986832737922668
+    },
+    {
+      "word": "は",
+      "start": 11.58,
+      "end": 11.78,
+      "probability": 0.9934932589530945
+    },
+    {
+      "word": "何",
+      "start": 11.78,
+      "end": 11.96,
+      "probability": 0.8623279929161072
+    },
+    {
+      "word": "の",
+      "start": 11.96,
+      "end": 12.16,
+      "probability": 0.9979825019836426
+    },
+    {
+      "word": "ため",
+      "start": 12.16,
+      "end": 12.32,
+      "probability": 0.9750903844833374
+    },
+    {
+      "word": "の",
+      "start": 12.32,
+      "end": 12.48,
+      "probability": 0.9982348680496216
+    },
+    {
+      "word": "もの",
+      "start": 12.48,
+      "end": 12.64,
+      "probability": 0.8809014558792114
+    },
+    {
+      "word": "ですか",
+      "start": 12.64,
+      "end": 13.04,
+      "probability": 0.9752311706542969
+    },
+    {
+      "word": "ベ",
+      "start": 13.799999999999999,
+      "end": 14.16,
+      "probability": 0.22814397513866425
+    },
+    {
+      "word": "ンチ",
+      "start": 14.16,
+      "end": 14.4,
+      "probability": 0.9998091459274292
+    },
+    {
+      "word": "を",
+      "start": 14.4,
+      "end": 14.54,
+      "probability": 0.9938003420829773
+    },
+    {
+      "word": "壁",
+      "start": 14.54,
+      "end": 14.76,
+      "probability": 0.9971077144145966
+    },
+    {
+      "word": "に",
+      "start": 14.76,
+      "end": 14.96,
+      "probability": 0.997361958026886
+    },
+    {
+      "word": "固",
+      "start": 14.96,
+      "end": 15.14,
+      "probability": 0.9952101707458496
+    },
+    {
+      "word": "定",
+      "start": 15.14,
+      "end": 15.3,
+      "probability": 0.9997661709785461
+    },
+    {
+      "word": "する",
+      "start": 15.3,
+      "end": 15.6,
+      "probability": 0.9951745867729187
+    },
+    {
+      "word": "別",
+      "start": 16.299999999999997,
+      "end": 16.66,
+      "probability": 0.8425599932670593
+    },
+    {
+      "word": "の",
+      "start": 16.66,
+      "end": 16.96,
+      "probability": 0.9990511536598206
+    },
+    {
+      "word": "座",
+      "start": 16.96,
+      "end": 17.16,
+      "probability": 0.999465137720108
+    },
+    {
+      "word": "席",
+      "start": 17.16,
+      "end": 17.34,
+      "probability": 0.9999363422393799
+    },
+    {
+      "word": "を",
+      "start": 17.34,
+      "end": 17.56,
+      "probability": 0.9973377585411072
+    },
+    {
+      "word": "運",
+      "start": 17.56,
+      "end": 17.74,
+      "probability": 0.9729735255241394
+    },
+    {
+      "word": "ぶ",
+      "start": 17.74,
+      "end": 18.2,
+      "probability": 0.9946932196617126
+    },
+    {
+      "word": "折",
+      "start": 18.619999999999997,
+      "end": 18.98,
+      "probability": 0.9832310974597931
+    },
+    {
+      "word": "り",
+      "start": 18.98,
+      "end": 19.14,
+      "probability": 0.9582085609436035
+    },
+    {
+      "word": "た",
+      "start": 19.14,
+      "end": 19.22,
+      "probability": 0.9101670384407043
+    },
+    {
+      "word": "た",
+      "start": 19.22,
+      "end": 19.36,
+      "probability": 0.9901878237724304
+    },
+    {
+      "word": "んだ",
+      "start": 19.36,
+      "end": 19.54,
+      "probability": 0.9842621088027954
+    },
+    {
+      "word": "足",
+      "start": 19.54,
+      "end": 19.78,
+      "probability": 0.9321696758270264
+    },
+    {
+      "word": "を",
+      "start": 19.78,
+      "end": 19.94,
+      "probability": 0.9982299208641052
+    },
+    {
+      "word": "ま",
+      "start": 19.94,
+      "end": 20.08,
+      "probability": 0.9895998239517212
+    },
+    {
+      "word": "と",
+      "start": 20.08,
+      "end": 20.2,
+      "probability": 0.9975729584693909
+    },
+    {
+      "word": "め",
+      "start": 20.2,
+      "end": 20.32,
+      "probability": 0.998802900314331
+    },
+    {
+      "word": "る",
+      "start": 20.32,
+      "end": 20.52,
+      "probability": 0.999600350856781
+    },
+    {
+      "word": "小",
+      "start": 21.08,
+      "end": 21.44,
+      "probability": 0.41631177067756653
+    },
+    {
+      "word": "都",
+      "start": 21.44,
+      "end": 21.68,
+      "probability": 0.9576978087425232
+    },
+    {
+      "word": "外",
+      "start": 21.68,
+      "end": 21.86,
+      "probability": 0.9870932698249817
+    },
+    {
+      "word": "の",
+      "start": 21.86,
+      "end": 22.04,
+      "probability": 0.9983134269714355
+    },
+    {
+      "word": "鋭",
+      "start": 22.04,
+      "end": 22.36,
+      "probability": 0.864210287729899
+    },
+    {
+      "word": "い",
+      "start": 22.36,
+      "end": 22.54,
+      "probability": 0.9774425029754639
+    },
+    {
+      "word": "縁",
+      "start": 22.54,
+      "end": 22.68,
+      "probability": 0.8943914175033569
+    },
+    {
+      "word": "を",
+      "start": 22.68,
+      "end": 22.96,
+      "probability": 0.9926276803016663
+    },
+    {
+      "word": "覆",
+      "start": 22.96,
+      "end": 23.14,
+      "probability": 0.6866319626569748
+    },
+    {
+      "word": "う",
+      "start": 23.14,
+      "end": 23.32,
+      "probability": 0.9966205358505249
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.84,
+      "text": "ベンチの足に日々が入った座席の配達が遅れた",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    },
+    {
+      "start": 5.579999999999999,
+      "end": 7.46,
+      "text": "小都外のネジが一本ない",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    },
+    {
+      "start": 8.12,
+      "end": 10.28,
+      "text": "ベンチが平らに折りたためない",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    },
+    {
+      "start": 10.86,
+      "end": 13.04,
+      "text": "ストラップは何のためのものですか",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    },
+    {
+      "start": 13.799999999999999,
+      "end": 15.6,
+      "text": "ベンチを壁に固定する",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    },
+    {
+      "start": 16.299999999999997,
+      "end": 18.2,
+      "text": "別の座席を運ぶ",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    },
+    {
+      "start": 18.619999999999997,
+      "end": 20.52,
+      "text": "折りたたんだ足をまとめる",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    },
+    {
+      "start": 21.08,
+      "end": 23.32,
+      "text": "小都外の鋭い縁を覆う",
+      "avgLogprob": -0.17626535166211488,
+      "noSpeechProb": 0.05337994545698166
+    }
+  ]
+}

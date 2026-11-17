@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "id": "7de29aa98f182403b531b21234ecd7ebafda7bd761e9bfd986294571d59993bb",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.397375,
+  "elapsedSeconds": 2.983,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.936,
+      "sha256": "1aafb5156fe2cc72d4f12979172f3c37a40cf930a94ecaf87e76303d2ade118c",
+      "src": "./audio/generated/ja/jf_alpha/8c707d0900de6d92468e8b5b8eec65cc.m4a"
+    },
+    {
+      "offset": 2.536,
+      "end": 4.797375000000001,
+      "sha256": "103272f8f6f73ba7f3c19fa3518e024ff721feff193d60f3749cbf497bfd3cf9",
+      "src": "./audio/generated/ja/jf_alpha/8eefb1742395f94817db277c95aaec1e.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "一",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.6297763586044312
+    },
+    {
+      "word": "番",
+      "start": 0.64,
+      "end": 0.92,
+      "probability": 0.995568573474884
+    },
+    {
+      "word": "の",
+      "start": 0.92,
+      "end": 1.1,
+      "probability": 0.9799817800521851
+    },
+    {
+      "word": "作",
+      "start": 1.1,
+      "end": 1.3,
+      "probability": 0.9725730419158936
+    },
+    {
+      "word": "業",
+      "start": 1.3,
+      "end": 1.48,
+      "probability": 0.999634861946106
+    },
+    {
+      "word": "台",
+      "start": 1.48,
+      "end": 1.72,
+      "probability": 0.7205629348754883
+    },
+    {
+      "word": "調",
+      "start": 2.3400000000000003,
+      "end": 2.74,
+      "probability": 0.0828857570886612
+    },
+    {
+      "word": "査",
+      "start": 2.74,
+      "end": 2.98,
+      "probability": 0.5801449120044708
+    },
+    {
+      "word": "外",
+      "start": 2.98,
+      "end": 3.18,
+      "probability": 0.21918430924415588
+    },
+    {
+      "word": "は",
+      "start": 3.18,
+      "end": 3.36,
+      "probability": 0.964862048625946
+    },
+    {
+      "word": "何",
+      "start": 3.36,
+      "end": 3.56,
+      "probability": 0.9272111058235168
+    },
+    {
+      "word": "に",
+      "start": 3.56,
+      "end": 3.8,
+      "probability": 0.989208996295929
+    },
+    {
+      "word": "取",
+      "start": 3.8,
+      "end": 3.92,
+      "probability": 0.9722126126289368
+    },
+    {
+      "word": "り",
+      "start": 3.92,
+      "end": 4.04,
+      "probability": 0.9401054382324219
+    },
+    {
+      "word": "付",
+      "start": 4.04,
+      "end": 4.12,
+      "probability": 0.9834444522857666
+    },
+    {
+      "word": "け",
+      "start": 4.12,
+      "end": 4.24,
+      "probability": 0.9986832737922668
+    },
+    {
+      "word": "ます",
+      "start": 4.24,
+      "end": 4.4,
+      "probability": 0.978733241558075
+    },
+    {
+      "word": "か?",
+      "start": 4.4,
+      "end": 4.58,
+      "probability": 0.996738612651825
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.72,
+      "text": "一番の作業台",
+      "avgLogprob": -0.41109409332275393,
+      "noSpeechProb": 0.011454358696937561
+    },
+    {
+      "start": 2.3400000000000003,
+      "end": 4.58,
+      "text": "調査外は何に取り付けますか?",
+      "avgLogprob": -0.41109409332275393,
+      "noSpeechProb": 0.011454358696937561
+    }
+  ]
+}

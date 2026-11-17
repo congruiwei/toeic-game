@@ -1,0 +1,557 @@
+{
+  "version": 1,
+  "id": "95454830c07deea0b999ab9c32f330247413c9b533f302320a1792e150a75036",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.78150000000001,
+  "elapsedSeconds": 4.535,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.173375,
+      "sha256": "415ecd6116908d71712e391f5e12f9c6a33ad27866d238a80ec3b0d8ebecaf63",
+      "src": "./audio/generated/ja/jf_alpha/f71edcaaa0c63b927c13675f98f49787.m4a"
+    },
+    {
+      "offset": 3.773375,
+      "end": 5.352062500000001,
+      "sha256": "00434b7a4d5b0fcf7e5f205da8683fb42e00465dfe90a4f247f0dc67e9393694",
+      "src": "./audio/generated/ja/jf_alpha/2a9710cef5972bb33176721b51bba173.m4a"
+    },
+    {
+      "offset": 5.9520625,
+      "end": 8.0000625,
+      "sha256": "3d8b54b64b9c009f2fae01b31005306dca710ce6f30c2e967f19a12f05915eb6",
+      "src": "./audio/generated/ja/jf_alpha/a586f6848a21ebf5797f082eeac1567a.m4a"
+    },
+    {
+      "offset": 8.6000625,
+      "end": 10.3494375,
+      "sha256": "f794552badc38f48dc701d6b7b7e0e7e80e714d50fcaa3311bc1bc2686d9e128",
+      "src": "./audio/generated/ja/jf_alpha/3cf4318521e89d25f59c2171c503cb0f.m4a"
+    },
+    {
+      "offset": 10.9494375,
+      "end": 13.5094375,
+      "sha256": "9efb62500a3cdb8b5e2c497ca7a8f0b72e49d4e6e633e4c2ddfb940fc29ee154",
+      "src": "./audio/generated/ja/jf_alpha/8aefd876ffce1c05602646740ce9ec73.m4a"
+    },
+    {
+      "offset": 14.1094375,
+      "end": 16.7974375,
+      "sha256": "61165d037661c082eb193b26d56748e07b3bea8c4f5aaa0415a25d6469c67b6d",
+      "src": "./audio/generated/ja/jf_alpha/235aaecb7ef13b91d351969eb7ed67ee.m4a"
+    },
+    {
+      "offset": 17.397437500000002,
+      "end": 18.677437500000003,
+      "sha256": "1e41983fe3fdf3dbd20f625246a5361cd0b0b8be2550481738d11d0f7d536c70",
+      "src": "./audio/generated/ja/jf_alpha/35a07aca5652702dc4e9fedd28103c16.m4a"
+    },
+    {
+      "offset": 19.277437500000005,
+      "end": 20.216125000000005,
+      "sha256": "3f472b2804abec0603fb27f4606175c72e5dc7173152b6243fb903de21433471",
+      "src": "./audio/generated/ja/jf_alpha/3eb27c29689658a616346554c11d7ee7.m4a"
+    },
+    {
+      "offset": 20.816125000000007,
+      "end": 22.181500000000007,
+      "sha256": "37fd1422a40cc12d617a16aea109b6b1ef33f6def98274d57ed33d7e5563675f",
+      "src": "./audio/generated/ja/jf_alpha/294fb7172cd0e6883d09433ec52fc03f.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "青",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.7352606654167175
+    },
+    {
+      "word": "い",
+      "start": 0.66,
+      "end": 0.86,
+      "probability": 0.9496166706085205
+    },
+    {
+      "word": "代",
+      "start": 0.86,
+      "end": 1.0,
+      "probability": 0.4861394166946411
+    },
+    {
+      "word": "謝",
+      "start": 1.0,
+      "end": 1.2,
+      "probability": 0.5906535983085632
+    },
+    {
+      "word": "を",
+      "start": 1.2,
+      "end": 1.34,
+      "probability": 0.9955905675888062
+    },
+    {
+      "word": "使",
+      "start": 1.34,
+      "end": 1.52,
+      "probability": 0.9874413013458252
+    },
+    {
+      "word": "う",
+      "start": 1.52,
+      "end": 1.72,
+      "probability": 0.9941008687019348
+    },
+    {
+      "word": "べ",
+      "start": 1.72,
+      "end": 1.82,
+      "probability": 0.9980677962303162
+    },
+    {
+      "word": "き",
+      "start": 1.82,
+      "end": 1.94,
+      "probability": 0.9998362064361572
+    },
+    {
+      "word": "な",
+      "start": 1.94,
+      "end": 2.06,
+      "probability": 0.9951789379119873
+    },
+    {
+      "word": "のは",
+      "start": 2.06,
+      "end": 2.28,
+      "probability": 0.9803121089935303
+    },
+    {
+      "word": "な",
+      "start": 2.28,
+      "end": 2.46,
+      "probability": 0.9424095749855042
+    },
+    {
+      "word": "ぜ",
+      "start": 2.46,
+      "end": 2.58,
+      "probability": 0.9980207681655884
+    },
+    {
+      "word": "ですか。",
+      "start": 2.58,
+      "end": 2.92,
+      "probability": 0.9456295371055603
+    },
+    {
+      "word": "鍵",
+      "start": 3.78,
+      "end": 4.08,
+      "probability": 0.8188640773296356
+    },
+    {
+      "word": "が",
+      "start": 4.08,
+      "end": 4.24,
+      "probability": 0.9854725003242493
+    },
+    {
+      "word": "付",
+      "start": 4.24,
+      "end": 4.46,
+      "probability": 0.6266161203384399
+    },
+    {
+      "word": "いて",
+      "start": 4.46,
+      "end": 4.64,
+      "probability": 0.9994375109672546
+    },
+    {
+      "word": "いる",
+      "start": 4.64,
+      "end": 4.82,
+      "probability": 0.9957799911499023
+    },
+    {
+      "word": "から、",
+      "start": 4.82,
+      "end": 5.08,
+      "probability": 0.9922156929969788
+    },
+    {
+      "word": "よ",
+      "start": 5.86,
+      "end": 6.18,
+      "probability": 0.8508629202842712
+    },
+    {
+      "word": "り",
+      "start": 6.18,
+      "end": 6.3,
+      "probability": 0.9992794394493103
+    },
+    {
+      "word": "多",
+      "start": 6.3,
+      "end": 6.52,
+      "probability": 0.9886758327484131
+    },
+    {
+      "word": "く",
+      "start": 6.52,
+      "end": 6.66,
+      "probability": 0.999502420425415
+    },
+    {
+      "word": "の",
+      "start": 6.66,
+      "end": 6.78,
+      "probability": 0.9980617165565491
+    },
+    {
+      "word": "箱",
+      "start": 6.78,
+      "end": 7.06,
+      "probability": 0.993593156337738
+    },
+    {
+      "word": "を",
+      "start": 7.06,
+      "end": 7.2,
+      "probability": 0.9937823414802551
+    },
+    {
+      "word": "詰",
+      "start": 7.2,
+      "end": 7.3,
+      "probability": 0.9541104435920715
+    },
+    {
+      "word": "め",
+      "start": 7.3,
+      "end": 7.46,
+      "probability": 0.9992479681968689
+    },
+    {
+      "word": "る",
+      "start": 7.46,
+      "end": 7.52,
+      "probability": 0.9992883801460266
+    },
+    {
+      "word": "から、",
+      "start": 7.52,
+      "end": 7.76,
+      "probability": 0.9965698719024658
+    },
+    {
+      "word": "通",
+      "start": 8.6,
+      "end": 8.88,
+      "probability": 0.9402232766151428
+    },
+    {
+      "word": "路",
+      "start": 8.88,
+      "end": 9.02,
+      "probability": 0.9984671473503113
+    },
+    {
+      "word": "が",
+      "start": 9.02,
+      "end": 9.2,
+      "probability": 0.9979877471923828
+    },
+    {
+      "word": "狭",
+      "start": 9.2,
+      "end": 9.34,
+      "probability": 0.8256288468837738
+    },
+    {
+      "word": "す",
+      "start": 9.34,
+      "end": 9.62,
+      "probability": 0.9385650157928467
+    },
+    {
+      "word": "ぎ",
+      "start": 9.62,
+      "end": 9.76,
+      "probability": 0.9999027252197266
+    },
+    {
+      "word": "る",
+      "start": 9.76,
+      "end": 9.86,
+      "probability": 0.9998088479042053
+    },
+    {
+      "word": "から、",
+      "start": 9.86,
+      "end": 10.1,
+      "probability": 0.9983250498771667
+    },
+    {
+      "word": "もう",
+      "start": 10.96,
+      "end": 11.22,
+      "probability": 0.9442193508148193
+    },
+    {
+      "word": "一",
+      "start": 11.22,
+      "end": 11.52,
+      "probability": 0.8626308441162109
+    },
+    {
+      "word": "台",
+      "start": 11.52,
+      "end": 11.68,
+      "probability": 0.9349800944328308
+    },
+    {
+      "word": "の",
+      "start": 11.68,
+      "end": 11.88,
+      "probability": 0.9994208812713623
+    },
+    {
+      "word": "代",
+      "start": 11.88,
+      "end": 12.08,
+      "probability": 0.9732362031936646
+    },
+    {
+      "word": "謝",
+      "start": 12.08,
+      "end": 12.28,
+      "probability": 0.9990395903587341
+    },
+    {
+      "word": "が",
+      "start": 12.28,
+      "end": 12.4,
+      "probability": 0.9986448884010315
+    },
+    {
+      "word": "壊",
+      "start": 12.4,
+      "end": 12.6,
+      "probability": 0.9866735339164734
+    },
+    {
+      "word": "れて",
+      "start": 12.6,
+      "end": 12.82,
+      "probability": 0.999535083770752
+    },
+    {
+      "word": "いる",
+      "start": 12.82,
+      "end": 13.04,
+      "probability": 0.9949828386306763
+    },
+    {
+      "word": "から、",
+      "start": 13.04,
+      "end": 13.32,
+      "probability": 0.9975741505622864
+    },
+    {
+      "word": "2",
+      "start": 14.12,
+      "end": 14.3,
+      "probability": 0.26632067561149597
+    },
+    {
+      "word": "人",
+      "start": 14.3,
+      "end": 14.5,
+      "probability": 0.9298420548439026
+    },
+    {
+      "word": "目",
+      "start": 14.5,
+      "end": 14.62,
+      "probability": 0.9929395914077759
+    },
+    {
+      "word": "の",
+      "start": 14.62,
+      "end": 14.76,
+      "probability": 0.9879993200302124
+    },
+    {
+      "word": "和",
+      "start": 14.76,
+      "end": 14.96,
+      "probability": 0.6891592741012573
+    },
+    {
+      "word": "射",
+      "start": 14.96,
+      "end": 15.08,
+      "probability": 0.6934217214584351
+    },
+    {
+      "word": "は",
+      "start": 15.08,
+      "end": 15.22,
+      "probability": 0.9955666661262512
+    },
+    {
+      "word": "次",
+      "start": 15.22,
+      "end": 15.48,
+      "probability": 0.9873977303504944
+    },
+    {
+      "word": "に",
+      "start": 15.48,
+      "end": 15.66,
+      "probability": 0.9986080527305603
+    },
+    {
+      "word": "ど",
+      "start": 15.66,
+      "end": 15.8,
+      "probability": 0.9732604622840881
+    },
+    {
+      "word": "こ",
+      "start": 15.8,
+      "end": 15.92,
+      "probability": 0.9988788962364197
+    },
+    {
+      "word": "へ",
+      "start": 15.92,
+      "end": 16.06,
+      "probability": 0.9964619278907776
+    },
+    {
+      "word": "行",
+      "start": 16.06,
+      "end": 16.18,
+      "probability": 0.9767980575561523
+    },
+    {
+      "word": "きます",
+      "start": 16.18,
+      "end": 16.42,
+      "probability": 0.9949979782104492
+    },
+    {
+      "word": "か。",
+      "start": 16.42,
+      "end": 16.64,
+      "probability": 0.9988887906074524
+    },
+    {
+      "word": "修",
+      "start": 17.44,
+      "end": 17.7,
+      "probability": 0.9078486561775208
+    },
+    {
+      "word": "理",
+      "start": 17.7,
+      "end": 17.88,
+      "probability": 0.9938550591468811
+    },
+    {
+      "word": "窓",
+      "start": 17.88,
+      "end": 18.06,
+      "probability": 0.988899439573288
+    },
+    {
+      "word": "口。",
+      "start": 18.06,
+      "end": 18.36,
+      "probability": 0.995002806186676
+    },
+    {
+      "word": "温",
+      "start": 19.22,
+      "end": 19.58,
+      "probability": 0.6676757037639618
+    },
+    {
+      "word": "室。",
+      "start": 19.58,
+      "end": 19.86,
+      "probability": 0.9232533574104309
+    },
+    {
+      "word": "庭",
+      "start": 20.88,
+      "end": 21.06,
+      "probability": 0.8106851577758789
+    },
+    {
+      "word": "園",
+      "start": 21.06,
+      "end": 21.28,
+      "probability": 0.955824464559555
+    },
+    {
+      "word": "の",
+      "start": 21.28,
+      "end": 21.44,
+      "probability": 0.9970043301582336
+    },
+    {
+      "word": "入",
+      "start": 21.44,
+      "end": 21.56,
+      "probability": 0.9595410227775574
+    },
+    {
+      "word": "り",
+      "start": 21.56,
+      "end": 21.64,
+      "probability": 0.8963863253593445
+    },
+    {
+      "word": "口。",
+      "start": 21.64,
+      "end": 21.82,
+      "probability": 0.9989839196205139
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 21.82,
+      "text": "青い代謝を使うべきなのはなぜですか。鍵が付いているから、より多くの箱を詰めるから、通路が狭すぎるから、もう一台の代謝が壊れているから、2人目の和射は次にどこへ行きますか。修理窓口。温室。庭園の入り口。",
+      "avgLogprob": -0.16655160648988024,
+      "noSpeechProb": 0.06601277738809586
+    }
+  ]
+}

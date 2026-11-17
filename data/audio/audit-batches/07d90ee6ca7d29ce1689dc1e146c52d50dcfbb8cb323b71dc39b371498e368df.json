@@ -1,0 +1,485 @@
+{
+  "version": 1,
+  "id": "07d90ee6ca7d29ce1689dc1e146c52d50dcfbb8cb323b71dc39b371498e368df",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.477500000000006,
+  "elapsedSeconds": 8.161,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.2346875,
+      "sha256": "f32196122f13d96e55d462296745364e005b1954a8295e593b3d4881ac665d12",
+      "src": "./audio/generated/en/am_puck/1d45aee04e17e4ec43d56a6989b78d41.m4a"
+    },
+    {
+      "offset": 2.8346875000000002,
+      "end": 6.205375,
+      "sha256": "603af2e6025e06bcaac78ac4d640189a40874941dd73f03e0c7b1a25aa19fdc7",
+      "src": "./audio/generated/en/af_bella/8646c39d36b98d381a9150baad7e85cf.m4a"
+    },
+    {
+      "offset": 6.805375,
+      "end": 9.70675,
+      "sha256": "7f051b565f9863ff066919c5105de23d68988de0dd09703266894c0c597a684c",
+      "src": "./audio/generated/en/am_puck/c7e4e333ea33db6d5289b5e1551172ff.m4a"
+    },
+    {
+      "offset": 10.30675,
+      "end": 13.1654375,
+      "sha256": "f3bd15636544e43deaf6e40cde8ef6efa4d6a1da8eae599e188a4e1037bfdd3b",
+      "src": "./audio/generated/en/am_puck/17b1c8b6d943c1abb8701d0a8ffdeed5.m4a"
+    },
+    {
+      "offset": 13.765437499999999,
+      "end": 16.112125,
+      "sha256": "d5ee4c437db4ba493d036bdb668ef72d97670bcb0e3ca19d0f90809b84f7488d",
+      "src": "./audio/generated/en/am_puck/f098d6296d93436dd33d595b57ba753c.m4a"
+    },
+    {
+      "offset": 16.712125,
+      "end": 19.314812500000002,
+      "sha256": "328328ea18cf1cdabaf76c9c291a743a0e1261bb0db234f4e8c205d84434afaa",
+      "src": "./audio/generated/en/am_puck/6c63fc0e24fcdd0f99183bf0b0184ff7.m4a"
+    },
+    {
+      "offset": 19.914812500000004,
+      "end": 21.877500000000005,
+      "sha256": "120874b4fb32bbf7198236f8aa940c88eca97f61c0354c2cfc1931c81333deaa",
+      "src": "./audio/generated/en/af_heart/a3f40364cf24a306035f110312dcb22a.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Her",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.8978303074836731
+    },
+    {
+      "word": " talk",
+      "start": 0.54,
+      "end": 0.76,
+      "probability": 0.9938732385635376
+    },
+    {
+      "word": " is",
+      "start": 0.76,
+      "end": 0.9,
+      "probability": 0.9952200055122375
+    },
+    {
+      "word": " on",
+      "start": 0.9,
+      "end": 1.0,
+      "probability": 0.994438886642456
+    },
+    {
+      "word": " the",
+      "start": 1.0,
+      "end": 1.12,
+      "probability": 0.9831946492195129
+    },
+    {
+      "word": " smaller",
+      "start": 1.12,
+      "end": 1.34,
+      "probability": 0.9888849258422852
+    },
+    {
+      "word": " stage.",
+      "start": 1.34,
+      "end": 1.78,
+      "probability": 0.9954484105110168
+    },
+    {
+      "word": " Shall",
+      "start": 2.68,
+      "end": 3.04,
+      "probability": 0.12656432390213013
+    },
+    {
+      "word": " I",
+      "start": 3.04,
+      "end": 3.14,
+      "probability": 0.989715039730072
+    },
+    {
+      "word": " call",
+      "start": 3.14,
+      "end": 3.3,
+      "probability": 0.9983110427856445
+    },
+    {
+      "word": " the",
+      "start": 3.3,
+      "end": 3.44,
+      "probability": 0.9965450167655945
+    },
+    {
+      "word": " client",
+      "start": 3.44,
+      "end": 3.72,
+      "probability": 0.996315062046051
+    },
+    {
+      "word": " now",
+      "start": 3.72,
+      "end": 4.04,
+      "probability": 0.9946241974830627
+    },
+    {
+      "word": " or",
+      "start": 4.04,
+      "end": 4.58,
+      "probability": 0.4878618121147156
+    },
+    {
+      "word": " wait",
+      "start": 4.58,
+      "end": 4.82,
+      "probability": 0.9983094930648804
+    },
+    {
+      "word": " for",
+      "start": 4.82,
+      "end": 5.0,
+      "probability": 0.9986996650695801
+    },
+    {
+      "word": " the",
+      "start": 5.0,
+      "end": 5.1,
+      "probability": 0.9972610473632812
+    },
+    {
+      "word": " final",
+      "start": 5.1,
+      "end": 5.36,
+      "probability": 0.9965924620628357
+    },
+    {
+      "word": " figures?",
+      "start": 5.36,
+      "end": 5.82,
+      "probability": 0.9974013566970825
+    },
+    {
+      "word": " She",
+      "start": 6.66,
+      "end": 7.0,
+      "probability": 0.9805266857147217
+    },
+    {
+      "word": " asked",
+      "start": 7.0,
+      "end": 7.2,
+      "probability": 0.9935757517814636
+    },
+    {
+      "word": " us",
+      "start": 7.2,
+      "end": 7.36,
+      "probability": 0.9896098375320435
+    },
+    {
+      "word": " for",
+      "start": 7.36,
+      "end": 7.54,
+      "probability": 0.9972519278526306
+    },
+    {
+      "word": " a",
+      "start": 7.54,
+      "end": 7.6,
+      "probability": 0.9779677987098694
+    },
+    {
+      "word": " firm",
+      "start": 7.6,
+      "end": 7.8,
+      "probability": 0.9914932250976562
+    },
+    {
+      "word": " total",
+      "start": 7.8,
+      "end": 8.1,
+      "probability": 0.9841219186782837
+    },
+    {
+      "word": " not",
+      "start": 8.1,
+      "end": 8.4,
+      "probability": 0.3436219096183777
+    },
+    {
+      "word": " a",
+      "start": 8.4,
+      "end": 8.52,
+      "probability": 0.9971984624862671
+    },
+    {
+      "word": " rough",
+      "start": 8.52,
+      "end": 8.7,
+      "probability": 0.9972665309906006
+    },
+    {
+      "word": " estimate.",
+      "start": 8.7,
+      "end": 9.14,
+      "probability": 0.9985660910606384
+    },
+    {
+      "word": " The",
+      "start": 10.22,
+      "end": 10.46,
+      "probability": 0.991181492805481
+    },
+    {
+      "word": " client",
+      "start": 10.46,
+      "end": 10.72,
+      "probability": 0.9939866065979004
+    },
+    {
+      "word": " sends",
+      "start": 10.72,
+      "end": 11.0,
+      "probability": 0.9947324991226196
+    },
+    {
+      "word": " most",
+      "start": 11.0,
+      "end": 11.36,
+      "probability": 0.9942331910133362
+    },
+    {
+      "word": " invoices",
+      "start": 11.36,
+      "end": 11.94,
+      "probability": 0.9977777202924093
+    },
+    {
+      "word": " electronically.",
+      "start": 11.94,
+      "end": 12.48,
+      "probability": 0.9970983266830444
+    },
+    {
+      "word": " I",
+      "start": 13.62,
+      "end": 13.92,
+      "probability": 0.9865065813064575
+    },
+    {
+      "word": " called",
+      "start": 13.92,
+      "end": 14.12,
+      "probability": 0.6401078104972839
+    },
+    {
+      "word": " the",
+      "start": 14.12,
+      "end": 14.28,
+      "probability": 0.9985721111297607
+    },
+    {
+      "word": " figures",
+      "start": 14.28,
+      "end": 14.52,
+      "probability": 0.9949899315834045
+    },
+    {
+      "word": " out",
+      "start": 14.52,
+      "end": 14.8,
+      "probability": 0.9963147044181824
+    },
+    {
+      "word": " during",
+      "start": 14.8,
+      "end": 15.02,
+      "probability": 0.9965770840644836
+    },
+    {
+      "word": " the",
+      "start": 15.02,
+      "end": 15.14,
+      "probability": 0.9960689544677734
+    },
+    {
+      "word": " stock",
+      "start": 15.14,
+      "end": 15.36,
+      "probability": 0.9911063313484192
+    },
+    {
+      "word": " count.",
+      "start": 15.36,
+      "end": 15.76,
+      "probability": 0.9947512745857239
+    },
+    {
+      "word": " Isn't",
+      "start": 16.62,
+      "end": 16.94,
+      "probability": 0.9518613815307617
+    },
+    {
+      "word": " the",
+      "start": 16.94,
+      "end": 17.08,
+      "probability": 0.9837047457695007
+    },
+    {
+      "word": " new",
+      "start": 17.08,
+      "end": 17.22,
+      "probability": 0.9943280816078186
+    },
+    {
+      "word": " meter",
+      "start": 17.22,
+      "end": 17.44,
+      "probability": 0.6367638111114502
+    },
+    {
+      "word": " supposed",
+      "start": 17.44,
+      "end": 17.76,
+      "probability": 0.9671295285224915
+    },
+    {
+      "word": " to",
+      "start": 17.76,
+      "end": 18.04,
+      "probability": 0.9988136291503906
+    },
+    {
+      "word": " show",
+      "start": 18.04,
+      "end": 18.2,
+      "probability": 0.9977937936782837
+    },
+    {
+      "word": " daily",
+      "start": 18.2,
+      "end": 18.46,
+      "probability": 0.9978795051574707
+    },
+    {
+      "word": " usage?",
+      "start": 18.46,
+      "end": 18.8,
+      "probability": 0.9950272440910339
+    },
+    {
+      "word": " The",
+      "start": 19.76,
+      "end": 20.08,
+      "probability": 0.9805867671966553
+    },
+    {
+      "word": " installer",
+      "start": 20.08,
+      "end": 20.46,
+      "probability": 0.9714213609695435
+    },
+    {
+      "word": " left",
+      "start": 20.46,
+      "end": 20.8,
+      "probability": 0.9982353448867798
+    },
+    {
+      "word": " a",
+      "start": 20.8,
+      "end": 20.98,
+      "probability": 0.7231766581535339
+    },
+    {
+      "word": " spare",
+      "start": 20.98,
+      "end": 21.18,
+      "probability": 0.9987536668777466
+    },
+    {
+      "word": " battery.",
+      "start": 21.18,
+      "end": 21.6,
+      "probability": 0.9985116124153137
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.78,
+      "text": " Her talk is on the smaller stage.",
+      "avgLogprob": -0.27518290631911335,
+      "noSpeechProb": 0.025382021442055702
+    },
+    {
+      "start": 2.68,
+      "end": 5.82,
+      "text": " Shall I call the client now or wait for the final figures?",
+      "avgLogprob": -0.27518290631911335,
+      "noSpeechProb": 0.025382021442055702
+    },
+    {
+      "start": 6.66,
+      "end": 9.14,
+      "text": " She asked us for a firm total not a rough estimate.",
+      "avgLogprob": -0.27518290631911335,
+      "noSpeechProb": 0.025382021442055702
+    },
+    {
+      "start": 10.22,
+      "end": 12.48,
+      "text": " The client sends most invoices electronically.",
+      "avgLogprob": -0.27518290631911335,
+      "noSpeechProb": 0.025382021442055702
+    },
+    {
+      "start": 13.62,
+      "end": 15.76,
+      "text": " I called the figures out during the stock count.",
+      "avgLogprob": -0.27518290631911335,
+      "noSpeechProb": 0.025382021442055702
+    },
+    {
+      "start": 16.62,
+      "end": 18.8,
+      "text": " Isn't the new meter supposed to show daily usage?",
+      "avgLogprob": -0.27518290631911335,
+      "noSpeechProb": 0.025382021442055702
+    },
+    {
+      "start": 19.76,
+      "end": 21.6,
+      "text": " The installer left a spare battery.",
+      "avgLogprob": -0.27518290631911335,
+      "noSpeechProb": 0.025382021442055702
+    }
+  ]
+}

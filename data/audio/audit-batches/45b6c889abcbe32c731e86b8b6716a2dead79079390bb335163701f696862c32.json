@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "id": "45b6c889abcbe32c731e86b8b6716a2dead79079390bb335163701f696862c32",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.2906875,
+  "elapsedSeconds": 3.407,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.6906875,
+      "sha256": "a47ede2d98bd29a7f6335bb0fe1eb3eb521b95782e225eeca4cc8e0b6e19edaf",
+      "src": "./audio/generated/en/af_heart/a9a2aa87694160ffb72d07ce1a1f55d5.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " An",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.9260820746421814
+    },
+    {
+      "word": " engineer",
+      "start": 0.56,
+      "end": 0.98,
+      "probability": 0.9859722852706909
+    },
+    {
+      "word": " will",
+      "start": 0.98,
+      "end": 1.46,
+      "probability": 0.9906768798828125
+    },
+    {
+      "word": " service",
+      "start": 1.46,
+      "end": 1.82,
+      "probability": 0.9808388948440552
+    },
+    {
+      "word": " both",
+      "start": 1.82,
+      "end": 2.14,
+      "probability": 0.9971604347229004
+    },
+    {
+      "word": " lifts",
+      "start": 2.14,
+      "end": 2.5,
+      "probability": 0.9463011026382446
+    },
+    {
+      "word": " on",
+      "start": 2.5,
+      "end": 2.74,
+      "probability": 0.9974613189697266
+    },
+    {
+      "word": " Tuesday",
+      "start": 2.74,
+      "end": 3.12,
+      "probability": 0.9956798553466797
+    },
+    {
+      "word": " to",
+      "start": 3.12,
+      "end": 3.78,
+      "probability": 0.9419392943382263
+    },
+    {
+      "word": " keep",
+      "start": 3.78,
+      "end": 4.0,
+      "probability": 0.9988009929656982
+    },
+    {
+      "word": " their",
+      "start": 4.0,
+      "end": 4.18,
+      "probability": 0.9956883788108826
+    },
+    {
+      "word": " motors",
+      "start": 4.18,
+      "end": 4.48,
+      "probability": 0.9923190474510193
+    },
+    {
+      "word": " in",
+      "start": 4.48,
+      "end": 4.72,
+      "probability": 0.9985275268554688
+    },
+    {
+      "word": " good",
+      "start": 4.72,
+      "end": 4.92,
+      "probability": 0.996422290802002
+    },
+    {
+      "word": " condition.",
+      "start": 4.92,
+      "end": 5.36,
+      "probability": 0.9964622855186462
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.36,
+      "text": " An engineer will service both lifts on Tuesday to keep their motors in good condition.",
+      "avgLogprob": -0.15021467365716634,
+      "noSpeechProb": 0.0016903491923585534
+    }
+  ]
+}

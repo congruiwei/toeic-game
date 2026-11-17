@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "id": "c4fffde5bc49e4cf314d7d830866077813b914da7a3faf184fea9526bd20a2e9",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.693375,
+  "elapsedSeconds": 3.277,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.093375,
+      "sha256": "e8d7735992e262066f6dd6871bbd0d51348af25271898060559e8e587b1386e5",
+      "src": "./audio/generated/ja/jf_alpha/80630ef83f7980cacb651f10cce8def0.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "署",
+      "start": 0.35999999999999976,
+      "end": 0.68,
+      "probability": 0.6720995008945465
+    },
+    {
+      "word": "名",
+      "start": 0.68,
+      "end": 0.88,
+      "probability": 0.9773930907249451
+    },
+    {
+      "word": "済",
+      "start": 0.88,
+      "end": 1.1,
+      "probability": 0.8751560151576996
+    },
+    {
+      "word": "み",
+      "start": 1.1,
+      "end": 1.28,
+      "probability": 0.9135676026344299
+    },
+    {
+      "word": "の",
+      "start": 1.28,
+      "end": 1.36,
+      "probability": 0.9935169219970703
+    },
+    {
+      "word": "見",
+      "start": 1.36,
+      "end": 1.52,
+      "probability": 0.5305191278457642
+    },
+    {
+      "word": "積",
+      "start": 1.52,
+      "end": 1.68,
+      "probability": 0.9010574817657471
+    },
+    {
+      "word": "も",
+      "start": 1.68,
+      "end": 1.8,
+      "probability": 0.9093739986419678
+    },
+    {
+      "word": "り",
+      "start": 1.8,
+      "end": 1.9,
+      "probability": 0.999168872833252
+    },
+    {
+      "word": "では",
+      "start": 1.9,
+      "end": 2.1,
+      "probability": 0.9693649411201477
+    },
+    {
+      "word": "ど",
+      "start": 2.1,
+      "end": 2.5,
+      "probability": 0.8019123673439026
+    },
+    {
+      "word": "こ",
+      "start": 2.5,
+      "end": 2.64,
+      "probability": 0.9969987869262695
+    },
+    {
+      "word": "まで",
+      "start": 2.64,
+      "end": 2.86,
+      "probability": 0.915590763092041
+    },
+    {
+      "word": "の",
+      "start": 2.86,
+      "end": 3.02,
+      "probability": 0.975752055644989
+    },
+    {
+      "word": "受",
+      "start": 3.02,
+      "end": 3.18,
+      "probability": 0.9448994994163513
+    },
+    {
+      "word": "け",
+      "start": 3.18,
+      "end": 3.32,
+      "probability": 0.9642925262451172
+    },
+    {
+      "word": "渡",
+      "start": 3.32,
+      "end": 3.48,
+      "probability": 0.9870384037494659
+    },
+    {
+      "word": "し",
+      "start": 3.48,
+      "end": 3.7,
+      "probability": 0.995693564414978
+    },
+    {
+      "word": "を",
+      "start": 3.7,
+      "end": 3.84,
+      "probability": 0.975018322467804
+    },
+    {
+      "word": "約",
+      "start": 3.84,
+      "end": 4.0,
+      "probability": 0.9948221445083618
+    },
+    {
+      "word": "束",
+      "start": 4.0,
+      "end": 4.2,
+      "probability": 0.996240496635437
+    },
+    {
+      "word": "して",
+      "start": 4.2,
+      "end": 4.42,
+      "probability": 0.9844071865081787
+    },
+    {
+      "word": "います",
+      "start": 4.42,
+      "end": 4.68,
+      "probability": 0.9611601829528809
+    },
+    {
+      "word": "か?",
+      "start": 4.68,
+      "end": 4.92,
+      "probability": 0.9710954427719116
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.35999999999999976,
+      "end": 4.92,
+      "text": "署名済みの見積もりではどこまでの受け渡しを約束していますか?",
+      "avgLogprob": -0.22874165466055274,
+      "noSpeechProb": 0.011868266388773918
+    }
+  ]
+}

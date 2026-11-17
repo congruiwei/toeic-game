@@ -1,0 +1,435 @@
+{
+  "version": 1,
+  "id": "ca21277abdf37662fad7fc661c5a8ef516a938b4c09a4039ca5545cfe06f3f44",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.816125000000003,
+  "elapsedSeconds": 5.921,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.434687500000001,
+      "sha256": "a4b1f286118680ab93bc0a38357f3d9aca6bd94e92c613db1166d821b2959d93",
+      "src": "./audio/generated/en/af_bella/7e0452ea112f0b418b74df2daa897722.m4a"
+    },
+    {
+      "offset": 6.0346875,
+      "end": 6.8880625,
+      "sha256": "f1d26a37a38d42481a95fde0a842f661e7bfcdfa952ba1f3bc111f5d113a16e3",
+      "src": "./audio/generated/en/af_bella/a5f91e8ab7a0f91f310e936030a101d7.m4a"
+    },
+    {
+      "offset": 7.4880625,
+      "end": 12.7360625,
+      "sha256": "311ddc500007159b27fc94a68a14a588c7175171eb9df8ae8d1f6262fa1cebbd",
+      "src": "./audio/generated/en/af_bella/9d159ca270e148efb2f5a109d2eda61e.m4a"
+    },
+    {
+      "offset": 13.336062499999999,
+      "end": 14.40275,
+      "sha256": "03ee91ccd4bd159978185f379871e790fa70f6e77739c9917b24c6209235d992",
+      "src": "./audio/generated/en/am_puck/8941e729e1bf149290d9213c9a8bd61a.m4a"
+    },
+    {
+      "offset": 15.002749999999999,
+      "end": 20.9334375,
+      "sha256": "5f6ef5a193aae69c4defadc964a80bda50bfaedd792702262a2ca16c63cb671a",
+      "src": "./audio/generated/en/am_puck/7f57dcfc1ed4bb39ff6df6e8d0b0bbb8.m4a"
+    },
+    {
+      "offset": 21.5334375,
+      "end": 22.216125,
+      "sha256": "b61990ca8e112d91570fe2d84de654b91e9eb52a79f71ddcb186da280dc8f3f9",
+      "src": "./audio/generated/en/af_heart/3d64c07b2f68bf271fe5aad8678fc1b0.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.8919692039489746
+    },
+    {
+      "word": " cashier",
+      "start": 0.54,
+      "end": 1.02,
+      "probability": 0.9969024658203125
+    },
+    {
+      "word": " loaded",
+      "start": 1.02,
+      "end": 1.28,
+      "probability": 0.9917550086975098
+    },
+    {
+      "word": " the",
+      "start": 1.28,
+      "end": 1.5,
+      "probability": 0.9959934949874878
+    },
+    {
+      "word": " refund",
+      "start": 1.5,
+      "end": 1.76,
+      "probability": 0.9924805164337158
+    },
+    {
+      "word": " onto",
+      "start": 1.76,
+      "end": 2.14,
+      "probability": 0.8249115347862244
+    },
+    {
+      "word": " my",
+      "start": 2.14,
+      "end": 2.36,
+      "probability": 0.9965553283691406
+    },
+    {
+      "word": " store",
+      "start": 2.36,
+      "end": 2.6,
+      "probability": 0.9462888240814209
+    },
+    {
+      "word": " credit",
+      "start": 2.6,
+      "end": 2.88,
+      "probability": 0.9677147269248962
+    },
+    {
+      "word": " account.",
+      "start": 2.88,
+      "end": 3.24,
+      "probability": 0.9989951252937317
+    },
+    {
+      "word": " I",
+      "start": 3.72,
+      "end": 3.9,
+      "probability": 0.9958947896957397
+    },
+    {
+      "word": " must",
+      "start": 3.9,
+      "end": 4.06,
+      "probability": 0.9977520108222961
+    },
+    {
+      "word": " spend",
+      "start": 4.06,
+      "end": 4.38,
+      "probability": 0.9947486519813538
+    },
+    {
+      "word": " it",
+      "start": 4.38,
+      "end": 4.54,
+      "probability": 0.9926716089248657
+    },
+    {
+      "word": " at",
+      "start": 4.54,
+      "end": 4.66,
+      "probability": 0.9890292882919312
+    },
+    {
+      "word": " this",
+      "start": 4.66,
+      "end": 4.8,
+      "probability": 0.9967775940895081
+    },
+    {
+      "word": " chain.",
+      "start": 4.8,
+      "end": 5.14,
+      "probability": 0.9944954514503479
+    },
+    {
+      "word": " Fitting",
+      "start": 6.14,
+      "end": 6.36,
+      "probability": 0.861767441034317
+    },
+    {
+      "word": " room.",
+      "start": 6.36,
+      "end": 6.6,
+      "probability": 0.5652833580970764
+    },
+    {
+      "word": " A",
+      "start": 7.44,
+      "end": 7.64,
+      "probability": 0.9737474322319031
+    },
+    {
+      "word": " shopper",
+      "start": 7.64,
+      "end": 8.0,
+      "probability": 0.9884731471538544
+    },
+    {
+      "word": " took",
+      "start": 8.0,
+      "end": 8.18,
+      "probability": 0.997266411781311
+    },
+    {
+      "word": " two",
+      "start": 8.18,
+      "end": 8.44,
+      "probability": 0.9287258982658386
+    },
+    {
+      "word": " jackets",
+      "start": 8.44,
+      "end": 8.84,
+      "probability": 0.9840449094772339
+    },
+    {
+      "word": " into",
+      "start": 8.84,
+      "end": 9.2,
+      "probability": 0.9736608266830444
+    },
+    {
+      "word": " the",
+      "start": 9.2,
+      "end": 9.34,
+      "probability": 0.9960007071495056
+    },
+    {
+      "word": " screened",
+      "start": 9.34,
+      "end": 9.86,
+      "probability": 0.9720698595046997
+    },
+    {
+      "word": " fitting",
+      "start": 9.86,
+      "end": 10.0,
+      "probability": 0.9922256469726562
+    },
+    {
+      "word": " room",
+      "start": 10.0,
+      "end": 10.4,
+      "probability": 0.9973133206367493
+    },
+    {
+      "word": " to",
+      "start": 10.4,
+      "end": 10.68,
+      "probability": 0.9190666675567627
+    },
+    {
+      "word": " try",
+      "start": 10.68,
+      "end": 10.86,
+      "probability": 0.9976911544799805
+    },
+    {
+      "word": " them",
+      "start": 10.86,
+      "end": 11.04,
+      "probability": 0.9961575865745544
+    },
+    {
+      "word": " on",
+      "start": 11.04,
+      "end": 11.22,
+      "probability": 0.9986989498138428
+    },
+    {
+      "word": " before",
+      "start": 11.22,
+      "end": 11.48,
+      "probability": 0.9929385781288147
+    },
+    {
+      "word": " choosing",
+      "start": 11.48,
+      "end": 11.94,
+      "probability": 0.9973359704017639
+    },
+    {
+      "word": " a",
+      "start": 11.94,
+      "end": 12.1,
+      "probability": 0.9960066676139832
+    },
+    {
+      "word": " size.",
+      "start": 12.1,
+      "end": 12.46,
+      "probability": 0.9991335272789001
+    },
+    {
+      "word": " Alteration.",
+      "start": 13.42,
+      "end": 14.02,
+      "probability": 0.9763826727867126
+    },
+    {
+      "word": " Shortening",
+      "start": 14.96,
+      "end": 15.44,
+      "probability": 0.9809780418872833
+    },
+    {
+      "word": " the",
+      "start": 15.44,
+      "end": 15.58,
+      "probability": 0.9973222613334656
+    },
+    {
+      "word": " trousers",
+      "start": 15.58,
+      "end": 15.9,
+      "probability": 0.9872040152549744
+    },
+    {
+      "word": " by",
+      "start": 15.9,
+      "end": 16.26,
+      "probability": 0.9980974793434143
+    },
+    {
+      "word": " three",
+      "start": 16.26,
+      "end": 16.54,
+      "probability": 0.3529242277145386
+    },
+    {
+      "word": " centimeters",
+      "start": 16.54,
+      "end": 17.02,
+      "probability": 0.8946545124053955
+    },
+    {
+      "word": " is",
+      "start": 17.02,
+      "end": 17.5,
+      "probability": 0.9888317584991455
+    },
+    {
+      "word": " a",
+      "start": 17.5,
+      "end": 17.62,
+      "probability": 0.9978393316268921
+    },
+    {
+      "word": " minor",
+      "start": 17.62,
+      "end": 17.9,
+      "probability": 0.999040424823761
+    },
+    {
+      "word": " alteration",
+      "start": 17.9,
+      "end": 18.72,
+      "probability": 0.9977081120014191
+    },
+    {
+      "word": " our",
+      "start": 18.72,
+      "end": 18.98,
+      "probability": 0.9721314907073975
+    },
+    {
+      "word": " shop",
+      "start": 18.98,
+      "end": 19.28,
+      "probability": 0.9548841118812561
+    },
+    {
+      "word": " tailor",
+      "start": 19.28,
+      "end": 19.62,
+      "probability": 0.950164794921875
+    },
+    {
+      "word": " can",
+      "start": 19.62,
+      "end": 19.88,
+      "probability": 0.996224045753479
+    },
+    {
+      "word": " finish",
+      "start": 19.88,
+      "end": 20.18,
+      "probability": 0.9985228180885315
+    },
+    {
+      "word": " today.",
+      "start": 20.18,
+      "end": 20.52,
+      "probability": 0.9988707900047302
+    },
+    {
+      "word": " Seam.",
+      "start": 21.42,
+      "end": 21.96,
+      "probability": 0.760762631893158
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.14,
+      "text": " The cashier loaded the refund onto my store credit account. I must spend it at this chain.",
+      "avgLogprob": -0.21900235870738088,
+      "noSpeechProb": 0.017058590427041054
+    },
+    {
+      "start": 6.14,
+      "end": 12.46,
+      "text": " Fitting room. A shopper took two jackets into the screened fitting room to try them on before choosing a size.",
+      "avgLogprob": -0.21900235870738088,
+      "noSpeechProb": 0.017058590427041054
+    },
+    {
+      "start": 13.42,
+      "end": 14.02,
+      "text": " Alteration.",
+      "avgLogprob": -0.21900235870738088,
+      "noSpeechProb": 0.017058590427041054
+    },
+    {
+      "start": 14.96,
+      "end": 20.52,
+      "text": " Shortening the trousers by three centimeters is a minor alteration our shop tailor can finish today.",
+      "avgLogprob": -0.21900235870738088,
+      "noSpeechProb": 0.017058590427041054
+    },
+    {
+      "start": 21.42,
+      "end": 21.96,
+      "text": " Seam.",
+      "avgLogprob": -0.21900235870738088,
+      "noSpeechProb": 0.017058590427041054
+    }
+  ]
+}

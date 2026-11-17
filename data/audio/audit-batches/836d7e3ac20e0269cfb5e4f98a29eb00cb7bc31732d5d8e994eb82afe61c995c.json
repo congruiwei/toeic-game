@@ -1,0 +1,424 @@
+{
+  "version": 1,
+  "id": "836d7e3ac20e0269cfb5e4f98a29eb00cb7bc31732d5d8e994eb82afe61c995c",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.536125000000002,
+  "elapsedSeconds": 6.337,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.5200000000000005,
+      "sha256": "fed9c343c1570f0c06f0d70998bdc915f0d512584307f4d33f1c333753575848",
+      "src": "./audio/generated/en/am_puck/c73ea5a9f933e1648df70b53a4b56830.m4a"
+    },
+    {
+      "offset": 6.12,
+      "end": 6.8026875,
+      "sha256": "8767edb82f461d34791a5d957900f264cbb60c55ca71fd4bfd152d71ec45a6a8",
+      "src": "./audio/generated/en/af_heart/003d492616a1f51ec59005bcbf81c5a1.m4a"
+    },
+    {
+      "offset": 7.4026875,
+      "end": 12.9920625,
+      "sha256": "f7184e5d2290e2011a793cff01da3250eb11009bbd2261b785a891e649afff71",
+      "src": "./audio/generated/en/af_heart/ccbd7d4ad7e4d2ee97db97cb6107382d.m4a"
+    },
+    {
+      "offset": 13.592062499999999,
+      "end": 14.40275,
+      "sha256": "06f6dca10ccf09263dbb380a65d6e45c858cc05f04ebdfed56ca10470542aeb0",
+      "src": "./audio/generated/en/am_puck/0f9184374112badb188ac9f51d720b18.m4a"
+    },
+    {
+      "offset": 15.002749999999999,
+      "end": 19.48275,
+      "sha256": "9b5f78bafaa6b6ee5a725cdb9a9d194132545f8414ee8b088b6a6b27e83b44a0",
+      "src": "./audio/generated/en/am_puck/e24fafd0f7b82b6d14242a9160068eb5.m4a"
+    },
+    {
+      "offset": 20.08275,
+      "end": 20.936125,
+      "sha256": "0abf2aadd824a987fce80b3a93279cf4b63150e6a4cdf2b9ea9aa9490bfb22e9",
+      "src": "./audio/generated/en/am_puck/152591b33aa9690a6ff3e3de21d7899a.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.9208576679229736
+    },
+    {
+      "word": " hotel's",
+      "start": 0.56,
+      "end": 1.0,
+      "probability": 0.814827173948288
+    },
+    {
+      "word": " parking",
+      "start": 1.0,
+      "end": 1.28,
+      "probability": 0.9942681789398193
+    },
+    {
+      "word": " valet",
+      "start": 1.28,
+      "end": 1.74,
+      "probability": 0.9803468585014343
+    },
+    {
+      "word": " takes",
+      "start": 1.74,
+      "end": 2.08,
+      "probability": 0.9908587336540222
+    },
+    {
+      "word": " guests'",
+      "start": 2.08,
+      "end": 2.38,
+      "probability": 0.8856289982795715
+    },
+    {
+      "word": " keys",
+      "start": 2.58,
+      "end": 2.74,
+      "probability": 0.994186282157898
+    },
+    {
+      "word": " at",
+      "start": 2.74,
+      "end": 2.98,
+      "probability": 0.998320996761322
+    },
+    {
+      "word": " the",
+      "start": 2.98,
+      "end": 3.08,
+      "probability": 0.9991500377655029
+    },
+    {
+      "word": " entrance",
+      "start": 3.08,
+      "end": 3.42,
+      "probability": 0.9971392154693604
+    },
+    {
+      "word": " and",
+      "start": 3.42,
+      "end": 3.72,
+      "probability": 0.9683384895324707
+    },
+    {
+      "word": " parks",
+      "start": 3.72,
+      "end": 3.98,
+      "probability": 0.9843416810035706
+    },
+    {
+      "word": " their",
+      "start": 3.98,
+      "end": 4.24,
+      "probability": 0.9972954392433167
+    },
+    {
+      "word": " cars",
+      "start": 4.24,
+      "end": 4.52,
+      "probability": 0.9955937266349792
+    },
+    {
+      "word": " for",
+      "start": 4.52,
+      "end": 4.78,
+      "probability": 0.9991127848625183
+    },
+    {
+      "word": " them.",
+      "start": 4.78,
+      "end": 5.0,
+      "probability": 0.9994939565658569
+    },
+    {
+      "word": " Porter.",
+      "start": 5.94,
+      "end": 6.4,
+      "probability": 0.28661519289016724
+    },
+    {
+      "word": " Our",
+      "start": 7.4,
+      "end": 7.56,
+      "probability": 0.983749270439148
+    },
+    {
+      "word": " hotel's",
+      "start": 7.56,
+      "end": 8.08,
+      "probability": 0.9850724041461945
+    },
+    {
+      "word": " porter",
+      "start": 8.08,
+      "end": 8.36,
+      "probability": 0.6031071543693542
+    },
+    {
+      "word": " is",
+      "start": 8.36,
+      "end": 8.9,
+      "probability": 0.987748920917511
+    },
+    {
+      "word": " the",
+      "start": 8.9,
+      "end": 9.04,
+      "probability": 0.9980297684669495
+    },
+    {
+      "word": " employee",
+      "start": 9.04,
+      "end": 9.42,
+      "probability": 0.9969191551208496
+    },
+    {
+      "word": " assigned",
+      "start": 9.42,
+      "end": 9.84,
+      "probability": 0.9982950091362
+    },
+    {
+      "word": " to",
+      "start": 9.84,
+      "end": 10.12,
+      "probability": 0.9986851811408997
+    },
+    {
+      "word": " carry",
+      "start": 10.12,
+      "end": 10.38,
+      "probability": 0.9981391429901123
+    },
+    {
+      "word": " guest",
+      "start": 10.38,
+      "end": 10.72,
+      "probability": 0.8935716152191162
+    },
+    {
+      "word": " luggage",
+      "start": 10.72,
+      "end": 11.12,
+      "probability": 0.9947497248649597
+    },
+    {
+      "word": " from",
+      "start": 11.12,
+      "end": 11.64,
+      "probability": 0.9761106371879578
+    },
+    {
+      "word": " reception",
+      "start": 11.64,
+      "end": 11.98,
+      "probability": 0.9963232278823853
+    },
+    {
+      "word": " to",
+      "start": 11.98,
+      "end": 12.26,
+      "probability": 0.9987971782684326
+    },
+    {
+      "word": " the",
+      "start": 12.26,
+      "end": 12.36,
+      "probability": 0.9974491000175476
+    },
+    {
+      "word": " rooms.",
+      "start": 12.36,
+      "end": 12.66,
+      "probability": 0.9816988706588745
+    },
+    {
+      "word": " Lin",
+      "start": 13.68,
+      "end": 13.84,
+      "probability": 0.35118937492370605
+    },
+    {
+      "word": "-end.",
+      "start": 13.84,
+      "end": 14.04,
+      "probability": 0.26076970994472504
+    },
+    {
+      "word": " Place",
+      "start": 14.86,
+      "end": 15.26,
+      "probability": 0.9831935167312622
+    },
+    {
+      "word": " used",
+      "start": 15.26,
+      "end": 15.54,
+      "probability": 0.9458880424499512
+    },
+    {
+      "word": " Lin",
+      "start": 15.54,
+      "end": 15.86,
+      "probability": 0.48717358708381653
+    },
+    {
+      "word": "-end",
+      "start": 15.86,
+      "end": 15.98,
+      "probability": 0.9683030247688293
+    },
+    {
+      "word": " from",
+      "start": 15.98,
+      "end": 16.12,
+      "probability": 0.9929646253585815
+    },
+    {
+      "word": " the",
+      "start": 16.12,
+      "end": 16.26,
+      "probability": 0.9861657619476318
+    },
+    {
+      "word": " guest",
+      "start": 16.26,
+      "end": 16.44,
+      "probability": 0.9844890832901001
+    },
+    {
+      "word": " beds",
+      "start": 16.44,
+      "end": 16.82,
+      "probability": 0.9453977942466736
+    },
+    {
+      "word": " in",
+      "start": 16.82,
+      "end": 16.98,
+      "probability": 0.9887791872024536
+    },
+    {
+      "word": " the",
+      "start": 16.98,
+      "end": 17.08,
+      "probability": 0.9918370842933655
+    },
+    {
+      "word": " laundry",
+      "start": 17.08,
+      "end": 17.38,
+      "probability": 0.9989816546440125
+    },
+    {
+      "word": " bag",
+      "start": 17.38,
+      "end": 17.72,
+      "probability": 0.997658371925354
+    },
+    {
+      "word": " before",
+      "start": 17.72,
+      "end": 18.1,
+      "probability": 0.9892510175704956
+    },
+    {
+      "word": " cleaning",
+      "start": 18.1,
+      "end": 18.5,
+      "probability": 0.9991040825843811
+    },
+    {
+      "word": " the",
+      "start": 18.5,
+      "end": 18.68,
+      "probability": 0.9986949563026428
+    },
+    {
+      "word": " room.",
+      "start": 18.68,
+      "end": 18.9,
+      "probability": 0.9988478422164917
+    },
+    {
+      "word": " Mattress.",
+      "start": 20.02,
+      "end": 20.54,
+      "probability": 0.8970994353294373
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.0,
+      "text": " The hotel's parking valet takes guests' keys at the entrance and parks their cars for them.",
+      "avgLogprob": -0.19246613024136958,
+      "noSpeechProb": 0.012477325275540352
+    },
+    {
+      "start": 5.94,
+      "end": 6.4,
+      "text": " Porter.",
+      "avgLogprob": -0.19246613024136958,
+      "noSpeechProb": 0.012477325275540352
+    },
+    {
+      "start": 7.4,
+      "end": 12.66,
+      "text": " Our hotel's porter is the employee assigned to carry guest luggage from reception to the rooms.",
+      "avgLogprob": -0.19246613024136958,
+      "noSpeechProb": 0.012477325275540352
+    },
+    {
+      "start": 13.68,
+      "end": 14.04,
+      "text": " Lin-end.",
+      "avgLogprob": -0.19246613024136958,
+      "noSpeechProb": 0.012477325275540352
+    },
+    {
+      "start": 14.86,
+      "end": 18.9,
+      "text": " Place used Lin-end from the guest beds in the laundry bag before cleaning the room.",
+      "avgLogprob": -0.19246613024136958,
+      "noSpeechProb": 0.012477325275540352
+    },
+    {
+      "start": 20.02,
+      "end": 20.54,
+      "text": " Mattress.",
+      "avgLogprob": -0.19246613024136958,
+      "noSpeechProb": 0.012477325275540352
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "id": "98a418c4f9e2b30f83d667c7a4e73f0c11067024a76e238740e059968533694d",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.1226875,
+  "elapsedSeconds": 3.079,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.192,
+      "sha256": "14ff963c5c12ff5256c4bbab1502fd7be03ae19ba066fbd4b9fab74e950d8072",
+      "src": "./audio/generated/en/af_bella/05f8d47049ad770fc230ef0fe4483b44.m4a"
+    },
+    {
+      "offset": 2.7920000000000003,
+      "end": 5.5226875,
+      "sha256": "aa9cfa34be300a3c892eff7c95542d6aefaf0ee7418e68d35866ceef1000ff4d",
+      "src": "./audio/generated/en/am_puck/daecddf9afd2cb0b0fd728e9bd15f23b.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Can",
+      "start": 0.0,
+      "end": 0.58,
+      "probability": 0.8244868516921997
+    },
+    {
+      "word": " I",
+      "start": 0.58,
+      "end": 0.72,
+      "probability": 0.9794327020645142
+    },
+    {
+      "word": " see",
+      "start": 0.72,
+      "end": 0.9,
+      "probability": 0.997186005115509
+    },
+    {
+      "word": " the",
+      "start": 0.9,
+      "end": 1.02,
+      "probability": 0.9971906542778015
+    },
+    {
+      "word": " market",
+      "start": 1.02,
+      "end": 1.32,
+      "probability": 0.9767009615898132
+    },
+    {
+      "word": " from",
+      "start": 1.32,
+      "end": 1.52,
+      "probability": 0.9937992691993713
+    },
+    {
+      "word": " the",
+      "start": 1.52,
+      "end": 1.66,
+      "probability": 0.9944015145301819
+    },
+    {
+      "word": " stop?",
+      "start": 1.66,
+      "end": 1.88,
+      "probability": 0.9795613884925842
+    },
+    {
+      "word": " Yes,",
+      "start": 2.84,
+      "end": 3.08,
+      "probability": 0.9463090896606445
+    },
+    {
+      "word": " look",
+      "start": 3.2,
+      "end": 3.32,
+      "probability": 0.9818187355995178
+    },
+    {
+      "word": " for",
+      "start": 3.32,
+      "end": 3.5,
+      "probability": 0.9953452944755554
+    },
+    {
+      "word": " the",
+      "start": 3.5,
+      "end": 3.62,
+      "probability": 0.9894270896911621
+    },
+    {
+      "word": " striped",
+      "start": 3.62,
+      "end": 3.94,
+      "probability": 0.9633683264255524
+    },
+    {
+      "word": " awning",
+      "start": 3.94,
+      "end": 4.2,
+      "probability": 0.9969135820865631
+    },
+    {
+      "word": " over",
+      "start": 4.2,
+      "end": 4.38,
+      "probability": 0.9932940006256104
+    },
+    {
+      "word": " the",
+      "start": 4.38,
+      "end": 4.5,
+      "probability": 0.9963548183441162
+    },
+    {
+      "word": " first",
+      "start": 4.5,
+      "end": 4.68,
+      "probability": 0.9635385274887085
+    },
+    {
+      "word": " stall.",
+      "start": 4.68,
+      "end": 5.04,
+      "probability": 0.9888667464256287
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.88,
+      "text": " Can I see the market from the stop?",
+      "avgLogprob": -0.2675579073173659,
+      "noSpeechProb": 0.021395543590188026
+    },
+    {
+      "start": 2.84,
+      "end": 5.04,
+      "text": " Yes, look for the striped awning over the first stall.",
+      "avgLogprob": -0.2675579073173659,
+      "noSpeechProb": 0.021395543590188026
+    }
+  ]
+}

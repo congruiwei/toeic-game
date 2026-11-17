@@ -1,0 +1,418 @@
+{
+  "version": 1,
+  "id": "f94a034087817bfc4892e6c688a5a1fbdfb7428ee5339a0f24b23c90675ddbb4",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.840125,
+  "elapsedSeconds": 4.63,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.296,
+      "sha256": "60eb32d4f73a21420572ec00a398fc5dc592ab7a9e3bd003d52d507937abb8f8",
+      "src": "./audio/generated/en/af_heart/64fc63ea7177ff3bc9c814e3346fb4ce.m4a"
+    },
+    {
+      "offset": 1.896,
+      "end": 8.552,
+      "sha256": "4156314b4d6d46faaf44ea9621bec2993e0cecf861be54144a310304fe547f7f",
+      "src": "./audio/generated/en/af_heart/af0abf1c0244d78468bf239317fea962.m4a"
+    },
+    {
+      "offset": 9.152,
+      "end": 10.005374999999999,
+      "sha256": "ee93cd1d4cf684f015096a3a1cc098b940d45c47ee2c3574eabdbd7d4f8a2cce",
+      "src": "./audio/generated/en/am_puck/e86fc8403a12b10b7662e848d488ccfd.m4a"
+    },
+    {
+      "offset": 10.605374999999999,
+      "end": 15.298749999999998,
+      "sha256": "3fe9b059c47bbe192287bd5dca318c32668bb9139cfa523a0f8f22a721c6a757",
+      "src": "./audio/generated/en/am_puck/e8a8b2045f8fd5b993c94d2334bfea4c.m4a"
+    },
+    {
+      "offset": 15.898749999999998,
+      "end": 16.581437499999996,
+      "sha256": "e7c0e5dea79fd320f13dc0b02c053d3c373d3d8a80eb721e045cb3621477293c",
+      "src": "./audio/generated/en/af_bella/463e21bd0a79702b190c2be18d1e30fd.m4a"
+    },
+    {
+      "offset": 17.181437499999998,
+      "end": 23.240125,
+      "sha256": "b5967f48e90b824d03961c5b87afc64a4dcaa4dc70012b786e7fe5aeb0fc3258",
+      "src": "./audio/generated/en/af_bella/5b7845e220ce87aeaef02de2193f7720.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Department",
+      "start": 0.0,
+      "end": 0.88,
+      "probability": 0.7045503258705139
+    },
+    {
+      "word": " Our",
+      "start": 1.6799999999999997,
+      "end": 2.04,
+      "probability": 0.6199768781661987
+    },
+    {
+      "word": " finance",
+      "start": 2.04,
+      "end": 2.44,
+      "probability": 0.7452725172042847
+    },
+    {
+      "word": " department",
+      "start": 2.44,
+      "end": 3.02,
+      "probability": 0.9936354160308838
+    },
+    {
+      "word": " employs",
+      "start": 3.02,
+      "end": 3.58,
+      "probability": 0.9645387232303619
+    },
+    {
+      "word": " six",
+      "start": 3.58,
+      "end": 3.9,
+      "probability": 0.7646452784538269
+    },
+    {
+      "word": " accountants",
+      "start": 3.9,
+      "end": 4.52,
+      "probability": 0.9868793785572052
+    },
+    {
+      "word": " on",
+      "start": 4.52,
+      "end": 4.62,
+      "probability": 0.9947153925895691
+    },
+    {
+      "word": " the",
+      "start": 4.62,
+      "end": 4.74,
+      "probability": 0.9892193675041199
+    },
+    {
+      "word": " third",
+      "start": 4.74,
+      "end": 4.94,
+      "probability": 0.849426805973053
+    },
+    {
+      "word": " floor",
+      "start": 4.94,
+      "end": 5.2,
+      "probability": 0.9906497597694397
+    },
+    {
+      "word": " and",
+      "start": 5.2,
+      "end": 5.8,
+      "probability": 0.850233256816864
+    },
+    {
+      "word": " processes",
+      "start": 5.8,
+      "end": 6.2,
+      "probability": 0.9864132404327393
+    },
+    {
+      "word": " expense",
+      "start": 6.2,
+      "end": 6.74,
+      "probability": 0.9740847945213318
+    },
+    {
+      "word": " claims",
+      "start": 6.74,
+      "end": 7.22,
+      "probability": 0.9935262203216553
+    },
+    {
+      "word": " for",
+      "start": 7.22,
+      "end": 7.58,
+      "probability": 0.9964221715927124
+    },
+    {
+      "word": " every",
+      "start": 7.58,
+      "end": 7.86,
+      "probability": 0.9961600303649902
+    },
+    {
+      "word": " branch.",
+      "start": 7.86,
+      "end": 8.28,
+      "probability": 0.9988184571266174
+    },
+    {
+      "word": " Division",
+      "start": 9.16,
+      "end": 9.52,
+      "probability": 0.8627151250839233
+    },
+    {
+      "word": " Theo",
+      "start": 9.52,
+      "end": 10.84,
+      "probability": 0.5504340529441833
+    },
+    {
+      "word": " will",
+      "start": 10.84,
+      "end": 11.16,
+      "probability": 0.9864984750747681
+    },
+    {
+      "word": " head",
+      "start": 11.16,
+      "end": 11.34,
+      "probability": 0.955290675163269
+    },
+    {
+      "word": " the",
+      "start": 11.34,
+      "end": 11.48,
+      "probability": 0.9899106621742249
+    },
+    {
+      "word": " new",
+      "start": 11.48,
+      "end": 11.64,
+      "probability": 0.9869993329048157
+    },
+    {
+      "word": " medical",
+      "start": 11.64,
+      "end": 11.94,
+      "probability": 0.9027267098426819
+    },
+    {
+      "word": " division",
+      "start": 11.94,
+      "end": 12.44,
+      "probability": 0.9968467354774475
+    },
+    {
+      "word": " while",
+      "start": 12.44,
+      "end": 12.84,
+      "probability": 0.9057551622390747
+    },
+    {
+      "word": " the",
+      "start": 12.84,
+      "end": 12.98,
+      "probability": 0.9942147135734558
+    },
+    {
+      "word": " retail",
+      "start": 12.98,
+      "end": 13.24,
+      "probability": 0.993507981300354
+    },
+    {
+      "word": " business",
+      "start": 13.24,
+      "end": 13.6,
+      "probability": 0.9962078332901001
+    },
+    {
+      "word": " stays",
+      "start": 13.6,
+      "end": 14.06,
+      "probability": 0.9972600936889648
+    },
+    {
+      "word": " under",
+      "start": 14.06,
+      "end": 14.38,
+      "probability": 0.9831122756004333
+    },
+    {
+      "word": " MENA.",
+      "start": 14.38,
+      "end": 14.72,
+      "probability": 0.6392106264829636
+    },
+    {
+      "word": " Brand",
+      "start": 15.62,
+      "end": 16.2,
+      "probability": 0.8780615329742432
+    },
+    {
+      "word": " The",
+      "start": 16.94,
+      "end": 17.3,
+      "probability": 0.7731515765190125
+    },
+    {
+      "word": " bank",
+      "start": 17.3,
+      "end": 17.54,
+      "probability": 0.8716217279434204
+    },
+    {
+      "word": " opened",
+      "start": 17.54,
+      "end": 17.94,
+      "probability": 0.9950297474861145
+    },
+    {
+      "word": " its",
+      "start": 17.94,
+      "end": 18.16,
+      "probability": 0.96613609790802
+    },
+    {
+      "word": " first",
+      "start": 18.16,
+      "end": 18.38,
+      "probability": 0.9967015385627747
+    },
+    {
+      "word": " branch",
+      "start": 18.38,
+      "end": 18.82,
+      "probability": 0.9989756345748901
+    },
+    {
+      "word": " outside",
+      "start": 18.82,
+      "end": 19.24,
+      "probability": 0.9953889846801758
+    },
+    {
+      "word": " the",
+      "start": 19.24,
+      "end": 19.42,
+      "probability": 0.9832431674003601
+    },
+    {
+      "word": " capital,",
+      "start": 19.42,
+      "end": 19.82,
+      "probability": 0.7876119613647461
+    },
+    {
+      "word": " giving",
+      "start": 20.18,
+      "end": 20.52,
+      "probability": 0.9977509379386902
+    },
+    {
+      "word": " clients",
+      "start": 20.52,
+      "end": 20.96,
+      "probability": 0.9951521158218384
+    },
+    {
+      "word": " a",
+      "start": 20.96,
+      "end": 21.16,
+      "probability": 0.997511625289917
+    },
+    {
+      "word": " local",
+      "start": 21.16,
+      "end": 21.38,
+      "probability": 0.991999089717865
+    },
+    {
+      "word": " office",
+      "start": 21.38,
+      "end": 21.88,
+      "probability": 0.9934822916984558
+    },
+    {
+      "word": " for",
+      "start": 21.88,
+      "end": 22.08,
+      "probability": 0.9983432292938232
+    },
+    {
+      "word": " account",
+      "start": 22.08,
+      "end": 22.38,
+      "probability": 0.9869861006736755
+    },
+    {
+      "word": " services.",
+      "start": 22.38,
+      "end": 22.82,
+      "probability": 0.997148334980011
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.88,
+      "text": " Department",
+      "avgLogprob": -0.17274955418747914,
+      "noSpeechProb": 0.06143986061215401
+    },
+    {
+      "start": 2.0,
+      "end": 8.28,
+      "text": " Our finance department employs six accountants on the third floor and processes expense claims for every branch.",
+      "avgLogprob": -0.17274955418747914,
+      "noSpeechProb": 0.06143986061215401
+    },
+    {
+      "start": 9.16,
+      "end": 9.52,
+      "text": " Division",
+      "avgLogprob": -0.17274955418747914,
+      "noSpeechProb": 0.06143986061215401
+    },
+    {
+      "start": 9.52,
+      "end": 14.72,
+      "text": " Theo will head the new medical division while the retail business stays under MENA.",
+      "avgLogprob": -0.17274955418747914,
+      "noSpeechProb": 0.06143986061215401
+    },
+    {
+      "start": 15.62,
+      "end": 16.2,
+      "text": " Brand",
+      "avgLogprob": -0.17274955418747914,
+      "noSpeechProb": 0.06143986061215401
+    },
+    {
+      "start": 17.0,
+      "end": 22.82,
+      "text": " The bank opened its first branch outside the capital, giving clients a local office for account services.",
+      "avgLogprob": -0.17274955418747914,
+      "noSpeechProb": 0.06143986061215401
+    }
+  ]
+}

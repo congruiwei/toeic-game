@@ -1,0 +1,174 @@
+{
+  "version": 1,
+  "id": "f5a1b833d8176db606d7d9ab210b5633fb087f2330bf0a626f60e14b81f3a74e",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 9.450687499999999,
+  "elapsedSeconds": 3.092,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.4666875,
+      "sha256": "4ee91aa3e1f73b1df6f2f62521b9dfa7299f207b394ab18384cd02a83b1066b7",
+      "src": "./audio/generated/en/af_bella/e36aa302138937c727c5a45aec600660.m4a"
+    },
+    {
+      "offset": 2.0666875,
+      "end": 8.8506875,
+      "sha256": "7cdd78b492effa5277c7595f21439495b4b4e8d4f6d10afef385e604d19593ec",
+      "src": "./audio/generated/en/af_bella/7b946f0d07b02705b8b2ba925f424d38.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Travel",
+      "start": 0.0,
+      "end": 0.72,
+      "probability": 0.8215759992599487
+    },
+    {
+      "word": " Advance",
+      "start": 0.72,
+      "end": 1.1,
+      "probability": 0.5530445575714111
+    },
+    {
+      "word": " The",
+      "start": 1.7600000000000002,
+      "end": 2.18,
+      "probability": 0.6351849436759949
+    },
+    {
+      "word": " company",
+      "start": 2.18,
+      "end": 2.52,
+      "probability": 0.99297696352005
+    },
+    {
+      "word": " pays",
+      "start": 2.52,
+      "end": 2.94,
+      "probability": 0.9876589179039001
+    },
+    {
+      "word": " a",
+      "start": 2.94,
+      "end": 3.08,
+      "probability": 0.9816182255744934
+    },
+    {
+      "word": " travel",
+      "start": 3.08,
+      "end": 3.44,
+      "probability": 0.6446049213409424
+    },
+    {
+      "word": " advance",
+      "start": 3.44,
+      "end": 3.88,
+      "probability": 0.9899072647094727
+    },
+    {
+      "word": " before",
+      "start": 3.88,
+      "end": 4.24,
+      "probability": 0.9847167730331421
+    },
+    {
+      "word": " departure",
+      "start": 4.24,
+      "end": 4.82,
+      "probability": 0.9797439575195312
+    },
+    {
+      "word": " to",
+      "start": 4.82,
+      "end": 5.42,
+      "probability": 0.9265291690826416
+    },
+    {
+      "word": " cover",
+      "start": 5.42,
+      "end": 5.7,
+      "probability": 0.9977965354919434
+    },
+    {
+      "word": " expenses",
+      "start": 5.7,
+      "end": 6.34,
+      "probability": 0.9952067732810974
+    },
+    {
+      "word": " that",
+      "start": 6.34,
+      "end": 7.04,
+      "probability": 0.985174834728241
+    },
+    {
+      "word": " the",
+      "start": 7.04,
+      "end": 7.12,
+      "probability": 0.9891111254692078
+    },
+    {
+      "word": " traveler",
+      "start": 7.12,
+      "end": 7.54,
+      "probability": 0.8820580244064331
+    },
+    {
+      "word": " will",
+      "start": 7.54,
+      "end": 7.82,
+      "probability": 0.9969637989997864
+    },
+    {
+      "word": " incur",
+      "start": 7.82,
+      "end": 8.14,
+      "probability": 0.9990063309669495
+    },
+    {
+      "word": " later.",
+      "start": 8.14,
+      "end": 8.56,
+      "probability": 0.996253490447998
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.1,
+      "text": " Travel Advance",
+      "avgLogprob": -0.25177803039550783,
+      "noSpeechProb": 0.02197274938225746
+    },
+    {
+      "start": 2.0,
+      "end": 8.56,
+      "text": " The company pays a travel advance before departure to cover expenses that the traveler will incur later.",
+      "avgLogprob": -0.25177803039550783,
+      "noSpeechProb": 0.02197274938225746
+    }
+  ]
+}

@@ -1,0 +1,570 @@
+{
+  "version": 1,
+  "id": "d58d88b06c35ceeb4a51c2b7112f88eefa02ca60d6efdb0a6e73dce372d73e09",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.789375,
+  "elapsedSeconds": 4.962,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.344,
+      "sha256": "34b332b80431c16db794b063fe2c8b76f53e310febac1a24c65af9102b1e18e4",
+      "src": "./audio/generated/ja/jf_alpha/9e0b4158e7ecdfe30b992101ab8dc5f7.m4a"
+    },
+    {
+      "offset": 3.944,
+      "end": 7.0586875,
+      "sha256": "3ecc0a6e2da996e1f33d23eeb8c979fcea1647398c4ab83a60762a096f55018a",
+      "src": "./audio/generated/ja/jf_alpha/91d5ed823304a34a1ddcf313cc1c02cc.m4a"
+    },
+    {
+      "offset": 7.658687499999999,
+      "end": 10.602687499999998,
+      "sha256": "825bf4763c9e9ccbd3259087fb0088015365283bdf84bb637eb3c0e714017fa6",
+      "src": "./audio/generated/ja/jf_alpha/dc40c65d19e351191b7ff688e545d699.m4a"
+    },
+    {
+      "offset": 11.202687499999998,
+      "end": 15.469374999999998,
+      "sha256": "ef319eae3a1d63e2615982c0104b0a3e44cb9234b3f19c2fbd12cefb8ff614b4",
+      "src": "./audio/generated/ja/jf_alpha/575b7b011d8e92ba3dc400cae434c781.m4a"
+    },
+    {
+      "offset": 16.069374999999997,
+      "end": 21.189375,
+      "sha256": "f649aa9bab30d0494cbb9c1f08a1d3eaca200b1d278b1b1a61a1c907a4a2a3c2",
+      "src": "./audio/generated/ja/jf_alpha/1a70341651292546937c7875218188c1.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "最後",
+      "start": 0.4000000000000008,
+      "end": 0.8,
+      "probability": 0.7447900772094727
+    },
+    {
+      "word": "の",
+      "start": 0.8,
+      "end": 1.04,
+      "probability": 0.9971689581871033
+    },
+    {
+      "word": "講",
+      "start": 1.04,
+      "end": 1.24,
+      "probability": 0.6347382664680481
+    },
+    {
+      "word": "習",
+      "start": 1.24,
+      "end": 1.46,
+      "probability": 0.911426305770874
+    },
+    {
+      "word": "の",
+      "start": 1.46,
+      "end": 1.64,
+      "probability": 0.9980531930923462
+    },
+    {
+      "word": "時",
+      "start": 1.64,
+      "end": 1.78,
+      "probability": 0.698268473148346
+    },
+    {
+      "word": "刻",
+      "start": 1.78,
+      "end": 1.96,
+      "probability": 0.9934654831886292
+    },
+    {
+      "word": "を",
+      "start": 1.96,
+      "end": 2.14,
+      "probability": 0.9957297444343567
+    },
+    {
+      "word": "確",
+      "start": 2.14,
+      "end": 2.32,
+      "probability": 0.996290922164917
+    },
+    {
+      "word": "認",
+      "start": 2.32,
+      "end": 2.6,
+      "probability": 0.9994404911994934
+    },
+    {
+      "word": "する",
+      "start": 2.6,
+      "end": 2.86,
+      "probability": 0.9447826743125916
+    },
+    {
+      "word": "ため、",
+      "start": 2.86,
+      "end": 3.12,
+      "probability": 0.9714922308921814
+    },
+    {
+      "word": "提",
+      "start": 3.98,
+      "end": 4.22,
+      "probability": 0.7442299127578735
+    },
+    {
+      "word": "供",
+      "start": 4.22,
+      "end": 4.44,
+      "probability": 0.9979769885540009
+    },
+    {
+      "word": "済",
+      "start": 4.44,
+      "end": 4.68,
+      "probability": 0.9547221660614014
+    },
+    {
+      "word": "み",
+      "start": 4.68,
+      "end": 4.84,
+      "probability": 0.978939950466156
+    },
+    {
+      "word": "の",
+      "start": 4.84,
+      "end": 4.94,
+      "probability": 0.9964246153831482
+    },
+    {
+      "word": "温",
+      "start": 4.94,
+      "end": 5.2,
+      "probability": 0.7501223683357239
+    },
+    {
+      "word": "か",
+      "start": 5.2,
+      "end": 5.5,
+      "probability": 0.9902195334434509
+    },
+    {
+      "word": "い",
+      "start": 5.5,
+      "end": 5.6,
+      "probability": 0.9977219700813293
+    },
+    {
+      "word": "飲",
+      "start": 5.6,
+      "end": 5.74,
+      "probability": 0.9712164103984833
+    },
+    {
+      "word": "み",
+      "start": 5.74,
+      "end": 5.86,
+      "probability": 0.9867383241653442
+    },
+    {
+      "word": "物",
+      "start": 5.86,
+      "end": 6.04,
+      "probability": 0.9306725859642029
+    },
+    {
+      "word": "を",
+      "start": 6.04,
+      "end": 6.18,
+      "probability": 0.9815938472747803
+    },
+    {
+      "word": "数",
+      "start": 6.18,
+      "end": 6.38,
+      "probability": 0.9873418211936951
+    },
+    {
+      "word": "える",
+      "start": 6.38,
+      "end": 6.64,
+      "probability": 0.9968955516815186
+    },
+    {
+      "word": "ため、",
+      "start": 6.64,
+      "end": 6.84,
+      "probability": 0.9898512363433838
+    },
+    {
+      "word": "予",
+      "start": 7.7,
+      "end": 7.88,
+      "probability": 0.9723149538040161
+    },
+    {
+      "word": "定",
+      "start": 7.88,
+      "end": 8.08,
+      "probability": 0.9992507100105286
+    },
+    {
+      "word": "して",
+      "start": 8.08,
+      "end": 8.36,
+      "probability": 0.9972119927406311
+    },
+    {
+      "word": "いる",
+      "start": 8.36,
+      "end": 8.58,
+      "probability": 0.9973598122596741
+    },
+    {
+      "word": "中",
+      "start": 8.58,
+      "end": 8.82,
+      "probability": 0.7095455527305603
+    },
+    {
+      "word": "食",
+      "start": 8.82,
+      "end": 9.02,
+      "probability": 0.7603979110717773
+    },
+    {
+      "word": "数",
+      "start": 9.02,
+      "end": 9.32,
+      "probability": 0.9197867512702942
+    },
+    {
+      "word": "を",
+      "start": 9.32,
+      "end": 9.52,
+      "probability": 0.9974964261054993
+    },
+    {
+      "word": "修",
+      "start": 9.52,
+      "end": 9.7,
+      "probability": 0.9937181174755096
+    },
+    {
+      "word": "正",
+      "start": 9.7,
+      "end": 9.92,
+      "probability": 0.9884459972381592
+    },
+    {
+      "word": "する",
+      "start": 9.92,
+      "end": 10.16,
+      "probability": 0.9932098984718323
+    },
+    {
+      "word": "ため、",
+      "start": 10.16,
+      "end": 10.4,
+      "probability": 0.9961240887641907
+    },
+    {
+      "word": "本",
+      "start": 11.2,
+      "end": 11.48,
+      "probability": 0.9667271971702576
+    },
+    {
+      "word": "日",
+      "start": 11.48,
+      "end": 11.66,
+      "probability": 0.9913751482963562
+    },
+    {
+      "word": "の",
+      "start": 11.66,
+      "end": 11.86,
+      "probability": 0.9978668093681335
+    },
+    {
+      "word": "最",
+      "start": 11.86,
+      "end": 12.06,
+      "probability": 0.9879642724990845
+    },
+    {
+      "word": "初",
+      "start": 12.06,
+      "end": 12.26,
+      "probability": 0.9994268417358398
+    },
+    {
+      "word": "の",
+      "start": 12.26,
+      "end": 12.42,
+      "probability": 0.998246431350708
+    },
+    {
+      "word": "瓶",
+      "start": 12.42,
+      "end": 12.62,
+      "probability": 0.8940028548240662
+    },
+    {
+      "word": "には",
+      "start": 12.62,
+      "end": 12.96,
+      "probability": 0.9961018562316895
+    },
+    {
+      "word": "生",
+      "start": 12.96,
+      "end": 13.24,
+      "probability": 0.9928489923477173
+    },
+    {
+      "word": "の",
+      "start": 13.24,
+      "end": 13.48,
+      "probability": 0.7679760456085205
+    },
+    {
+      "word": "ハ",
+      "start": 13.48,
+      "end": 13.62,
+      "probability": 0.6572615504264832
+    },
+    {
+      "word": "ーブ",
+      "start": 13.62,
+      "end": 13.8,
+      "probability": 0.9844540357589722
+    },
+    {
+      "word": "の",
+      "start": 13.8,
+      "end": 13.96,
+      "probability": 0.9984728693962097
+    },
+    {
+      "word": "サ",
+      "start": 13.96,
+      "end": 14.14,
+      "probability": 0.9614386558532715
+    },
+    {
+      "word": "ンプ",
+      "start": 14.14,
+      "end": 14.3,
+      "probability": 0.9904922544956207
+    },
+    {
+      "word": "ル",
+      "start": 14.3,
+      "end": 14.4,
+      "probability": 0.9985191226005554
+    },
+    {
+      "word": "が",
+      "start": 14.4,
+      "end": 14.54,
+      "probability": 0.9952168464660645
+    },
+    {
+      "word": "入",
+      "start": 14.54,
+      "end": 14.76,
+      "probability": 0.9660685658454895
+    },
+    {
+      "word": "って",
+      "start": 14.76,
+      "end": 14.98,
+      "probability": 0.9982206225395203
+    },
+    {
+      "word": "います。",
+      "start": 14.98,
+      "end": 15.24,
+      "probability": 0.9872112274169922
+    },
+    {
+      "word": "差",
+      "start": 16.12,
+      "end": 16.3,
+      "probability": 0.7956639528274536
+    },
+    {
+      "word": "し",
+      "start": 16.3,
+      "end": 16.44,
+      "probability": 0.9876234531402588
+    },
+    {
+      "word": "出",
+      "start": 16.44,
+      "end": 16.54,
+      "probability": 0.9848523736000061
+    },
+    {
+      "word": "し",
+      "start": 16.54,
+      "end": 16.68,
+      "probability": 0.9967963099479675
+    },
+    {
+      "word": "人",
+      "start": 16.68,
+      "end": 16.84,
+      "probability": 0.8704333305358887
+    },
+    {
+      "word": "から",
+      "start": 16.84,
+      "end": 17.1,
+      "probability": 0.9968896508216858
+    },
+    {
+      "word": "は、",
+      "start": 17.1,
+      "end": 17.36,
+      "probability": 0.9981728792190552
+    },
+    {
+      "word": "冷",
+      "start": 17.74,
+      "end": 17.86,
+      "probability": 0.9728695750236511
+    },
+    {
+      "word": "蔵",
+      "start": 17.86,
+      "end": 18.08,
+      "probability": 0.9687348306179047
+    },
+    {
+      "word": "し",
+      "start": 18.08,
+      "end": 18.3,
+      "probability": 0.17172043025493622
+    },
+    {
+      "word": "絶",
+      "start": 18.3,
+      "end": 18.48,
+      "probability": 0.9958911240100861
+    },
+    {
+      "word": "対",
+      "start": 18.48,
+      "end": 18.76,
+      "probability": 0.9835501909255981
+    },
+    {
+      "word": "に",
+      "start": 18.76,
+      "end": 18.94,
+      "probability": 0.9994452595710754
+    },
+    {
+      "word": "冷",
+      "start": 18.94,
+      "end": 19.12,
+      "probability": 0.9143693447113037
+    },
+    {
+      "word": "凍",
+      "start": 19.12,
+      "end": 19.32,
+      "probability": 0.9607134163379669
+    },
+    {
+      "word": "し",
+      "start": 19.32,
+      "end": 19.52,
+      "probability": 0.9821443557739258
+    },
+    {
+      "word": "ない",
+      "start": 19.52,
+      "end": 19.7,
+      "probability": 0.6435651779174805
+    },
+    {
+      "word": "よう",
+      "start": 19.7,
+      "end": 19.94,
+      "probability": 0.9030041694641113
+    },
+    {
+      "word": "指",
+      "start": 19.94,
+      "end": 20.12,
+      "probability": 0.9930586814880371
+    },
+    {
+      "word": "定",
+      "start": 20.12,
+      "end": 20.3,
+      "probability": 0.9946788549423218
+    },
+    {
+      "word": "さ",
+      "start": 20.3,
+      "end": 20.44,
+      "probability": 0.9960895776748657
+    },
+    {
+      "word": "れて",
+      "start": 20.44,
+      "end": 20.6,
+      "probability": 0.9963506460189819
+    },
+    {
+      "word": "います。",
+      "start": 20.6,
+      "end": 20.9,
+      "probability": 0.995089590549469
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.4000000000000008,
+      "end": 15.24,
+      "text": "最後の講習の時刻を確認するため、提供済みの温かい飲み物を数えるため、予定している中食数を修正するため、本日の最初の瓶には生のハーブのサンプルが入っています。",
+      "avgLogprob": -0.1271477165930676,
+      "noSpeechProb": 0.017697429284453392
+    },
+    {
+      "start": 16.12,
+      "end": 20.9,
+      "text": "差し出し人からは、冷蔵し絶対に冷凍しないよう指定されています。",
+      "avgLogprob": -0.1271477165930676,
+      "noSpeechProb": 0.017697429284453392
+    }
+  ]
+}

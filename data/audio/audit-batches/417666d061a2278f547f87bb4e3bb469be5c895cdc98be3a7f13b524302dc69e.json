@@ -1,0 +1,467 @@
+{
+  "version": 1,
+  "id": "417666d061a2278f547f87bb4e3bb469be5c895cdc98be3a7f13b524302dc69e",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.861562500000005,
+  "elapsedSeconds": 4.71,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.3013749999999997,
+      "sha256": "36ac51a9f7b7bfefdb7d847bb7822233bd8a7892130baa25cbdae8edce562928",
+      "src": "./audio/generated/en/af_bella/9eb0552aafb8736584ab52def2cb6be7.m4a"
+    },
+    {
+      "offset": 3.901375,
+      "end": 6.80275,
+      "sha256": "16148e56b0fb18c5f9ac161f4a888bf489b6d7505314fad65397934a31d9e7fc",
+      "src": "./audio/generated/en/af_heart/dd8fb743d4d155cb3bad6e0e7937fa9d.m4a"
+    },
+    {
+      "offset": 7.402749999999999,
+      "end": 9.152125,
+      "sha256": "d22cefd01d6267a9ec49744a4eb9492eb25c6fb3e154f0cd2741ebd2bbe826b8",
+      "src": "./audio/generated/en/am_puck/56109716e7f90d4b73fd6afc58e9f199.m4a"
+    },
+    {
+      "offset": 9.752125,
+      "end": 12.0135,
+      "sha256": "fba3309fdd7002f94e7be8a531dd64c14c96662cfee5306df0bad92a6d302b7a",
+      "src": "./audio/generated/en/am_puck/183fad7d7d0550b3b62c0514988c7dca.m4a"
+    },
+    {
+      "offset": 12.6135,
+      "end": 14.618875,
+      "sha256": "5ea1b060568da7b657325019351f13a31cd6952493733895748cf8739381e6d2",
+      "src": "./audio/generated/en/am_puck/e0eb3546d805556c21d21536decb5faf.m4a"
+    },
+    {
+      "offset": 15.218874999999999,
+      "end": 19.314875,
+      "sha256": "8f55942245b51c0530c03346b89402f55eeb005282da25f57943d68725a8f0b9",
+      "src": "./audio/generated/en/am_puck/d9a53869a52f4c0b34e7b7c2dbd49613.m4a"
+    },
+    {
+      "offset": 19.914875000000002,
+      "end": 22.261562500000004,
+      "sha256": "ea08da633cf25c26a5ecebb8e1d1ddb28acab820f3dcf0f41b681ce43d75215b",
+      "src": "./audio/generated/en/af_heart/f6fc858b5de44d42952663144d64db7f.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9333720803260803
+    },
+    {
+      "word": " contract",
+      "start": 0.54,
+      "end": 0.94,
+      "probability": 0.9586790204048157
+    },
+    {
+      "word": " has",
+      "start": 0.94,
+      "end": 1.54,
+      "probability": 0.9647873640060425
+    },
+    {
+      "word": " a",
+      "start": 1.54,
+      "end": 1.66,
+      "probability": 0.9949943423271179
+    },
+    {
+      "word": " table",
+      "start": 1.66,
+      "end": 1.86,
+      "probability": 0.9945329427719116
+    },
+    {
+      "word": " of",
+      "start": 1.86,
+      "end": 2.02,
+      "probability": 0.9990460276603699
+    },
+    {
+      "word": " contents",
+      "start": 2.02,
+      "end": 2.46,
+      "probability": 0.9915637969970703
+    },
+    {
+      "word": " at",
+      "start": 2.46,
+      "end": 2.68,
+      "probability": 0.987562894821167
+    },
+    {
+      "word": " the",
+      "start": 2.68,
+      "end": 2.76,
+      "probability": 0.9990147352218628
+    },
+    {
+      "word": " front.",
+      "start": 2.76,
+      "end": 3.02,
+      "probability": 0.9976044297218323
+    },
+    {
+      "word": " Shouldn't",
+      "start": 3.8,
+      "end": 4.26,
+      "probability": 0.9662608802318573
+    },
+    {
+      "word": " the",
+      "start": 4.26,
+      "end": 4.36,
+      "probability": 0.9959335923194885
+    },
+    {
+      "word": " rejected",
+      "start": 4.36,
+      "end": 4.68,
+      "probability": 0.9894754886627197
+    },
+    {
+      "word": " samples",
+      "start": 4.68,
+      "end": 5.14,
+      "probability": 0.9970012307167053
+    },
+    {
+      "word": " be",
+      "start": 5.14,
+      "end": 5.48,
+      "probability": 0.9958143830299377
+    },
+    {
+      "word": " destroyed",
+      "start": 5.48,
+      "end": 5.86,
+      "probability": 0.9985809326171875
+    },
+    {
+      "word": " immediately?",
+      "start": 5.86,
+      "end": 6.42,
+      "probability": 0.9971966743469238
+    },
+    {
+      "word": " The",
+      "start": 7.32,
+      "end": 7.56,
+      "probability": 0.9746456146240234
+    },
+    {
+      "word": " appeal",
+      "start": 7.56,
+      "end": 7.78,
+      "probability": 0.9577099084854126
+    },
+    {
+      "word": " period",
+      "start": 7.78,
+      "end": 8.1,
+      "probability": 0.9984707236289978
+    },
+    {
+      "word": " hasn't",
+      "start": 8.1,
+      "end": 8.52,
+      "probability": 0.9904043078422546
+    },
+    {
+      "word": " ended.",
+      "start": 8.52,
+      "end": 8.78,
+      "probability": 0.9980219602584839
+    },
+    {
+      "word": " The",
+      "start": 9.78,
+      "end": 9.92,
+      "probability": 0.9142605066299438
+    },
+    {
+      "word": " sample",
+      "start": 9.92,
+      "end": 10.12,
+      "probability": 0.9961756467819214
+    },
+    {
+      "word": " colors",
+      "start": 10.12,
+      "end": 10.48,
+      "probability": 0.9151105284690857
+    },
+    {
+      "word": " are",
+      "start": 10.48,
+      "end": 10.68,
+      "probability": 0.9982872605323792
+    },
+    {
+      "word": " numbered",
+      "start": 10.68,
+      "end": 11.0,
+      "probability": 0.9986585378646851
+    },
+    {
+      "word": " in",
+      "start": 11.0,
+      "end": 11.18,
+      "probability": 0.9961633682250977
+    },
+    {
+      "word": " pencil.",
+      "start": 11.18,
+      "end": 11.54,
+      "probability": 0.9876788258552551
+    },
+    {
+      "word": " The",
+      "start": 12.62,
+      "end": 12.76,
+      "probability": 0.9817339181900024
+    },
+    {
+      "word": " rejected",
+      "start": 12.76,
+      "end": 13.08,
+      "probability": 0.9966237545013428
+    },
+    {
+      "word": " parcel",
+      "start": 13.08,
+      "end": 13.48,
+      "probability": 0.9895008206367493
+    },
+    {
+      "word": " came",
+      "start": 13.48,
+      "end": 13.76,
+      "probability": 0.9986924529075623
+    },
+    {
+      "word": " by",
+      "start": 13.76,
+      "end": 13.96,
+      "probability": 0.997586727142334
+    },
+    {
+      "word": " road.",
+      "start": 13.96,
+      "end": 14.26,
+      "probability": 0.9798382520675659
+    },
+    {
+      "word": " Will",
+      "start": 15.22,
+      "end": 15.4,
+      "probability": 0.979453980922699
+    },
+    {
+      "word": " a",
+      "start": 15.4,
+      "end": 15.5,
+      "probability": 0.9931936860084534
+    },
+    {
+      "word": " photo",
+      "start": 15.5,
+      "end": 15.74,
+      "probability": 0.9984148740768433
+    },
+    {
+      "word": " of",
+      "start": 15.74,
+      "end": 15.96,
+      "probability": 0.993371844291687
+    },
+    {
+      "word": " each",
+      "start": 15.96,
+      "end": 16.16,
+      "probability": 0.9969670176506042
+    },
+    {
+      "word": " side",
+      "start": 16.16,
+      "end": 16.44,
+      "probability": 0.9886462688446045
+    },
+    {
+      "word": " of",
+      "start": 16.44,
+      "end": 16.54,
+      "probability": 0.9973775148391724
+    },
+    {
+      "word": " the",
+      "start": 16.54,
+      "end": 16.64,
+      "probability": 0.9974790215492249
+    },
+    {
+      "word": " sign",
+      "start": 16.64,
+      "end": 16.86,
+      "probability": 0.694284200668335
+    },
+    {
+      "word": " form",
+      "start": 16.86,
+      "end": 17.18,
+      "probability": 0.9248839020729065
+    },
+    {
+      "word": " satisfy",
+      "start": 17.18,
+      "end": 17.68,
+      "probability": 0.9959562420845032
+    },
+    {
+      "word": " the",
+      "start": 17.68,
+      "end": 17.98,
+      "probability": 0.9985737800598145
+    },
+    {
+      "word": " archive",
+      "start": 17.98,
+      "end": 18.24,
+      "probability": 0.908861517906189
+    },
+    {
+      "word": " rules?",
+      "start": 18.24,
+      "end": 18.68,
+      "probability": 0.9896532893180847
+    },
+    {
+      "word": " The",
+      "start": 19.64,
+      "end": 20.06,
+      "probability": 0.9926403164863586
+    },
+    {
+      "word": " photograph",
+      "start": 20.06,
+      "end": 20.4,
+      "probability": 0.9885656237602234
+    },
+    {
+      "word": " shows",
+      "start": 20.4,
+      "end": 20.8,
+      "probability": 0.9976903200149536
+    },
+    {
+      "word": " a",
+      "start": 20.8,
+      "end": 20.98,
+      "probability": 0.9960914254188538
+    },
+    {
+      "word": " well",
+      "start": 20.98,
+      "end": 21.24,
+      "probability": 0.992964506149292
+    },
+    {
+      "word": "-lit",
+      "start": 21.24,
+      "end": 21.44,
+      "probability": 0.9260594546794891
+    },
+    {
+      "word": " meeting",
+      "start": 21.44,
+      "end": 21.72,
+      "probability": 0.9978546500205994
+    },
+    {
+      "word": " room.",
+      "start": 21.72,
+      "end": 22.04,
+      "probability": 0.9810132384300232
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.02,
+      "text": " The contract has a table of contents at the front.",
+      "avgLogprob": -0.2444048153191078,
+      "noSpeechProb": 0.008028846234083176
+    },
+    {
+      "start": 3.8,
+      "end": 6.42,
+      "text": " Shouldn't the rejected samples be destroyed immediately?",
+      "avgLogprob": -0.2444048153191078,
+      "noSpeechProb": 0.008028846234083176
+    },
+    {
+      "start": 7.32,
+      "end": 8.78,
+      "text": " The appeal period hasn't ended.",
+      "avgLogprob": -0.2444048153191078,
+      "noSpeechProb": 0.008028846234083176
+    },
+    {
+      "start": 9.78,
+      "end": 11.54,
+      "text": " The sample colors are numbered in pencil.",
+      "avgLogprob": -0.2444048153191078,
+      "noSpeechProb": 0.008028846234083176
+    },
+    {
+      "start": 12.62,
+      "end": 14.26,
+      "text": " The rejected parcel came by road.",
+      "avgLogprob": -0.2444048153191078,
+      "noSpeechProb": 0.008028846234083176
+    },
+    {
+      "start": 15.22,
+      "end": 18.68,
+      "text": " Will a photo of each side of the sign form satisfy the archive rules?",
+      "avgLogprob": -0.2444048153191078,
+      "noSpeechProb": 0.008028846234083176
+    },
+    {
+      "start": 19.64,
+      "end": 22.04,
+      "text": " The photograph shows a well-lit meeting room.",
+      "avgLogprob": -0.2444048153191078,
+      "noSpeechProb": 0.008028846234083176
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "version": 1,
+  "id": "c9f4d8585f6dc85c771211f99b736b34ecb2d940576f3694e2059e970894d242",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.829375,
+  "elapsedSeconds": 4.784,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.605375,
+      "sha256": "7a20eb0ae41a5699b4915b0be3ae699a9dda80a0dc5cab7b2a494ae07d32dbb3",
+      "src": "./audio/generated/en/af_bella/1147db69839ee84c8c69b43f586411ff.m4a"
+    },
+    {
+      "offset": 6.205375,
+      "end": 7.229375,
+      "sha256": "1018d53a72fc5f9c9fb8a4b9de0f388f956b8bc1a077887144d22f76d983e1fb",
+      "src": "./audio/generated/en/am_puck/fa28be258583f46ed5f0bb2dcd39a5c9.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9231818318367004
+    },
+    {
+      "word": " case",
+      "start": 0.54,
+      "end": 0.76,
+      "probability": 0.9970333576202393
+    },
+    {
+      "word": " must",
+      "start": 0.76,
+      "end": 1.0,
+      "probability": 0.9973790645599365
+    },
+    {
+      "word": " be",
+      "start": 1.0,
+      "end": 1.22,
+      "probability": 0.9994810223579407
+    },
+    {
+      "word": " airtight",
+      "start": 1.22,
+      "end": 1.62,
+      "probability": 0.9471119940280914
+    },
+    {
+      "word": " because",
+      "start": 1.62,
+      "end": 2.24,
+      "probability": 0.7850151062011719
+    },
+    {
+      "word": " even",
+      "start": 2.24,
+      "end": 2.52,
+      "probability": 0.993831992149353
+    },
+    {
+      "word": " a",
+      "start": 2.52,
+      "end": 2.68,
+      "probability": 0.9956128597259521
+    },
+    {
+      "word": " small",
+      "start": 2.68,
+      "end": 2.98,
+      "probability": 0.999263346195221
+    },
+    {
+      "word": " exchange",
+      "start": 2.98,
+      "end": 3.38,
+      "probability": 0.9947432279586792
+    },
+    {
+      "word": " of",
+      "start": 3.38,
+      "end": 3.64,
+      "probability": 0.9991126656532288
+    },
+    {
+      "word": " air",
+      "start": 3.64,
+      "end": 3.9,
+      "probability": 0.9959010481834412
+    },
+    {
+      "word": " would",
+      "start": 3.9,
+      "end": 4.1,
+      "probability": 0.9907060265541077
+    },
+    {
+      "word": " spoil",
+      "start": 4.1,
+      "end": 4.46,
+      "probability": 0.9972315430641174
+    },
+    {
+      "word": " the",
+      "start": 4.46,
+      "end": 4.66,
+      "probability": 0.9986857771873474
+    },
+    {
+      "word": " test",
+      "start": 4.66,
+      "end": 4.9,
+      "probability": 0.9958218336105347
+    },
+    {
+      "word": " sample.",
+      "start": 4.9,
+      "end": 5.4,
+      "probability": 0.9953975081443787
+    },
+    {
+      "word": " Rechargeable.",
+      "start": 6.280000000000001,
+      "end": 6.86,
+      "probability": 0.7991767923037211
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.4,
+      "text": " The case must be airtight because even a small exchange of air would spoil the test sample.",
+      "avgLogprob": -0.32640487381390165,
+      "noSpeechProb": 0.0025621624663472176
+    },
+    {
+      "start": 6.280000000000001,
+      "end": 6.86,
+      "text": " Rechargeable.",
+      "avgLogprob": -0.32640487381390165,
+      "noSpeechProb": 0.0025621624663472176
+    }
+  ]
+}

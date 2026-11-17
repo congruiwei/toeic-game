@@ -1,0 +1,150 @@
+{
+  "version": 1,
+  "id": "48b9201a115902e7f932211d52943f2a67b8634c65512bfca0421e863d8b18a9",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.314687499999999,
+  "elapsedSeconds": 3.45,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.4666875,
+      "sha256": "2110d97944525b5f4a5c02adb997ddcd4732040ea5ce5ad84966bc6c32a8cf07",
+      "src": "./audio/generated/ja/jf_alpha/827aef3950c3aae655c74716410574cd.m4a"
+    },
+    {
+      "offset": 2.0666875,
+      "end": 3.4746875,
+      "sha256": "0a9b6d079aa0af572512eabbc714d56e7b3686a4dcbf9350f9f11b78ea6ac76a",
+      "src": "./audio/generated/ja/jf_alpha/f8508209dcb1aebc97a4350294a8dcc9.m4a"
+    },
+    {
+      "offset": 4.0746875,
+      "end": 4.714687499999999,
+      "sha256": "699e252b86fa33186572ec17c247be47ec4ab093ab0a6519368c909ebe328c4d",
+      "src": "./audio/generated/ja/jf_alpha/8518751c54b810c807953d0aa370a947.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "鳥",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.6865912973880768
+    },
+    {
+      "word": "に",
+      "start": 0.68,
+      "end": 0.88,
+      "probability": 0.8622623682022095
+    },
+    {
+      "word": "行",
+      "start": 0.88,
+      "end": 1.06,
+      "probability": 0.8308284878730774
+    },
+    {
+      "word": "く。",
+      "start": 1.06,
+      "end": 1.52,
+      "probability": 0.9970990419387817
+    },
+    {
+      "word": "不",
+      "start": 2.0,
+      "end": 2.3,
+      "probability": 0.5187756419181824
+    },
+    {
+      "word": "具",
+      "start": 2.3,
+      "end": 2.44,
+      "probability": 0.9863911867141724
+    },
+    {
+      "word": "合",
+      "start": 2.44,
+      "end": 2.6,
+      "probability": 0.9885802865028381
+    },
+    {
+      "word": "を",
+      "start": 2.6,
+      "end": 2.78,
+      "probability": 0.9812442660331726
+    },
+    {
+      "word": "調",
+      "start": 2.78,
+      "end": 2.94,
+      "probability": 0.9886903762817383
+    },
+    {
+      "word": "べ",
+      "start": 2.94,
+      "end": 3.12,
+      "probability": 0.9997056126594543
+    },
+    {
+      "word": "る。",
+      "start": 3.12,
+      "end": 3.36,
+      "probability": 0.9991346001625061
+    },
+    {
+      "word": "ガ",
+      "start": 3.94,
+      "end": 4.28,
+      "probability": 0.3987715542316437
+    },
+    {
+      "word": "エ",
+      "start": 4.28,
+      "end": 4.38,
+      "probability": 0.9633238911628723
+    },
+    {
+      "word": "ス",
+      "start": 4.38,
+      "end": 4.54,
+      "probability": 0.9970465302467346
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.36,
+      "text": "鳥に行く。不具合を調べる。",
+      "avgLogprob": -0.5680033320730383,
+      "noSpeechProb": 0.03541535139083862
+    },
+    {
+      "start": 3.94,
+      "end": 4.54,
+      "text": "ガエス",
+      "avgLogprob": -0.5680033320730383,
+      "noSpeechProb": 0.03541535139083862
+    }
+  ]
+}

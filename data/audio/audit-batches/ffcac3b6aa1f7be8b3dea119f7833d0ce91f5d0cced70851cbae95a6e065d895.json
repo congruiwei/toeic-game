@@ -1,0 +1,439 @@
+{
+  "version": 1,
+  "id": "ffcac3b6aa1f7be8b3dea119f7833d0ce91f5d0cced70851cbae95a6e065d895",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.053625000000004,
+  "elapsedSeconds": 3.93,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.192,
+      "sha256": "a4b71a39f84af08665bdcb2342e5b63ae631a2b17fbaceb396df5b8082911ac4",
+      "src": "./audio/generated/en/am_puck/291062086fda4f5ddeddac6b8601e3ca.m4a"
+    },
+    {
+      "offset": 2.7920000000000003,
+      "end": 3.4320000000000004,
+      "sha256": "9729dd593d157a64bd48139cd75392e0922ef8721da2c094259ebe347ef152cc",
+      "src": "./audio/generated/en/af_heart/f53d8fe2b20562b31933451648f44222.m4a"
+    },
+    {
+      "offset": 4.032,
+      "end": 4.629375,
+      "sha256": "074c3732d5b0f18a3014f00c105c0a01c4b39f3fe14a2a360f7e55703b939666",
+      "src": "./audio/generated/en/af_heart/566150336d9ba73fb0e54e097ba9bbfc.m4a"
+    },
+    {
+      "offset": 5.229374999999999,
+      "end": 5.869374999999999,
+      "sha256": "1e6489dc4ffdaff010f055859921532638b82ce46960872cce823fc51684d2db",
+      "src": "./audio/generated/en/af_heart/b2959672e3845a66e37415b5486d9897.m4a"
+    },
+    {
+      "offset": 6.4693749999999985,
+      "end": 8.176062499999999,
+      "sha256": "263c44e11b1cd54e3661791de64531718359c00e167e557c11c0f45905ee31c1",
+      "src": "./audio/generated/en/am_puck/57e2ff02da6d206f59f4feeae38ca2f6.m4a"
+    },
+    {
+      "offset": 8.776062499999998,
+      "end": 9.373437499999998,
+      "sha256": "83815f1bf784820aa18625e6b99eeb0b225bea2474644021b16d1a12fa9e9acb",
+      "src": "./audio/generated/en/af_bella/397402ec2b4b7cba2211158a9923b7e6.m4a"
+    },
+    {
+      "offset": 9.973437499999998,
+      "end": 10.528124999999998,
+      "sha256": "daf93cfcb49e1005cd18a9d90669ccb0dfd625b40dd0d7bfc8d7a57d31c123a6",
+      "src": "./audio/generated/en/af_bella/ae9a207e7948dadade678c8ad7d018f3.m4a"
+    },
+    {
+      "offset": 11.128124999999997,
+      "end": 11.682812499999997,
+      "sha256": "6edb02e679865bed6cec69582079f8b641a1349f8b64d90e974b1c2b1cb94778",
+      "src": "./audio/generated/en/af_bella/feff46deb76850b487dda5439b911613.m4a"
+    },
+    {
+      "offset": 12.282812499999997,
+      "end": 14.074812499999997,
+      "sha256": "4d83fe741969f0196ac3e0cc6378c94f20ea7a28db19ed848f84a33288e75db7",
+      "src": "./audio/generated/en/af_heart/c11bb96838ed34e3174b84f17008fd16.m4a"
+    },
+    {
+      "offset": 14.674812499999996,
+      "end": 15.314812499999997,
+      "sha256": "e37c15ab57adf80bf4bef21abd41eab532e190e34eeac3353a202f77d6eb1c60",
+      "src": "./audio/generated/en/am_puck/f6769e8fdc4cab902fdc1e859fa6f559.m4a"
+    },
+    {
+      "offset": 15.914812499999996,
+      "end": 16.597499999999997,
+      "sha256": "21c2ec69e7bb67dca2887e4b0cb07e4f7f14a97c5cf21005058e9d11b8b920e3",
+      "src": "./audio/generated/en/am_puck/ed26ac1cfcbda85e83ea03fab40292f2.m4a"
+    },
+    {
+      "offset": 17.197499999999998,
+      "end": 17.794874999999998,
+      "sha256": "b357814b8483cc9280d94bafeca709992f9d7be1ddbbebb88227cd90b79be0fe",
+      "src": "./audio/generated/en/am_puck/804e571e655290192e17d0d6551bb20a.m4a"
+    },
+    {
+      "offset": 18.394875,
+      "end": 19.9735625,
+      "sha256": "bd3781222892cc1dc1abdb033eb75b5267f5ed0125b60df4fc6bdac01af968f6",
+      "src": "./audio/generated/en/af_bella/aaa21afcea2eda720b7202284a3e49fe.m4a"
+    },
+    {
+      "offset": 20.5735625,
+      "end": 21.12825,
+      "sha256": "46c3e9595f892632bf972eed2de0401e4260debca477995767f08bc98e1c5a53",
+      "src": "./audio/generated/en/am_puck/5456292f03d39557233e8ec96ed9305a.m4a"
+    },
+    {
+      "offset": 21.728250000000003,
+      "end": 22.453625000000002,
+      "sha256": "0c198cfd54c30ee7c47d50b845f6d28f18a3adfc384872d96ea49163345232a1",
+      "src": "./audio/generated/en/am_puck/882c031e74ae03c0a575417978a0727c.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Where",
+      "start": 0.0,
+      "end": 0.58,
+      "probability": 0.8309682607650757
+    },
+    {
+      "word": " do",
+      "start": 0.58,
+      "end": 0.66,
+      "probability": 0.9760066270828247
+    },
+    {
+      "word": " we",
+      "start": 0.66,
+      "end": 0.78,
+      "probability": 0.9963381290435791
+    },
+    {
+      "word": " keep",
+      "start": 0.78,
+      "end": 0.94,
+      "probability": 0.9971750974655151
+    },
+    {
+      "word": " the",
+      "start": 0.94,
+      "end": 1.1,
+      "probability": 0.9918121099472046
+    },
+    {
+      "word": " visitor",
+      "start": 1.1,
+      "end": 1.32,
+      "probability": 0.9719372987747192
+    },
+    {
+      "word": " badges?",
+      "start": 1.32,
+      "end": 1.66,
+      "probability": 0.9962868690490723
+    },
+    {
+      "word": " When?",
+      "start": 2.86,
+      "end": 3.1,
+      "probability": 0.7830756902694702
+    },
+    {
+      "word": " Where?",
+      "start": 3.56,
+      "end": 4.28,
+      "probability": 0.9722532629966736
+    },
+    {
+      "word": " Who?",
+      "start": 5.08,
+      "end": 5.5,
+      "probability": 0.9605056643486023
+    },
+    {
+      "word": " When",
+      "start": 5.92,
+      "end": 6.66,
+      "probability": 0.9832209348678589
+    },
+    {
+      "word": " does",
+      "start": 6.66,
+      "end": 6.78,
+      "probability": 0.9947273135185242
+    },
+    {
+      "word": " the",
+      "start": 6.78,
+      "end": 6.92,
+      "probability": 0.9958348274230957
+    },
+    {
+      "word": " first",
+      "start": 6.92,
+      "end": 7.1,
+      "probability": 0.9806228876113892
+    },
+    {
+      "word": " shuttle",
+      "start": 7.1,
+      "end": 7.4,
+      "probability": 0.9781136512756348
+    },
+    {
+      "word": " leave?",
+      "start": 7.4,
+      "end": 7.72,
+      "probability": 0.9966262578964233
+    },
+    {
+      "word": " When?",
+      "start": 8.58,
+      "end": 9.08,
+      "probability": 0.981977105140686
+    },
+    {
+      "word": " Where?",
+      "start": 9.74,
+      "end": 10.24,
+      "probability": 0.9946179986000061
+    },
+    {
+      "word": " Why?",
+      "start": 10.98,
+      "end": 11.4,
+      "probability": 0.99835604429245
+    },
+    {
+      "word": " Who",
+      "start": 12.12,
+      "end": 12.5,
+      "probability": 0.9940506815910339
+    },
+    {
+      "word": " ordered",
+      "start": 12.5,
+      "end": 12.78,
+      "probability": 0.9932568073272705
+    },
+    {
+      "word": " the",
+      "start": 12.78,
+      "end": 12.98,
+      "probability": 0.9984840750694275
+    },
+    {
+      "word": " extra",
+      "start": 12.98,
+      "end": 13.32,
+      "probability": 0.9923337697982788
+    },
+    {
+      "word": " folders?",
+      "start": 13.32,
+      "end": 13.68,
+      "probability": 0.9961268305778503
+    },
+    {
+      "word": " How?",
+      "start": 14.72,
+      "end": 15.02,
+      "probability": 0.936195433139801
+    },
+    {
+      "word": " Why?",
+      "start": 15.74,
+      "end": 16.24,
+      "probability": 0.9916776418685913
+    },
+    {
+      "word": " Who?",
+      "start": 17.12,
+      "end": 17.48,
+      "probability": 0.9845138192176819
+    },
+    {
+      "word": " Why",
+      "start": 18.16,
+      "end": 18.62,
+      "probability": 0.995013415813446
+    },
+    {
+      "word": " is",
+      "start": 18.62,
+      "end": 18.76,
+      "probability": 0.997016429901123
+    },
+    {
+      "word": " the",
+      "start": 18.76,
+      "end": 18.9,
+      "probability": 0.9988136291503906
+    },
+    {
+      "word": " lobby",
+      "start": 18.9,
+      "end": 19.1,
+      "probability": 0.9351961016654968
+    },
+    {
+      "word": " door",
+      "start": 19.1,
+      "end": 19.34,
+      "probability": 0.9942042231559753
+    },
+    {
+      "word": " locked?",
+      "start": 19.34,
+      "end": 19.72,
+      "probability": 0.9982286095619202
+    },
+    {
+      "word": " Where?",
+      "start": 20.62,
+      "end": 20.84,
+      "probability": 0.9344467520713806
+    },
+    {
+      "word": " Which?",
+      "start": 21.64,
+      "end": 22.04,
+      "probability": 0.6640220284461975
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.66,
+      "text": " Where do we keep the visitor badges?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 2.86,
+      "end": 3.1,
+      "text": " When?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 3.56,
+      "end": 4.28,
+      "text": " Where?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 5.08,
+      "end": 5.5,
+      "text": " Who?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 5.92,
+      "end": 7.72,
+      "text": " When does the first shuttle leave?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 8.58,
+      "end": 9.08,
+      "text": " When?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 9.74,
+      "end": 10.24,
+      "text": " Where?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 10.98,
+      "end": 11.4,
+      "text": " Why?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 12.12,
+      "end": 13.68,
+      "text": " Who ordered the extra folders?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 14.72,
+      "end": 15.02,
+      "text": " How?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 15.74,
+      "end": 16.24,
+      "text": " Why?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 17.12,
+      "end": 17.48,
+      "text": " Who?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 18.16,
+      "end": 19.72,
+      "text": " Why is the lobby door locked?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 20.62,
+      "end": 20.84,
+      "text": " Where?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    },
+    {
+      "start": 21.64,
+      "end": 22.04,
+      "text": " Which?",
+      "avgLogprob": -0.24220593181657202,
+      "noSpeechProb": 0.1082329973578453
+    }
+  ]
+}

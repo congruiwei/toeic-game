@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "id": "7f10eb0ab4f8eddf15131bb6eb82663a44079ba4b0c431a6a27f8be2348fff71",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 1.8533750000000002,
+  "elapsedSeconds": 3.027,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.2533750000000001,
+      "sha256": "7cd90d3e28f555be3f95dd6d85d52fa988c8f546eb894d2a436f6e9922d98b67",
+      "src": "./audio/generated/ja/jf_alpha/9ff3dd966054d72f7c76979147c7e901.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "知",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.840882420539856
+    },
+    {
+      "word": "ら",
+      "start": 0.64,
+      "end": 0.82,
+      "probability": 0.9995412826538086
+    },
+    {
+      "word": "せ",
+      "start": 0.82,
+      "end": 0.94,
+      "probability": 0.998984158039093
+    },
+    {
+      "word": "る",
+      "start": 0.94,
+      "end": 1.08,
+      "probability": 0.9992722868919373
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.08,
+      "text": "知らせる",
+      "avgLogprob": -0.434870788029262,
+      "noSpeechProb": 0.1380019634962082
+    }
+  ]
+}

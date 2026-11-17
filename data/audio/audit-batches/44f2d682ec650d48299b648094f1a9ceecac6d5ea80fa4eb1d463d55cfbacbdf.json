@@ -1,0 +1,441 @@
+{
+  "version": 1,
+  "id": "44f2d682ec650d48299b648094f1a9ceecac6d5ea80fa4eb1d463d55cfbacbdf",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.869500000000002,
+  "elapsedSeconds": 4.231,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.32,
+      "sha256": "d00facbef9db3645545195328c2eb19b481941b31b943cf5b52d58b15fb41fc4",
+      "src": "./audio/generated/en/af_bella/1e2b94eb4fec9f7061b0c0522020b6e7.m4a"
+    },
+    {
+      "offset": 2.92,
+      "end": 4.6266875,
+      "sha256": "7f8a4ef5ebddbae1b3790038ce7587f72911b622607f16b5cc25cdcb7fd29807",
+      "src": "./audio/generated/en/af_heart/68d18d275d2d9c2ee981193e43c6094e.m4a"
+    },
+    {
+      "offset": 5.2266875,
+      "end": 6.5066875,
+      "sha256": "1752a91a3645eea5ef38ba6ac7ada5d6dda4900be6b3172b83ad4780a4d64a8b",
+      "src": "./audio/generated/en/am_puck/baa68e047d4e3dd209a4926b6e491902.m4a"
+    },
+    {
+      "offset": 7.1066875,
+      "end": 8.4720625,
+      "sha256": "f328dda6c3f18f09ac9bb3af7872a856c0efe8a68bdedc0c5cbcc888dfa6f872",
+      "src": "./audio/generated/en/am_puck/920e590281a59ba7faf64e47eaaf7b55.m4a"
+    },
+    {
+      "offset": 9.0720625,
+      "end": 10.480062499999999,
+      "sha256": "9965ff19496446896a0a5819cf66c70bf2535ec56dc9de67980160cbf5ae1baf",
+      "src": "./audio/generated/en/am_puck/73f1dfe4369f7c1a4c58a323aa62f464.m4a"
+    },
+    {
+      "offset": 11.080062499999999,
+      "end": 12.658749999999998,
+      "sha256": "172e0a1f46391c9f17990c31c42dad4dd9fd4db02fe0e9bd78868859427954cf",
+      "src": "./audio/generated/en/af_bella/f144067b7c14ca307a64610527dad63d.m4a"
+    },
+    {
+      "offset": 13.258749999999997,
+      "end": 15.221437499999997,
+      "sha256": "6aae107ec46db31a498267bf221f070e17c86e96e7ea3d368faa87f8cb6435ee",
+      "src": "./audio/generated/en/am_puck/309a6283437852c6275ceb1013ad5015.m4a"
+    },
+    {
+      "offset": 15.821437499999996,
+      "end": 17.442812499999995,
+      "sha256": "3ed253232d854900547a5c9fc5d1c918cf563e7c98235eb754af928fc845978c",
+      "src": "./audio/generated/en/am_puck/4eccd8e7a0873c07fc9666c7dde1873b.m4a"
+    },
+    {
+      "offset": 18.042812499999997,
+      "end": 20.0908125,
+      "sha256": "43ceddd73473d41de3064f221b66b3e65866bf2663b38f55e681a47b4437e812",
+      "src": "./audio/generated/en/am_puck/481987e0c9496d75a2100993b67524bf.m4a"
+    },
+    {
+      "offset": 20.6908125,
+      "end": 22.2695,
+      "sha256": "50e6d1d01749f690bfb8e231cf8c992b1437e06ee43644071e069a5dace63ce2",
+      "src": "./audio/generated/en/am_puck/8195e32b8264b17f1b55f6aebebd7ab5.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Louis",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.2836543321609497
+    },
+    {
+      "word": " has",
+      "start": 0.66,
+      "end": 0.9,
+      "probability": 0.9792288541793823
+    },
+    {
+      "word": " the",
+      "start": 0.9,
+      "end": 1.08,
+      "probability": 0.9836217761039734
+    },
+    {
+      "word": " front",
+      "start": 1.08,
+      "end": 1.24,
+      "probability": 0.9950339794158936
+    },
+    {
+      "word": " desk",
+      "start": 1.24,
+      "end": 1.54,
+      "probability": 0.9976237416267395
+    },
+    {
+      "word": " till",
+      "start": 1.54,
+      "end": 1.74,
+      "probability": 0.8045432567596436
+    },
+    {
+      "word": " noon.",
+      "start": 1.74,
+      "end": 1.98,
+      "probability": 0.9931562542915344
+    },
+    {
+      "word": " How",
+      "start": 2.9,
+      "end": 3.16,
+      "probability": 0.9822476506233215
+    },
+    {
+      "word": " did",
+      "start": 3.16,
+      "end": 3.32,
+      "probability": 0.9930955767631531
+    },
+    {
+      "word": " you",
+      "start": 3.32,
+      "end": 3.46,
+      "probability": 0.9988178610801697
+    },
+    {
+      "word": " send",
+      "start": 3.46,
+      "end": 3.68,
+      "probability": 0.9875005483627319
+    },
+    {
+      "word": " the",
+      "start": 3.68,
+      "end": 3.8,
+      "probability": 0.9984108209609985
+    },
+    {
+      "word": " contract?",
+      "start": 3.8,
+      "end": 4.3,
+      "probability": 0.9940570592880249
+    },
+    {
+      "word": " By",
+      "start": 5.18,
+      "end": 5.4,
+      "probability": 0.9381104707717896
+    },
+    {
+      "word": " overnight",
+      "start": 5.4,
+      "end": 5.78,
+      "probability": 0.9849393367767334
+    },
+    {
+      "word": " mail.",
+      "start": 5.78,
+      "end": 6.1,
+      "probability": 0.9943062663078308
+    },
+    {
+      "word": " It",
+      "start": 7.14,
+      "end": 7.28,
+      "probability": 0.8314504027366638
+    },
+    {
+      "word": " lasts",
+      "start": 7.28,
+      "end": 7.48,
+      "probability": 0.7158721089363098
+    },
+    {
+      "word": " six",
+      "start": 7.48,
+      "end": 7.7,
+      "probability": 0.6907311677932739
+    },
+    {
+      "word": " months.",
+      "start": 7.7,
+      "end": 8.08,
+      "probability": 0.9898176789283752
+    },
+    {
+      "word": " To",
+      "start": 8.98,
+      "end": 9.22,
+      "probability": 0.9620802998542786
+    },
+    {
+      "word": " the",
+      "start": 9.22,
+      "end": 9.32,
+      "probability": 0.9982898831367493
+    },
+    {
+      "word": " office",
+      "start": 9.32,
+      "end": 9.58,
+      "probability": 0.9833518862724304
+    },
+    {
+      "word": " and",
+      "start": 9.58,
+      "end": 9.8,
+      "probability": 0.9343808889389038
+    },
+    {
+      "word": " leads.",
+      "start": 9.8,
+      "end": 10.08,
+      "probability": 0.9802113771438599
+    },
+    {
+      "word": " Would",
+      "start": 10.98,
+      "end": 11.26,
+      "probability": 0.986434817314148
+    },
+    {
+      "word": " you",
+      "start": 11.26,
+      "end": 11.38,
+      "probability": 0.9987589120864868
+    },
+    {
+      "word": " like",
+      "start": 11.38,
+      "end": 11.56,
+      "probability": 0.998563826084137
+    },
+    {
+      "word": " a",
+      "start": 11.56,
+      "end": 11.68,
+      "probability": 0.9987209439277649
+    },
+    {
+      "word": " receipt",
+      "start": 11.68,
+      "end": 11.96,
+      "probability": 0.9990965127944946
+    },
+    {
+      "word": " with",
+      "start": 11.96,
+      "end": 12.16,
+      "probability": 0.9948025941848755
+    },
+    {
+      "word": " that?",
+      "start": 12.16,
+      "end": 12.4,
+      "probability": 0.999161958694458
+    },
+    {
+      "word": " The",
+      "start": 13.18,
+      "end": 13.42,
+      "probability": 0.9289493560791016
+    },
+    {
+      "word": " purchase",
+      "start": 13.42,
+      "end": 13.7,
+      "probability": 0.9964138865470886
+    },
+    {
+      "word": " came",
+      "start": 13.7,
+      "end": 14.0,
+      "probability": 0.9976199269294739
+    },
+    {
+      "word": " to",
+      "start": 14.0,
+      "end": 14.12,
+      "probability": 0.9947690367698669
+    },
+    {
+      "word": " $30.",
+      "start": 14.12,
+      "end": 14.36,
+      "probability": 0.9207546412944794
+    },
+    {
+      "word": " Yes,",
+      "start": 15.5,
+      "end": 16.02,
+      "probability": 0.918167233467102
+    },
+    {
+      "word": " for",
+      "start": 16.14,
+      "end": 16.2,
+      "probability": 0.9073704481124878
+    },
+    {
+      "word": " my",
+      "start": 16.2,
+      "end": 16.32,
+      "probability": 0.9989718198776245
+    },
+    {
+      "word": " expense",
+      "start": 16.32,
+      "end": 16.6,
+      "probability": 0.992408037185669
+    },
+    {
+      "word": " report.",
+      "start": 16.6,
+      "end": 17.0,
+      "probability": 0.9943445920944214
+    },
+    {
+      "word": " The",
+      "start": 18.02,
+      "end": 18.2,
+      "probability": 0.9934533834457397
+    },
+    {
+      "word": " last",
+      "start": 18.2,
+      "end": 18.4,
+      "probability": 0.9984221458435059
+    },
+    {
+      "word": " parcel",
+      "start": 18.4,
+      "end": 18.72,
+      "probability": 0.998961329460144
+    },
+    {
+      "word": " arrived",
+      "start": 18.72,
+      "end": 19.08,
+      "probability": 0.9978995323181152
+    },
+    {
+      "word": " yesterday.",
+      "start": 19.08,
+      "end": 19.64,
+      "probability": 0.9987761378288269
+    },
+    {
+      "word": " Has",
+      "start": 20.52,
+      "end": 20.9,
+      "probability": 0.9915321469306946
+    },
+    {
+      "word": " the",
+      "start": 20.9,
+      "end": 21.04,
+      "probability": 0.9958515167236328
+    },
+    {
+      "word": " courier",
+      "start": 21.04,
+      "end": 21.32,
+      "probability": 0.9824305176734924
+    },
+    {
+      "word": " arrived",
+      "start": 21.32,
+      "end": 21.64,
+      "probability": 0.998504638671875
+    },
+    {
+      "word": " yet?",
+      "start": 21.64,
+      "end": 21.88,
+      "probability": 0.998268723487854
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.3,
+      "text": " Louis has the front desk till noon. How did you send the contract?",
+      "avgLogprob": -0.15027442162758425,
+      "noSpeechProb": 0.0348694734275341
+    },
+    {
+      "start": 5.18,
+      "end": 10.08,
+      "text": " By overnight mail. It lasts six months. To the office and leads.",
+      "avgLogprob": -0.15027442162758425,
+      "noSpeechProb": 0.0348694734275341
+    },
+    {
+      "start": 10.98,
+      "end": 12.4,
+      "text": " Would you like a receipt with that?",
+      "avgLogprob": -0.15027442162758425,
+      "noSpeechProb": 0.0348694734275341
+    },
+    {
+      "start": 13.18,
+      "end": 17.0,
+      "text": " The purchase came to $30. Yes, for my expense report.",
+      "avgLogprob": -0.15027442162758425,
+      "noSpeechProb": 0.0348694734275341
+    },
+    {
+      "start": 18.02,
+      "end": 21.88,
+      "text": " The last parcel arrived yesterday. Has the courier arrived yet?",
+      "avgLogprob": -0.15027442162758425,
+      "noSpeechProb": 0.0348694734275341
+    }
+  ]
+}

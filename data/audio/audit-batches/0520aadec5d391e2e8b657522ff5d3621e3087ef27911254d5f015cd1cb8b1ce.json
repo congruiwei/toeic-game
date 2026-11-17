@@ -1,0 +1,442 @@
+{
+  "version": 1,
+  "id": "0520aadec5d391e2e8b657522ff5d3621e3087ef27911254d5f015cd1cb8b1ce",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.858812500000003,
+  "elapsedSeconds": 4.593,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.552,
+      "sha256": "a6c2579d33e595148c91e0e3ffb3773e476ac0b3cea2b22765e662c446f5efe5",
+      "src": "./audio/generated/en/am_puck/ed59bc2e2bf2ad6e77d0ac3f1e024a24.m4a"
+    },
+    {
+      "offset": 2.152,
+      "end": 7.485375,
+      "sha256": "07d6d4541e0e01b185ace306ca0ae4b236bbb681eec422420141dac92069e1bf",
+      "src": "./audio/generated/en/am_puck/331f70914cdf218cbdf4d869a752fad5.m4a"
+    },
+    {
+      "offset": 8.085375,
+      "end": 8.981375000000002,
+      "sha256": "0115897079bf89e814b8d779c553d4e8ed144150f910b3d0433b017ac5c00e26",
+      "src": "./audio/generated/en/af_bella/13df6794b7964723f73cef5159921d9b.m4a"
+    },
+    {
+      "offset": 9.581375000000001,
+      "end": 14.914750000000002,
+      "sha256": "9140ae8ab71876ebd932158400e843180b5d9be7ea4ac03318c55f021bc2e3b7",
+      "src": "./audio/generated/en/af_bella/f4eae0ab5a97a80a51e8c585bc762e7b.m4a"
+    },
+    {
+      "offset": 15.514750000000001,
+      "end": 16.5814375,
+      "sha256": "220db9bb057a6708e1d0c51ed42bea8da76f5fb80645643a9be520cf86c32d39",
+      "src": "./audio/generated/en/af_heart/935b5b9926ab6385c5bcc6660b58991d.m4a"
+    },
+    {
+      "offset": 17.1814375,
+      "end": 22.2588125,
+      "sha256": "ae4a9f95fb78ea9ab5df6ab4b2044dae4174c5911aa0c4e5b660b4efd1081015",
+      "src": "./audio/generated/en/af_heart/ccbde34f7840fe122c63af746951a2f1.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Expense",
+      "start": 0.0,
+      "end": 0.84,
+      "probability": 0.7796712815761566
+    },
+    {
+      "word": " Claim",
+      "start": 0.84,
+      "end": 1.16,
+      "probability": 0.7431751489639282
+    },
+    {
+      "word": " Please",
+      "start": 1.8199999999999985,
+      "end": 2.42,
+      "probability": 0.7326265573501587
+    },
+    {
+      "word": " submit",
+      "start": 2.42,
+      "end": 2.82,
+      "probability": 0.9852421879768372
+    },
+    {
+      "word": " your",
+      "start": 2.82,
+      "end": 3.02,
+      "probability": 0.9921809434890747
+    },
+    {
+      "word": " expense",
+      "start": 3.02,
+      "end": 3.32,
+      "probability": 0.9631761312484741
+    },
+    {
+      "word": " claim",
+      "start": 3.32,
+      "end": 3.82,
+      "probability": 0.9907090663909912
+    },
+    {
+      "word": " to",
+      "start": 3.82,
+      "end": 4.1,
+      "probability": 0.9940730929374695
+    },
+    {
+      "word": " accounts",
+      "start": 4.1,
+      "end": 4.48,
+      "probability": 0.8969511389732361
+    },
+    {
+      "word": " for",
+      "start": 4.48,
+      "end": 4.72,
+      "probability": 0.9934045672416687
+    },
+    {
+      "word": " repayment",
+      "start": 4.72,
+      "end": 5.26,
+      "probability": 0.9674727022647858
+    },
+    {
+      "word": " of",
+      "start": 5.26,
+      "end": 5.38,
+      "probability": 0.9932084679603577
+    },
+    {
+      "word": " the",
+      "start": 5.38,
+      "end": 5.5,
+      "probability": 0.9975013136863708
+    },
+    {
+      "word": " rail",
+      "start": 5.5,
+      "end": 5.7,
+      "probability": 0.8669326901435852
+    },
+    {
+      "word": " fare",
+      "start": 5.7,
+      "end": 6.0,
+      "probability": 0.9491665959358215
+    },
+    {
+      "word": " you",
+      "start": 6.0,
+      "end": 6.26,
+      "probability": 0.9949907660484314
+    },
+    {
+      "word": " paid",
+      "start": 6.26,
+      "end": 6.5,
+      "probability": 0.9815717339515686
+    },
+    {
+      "word": " personally.",
+      "start": 6.5,
+      "end": 7.08,
+      "probability": 0.9785739779472351
+    },
+    {
+      "word": " Petty",
+      "start": 7.8,
+      "end": 8.4,
+      "probability": 0.7825211584568024
+    },
+    {
+      "word": " Cash",
+      "start": 8.4,
+      "end": 8.66,
+      "probability": 0.7303562164306641
+    },
+    {
+      "word": " We",
+      "start": 8.66,
+      "end": 9.72,
+      "probability": 0.8770774602890015
+    },
+    {
+      "word": " keep",
+      "start": 9.72,
+      "end": 9.96,
+      "probability": 0.9924192428588867
+    },
+    {
+      "word": " Petty",
+      "start": 9.96,
+      "end": 10.3,
+      "probability": 0.7792452871799469
+    },
+    {
+      "word": " Cash",
+      "start": 10.3,
+      "end": 10.62,
+      "probability": 0.9697858691215515
+    },
+    {
+      "word": " in",
+      "start": 10.62,
+      "end": 10.8,
+      "probability": 0.9154269099235535
+    },
+    {
+      "word": " a",
+      "start": 10.8,
+      "end": 10.9,
+      "probability": 0.9958263039588928
+    },
+    {
+      "word": " locked",
+      "start": 10.9,
+      "end": 11.08,
+      "probability": 0.9860208630561829
+    },
+    {
+      "word": " tin",
+      "start": 11.08,
+      "end": 11.42,
+      "probability": 0.9600837826728821
+    },
+    {
+      "word": " to",
+      "start": 11.42,
+      "end": 11.76,
+      "probability": 0.9704146981239319
+    },
+    {
+      "word": " pay",
+      "start": 11.76,
+      "end": 11.96,
+      "probability": 0.9974203109741211
+    },
+    {
+      "word": " minor",
+      "start": 11.96,
+      "end": 12.24,
+      "probability": 0.9673786163330078
+    },
+    {
+      "word": " office",
+      "start": 12.24,
+      "end": 12.58,
+      "probability": 0.9905286431312561
+    },
+    {
+      "word": " costs,",
+      "start": 12.58,
+      "end": 13.14,
+      "probability": 0.9956146478652954
+    },
+    {
+      "word": " such",
+      "start": 13.42,
+      "end": 13.68,
+      "probability": 0.9963263869285583
+    },
+    {
+      "word": " as",
+      "start": 13.68,
+      "end": 13.86,
+      "probability": 0.9963856935501099
+    },
+    {
+      "word": " a",
+      "start": 13.86,
+      "end": 13.98,
+      "probability": 0.9957751631736755
+    },
+    {
+      "word": " single",
+      "start": 13.98,
+      "end": 14.2,
+      "probability": 0.9919434785842896
+    },
+    {
+      "word": " stamp.",
+      "start": 14.2,
+      "end": 14.74,
+      "probability": 0.990330696105957
+    },
+    {
+      "word": " Exchange",
+      "start": 15.58,
+      "end": 15.84,
+      "probability": 0.9241607189178467
+    },
+    {
+      "word": " Rate",
+      "start": 15.84,
+      "end": 16.28,
+      "probability": 0.9020316004753113
+    },
+    {
+      "word": " Today's",
+      "start": 17.06,
+      "end": 17.66,
+      "probability": 0.9625967144966125
+    },
+    {
+      "word": " exchange",
+      "start": 17.66,
+      "end": 17.96,
+      "probability": 0.9556728005409241
+    },
+    {
+      "word": " rate",
+      "start": 17.96,
+      "end": 18.4,
+      "probability": 0.9989184141159058
+    },
+    {
+      "word": " gives",
+      "start": 18.4,
+      "end": 18.78,
+      "probability": 0.9736440777778625
+    },
+    {
+      "word": " us",
+      "start": 18.78,
+      "end": 18.98,
+      "probability": 0.9984966516494751
+    },
+    {
+      "word": " fewer",
+      "start": 18.98,
+      "end": 19.24,
+      "probability": 0.9732051491737366
+    },
+    {
+      "word": " dollars",
+      "start": 19.24,
+      "end": 19.62,
+      "probability": 0.9928695559501648
+    },
+    {
+      "word": " per",
+      "start": 19.62,
+      "end": 19.9,
+      "probability": 0.9881886839866638
+    },
+    {
+      "word": " euro",
+      "start": 19.9,
+      "end": 20.3,
+      "probability": 0.7858655452728271
+    },
+    {
+      "word": " than",
+      "start": 20.3,
+      "end": 20.76,
+      "probability": 0.959749698638916
+    },
+    {
+      "word": " the",
+      "start": 20.76,
+      "end": 20.86,
+      "probability": 0.998640239238739
+    },
+    {
+      "word": " bank",
+      "start": 20.86,
+      "end": 21.04,
+      "probability": 0.9670178294181824
+    },
+    {
+      "word": " offered",
+      "start": 21.04,
+      "end": 21.4,
+      "probability": 0.9952260255813599
+    },
+    {
+      "word": " on",
+      "start": 21.4,
+      "end": 21.6,
+      "probability": 0.9951321482658386
+    },
+    {
+      "word": " Friday.",
+      "start": 21.6,
+      "end": 21.94,
+      "probability": 0.9967119693756104
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.16,
+      "text": " Expense Claim",
+      "avgLogprob": -0.14992000410954157,
+      "noSpeechProb": 0.029201457276940346
+    },
+    {
+      "start": 1.8199999999999985,
+      "end": 7.08,
+      "text": " Please submit your expense claim to accounts for repayment of the rail fare you paid personally.",
+      "avgLogprob": -0.14992000410954157,
+      "noSpeechProb": 0.029201457276940346
+    },
+    {
+      "start": 7.8,
+      "end": 8.66,
+      "text": " Petty Cash",
+      "avgLogprob": -0.14992000410954157,
+      "noSpeechProb": 0.029201457276940346
+    },
+    {
+      "start": 8.66,
+      "end": 14.74,
+      "text": " We keep Petty Cash in a locked tin to pay minor office costs, such as a single stamp.",
+      "avgLogprob": -0.14992000410954157,
+      "noSpeechProb": 0.029201457276940346
+    },
+    {
+      "start": 15.58,
+      "end": 16.28,
+      "text": " Exchange Rate",
+      "avgLogprob": -0.14992000410954157,
+      "noSpeechProb": 0.029201457276940346
+    },
+    {
+      "start": 17.06,
+      "end": 21.94,
+      "text": " Today's exchange rate gives us fewer dollars per euro than the bank offered on Friday.",
+      "avgLogprob": -0.14992000410954157,
+      "noSpeechProb": 0.029201457276940346
+    }
+  ]
+}

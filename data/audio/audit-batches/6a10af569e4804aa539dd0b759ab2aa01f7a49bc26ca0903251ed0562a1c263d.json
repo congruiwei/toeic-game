@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "id": "6a10af569e4804aa539dd0b759ab2aa01f7a49bc26ca0903251ed0562a1c263d",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 4.7546875,
+  "elapsedSeconds": 2.701,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 4.1546875000000005,
+      "sha256": "e004a893bbb8a0e271cc2e926b0c0a944a5340d4b3e4b74ad6bc214a03628971",
+      "src": "./audio/generated/en/am_puck/9b772e7dce9617f90417cddfecee5e5c.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9144130945205688
+    },
+    {
+      "word": " chair",
+      "start": 0.54,
+      "end": 0.8,
+      "probability": 0.8700730204582214
+    },
+    {
+      "word": " made",
+      "start": 0.8,
+      "end": 1.1,
+      "probability": 0.9919448494911194
+    },
+    {
+      "word": " an",
+      "start": 1.1,
+      "end": 1.2,
+      "probability": 0.9947105646133423
+    },
+    {
+      "word": " exception",
+      "start": 1.2,
+      "end": 1.58,
+      "probability": 0.9997298121452332
+    },
+    {
+      "word": " for",
+      "start": 1.58,
+      "end": 1.9,
+      "probability": 0.9920794367790222
+    },
+    {
+      "word": " items",
+      "start": 1.9,
+      "end": 2.18,
+      "probability": 0.9979181885719299
+    },
+    {
+      "word": " carried",
+      "start": 2.18,
+      "end": 2.56,
+      "probability": 0.998134434223175
+    },
+    {
+      "word": " over",
+      "start": 2.56,
+      "end": 2.8,
+      "probability": 0.9446762800216675
+    },
+    {
+      "word": " from",
+      "start": 2.8,
+      "end": 3.0,
+      "probability": 0.9902053475379944
+    },
+    {
+      "word": " last",
+      "start": 3.0,
+      "end": 3.26,
+      "probability": 0.9978033900260925
+    },
+    {
+      "word": " month.",
+      "start": 3.26,
+      "end": 3.6,
+      "probability": 0.9988710284233093
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.6,
+      "text": " The chair made an exception for items carried over from last month.",
+      "avgLogprob": -0.2600234281271696,
+      "noSpeechProb": 0.0025428838562220335
+    }
+  ]
+}

@@ -1,0 +1,583 @@
+{
+  "version": 1,
+  "id": "fe73dcddc4e9975f3a63d9513bba05b413bd0c15b0acc1fb9cf5cf4cafbff0c5",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.34675,
+  "elapsedSeconds": 4.768,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 4.9226875,
+      "sha256": "4943b2e03bc371a38ce4a73ef4ffd2020337ec190dc3df9cda04a1dab4fbea3c",
+      "src": "./audio/generated/ja/jf_alpha/7ca57d3df252e4b00b70bc315a40c6d7.m4a"
+    },
+    {
+      "offset": 5.5226875,
+      "end": 8.5946875,
+      "sha256": "3f76585a0bdece40387f8311be48d99f4f87378b1ad600103007f9ab976cf8fc",
+      "src": "./audio/generated/ja/jf_alpha/fb39c0bada235c03c48ddf22add50018.m4a"
+    },
+    {
+      "offset": 9.194687499999999,
+      "end": 11.840062499999998,
+      "sha256": "a8833a61decd034df89af48601449d1bc335b4bbab8ec9dcdbee16b5cf9f3059",
+      "src": "./audio/generated/ja/jf_alpha/09c1a7d1cdfb03ef59e4a53dcc723698.m4a"
+    },
+    {
+      "offset": 12.440062499999998,
+      "end": 15.384062499999999,
+      "sha256": "436369d4cf097531042b1ca149ee6f70f84db367e8746f45d47354b8dc2b4596",
+      "src": "./audio/generated/ja/jf_alpha/0a1b54f0c1621970c461b69a2486a8cf.m4a"
+    },
+    {
+      "offset": 15.984062499999999,
+      "end": 18.97075,
+      "sha256": "f57a2212c46de7a4b8862d7152dac2d9296e3d08f49181bec0060a4918a968ba",
+      "src": "./audio/generated/ja/jf_alpha/0d519eae3279134731ba981483c9d114.m4a"
+    },
+    {
+      "offset": 19.57075,
+      "end": 21.74675,
+      "sha256": "f95546b0f93f01d7147fba40f716f2ff9c9cdacb5194b2dda6f47caa9eb55dfa",
+      "src": "./audio/generated/ja/jf_alpha/bdefd0428dbbff93240acffcaa61409b.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "原",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.2470192313194275
+    },
+    {
+      "word": "料",
+      "start": 0.68,
+      "end": 0.88,
+      "probability": 0.9408417344093323
+    },
+    {
+      "word": "の",
+      "start": 0.88,
+      "end": 1.08,
+      "probability": 0.9877651333808899
+    },
+    {
+      "word": "由",
+      "start": 1.08,
+      "end": 1.24,
+      "probability": 0.9757587909698486
+    },
+    {
+      "word": "来",
+      "start": 1.24,
+      "end": 1.42,
+      "probability": 0.9901978969573975
+    },
+    {
+      "word": "では",
+      "start": 1.42,
+      "end": 1.68,
+      "probability": 0.991613507270813
+    },
+    {
+      "word": "なく",
+      "start": 1.68,
+      "end": 2.1,
+      "probability": 0.7658461928367615
+    },
+    {
+      "word": "将",
+      "start": 2.1,
+      "end": 2.38,
+      "probability": 0.9631284475326538
+    },
+    {
+      "word": "来",
+      "start": 2.38,
+      "end": 2.6,
+      "probability": 0.9995600581169128
+    },
+    {
+      "word": "の",
+      "start": 2.6,
+      "end": 2.78,
+      "probability": 0.9713224768638611
+    },
+    {
+      "word": "処",
+      "start": 2.78,
+      "end": 2.96,
+      "probability": 0.9773799180984497
+    },
+    {
+      "word": "分",
+      "start": 2.96,
+      "end": 3.2,
+      "probability": 0.9893885254859924
+    },
+    {
+      "word": "方",
+      "start": 3.2,
+      "end": 3.42,
+      "probability": 0.946614682674408
+    },
+    {
+      "word": "法",
+      "start": 3.42,
+      "end": 3.66,
+      "probability": 0.9960876703262329
+    },
+    {
+      "word": "を",
+      "start": 3.66,
+      "end": 3.8,
+      "probability": 0.8892404437065125
+    },
+    {
+      "word": "示",
+      "start": 3.8,
+      "end": 3.98,
+      "probability": 0.9922107458114624
+    },
+    {
+      "word": "して",
+      "start": 3.98,
+      "end": 4.26,
+      "probability": 0.9648056626319885
+    },
+    {
+      "word": "いる",
+      "start": 4.26,
+      "end": 4.46,
+      "probability": 0.975330650806427
+    },
+    {
+      "word": "から",
+      "start": 4.46,
+      "end": 4.72,
+      "probability": 0.6623495221138
+    },
+    {
+      "word": " 神",
+      "start": 5.52,
+      "end": 5.78,
+      "probability": 0.30454930663108826
+    },
+    {
+      "word": "が",
+      "start": 5.78,
+      "end": 5.98,
+      "probability": 0.6831327080726624
+    },
+    {
+      "word": "再",
+      "start": 5.98,
+      "end": 6.2,
+      "probability": 0.322848379611969
+    },
+    {
+      "word": "使",
+      "start": 6.2,
+      "end": 6.42,
+      "probability": 0.9832584857940674
+    },
+    {
+      "word": "用",
+      "start": 6.42,
+      "end": 6.58,
+      "probability": 0.9978529214859009
+    },
+    {
+      "word": "でき",
+      "start": 6.58,
+      "end": 6.74,
+      "probability": 0.9569499492645264
+    },
+    {
+      "word": "ない",
+      "start": 6.74,
+      "end": 7.02,
+      "probability": 0.9987382292747498
+    },
+    {
+      "word": "こと",
+      "start": 7.02,
+      "end": 7.26,
+      "probability": 0.9146538376808167
+    },
+    {
+      "word": "を",
+      "start": 7.26,
+      "end": 7.52,
+      "probability": 0.9997013211250305
+    },
+    {
+      "word": "証",
+      "start": 7.52,
+      "end": 7.68,
+      "probability": 0.9580430686473846
+    },
+    {
+      "word": "明",
+      "start": 7.68,
+      "end": 7.9,
+      "probability": 0.9998218417167664
+    },
+    {
+      "word": "する",
+      "start": 7.9,
+      "end": 8.14,
+      "probability": 0.9964190721511841
+    },
+    {
+      "word": "から",
+      "start": 8.14,
+      "end": 8.44,
+      "probability": 0.9958244562149048
+    },
+    {
+      "word": "重",
+      "start": 8.44,
+      "end": 9.42,
+      "probability": 0.9537561535835266
+    },
+    {
+      "word": "さ",
+      "start": 9.42,
+      "end": 9.7,
+      "probability": 0.9978587031364441
+    },
+    {
+      "word": "では",
+      "start": 9.7,
+      "end": 9.84,
+      "probability": 0.9951450228691101
+    },
+    {
+      "word": "なく",
+      "start": 9.84,
+      "end": 10.14,
+      "probability": 0.9869073629379272
+    },
+    {
+      "word": "厚",
+      "start": 10.14,
+      "end": 10.38,
+      "probability": 0.7162358611822128
+    },
+    {
+      "word": "さ",
+      "start": 10.38,
+      "end": 10.56,
+      "probability": 0.9741696715354919
+    },
+    {
+      "word": "を",
+      "start": 10.56,
+      "end": 10.7,
+      "probability": 0.9877066016197205
+    },
+    {
+      "word": "指",
+      "start": 10.7,
+      "end": 10.8,
+      "probability": 0.986789882183075
+    },
+    {
+      "word": "定",
+      "start": 10.8,
+      "end": 10.94,
+      "probability": 0.9978280663490295
+    },
+    {
+      "word": "して",
+      "start": 10.94,
+      "end": 11.12,
+      "probability": 0.9502928256988525
+    },
+    {
+      "word": "いる",
+      "start": 11.12,
+      "end": 11.36,
+      "probability": 0.9757573008537292
+    },
+    {
+      "word": "から",
+      "start": 11.36,
+      "end": 11.62,
+      "probability": 0.8625704646110535
+    },
+    {
+      "word": "表",
+      "start": 12.28,
+      "end": 12.68,
+      "probability": 0.025395432487130165
+    },
+    {
+      "word": "紙",
+      "start": 12.68,
+      "end": 12.9,
+      "probability": 0.9575875699520111
+    },
+    {
+      "word": "に",
+      "start": 12.9,
+      "end": 13.04,
+      "probability": 0.9108334183692932
+    },
+    {
+      "word": "別",
+      "start": 13.04,
+      "end": 13.2,
+      "probability": 0.8247196674346924
+    },
+    {
+      "word": "の",
+      "start": 13.2,
+      "end": 13.44,
+      "probability": 0.9945751428604126
+    },
+    {
+      "word": "用",
+      "start": 13.44,
+      "end": 13.62,
+      "probability": 0.702237606048584
+    },
+    {
+      "word": "紙",
+      "start": 13.62,
+      "end": 13.78,
+      "probability": 0.9991776049137115
+    },
+    {
+      "word": "を",
+      "start": 13.78,
+      "end": 13.88,
+      "probability": 0.9762587547302246
+    },
+    {
+      "word": "使",
+      "start": 13.88,
+      "end": 14.06,
+      "probability": 0.9524021744728088
+    },
+    {
+      "word": "える",
+      "start": 14.06,
+      "end": 14.3,
+      "probability": 0.9972425699234009
+    },
+    {
+      "word": "のは",
+      "start": 14.3,
+      "end": 14.54,
+      "probability": 0.9460169672966003
+    },
+    {
+      "word": "な",
+      "start": 14.54,
+      "end": 14.7,
+      "probability": 0.8540089726448059
+    },
+    {
+      "word": "ぜ",
+      "start": 14.7,
+      "end": 14.84,
+      "probability": 0.9962693452835083
+    },
+    {
+      "word": "ですか",
+      "start": 14.84,
+      "end": 15.18,
+      "probability": 0.7342473864555359
+    },
+    {
+      "word": " 状",
+      "start": 16.02,
+      "end": 16.3,
+      "probability": 0.6907652616500854
+    },
+    {
+      "word": "況",
+      "start": 16.3,
+      "end": 16.48,
+      "probability": 0.9258710145950317
+    },
+    {
+      "word": "は",
+      "start": 16.48,
+      "end": 16.72,
+      "probability": 0.9945893287658691
+    },
+    {
+      "word": "差",
+      "start": 16.72,
+      "end": 16.9,
+      "probability": 0.8746343851089478
+    },
+    {
+      "word": "し",
+      "start": 16.9,
+      "end": 17.0,
+      "probability": 0.9557459354400635
+    },
+    {
+      "word": "込",
+      "start": 17.0,
+      "end": 17.12,
+      "probability": 0.9975705742835999
+    },
+    {
+      "word": "み",
+      "start": 17.12,
+      "end": 17.3,
+      "probability": 0.9746253490447998
+    },
+    {
+      "word": "紙",
+      "start": 17.3,
+      "end": 17.36,
+      "probability": 0.8926268517971039
+    },
+    {
+      "word": "だけ",
+      "start": 17.36,
+      "end": 17.56,
+      "probability": 0.9846543073654175
+    },
+    {
+      "word": "を",
+      "start": 17.56,
+      "end": 17.78,
+      "probability": 0.9978029131889343
+    },
+    {
+      "word": "指",
+      "start": 17.78,
+      "end": 17.92,
+      "probability": 0.9981073141098022
+    },
+    {
+      "word": "定",
+      "start": 17.92,
+      "end": 18.06,
+      "probability": 0.9997959733009338
+    },
+    {
+      "word": "して",
+      "start": 18.06,
+      "end": 18.22,
+      "probability": 0.9983878135681152
+    },
+    {
+      "word": "いる",
+      "start": 18.22,
+      "end": 18.46,
+      "probability": 0.9975706934928894
+    },
+    {
+      "word": "から",
+      "start": 18.46,
+      "end": 18.74,
+      "probability": 0.9975087642669678
+    },
+    {
+      "word": "証",
+      "start": 19.479999999999997,
+      "end": 19.88,
+      "probability": 0.9725808799266815
+    },
+    {
+      "word": "明",
+      "start": 19.88,
+      "end": 20.14,
+      "probability": 0.9997685551643372
+    },
+    {
+      "word": "書",
+      "start": 20.14,
+      "end": 20.34,
+      "probability": 0.9956620335578918
+    },
+    {
+      "word": "が",
+      "start": 20.34,
+      "end": 20.52,
+      "probability": 0.9933119416236877
+    },
+    {
+      "word": "期",
+      "start": 20.52,
+      "end": 20.66,
+      "probability": 0.24579261243343353
+    },
+    {
+      "word": "限",
+      "start": 20.66,
+      "end": 20.86,
+      "probability": 0.968834400177002
+    },
+    {
+      "word": "切",
+      "start": 20.86,
+      "end": 21.04,
+      "probability": 0.8077846169471741
+    },
+    {
+      "word": "れ",
+      "start": 21.04,
+      "end": 21.14,
+      "probability": 0.9201761484146118
+    },
+    {
+      "word": "だから",
+      "start": 21.14,
+      "end": 21.36,
+      "probability": 0.9627495408058167
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 11.62,
+      "text": "原料の由来ではなく将来の処分方法を示しているから 神が再使用できないことを証明するから重さではなく厚さを指定しているから",
+      "avgLogprob": -0.19030000045895576,
+      "noSpeechProb": 0.036996349692344666
+    },
+    {
+      "start": 12.28,
+      "end": 18.74,
+      "text": "表紙に別の用紙を使えるのはなぜですか 状況は差し込み紙だけを指定しているから",
+      "avgLogprob": -0.19030000045895576,
+      "noSpeechProb": 0.036996349692344666
+    },
+    {
+      "start": 19.479999999999997,
+      "end": 21.36,
+      "text": "証明書が期限切れだから",
+      "avgLogprob": -0.19030000045895576,
+      "noSpeechProb": 0.036996349692344666
+    }
+  ]
+}

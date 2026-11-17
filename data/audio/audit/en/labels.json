@@ -1,0 +1,667 @@
+{
+  "version": 1,
+  "language": "en",
+  "bank": "labels",
+  "records": {
+    "labels/af_bella/D": {
+      "key": "labels/af_bella/D",
+      "src": "./audio/generated/en/af_bella/38785cb8f02c727f1ced0fd875270b51.m4a",
+      "sha256": "127beff0ff3288f577cc737d29658c21ffd8d7ab5395622868cd043c60337c0e",
+      "voiceId": "af_bella",
+      "fingerprint": "a4ede255d7a64ce87351835b3de1df005e7d62e69fd5e90ddf598ce1f8e88426",
+      "status": "matched",
+      "expected": "D.",
+      "spoken": "D.",
+      "recognized": "D.",
+      "metric": "WER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": [],
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " D.",
+          "avgLogprob": -0.4420577049255371,
+          "noSpeechProb": 0.35490402579307556
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true
+    },
+    "labels/af_heart/B": {
+      "key": "labels/af_heart/B",
+      "src": "./audio/generated/en/af_heart/a490c0e87c1586b00d11def2859c3720.m4a",
+      "sha256": "5eb39127bcf5ea307d8a179c397e73ceb881fecf3f2c9073f55f3aae3e731d9a",
+      "voiceId": "af_heart",
+      "fingerprint": "8a0b7de6f75f54a50e2b994589aff0303ab7d0372804c02f7051a96ca230a148",
+      "expected": "B.",
+      "spoken": "B.",
+      "recognized": "B,",
+      "segments": [
+        {
+          "start": -0.041499999999999204,
+          "end": 0.2585000000000015,
+          "text": " B,",
+          "probability": 0.9741799235343933
+        }
+      ],
+      "recognitionMethod": "batch-beam1",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 1,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
+        "wordTimestamps": true,
+        "batchSeconds": 24,
+        "leadingPadSeconds": 0.4,
+        "gapSeconds": 0.6,
+        "boundaryToleranceSeconds": 0.12,
+        "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+      },
+      "singleFileVerification": false,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "b088db595edcd3dd792eac8b58f39d648e92e744f85067c4a564d12d715f8acf",
+        "evidence": "./data/audio/audit-batches/b088db595edcd3dd792eac8b58f39d648e92e744f85067c4a564d12d715f8acf.json",
+        "offset": 16.5015,
+        "end": 17.098875,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "B,",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "WER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "labels/af_heart/D": {
+      "key": "labels/af_heart/D",
+      "src": "./audio/generated/en/af_heart/71ccd81ed0ef38201695ac8e04c1ea03.m4a",
+      "sha256": "4a46ac924751ac451ad9dd33f012e1ba685ddc8f75c0bb9ca5c8b2108b311b73",
+      "voiceId": "af_heart",
+      "fingerprint": "c09cd15be465b922bd4d91791ad99cc1aefff883a9b453ffc1bb31e5d63825fc",
+      "expected": "D.",
+      "spoken": "D.",
+      "recognized": "D.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " D.",
+          "avgLogprob": -0.49785776138305665,
+          "noSpeechProb": 0.23843291401863098
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "matched",
+      "metric": "WER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "labels/af_bella/B": {
+      "key": "labels/af_bella/B",
+      "src": "./audio/generated/en/af_bella/ae0a5de545dcf22a7fba30ebfca366ce.m4a",
+      "sha256": "f54e0a22232af086a462a70e123f5187f5e2116f66e7b6db99c2b469e08eb209",
+      "voiceId": "af_bella",
+      "fingerprint": "170d37b96055c9830f72c0ddb6a6f8e7508c003362a26ac6386a96259cc393ee",
+      "expected": "B.",
+      "spoken": "B.",
+      "recognized": "B.",
+      "segments": [
+        {
+          "start": 0.031937500000001506,
+          "end": 0.21193750000000122,
+          "text": " B.",
+          "probability": 0.631114661693573
+        }
+      ],
+      "recognitionMethod": "batch-beam1",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 1,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
+        "wordTimestamps": true,
+        "batchSeconds": 24,
+        "leadingPadSeconds": 0.4,
+        "gapSeconds": 0.6,
+        "boundaryToleranceSeconds": 0.12,
+        "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+      },
+      "singleFileVerification": false,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "6fb43b17263870d7196921ea06d03e5f0691b14838f46a8b84ddea81f9937449",
+        "evidence": "./data/audio/audit-batches/6fb43b17263870d7196921ea06d03e5f0691b14838f46a8b84ddea81f9937449.json",
+        "offset": 15.728062499999998,
+        "end": 16.28275,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "B.",
+        "normalizedExact": true
+      },
+      "status": "matched",
+      "metric": "WER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "labels/af_heart/A": {
+      "key": "labels/af_heart/A",
+      "src": "./audio/generated/en/af_heart/6612a41d9d42d9df6cd6b7fc905a9292.m4a",
+      "sha256": "67fab704616476ef6fc96cd484c6b7200f4bce6e46380f60c6d3ebfa3ed2e8b0",
+      "voiceId": "af_heart",
+      "fingerprint": "874fabb5826b09ba71ea503fc5be6df5eb18d3dbb8f98566055877b511cc96c3",
+      "expected": "A.",
+      "spoken": "A.",
+      "recognized": "A.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " A.",
+          "avgLogprob": -0.7247728824615478,
+          "noSpeechProb": 0.28109467029571533
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b",
+        "evidence": "./data/audio/audit-batches/df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b.json",
+        "offset": 0.4,
+        "end": 0.869375,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-in-padding"
+        ],
+        "recognized": "",
+        "normalizedExact": false
+      },
+      "status": "matched",
+      "metric": "WER",
+      "errorRate": 0.0,
+      "phonemeErrorRate": null,
+      "differences": []
+    },
+    "labels/af_heart/C": {
+      "key": "labels/af_heart/C",
+      "src": "./audio/generated/en/af_heart/16381e10974def1b9e9a3a57386f5a2f.m4a",
+      "sha256": "9cdcae45d82753975f7a5bb281ccde01003007fcc08510340d2723a8cddacc8e",
+      "voiceId": "af_heart",
+      "fingerprint": "cd968d4822afa0c207d81b1129fc7f53422c504f93baac40f9b0bd8617645b31",
+      "expected": "C.",
+      "spoken": "C.",
+      "recognized": "See.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " See.",
+          "avgLogprob": -0.5706565856933594,
+          "noSpeechProb": 0.09374113380908966
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "c",
+          "recognized": "see"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_heart/C"
+    },
+    "labels/am_puck/A": {
+      "key": "labels/am_puck/A",
+      "src": "./audio/generated/en/am_puck/861371891fb974e2aa5a217baeb960f5.m4a",
+      "sha256": "4c13e50e5a0f4e8fa820809c8c8698b1eb5f8e0cf36c9e37c796f7eb91103145",
+      "voiceId": "am_puck",
+      "fingerprint": "5433eb59ce89213b32bdd7df1466f48b0378dfb17aeeaffebc43667dfa80396c",
+      "expected": "A.",
+      "spoken": "A.",
+      "recognized": "Bye.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Bye.",
+          "avgLogprob": -0.8134432792663574,
+          "noSpeechProb": 0.1842615306377411
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b",
+        "evidence": "./data/audio/audit-batches/df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b.json",
+        "offset": 1.4693749999999999,
+        "end": 2.109375,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-crosses-file-boundary"
+        ],
+        "recognized": "hey,",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "a",
+          "recognized": "bye"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/A"
+    },
+    "labels/am_puck/B": {
+      "key": "labels/am_puck/B",
+      "src": "./audio/generated/en/am_puck/2ca97bdd30443e97be3cdb26283e6536.m4a",
+      "sha256": "f189462ea3880f809b0538fbb7418a07964820d5792df88ede4d233f7d671506",
+      "voiceId": "am_puck",
+      "fingerprint": "4b8df42e51b788adc52a6903e7c299e727e4dcec6b0adda710fa27be41e6373a",
+      "expected": "B.",
+      "spoken": "B.",
+      "recognized": "Bye.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Bye.",
+          "avgLogprob": -0.7539614200592041,
+          "noSpeechProb": 0.2300153374671936
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b",
+        "evidence": "./data/audio/audit-batches/df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b.json",
+        "offset": 2.709375,
+        "end": 3.30675,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-crosses-file-boundary"
+        ],
+        "recognized": "hey,",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "b",
+          "recognized": "bye"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/B"
+    },
+    "labels/am_puck/C": {
+      "key": "labels/am_puck/C",
+      "src": "./audio/generated/en/am_puck/f99b0387f72f5599e9a6176db26030fe.m4a",
+      "sha256": "4345eec0b66510ab54f319efdc107fd66d7fd0d034a36aa5ee5353c32b2593aa",
+      "voiceId": "am_puck",
+      "fingerprint": "6a0f4be922b831403336207c1603a09f5fbbffe113c5850d1f39e5d5108927b6",
+      "expected": "C.",
+      "spoken": "C.",
+      "recognized": "See?",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " See?",
+          "avgLogprob": -0.8479391098022461,
+          "noSpeechProb": 0.2072642743587494
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b",
+        "evidence": "./data/audio/audit-batches/df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b.json",
+        "offset": 3.90675,
+        "end": 4.461437500000001,
+        "boundaryStable": false,
+        "boundaryReasons": [
+          "word-crosses-file-boundary"
+        ],
+        "recognized": "hey",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "c",
+          "recognized": "see"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/C"
+    },
+    "labels/am_puck/D": {
+      "key": "labels/am_puck/D",
+      "src": "./audio/generated/en/am_puck/9b6c515401030b5b4979c799ba075989.m4a",
+      "sha256": "a7eb6223a1d962fbdb21ae133aaf967533bfa5495110686d859318fea6164292",
+      "voiceId": "am_puck",
+      "fingerprint": "14b8cbf205b1244049c3e14dbd945dc5d1b5f2466644be65de127026451a118b",
+      "expected": "D.",
+      "spoken": "D.",
+      "recognized": "Day.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " Day.",
+          "avgLogprob": -0.7786020278930664,
+          "noSpeechProb": 0.14004367589950562
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "screening": {
+        "batchId": "df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b",
+        "evidence": "./data/audio/audit-batches/df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b.json",
+        "offset": 5.0614375,
+        "end": 5.7014375,
+        "boundaryStable": true,
+        "boundaryReasons": [],
+        "recognized": "",
+        "normalizedExact": false
+      },
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "d",
+          "recognized": "day"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/am_puck/D"
+    },
+    "labels/af_bella/A": {
+      "key": "labels/af_bella/A",
+      "src": "./audio/generated/en/af_bella/2dd5293d077f47a3ae4777d4c3538055.m4a",
+      "sha256": "86e7fed2ea2136ccd43aa3d0cf0333c6c2a56edbc3100c977fdb56264098d435",
+      "voiceId": "af_bella",
+      "fingerprint": "878610beb56eec5a328f73c4de44238a8a5552a0cabd1431a900f222cf8ee3e7",
+      "expected": "A.",
+      "spoken": "A.",
+      "recognized": "I",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 2.0,
+          "text": " I",
+          "avgLogprob": -0.8020265400409698,
+          "noSpeechProb": 0.31991881132125854
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "a",
+          "recognized": "i"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_bella/A"
+    },
+    "labels/af_bella/C": {
+      "key": "labels/af_bella/C",
+      "src": "./audio/generated/en/af_bella/d4557da19a7f4862156b0dcdf72ff4a4.m4a",
+      "sha256": "6bb547a5f5b10925ec9ed6300cd9277db526c29a5b9749c690c8fe6719ce9cde",
+      "voiceId": "af_bella",
+      "fingerprint": "04fb8621b0d8e391f79cbb521b0d2d98d982a02a9e6dac71bfe689e84e3fef1d",
+      "expected": "C.",
+      "spoken": "C.",
+      "recognized": "See.",
+      "segments": [
+        {
+          "start": 0.0,
+          "end": 0.5,
+          "text": " See.",
+          "avgLogprob": -0.6541036605834961,
+          "noSpeechProb": 0.14741016924381256
+        }
+      ],
+      "recognitionMethod": "individual-beam5",
+      "recognitionGeneration": {
+        "model": "whisper-small",
+        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "device": "cpu",
+        "computeType": "int8",
+        "packages": {
+          "faster-whisper": "1.2.1",
+          "ctranslate2": "4.9.0",
+          "av": "16.0.1"
+        },
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false
+      },
+      "singleFileVerification": true,
+      "recognitionAttempts": 1,
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 1.0,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "c",
+          "recognized": "see"
+        }
+      ],
+      "retryEvidence": "./data/audio/retries.json#en:labels:labels/af_bella/C"
+    }
+  },
+  "generation": {
+    "individual": {
+      "model": "whisper-small",
+      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "device": "cpu",
+      "computeType": "int8",
+      "packages": {
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.9.0",
+        "av": "16.0.1"
+      },
+      "beamSize": 5,
+      "conditionOnPreviousText": false,
+      "prompt": null,
+      "vadFilter": false
+    },
+    "screening": null,
+    "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
+  },
+  "sourceSha256": "8aa409e2e809672e6ed61f4a86c0947b716aae2144f223ff6a5b76d6d16b5504"
+}

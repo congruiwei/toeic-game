@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "id": "d1e72a1bf618b367c1b611a6d7dea04037c1594452e4c43a035257b962b855d9",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.4400625,
+  "elapsedSeconds": 2.702,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.7466874999999997,
+      "sha256": "0ed8c823b6e87726d13894daf7b2d85d9ce3d0af0b8b2d1fb4911ad5d3355a2f",
+      "src": "./audio/generated/en/af_bella/15ca29ee69295dd9d916c8ce27a709af.m4a"
+    },
+    {
+      "offset": 3.3466875,
+      "end": 4.8400625,
+      "sha256": "d4500f68f4277de076466dcfe6eceb7498604b3e15af91410d402042b7b97242",
+      "src": "./audio/generated/en/af_bella/cc41228aa89971024ec751380ca33863.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.8421248197555542
+    },
+    {
+      "word": " new",
+      "start": 0.54,
+      "end": 0.68,
+      "probability": 0.9960153698921204
+    },
+    {
+      "word": " machine",
+      "start": 0.68,
+      "end": 1.0,
+      "probability": 0.9906773567199707
+    },
+    {
+      "word": " would",
+      "start": 1.0,
+      "end": 1.2,
+      "probability": 0.9776679277420044
+    },
+    {
+      "word": " require",
+      "start": 1.2,
+      "end": 1.56,
+      "probability": 0.99857497215271
+    },
+    {
+      "word": " a",
+      "start": 1.56,
+      "end": 1.74,
+      "probability": 0.9961354732513428
+    },
+    {
+      "word": " longer",
+      "start": 1.74,
+      "end": 1.98,
+      "probability": 0.9935777187347412
+    },
+    {
+      "word": " shift.",
+      "start": 1.98,
+      "end": 2.46,
+      "probability": 0.9950909614562988
+    },
+    {
+      "word": " What",
+      "start": 3.28,
+      "end": 3.52,
+      "probability": 0.9830979704856873
+    },
+    {
+      "word": " will",
+      "start": 3.52,
+      "end": 3.64,
+      "probability": 0.9762440919876099
+    },
+    {
+      "word": " be",
+      "start": 3.64,
+      "end": 3.74,
+      "probability": 0.9969396591186523
+    },
+    {
+      "word": " recorded",
+      "start": 3.74,
+      "end": 4.1,
+      "probability": 0.9968345761299133
+    },
+    {
+      "word": " next?",
+      "start": 4.1,
+      "end": 4.52,
+      "probability": 0.9973389506340027
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.52,
+      "text": " The new machine would require a longer shift. What will be recorded next?",
+      "avgLogprob": -0.24811016354295942,
+      "noSpeechProb": 0.0047995103523135185
+    }
+  ]
+}

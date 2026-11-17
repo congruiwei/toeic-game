@@ -1,0 +1,430 @@
+{
+  "version": 1,
+  "id": "d27eeaeecaabc089f190b26af82af5bf135e3d73cc445e5fc65c26621a7aee3b",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.920125000000002,
+  "elapsedSeconds": 4.107,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.576,
+      "sha256": "1c42def033a36d0cd01b815fb1d9c7c54c4987624b5b916f5bd4172d1431f4c0",
+      "src": "./audio/generated/en/af_bella/e6cc71a88276380a39a4a608ec9f524c.m4a"
+    },
+    {
+      "offset": 3.176,
+      "end": 5.5226875,
+      "sha256": "56b26925c792f7e194e8fa639c5863c10028aa1826b5b47f0818bfae2bd054e6",
+      "src": "./audio/generated/en/af_bella/21a911fd51e56643216a94f900f8b6f6.m4a"
+    },
+    {
+      "offset": 6.1226875,
+      "end": 9.1946875,
+      "sha256": "a4034de45feb36555d42a56a33c11142870ce38bb43b8adde6e0180765d6b3b2",
+      "src": "./audio/generated/en/af_bella/9c8e0302ac328f4ef99eee6fa24a01a6.m4a"
+    },
+    {
+      "offset": 9.7946875,
+      "end": 14.232062500000001,
+      "sha256": "d96cb38a0b4b58e4157961a4b41b9e9d8487b3c0881fb82e24ca6b284ac8ca7f",
+      "src": "./audio/generated/en/af_heart/80205f5313d082c21e58cef1889562ad.m4a"
+    },
+    {
+      "offset": 14.832062500000001,
+      "end": 17.30675,
+      "sha256": "28f6c0bf5293c4fbf6fb6fcc6d5a9fa0901a9d3fbb3f44fbae048d032f86bea0",
+      "src": "./audio/generated/en/am_puck/7349788fe2a7c718f919d38db13ba030.m4a"
+    },
+    {
+      "offset": 17.906750000000002,
+      "end": 21.320125,
+      "sha256": "47772185b2cf92ca38d3574894935297aa26f32bcb1bd8d5b1fd67ebaa0706ac",
+      "src": "./audio/generated/en/af_bella/cf54c66825dbf7d8cc896b828f158a29.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.9058361649513245
+    },
+    {
+      "word": " new",
+      "start": 0.56,
+      "end": 0.7,
+      "probability": 0.9832557439804077
+    },
+    {
+      "word": " envelope",
+      "start": 0.7,
+      "end": 1.02,
+      "probability": 0.980946958065033
+    },
+    {
+      "word": " has",
+      "start": 1.02,
+      "end": 1.54,
+      "probability": 0.9885911345481873
+    },
+    {
+      "word": " the",
+      "start": 1.54,
+      "end": 1.72,
+      "probability": 0.998342752456665
+    },
+    {
+      "word": " wrong",
+      "start": 1.72,
+      "end": 1.96,
+      "probability": 0.988570511341095
+    },
+    {
+      "word": " label.",
+      "start": 1.96,
+      "end": 2.34,
+      "probability": 0.9933176040649414
+    },
+    {
+      "word": " A",
+      "start": 3.22,
+      "end": 3.34,
+      "probability": 0.9837555885314941
+    },
+    {
+      "word": " key",
+      "start": 3.34,
+      "end": 3.54,
+      "probability": 0.9940703511238098
+    },
+    {
+      "word": " has",
+      "start": 3.54,
+      "end": 3.76,
+      "probability": 0.9954975843429565
+    },
+    {
+      "word": " to",
+      "start": 3.76,
+      "end": 3.9,
+      "probability": 0.9994100332260132
+    },
+    {
+      "word": " be",
+      "start": 3.9,
+      "end": 4.0,
+      "probability": 0.9987120628356934
+    },
+    {
+      "word": " retagged",
+      "start": 4.0,
+      "end": 4.58,
+      "probability": 0.8156587978204092
+    },
+    {
+      "word": " before",
+      "start": 4.58,
+      "end": 4.78,
+      "probability": 0.9956595301628113
+    },
+    {
+      "word": " testing.",
+      "start": 4.78,
+      "end": 5.22,
+      "probability": 0.9980691075325012
+    },
+    {
+      "word": " Labels",
+      "start": 6.04,
+      "end": 6.56,
+      "probability": 0.9864320755004883
+    },
+    {
+      "word": " alone",
+      "start": 6.56,
+      "end": 6.88,
+      "probability": 0.9939298629760742
+    },
+    {
+      "word": " cannot",
+      "start": 6.88,
+      "end": 7.52,
+      "probability": 0.9478015899658203
+    },
+    {
+      "word": " verify",
+      "start": 7.52,
+      "end": 8.18,
+      "probability": 0.9988011121749878
+    },
+    {
+      "word": " compatibility.",
+      "start": 8.18,
+      "end": 8.78,
+      "probability": 0.991915762424469
+    },
+    {
+      "word": " The",
+      "start": 9.8,
+      "end": 9.94,
+      "probability": 0.9959553480148315
+    },
+    {
+      "word": " photograph",
+      "start": 9.94,
+      "end": 10.3,
+      "probability": 0.9716118574142456
+    },
+    {
+      "word": " release",
+      "start": 10.3,
+      "end": 10.8,
+      "probability": 0.9858298897743225
+    },
+    {
+      "word": " has",
+      "start": 10.8,
+      "end": 11.12,
+      "probability": 0.995819091796875
+    },
+    {
+      "word": " the",
+      "start": 11.12,
+      "end": 11.24,
+      "probability": 0.9974402189254761
+    },
+    {
+      "word": " artist's",
+      "start": 11.24,
+      "end": 11.72,
+      "probability": 0.7608088850975037
+    },
+    {
+      "word": " signature,",
+      "start": 11.72,
+      "end": 12.0,
+      "probability": 0.9992710947990417
+    },
+    {
+      "word": " but",
+      "start": 12.58,
+      "end": 12.7,
+      "probability": 0.9968269467353821
+    },
+    {
+      "word": " still",
+      "start": 12.7,
+      "end": 12.96,
+      "probability": 0.9979165196418762
+    },
+    {
+      "word": " needs",
+      "start": 12.96,
+      "end": 13.22,
+      "probability": 0.9972234964370728
+    },
+    {
+      "word": " legal",
+      "start": 13.22,
+      "end": 13.54,
+      "probability": 0.9874923229217529
+    },
+    {
+      "word": " review.",
+      "start": 13.54,
+      "end": 13.94,
+      "probability": 0.9986384510993958
+    },
+    {
+      "word": " Then",
+      "start": 14.64,
+      "end": 15.04,
+      "probability": 0.9569138288497925
+    },
+    {
+      "word": " don't",
+      "start": 15.04,
+      "end": 15.3,
+      "probability": 0.9514246881008148
+    },
+    {
+      "word": " move",
+      "start": 15.3,
+      "end": 15.46,
+      "probability": 0.9969670176506042
+    },
+    {
+      "word": " it",
+      "start": 15.46,
+      "end": 15.6,
+      "probability": 0.9958555102348328
+    },
+    {
+      "word": " to",
+      "start": 15.6,
+      "end": 15.74,
+      "probability": 0.9964115023612976
+    },
+    {
+      "word": " the",
+      "start": 15.74,
+      "end": 15.84,
+      "probability": 0.9971489310264587
+    },
+    {
+      "word": " ready",
+      "start": 15.84,
+      "end": 16.04,
+      "probability": 0.5396847128868103
+    },
+    {
+      "word": " column",
+      "start": 16.04,
+      "end": 16.38,
+      "probability": 0.9985045194625854
+    },
+    {
+      "word": " on",
+      "start": 16.38,
+      "end": 16.56,
+      "probability": 0.9975402355194092
+    },
+    {
+      "word": " the",
+      "start": 16.56,
+      "end": 16.66,
+      "probability": 0.9979384541511536
+    },
+    {
+      "word": " board.",
+      "start": 16.66,
+      "end": 16.9,
+      "probability": 0.9917412996292114
+    },
+    {
+      "word": " I",
+      "start": 17.58,
+      "end": 18.08,
+      "probability": 0.9928132891654968
+    },
+    {
+      "word": " nearly",
+      "start": 18.08,
+      "end": 18.32,
+      "probability": 0.9960773587226868
+    },
+    {
+      "word": " did,",
+      "start": 18.32,
+      "end": 18.74,
+      "probability": 0.9982530474662781
+    },
+    {
+      "word": " because",
+      "start": 19.12,
+      "end": 19.34,
+      "probability": 0.9985911250114441
+    },
+    {
+      "word": " the",
+      "start": 19.34,
+      "end": 19.56,
+      "probability": 0.9978604912757874
+    },
+    {
+      "word": " signature",
+      "start": 19.56,
+      "end": 19.86,
+      "probability": 0.9870989918708801
+    },
+    {
+      "word": " box",
+      "start": 19.86,
+      "end": 20.3,
+      "probability": 0.9990720748901367
+    },
+    {
+      "word": " was",
+      "start": 20.3,
+      "end": 20.54,
+      "probability": 0.9990799427032471
+    },
+    {
+      "word": " filled",
+      "start": 20.54,
+      "end": 20.78,
+      "probability": 0.9977051615715027
+    },
+    {
+      "word": " in.",
+      "start": 20.78,
+      "end": 21.1,
+      "probability": 0.9950031638145447
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.34,
+      "text": " The new envelope has the wrong label.",
+      "avgLogprob": -0.1356238322921946,
+      "noSpeechProb": 0.021550040692090988
+    },
+    {
+      "start": 3.22,
+      "end": 5.22,
+      "text": " A key has to be retagged before testing.",
+      "avgLogprob": -0.1356238322921946,
+      "noSpeechProb": 0.021550040692090988
+    },
+    {
+      "start": 6.04,
+      "end": 8.78,
+      "text": " Labels alone cannot verify compatibility.",
+      "avgLogprob": -0.1356238322921946,
+      "noSpeechProb": 0.021550040692090988
+    },
+    {
+      "start": 9.8,
+      "end": 13.94,
+      "text": " The photograph release has the artist's signature, but still needs legal review.",
+      "avgLogprob": -0.1356238322921946,
+      "noSpeechProb": 0.021550040692090988
+    },
+    {
+      "start": 14.64,
+      "end": 16.9,
+      "text": " Then don't move it to the ready column on the board.",
+      "avgLogprob": -0.1356238322921946,
+      "noSpeechProb": 0.021550040692090988
+    },
+    {
+      "start": 17.58,
+      "end": 21.1,
+      "text": " I nearly did, because the signature box was filled in.",
+      "avgLogprob": -0.1356238322921946,
+      "noSpeechProb": 0.021550040692090988
+    }
+  ]
+}

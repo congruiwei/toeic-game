@@ -1,0 +1,554 @@
+{
+  "version": 1,
+  "id": "8166cd249e58ed586ad9993dd3de608190757c34a97eec13f1f9ab696f0fe94b",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.680187500000006,
+  "elapsedSeconds": 7.288,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.064,
+      "sha256": "0a037ce115ca53dc7a57b8b379172230f579cb24e0b31353a652118085d71489",
+      "src": "./audio/generated/en/am_puck/8b620ef6535e71b30b79c373ac1340aa.m4a"
+    },
+    {
+      "offset": 2.664,
+      "end": 3.944,
+      "sha256": "47e2e5a7262ac4f5367e89b1c33d828924633efd871cda178f2ff4050c9c3f77",
+      "src": "./audio/generated/en/af_heart/026d904e757aa24e6f7f3e42ed278e41.m4a"
+    },
+    {
+      "offset": 4.544,
+      "end": 6.72,
+      "sha256": "663e48081cfb19b2f6def7aa5dcf3690764fa6d21d1db9286f4a8e15043210e0",
+      "src": "./audio/generated/en/af_heart/032209564e90e1a1a8e14e37d5981265.m4a"
+    },
+    {
+      "offset": 7.319999999999999,
+      "end": 8.813374999999999,
+      "sha256": "065792eceae38b3f8b818b94b23890ddf52bdb43663e92fa47dc629a29364abc",
+      "src": "./audio/generated/en/af_heart/348aaab3133eff42d6aa6d6a4e389768.m4a"
+    },
+    {
+      "offset": 9.413374999999998,
+      "end": 11.333374999999998,
+      "sha256": "e12cca5774b4d7cdbb7997fca456d6a8dfbb84f59ec596cd322beb5ecb9df88d",
+      "src": "./audio/generated/en/am_puck/1d6d6f8d57294a8e8aa9695e0e4af964.m4a"
+    },
+    {
+      "offset": 11.933374999999998,
+      "end": 14.024062499999998,
+      "sha256": "d0c878131ba4bd2bcb297a2a8160cb85b0dc80309f059688c6704e938751a521",
+      "src": "./audio/generated/en/af_bella/368bfb89d7e61e4745bb47611877d2b7.m4a"
+    },
+    {
+      "offset": 14.624062499999997,
+      "end": 16.373437499999998,
+      "sha256": "c33a1a9ce278f6ec1200098cc41c1985c3080506adbf6abf053245c9ba321f59",
+      "src": "./audio/generated/en/af_bella/6e470232e0fc7353a8b2dfe6a738d4a1.m4a"
+    },
+    {
+      "offset": 16.9734375,
+      "end": 18.424125,
+      "sha256": "37f9d28157449c7d94bf9be4d2945f72697c03655d0aabf1aeb0db0a51771744",
+      "src": "./audio/generated/en/af_bella/547ca769c000097d4c8f9bf204d8929d.m4a"
+    },
+    {
+      "offset": 19.024125,
+      "end": 21.029500000000002,
+      "sha256": "f055f140965c2c887e2afe198799f1a70a8ff9ec1ce8b26c008c44830a0bc2a1",
+      "src": "./audio/generated/en/af_bella/3b89a00883b608f220655a4074c8eaa7.m4a"
+    },
+    {
+      "offset": 21.629500000000004,
+      "end": 23.080187500000005,
+      "sha256": "aea36493523299058aadc9586ddc953c96f1711f9ff75946460f1afd2e4823f7",
+      "src": "./audio/generated/en/am_puck/f7a5c20d1ccb86cbe0aa910bc90c0efd.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Why",
+      "start": 0.0,
+      "end": 0.6,
+      "probability": 0.8368930816650391
+    },
+    {
+      "word": " did",
+      "start": 0.6,
+      "end": 0.7,
+      "probability": 0.9848423004150391
+    },
+    {
+      "word": " you",
+      "start": 0.7,
+      "end": 0.82,
+      "probability": 0.9983832836151123
+    },
+    {
+      "word": " put",
+      "start": 0.82,
+      "end": 0.94,
+      "probability": 0.9961561560630798
+    },
+    {
+      "word": " tape",
+      "start": 0.94,
+      "end": 1.12,
+      "probability": 0.9966637492179871
+    },
+    {
+      "word": " on",
+      "start": 1.12,
+      "end": 1.28,
+      "probability": 0.9980533123016357
+    },
+    {
+      "word": " the",
+      "start": 1.28,
+      "end": 1.36,
+      "probability": 0.9986816048622131
+    },
+    {
+      "word": " box?",
+      "start": 1.36,
+      "end": 1.6,
+      "probability": 0.9954549074172974
+    },
+    {
+      "word": " It's",
+      "start": 2.44,
+      "end": 2.92,
+      "probability": 0.963227391242981
+    },
+    {
+      "word": " in",
+      "start": 2.92,
+      "end": 3.0,
+      "probability": 0.9964689016342163
+    },
+    {
+      "word": " the",
+      "start": 3.0,
+      "end": 3.1,
+      "probability": 0.9979403614997864
+    },
+    {
+      "word": " top",
+      "start": 3.1,
+      "end": 3.34,
+      "probability": 0.997215747833252
+    },
+    {
+      "word": " drawer.",
+      "start": 3.34,
+      "end": 3.62,
+      "probability": 0.9986251592636108
+    },
+    {
+      "word": " It",
+      "start": 4.42,
+      "end": 4.7,
+      "probability": 0.9882060885429382
+    },
+    {
+      "word": " measures",
+      "start": 4.7,
+      "end": 5.04,
+      "probability": 0.9947386384010315
+    },
+    {
+      "word": " 30",
+      "start": 5.04,
+      "end": 5.54,
+      "probability": 0.9510746598243713
+    },
+    {
+      "word": " centimeters",
+      "start": 5.54,
+      "end": 5.88,
+      "probability": 0.5464476943016052
+    },
+    {
+      "word": " across.",
+      "start": 5.88,
+      "end": 6.28,
+      "probability": 0.9953188300132751
+    },
+    {
+      "word": " The",
+      "start": 7.26,
+      "end": 7.46,
+      "probability": 0.9895407557487488
+    },
+    {
+      "word": " bottom",
+      "start": 7.46,
+      "end": 7.72,
+      "probability": 0.9988446235656738
+    },
+    {
+      "word": " was",
+      "start": 7.72,
+      "end": 7.96,
+      "probability": 0.9892334938049316
+    },
+    {
+      "word": " coming",
+      "start": 7.96,
+      "end": 8.18,
+      "probability": 0.9984890222549438
+    },
+    {
+      "word": " open.",
+      "start": 8.18,
+      "end": 8.5,
+      "probability": 0.9971605539321899
+    },
+    {
+      "word": " Why",
+      "start": 9.2,
+      "end": 9.62,
+      "probability": 0.9918660521507263
+    },
+    {
+      "word": " don't",
+      "start": 9.62,
+      "end": 9.74,
+      "probability": 0.9961854815483093
+    },
+    {
+      "word": " we",
+      "start": 9.74,
+      "end": 9.86,
+      "probability": 0.9945289492607117
+    },
+    {
+      "word": " read",
+      "start": 9.86,
+      "end": 10.0,
+      "probability": 0.9975239634513855
+    },
+    {
+      "word": " the",
+      "start": 10.0,
+      "end": 10.16,
+      "probability": 0.9904629588127136
+    },
+    {
+      "word": " leaflet",
+      "start": 10.16,
+      "end": 10.42,
+      "probability": 0.9962634146213531
+    },
+    {
+      "word": " on",
+      "start": 10.42,
+      "end": 10.56,
+      "probability": 0.9985034465789795
+    },
+    {
+      "word": " the",
+      "start": 10.56,
+      "end": 10.66,
+      "probability": 0.9990409016609192
+    },
+    {
+      "word": " bus?",
+      "start": 10.66,
+      "end": 10.84,
+      "probability": 0.9977476000785828
+    },
+    {
+      "word": " The",
+      "start": 11.62,
+      "end": 12.08,
+      "probability": 0.9860391616821289
+    },
+    {
+      "word": " leaflet",
+      "start": 12.08,
+      "end": 12.44,
+      "probability": 0.9994037747383118
+    },
+    {
+      "word": " folds",
+      "start": 12.44,
+      "end": 12.76,
+      "probability": 0.9961490631103516
+    },
+    {
+      "word": " into",
+      "start": 12.76,
+      "end": 13.04,
+      "probability": 0.986649215221405
+    },
+    {
+      "word": " three",
+      "start": 13.04,
+      "end": 13.34,
+      "probability": 0.8525078892707825
+    },
+    {
+      "word": " panels.",
+      "start": 13.34,
+      "end": 13.7,
+      "probability": 0.9986240863800049
+    },
+    {
+      "word": " I",
+      "start": 14.54,
+      "end": 14.78,
+      "probability": 0.9960021376609802
+    },
+    {
+      "word": " get",
+      "start": 14.78,
+      "end": 14.92,
+      "probability": 0.9970967769622803
+    },
+    {
+      "word": " dizzy",
+      "start": 14.92,
+      "end": 15.22,
+      "probability": 0.9972123503684998
+    },
+    {
+      "word": " reading",
+      "start": 15.22,
+      "end": 15.54,
+      "probability": 0.987578809261322
+    },
+    {
+      "word": " on",
+      "start": 15.54,
+      "end": 15.74,
+      "probability": 0.9987108707427979
+    },
+    {
+      "word": " the",
+      "start": 15.74,
+      "end": 15.82,
+      "probability": 0.9990954399108887
+    },
+    {
+      "word": " road.",
+      "start": 15.82,
+      "end": 16.1,
+      "probability": 0.997678816318512
+    },
+    {
+      "word": " The",
+      "start": 16.98,
+      "end": 17.12,
+      "probability": 0.9943512678146362
+    },
+    {
+      "word": " bus",
+      "start": 17.12,
+      "end": 17.32,
+      "probability": 0.9982959628105164
+    },
+    {
+      "word": " route",
+      "start": 17.32,
+      "end": 17.54,
+      "probability": 0.9566068649291992
+    },
+    {
+      "word": " is",
+      "start": 17.54,
+      "end": 17.68,
+      "probability": 0.998958945274353
+    },
+    {
+      "word": " on",
+      "start": 17.68,
+      "end": 17.8,
+      "probability": 0.9966784715652466
+    },
+    {
+      "word": " the",
+      "start": 17.8,
+      "end": 17.88,
+      "probability": 0.9992826581001282
+    },
+    {
+      "word": " front.",
+      "start": 17.88,
+      "end": 18.14,
+      "probability": 0.999125063419342
+    },
+    {
+      "word": " How",
+      "start": 19.0,
+      "end": 19.2,
+      "probability": 0.9950010180473328
+    },
+    {
+      "word": " can",
+      "start": 19.2,
+      "end": 19.32,
+      "probability": 0.9979352951049805
+    },
+    {
+      "word": " I",
+      "start": 19.32,
+      "end": 19.4,
+      "probability": 0.9917196035385132
+    },
+    {
+      "word": " tell",
+      "start": 19.4,
+      "end": 19.58,
+      "probability": 0.999326229095459
+    },
+    {
+      "word": " which",
+      "start": 19.58,
+      "end": 19.8,
+      "probability": 0.9977128505706787
+    },
+    {
+      "word": " suitcase",
+      "start": 19.8,
+      "end": 20.1,
+      "probability": 0.9819846749305725
+    },
+    {
+      "word": " is",
+      "start": 20.1,
+      "end": 20.42,
+      "probability": 0.9977343082427979
+    },
+    {
+      "word": " yours?",
+      "start": 20.42,
+      "end": 20.68,
+      "probability": 0.9966458678245544
+    },
+    {
+      "word": " Mine",
+      "start": 21.6,
+      "end": 21.86,
+      "probability": 0.9914365410804749
+    },
+    {
+      "word": " has",
+      "start": 21.86,
+      "end": 22.04,
+      "probability": 0.9991430044174194
+    },
+    {
+      "word": " a",
+      "start": 22.04,
+      "end": 22.16,
+      "probability": 0.9968070983886719
+    },
+    {
+      "word": " pink",
+      "start": 22.16,
+      "end": 22.32,
+      "probability": 0.99802565574646
+    },
+    {
+      "word": " ribbon.",
+      "start": 22.32,
+      "end": 22.62,
+      "probability": 0.9948107004165649
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.6,
+      "text": " Why did you put tape on the box?",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 2.44,
+      "end": 3.62,
+      "text": " It's in the top drawer.",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 4.42,
+      "end": 6.28,
+      "text": " It measures 30 centimeters across.",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 7.26,
+      "end": 8.5,
+      "text": " The bottom was coming open.",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 9.2,
+      "end": 10.84,
+      "text": " Why don't we read the leaflet on the bus?",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 11.62,
+      "end": 13.7,
+      "text": " The leaflet folds into three panels.",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 14.54,
+      "end": 16.1,
+      "text": " I get dizzy reading on the road.",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 16.98,
+      "end": 18.14,
+      "text": " The bus route is on the front.",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 19.0,
+      "end": 20.68,
+      "text": " How can I tell which suitcase is yours?",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    },
+    {
+      "start": 21.6,
+      "end": 22.62,
+      "text": " Mine has a pink ribbon.",
+      "avgLogprob": -0.0925343482196331,
+      "noSpeechProb": 0.032425832003355026
+    }
+  ]
+}

@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "id": "e26adea285f13ee29e69cdd15756ec1ef2fe4b7db8b7a86910f332eabb8d4c21",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 4.413374999999999,
+  "elapsedSeconds": 3.281,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.8133749999999997,
+      "sha256": "852b5c87e6f750b8bfaa4aa8626a2d97204cf0d42ffb7197ecd5c292c2d34845",
+      "src": "./audio/generated/ja/jf_alpha/0f04b23b7fecdcc4eda6f687c6714c33.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "認",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.7271385192871094
+    },
+    {
+      "word": "定",
+      "start": 0.66,
+      "end": 0.9,
+      "probability": 0.9991114735603333
+    },
+    {
+      "word": "時間",
+      "start": 0.9,
+      "end": 1.2,
+      "probability": 0.9563645124435425
+    },
+    {
+      "word": "を",
+      "start": 1.2,
+      "end": 1.48,
+      "probability": 0.9917988777160645
+    },
+    {
+      "word": "増",
+      "start": 1.48,
+      "end": 1.62,
+      "probability": 0.9816019833087921
+    },
+    {
+      "word": "や",
+      "start": 1.62,
+      "end": 1.8,
+      "probability": 0.9950923919677734
+    },
+    {
+      "word": "せ",
+      "start": 1.8,
+      "end": 1.88,
+      "probability": 0.9936809539794922
+    },
+    {
+      "word": "る",
+      "start": 1.88,
+      "end": 2.0,
+      "probability": 0.9994863271713257
+    },
+    {
+      "word": "作",
+      "start": 2.0,
+      "end": 2.18,
+      "probability": 0.9868819117546082
+    },
+    {
+      "word": "業",
+      "start": 2.18,
+      "end": 2.38,
+      "probability": 0.9995874762535095
+    },
+    {
+      "word": "に",
+      "start": 2.38,
+      "end": 2.52,
+      "probability": 0.9444442987442017
+    },
+    {
+      "word": "つ",
+      "start": 2.52,
+      "end": 2.7,
+      "probability": 0.9870660901069641
+    },
+    {
+      "word": "いて",
+      "start": 2.7,
+      "end": 2.84,
+      "probability": 0.9991269707679749
+    },
+    {
+      "word": "尋",
+      "start": 2.84,
+      "end": 3.12,
+      "probability": 0.825259804725647
+    },
+    {
+      "word": "ね",
+      "start": 3.12,
+      "end": 3.26,
+      "probability": 0.9922853708267212
+    },
+    {
+      "word": "る",
+      "start": 3.26,
+      "end": 3.36,
+      "probability": 0.9988974332809448
+    },
+    {
+      "word": "こと",
+      "start": 3.36,
+      "end": 3.52,
+      "probability": 0.9343585968017578
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.52,
+      "text": "認定時間を増やせる作業について尋ねること",
+      "avgLogprob": -0.2121216973120516,
+      "noSpeechProb": 0.03090892732143402
+    }
+  ]
+}

@@ -1,0 +1,522 @@
+{
+  "version": 1,
+  "id": "ec08f31ebf92ac17d75cf7c06478337818006b2f018b71588c26a5615c8157e4",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.949500000000004,
+  "elapsedSeconds": 10.069,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.277375,
+      "sha256": "f0b034359ca61abb0344eba19ba7c15a9f75250589950b529a978ca1690aaf4c",
+      "src": "./audio/generated/en/am_puck/d373d3a6bd8e1ef1f68d1ff50bf9179f.m4a"
+    },
+    {
+      "offset": 2.8773750000000002,
+      "end": 4.925375000000001,
+      "sha256": "5c940d82088449a037670a4b83d06b6f25c58e58b2e275ac53de90867f1aad48",
+      "src": "./audio/generated/en/am_puck/9d93b97435c56f4f29579db7e6e37b84.m4a"
+    },
+    {
+      "offset": 5.525375,
+      "end": 7.27475,
+      "sha256": "8fc01b344f2b9b02a89f1aacc8cf83610e97407a38af0d80843a36d27968db7e",
+      "src": "./audio/generated/en/am_puck/55705dbb78b6de3a4b5a3790d81b149f.m4a"
+    },
+    {
+      "offset": 7.87475,
+      "end": 10.3494375,
+      "sha256": "312b0deef4c2db979e1fbd113f26155b363801d4bb24485c2dafa0ca4710093f",
+      "src": "./audio/generated/en/af_bella/41c9e42fd468e95f1e769de1e895ea72.m4a"
+    },
+    {
+      "offset": 10.9494375,
+      "end": 12.784125,
+      "sha256": "43b0e9a2871781d23838b1ec7d5afda363a33759642ec9d96c7bbb0c16dbd0d6",
+      "src": "./audio/generated/en/af_bella/f90724906cac9e5b11c9212989742579.m4a"
+    },
+    {
+      "offset": 13.384125,
+      "end": 15.944125,
+      "sha256": "780935e7911475354322e741089aca0b7391c7d775b82efc985511a79bb576b6",
+      "src": "./audio/generated/en/af_bella/625fa663366295917bbebbd210ad0d68.m4a"
+    },
+    {
+      "offset": 16.544125,
+      "end": 19.232125,
+      "sha256": "0a8a8370d98013b492eff1deb63f6de924e7f7579bf832cbacdb7c1608aa224d",
+      "src": "./audio/generated/en/af_bella/621d7dcba94a451d1d8a295b60d4458e.m4a"
+    },
+    {
+      "offset": 19.832125,
+      "end": 22.349500000000003,
+      "sha256": "837ee25c0899bc2813296a6bb59b8e633e562c53bda560dbdd75a100310c8833",
+      "src": "./audio/generated/en/af_heart/54d4013f5d7a628a925e2a1897e8346a.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.8803052306175232
+    },
+    {
+      "word": " guitar",
+      "start": 0.54,
+      "end": 0.74,
+      "probability": 0.9938253164291382
+    },
+    {
+      "word": " is",
+      "start": 0.74,
+      "end": 0.94,
+      "probability": 0.9883427023887634
+    },
+    {
+      "word": " lying",
+      "start": 0.94,
+      "end": 1.14,
+      "probability": 0.9894335865974426
+    },
+    {
+      "word": " across",
+      "start": 1.14,
+      "end": 1.4,
+      "probability": 0.9951476454734802
+    },
+    {
+      "word": " the",
+      "start": 1.4,
+      "end": 1.62,
+      "probability": 0.9986074566841125
+    },
+    {
+      "word": " seat.",
+      "start": 1.62,
+      "end": 1.94,
+      "probability": 0.992159366607666
+    },
+    {
+      "word": " Someone",
+      "start": 2.64,
+      "end": 3.14,
+      "probability": 0.9643881916999817
+    },
+    {
+      "word": " is",
+      "start": 3.14,
+      "end": 3.32,
+      "probability": 0.9954615235328674
+    },
+    {
+      "word": " replacing",
+      "start": 3.32,
+      "end": 3.68,
+      "probability": 0.9988319277763367
+    },
+    {
+      "word": " a",
+      "start": 3.68,
+      "end": 3.88,
+      "probability": 0.9930182695388794
+    },
+    {
+      "word": " guitar",
+      "start": 3.88,
+      "end": 4.12,
+      "probability": 0.9986830353736877
+    },
+    {
+      "word": " string.",
+      "start": 4.12,
+      "end": 4.48,
+      "probability": 0.9933152794837952
+    },
+    {
+      "word": " A",
+      "start": 5.56,
+      "end": 5.66,
+      "probability": 0.693462073802948
+    },
+    {
+      "word": " guitar",
+      "start": 5.66,
+      "end": 5.86,
+      "probability": 0.9983289837837219
+    },
+    {
+      "word": " stands",
+      "start": 5.86,
+      "end": 6.22,
+      "probability": 0.9547051787376404
+    },
+    {
+      "word": " beside",
+      "start": 6.22,
+      "end": 6.46,
+      "probability": 0.9950496554374695
+    },
+    {
+      "word": " a",
+      "start": 6.46,
+      "end": 6.66,
+      "probability": 0.9916259050369263
+    },
+    {
+      "word": " stool.",
+      "start": 6.66,
+      "end": 6.84,
+      "probability": 0.9968050718307495
+    },
+    {
+      "word": " The",
+      "start": 7.7,
+      "end": 8.02,
+      "probability": 0.8107806444168091
+    },
+    {
+      "word": " lamp",
+      "start": 8.02,
+      "end": 8.28,
+      "probability": 0.9960707426071167
+    },
+    {
+      "word": " has",
+      "start": 8.28,
+      "end": 8.6,
+      "probability": 0.9849895238876343
+    },
+    {
+      "word": " been",
+      "start": 8.6,
+      "end": 8.78,
+      "probability": 0.9987502098083496
+    },
+    {
+      "word": " left",
+      "start": 8.78,
+      "end": 9.08,
+      "probability": 0.9977744221687317
+    },
+    {
+      "word": " on",
+      "start": 9.08,
+      "end": 9.32,
+      "probability": 0.9975074529647827
+    },
+    {
+      "word": " the",
+      "start": 9.32,
+      "end": 9.44,
+      "probability": 0.9966835379600525
+    },
+    {
+      "word": " sofa",
+      "start": 9.44,
+      "end": 9.68,
+      "probability": 0.9890995621681213
+    },
+    {
+      "word": " cushion.",
+      "start": 9.68,
+      "end": 10.04,
+      "probability": 0.9975232481956482
+    },
+    {
+      "word": " Someone",
+      "start": 10.86,
+      "end": 11.24,
+      "probability": 0.987981379032135
+    },
+    {
+      "word": " is",
+      "start": 11.24,
+      "end": 11.42,
+      "probability": 0.9972622394561768
+    },
+    {
+      "word": " carrying",
+      "start": 11.42,
+      "end": 11.72,
+      "probability": 0.9957915544509888
+    },
+    {
+      "word": " the",
+      "start": 11.72,
+      "end": 11.96,
+      "probability": 0.9993240833282471
+    },
+    {
+      "word": " table",
+      "start": 11.96,
+      "end": 12.22,
+      "probability": 0.999112069606781
+    },
+    {
+      "word": " away.",
+      "start": 12.22,
+      "end": 12.54,
+      "probability": 0.9982596039772034
+    },
+    {
+      "word": " A",
+      "start": 13.42,
+      "end": 13.56,
+      "probability": 0.947858452796936
+    },
+    {
+      "word": " sofa",
+      "start": 13.56,
+      "end": 13.82,
+      "probability": 0.9971862435340881
+    },
+    {
+      "word": " has",
+      "start": 13.82,
+      "end": 14.12,
+      "probability": 0.9970105886459351
+    },
+    {
+      "word": " been",
+      "start": 14.12,
+      "end": 14.26,
+      "probability": 0.9975595474243164
+    },
+    {
+      "word": " moved",
+      "start": 14.26,
+      "end": 14.52,
+      "probability": 0.9981929659843445
+    },
+    {
+      "word": " on",
+      "start": 14.52,
+      "end": 14.72,
+      "probability": 0.9951832890510559
+    },
+    {
+      "word": " top",
+      "start": 14.72,
+      "end": 14.9,
+      "probability": 0.9980577826499939
+    },
+    {
+      "word": " of",
+      "start": 14.9,
+      "end": 15.1,
+      "probability": 0.9972489476203918
+    },
+    {
+      "word": " a",
+      "start": 15.1,
+      "end": 15.18,
+      "probability": 0.9981879591941833
+    },
+    {
+      "word": " rug",
+      "start": 15.18,
+      "end": 15.4,
+      "probability": 0.9930676221847534
+    },
+    {
+      "word": " roll.",
+      "start": 15.4,
+      "end": 15.68,
+      "probability": 0.9860821962356567
+    },
+    {
+      "word": " A",
+      "start": 16.54,
+      "end": 16.7,
+      "probability": 0.9832723140716553
+    },
+    {
+      "word": " lamp",
+      "start": 16.7,
+      "end": 16.94,
+      "probability": 0.9982457160949707
+    },
+    {
+      "word": " is",
+      "start": 16.94,
+      "end": 17.1,
+      "probability": 0.9977941513061523
+    },
+    {
+      "word": " on",
+      "start": 17.1,
+      "end": 17.2,
+      "probability": 0.9985479712486267
+    },
+    {
+      "word": " a",
+      "start": 17.2,
+      "end": 17.3,
+      "probability": 0.9960450530052185
+    },
+    {
+      "word": " small",
+      "start": 17.3,
+      "end": 17.5,
+      "probability": 0.9993307590484619
+    },
+    {
+      "word": " table",
+      "start": 17.5,
+      "end": 17.96,
+      "probability": 0.9993784427642822
+    },
+    {
+      "word": " beside",
+      "start": 17.96,
+      "end": 18.4,
+      "probability": 0.7902900576591492
+    },
+    {
+      "word": " a",
+      "start": 18.4,
+      "end": 18.64,
+      "probability": 0.9917426705360413
+    },
+    {
+      "word": " sofa.",
+      "start": 18.64,
+      "end": 18.96,
+      "probability": 0.9985062479972839
+    },
+    {
+      "word": " Water",
+      "start": 19.88,
+      "end": 20.14,
+      "probability": 0.9919771552085876
+    },
+    {
+      "word": " is",
+      "start": 20.14,
+      "end": 20.38,
+      "probability": 0.9983172416687012
+    },
+    {
+      "word": " pouring",
+      "start": 20.38,
+      "end": 20.68,
+      "probability": 0.9956823587417603
+    },
+    {
+      "word": " from",
+      "start": 20.68,
+      "end": 20.94,
+      "probability": 0.9962828755378723
+    },
+    {
+      "word": " the",
+      "start": 20.94,
+      "end": 21.08,
+      "probability": 0.9948208332061768
+    },
+    {
+      "word": " can",
+      "start": 21.08,
+      "end": 21.22,
+      "probability": 0.8658298254013062
+    },
+    {
+      "word": " onto",
+      "start": 21.22,
+      "end": 21.54,
+      "probability": 0.741345226764679
+    },
+    {
+      "word": " the",
+      "start": 21.54,
+      "end": 21.72,
+      "probability": 0.9962627291679382
+    },
+    {
+      "word": " leaves.",
+      "start": 21.72,
+      "end": 22.04,
+      "probability": 0.9974703788757324
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.94,
+      "text": " The guitar is lying across the seat.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    },
+    {
+      "start": 2.64,
+      "end": 4.48,
+      "text": " Someone is replacing a guitar string.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    },
+    {
+      "start": 5.56,
+      "end": 6.84,
+      "text": " A guitar stands beside a stool.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    },
+    {
+      "start": 7.7,
+      "end": 10.04,
+      "text": " The lamp has been left on the sofa cushion.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    },
+    {
+      "start": 10.86,
+      "end": 12.54,
+      "text": " Someone is carrying the table away.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    },
+    {
+      "start": 13.42,
+      "end": 15.68,
+      "text": " A sofa has been moved on top of a rug roll.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    },
+    {
+      "start": 16.54,
+      "end": 18.96,
+      "text": " A lamp is on a small table beside a sofa.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    },
+    {
+      "start": 19.88,
+      "end": 22.04,
+      "text": " Water is pouring from the can onto the leaves.",
+      "avgLogprob": -0.2637806929899066,
+      "noSpeechProb": 0.06496281921863556
+    }
+  ]
+}

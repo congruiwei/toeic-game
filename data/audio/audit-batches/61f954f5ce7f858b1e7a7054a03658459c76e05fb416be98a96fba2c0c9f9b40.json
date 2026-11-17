@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "id": "61f954f5ce7f858b1e7a7054a03658459c76e05fb416be98a96fba2c0c9f9b40",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.4400625,
+  "elapsedSeconds": 3.62,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.021375,
+      "sha256": "e0645f3e9de277334c838fe8b6dcdc928bec9b2b9078522a267c0799110427d6",
+      "src": "./audio/generated/ja/jf_alpha/eb7e37468a77f8e96ffd38cfe8f8eb57.m4a"
+    },
+    {
+      "offset": 2.621375,
+      "end": 4.8400625,
+      "sha256": "2074050c435d281489a4d124a5b6f27c06cecf243065f8813d8a860e93004225",
+      "src": "./audio/generated/ja/jf_alpha/31855808d97362d081407cdae0e49424.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "座",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.9461685419082642
+    },
+    {
+      "word": "席",
+      "start": 0.66,
+      "end": 0.88,
+      "probability": 0.9961651861667633
+    },
+    {
+      "word": "が",
+      "start": 0.88,
+      "end": 1.04,
+      "probability": 0.8961954116821289
+    },
+    {
+      "word": "確",
+      "start": 1.04,
+      "end": 1.26,
+      "probability": 0.9617809057235718
+    },
+    {
+      "word": "定",
+      "start": 1.26,
+      "end": 1.48,
+      "probability": 0.9914426207542419
+    },
+    {
+      "word": "する",
+      "start": 1.48,
+      "end": 1.78,
+      "probability": 0.9920781254768372
+    },
+    {
+      "word": "正",
+      "start": 1.78,
+      "end": 2.82,
+      "probability": 0.6397370100021362
+    },
+    {
+      "word": "しく",
+      "start": 2.82,
+      "end": 3.16,
+      "probability": 0.993405818939209
+    },
+    {
+      "word": "ない",
+      "start": 3.16,
+      "end": 3.36,
+      "probability": 0.9923679232597351
+    },
+    {
+      "word": "技",
+      "start": 3.36,
+      "end": 3.62,
+      "probability": 0.6847536563873291
+    },
+    {
+      "word": "術",
+      "start": 3.62,
+      "end": 3.84,
+      "probability": 0.9986298382282257
+    },
+    {
+      "word": "は",
+      "start": 3.84,
+      "end": 3.96,
+      "probability": 0.983729898929596
+    },
+    {
+      "word": "ど",
+      "start": 3.96,
+      "end": 4.08,
+      "probability": 0.9731037616729736
+    },
+    {
+      "word": "れ",
+      "start": 4.08,
+      "end": 4.2,
+      "probability": 0.9979860782623291
+    },
+    {
+      "word": "ですか?",
+      "start": 4.2,
+      "end": 4.5,
+      "probability": 0.9582682251930237
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.5,
+      "text": "座席が確定する正しくない技術はどれですか?",
+      "avgLogprob": -0.2589027976447886,
+      "noSpeechProb": 0.02089107781648636
+    }
+  ]
+}

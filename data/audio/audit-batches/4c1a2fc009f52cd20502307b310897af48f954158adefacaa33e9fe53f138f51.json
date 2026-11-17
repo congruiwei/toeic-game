@@ -1,0 +1,380 @@
+{
+  "version": 1,
+  "id": "4c1a2fc009f52cd20502307b310897af48f954158adefacaa33e9fe53f138f51",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.432125,
+  "elapsedSeconds": 3.268,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.8186875,
+      "sha256": "7a07d8ed13a30e229a6c080809b51336f4e7fa1290db258973e48201d76e1294",
+      "src": "./audio/generated/en/af_heart/48e2b47f69c32664c7ceebd3e78fb187.m4a"
+    },
+    {
+      "offset": 6.4186875,
+      "end": 7.1440624999999995,
+      "sha256": "e802a3cfb27f28f835d2160a41f6087bccd27732105c2dfe3b4a7f9d1d95c3b3",
+      "src": "./audio/generated/en/af_bella/8532aea121fe023947ef6aa465db8eb0.m4a"
+    },
+    {
+      "offset": 7.744062499999999,
+      "end": 12.608062499999999,
+      "sha256": "32b6792f5bae8913d2efd1ac1b39ae34ffdeb22786108c8dcda45f40bab07df7",
+      "src": "./audio/generated/en/af_bella/df7bd71596f419cc4440123327350c25.m4a"
+    },
+    {
+      "offset": 13.208062499999999,
+      "end": 14.189437499999999,
+      "sha256": "b1b1db99af89dc0cb490ea4c7bf192d8848462872eda764448fafb81c30b0725",
+      "src": "./audio/generated/en/am_puck/529fa7630222f2a8904d4c5f6e00c5af.m4a"
+    },
+    {
+      "offset": 14.789437499999998,
+      "end": 20.421437499999996,
+      "sha256": "e6b48c31cf392ad143d986944b75c30cc142c054e7fe6ec0ae51ecd739874a93",
+      "src": "./audio/generated/en/am_puck/adf9e2ac35f2ffb2541418ce75873eb0.m4a"
+    },
+    {
+      "offset": 21.021437499999998,
+      "end": 21.832124999999998,
+      "sha256": "130b34f45f4367916d497b33189e9d94e7b0582b0ed8cd697d00c0e6fdc0b978",
+      "src": "./audio/generated/en/am_puck/489b7d897a762e666c920a27b7112f0d.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " My",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.8013401031494141
+    },
+    {
+      "word": " A",
+      "start": 0.62,
+      "end": 0.9,
+      "probability": 0.8444724678993225
+    },
+    {
+      "word": " tower",
+      "start": 0.9,
+      "end": 1.18,
+      "probability": 0.48293712735176086
+    },
+    {
+      "word": " shift",
+      "start": 1.18,
+      "end": 1.56,
+      "probability": 0.9770482778549194
+    },
+    {
+      "word": " at",
+      "start": 1.56,
+      "end": 1.8,
+      "probability": 0.9943133592605591
+    },
+    {
+      "word": " the",
+      "start": 1.8,
+      "end": 1.9,
+      "probability": 0.9929366707801819
+    },
+    {
+      "word": " register",
+      "start": 1.9,
+      "end": 2.26,
+      "probability": 0.9798316359519958
+    },
+    {
+      "word": " finishes",
+      "start": 2.26,
+      "end": 2.7,
+      "probability": 0.9978698492050171
+    },
+    {
+      "word": " at",
+      "start": 2.7,
+      "end": 2.94,
+      "probability": 0.9978705644607544
+    },
+    {
+      "word": " midnight",
+      "start": 2.94,
+      "end": 3.18,
+      "probability": 0.9892037510871887
+    },
+    {
+      "word": " when",
+      "start": 3.18,
+      "end": 3.86,
+      "probability": 0.6847588419914246
+    },
+    {
+      "word": " another",
+      "start": 3.86,
+      "end": 4.14,
+      "probability": 0.9961795806884766
+    },
+    {
+      "word": " cashier",
+      "start": 4.14,
+      "end": 4.7,
+      "probability": 0.9912302494049072
+    },
+    {
+      "word": " takes",
+      "start": 4.7,
+      "end": 4.98,
+      "probability": 0.9971829652786255
+    },
+    {
+      "word": " my",
+      "start": 4.98,
+      "end": 5.18,
+      "probability": 0.9967646598815918
+    },
+    {
+      "word": " place.",
+      "start": 5.18,
+      "end": 5.58,
+      "probability": 0.9994542002677917
+    },
+    {
+      "word": " Training.",
+      "start": 6.5,
+      "end": 6.78,
+      "probability": 0.8213102221488953
+    },
+    {
+      "word": " The",
+      "start": 7.78,
+      "end": 7.9,
+      "probability": 0.9892799258232117
+    },
+    {
+      "word": " new",
+      "start": 7.9,
+      "end": 8.04,
+      "probability": 0.9963410496711731
+    },
+    {
+      "word": " drivers",
+      "start": 8.04,
+      "end": 8.42,
+      "probability": 0.986655592918396
+    },
+    {
+      "word": " need",
+      "start": 8.42,
+      "end": 8.78,
+      "probability": 0.9927200078964233
+    },
+    {
+      "word": " hands",
+      "start": 8.78,
+      "end": 9.18,
+      "probability": 0.957811176776886
+    },
+    {
+      "word": "-on",
+      "start": 9.18,
+      "end": 9.4,
+      "probability": 0.9059483408927917
+    },
+    {
+      "word": " training",
+      "start": 9.4,
+      "end": 9.84,
+      "probability": 0.9979515671730042
+    },
+    {
+      "word": " before",
+      "start": 9.84,
+      "end": 10.24,
+      "probability": 0.9138596057891846
+    },
+    {
+      "word": " they",
+      "start": 10.24,
+      "end": 10.46,
+      "probability": 0.998648464679718
+    },
+    {
+      "word": " can",
+      "start": 10.46,
+      "end": 10.64,
+      "probability": 0.9987230896949768
+    },
+    {
+      "word": " use",
+      "start": 10.64,
+      "end": 10.84,
+      "probability": 0.9990270137786865
+    },
+    {
+      "word": " the",
+      "start": 10.84,
+      "end": 10.98,
+      "probability": 0.9935529232025146
+    },
+    {
+      "word": " dispatch",
+      "start": 10.98,
+      "end": 11.26,
+      "probability": 0.9389746785163879
+    },
+    {
+      "word": " software",
+      "start": 11.26,
+      "end": 11.94,
+      "probability": 0.9965492486953735
+    },
+    {
+      "word": " alone.",
+      "start": 11.94,
+      "end": 12.32,
+      "probability": 0.9909965991973877
+    },
+    {
+      "word": " Vacancy.",
+      "start": 13.3,
+      "end": 13.7,
+      "probability": 0.9790017604827881
+    },
+    {
+      "word": " The",
+      "start": 14.74,
+      "end": 14.96,
+      "probability": 0.9936010241508484
+    },
+    {
+      "word": " accounts",
+      "start": 14.96,
+      "end": 15.28,
+      "probability": 0.5260056853294373
+    },
+    {
+      "word": " vacancy",
+      "start": 15.28,
+      "end": 15.8,
+      "probability": 0.9042277038097382
+    },
+    {
+      "word": " remains",
+      "start": 15.8,
+      "end": 16.2,
+      "probability": 0.9895392060279846
+    },
+    {
+      "word": " unfilled,",
+      "start": 16.2,
+      "end": 16.98,
+      "probability": 0.9776076972484589
+    },
+    {
+      "word": " so",
+      "start": 17.3,
+      "end": 17.46,
+      "probability": 0.9939975738525391
+    },
+    {
+      "word": " please",
+      "start": 17.46,
+      "end": 17.72,
+      "probability": 0.9974547028541565
+    },
+    {
+      "word": " advertise",
+      "start": 17.72,
+      "end": 18.3,
+      "probability": 0.9931690692901611
+    },
+    {
+      "word": " the",
+      "start": 18.3,
+      "end": 18.6,
+      "probability": 0.9960038065910339
+    },
+    {
+      "word": " opening",
+      "start": 18.6,
+      "end": 18.94,
+      "probability": 0.9978821873664856
+    },
+    {
+      "word": " for",
+      "start": 18.94,
+      "end": 19.24,
+      "probability": 0.996743381023407
+    },
+    {
+      "word": " another",
+      "start": 19.24,
+      "end": 19.44,
+      "probability": 0.9994843006134033
+    },
+    {
+      "word": " week.",
+      "start": 19.44,
+      "end": 19.82,
+      "probability": 0.9994698166847229
+    },
+    {
+      "word": " Resume.",
+      "start": 20.98,
+      "end": 21.5,
+      "probability": 0.7598684132099152
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.58,
+      "text": " My A tower shift at the register finishes at midnight when another cashier takes my place.",
+      "avgLogprob": -0.16797314778618191,
+      "noSpeechProb": 0.025251975283026695
+    },
+    {
+      "start": 6.5,
+      "end": 12.32,
+      "text": " Training. The new drivers need hands-on training before they can use the dispatch software alone.",
+      "avgLogprob": -0.16797314778618191,
+      "noSpeechProb": 0.025251975283026695
+    },
+    {
+      "start": 13.3,
+      "end": 19.82,
+      "text": " Vacancy. The accounts vacancy remains unfilled, so please advertise the opening for another week.",
+      "avgLogprob": -0.16797314778618191,
+      "noSpeechProb": 0.025251975283026695
+    },
+    {
+      "start": 20.98,
+      "end": 21.5,
+      "text": " Resume.",
+      "avgLogprob": -0.16797314778618191,
+      "noSpeechProb": 0.025251975283026695
+    }
+  ]
+}

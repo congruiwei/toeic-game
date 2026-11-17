@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "id": "796f92efb2af0a66bba15e205bf9668524d56e245c2e3e968b47e5a5c27479f6",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 4.458749999999999,
+  "elapsedSeconds": 2.749,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.021375,
+      "sha256": "c124cedbde97d77298ade080c8fbd8178f2263da4c75a6794b961a82ae5af0e2",
+      "src": "./audio/generated/en/am_puck/effffa3dee516a513ca927960eca2fc7.m4a"
+    },
+    {
+      "offset": 2.621375,
+      "end": 3.8587499999999997,
+      "sha256": "058589f620969c668b53dd6e16c5c568c9b9fc5ea96c853c94abd1d9722356b3",
+      "src": "./audio/generated/en/am_puck/2cfbae614f9703b8b2d5b6cddde7ee18.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Stop",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.8864202499389648
+    },
+    {
+      "word": " and",
+      "start": 0.68,
+      "end": 0.84,
+      "probability": 0.9694329500198364
+    },
+    {
+      "word": " report",
+      "start": 0.84,
+      "end": 1.08,
+      "probability": 0.9646577835083008
+    },
+    {
+      "word": " immediately.",
+      "start": 1.08,
+      "end": 1.6,
+      "probability": 0.9974374771118164
+    },
+    {
+      "word": " Run",
+      "start": 2.44,
+      "end": 2.82,
+      "probability": 0.9797642230987549
+    },
+    {
+      "word": " a",
+      "start": 2.82,
+      "end": 2.96,
+      "probability": 0.9940006136894226
+    },
+    {
+      "word": " second",
+      "start": 2.96,
+      "end": 3.14,
+      "probability": 0.9857267737388611
+    },
+    {
+      "word": " check.",
+      "start": 3.14,
+      "end": 3.44,
+      "probability": 0.9908427000045776
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.6,
+      "text": " Stop and report immediately.",
+      "avgLogprob": -0.3170673092206319,
+      "noSpeechProb": 0.0075093419291079044
+    },
+    {
+      "start": 2.44,
+      "end": 3.44,
+      "text": " Run a second check.",
+      "avgLogprob": -0.3170673092206319,
+      "noSpeechProb": 0.0075093419291079044
+    }
+  ]
+}

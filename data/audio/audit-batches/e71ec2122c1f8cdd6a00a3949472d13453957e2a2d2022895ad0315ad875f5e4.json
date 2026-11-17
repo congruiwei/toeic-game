@@ -1,0 +1,388 @@
+{
+  "version": 1,
+  "id": "e71ec2122c1f8cdd6a00a3949472d13453957e2a2d2022895ad0315ad875f5e4",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 20.042750000000005,
+  "elapsedSeconds": 4.103,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 4.6666875,
+      "sha256": "52352bf1b2bf378a2db15497ac28a48092a330eb6fd01f74f0729de3d2c85a99",
+      "src": "./audio/generated/en/af_bella/99f6915c7ef57dbd3150cabb6c4ef406.m4a"
+    },
+    {
+      "offset": 5.2666875,
+      "end": 6.077375,
+      "sha256": "b549b883c5b82661d332bc708220663d16bb0c48c96d8f9508bade6fa9f8be66",
+      "src": "./audio/generated/en/am_puck/23427a623d07743132f7747f3d3e60cf.m4a"
+    },
+    {
+      "offset": 6.677375,
+      "end": 11.11475,
+      "sha256": "eebc0423b129fc958ee16e9e2172fe9f96e494bfdd4a32f5362f4efbeb66eddc",
+      "src": "./audio/generated/en/am_puck/3bcbaf0331c1c1a09af84fd6d4497c9b.m4a"
+    },
+    {
+      "offset": 11.71475,
+      "end": 12.482750000000001,
+      "sha256": "3d6945ae894eb6c7f9649bc389a9d731354f8e7a7bff55a54a46783f34d0f913",
+      "src": "./audio/generated/en/af_heart/7bec9f318df0b2c9fd61981ee2b18b94.m4a"
+    },
+    {
+      "offset": 13.08275,
+      "end": 17.94675,
+      "sha256": "83a4cbab4f86c9cbd54a8962192dc76b1cefc244d9bc43d0dca4e907e6fdb6ab",
+      "src": "./audio/generated/en/af_heart/fed21f2acb55f2b7e25675903af69e98.m4a"
+    },
+    {
+      "offset": 18.546750000000003,
+      "end": 19.442750000000004,
+      "sha256": "b3a075a3044d2f051adca90ae791820648802902754483b75c0bdfbacb2f6246",
+      "src": "./audio/generated/en/am_puck/3ebf95972660d24ff7063ee89bbcd6f9.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9460527300834656
+    },
+    {
+      "word": " cargo",
+      "start": 0.54,
+      "end": 0.8,
+      "probability": 0.9928020238876343
+    },
+    {
+      "word": " vessel",
+      "start": 0.8,
+      "end": 1.18,
+      "probability": 0.9962965846061707
+    },
+    {
+      "word": " sailed",
+      "start": 1.18,
+      "end": 1.66,
+      "probability": 0.9947035908699036
+    },
+    {
+      "word": " out",
+      "start": 1.66,
+      "end": 1.9,
+      "probability": 0.9991886019706726
+    },
+    {
+      "word": " of",
+      "start": 1.9,
+      "end": 2.0,
+      "probability": 0.9966862797737122
+    },
+    {
+      "word": " the",
+      "start": 2.0,
+      "end": 2.08,
+      "probability": 0.9971404075622559
+    },
+    {
+      "word": " harbor",
+      "start": 2.08,
+      "end": 2.32,
+      "probability": 0.831984281539917
+    },
+    {
+      "word": " with",
+      "start": 2.32,
+      "end": 2.8,
+      "probability": 0.7487266659736633
+    },
+    {
+      "word": " containers",
+      "start": 2.8,
+      "end": 3.32,
+      "probability": 0.99628084897995
+    },
+    {
+      "word": " stacked",
+      "start": 3.32,
+      "end": 3.76,
+      "probability": 0.9978519678115845
+    },
+    {
+      "word": " on",
+      "start": 3.76,
+      "end": 4.02,
+      "probability": 0.9992652535438538
+    },
+    {
+      "word": " its",
+      "start": 4.02,
+      "end": 4.16,
+      "probability": 0.9805328845977783
+    },
+    {
+      "word": " deck.",
+      "start": 4.16,
+      "end": 4.44,
+      "probability": 0.9972807168960571
+    },
+    {
+      "word": " Barge.",
+      "start": 5.28,
+      "end": 5.88,
+      "probability": 0.7571631669998169
+    },
+    {
+      "word": " A",
+      "start": 6.68,
+      "end": 6.84,
+      "probability": 0.9728728532791138
+    },
+    {
+      "word": " tug",
+      "start": 6.84,
+      "end": 7.04,
+      "probability": 0.9816641807556152
+    },
+    {
+      "word": " pulled",
+      "start": 7.04,
+      "end": 7.34,
+      "probability": 0.9739102125167847
+    },
+    {
+      "word": " the",
+      "start": 7.34,
+      "end": 7.52,
+      "probability": 0.9961773157119751
+    },
+    {
+      "word": " flat",
+      "start": 7.52,
+      "end": 7.78,
+      "probability": 0.9936182498931885
+    },
+    {
+      "word": "-bottomed",
+      "start": 7.78,
+      "end": 8.14,
+      "probability": 0.936951607465744
+    },
+    {
+      "word": " barge",
+      "start": 8.14,
+      "end": 8.62,
+      "probability": 0.9966019988059998
+    },
+    {
+      "word": " loaded",
+      "start": 8.62,
+      "end": 8.88,
+      "probability": 0.9757295250892639
+    },
+    {
+      "word": " with",
+      "start": 8.88,
+      "end": 9.12,
+      "probability": 0.9987988471984863
+    },
+    {
+      "word": " gravel",
+      "start": 9.12,
+      "end": 9.52,
+      "probability": 0.9983993172645569
+    },
+    {
+      "word": " along",
+      "start": 9.52,
+      "end": 9.86,
+      "probability": 0.9977694749832153
+    },
+    {
+      "word": " the",
+      "start": 9.86,
+      "end": 10.08,
+      "probability": 0.9969565868377686
+    },
+    {
+      "word": " shallow",
+      "start": 10.08,
+      "end": 10.3,
+      "probability": 0.9945291876792908
+    },
+    {
+      "word": " canal.",
+      "start": 10.3,
+      "end": 10.68,
+      "probability": 0.9911133646965027
+    },
+    {
+      "word": " Trailer.",
+      "start": 11.68,
+      "end": 12.16,
+      "probability": 0.9617132544517517
+    },
+    {
+      "word": " After",
+      "start": 12.98,
+      "end": 13.36,
+      "probability": 0.9968763589859009
+    },
+    {
+      "word": " the",
+      "start": 13.36,
+      "end": 13.52,
+      "probability": 0.998489499092102
+    },
+    {
+      "word": " tractor",
+      "start": 13.52,
+      "end": 13.8,
+      "probability": 0.9822215437889099
+    },
+    {
+      "word": " unit",
+      "start": 13.8,
+      "end": 14.1,
+      "probability": 0.995487630367279
+    },
+    {
+      "word": " was",
+      "start": 14.1,
+      "end": 14.34,
+      "probability": 0.9989867806434631
+    },
+    {
+      "word": " uncoupled,",
+      "start": 14.34,
+      "end": 14.94,
+      "probability": 0.9972245891888937
+    },
+    {
+      "word": " the",
+      "start": 15.42,
+      "end": 15.48,
+      "probability": 0.996196985244751
+    },
+    {
+      "word": " loaded",
+      "start": 15.48,
+      "end": 15.76,
+      "probability": 0.9980560541152954
+    },
+    {
+      "word": " trailer",
+      "start": 15.76,
+      "end": 16.1,
+      "probability": 0.9944556355476379
+    },
+    {
+      "word": " remained",
+      "start": 16.1,
+      "end": 16.58,
+      "probability": 0.9973151087760925
+    },
+    {
+      "word": " on",
+      "start": 16.58,
+      "end": 16.9,
+      "probability": 0.9991651773452759
+    },
+    {
+      "word": " its",
+      "start": 16.9,
+      "end": 17.02,
+      "probability": 0.9868112206459045
+    },
+    {
+      "word": " support",
+      "start": 17.02,
+      "end": 17.3,
+      "probability": 0.9985753297805786
+    },
+    {
+      "word": " legs.",
+      "start": 17.3,
+      "end": 17.66,
+      "probability": 0.9972002506256104
+    },
+    {
+      "word": " Rail",
+      "start": 18.58,
+      "end": 18.78,
+      "probability": 0.6125965118408203
+    },
+    {
+      "word": " car.",
+      "start": 18.78,
+      "end": 19.0,
+      "probability": 0.7442091107368469
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.44,
+      "text": " The cargo vessel sailed out of the harbor with containers stacked on its deck.",
+      "avgLogprob": -0.2812648322936651,
+      "noSpeechProb": 0.014324302785098553
+    },
+    {
+      "start": 5.28,
+      "end": 5.88,
+      "text": " Barge.",
+      "avgLogprob": -0.2812648322936651,
+      "noSpeechProb": 0.014324302785098553
+    },
+    {
+      "start": 6.68,
+      "end": 10.68,
+      "text": " A tug pulled the flat-bottomed barge loaded with gravel along the shallow canal.",
+      "avgLogprob": -0.2812648322936651,
+      "noSpeechProb": 0.014324302785098553
+    },
+    {
+      "start": 11.68,
+      "end": 12.16,
+      "text": " Trailer.",
+      "avgLogprob": -0.2812648322936651,
+      "noSpeechProb": 0.014324302785098553
+    },
+    {
+      "start": 12.98,
+      "end": 17.66,
+      "text": " After the tractor unit was uncoupled, the loaded trailer remained on its support legs.",
+      "avgLogprob": -0.2812648322936651,
+      "noSpeechProb": 0.014324302785098553
+    },
+    {
+      "start": 18.58,
+      "end": 19.0,
+      "text": " Rail car.",
+      "avgLogprob": -0.2812648322936651,
+      "noSpeechProb": 0.014324302785098553
+    }
+  ]
+}

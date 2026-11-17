@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "id": "4bf6c9d3f9e40cc1bc837cc430286a4baab86690b405b22b19abe912a9ba68d9",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 3.133375,
+  "elapsedSeconds": 2.542,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.533375,
+      "sha256": "86b4b2b63d82784220ee8ea44294266fb73a1794f76cbd6594ee7b70f09d48b3",
+      "src": "./audio/generated/en/af_heart/35b14fbb0483cb85140c3f3c1fcf48a8.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.782813549041748
+    },
+    {
+      "word": " total",
+      "start": 0.54,
+      "end": 0.84,
+      "probability": 0.9916462302207947
+    },
+    {
+      "word": " leaves",
+      "start": 0.84,
+      "end": 1.2,
+      "probability": 0.9938430786132812
+    },
+    {
+      "word": " out",
+      "start": 1.2,
+      "end": 1.4,
+      "probability": 0.99830162525177
+    },
+    {
+      "word": " the",
+      "start": 1.4,
+      "end": 1.52,
+      "probability": 0.9989770650863647
+    },
+    {
+      "word": " cost",
+      "start": 1.52,
+      "end": 1.76,
+      "probability": 0.9976269602775574
+    },
+    {
+      "word": " of",
+      "start": 1.76,
+      "end": 1.88,
+      "probability": 0.9921871423721313
+    },
+    {
+      "word": " frames.",
+      "start": 1.88,
+      "end": 2.18,
+      "probability": 0.9917665123939514
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.18,
+      "text": " The total leaves out the cost of frames.",
+      "avgLogprob": -0.2763751844565074,
+      "noSpeechProb": 0.008116654120385647
+    }
+  ]
+}

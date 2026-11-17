@@ -1,0 +1,493 @@
+{
+  "version": 1,
+  "id": "06bbc90ec075f5b59d5eda570015bbff48af24f6d2edfa2445e95e1dac688b4d",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 17.778750000000002,
+  "elapsedSeconds": 5.985,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.6800000000000002,
+      "sha256": "5d1e2148cdae39d02c1b54c6afc0f49b2fcf0e5e79fbdd34b71b1f2036835d6a",
+      "src": "./audio/generated/ja/jf_alpha/55032d16514721820bbe0ca918533356.m4a"
+    },
+    {
+      "offset": 2.2800000000000002,
+      "end": 8.04,
+      "sha256": "6e4b0a95ef6f3779ce215f92b715aeb8d351db9f549f1175b3dccd44d3daf3bb",
+      "src": "./audio/generated/ja/jf_alpha/3f956950ec9c8a18dd9734a7ddf3e6f4.m4a"
+    },
+    {
+      "offset": 8.639999999999999,
+      "end": 9.450687499999999,
+      "sha256": "fa1e9f223ec889e37141a6c3f6107248fe7673c4beb16b7dd0a3c390fb9ad65a",
+      "src": "./audio/generated/ja/jf_alpha/508956bc1e252a8cf04f358205c95ff8.m4a"
+    },
+    {
+      "offset": 10.050687499999999,
+      "end": 15.8960625,
+      "sha256": "6095f1a95f91a3abcb78b02da53c302033e19ad415e869260f43dfc65a0e4b0b",
+      "src": "./audio/generated/ja/jf_alpha/5e0e2b4656020064fe98e85cda10feef.m4a"
+    },
+    {
+      "offset": 16.4960625,
+      "end": 17.17875,
+      "sha256": "10d899945c31ce04db74c887ef66a8e50036254fd0c196f647abe797a9464132",
+      "src": "./audio/generated/ja/jf_alpha/79723833b6982de379583185600336f1.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "道",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.48727384209632874
+    },
+    {
+      "word": "具",
+      "start": 0.7,
+      "end": 0.9,
+      "probability": 0.9980071187019348
+    },
+    {
+      "word": "工",
+      "start": 0.9,
+      "end": 1.2,
+      "probability": 0.7534252405166626
+    },
+    {
+      "word": "具。",
+      "start": 1.2,
+      "end": 1.4,
+      "probability": 0.999407172203064
+    },
+    {
+      "word": "引",
+      "start": 2.18,
+      "end": 2.44,
+      "probability": 0.8912740349769592
+    },
+    {
+      "word": "き",
+      "start": 2.44,
+      "end": 2.56,
+      "probability": 0.9617457389831543
+    },
+    {
+      "word": "出",
+      "start": 2.56,
+      "end": 2.66,
+      "probability": 0.9966128468513489
+    },
+    {
+      "word": "し",
+      "start": 2.66,
+      "end": 2.82,
+      "probability": 0.9951940178871155
+    },
+    {
+      "word": "の",
+      "start": 2.82,
+      "end": 2.96,
+      "probability": 0.9920661449432373
+    },
+    {
+      "word": "鍵",
+      "start": 2.96,
+      "end": 3.22,
+      "probability": 0.9554898738861084
+    },
+    {
+      "word": "上",
+      "start": 3.22,
+      "end": 3.48,
+      "probability": 0.5933607816696167
+    },
+    {
+      "word": "の",
+      "start": 3.48,
+      "end": 3.68,
+      "probability": 0.9966976642608643
+    },
+    {
+      "word": "四",
+      "start": 3.68,
+      "end": 3.82,
+      "probability": 0.2738289535045624
+    },
+    {
+      "word": "孔",
+      "start": 3.82,
+      "end": 4.0,
+      "probability": 0.6169903576374054
+    },
+    {
+      "word": "具",
+      "start": 4.0,
+      "end": 4.18,
+      "probability": 0.9986440539360046
+    },
+    {
+      "word": "は、",
+      "start": 4.18,
+      "end": 4.38,
+      "probability": 0.9672603607177734
+    },
+    {
+      "word": " 熱",
+      "start": 4.52,
+      "end": 4.68,
+      "probability": 0.4201659560203552
+    },
+    {
+      "word": "い",
+      "start": 4.68,
+      "end": 4.82,
+      "probability": 0.984569251537323
+    },
+    {
+      "word": "蓋",
+      "start": 4.82,
+      "end": 4.98,
+      "probability": 0.9366128146648407
+    },
+    {
+      "word": "に",
+      "start": 4.98,
+      "end": 5.14,
+      "probability": 0.997219443321228
+    },
+    {
+      "word": "触",
+      "start": 5.14,
+      "end": 5.32,
+      "probability": 0.978067010641098
+    },
+    {
+      "word": "れ",
+      "start": 5.32,
+      "end": 5.44,
+      "probability": 0.9921045303344727
+    },
+    {
+      "word": "ず",
+      "start": 5.44,
+      "end": 5.54,
+      "probability": 0.997017502784729
+    },
+    {
+      "word": "に",
+      "start": 5.54,
+      "end": 5.68,
+      "probability": 0.9987249970436096
+    },
+    {
+      "word": "持",
+      "start": 5.68,
+      "end": 5.82,
+      "probability": 0.9865124225616455
+    },
+    {
+      "word": "ち",
+      "start": 5.82,
+      "end": 6.0,
+      "probability": 0.9992017149925232
+    },
+    {
+      "word": "上",
+      "start": 6.0,
+      "end": 6.08,
+      "probability": 0.9450122117996216
+    },
+    {
+      "word": "げ",
+      "start": 6.08,
+      "end": 6.18,
+      "probability": 0.9993277788162231
+    },
+    {
+      "word": "る",
+      "start": 6.18,
+      "end": 6.28,
+      "probability": 0.9994300007820129
+    },
+    {
+      "word": "ため",
+      "start": 6.28,
+      "end": 6.48,
+      "probability": 0.9810559153556824
+    },
+    {
+      "word": "に",
+      "start": 6.48,
+      "end": 6.7,
+      "probability": 0.9977510571479797
+    },
+    {
+      "word": "設",
+      "start": 6.7,
+      "end": 6.86,
+      "probability": 0.9735088348388672
+    },
+    {
+      "word": "計",
+      "start": 6.86,
+      "end": 7.1,
+      "probability": 0.9856523275375366
+    },
+    {
+      "word": "さ",
+      "start": 7.1,
+      "end": 7.3,
+      "probability": 0.9949871301651001
+    },
+    {
+      "word": "れて",
+      "start": 7.3,
+      "end": 7.46,
+      "probability": 0.9955353736877441
+    },
+    {
+      "word": "います。",
+      "start": 7.46,
+      "end": 7.8,
+      "probability": 0.9859538674354553
+    },
+    {
+      "word": "材",
+      "start": 8.58,
+      "end": 8.9,
+      "probability": 0.973296046257019
+    },
+    {
+      "word": "料。",
+      "start": 8.9,
+      "end": 9.18,
+      "probability": 0.9268659949302673
+    },
+    {
+      "word": "磨",
+      "start": 10.06,
+      "end": 10.3,
+      "probability": 0.9238466024398804
+    },
+    {
+      "word": "か",
+      "start": 10.3,
+      "end": 10.54,
+      "probability": 0.9924339056015015
+    },
+    {
+      "word": "れた",
+      "start": 10.54,
+      "end": 10.76,
+      "probability": 0.9934104084968567
+    },
+    {
+      "word": "机",
+      "start": 10.76,
+      "end": 11.02,
+      "probability": 0.8019275665283203
+    },
+    {
+      "word": "を",
+      "start": 11.02,
+      "end": 11.32,
+      "probability": 0.9929070472717285
+    },
+    {
+      "word": "傷",
+      "start": 11.32,
+      "end": 11.5,
+      "probability": 0.9511841535568237
+    },
+    {
+      "word": "つ",
+      "start": 11.5,
+      "end": 11.7,
+      "probability": 0.933337926864624
+    },
+    {
+      "word": "け",
+      "start": 11.7,
+      "end": 11.84,
+      "probability": 0.9985118508338928
+    },
+    {
+      "word": "ない、",
+      "start": 11.84,
+      "end": 12.02,
+      "probability": 0.9913030862808228
+    },
+    {
+      "word": " 素",
+      "start": 12.54,
+      "end": 12.64,
+      "probability": 0.9855669736862183
+    },
+    {
+      "word": "材",
+      "start": 12.64,
+      "end": 12.88,
+      "probability": 0.9994548261165619
+    },
+    {
+      "word": "なので",
+      "start": 12.88,
+      "end": 13.16,
+      "probability": 0.9326819777488708
+    },
+    {
+      "word": "フ",
+      "start": 13.16,
+      "end": 13.42,
+      "probability": 0.6956095099449158
+    },
+    {
+      "word": "ェ",
+      "start": 13.42,
+      "end": 13.46,
+      "probability": 0.9560694694519043
+    },
+    {
+      "word": "ル",
+      "start": 13.46,
+      "end": 13.5,
+      "probability": 0.9980917572975159
+    },
+    {
+      "word": "ト",
+      "start": 13.5,
+      "end": 13.66,
+      "probability": 0.9925708174705505
+    },
+    {
+      "word": "の",
+      "start": 13.66,
+      "end": 13.78,
+      "probability": 0.9980067610740662
+    },
+    {
+      "word": "シ",
+      "start": 13.78,
+      "end": 14.0,
+      "probability": 0.9695646166801453
+    },
+    {
+      "word": "ート",
+      "start": 14.0,
+      "end": 14.16,
+      "probability": 0.9944604635238647
+    },
+    {
+      "word": "から",
+      "start": 14.16,
+      "end": 14.4,
+      "probability": 0.9977413415908813
+    },
+    {
+      "word": "パ",
+      "start": 14.4,
+      "end": 14.6,
+      "probability": 0.9224079847335815
+    },
+    {
+      "word": "ッ",
+      "start": 14.6,
+      "end": 14.72,
+      "probability": 0.859677791595459
+    },
+    {
+      "word": "ド",
+      "start": 14.72,
+      "end": 14.8,
+      "probability": 0.9253776669502258
+    },
+    {
+      "word": "を",
+      "start": 14.8,
+      "end": 14.94,
+      "probability": 0.9947385191917419
+    },
+    {
+      "word": "切",
+      "start": 14.94,
+      "end": 15.08,
+      "probability": 0.9756345152854919
+    },
+    {
+      "word": "り",
+      "start": 15.08,
+      "end": 15.16,
+      "probability": 0.9962104558944702
+    },
+    {
+      "word": "出",
+      "start": 15.16,
+      "end": 15.26,
+      "probability": 0.8993746042251587
+    },
+    {
+      "word": "しました。",
+      "start": 15.26,
+      "end": 15.64,
+      "probability": 0.9938185811042786
+    },
+    {
+      "word": "部",
+      "start": 16.5,
+      "end": 16.78,
+      "probability": 0.8096514940261841
+    },
+    {
+      "word": "品。",
+      "start": 16.78,
+      "end": 16.98,
+      "probability": 0.9992813467979431
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.8,
+      "text": "道具工具。引き出しの鍵上の四孔具は、 熱い蓋に触れずに持ち上げるために設計されています。",
+      "avgLogprob": -0.19408479169174864,
+      "noSpeechProb": 0.024605119600892067
+    },
+    {
+      "start": 8.58,
+      "end": 15.64,
+      "text": "材料。磨かれた机を傷つけない、 素材なのでフェルトのシートからパッドを切り出しました。",
+      "avgLogprob": -0.19408479169174864,
+      "noSpeechProb": 0.024605119600892067
+    },
+    {
+      "start": 16.5,
+      "end": 16.98,
+      "text": "部品。",
+      "avgLogprob": -0.19408479169174864,
+      "noSpeechProb": 0.024605119600892067
+    }
+  ]
+}

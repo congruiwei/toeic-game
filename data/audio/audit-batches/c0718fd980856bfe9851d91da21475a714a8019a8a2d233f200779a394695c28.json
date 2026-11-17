@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "id": "c0718fd980856bfe9851d91da21475a714a8019a8a2d233f200779a394695c28",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.658687499999999,
+  "elapsedSeconds": 3.125,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.6,
+      "sha256": "85913d600876cff71612457c43035dff82a6ca8e6a2293e1e9f97f576e2d85d6",
+      "src": "./audio/generated/en/af_bella/e53524108717180e242c463374e6670c.m4a"
+    },
+    {
+      "offset": 4.2,
+      "end": 7.0586875,
+      "sha256": "174526f9a4051f3de94b2b71871ad6314e5823a9d195152b8484ca726c68c55e",
+      "src": "./audio/generated/en/af_bella/4adfb18a0e875c1b400f9fa12825cd6e.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9118618369102478
+    },
+    {
+      "word": " winter",
+      "start": 0.54,
+      "end": 0.76,
+      "probability": 0.7571295499801636
+    },
+    {
+      "word": " figures",
+      "start": 0.76,
+      "end": 1.22,
+      "probability": 0.9915850162506104
+    },
+    {
+      "word": " were",
+      "start": 1.22,
+      "end": 1.6,
+      "probability": 0.9872633814811707
+    },
+    {
+      "word": " submitted",
+      "start": 1.6,
+      "end": 2.04,
+      "probability": 0.9957019686698914
+    },
+    {
+      "word": " in",
+      "start": 2.04,
+      "end": 2.48,
+      "probability": 0.9934508800506592
+    },
+    {
+      "word": " a",
+      "start": 2.48,
+      "end": 2.58,
+      "probability": 0.9979231953620911
+    },
+    {
+      "word": " separate",
+      "start": 2.58,
+      "end": 2.88,
+      "probability": 0.9953868985176086
+    },
+    {
+      "word": " folder.",
+      "start": 2.88,
+      "end": 3.3,
+      "probability": 0.9961275458335876
+    },
+    {
+      "word": " The",
+      "start": 4.18,
+      "end": 4.34,
+      "probability": 0.9830840229988098
+    },
+    {
+      "word": " energy",
+      "start": 4.34,
+      "end": 4.62,
+      "probability": 0.9569026827812195
+    },
+    {
+      "word": " display",
+      "start": 4.62,
+      "end": 5.04,
+      "probability": 0.9943918585777283
+    },
+    {
+      "word": " shows",
+      "start": 5.04,
+      "end": 5.5,
+      "probability": 0.9897262454032898
+    },
+    {
+      "word": " readings",
+      "start": 5.5,
+      "end": 5.88,
+      "probability": 0.9908396601676941
+    },
+    {
+      "word": " in",
+      "start": 5.88,
+      "end": 6.2,
+      "probability": 0.8652288317680359
+    },
+    {
+      "word": " whole",
+      "start": 6.2,
+      "end": 6.4,
+      "probability": 0.9683730602264404
+    },
+    {
+      "word": " units.",
+      "start": 6.4,
+      "end": 6.72,
+      "probability": 0.9947571754455566
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.3,
+      "text": " The winter figures were submitted in a separate folder.",
+      "avgLogprob": -0.21223988259832063,
+      "noSpeechProb": 0.0009300493402406573
+    },
+    {
+      "start": 4.18,
+      "end": 6.72,
+      "text": " The energy display shows readings in whole units.",
+      "avgLogprob": -0.21223988259832063,
+      "noSpeechProb": 0.0009300493402406573
+    }
+  ]
+}

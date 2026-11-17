@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "id": "455290c2e2fa29d415db06ff3c64c5339142aa830bdd801fffdd0b5bc2b1b11e",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 1.8106875000000002,
+  "elapsedSeconds": 3.448,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.2106875000000001,
+      "sha256": "f882536afea441b44494ce8d18e71e098d5981d0b998deb2f9f4f20df339f5e0",
+      "src": "./audio/generated/en/af_bella/1cafaf426c07d9005c97a145476d2aa3.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Approves",
+      "start": 0.0,
+      "end": 1.02,
+      "probability": 0.6276939213275909
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.02,
+      "text": " Approves",
+      "avgLogprob": -0.5289473056793212,
+      "noSpeechProb": 0.01990777812898159
+    }
+  ]
+}

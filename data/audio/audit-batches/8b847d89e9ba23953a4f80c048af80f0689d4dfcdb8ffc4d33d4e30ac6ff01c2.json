@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "id": "8b847d89e9ba23953a4f80c048af80f0689d4dfcdb8ffc4d33d4e30ac6ff01c2",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 8.048124999999999,
+  "elapsedSeconds": 2.679,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.424,
+      "sha256": "7b0a529a28299c5c1a1281f1bcb7e7e130218d5394cdff712cd39a67379285e2",
+      "src": "./audio/generated/en/am_puck/9eebd30a53466481c166da80a703bf02.m4a"
+    },
+    {
+      "offset": 2.024,
+      "end": 3.3893750000000002,
+      "sha256": "b57d11cec019dc5b337cba57f29f53bbc47207a6c22e4a439af03bcb1fdc1a53",
+      "src": "./audio/generated/en/am_puck/521139e3da601919b0141d3c8abfd31e.m4a"
+    },
+    {
+      "offset": 3.9893750000000003,
+      "end": 5.35475,
+      "sha256": "4d1b2e72c8f403778247009c473d413b719f9a8fec3d0dc5cf354ac0a2a17645",
+      "src": "./audio/generated/en/am_puck/64e504c1c9e40db727b63ead944777c4.m4a"
+    },
+    {
+      "offset": 5.95475,
+      "end": 7.448124999999999,
+      "sha256": "25466b099e0d1f22a31af36d530f0deb27069df63b8b321f7e36119ba8657aa3",
+      "src": "./audio/generated/en/am_puck/8f29a752f54a7e783a078109c90eb9e3.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " It",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.8175749182701111
+    },
+    {
+      "word": " has",
+      "start": 0.54,
+      "end": 0.66,
+      "probability": 0.9805411696434021
+    },
+    {
+      "word": " a",
+      "start": 0.66,
+      "end": 0.76,
+      "probability": 0.9872850775718689
+    },
+    {
+      "word": " lock.",
+      "start": 0.76,
+      "end": 1.04,
+      "probability": 0.9958796501159668
+    },
+    {
+      "word": " It",
+      "start": 2.1,
+      "end": 2.16,
+      "probability": 0.949446439743042
+    },
+    {
+      "word": " holds",
+      "start": 2.16,
+      "end": 2.32,
+      "probability": 0.9940916895866394
+    },
+    {
+      "word": " more",
+      "start": 2.32,
+      "end": 2.46,
+      "probability": 0.9988855719566345
+    },
+    {
+      "word": " boxes.",
+      "start": 2.46,
+      "end": 2.84,
+      "probability": 0.9943061470985413
+    },
+    {
+      "word": " The",
+      "start": 3.92,
+      "end": 4.14,
+      "probability": 0.9803754687309265
+    },
+    {
+      "word": " path",
+      "start": 4.14,
+      "end": 4.34,
+      "probability": 0.9951926469802856
+    },
+    {
+      "word": " is",
+      "start": 4.34,
+      "end": 4.48,
+      "probability": 0.9963299632072449
+    },
+    {
+      "word": " too",
+      "start": 4.48,
+      "end": 4.66,
+      "probability": 0.9941409230232239
+    },
+    {
+      "word": " narrow.",
+      "start": 4.66,
+      "end": 4.96,
+      "probability": 0.9998136162757874
+    },
+    {
+      "word": " Another",
+      "start": 5.94,
+      "end": 6.16,
+      "probability": 0.9590915441513062
+    },
+    {
+      "word": " car",
+      "start": 6.16,
+      "end": 6.4,
+      "probability": 0.9390354156494141
+    },
+    {
+      "word": " is",
+      "start": 6.4,
+      "end": 6.62,
+      "probability": 0.9968383312225342
+    },
+    {
+      "word": " damaged.",
+      "start": 6.62,
+      "end": 6.94,
+      "probability": 0.9988574981689453
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.94,
+      "text": " It has a lock. It holds more boxes. The path is too narrow. Another car is damaged.",
+      "avgLogprob": -0.2183666080236435,
+      "noSpeechProb": 0.007059612311422825
+    }
+  ]
+}

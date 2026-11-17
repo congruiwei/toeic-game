@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "id": "407258bc80f664c29034c76aba6550edbee982ba7df12ec1f44dc96d33b67761",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 2.5786875,
+  "elapsedSeconds": 3.074,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.9786875,
+      "sha256": "94a33d39cbd630afa7467b4f01aa5d5b485df322a4d7d678e80e7d6cc13d97bd",
+      "src": "./audio/generated/ja/jf_alpha/a23852b9e694919a6b2d4e97f5798256.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "日",
+      "start": 0.0,
+      "end": 0.6,
+      "probability": 0.2901919186115265
+    },
+    {
+      "word": "程",
+      "start": 0.6,
+      "end": 0.88,
+      "probability": 0.9601248502731323
+    },
+    {
+      "word": "を",
+      "start": 0.88,
+      "end": 1.06,
+      "probability": 0.9804899096488953
+    },
+    {
+      "word": "変",
+      "start": 1.06,
+      "end": 1.22,
+      "probability": 0.9945741295814514
+    },
+    {
+      "word": "更",
+      "start": 1.22,
+      "end": 1.46,
+      "probability": 0.9953057169914246
+    },
+    {
+      "word": "する",
+      "start": 1.46,
+      "end": 1.74,
+      "probability": 0.9935152530670166
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.74,
+      "text": "日程を変更する",
+      "avgLogprob": -0.3914766311645508,
+      "noSpeechProb": 0.028213173151016235
+    }
+  ]
+}

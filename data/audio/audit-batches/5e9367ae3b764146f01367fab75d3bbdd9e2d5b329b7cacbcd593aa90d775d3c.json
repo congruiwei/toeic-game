@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "id": "5e9367ae3b764146f01367fab75d3bbdd9e2d5b329b7cacbcd593aa90d775d3c",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.5520625,
+  "elapsedSeconds": 3.444,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.8933749999999998,
+      "sha256": "f09584f5119d6cb6ee84f4c36f0d9c58452ebe328fa1283aab46db28d0dae78b",
+      "src": "./audio/generated/ja/jf_alpha/0bf73f731384f8b70f57d859d0f55433.m4a"
+    },
+    {
+      "offset": 2.493375,
+      "end": 3.8160625,
+      "sha256": "8f5107a10936c3fae1e2066b650d5a0e0dda8447419265533053a05a4dc81ba7",
+      "src": "./audio/generated/ja/jf_alpha/2d6b37358428792f0bb4b76df123ae18.m4a"
+    },
+    {
+      "offset": 4.4160625,
+      "end": 5.9520625,
+      "sha256": "0d9153ac289bab1566bd3c13f0f77c4b6f236454d4de063ba43929b6f52705f8",
+      "src": "./audio/generated/ja/jf_alpha/092d8d0b541a914321d3edf1ed4e407c.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "8",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.7851038575172424
+    },
+    {
+      "word": "時",
+      "start": 0.7,
+      "end": 0.92,
+      "probability": 0.9824877381324768
+    },
+    {
+      "word": "45",
+      "start": 0.92,
+      "end": 1.14,
+      "probability": 0.9765526652336121
+    },
+    {
+      "word": "分。",
+      "start": 1.14,
+      "end": 2.18,
+      "probability": 0.9972096085548401
+    },
+    {
+      "word": "9",
+      "start": 2.18,
+      "end": 2.68,
+      "probability": 0.8737692832946777
+    },
+    {
+      "word": "時",
+      "start": 2.68,
+      "end": 2.86,
+      "probability": 0.9973387122154236
+    },
+    {
+      "word": "15",
+      "start": 2.86,
+      "end": 3.26,
+      "probability": 0.9840214848518372
+    },
+    {
+      "word": "分。",
+      "start": 3.26,
+      "end": 3.56,
+      "probability": 0.9972902536392212
+    },
+    {
+      "word": "8",
+      "start": 4.0,
+      "end": 4.68,
+      "probability": 0.9695825576782227
+    },
+    {
+      "word": "時",
+      "start": 4.68,
+      "end": 4.94,
+      "probability": 0.9951707720756531
+    },
+    {
+      "word": "30",
+      "start": 4.94,
+      "end": 5.2,
+      "probability": 0.9848527312278748
+    },
+    {
+      "word": "分。",
+      "start": 5.2,
+      "end": 5.66,
+      "probability": 0.9993213415145874
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.66,
+      "text": "8時45分。9時15分。8時30分。",
+      "avgLogprob": -0.29206229249636334,
+      "noSpeechProb": 0.0950845330953598
+    }
+  ]
+}

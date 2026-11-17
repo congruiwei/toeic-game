@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "id": "59065fc78f9c033615a63afbbeeb863ab0bba92b3451b7e03eb11aa5c97a2371",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 17.904062500000002,
+  "elapsedSeconds": 4.907,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.672000000000001,
+      "sha256": "6f542376ad9743a4f9382fbc9a5391982703e6bc1a8f0d3b5b4b6640c2b3a267",
+      "src": "./audio/generated/en/am_puck/2cb77357c7a2476a1676ccaea898fb03.m4a"
+    },
+    {
+      "offset": 7.272,
+      "end": 8.3386875,
+      "sha256": "fbb8e622d4ea0e59030dfb1d95050bff8fe2e40254602a924bfe0781adfa2bb5",
+      "src": "./audio/generated/en/af_bella/a9404fa76781d1ac23eae64d742d265b.m4a"
+    },
+    {
+      "offset": 8.9386875,
+      "end": 15.893375,
+      "sha256": "b0965044892f61c1627b86f63c271b7506fcd0d07160f05be05c30e02d33a2d6",
+      "src": "./audio/generated/en/af_bella/d0bd958fbb07119fb4bdc3a254cd91e6.m4a"
+    },
+    {
+      "offset": 16.493375,
+      "end": 17.3040625,
+      "sha256": "a516e0d26ceb0b2eb867767c7318e86e61b1915df31c967816fcd6e86f124da3",
+      "src": "./audio/generated/en/af_bella/b0e9cd92bcd7d86985e8fff2da77c05c.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " We",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.8228365778923035
+    },
+    {
+      "word": " printed",
+      "start": 0.56,
+      "end": 0.86,
+      "probability": 0.9900791645050049
+    },
+    {
+      "word": " a",
+      "start": 0.86,
+      "end": 1.02,
+      "probability": 0.9801445007324219
+    },
+    {
+      "word": " one",
+      "start": 1.02,
+      "end": 1.28,
+      "probability": 0.9203466176986694
+    },
+    {
+      "word": "-page",
+      "start": 1.28,
+      "end": 1.56,
+      "probability": 0.9093571305274963
+    },
+    {
+      "word": " flyer",
+      "start": 1.56,
+      "end": 2.14,
+      "probability": 0.8607816100120544
+    },
+    {
+      "word": " advertising",
+      "start": 2.14,
+      "end": 2.74,
+      "probability": 0.9751095175743103
+    },
+    {
+      "word": " Saturday's",
+      "start": 2.74,
+      "end": 3.64,
+      "probability": 0.9313999116420746
+    },
+    {
+      "word": " sale",
+      "start": 3.64,
+      "end": 3.9,
+      "probability": 0.980440080165863
+    },
+    {
+      "word": " and",
+      "start": 3.9,
+      "end": 4.18,
+      "probability": 0.9210149645805359
+    },
+    {
+      "word": " handed",
+      "start": 4.18,
+      "end": 4.52,
+      "probability": 0.9930552840232849
+    },
+    {
+      "word": " copies",
+      "start": 4.52,
+      "end": 4.92,
+      "probability": 0.9991324543952942
+    },
+    {
+      "word": " to",
+      "start": 4.92,
+      "end": 5.2,
+      "probability": 0.998325765132904
+    },
+    {
+      "word": " shoppers",
+      "start": 5.2,
+      "end": 5.66,
+      "probability": 0.9931144416332245
+    },
+    {
+      "word": " at",
+      "start": 5.66,
+      "end": 5.78,
+      "probability": 0.9933479428291321
+    },
+    {
+      "word": " the",
+      "start": 5.78,
+      "end": 5.86,
+      "probability": 0.9976377487182617
+    },
+    {
+      "word": " station.",
+      "start": 5.86,
+      "end": 6.24,
+      "probability": 0.9897336363792419
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.24,
+      "text": " We printed a one-page flyer advertising Saturday's sale and handed copies to shoppers at the station.",
+      "avgLogprob": -0.23491208553314208,
+      "noSpeechProb": 0.014308969490230083
+    }
+  ]
+}

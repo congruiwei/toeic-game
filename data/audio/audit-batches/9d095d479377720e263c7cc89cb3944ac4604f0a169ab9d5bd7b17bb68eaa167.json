@@ -1,0 +1,564 @@
+{
+  "version": 1,
+  "id": "9d095d479377720e263c7cc89cb3944ac4604f0a169ab9d5bd7b17bb68eaa167",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.5654375,
+  "elapsedSeconds": 5.401,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.6186875,
+      "sha256": "8f3e708cf9643e98f65c60a8df44d9d417cdba08684de87afcdf8aa39c23294d",
+      "src": "./audio/generated/ja/jf_alpha/c26487a79bf64c8757664a70d721784a.m4a"
+    },
+    {
+      "offset": 3.2186875,
+      "end": 8.2106875,
+      "sha256": "a33e596af77607705790ffa0204a83f9b8d2a997e560fe58e5f937d3e1889559",
+      "src": "./audio/generated/ja/jf_alpha/9a540b93e11dd016a2e13062bbe404a0.m4a"
+    },
+    {
+      "offset": 8.8106875,
+      "end": 9.706687500000001,
+      "sha256": "d88ede1743976367a24437feb8dd4e0c058d06599442dac5983c9f89bbe03a41",
+      "src": "./audio/generated/ja/jf_alpha/cb1a380096c0f859687f3809f5737c71.m4a"
+    },
+    {
+      "offset": 10.3066875,
+      "end": 11.757375,
+      "sha256": "0b3e59bfcc46c37672b966ac6c1c1a0393fad9496dd5a52e88a0acfd02de17aa",
+      "src": "./audio/generated/ja/jf_alpha/d9ee0d5503e51aef87e0cb7d9b36870a.m4a"
+    },
+    {
+      "offset": 12.357375,
+      "end": 13.381374999999998,
+      "sha256": "f6a81603fde42f0468a19fa158fb1fcfd56de859e0b7885c4509ded227ebb794",
+      "src": "./audio/generated/ja/jf_alpha/1811dfea8fe9e0eb044fa548959b8b10.m4a"
+    },
+    {
+      "offset": 13.981374999999998,
+      "end": 15.133374999999997,
+      "sha256": "c9ee8f93ff0b5a75c32e00b8b170e2d9bf10993449aa40d5047735cea3dda9a4",
+      "src": "./audio/generated/ja/jf_alpha/c2031cdd6901ebda8d414729fd1c2e6e.m4a"
+    },
+    {
+      "offset": 15.733374999999997,
+      "end": 18.848062499999997,
+      "sha256": "fd9c22c1e55b1e9bc053253d6f975e679af067d1301de6dad0583be714a9ccfc",
+      "src": "./audio/generated/ja/jf_alpha/fca0d46cb67c3f5f4e62528f02bf9a97.m4a"
+    },
+    {
+      "offset": 19.4480625,
+      "end": 21.9654375,
+      "sha256": "de5f039c3568563e8c5a94d2dd04bf291ed7d8cfffce5b4f8c871594eb6694a2",
+      "src": "./audio/generated/ja/jf_alpha/540bd3038b88746a47b642b263a6fa3f.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "弁",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.6602206230163574
+    },
+    {
+      "word": "地",
+      "start": 0.64,
+      "end": 0.86,
+      "probability": 0.381807416677475
+    },
+    {
+      "word": "を",
+      "start": 0.86,
+      "end": 1.02,
+      "probability": 0.9847694635391235
+    },
+    {
+      "word": "安全",
+      "start": 1.02,
+      "end": 1.32,
+      "probability": 0.986968994140625
+    },
+    {
+      "word": "に",
+      "start": 1.32,
+      "end": 1.62,
+      "probability": 0.9972911477088928
+    },
+    {
+      "word": "お",
+      "start": 1.62,
+      "end": 1.74,
+      "probability": 0.5558544397354126
+    },
+    {
+      "word": "ける",
+      "start": 1.74,
+      "end": 1.9,
+      "probability": 0.9995970129966736
+    },
+    {
+      "word": "か",
+      "start": 1.9,
+      "end": 2.06,
+      "probability": 0.9930033087730408
+    },
+    {
+      "word": "どう",
+      "start": 2.06,
+      "end": 2.22,
+      "probability": 0.9811938405036926
+    },
+    {
+      "word": "か。",
+      "start": 2.22,
+      "end": 2.44,
+      "probability": 0.998923122882843
+    },
+    {
+      "word": "中",
+      "start": 3.32,
+      "end": 3.5,
+      "probability": 0.9028147459030151
+    },
+    {
+      "word": "庭",
+      "start": 3.5,
+      "end": 3.84,
+      "probability": 0.9872802793979645
+    },
+    {
+      "word": "に",
+      "start": 3.84,
+      "end": 4.0,
+      "probability": 0.9915607571601868
+    },
+    {
+      "word": "関",
+      "start": 4.0,
+      "end": 4.2,
+      "probability": 0.9827093482017517
+    },
+    {
+      "word": "する",
+      "start": 4.2,
+      "end": 4.5,
+      "probability": 0.9978541731834412
+    },
+    {
+      "word": "議",
+      "start": 4.5,
+      "end": 4.7,
+      "probability": 0.20604577660560608
+    },
+    {
+      "word": "事",
+      "start": 4.7,
+      "end": 4.8,
+      "probability": 0.9190608859062195
+    },
+    {
+      "word": "録",
+      "start": 4.8,
+      "end": 4.98,
+      "probability": 0.9419286251068115
+    },
+    {
+      "word": "の",
+      "start": 4.98,
+      "end": 5.16,
+      "probability": 0.9789642691612244
+    },
+    {
+      "word": "3",
+      "start": 5.16,
+      "end": 5.38,
+      "probability": 0.6481752395629883
+    },
+    {
+      "word": "分",
+      "start": 5.38,
+      "end": 5.58,
+      "probability": 0.931274950504303
+    },
+    {
+      "word": "目",
+      "start": 5.58,
+      "end": 5.76,
+      "probability": 0.9943069815635681
+    },
+    {
+      "word": "で",
+      "start": 5.76,
+      "end": 5.9,
+      "probability": 0.8408638834953308
+    },
+    {
+      "word": "区",
+      "start": 5.9,
+      "end": 6.02,
+      "probability": 0.6482132226228714
+    },
+    {
+      "word": "有",
+      "start": 6.02,
+      "end": 6.14,
+      "probability": 0.6245075464248657
+    },
+    {
+      "word": "に",
+      "start": 6.14,
+      "end": 6.26,
+      "probability": 0.9926655888557434
+    },
+    {
+      "word": "最",
+      "start": 6.26,
+      "end": 6.44,
+      "probability": 0.7700325846672058
+    },
+    {
+      "word": "も",
+      "start": 6.44,
+      "end": 6.72,
+      "probability": 0.9995549321174622
+    },
+    {
+      "word": "近",
+      "start": 6.72,
+      "end": 6.92,
+      "probability": 0.978373646736145
+    },
+    {
+      "word": "い",
+      "start": 6.92,
+      "end": 7.1,
+      "probability": 0.9769759774208069
+    },
+    {
+      "word": "意",
+      "start": 7.1,
+      "end": 7.22,
+      "probability": 0.9981687068939209
+    },
+    {
+      "word": "味",
+      "start": 7.22,
+      "end": 7.28,
+      "probability": 0.999421238899231
+    },
+    {
+      "word": "は",
+      "start": 7.28,
+      "end": 7.44,
+      "probability": 0.9937552213668823
+    },
+    {
+      "word": "ど",
+      "start": 7.44,
+      "end": 7.56,
+      "probability": 0.9903112649917603
+    },
+    {
+      "word": "れ",
+      "start": 7.56,
+      "end": 7.66,
+      "probability": 0.9976423382759094
+    },
+    {
+      "word": "ですか。",
+      "start": 7.66,
+      "end": 8.0,
+      "probability": 0.9829777479171753
+    },
+    {
+      "word": "透",
+      "start": 8.88,
+      "end": 9.02,
+      "probability": 0.7052459716796875
+    },
+    {
+      "word": "明",
+      "start": 9.02,
+      "end": 9.26,
+      "probability": 0.9993658661842346
+    },
+    {
+      "word": "な。",
+      "start": 9.26,
+      "end": 9.5,
+      "probability": 0.9945214986801147
+    },
+    {
+      "word": "障",
+      "start": 10.34,
+      "end": 10.62,
+      "probability": 0.9217868745326996
+    },
+    {
+      "word": "害",
+      "start": 10.62,
+      "end": 10.9,
+      "probability": 0.902826726436615
+    },
+    {
+      "word": "物",
+      "start": 10.9,
+      "end": 11.1,
+      "probability": 0.9844868779182434
+    },
+    {
+      "word": "の",
+      "start": 11.1,
+      "end": 11.3,
+      "probability": 0.9892274141311646
+    },
+    {
+      "word": "ない。",
+      "start": 11.3,
+      "end": 11.54,
+      "probability": 0.9215623736381531
+    },
+    {
+      "word": "雲",
+      "start": 12.46,
+      "end": 12.62,
+      "probability": 0.8187549114227295
+    },
+    {
+      "word": "の",
+      "start": 12.62,
+      "end": 12.86,
+      "probability": 0.9969074130058289
+    },
+    {
+      "word": "ない。",
+      "start": 12.86,
+      "end": 13.12,
+      "probability": 0.9933564066886902
+    },
+    {
+      "word": "紛",
+      "start": 14.04,
+      "end": 14.24,
+      "probability": 0.8197666108608246
+    },
+    {
+      "word": "れ",
+      "start": 14.24,
+      "end": 14.46,
+      "probability": 0.9955137372016907
+    },
+    {
+      "word": "も",
+      "start": 14.46,
+      "end": 14.6,
+      "probability": 0.9842214584350586
+    },
+    {
+      "word": "ない。",
+      "start": 14.6,
+      "end": 14.86,
+      "probability": 0.9793947339057922
+    },
+    {
+      "word": "議",
+      "start": 15.82,
+      "end": 15.94,
+      "probability": 0.9928159713745117
+    },
+    {
+      "word": "事",
+      "start": 15.94,
+      "end": 16.08,
+      "probability": 0.9954802989959717
+    },
+    {
+      "word": "録",
+      "start": 16.08,
+      "end": 16.24,
+      "probability": 0.9986901879310608
+    },
+    {
+      "word": "から",
+      "start": 16.24,
+      "end": 16.52,
+      "probability": 0.9990537762641907
+    },
+    {
+      "word": "裏",
+      "start": 16.52,
+      "end": 16.8,
+      "probability": 0.9023413360118866
+    },
+    {
+      "word": "付",
+      "start": 16.8,
+      "end": 16.94,
+      "probability": 0.7797271013259888
+    },
+    {
+      "word": "け",
+      "start": 16.94,
+      "end": 17.1,
+      "probability": 0.9934572577476501
+    },
+    {
+      "word": "ら",
+      "start": 17.1,
+      "end": 17.18,
+      "probability": 0.9993327260017395
+    },
+    {
+      "word": "れない",
+      "start": 17.18,
+      "end": 17.44,
+      "probability": 0.983911395072937
+    },
+    {
+      "word": "技",
+      "start": 17.44,
+      "end": 17.72,
+      "probability": 0.8792811036109924
+    },
+    {
+      "word": "術",
+      "start": 17.72,
+      "end": 17.9,
+      "probability": 0.9995134472846985
+    },
+    {
+      "word": "は",
+      "start": 17.9,
+      "end": 18.04,
+      "probability": 0.9984360337257385
+    },
+    {
+      "word": "ど",
+      "start": 18.04,
+      "end": 18.16,
+      "probability": 0.998869001865387
+    },
+    {
+      "word": "れ",
+      "start": 18.16,
+      "end": 18.26,
+      "probability": 0.9994009733200073
+    },
+    {
+      "word": "ですか。",
+      "start": 18.26,
+      "end": 18.6,
+      "probability": 0.9964428544044495
+    },
+    {
+      "word": "プ",
+      "start": 19.48,
+      "end": 19.64,
+      "probability": 0.9801212549209595
+    },
+    {
+      "word": "ラ",
+      "start": 19.64,
+      "end": 19.76,
+      "probability": 0.9900593161582947
+    },
+    {
+      "word": "ン",
+      "start": 19.76,
+      "end": 19.88,
+      "probability": 0.7891062498092651
+    },
+    {
+      "word": "ター",
+      "start": 19.88,
+      "end": 20.02,
+      "probability": 0.9897137880325317
+    },
+    {
+      "word": "の",
+      "start": 20.02,
+      "end": 20.2,
+      "probability": 0.9985986351966858
+    },
+    {
+      "word": "得",
+      "start": 20.2,
+      "end": 20.38,
+      "probability": 0.6055036783218384
+    },
+    {
+      "word": "票",
+      "start": 20.38,
+      "end": 20.66,
+      "probability": 0.8578123450279236
+    },
+    {
+      "word": "数",
+      "start": 20.66,
+      "end": 20.9,
+      "probability": 0.9973621964454651
+    },
+    {
+      "word": "は",
+      "start": 20.9,
+      "end": 21.06,
+      "probability": 0.9949760437011719
+    },
+    {
+      "word": "少",
+      "start": 21.06,
+      "end": 21.22,
+      "probability": 0.9971845746040344
+    },
+    {
+      "word": "な",
+      "start": 21.22,
+      "end": 21.42,
+      "probability": 0.9922620058059692
+    },
+    {
+      "word": "かった。",
+      "start": 21.42,
+      "end": 21.66,
+      "probability": 0.996935248374939
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 8.0,
+      "text": "弁地を安全におけるかどうか。中庭に関する議事録の3分目で区有に最も近い意味はどれですか。",
+      "avgLogprob": -0.18842895582318306,
+      "noSpeechProb": 0.032593678683042526
+    },
+    {
+      "start": 8.88,
+      "end": 21.66,
+      "text": "透明な。障害物のない。雲のない。紛れもない。議事録から裏付けられない技術はどれですか。プランターの得票数は少なかった。",
+      "avgLogprob": -0.18842895582318306,
+      "noSpeechProb": 0.032593678683042526
+    }
+  ]
+}

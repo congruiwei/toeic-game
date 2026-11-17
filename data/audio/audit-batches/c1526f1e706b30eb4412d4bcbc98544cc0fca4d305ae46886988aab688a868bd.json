@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "id": "c1526f1e706b30eb4412d4bcbc98544cc0fca4d305ae46886988aab688a868bd",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.637375,
+  "elapsedSeconds": 2.99,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.8506874999999998,
+      "sha256": "c0d61ef2c1308e579cd8e6c7e4795261cf97bc628f8ab6b7dde34b8c61f20e7a",
+      "src": "./audio/generated/en/am_puck/a3e7c0bdb13aa640818b5c041b389830.m4a"
+    },
+    {
+      "offset": 2.4506875,
+      "end": 3.8586875,
+      "sha256": "3f3d151d88ee5dc61d628b70bb09286ab9f99c7dda6dfdaeeacc866790b5fb00",
+      "src": "./audio/generated/en/am_puck/5a770056f86e9813bbe12cc22d9c09bf.m4a"
+    },
+    {
+      "offset": 4.4586875,
+      "end": 6.037375,
+      "sha256": "090b79281b03c39bfe094ecd9d20ddbbc779abacbb691ea00460b4202d58ff3a",
+      "src": "./audio/generated/en/am_puck/64fc29f5e8ce26aff86e7f63e72f9f7b.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Entering",
+      "start": 0.0,
+      "end": 0.74,
+      "probability": 0.7953189015388489
+    },
+    {
+      "word": " an",
+      "start": 0.74,
+      "end": 0.82,
+      "probability": 0.975915789604187
+    },
+    {
+      "word": " email",
+      "start": 0.82,
+      "end": 1.02,
+      "probability": 0.9183549880981445
+    },
+    {
+      "word": " address.",
+      "start": 1.02,
+      "end": 1.48,
+      "probability": 0.9973660111427307
+    },
+    {
+      "word": " Sharing",
+      "start": 2.04,
+      "end": 2.72,
+      "probability": 0.9808441996574402
+    },
+    {
+      "word": " the",
+      "start": 2.72,
+      "end": 2.9,
+      "probability": 0.9899133443832397
+    },
+    {
+      "word": " referral",
+      "start": 2.9,
+      "end": 3.16,
+      "probability": 0.9628886580467224
+    },
+    {
+      "word": " link.",
+      "start": 3.16,
+      "end": 3.54,
+      "probability": 0.9974441528320312
+    },
+    {
+      "word": " Attending",
+      "start": 4.18,
+      "end": 4.8,
+      "probability": 0.9069043099880219
+    },
+    {
+      "word": " an",
+      "start": 4.8,
+      "end": 4.96,
+      "probability": 0.989167332649231
+    },
+    {
+      "word": " initial",
+      "start": 4.96,
+      "end": 5.2,
+      "probability": 0.9631584286689758
+    },
+    {
+      "word": " class.",
+      "start": 5.2,
+      "end": 5.6,
+      "probability": 0.9945894479751587
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.48,
+      "text": " Entering an email address.",
+      "avgLogprob": -0.23470783171554407,
+      "noSpeechProb": 0.03434837609529495
+    },
+    {
+      "start": 2.04,
+      "end": 3.54,
+      "text": " Sharing the referral link.",
+      "avgLogprob": -0.23470783171554407,
+      "noSpeechProb": 0.03434837609529495
+    },
+    {
+      "start": 4.18,
+      "end": 5.6,
+      "text": " Attending an initial class.",
+      "avgLogprob": -0.23470783171554407,
+      "noSpeechProb": 0.03434837609529495
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "id": "df62c974fab2bb2ca15c0bd8fc04c87b96efc86e2e31f74abae9919b9542401b",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.3014375,
+  "elapsedSeconds": 2.556,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 0.869375,
+      "sha256": "67fab704616476ef6fc96cd484c6b7200f4bce6e46380f60c6d3ebfa3ed2e8b0",
+      "src": "./audio/generated/en/af_heart/6612a41d9d42d9df6cd6b7fc905a9292.m4a"
+    },
+    {
+      "offset": 1.4693749999999999,
+      "end": 2.109375,
+      "sha256": "4c13e50e5a0f4e8fa820809c8c8698b1eb5f8e0cf36c9e37c796f7eb91103145",
+      "src": "./audio/generated/en/am_puck/861371891fb974e2aa5a217baeb960f5.m4a"
+    },
+    {
+      "offset": 2.709375,
+      "end": 3.30675,
+      "sha256": "f189462ea3880f809b0538fbb7418a07964820d5792df88ede4d233f7d671506",
+      "src": "./audio/generated/en/am_puck/2ca97bdd30443e97be3cdb26283e6536.m4a"
+    },
+    {
+      "offset": 3.90675,
+      "end": 4.461437500000001,
+      "sha256": "4345eec0b66510ab54f319efdc107fd66d7fd0d034a36aa5ee5353c32b2593aa",
+      "src": "./audio/generated/en/am_puck/f99b0387f72f5599e9a6176db26030fe.m4a"
+    },
+    {
+      "offset": 5.0614375,
+      "end": 5.7014375,
+      "sha256": "a7eb6223a1d962fbdb21ae133aaf967533bfa5495110686d859318fea6164292",
+      "src": "./audio/generated/en/am_puck/9b6c515401030b5b4979c799ba075989.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Hey,",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.1863756775856018
+    },
+    {
+      "word": " hey,",
+      "start": 1.3,
+      "end": 2.28,
+      "probability": 0.611770510673523
+    },
+    {
+      "word": " hey,",
+      "start": 2.54,
+      "end": 3.32,
+      "probability": 0.4979754090309143
+    },
+    {
+      "word": " hey",
+      "start": 3.78,
+      "end": 4.2,
+      "probability": 0.5598814487457275
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.2,
+      "text": " Hey, hey, hey, hey",
+      "avgLogprob": -0.9049561858177185,
+      "noSpeechProb": 0.1933441311120987
+    }
+  ]
+}

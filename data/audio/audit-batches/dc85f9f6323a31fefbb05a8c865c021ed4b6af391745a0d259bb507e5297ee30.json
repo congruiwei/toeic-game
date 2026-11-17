@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "id": "dc85f9f6323a31fefbb05a8c865c021ed4b6af391745a0d259bb507e5297ee30",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.0560624999999995,
+  "elapsedSeconds": 2.731,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.405375,
+      "sha256": "8a1503e1ead15e3bda4c1e2090e38ab913b71b34642060e8518f9cf9b21e9ffa",
+      "src": "./audio/generated/ja/jf_alpha/177179000bf4e4acc3231c8cc5b879b4.m4a"
+    },
+    {
+      "offset": 3.005375,
+      "end": 4.4560625,
+      "sha256": "6cfd3bc5d2b110f367e3f334a7e1944b9f295f2586380789011c1a3ed1b53968",
+      "src": "./audio/generated/ja/jf_alpha/0e3917eed2bb742ff0bc2b5fde08aa21.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "L",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.5898892283439636
+    },
+    {
+      "word": "前",
+      "start": 0.66,
+      "end": 0.94,
+      "probability": 0.5401458144187927
+    },
+    {
+      "word": "面",
+      "start": 0.94,
+      "end": 1.12,
+      "probability": 0.9455368518829346
+    },
+    {
+      "word": "停",
+      "start": 1.12,
+      "end": 1.38,
+      "probability": 0.9079395532608032
+    },
+    {
+      "word": "止",
+      "start": 1.38,
+      "end": 1.56,
+      "probability": 0.995406985282898
+    },
+    {
+      "word": "の",
+      "start": 1.56,
+      "end": 1.68,
+      "probability": 0.9963148236274719
+    },
+    {
+      "word": "指",
+      "start": 1.68,
+      "end": 1.84,
+      "probability": 0.874652087688446
+    },
+    {
+      "word": "示",
+      "start": 1.84,
+      "end": 1.98,
+      "probability": 0.9840165376663208
+    },
+    {
+      "word": "あり、",
+      "start": 1.98,
+      "end": 2.24,
+      "probability": 0.974090576171875
+    },
+    {
+      "word": "M",
+      "start": 2.92,
+      "end": 3.24,
+      "probability": 0.26530733704566956
+    },
+    {
+      "word": "試",
+      "start": 3.24,
+      "end": 3.44,
+      "probability": 0.7776990532875061
+    },
+    {
+      "word": "験",
+      "start": 3.44,
+      "end": 3.62,
+      "probability": 0.8992156088352203
+    },
+    {
+      "word": "未",
+      "start": 3.62,
+      "end": 3.76,
+      "probability": 0.5132417678833008
+    },
+    {
+      "word": "完了。",
+      "start": 3.76,
+      "end": 4.04,
+      "probability": 0.845119059085846
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.04,
+      "text": "L前面停止の指示あり、M試験未完了。",
+      "avgLogprob": -0.3949486806988716,
+      "noSpeechProb": 0.06269743293523788
+    }
+  ]
+}

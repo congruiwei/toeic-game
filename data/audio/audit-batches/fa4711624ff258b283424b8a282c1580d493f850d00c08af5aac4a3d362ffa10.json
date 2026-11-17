@@ -1,0 +1,614 @@
+{
+  "version": 1,
+  "id": "fa4711624ff258b283424b8a282c1580d493f850d00c08af5aac4a3d362ffa10",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.621375,
+  "elapsedSeconds": 6.347,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 10.512,
+      "sha256": "49c720a85689d163aef0d8bfe96c2e118ab521f90e25ab4d4481dd6b1fffa69c",
+      "src": "./audio/generated/ja/jf_alpha/5a1570c91a2ee9bc6191dc790e0b6443.m4a"
+    },
+    {
+      "offset": 11.112,
+      "end": 12.264,
+      "sha256": "162df655620f6e3be0824422ccf6d9ca647f5d8b29286df3ff29ce514fa6de7b",
+      "src": "./audio/generated/ja/jf_alpha/554451096455eb99d958d87ece7a6b44.m4a"
+    },
+    {
+      "offset": 12.863999999999999,
+      "end": 20.927999999999997,
+      "sha256": "c3fb943a4249322897bcb5989d304065d0b444b4be24e85b809272a1c5e879cd",
+      "src": "./audio/generated/ja/jf_alpha/1593e2f500c5c03206cdae55d58f3337.m4a"
+    },
+    {
+      "offset": 21.528,
+      "end": 23.021375,
+      "sha256": "7d194918c997a8fb5cb360f1410ad5534eb75665851ef0f383efefc2592fa1cc",
+      "src": "./audio/generated/ja/jf_alpha/3d326f72b99218beeb59c351f34815ea.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "元",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.5328341722488403
+    },
+    {
+      "word": "受",
+      "start": 0.68,
+      "end": 0.92,
+      "probability": 0.6737664937973022
+    },
+    {
+      "word": "け",
+      "start": 0.92,
+      "end": 1.04,
+      "probability": 0.9585306644439697
+    },
+    {
+      "word": "の",
+      "start": 1.04,
+      "end": 1.14,
+      "probability": 0.9733479022979736
+    },
+    {
+      "word": "建",
+      "start": 1.14,
+      "end": 1.36,
+      "probability": 0.9584960341453552
+    },
+    {
+      "word": "設",
+      "start": 1.36,
+      "end": 1.6,
+      "probability": 0.993565022945404
+    },
+    {
+      "word": "業",
+      "start": 1.6,
+      "end": 1.88,
+      "probability": 0.9766785502433777
+    },
+    {
+      "word": "者",
+      "start": 1.88,
+      "end": 2.1,
+      "probability": 0.9946907162666321
+    },
+    {
+      "word": "は",
+      "start": 2.1,
+      "end": 2.26,
+      "probability": 0.9950287938117981
+    },
+    {
+      "word": "配",
+      "start": 2.26,
+      "end": 2.52,
+      "probability": 0.5643786191940308
+    },
+    {
+      "word": "線",
+      "start": 2.52,
+      "end": 2.76,
+      "probability": 0.9817741513252258
+    },
+    {
+      "word": "工",
+      "start": 2.76,
+      "end": 2.98,
+      "probability": 0.9373321533203125
+    },
+    {
+      "word": "事",
+      "start": 2.98,
+      "end": 3.14,
+      "probability": 0.9784367680549622
+    },
+    {
+      "word": "を",
+      "start": 3.14,
+      "end": 3.28,
+      "probability": 0.9773306846618652
+    },
+    {
+      "word": "下",
+      "start": 3.28,
+      "end": 3.48,
+      "probability": 0.5673917531967163
+    },
+    {
+      "word": "受",
+      "start": 3.48,
+      "end": 3.66,
+      "probability": 0.6899677515029907
+    },
+    {
+      "word": "け",
+      "start": 3.66,
+      "end": 3.84,
+      "probability": 0.9910128712654114
+    },
+    {
+      "word": "業",
+      "start": 3.84,
+      "end": 3.98,
+      "probability": 0.9543261528015137
+    },
+    {
+      "word": "者",
+      "start": 3.98,
+      "end": 4.2,
+      "probability": 0.9986553192138672
+    },
+    {
+      "word": "に",
+      "start": 4.2,
+      "end": 4.34,
+      "probability": 0.8438788652420044
+    },
+    {
+      "word": "発",
+      "start": 4.34,
+      "end": 4.52,
+      "probability": 0.9048304557800293
+    },
+    {
+      "word": "注",
+      "start": 4.52,
+      "end": 4.76,
+      "probability": 0.934640109539032
+    },
+    {
+      "word": "し、",
+      "start": 4.76,
+      "end": 5.0,
+      "probability": 0.941597580909729
+    },
+    {
+      "word": "その",
+      "start": 5.32,
+      "end": 5.86,
+      "probability": 0.9337484240531921
+    },
+    {
+      "word": "業",
+      "start": 5.86,
+      "end": 6.1,
+      "probability": 0.996384859085083
+    },
+    {
+      "word": "者",
+      "start": 6.1,
+      "end": 6.32,
+      "probability": 0.9988937973976135
+    },
+    {
+      "word": "が",
+      "start": 6.32,
+      "end": 6.48,
+      "probability": 0.9949803948402405
+    },
+    {
+      "word": "全",
+      "start": 6.48,
+      "end": 6.7,
+      "probability": 0.953836977481842
+    },
+    {
+      "word": "体",
+      "start": 6.7,
+      "end": 7.0,
+      "probability": 0.9966159462928772
+    },
+    {
+      "word": "の",
+      "start": 7.0,
+      "end": 7.16,
+      "probability": 0.9980792999267578
+    },
+    {
+      "word": "建",
+      "start": 7.16,
+      "end": 7.38,
+      "probability": 0.9924807548522949
+    },
+    {
+      "word": "設",
+      "start": 7.38,
+      "end": 7.66,
+      "probability": 0.9988948702812195
+    },
+    {
+      "word": "契",
+      "start": 7.66,
+      "end": 7.84,
+      "probability": 0.9778712689876556
+    },
+    {
+      "word": "約",
+      "start": 7.84,
+      "end": 8.04,
+      "probability": 0.9966104626655579
+    },
+    {
+      "word": "の",
+      "start": 8.04,
+      "end": 8.2,
+      "probability": 0.9981379508972168
+    },
+    {
+      "word": "一",
+      "start": 8.2,
+      "end": 8.38,
+      "probability": 0.9773289561271667
+    },
+    {
+      "word": "部",
+      "start": 8.38,
+      "end": 8.54,
+      "probability": 0.9808328151702881
+    },
+    {
+      "word": "と",
+      "start": 8.54,
+      "end": 8.68,
+      "probability": 0.9963082671165466
+    },
+    {
+      "word": "して",
+      "start": 8.68,
+      "end": 8.84,
+      "probability": 0.9996273517608643
+    },
+    {
+      "word": "工",
+      "start": 8.84,
+      "end": 9.12,
+      "probability": 0.992316484451294
+    },
+    {
+      "word": "事",
+      "start": 9.12,
+      "end": 9.28,
+      "probability": 0.9991967082023621
+    },
+    {
+      "word": "を",
+      "start": 9.28,
+      "end": 9.42,
+      "probability": 0.9979566335678101
+    },
+    {
+      "word": "完了",
+      "start": 9.42,
+      "end": 9.7,
+      "probability": 0.7886913418769836
+    },
+    {
+      "word": "しました。",
+      "start": 9.7,
+      "end": 10.28,
+      "probability": 0.9965750575065613
+    },
+    {
+      "word": "即",
+      "start": 11.08,
+      "end": 11.4,
+      "probability": 0.3193244934082031
+    },
+    {
+      "word": "量",
+      "start": 11.4,
+      "end": 11.68,
+      "probability": 0.1972702294588089
+    },
+    {
+      "word": "支",
+      "start": 11.68,
+      "end": 11.94,
+      "probability": 0.25964903831481934
+    },
+    {
+      "word": "援",
+      "start": 11.94,
+      "end": 12.14,
+      "probability": 0.8791716992855072
+    },
+    {
+      "word": "これ",
+      "start": 12.64,
+      "end": 13.08,
+      "probability": 0.3854529559612274
+    },
+    {
+      "word": "ら",
+      "start": 13.08,
+      "end": 13.32,
+      "probability": 0.998956561088562
+    },
+    {
+      "word": "の",
+      "start": 13.32,
+      "end": 13.46,
+      "probability": 0.9988958835601807
+    },
+    {
+      "word": "境",
+      "start": 13.46,
+      "end": 13.68,
+      "probability": 0.7640233635902405
+    },
+    {
+      "word": "界",
+      "start": 13.68,
+      "end": 13.94,
+      "probability": 0.9526090025901794
+    },
+    {
+      "word": "即",
+      "start": 13.94,
+      "end": 14.18,
+      "probability": 0.93820720911026
+    },
+    {
+      "word": "量",
+      "start": 14.18,
+      "end": 14.4,
+      "probability": 0.9841650724411011
+    },
+    {
+      "word": "の",
+      "start": 14.4,
+      "end": 14.6,
+      "probability": 0.998678982257843
+    },
+    {
+      "word": "結果",
+      "start": 14.6,
+      "end": 14.82,
+      "probability": 0.9904128909111023
+    },
+    {
+      "word": "を",
+      "start": 14.82,
+      "end": 15.16,
+      "probability": 0.9974156618118286
+    },
+    {
+      "word": "証",
+      "start": 15.16,
+      "end": 15.38,
+      "probability": 0.9741884171962738
+    },
+    {
+      "word": "明",
+      "start": 15.38,
+      "end": 15.6,
+      "probability": 0.9998797178268433
+    },
+    {
+      "word": "する",
+      "start": 15.6,
+      "end": 15.84,
+      "probability": 0.9975824356079102
+    },
+    {
+      "word": "ため、",
+      "start": 15.84,
+      "end": 16.12,
+      "probability": 0.985895037651062
+    },
+    {
+      "word": "有",
+      "start": 16.64,
+      "end": 16.92,
+      "probability": 0.9356740713119507
+    },
+    {
+      "word": "効",
+      "start": 16.92,
+      "end": 17.1,
+      "probability": 0.9911182820796967
+    },
+    {
+      "word": "な",
+      "start": 17.1,
+      "end": 17.34,
+      "probability": 0.9993102550506592
+    },
+    {
+      "word": "即",
+      "start": 17.34,
+      "end": 17.56,
+      "probability": 0.9884945750236511
+    },
+    {
+      "word": "量",
+      "start": 17.56,
+      "end": 17.8,
+      "probability": 0.9873242378234863
+    },
+    {
+      "word": "資",
+      "start": 17.8,
+      "end": 17.98,
+      "probability": 0.7855005860328674
+    },
+    {
+      "word": "格",
+      "start": 17.98,
+      "end": 18.1,
+      "probability": 0.9952343106269836
+    },
+    {
+      "word": "を",
+      "start": 18.1,
+      "end": 18.34,
+      "probability": 0.9987130165100098
+    },
+    {
+      "word": "持",
+      "start": 18.34,
+      "end": 18.48,
+      "probability": 0.9650717377662659
+    },
+    {
+      "word": "つ",
+      "start": 18.48,
+      "end": 18.7,
+      "probability": 0.9962422847747803
+    },
+    {
+      "word": "登録",
+      "start": 18.7,
+      "end": 18.96,
+      "probability": 0.9864596128463745
+    },
+    {
+      "word": "と",
+      "start": 18.96,
+      "end": 19.22,
+      "probability": 0.49741822481155396
+    },
+    {
+      "word": "知",
+      "start": 19.22,
+      "end": 19.34,
+      "probability": 0.20726673305034637
+    },
+    {
+      "word": "即",
+      "start": 19.34,
+      "end": 19.56,
+      "probability": 0.8545838594436646
+    },
+    {
+      "word": "量",
+      "start": 19.56,
+      "end": 19.78,
+      "probability": 0.9724545478820801
+    },
+    {
+      "word": "師",
+      "start": 19.78,
+      "end": 19.94,
+      "probability": 0.2124539613723755
+    },
+    {
+      "word": "が",
+      "start": 19.94,
+      "end": 20.08,
+      "probability": 0.9986693859100342
+    },
+    {
+      "word": "必",
+      "start": 20.08,
+      "end": 20.24,
+      "probability": 0.9969518184661865
+    },
+    {
+      "word": "要",
+      "start": 20.24,
+      "end": 20.5,
+      "probability": 0.9994111061096191
+    },
+    {
+      "word": "です。",
+      "start": 20.5,
+      "end": 20.8,
+      "probability": 0.9992309808731079
+    },
+    {
+      "word": "建",
+      "start": 21.6,
+      "end": 21.72,
+      "probability": 0.8156988024711609
+    },
+    {
+      "word": "物",
+      "start": 21.72,
+      "end": 22.06,
+      "probability": 0.993266224861145
+    },
+    {
+      "word": "の",
+      "start": 22.06,
+      "end": 22.3,
+      "probability": 0.9973165392875671
+    },
+    {
+      "word": "管",
+      "start": 22.3,
+      "end": 22.48,
+      "probability": 0.9845446348190308
+    },
+    {
+      "word": "理",
+      "start": 22.48,
+      "end": 22.68,
+      "probability": 0.9998332262039185
+    },
+    {
+      "word": "に",
+      "start": 22.68,
+      "end": 22.84,
+      "probability": 0.991071343421936
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.28,
+      "text": "元受けの建設業者は配線工事を下受け業者に発注し、その業者が全体の建設契約の一部として工事を完了しました。",
+      "avgLogprob": -0.18486083235059467,
+      "noSpeechProb": 0.048326194286346436
+    },
+    {
+      "start": 11.08,
+      "end": 12.14,
+      "text": "即量支援",
+      "avgLogprob": -0.18486083235059467,
+      "noSpeechProb": 0.048326194286346436
+    },
+    {
+      "start": 12.64,
+      "end": 20.8,
+      "text": "これらの境界即量の結果を証明するため、有効な即量資格を持つ登録と知即量師が必要です。",
+      "avgLogprob": -0.18486083235059467,
+      "noSpeechProb": 0.048326194286346436
+    },
+    {
+      "start": 21.6,
+      "end": 22.84,
+      "text": "建物の管理に",
+      "avgLogprob": -0.18486083235059467,
+      "noSpeechProb": 0.048326194286346436
+    }
+  ]
+}

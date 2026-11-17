@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "generation": {
+    "individual": {
+      "model": "whisper-small",
+      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "device": "cpu",
+      "computeType": "int8",
+      "packages": {
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.9.0",
+        "av": "16.0.1"
+      },
+      "beamSize": 5,
+      "conditionOnPreviousText": false,
+      "prompt": null,
+      "vadFilter": false
+    },
+    "screening": null,
+    "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
+  },
+  "transcribedFilesThisRun": 2615,
+  "records": 13961,
+  "matched": 11446,
+  "review": 2515,
+  "errors": 0,
+  "audioSecondsThisRun": 10049.14,
+  "inferenceSecondsThisRun": 12048.35,
+  "wallSeconds": 12957.79,
+  "batchCallsThisRun": 0,
+  "batchFilesThisRun": 0,
+  "singleCallsThisRun": 2615,
+  "fallbackFilesThisRun": 0
+}

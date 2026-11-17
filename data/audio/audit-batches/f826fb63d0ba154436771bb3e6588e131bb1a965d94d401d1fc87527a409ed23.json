@@ -1,0 +1,510 @@
+{
+  "version": 1,
+  "id": "f826fb63d0ba154436771bb3e6588e131bb1a965d94d401d1fc87527a409ed23",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.712187500000002,
+  "elapsedSeconds": 10.386,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.7893749999999997,
+      "sha256": "de7dc41714098fe2dedad72278e94d72d7264cfd8282131eb0767c19b2c479b9",
+      "src": "./audio/generated/en/af_heart/b3cf75eda59be7c48fc633adfd8da0aa.m4a"
+    },
+    {
+      "offset": 3.389375,
+      "end": 5.736062499999999,
+      "sha256": "5e09199b1338c66859319ec58228a22ba798e07dbe136e0e96c3e1dcf8cffb62",
+      "src": "./audio/generated/en/af_heart/e99b8b2e318d5c1a27a5f01c6868835f.m4a"
+    },
+    {
+      "offset": 6.336062499999999,
+      "end": 8.469437499999998,
+      "sha256": "a5cf211cf014cf9ab8b72144a9eb353daa469fb665be339b955874d66ad1059c",
+      "src": "./audio/generated/en/af_heart/8e77da903a77e6c5fdb877d4131d5311.m4a"
+    },
+    {
+      "offset": 9.069437499999998,
+      "end": 11.160124999999997,
+      "sha256": "7119520a303b3362461e8bd3f95c3b858a7990d50f1a53250cca2c9832ee0c4f",
+      "src": "./audio/generated/en/af_heart/46583855291fdaf43bd3bc0e2f4e8506.m4a"
+    },
+    {
+      "offset": 11.760124999999997,
+      "end": 13.466812499999996,
+      "sha256": "28c915b9a17e17cade1d04be0b68426860fd958a7d14ea43a57e8f154a994d86",
+      "src": "./audio/generated/en/am_puck/e60e55ac0c8ad730eea1583995f4f721.m4a"
+    },
+    {
+      "offset": 14.066812499999996,
+      "end": 15.858812499999996,
+      "sha256": "f1ba79502613d1c6ba6d7f1783c3208639d504cd5dba5541c1b6b81bce3a75f4",
+      "src": "./audio/generated/en/am_puck/7ad267f5cb97b7f6babb5116ac42349b.m4a"
+    },
+    {
+      "offset": 16.458812499999997,
+      "end": 18.293499999999998,
+      "sha256": "e305aebb60888eefb8d1e4a15c097e2baa4a6a32b676a3be3d142271a0e2cf4d",
+      "src": "./audio/generated/en/am_puck/58f057e20f846ea7afbc9fcdd1419186.m4a"
+    },
+    {
+      "offset": 18.8935,
+      "end": 21.1121875,
+      "sha256": "b45fd7e35b43720cbbb79ee3e97ab38be8edb8051fce9fe29db6706b9a438427",
+      "src": "./audio/generated/en/am_puck/77c21268f52ebebd4a12c688b4bfadea.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Someone",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.48386427760124207
+    },
+    {
+      "word": " is",
+      "start": 0.68,
+      "end": 0.88,
+      "probability": 0.9911619424819946
+    },
+    {
+      "word": " pulling",
+      "start": 0.88,
+      "end": 1.1,
+      "probability": 0.9925548434257507
+    },
+    {
+      "word": " a",
+      "start": 1.1,
+      "end": 1.34,
+      "probability": 0.994046688079834
+    },
+    {
+      "word": " suitcase",
+      "start": 1.34,
+      "end": 1.58,
+      "probability": 0.9870225787162781
+    },
+    {
+      "word": " up",
+      "start": 1.58,
+      "end": 1.9,
+      "probability": 0.9978107810020447
+    },
+    {
+      "word": " a",
+      "start": 1.9,
+      "end": 2.02,
+      "probability": 0.987126886844635
+    },
+    {
+      "word": " staircase.",
+      "start": 2.02,
+      "end": 2.26,
+      "probability": 0.9889132380485535
+    },
+    {
+      "word": " The",
+      "start": 3.08,
+      "end": 3.56,
+      "probability": 0.9888095259666443
+    },
+    {
+      "word": " suitcase",
+      "start": 3.56,
+      "end": 3.84,
+      "probability": 0.986543595790863
+    },
+    {
+      "word": " is",
+      "start": 3.84,
+      "end": 4.24,
+      "probability": 0.9981903433799744
+    },
+    {
+      "word": " open",
+      "start": 4.24,
+      "end": 4.56,
+      "probability": 0.9912549257278442
+    },
+    {
+      "word": " on",
+      "start": 4.56,
+      "end": 4.76,
+      "probability": 0.9919531941413879
+    },
+    {
+      "word": " top",
+      "start": 4.76,
+      "end": 4.96,
+      "probability": 0.9970690608024597
+    },
+    {
+      "word": " of",
+      "start": 4.96,
+      "end": 5.1,
+      "probability": 0.9987492561340332
+    },
+    {
+      "word": " a",
+      "start": 5.1,
+      "end": 5.16,
+      "probability": 0.9916287660598755
+    },
+    {
+      "word": " desk.",
+      "start": 5.16,
+      "end": 5.48,
+      "probability": 0.9993354678153992
+    },
+    {
+      "word": " Two",
+      "start": 6.28,
+      "end": 6.56,
+      "probability": 0.9691503643989563
+    },
+    {
+      "word": " people",
+      "start": 6.56,
+      "end": 6.84,
+      "probability": 0.999515175819397
+    },
+    {
+      "word": " are",
+      "start": 6.84,
+      "end": 7.02,
+      "probability": 0.99652099609375
+    },
+    {
+      "word": " carrying",
+      "start": 7.02,
+      "end": 7.32,
+      "probability": 0.9960874319076538
+    },
+    {
+      "word": " a",
+      "start": 7.32,
+      "end": 7.5,
+      "probability": 0.9969610571861267
+    },
+    {
+      "word": " case",
+      "start": 7.5,
+      "end": 7.74,
+      "probability": 0.9967034459114075
+    },
+    {
+      "word": " between",
+      "start": 7.74,
+      "end": 8.0,
+      "probability": 0.9985789060592651
+    },
+    {
+      "word": " them.",
+      "start": 8.0,
+      "end": 8.26,
+      "probability": 0.9993158578872681
+    },
+    {
+      "word": " Someone",
+      "start": 9.08,
+      "end": 9.38,
+      "probability": 0.9860009551048279
+    },
+    {
+      "word": " is",
+      "start": 9.38,
+      "end": 9.56,
+      "probability": 0.9979647397994995
+    },
+    {
+      "word": " kneeling",
+      "start": 9.56,
+      "end": 9.86,
+      "probability": 0.9987290799617767
+    },
+    {
+      "word": " next",
+      "start": 9.86,
+      "end": 10.18,
+      "probability": 0.9984883069992065
+    },
+    {
+      "word": " to",
+      "start": 10.18,
+      "end": 10.38,
+      "probability": 0.9950776696205139
+    },
+    {
+      "word": " a",
+      "start": 10.38,
+      "end": 10.46,
+      "probability": 0.9907835721969604
+    },
+    {
+      "word": " suitcase.",
+      "start": 10.46,
+      "end": 10.78,
+      "probability": 0.9953708052635193
+    },
+    {
+      "word": " A",
+      "start": 11.54,
+      "end": 11.9,
+      "probability": 0.9263338446617126
+    },
+    {
+      "word": " person",
+      "start": 11.9,
+      "end": 12.16,
+      "probability": 0.9986525177955627
+    },
+    {
+      "word": " is",
+      "start": 12.16,
+      "end": 12.3,
+      "probability": 0.9960165619850159
+    },
+    {
+      "word": " reaching",
+      "start": 12.3,
+      "end": 12.54,
+      "probability": 0.9984874725341797
+    },
+    {
+      "word": " for",
+      "start": 12.54,
+      "end": 12.8,
+      "probability": 0.9982779026031494
+    },
+    {
+      "word": " a",
+      "start": 12.8,
+      "end": 12.92,
+      "probability": 0.9961186647415161
+    },
+    {
+      "word": " cup.",
+      "start": 12.92,
+      "end": 13.06,
+      "probability": 0.9987785220146179
+    },
+    {
+      "word": " The",
+      "start": 14.1,
+      "end": 14.2,
+      "probability": 0.9765691757202148
+    },
+    {
+      "word": " cups",
+      "start": 14.2,
+      "end": 14.38,
+      "probability": 0.9725384712219238
+    },
+    {
+      "word": " have",
+      "start": 14.38,
+      "end": 14.56,
+      "probability": 0.987908661365509
+    },
+    {
+      "word": " been",
+      "start": 14.56,
+      "end": 14.7,
+      "probability": 0.9989625215530396
+    },
+    {
+      "word": " laid",
+      "start": 14.7,
+      "end": 14.88,
+      "probability": 0.991954505443573
+    },
+    {
+      "word": " on",
+      "start": 14.88,
+      "end": 15.04,
+      "probability": 0.9988338351249695
+    },
+    {
+      "word": " the",
+      "start": 15.04,
+      "end": 15.14,
+      "probability": 0.9987325072288513
+    },
+    {
+      "word": " floor.",
+      "start": 15.14,
+      "end": 15.4,
+      "probability": 0.9995301961898804
+    },
+    {
+      "word": " Someone",
+      "start": 16.46,
+      "end": 16.66,
+      "probability": 0.9859138131141663
+    },
+    {
+      "word": " is",
+      "start": 16.66,
+      "end": 16.82,
+      "probability": 0.9940409064292908
+    },
+    {
+      "word": " washing",
+      "start": 16.82,
+      "end": 17.08,
+      "probability": 0.9960034489631653
+    },
+    {
+      "word": " cups",
+      "start": 17.08,
+      "end": 17.42,
+      "probability": 0.9927814602851868
+    },
+    {
+      "word": " in",
+      "start": 17.42,
+      "end": 17.58,
+      "probability": 0.9905451536178589
+    },
+    {
+      "word": " a",
+      "start": 17.58,
+      "end": 17.66,
+      "probability": 0.9581698179244995
+    },
+    {
+      "word": " sink.",
+      "start": 17.66,
+      "end": 17.88,
+      "probability": 0.9981853365898132
+    },
+    {
+      "word": " A",
+      "start": 18.94,
+      "end": 19.06,
+      "probability": 0.992555558681488
+    },
+    {
+      "word": " tray",
+      "start": 19.06,
+      "end": 19.24,
+      "probability": 0.9988182187080383
+    },
+    {
+      "word": " is",
+      "start": 19.24,
+      "end": 19.46,
+      "probability": 0.9983916878700256
+    },
+    {
+      "word": " being",
+      "start": 19.46,
+      "end": 19.64,
+      "probability": 0.998542070388794
+    },
+    {
+      "word": " held",
+      "start": 19.64,
+      "end": 19.84,
+      "probability": 0.998126208782196
+    },
+    {
+      "word": " above",
+      "start": 19.84,
+      "end": 20.1,
+      "probability": 0.997037410736084
+    },
+    {
+      "word": " someone's",
+      "start": 20.1,
+      "end": 20.54,
+      "probability": 0.9954143464565277
+    },
+    {
+      "word": " head.",
+      "start": 20.54,
+      "end": 20.72,
+      "probability": 0.9987177848815918
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.26,
+      "text": " Someone is pulling a suitcase up a staircase.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    },
+    {
+      "start": 3.08,
+      "end": 5.48,
+      "text": " The suitcase is open on top of a desk.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    },
+    {
+      "start": 6.28,
+      "end": 8.26,
+      "text": " Two people are carrying a case between them.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    },
+    {
+      "start": 9.08,
+      "end": 10.78,
+      "text": " Someone is kneeling next to a suitcase.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    },
+    {
+      "start": 11.54,
+      "end": 13.06,
+      "text": " A person is reaching for a cup.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    },
+    {
+      "start": 14.1,
+      "end": 15.4,
+      "text": " The cups have been laid on the floor.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    },
+    {
+      "start": 16.46,
+      "end": 17.88,
+      "text": " Someone is washing cups in a sink.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    },
+    {
+      "start": 18.94,
+      "end": 20.72,
+      "text": " A tray is being held above someone's head.",
+      "avgLogprob": -0.0757432600085655,
+      "noSpeechProb": 0.02175036445260048
+    }
+  ]
+}

@@ -1,0 +1,599 @@
+{
+  "version": 1,
+  "id": "2102e2418e33e0af05dc91b7abd681090dfa22dda4c816eba4b03fcd4bd6e7d8",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.602812500000006,
+  "elapsedSeconds": 4.996,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.392,
+      "sha256": "897d5b23e82423d1b7d7ab8f4b856d8626ddfc4175d2f13b4540ff6129cdf679",
+      "src": "./audio/generated/ja/jf_alpha/a5f10ec19307467ef9ebaad47ec8a861.m4a"
+    },
+    {
+      "offset": 5.992,
+      "end": 9.3626875,
+      "sha256": "046b7d2b1c3da5d1f12cb4fbc0fb204c0c6b73db48daa7e3e5206fd7b45f99c3",
+      "src": "./audio/generated/ja/jf_alpha/b6085ef31d42dfddb1843018903a6f1a.m4a"
+    },
+    {
+      "offset": 9.9626875,
+      "end": 12.693375,
+      "sha256": "eeca59c6cf7fad86fa682203495f7f2085ce2e636f60e00f3e90d558be719315",
+      "src": "./audio/generated/ja/jf_alpha/6d897977e1b104c544352937938dc29f.m4a"
+    },
+    {
+      "offset": 13.293375,
+      "end": 15.682749999999999,
+      "sha256": "a03175d2c0e894d5b497a50f35484d4eceba8ff9bde544f3135536353aff5afd",
+      "src": "./audio/generated/ja/jf_alpha/59c6203f61b54e03f1f56466319409d1.m4a"
+    },
+    {
+      "offset": 16.28275,
+      "end": 19.184125,
+      "sha256": "629d0bcc408cab00470f4cf893bd219fba281c4af1c6de63066d669dc390a0b8",
+      "src": "./audio/generated/ja/jf_alpha/71b9f303e7cae1c060834988d0847fdf.m4a"
+    },
+    {
+      "offset": 19.784125000000003,
+      "end": 22.002812500000005,
+      "sha256": "c3c1529649563e368658eae5063a0230171c194080ab4acd48187ca2e2ae78b5",
+      "src": "./audio/generated/ja/jf_alpha/b5e18619927d3038fae0e4c68fce1837.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "消",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.2284744679927826
+    },
+    {
+      "word": "耗",
+      "start": 0.7,
+      "end": 0.9,
+      "probability": 0.4121111035346985
+    },
+    {
+      "word": "重",
+      "start": 0.9,
+      "end": 1.14,
+      "probability": 0.6553203463554382
+    },
+    {
+      "word": "量",
+      "start": 1.14,
+      "end": 1.34,
+      "probability": 0.998007595539093
+    },
+    {
+      "word": "を",
+      "start": 1.34,
+      "end": 1.52,
+      "probability": 0.9728922843933105
+    },
+    {
+      "word": "比",
+      "start": 1.52,
+      "end": 1.66,
+      "probability": 0.9912562370300293
+    },
+    {
+      "word": "べ",
+      "start": 1.66,
+      "end": 1.84,
+      "probability": 0.9993492960929871
+    },
+    {
+      "word": "る",
+      "start": 1.84,
+      "end": 1.98,
+      "probability": 0.9989275336265564
+    },
+    {
+      "word": "前",
+      "start": 1.98,
+      "end": 2.16,
+      "probability": 0.9946570992469788
+    },
+    {
+      "word": "に",
+      "start": 2.16,
+      "end": 2.4,
+      "probability": 0.999298095703125
+    },
+    {
+      "word": "蓋",
+      "start": 2.4,
+      "end": 2.6,
+      "probability": 0.8263656198978424
+    },
+    {
+      "word": "も",
+      "start": 2.6,
+      "end": 2.78,
+      "probability": 0.984956681728363
+    },
+    {
+      "word": "含",
+      "start": 2.78,
+      "end": 2.98,
+      "probability": 0.9845764935016632
+    },
+    {
+      "word": "め",
+      "start": 2.98,
+      "end": 3.2,
+      "probability": 0.9406068921089172
+    },
+    {
+      "word": "た",
+      "start": 3.2,
+      "end": 3.3,
+      "probability": 0.9803255796432495
+    },
+    {
+      "word": "風",
+      "start": 3.3,
+      "end": 3.52,
+      "probability": 0.6131677627563477
+    },
+    {
+      "word": "態",
+      "start": 3.52,
+      "end": 3.76,
+      "probability": 0.30345895886421204
+    },
+    {
+      "word": "重",
+      "start": 3.76,
+      "end": 4.02,
+      "probability": 0.9746900796890259
+    },
+    {
+      "word": "量",
+      "start": 4.02,
+      "end": 4.24,
+      "probability": 0.9993038177490234
+    },
+    {
+      "word": "を",
+      "start": 4.24,
+      "end": 4.42,
+      "probability": 0.9820804595947266
+    },
+    {
+      "word": "測",
+      "start": 4.42,
+      "end": 4.58,
+      "probability": 0.7925489544868469
+    },
+    {
+      "word": "る",
+      "start": 4.58,
+      "end": 4.78,
+      "probability": 0.9903295040130615
+    },
+    {
+      "word": "べ",
+      "start": 4.78,
+      "end": 4.88,
+      "probability": 0.9933599829673767
+    },
+    {
+      "word": "き",
+      "start": 4.88,
+      "end": 4.96,
+      "probability": 0.9995377063751221
+    },
+    {
+      "word": "です。",
+      "start": 4.96,
+      "end": 5.22,
+      "probability": 0.9160827994346619
+    },
+    {
+      "word": "蓋",
+      "start": 5.88,
+      "end": 6.28,
+      "probability": 0.9914296269416809
+    },
+    {
+      "word": "を",
+      "start": 6.28,
+      "end": 6.4,
+      "probability": 0.9956082701683044
+    },
+    {
+      "word": "つ",
+      "start": 6.4,
+      "end": 6.54,
+      "probability": 0.5245359539985657
+    },
+    {
+      "word": "け",
+      "start": 6.54,
+      "end": 6.66,
+      "probability": 0.9981735944747925
+    },
+    {
+      "word": "た",
+      "start": 6.66,
+      "end": 6.8,
+      "probability": 0.9990164041519165
+    },
+    {
+      "word": "空",
+      "start": 6.8,
+      "end": 6.96,
+      "probability": 0.9441011548042297
+    },
+    {
+      "word": "の",
+      "start": 6.96,
+      "end": 7.18,
+      "probability": 0.9966331124305725
+    },
+    {
+      "word": "瓶",
+      "start": 7.18,
+      "end": 7.36,
+      "probability": 0.8810372352600098
+    },
+    {
+      "word": "を",
+      "start": 7.36,
+      "end": 7.56,
+      "probability": 0.9858680367469788
+    },
+    {
+      "word": "使",
+      "start": 7.56,
+      "end": 7.72,
+      "probability": 0.9970888495445251
+    },
+    {
+      "word": "って",
+      "start": 7.72,
+      "end": 8.02,
+      "probability": 0.9977770447731018
+    },
+    {
+      "word": "計",
+      "start": 8.02,
+      "end": 8.22,
+      "probability": 0.9818637371063232
+    },
+    {
+      "word": "算",
+      "start": 8.22,
+      "end": 8.48,
+      "probability": 0.9992519021034241
+    },
+    {
+      "word": "し",
+      "start": 8.48,
+      "end": 8.62,
+      "probability": 0.9881904125213623
+    },
+    {
+      "word": "直",
+      "start": 8.62,
+      "end": 8.76,
+      "probability": 0.8522103428840637
+    },
+    {
+      "word": "します。",
+      "start": 8.76,
+      "end": 9.16,
+      "probability": 0.982912540435791
+    },
+    {
+      "word": "ど",
+      "start": 10.06,
+      "end": 10.14,
+      "probability": 0.9823349714279175
+    },
+    {
+      "word": "の",
+      "start": 10.14,
+      "end": 10.32,
+      "probability": 0.9978241920471191
+    },
+    {
+      "word": "間",
+      "start": 10.32,
+      "end": 10.46,
+      "probability": 0.9834523797035217
+    },
+    {
+      "word": "違",
+      "start": 10.46,
+      "end": 10.64,
+      "probability": 0.99810791015625
+    },
+    {
+      "word": "い",
+      "start": 10.64,
+      "end": 10.82,
+      "probability": 0.9969972372055054
+    },
+    {
+      "word": "が",
+      "start": 10.82,
+      "end": 10.96,
+      "probability": 0.9981685876846313
+    },
+    {
+      "word": "試",
+      "start": 10.96,
+      "end": 11.1,
+      "probability": 0.8671533465385437
+    },
+    {
+      "word": "験",
+      "start": 11.1,
+      "end": 11.28,
+      "probability": 0.9871611595153809
+    },
+    {
+      "word": "に",
+      "start": 11.28,
+      "end": 11.44,
+      "probability": 0.997138261795044
+    },
+    {
+      "word": "影",
+      "start": 11.44,
+      "end": 11.66,
+      "probability": 0.9916703701019287
+    },
+    {
+      "word": "響",
+      "start": 11.66,
+      "end": 11.8,
+      "probability": 0.9998027086257935
+    },
+    {
+      "word": "しました",
+      "start": 11.8,
+      "end": 12.16,
+      "probability": 0.9597817063331604
+    },
+    {
+      "word": "か?",
+      "start": 12.16,
+      "end": 12.52,
+      "probability": 0.9964942336082458
+    },
+    {
+      "word": "空",
+      "start": 13.34,
+      "end": 13.6,
+      "probability": 0.9418864250183105
+    },
+    {
+      "word": "の",
+      "start": 13.6,
+      "end": 13.8,
+      "probability": 0.9980497360229492
+    },
+    {
+      "word": "瓶",
+      "start": 13.8,
+      "end": 14.0,
+      "probability": 0.9991103609402975
+    },
+    {
+      "word": "を",
+      "start": 14.0,
+      "end": 14.22,
+      "probability": 0.9926252961158752
+    },
+    {
+      "word": "全",
+      "start": 14.22,
+      "end": 14.42,
+      "probability": 0.9252462387084961
+    },
+    {
+      "word": "く",
+      "start": 14.42,
+      "end": 14.66,
+      "probability": 0.9993921518325806
+    },
+    {
+      "word": "測",
+      "start": 14.66,
+      "end": 14.8,
+      "probability": 0.9847005307674408
+    },
+    {
+      "word": "ら",
+      "start": 14.8,
+      "end": 14.96,
+      "probability": 0.9469079971313477
+    },
+    {
+      "word": "な",
+      "start": 14.96,
+      "end": 15.08,
+      "probability": 0.9969524145126343
+    },
+    {
+      "word": "かった。",
+      "start": 15.08,
+      "end": 15.42,
+      "probability": 0.996880292892456
+    },
+    {
+      "word": "商",
+      "start": 16.32,
+      "end": 16.6,
+      "probability": 0.9265106320381165
+    },
+    {
+      "word": "品",
+      "start": 16.6,
+      "end": 16.88,
+      "probability": 0.9999032020568848
+    },
+    {
+      "word": "ラ",
+      "start": 16.88,
+      "end": 17.06,
+      "probability": 0.9436041712760925
+    },
+    {
+      "word": "ベ",
+      "start": 17.06,
+      "end": 17.14,
+      "probability": 0.9919083714485168
+    },
+    {
+      "word": "ル",
+      "start": 17.14,
+      "end": 17.26,
+      "probability": 0.9997135996818542
+    },
+    {
+      "word": "に",
+      "start": 17.26,
+      "end": 17.4,
+      "probability": 0.9949652552604675
+    },
+    {
+      "word": "層",
+      "start": 17.4,
+      "end": 17.62,
+      "probability": 0.6088137850165367
+    },
+    {
+      "word": "重",
+      "start": 17.62,
+      "end": 17.88,
+      "probability": 0.9988710284233093
+    },
+    {
+      "word": "量",
+      "start": 17.88,
+      "end": 18.1,
+      "probability": 0.9979339838027954
+    },
+    {
+      "word": "が",
+      "start": 18.1,
+      "end": 18.26,
+      "probability": 0.9954839944839478
+    },
+    {
+      "word": "書",
+      "start": 18.26,
+      "end": 18.4,
+      "probability": 0.694780170917511
+    },
+    {
+      "word": "か",
+      "start": 18.4,
+      "end": 18.5,
+      "probability": 0.9944755434989929
+    },
+    {
+      "word": "れて",
+      "start": 18.5,
+      "end": 18.66,
+      "probability": 0.9992883801460266
+    },
+    {
+      "word": "いた。",
+      "start": 18.66,
+      "end": 18.96,
+      "probability": 0.9905800223350525
+    },
+    {
+      "word": "小",
+      "start": 19.72,
+      "end": 19.96,
+      "probability": 0.9859391450881958
+    },
+    {
+      "word": "さい",
+      "start": 19.96,
+      "end": 20.34,
+      "probability": 0.9935504198074341
+    },
+    {
+      "word": "瓶",
+      "start": 20.34,
+      "end": 20.6,
+      "probability": 0.9986996054649353
+    },
+    {
+      "word": "用",
+      "start": 20.6,
+      "end": 20.78,
+      "probability": 0.9805012941360474
+    },
+    {
+      "word": "の",
+      "start": 20.78,
+      "end": 20.94,
+      "probability": 0.9968386888504028
+    },
+    {
+      "word": "蓋",
+      "start": 20.94,
+      "end": 21.18,
+      "probability": 0.9990254938602448
+    },
+    {
+      "word": "を",
+      "start": 21.18,
+      "end": 21.3,
+      "probability": 0.9989066123962402
+    },
+    {
+      "word": "使",
+      "start": 21.3,
+      "end": 21.44,
+      "probability": 0.9931498169898987
+    },
+    {
+      "word": "った。",
+      "start": 21.44,
+      "end": 21.74,
+      "probability": 0.9946025013923645
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 21.74,
+      "text": "消耗重量を比べる前に蓋も含めた風態重量を測るべきです。蓋をつけた空の瓶を使って計算し直します。どの間違いが試験に影響しましたか?空の瓶を全く測らなかった。商品ラベルに層重量が書かれていた。小さい瓶用の蓋を使った。",
+      "avgLogprob": -0.1632368793444974,
+      "noSpeechProb": 0.010629263706505299
+    }
+  ]
+}

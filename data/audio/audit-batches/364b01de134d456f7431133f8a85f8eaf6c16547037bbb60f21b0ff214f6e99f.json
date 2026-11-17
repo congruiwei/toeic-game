@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "id": "364b01de134d456f7431133f8a85f8eaf6c16547037bbb60f21b0ff214f6e99f",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.925500000000003,
+  "elapsedSeconds": 5.021,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 7.013375,
+      "sha256": "fa8b23b9a49f9cb5b5c3283a3f9e1744a1a33932435869c30dd3911879fe210c",
+      "src": "./audio/generated/en/af_bella/637cec8b73d782eb8378326e18b362c2.m4a"
+    },
+    {
+      "offset": 7.613375,
+      "end": 8.509375,
+      "sha256": "7e9516e1621ddba0e792eca18709c54f59657853f7a5bfff3e8a72986cb8199e",
+      "src": "./audio/generated/en/am_puck/3c1f9a5a751f900b84ae651449818da8.m4a"
+    },
+    {
+      "offset": 9.109375,
+      "end": 14.912062500000001,
+      "sha256": "4cc22c5e46656f7bdebd001972695d9657f4b0a93947f2068d429143a0868daf",
+      "src": "./audio/generated/en/am_puck/5d6d41c3e1f5b738283ed289e5dc9522.m4a"
+    },
+    {
+      "offset": 15.5120625,
+      "end": 16.32275,
+      "sha256": "8f295e147065ed3ce2172a97cc40c78787f9e699f8b8bd165144c30a1da8c4b0",
+      "src": "./audio/generated/en/af_heart/9049ba0f564c78b9cc2fed5195b8d714.m4a"
+    },
+    {
+      "offset": 16.92275,
+      "end": 22.000125,
+      "sha256": "31b8f041f889b26c7ce80968df7e1a0089db6e11ae659d06cfcbcdafda2751cd",
+      "src": "./audio/generated/en/af_heart/a6db2896dd62d07b8fdc0d8c5c6f2c39.m4a"
+    },
+    {
+      "offset": 22.600125000000002,
+      "end": 23.3255,
+      "sha256": "c4050f5be885310cab7780d13774b392fd9bc696a7879a0947b1eb72586761e4",
+      "src": "./audio/generated/en/af_bella/9e0a636ad8a30ba92a9772b95dba34b2.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " My",
+      "start": 0.0,
+      "end": 0.6,
+      "probability": 0.8427572250366211
+    },
+    {
+      "word": " daily",
+      "start": 0.6,
+      "end": 0.92,
+      "probability": 0.9897779822349548
+    },
+    {
+      "word": " commute",
+      "start": 0.92,
+      "end": 1.24,
+      "probability": 0.9958490133285522
+    },
+    {
+      "word": " on",
+      "start": 1.24,
+      "end": 1.46,
+      "probability": 0.9978673458099365
+    },
+    {
+      "word": " the",
+      "start": 1.46,
+      "end": 1.56,
+      "probability": 0.9955151677131653
+    },
+    {
+      "word": " staff",
+      "start": 1.56,
+      "end": 1.78,
+      "probability": 0.9882633686065674
+    },
+    {
+      "word": " bus",
+      "start": 1.78,
+      "end": 2.16,
+      "probability": 0.9889675974845886
+    },
+    {
+      "word": " takes",
+      "start": 2.16,
+      "end": 2.76,
+      "probability": 0.9816075563430786
+    },
+    {
+      "word": " 40",
+      "start": 2.76,
+      "end": 3.12,
+      "probability": 0.9263099431991577
+    },
+    {
+      "word": " minutes",
+      "start": 3.12,
+      "end": 3.38,
+      "probability": 0.9763095378875732
+    },
+    {
+      "word": " each",
+      "start": 3.38,
+      "end": 3.7,
+      "probability": 0.9916784763336182
+    },
+    {
+      "word": " way",
+      "start": 3.7,
+      "end": 4.04,
+      "probability": 0.9861539602279663
+    },
+    {
+      "word": " between",
+      "start": 4.04,
+      "end": 4.48,
+      "probability": 0.9553013443946838
+    },
+    {
+      "word": " my",
+      "start": 4.48,
+      "end": 4.72,
+      "probability": 0.9963480830192566
+    },
+    {
+      "word": " home",
+      "start": 4.72,
+      "end": 5.1,
+      "probability": 0.9963529109954834
+    },
+    {
+      "word": " and",
+      "start": 5.1,
+      "end": 5.58,
+      "probability": 0.9904696345329285
+    },
+    {
+      "word": " my",
+      "start": 5.58,
+      "end": 5.74,
+      "probability": 0.9949453473091125
+    },
+    {
+      "word": " regular",
+      "start": 5.74,
+      "end": 6.06,
+      "probability": 0.9984034895896912
+    },
+    {
+      "word": " workplace.",
+      "start": 6.06,
+      "end": 6.7,
+      "probability": 0.9450393915176392
+    },
+    {
+      "word": " Time",
+      "start": 7.66,
+      "end": 7.86,
+      "probability": 0.34408867359161377
+    },
+    {
+      "word": " Sheet.",
+      "start": 7.86,
+      "end": 8.3,
+      "probability": 0.6859873384237289
+    },
+    {
+      "word": " Each",
+      "start": 8.84,
+      "end": 9.36,
+      "probability": 0.9912121891975403
+    },
+    {
+      "word": " time",
+      "start": 9.36,
+      "end": 9.62,
+      "probability": 0.7003828883171082
+    },
+    {
+      "word": " sheet",
+      "start": 9.62,
+      "end": 9.84,
+      "probability": 0.9780187606811523
+    },
+    {
+      "word": " records",
+      "start": 9.84,
+      "end": 10.18,
+      "probability": 0.9965108036994934
+    },
+    {
+      "word": " the",
+      "start": 10.18,
+      "end": 10.46,
+      "probability": 0.985414981842041
+    },
+    {
+      "word": " employees'",
+      "start": 10.46,
+      "end": 10.8,
+      "probability": 0.6049765944480896
+    },
+    {
+      "word": " start",
+      "start": 11.18,
+      "end": 11.24,
+      "probability": 0.9827345013618469
+    },
+    {
+      "word": " and",
+      "start": 11.24,
+      "end": 11.52,
+      "probability": 0.995779275894165
+    },
+    {
+      "word": " finish",
+      "start": 11.52,
+      "end": 11.78,
+      "probability": 0.9743185639381409
+    },
+    {
+      "word": " times",
+      "start": 11.78,
+      "end": 12.18,
+      "probability": 0.8641153573989868
+    },
+    {
+      "word": " so",
+      "start": 12.18,
+      "end": 12.44,
+      "probability": 0.938737690448761
+    },
+    {
+      "word": " payroll",
+      "start": 12.44,
+      "end": 12.78,
+      "probability": 0.9933133721351624
+    },
+    {
+      "word": " can",
+      "start": 12.78,
+      "end": 13.1,
+      "probability": 0.9945300221443176
+    },
+    {
+      "word": " calculate",
+      "start": 13.1,
+      "end": 13.5,
+      "probability": 0.997677743434906
+    },
+    {
+      "word": " hours",
+      "start": 13.5,
+      "end": 13.96,
+      "probability": 0.9897449612617493
+    },
+    {
+      "word": " worked.",
+      "start": 13.96,
+      "end": 14.32,
+      "probability": 0.9801415205001831
+    },
+    {
+      "word": " Roster.",
+      "start": 15.46,
+      "end": 15.94,
+      "probability": 0.7618900239467621
+    },
+    {
+      "word": " The",
+      "start": 16.86,
+      "end": 17.08,
+      "probability": 0.9881983399391174
+    },
+    {
+      "word": " night",
+      "start": 17.08,
+      "end": 17.22,
+      "probability": 0.688900887966156
+    },
+    {
+      "word": " roster",
+      "start": 17.22,
+      "end": 17.64,
+      "probability": 0.9521589279174805
+    },
+    {
+      "word": " assigns",
+      "start": 17.64,
+      "end": 18.42,
+      "probability": 0.9937353134155273
+    },
+    {
+      "word": " three",
+      "start": 18.42,
+      "end": 18.64,
+      "probability": 0.765974760055542
+    },
+    {
+      "word": " employees",
+      "start": 18.64,
+      "end": 19.08,
+      "probability": 0.9978249073028564
+    },
+    {
+      "word": " to",
+      "start": 19.08,
+      "end": 19.32,
+      "probability": 0.9981471300125122
+    },
+    {
+      "word": " tonight's",
+      "start": 19.32,
+      "end": 19.74,
+      "probability": 0.9326033592224121
+    },
+    {
+      "word": " shift",
+      "start": 19.74,
+      "end": 19.98,
+      "probability": 0.9993498921394348
+    },
+    {
+      "word": " and",
+      "start": 19.98,
+      "end": 20.5,
+      "probability": 0.8532237410545349
+    },
+    {
+      "word": " a",
+      "start": 20.5,
+      "end": 20.62,
+      "probability": 0.9950637221336365
+    },
+    {
+      "word": " different",
+      "start": 20.62,
+      "end": 20.8,
+      "probability": 0.9992316961288452
+    },
+    {
+      "word": " team",
+      "start": 20.8,
+      "end": 21.1,
+      "probability": 0.9975718855857849
+    },
+    {
+      "word": " to",
+      "start": 21.1,
+      "end": 21.26,
+      "probability": 0.9956472516059875
+    },
+    {
+      "word": " tomorrow's.",
+      "start": 21.26,
+      "end": 21.86,
+      "probability": 0.9423119127750397
+    },
+    {
+      "word": " Renewal.",
+      "start": 22.62,
+      "end": 23.14,
+      "probability": 0.9827151497205099
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.7,
+      "text": " My daily commute on the staff bus takes 40 minutes each way between my home and my regular workplace.",
+      "avgLogprob": -0.15688127941555446,
+      "noSpeechProb": 0.01935935951769352
+    },
+    {
+      "start": 7.66,
+      "end": 8.3,
+      "text": " Time Sheet.",
+      "avgLogprob": -0.15688127941555446,
+      "noSpeechProb": 0.01935935951769352
+    },
+    {
+      "start": 8.84,
+      "end": 14.32,
+      "text": " Each time sheet records the employees' start and finish times so payroll can calculate hours worked.",
+      "avgLogprob": -0.15688127941555446,
+      "noSpeechProb": 0.01935935951769352
+    },
+    {
+      "start": 15.46,
+      "end": 15.94,
+      "text": " Roster.",
+      "avgLogprob": -0.15688127941555446,
+      "noSpeechProb": 0.01935935951769352
+    },
+    {
+      "start": 16.86,
+      "end": 21.86,
+      "text": " The night roster assigns three employees to tonight's shift and a different team to tomorrow's.",
+      "avgLogprob": -0.15688127941555446,
+      "noSpeechProb": 0.01935935951769352
+    },
+    {
+      "start": 22.62,
+      "end": 23.14,
+      "text": " Renewal.",
+      "avgLogprob": -0.15688127941555446,
+      "noSpeechProb": 0.01935935951769352
+    }
+  ]
+}

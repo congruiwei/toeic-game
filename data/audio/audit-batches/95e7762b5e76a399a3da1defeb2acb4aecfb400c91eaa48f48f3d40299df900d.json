@@ -1,0 +1,507 @@
+{
+  "version": 1,
+  "id": "95e7762b5e76a399a3da1defeb2acb4aecfb400c91eaa48f48f3d40299df900d",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 17.650750000000002,
+  "elapsedSeconds": 4.618,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.96,
+      "sha256": "8f2e45eebc6b4f0d3d2115227abac19724c5d2d0d6dc207a820374b7c5e3bfce",
+      "src": "./audio/generated/ja/jf_alpha/0fd3185fdb81d44d50743ca99aae8202.m4a"
+    },
+    {
+      "offset": 3.56,
+      "end": 6.4186875,
+      "sha256": "f7f6b62fe94fba3470b7db3a898c4e9690d8b15cce678c397f72ca1b1347fbe9",
+      "src": "./audio/generated/ja/jf_alpha/0c886202f8d9fc4d0529574c0314be80.m4a"
+    },
+    {
+      "offset": 7.0186874999999995,
+      "end": 10.0480625,
+      "sha256": "ed425d68e36e2124a5cd23b513b0877231f2da0f345fe06093bbb41b4bb22b4c",
+      "src": "./audio/generated/ja/jf_alpha/739190dc996b9e9d02a73141773176b5.m4a"
+    },
+    {
+      "offset": 10.6480625,
+      "end": 13.37875,
+      "sha256": "d8e544fd9f7e6a0698e74c21c4677a9e358708e7214811e68fb3bd99eadbfacd",
+      "src": "./audio/generated/ja/jf_alpha/c817eb08d07d8d111c3f41d5d3da56b9.m4a"
+    },
+    {
+      "offset": 13.97875,
+      "end": 17.05075,
+      "sha256": "547b894b29ed11737380baeccf6b044148e71d89e3f06e4dccb39c9e4757d49e",
+      "src": "./audio/generated/ja/jf_alpha/1f58cabcd35ddc56167ba1e1884d7c34.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "講",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.1894839107990265
+    },
+    {
+      "word": "師",
+      "start": 0.64,
+      "end": 0.84,
+      "probability": 0.9755821824073792
+    },
+    {
+      "word": "が",
+      "start": 0.84,
+      "end": 1.0,
+      "probability": 0.9403370022773743
+    },
+    {
+      "word": "動画",
+      "start": 1.0,
+      "end": 1.28,
+      "probability": 0.9929986000061035
+    },
+    {
+      "word": "を",
+      "start": 1.28,
+      "end": 1.54,
+      "probability": 0.998315691947937
+    },
+    {
+      "word": "使",
+      "start": 1.54,
+      "end": 1.7,
+      "probability": 0.9972039461135864
+    },
+    {
+      "word": "う",
+      "start": 1.7,
+      "end": 1.9,
+      "probability": 0.9979690909385681
+    },
+    {
+      "word": "のは",
+      "start": 1.9,
+      "end": 2.1,
+      "probability": 0.9919648170471191
+    },
+    {
+      "word": "な",
+      "start": 2.1,
+      "end": 2.28,
+      "probability": 0.9247345924377441
+    },
+    {
+      "word": "ぜ",
+      "start": 2.28,
+      "end": 2.4,
+      "probability": 0.9990329742431641
+    },
+    {
+      "word": "ですか?",
+      "start": 2.4,
+      "end": 2.74,
+      "probability": 0.9688305854797363
+    },
+    {
+      "word": "関",
+      "start": 3.62,
+      "end": 3.84,
+      "probability": 0.6470741629600525
+    },
+    {
+      "word": "係",
+      "start": 3.84,
+      "end": 4.06,
+      "probability": 0.7345689535140991
+    },
+    {
+      "word": "の",
+      "start": 4.06,
+      "end": 4.24,
+      "probability": 0.9864581227302551
+    },
+    {
+      "word": "見",
+      "start": 4.24,
+      "end": 4.44,
+      "probability": 0.8974596858024597
+    },
+    {
+      "word": "学",
+      "start": 4.44,
+      "end": 4.7,
+      "probability": 0.9360365867614746
+    },
+    {
+      "word": "が",
+      "start": 4.7,
+      "end": 4.9,
+      "probability": 0.9903011322021484
+    },
+    {
+      "word": "予",
+      "start": 4.9,
+      "end": 5.04,
+      "probability": 0.9958604574203491
+    },
+    {
+      "word": "定",
+      "start": 5.04,
+      "end": 5.24,
+      "probability": 0.9994919300079346
+    },
+    {
+      "word": "よ",
+      "start": 5.24,
+      "end": 5.42,
+      "probability": 0.9544404745101929
+    },
+    {
+      "word": "り",
+      "start": 5.42,
+      "end": 5.52,
+      "probability": 0.9998791217803955
+    },
+    {
+      "word": "長",
+      "start": 5.52,
+      "end": 5.66,
+      "probability": 0.9565126299858093
+    },
+    {
+      "word": "び",
+      "start": 5.66,
+      "end": 5.88,
+      "probability": 0.5397422313690186
+    },
+    {
+      "word": "く",
+      "start": 5.88,
+      "end": 6.0,
+      "probability": 0.9652813673019409
+    },
+    {
+      "word": "から、",
+      "start": 6.0,
+      "end": 6.2,
+      "probability": 0.9822079539299011
+    },
+    {
+      "word": "自",
+      "start": 6.84,
+      "end": 7.2,
+      "probability": 0.1914355754852295
+    },
+    {
+      "word": "公",
+      "start": 7.2,
+      "end": 7.36,
+      "probability": 0.3224875032901764
+    },
+    {
+      "word": "社",
+      "start": 7.36,
+      "end": 7.6,
+      "probability": 0.9361719489097595
+    },
+    {
+      "word": "に",
+      "start": 7.6,
+      "end": 7.76,
+      "probability": 0.9937048554420471
+    },
+    {
+      "word": "持",
+      "start": 7.76,
+      "end": 7.92,
+      "probability": 0.987991988658905
+    },
+    {
+      "word": "ち",
+      "start": 7.92,
+      "end": 8.12,
+      "probability": 0.8004913926124573
+    },
+    {
+      "word": "上",
+      "start": 8.12,
+      "end": 8.16,
+      "probability": 0.9896055459976196
+    },
+    {
+      "word": "げ",
+      "start": 8.16,
+      "end": 8.28,
+      "probability": 0.9998964071273804
+    },
+    {
+      "word": "作",
+      "start": 8.28,
+      "end": 8.44,
+      "probability": 0.9878371953964233
+    },
+    {
+      "word": "業",
+      "start": 8.44,
+      "end": 8.64,
+      "probability": 0.9997195601463318
+    },
+    {
+      "word": "の",
+      "start": 8.64,
+      "end": 8.78,
+      "probability": 0.9979230761528015
+    },
+    {
+      "word": "経",
+      "start": 8.78,
+      "end": 9.0,
+      "probability": 0.9918223023414612
+    },
+    {
+      "word": "験",
+      "start": 9.0,
+      "end": 9.28,
+      "probability": 0.9992760121822357
+    },
+    {
+      "word": "が",
+      "start": 9.28,
+      "end": 9.4,
+      "probability": 0.9959189295768738
+    },
+    {
+      "word": "ない",
+      "start": 9.4,
+      "end": 9.58,
+      "probability": 0.9092135429382324
+    },
+    {
+      "word": "から、",
+      "start": 9.58,
+      "end": 9.84,
+      "probability": 0.9957919120788574
+    },
+    {
+      "word": "雨",
+      "start": 10.6,
+      "end": 10.9,
+      "probability": 0.7373819947242737
+    },
+    {
+      "word": "が",
+      "start": 10.9,
+      "end": 11.12,
+      "probability": 0.9987972974777222
+    },
+    {
+      "word": "当",
+      "start": 11.12,
+      "end": 11.34,
+      "probability": 0.9430722594261169
+    },
+    {
+      "word": "初",
+      "start": 11.34,
+      "end": 11.54,
+      "probability": 0.9980646967887878
+    },
+    {
+      "word": "の",
+      "start": 11.54,
+      "end": 11.7,
+      "probability": 0.9996999502182007
+    },
+    {
+      "word": "予",
+      "start": 11.7,
+      "end": 11.86,
+      "probability": 0.999651163816452
+    },
+    {
+      "word": "定",
+      "start": 11.86,
+      "end": 12.02,
+      "probability": 0.9999464750289917
+    },
+    {
+      "word": "に",
+      "start": 12.02,
+      "end": 12.22,
+      "probability": 0.9982870221138
+    },
+    {
+      "word": "影",
+      "start": 12.22,
+      "end": 12.44,
+      "probability": 0.9944796562194824
+    },
+    {
+      "word": "響",
+      "start": 12.44,
+      "end": 12.62,
+      "probability": 0.9996813237667084
+    },
+    {
+      "word": "する",
+      "start": 12.62,
+      "end": 12.9,
+      "probability": 0.9876016974449158
+    },
+    {
+      "word": "から、",
+      "start": 12.9,
+      "end": 13.16,
+      "probability": 0.9962491393089294
+    },
+    {
+      "word": "使",
+      "start": 13.98,
+      "end": 14.2,
+      "probability": 0.9655246138572693
+    },
+    {
+      "word": "用",
+      "start": 14.2,
+      "end": 14.42,
+      "probability": 0.9986644983291626
+    },
+    {
+      "word": "でき",
+      "start": 14.42,
+      "end": 14.62,
+      "probability": 0.9677944183349609
+    },
+    {
+      "word": "る",
+      "start": 14.62,
+      "end": 14.84,
+      "probability": 0.9993199110031128
+    },
+    {
+      "word": "ス",
+      "start": 14.84,
+      "end": 15.0,
+      "probability": 0.996207594871521
+    },
+    {
+      "word": "ク",
+      "start": 15.0,
+      "end": 15.08,
+      "probability": 0.9962729215621948
+    },
+    {
+      "word": "リ",
+      "start": 15.08,
+      "end": 15.22,
+      "probability": 0.997340738773346
+    },
+    {
+      "word": "ーン",
+      "start": 15.22,
+      "end": 15.36,
+      "probability": 0.9867531061172485
+    },
+    {
+      "word": "が",
+      "start": 15.36,
+      "end": 15.52,
+      "probability": 0.9981607794761658
+    },
+    {
+      "word": "水",
+      "start": 15.52,
+      "end": 15.7,
+      "probability": 0.4790552854537964
+    },
+    {
+      "word": "質",
+      "start": 15.7,
+      "end": 15.96,
+      "probability": 0.9644471406936646
+    },
+    {
+      "word": "に",
+      "start": 15.96,
+      "end": 16.12,
+      "probability": 0.9985829591751099
+    },
+    {
+      "word": "しか",
+      "start": 16.12,
+      "end": 16.3,
+      "probability": 0.937538743019104
+    },
+    {
+      "word": "ない",
+      "start": 16.3,
+      "end": 16.54,
+      "probability": 0.9820047616958618
+    },
+    {
+      "word": "から。",
+      "start": 16.54,
+      "end": 16.8,
+      "probability": 0.9981803894042969
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.74,
+      "text": "講師が動画を使うのはなぜですか?",
+      "avgLogprob": -0.19314894792106416,
+      "noSpeechProb": 0.050817787647247314
+    },
+    {
+      "start": 3.62,
+      "end": 6.2,
+      "text": "関係の見学が予定より長びくから、",
+      "avgLogprob": -0.19314894792106416,
+      "noSpeechProb": 0.050817787647247314
+    },
+    {
+      "start": 6.84,
+      "end": 9.84,
+      "text": "自公社に持ち上げ作業の経験がないから、",
+      "avgLogprob": -0.19314894792106416,
+      "noSpeechProb": 0.050817787647247314
+    },
+    {
+      "start": 10.6,
+      "end": 13.16,
+      "text": "雨が当初の予定に影響するから、",
+      "avgLogprob": -0.19314894792106416,
+      "noSpeechProb": 0.050817787647247314
+    },
+    {
+      "start": 13.98,
+      "end": 16.8,
+      "text": "使用できるスクリーンが水質にしかないから。",
+      "avgLogprob": -0.19314894792106416,
+      "noSpeechProb": 0.050817787647247314
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "id": "df8608155e50a89ba001234bf676348bf7768cdc0600402f79b4dcb5893110c8",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.5466875,
+  "elapsedSeconds": 3.086,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.9466875,
+      "sha256": "8f2a3c56656e7a5164e29cf6bfd5e49c9cfca51872978b162d362aad4bd2e010",
+      "src": "./audio/generated/en/af_heart/c04138620e8449513ced44b466d7d3ac.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9550385475158691
+    },
+    {
+      "word": " morning",
+      "start": 0.54,
+      "end": 0.78,
+      "probability": 0.8718105554580688
+    },
+    {
+      "word": " test",
+      "start": 0.78,
+      "end": 1.16,
+      "probability": 0.9762446880340576
+    },
+    {
+      "word": " reached",
+      "start": 1.16,
+      "end": 1.64,
+      "probability": 0.9849376082420349
+    },
+    {
+      "word": " the",
+      "start": 1.64,
+      "end": 1.84,
+      "probability": 0.9967164397239685
+    },
+    {
+      "word": " warning",
+      "start": 1.84,
+      "end": 2.1,
+      "probability": 0.9804041981697083
+    },
+    {
+      "word": " threshold",
+      "start": 2.1,
+      "end": 2.6,
+      "probability": 0.9961997866630554
+    },
+    {
+      "word": " exactly,",
+      "start": 2.6,
+      "end": 3.12,
+      "probability": 0.9875167012214661
+    },
+    {
+      "word": " but",
+      "start": 3.72,
+      "end": 3.82,
+      "probability": 0.9957700371742249
+    },
+    {
+      "word": " the",
+      "start": 3.82,
+      "end": 3.94,
+      "probability": 0.9969416260719299
+    },
+    {
+      "word": " supervisor",
+      "start": 3.94,
+      "end": 4.36,
+      "probability": 0.9893578886985779
+    },
+    {
+      "word": " did",
+      "start": 4.36,
+      "end": 4.76,
+      "probability": 0.9918122291564941
+    },
+    {
+      "word": " not",
+      "start": 4.76,
+      "end": 4.94,
+      "probability": 0.9992122650146484
+    },
+    {
+      "word": " order",
+      "start": 4.94,
+      "end": 5.26,
+      "probability": 0.9990082383155823
+    },
+    {
+      "word": " a",
+      "start": 5.26,
+      "end": 5.42,
+      "probability": 0.9982895255088806
+    },
+    {
+      "word": " stop.",
+      "start": 5.42,
+      "end": 5.66,
+      "probability": 0.9940005540847778
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.66,
+      "text": " The morning test reached the warning threshold exactly, but the supervisor did not order a stop.",
+      "avgLogprob": -0.1798244601204282,
+      "noSpeechProb": 0.0008185668266378343
+    }
+  ]
+}

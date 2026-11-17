@@ -1,0 +1,578 @@
+{
+  "version": 1,
+  "id": "f27bfdd5e96a65973da8ea0e56f70ecdd2fedd581e7cb7bafd943259ab0a96b8",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.570875000000008,
+  "elapsedSeconds": 5.63,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.7653750000000001,
+      "sha256": "856fa9fc8b38dd41c50ea11bd6f0b6967c76a63ec447e339deacd1bf4b1ebba7",
+      "src": "./audio/generated/ja/jf_alpha/90fdaf7b6eeebf98f7d5e8ec062d8ee2.m4a"
+    },
+    {
+      "offset": 2.3653750000000002,
+      "end": 3.5600625,
+      "sha256": "13b63337efe42c0d9058dde24d613d32348529554e6773a3527d8c9891aa189f",
+      "src": "./audio/generated/ja/jf_alpha/7fa46ae6178196f75a838f26f3061867.m4a"
+    },
+    {
+      "offset": 4.1600624999999996,
+      "end": 5.781437499999999,
+      "sha256": "128ffaa1dc54fb738b474125c266d4eb916b50f90617dbbc468cd09d02b174d8",
+      "src": "./audio/generated/ja/jf_alpha/ae642c5729aadb340b1a134171501ef4.m4a"
+    },
+    {
+      "offset": 6.381437499999999,
+      "end": 7.576124999999998,
+      "sha256": "2b27a18e7e5414461ec95f4c6afe37a24c1182ff0df1e5a788b2f538c9f16f02",
+      "src": "./audio/generated/ja/jf_alpha/8ea9991db62464dffd0136c803f33c3f.m4a"
+    },
+    {
+      "offset": 8.176124999999999,
+      "end": 13.0828125,
+      "sha256": "a35bac36a1f2292ecd47be88f0bf3f0be6e180e0e91ccb397dcae19024f1aeca",
+      "src": "./audio/generated/ja/jf_alpha/8f500a7e90d7905a65f4630642f88278.m4a"
+    },
+    {
+      "offset": 13.682812499999999,
+      "end": 14.5788125,
+      "sha256": "3e6853671de5da6a2c376f2903e53fc16bdefbfd6f4a8852b8f258e0517caba9",
+      "src": "./audio/generated/ja/jf_alpha/47359f57363d941dd824a1edef76958d.m4a"
+    },
+    {
+      "offset": 15.1788125,
+      "end": 15.8615,
+      "sha256": "f23e316c1036f679e2657dc3df1b96825387764b51b3c9aca0a4bc93aad72752",
+      "src": "./audio/generated/ja/jf_alpha/dbedc87a101a481eab7687ca820bf4c6.m4a"
+    },
+    {
+      "offset": 16.4615,
+      "end": 17.485500000000002,
+      "sha256": "60a4d1836841dd52c7e8dbb848e3d40767561ad6331888948e937252e2d67cf1",
+      "src": "./audio/generated/ja/jf_alpha/afa8a1ce79010383e9efdf383dcd4340.m4a"
+    },
+    {
+      "offset": 18.085500000000003,
+      "end": 19.322875000000003,
+      "sha256": "07e6451327cb63f55e15e39cf23304835db5288b29e2d64491ceeddca3f3b60c",
+      "src": "./audio/generated/ja/jf_alpha/6d2b40f68c55793aa60532871e712c9c.m4a"
+    },
+    {
+      "offset": 19.922875000000005,
+      "end": 21.970875000000007,
+      "sha256": "4cfa79e3966401f2c570e7133c84094ef91b3cecf13f52f3ec0f168e7df0fc5c",
+      "src": "./audio/generated/ja/jf_alpha/d24721f9693486c8cd222f25be1093cc.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "読",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.6067629307508469
+    },
+    {
+      "word": "書",
+      "start": 0.66,
+      "end": 0.88,
+      "probability": 0.9394417405128479
+    },
+    {
+      "word": "用",
+      "start": 0.88,
+      "end": 1.1,
+      "probability": 0.9826379418373108
+    },
+    {
+      "word": "ベ",
+      "start": 1.1,
+      "end": 1.26,
+      "probability": 0.9157531261444092
+    },
+    {
+      "word": "ンチ",
+      "start": 1.26,
+      "end": 1.5,
+      "probability": 0.9984636902809143
+    },
+    {
+      "word": "新聞",
+      "start": 2.3200000000000003,
+      "end": 2.76,
+      "probability": 0.28741398453712463
+    },
+    {
+      "word": "ラ",
+      "start": 2.76,
+      "end": 3.08,
+      "probability": 0.5884712934494019
+    },
+    {
+      "word": "ック",
+      "start": 3.08,
+      "end": 3.34,
+      "probability": 0.9292320609092712
+    },
+    {
+      "word": "来",
+      "start": 3.960000000000001,
+      "end": 4.4,
+      "probability": 0.3062610924243927
+    },
+    {
+      "word": "訪",
+      "start": 4.4,
+      "end": 4.66,
+      "probability": 0.6323549896478653
+    },
+    {
+      "word": "車",
+      "start": 4.66,
+      "end": 4.88,
+      "probability": 0.42297595739364624
+    },
+    {
+      "word": "用",
+      "start": 4.88,
+      "end": 5.08,
+      "probability": 0.9610185623168945
+    },
+    {
+      "word": "テ",
+      "start": 5.08,
+      "end": 5.3,
+      "probability": 0.9792633652687073
+    },
+    {
+      "word": "ーブ",
+      "start": 5.3,
+      "end": 5.44,
+      "probability": 0.9948959350585938
+    },
+    {
+      "word": "ル",
+      "start": 5.44,
+      "end": 5.76,
+      "probability": 0.99946528673172
+    },
+    {
+      "word": "ベ",
+      "start": 5.76,
+      "end": 6.62,
+      "probability": 0.7874048948287964
+    },
+    {
+      "word": "ンチ",
+      "start": 6.62,
+      "end": 6.82,
+      "probability": 0.9996161758899689
+    },
+    {
+      "word": "の",
+      "start": 6.82,
+      "end": 6.96,
+      "probability": 0.9785023927688599
+    },
+    {
+      "word": "座",
+      "start": 6.96,
+      "end": 7.12,
+      "probability": 0.9069377779960632
+    },
+    {
+      "word": "面",
+      "start": 7.12,
+      "end": 7.36,
+      "probability": 0.9475798606872559
+    },
+    {
+      "word": "ベ",
+      "start": 7.940000000000001,
+      "end": 8.38,
+      "probability": 0.5711804032325745
+    },
+    {
+      "word": "ンチ",
+      "start": 8.38,
+      "end": 8.6,
+      "probability": 0.999621719121933
+    },
+    {
+      "word": "の",
+      "start": 8.6,
+      "end": 8.76,
+      "probability": 0.9900169968605042
+    },
+    {
+      "word": "左",
+      "start": 8.76,
+      "end": 8.98,
+      "probability": 0.9862915873527527
+    },
+    {
+      "word": "端",
+      "start": 8.98,
+      "end": 9.4,
+      "probability": 0.9450345635414124
+    },
+    {
+      "word": "に",
+      "start": 9.4,
+      "end": 9.58,
+      "probability": 0.9949095845222473
+    },
+    {
+      "word": "関",
+      "start": 9.58,
+      "end": 9.8,
+      "probability": 0.9600805342197418
+    },
+    {
+      "word": "する",
+      "start": 9.8,
+      "end": 10.06,
+      "probability": 0.993232250213623
+    },
+    {
+      "word": "文",
+      "start": 10.06,
+      "end": 10.3,
+      "probability": 0.8175896406173706
+    },
+    {
+      "word": "で",
+      "start": 10.3,
+      "end": 10.5,
+      "probability": 0.8867887854576111
+    },
+    {
+      "word": "ブ",
+      "start": 10.5,
+      "end": 10.66,
+      "probability": 0.876692533493042
+    },
+    {
+      "word": "ラ",
+      "start": 10.66,
+      "end": 10.76,
+      "probability": 0.8769914507865906
+    },
+    {
+      "word": "ック",
+      "start": 10.76,
+      "end": 10.84,
+      "probability": 0.9708633422851562
+    },
+    {
+      "word": "ス",
+      "start": 10.84,
+      "end": 10.94,
+      "probability": 0.9894095659255981
+    },
+    {
+      "word": "に",
+      "start": 10.94,
+      "end": 11.04,
+      "probability": 0.9798473119735718
+    },
+    {
+      "word": "最",
+      "start": 11.04,
+      "end": 11.32,
+      "probability": 0.8286434412002563
+    },
+    {
+      "word": "も",
+      "start": 11.32,
+      "end": 11.58,
+      "probability": 0.9980850219726562
+    },
+    {
+      "word": "近",
+      "start": 11.58,
+      "end": 11.76,
+      "probability": 0.9767503142356873
+    },
+    {
+      "word": "い",
+      "start": 11.76,
+      "end": 11.94,
+      "probability": 0.9833252429962158
+    },
+    {
+      "word": "意",
+      "start": 11.94,
+      "end": 12.08,
+      "probability": 0.9983602166175842
+    },
+    {
+      "word": "味",
+      "start": 12.08,
+      "end": 12.14,
+      "probability": 0.9995450377464294
+    },
+    {
+      "word": "は",
+      "start": 12.14,
+      "end": 12.3,
+      "probability": 0.9925901889801025
+    },
+    {
+      "word": "ど",
+      "start": 12.3,
+      "end": 12.42,
+      "probability": 0.9913830161094666
+    },
+    {
+      "word": "れ",
+      "start": 12.42,
+      "end": 12.52,
+      "probability": 0.9974946975708008
+    },
+    {
+      "word": "ですか",
+      "start": 12.52,
+      "end": 12.88,
+      "probability": 0.9869055151939392
+    },
+    {
+      "word": "区",
+      "start": 13.46,
+      "end": 13.9,
+      "probability": 0.5099683618173003
+    },
+    {
+      "word": "切",
+      "start": 13.9,
+      "end": 14.1,
+      "probability": 0.43042340874671936
+    },
+    {
+      "word": "る",
+      "start": 14.1,
+      "end": 14.46,
+      "probability": 0.9502468109130859
+    },
+    {
+      "word": "ウ",
+      "start": 14.940000000000001,
+      "end": 15.16,
+      "probability": 0.08806037157773972
+    },
+    {
+      "word": "サ",
+      "start": 15.16,
+      "end": 15.56,
+      "probability": 0.9410160183906555
+    },
+    {
+      "word": "グ",
+      "start": 15.56,
+      "end": 15.76,
+      "probability": 0.9130412936210632
+    },
+    {
+      "word": "固",
+      "start": 16.22,
+      "end": 16.66,
+      "probability": 0.9536392986774445
+    },
+    {
+      "word": "定",
+      "start": 16.66,
+      "end": 16.86,
+      "probability": 0.999763548374176
+    },
+    {
+      "word": "する",
+      "start": 16.86,
+      "end": 17.22,
+      "probability": 0.9649922251701355
+    },
+    {
+      "word": "ラ",
+      "start": 17.86,
+      "end": 18.3,
+      "probability": 0.9337231516838074
+    },
+    {
+      "word": "ベ",
+      "start": 18.3,
+      "end": 18.44,
+      "probability": 0.986575186252594
+    },
+    {
+      "word": "ル",
+      "start": 18.44,
+      "end": 18.58,
+      "probability": 0.999674916267395
+    },
+    {
+      "word": "を",
+      "start": 18.58,
+      "end": 18.7,
+      "probability": 0.9962483048439026
+    },
+    {
+      "word": "つ",
+      "start": 18.7,
+      "end": 18.82,
+      "probability": 0.6306487917900085
+    },
+    {
+      "word": "ける",
+      "start": 18.82,
+      "end": 19.1,
+      "probability": 0.9982159733772278
+    },
+    {
+      "word": "案",
+      "start": 19.759999999999998,
+      "end": 20.2,
+      "probability": 0.994793713092804
+    },
+    {
+      "word": "内",
+      "start": 20.2,
+      "end": 20.42,
+      "probability": 0.9693835377693176
+    },
+    {
+      "word": "表示",
+      "start": 20.42,
+      "end": 20.7,
+      "probability": 0.9925503730773926
+    },
+    {
+      "word": "に",
+      "start": 20.7,
+      "end": 20.94,
+      "probability": 0.9982932209968567
+    },
+    {
+      "word": "つ",
+      "start": 20.94,
+      "end": 21.14,
+      "probability": 0.9949846267700195
+    },
+    {
+      "word": "いて",
+      "start": 21.14,
+      "end": 21.28,
+      "probability": 0.9994667172431946
+    },
+    {
+      "word": "の",
+      "start": 21.28,
+      "end": 21.44,
+      "probability": 0.9988237023353577
+    },
+    {
+      "word": "意",
+      "start": 21.44,
+      "end": 21.56,
+      "probability": 0.9911186099052429
+    },
+    {
+      "word": "見",
+      "start": 21.56,
+      "end": 21.7,
+      "probability": 0.9939159750938416
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.5,
+      "text": "読書用ベンチ",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 2.3200000000000003,
+      "end": 3.34,
+      "text": "新聞ラック",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 3.960000000000001,
+      "end": 5.76,
+      "text": "来訪車用テーブル",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 5.76,
+      "end": 7.36,
+      "text": "ベンチの座面",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 7.940000000000001,
+      "end": 12.88,
+      "text": "ベンチの左端に関する文でブラックスに最も近い意味はどれですか",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 13.46,
+      "end": 14.46,
+      "text": "区切る",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 15.0,
+      "end": 15.76,
+      "text": "ウサグ",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 16.22,
+      "end": 17.22,
+      "text": "固定する",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 17.86,
+      "end": 19.1,
+      "text": "ラベルをつける",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    },
+    {
+      "start": 19.759999999999998,
+      "end": 21.7,
+      "text": "案内表示についての意見",
+      "avgLogprob": -0.1702350702616248,
+      "noSpeechProb": 0.08257704973220825
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "id": "8f542129ca7cd2c062d9b28123d96e9d8d3c7bd13d0e08c263aa55204b1472de",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.061375,
+  "elapsedSeconds": 4.041,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.3013749999999997,
+      "sha256": "0523c517886f255e7153af7ffe2f9ba9725686f10172debd26e5fadb4f9d55a9",
+      "src": "./audio/generated/en/am_puck/8f3fd9db508e75cd61f563a0412013b0.m4a"
+    },
+    {
+      "offset": 3.901375,
+      "end": 6.461375,
+      "sha256": "deabb488921297191f0697a7d3a430b37dff311fda94fa5e5bf79ccb3f37500c",
+      "src": "./audio/generated/en/am_puck/6e6282e76980e9f5302b1eec430ed7f3.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9313751459121704
+    },
+    {
+      "word": " purchase",
+      "start": 0.54,
+      "end": 0.84,
+      "probability": 0.6110160946846008
+    },
+    {
+      "word": " office",
+      "start": 0.84,
+      "end": 1.22,
+      "probability": 0.9663398861885071
+    },
+    {
+      "word": " keeps",
+      "start": 1.22,
+      "end": 1.54,
+      "probability": 0.9943521022796631
+    },
+    {
+      "word": " its",
+      "start": 1.54,
+      "end": 1.7,
+      "probability": 0.9548349380493164
+    },
+    {
+      "word": " order",
+      "start": 1.7,
+      "end": 1.92,
+      "probability": 0.9884437918663025
+    },
+    {
+      "word": " forms",
+      "start": 1.92,
+      "end": 2.28,
+      "probability": 0.9880654811859131
+    },
+    {
+      "word": " and",
+      "start": 2.28,
+      "end": 2.44,
+      "probability": 0.9679133892059326
+    },
+    {
+      "word": " binders.",
+      "start": 2.44,
+      "end": 2.92,
+      "probability": 0.9984772503376007
+    },
+    {
+      "word": " The",
+      "start": 3.68,
+      "end": 4.06,
+      "probability": 0.9938443899154663
+    },
+    {
+      "word": " labels",
+      "start": 4.06,
+      "end": 4.34,
+      "probability": 0.9974414110183716
+    },
+    {
+      "word": " show",
+      "start": 4.34,
+      "end": 4.7,
+      "probability": 0.9955906867980957
+    },
+    {
+      "word": " a",
+      "start": 4.7,
+      "end": 4.86,
+      "probability": 0.9905349612236023
+    },
+    {
+      "word": " different",
+      "start": 4.86,
+      "end": 5.04,
+      "probability": 0.9969436526298523
+    },
+    {
+      "word": " purchase",
+      "start": 5.04,
+      "end": 5.4,
+      "probability": 0.985478401184082
+    },
+    {
+      "word": " order",
+      "start": 5.4,
+      "end": 5.7,
+      "probability": 0.9935372471809387
+    },
+    {
+      "word": " number.",
+      "start": 5.7,
+      "end": 6.0,
+      "probability": 0.9977800250053406
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.92,
+      "text": " The purchase office keeps its order forms and binders.",
+      "avgLogprob": -0.2465384101867676,
+      "noSpeechProb": 0.004932022653520107
+    },
+    {
+      "start": 3.68,
+      "end": 6.0,
+      "text": " The labels show a different purchase order number.",
+      "avgLogprob": -0.2465384101867676,
+      "noSpeechProb": 0.004932022653520107
+    }
+  ]
+}

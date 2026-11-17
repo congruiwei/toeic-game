@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "id": "48554765c4472c59501cacd29cbef6472458be7742fb77c7e0d3f8c8d882bb1f",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.2906875,
+  "elapsedSeconds": 3.513,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.6906875,
+      "sha256": "fb6552141b8140ba6924b8cc14b26acd432056d48630c9f81c5b211377569ee9",
+      "src": "./audio/generated/en/af_heart/a8d99f3ece6e0e31debecc4261c05fab.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9481875896453857
+    },
+    {
+      "word": " team",
+      "start": 0.54,
+      "end": 0.78,
+      "probability": 0.9952917098999023
+    },
+    {
+      "word": " will",
+      "start": 0.78,
+      "end": 0.98,
+      "probability": 0.9978235960006714
+    },
+    {
+      "word": " discuss",
+      "start": 0.98,
+      "end": 1.28,
+      "probability": 0.9980125427246094
+    },
+    {
+      "word": " the",
+      "start": 1.28,
+      "end": 1.52,
+      "probability": 0.9944376945495605
+    },
+    {
+      "word": " badge",
+      "start": 1.52,
+      "end": 1.78,
+      "probability": 0.9800047278404236
+    },
+    {
+      "word": " design",
+      "start": 1.78,
+      "end": 2.18,
+      "probability": 0.9988365769386292
+    },
+    {
+      "word": " by",
+      "start": 2.18,
+      "end": 2.66,
+      "probability": 0.9635162949562073
+    },
+    {
+      "word": " sharing",
+      "start": 2.66,
+      "end": 3.0,
+      "probability": 0.998462438583374
+    },
+    {
+      "word": " ideas",
+      "start": 3.0,
+      "end": 3.5,
+      "probability": 0.9983798265457153
+    },
+    {
+      "word": " before",
+      "start": 3.5,
+      "end": 4.12,
+      "probability": 0.9757370948791504
+    },
+    {
+      "word": " any",
+      "start": 4.12,
+      "end": 4.44,
+      "probability": 0.9963244795799255
+    },
+    {
+      "word": " decision",
+      "start": 4.44,
+      "end": 4.8,
+      "probability": 0.9972907900810242
+    },
+    {
+      "word": " is",
+      "start": 4.8,
+      "end": 5.06,
+      "probability": 0.9989513158798218
+    },
+    {
+      "word": " taken.",
+      "start": 5.06,
+      "end": 5.38,
+      "probability": 0.9991625547409058
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.38,
+      "text": " The team will discuss the badge design by sharing ideas before any decision is taken.",
+      "avgLogprob": -0.14956635550448769,
+      "noSpeechProb": 0.0045742010697722435
+    }
+  ]
+}

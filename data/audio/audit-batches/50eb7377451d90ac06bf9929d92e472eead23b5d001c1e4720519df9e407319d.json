@@ -1,0 +1,497 @@
+{
+  "version": 1,
+  "id": "50eb7377451d90ac06bf9929d92e472eead23b5d001c1e4720519df9e407319d",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.416125000000005,
+  "elapsedSeconds": 6.838,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.2159999999999997,
+      "sha256": "56581c26bc5612283bb5d3a5a9cecd191977ddd53ce8646441c08fb5406a897f",
+      "src": "./audio/generated/en/af_heart/0f58c2301b0f08fa1164443dfb1b21c2.m4a"
+    },
+    {
+      "offset": 3.816,
+      "end": 6.504,
+      "sha256": "7fe38c8caf8185fc93b3fc5ba07a23a8dd6444c0106a1672550b9cfdfa32f6b3",
+      "src": "./audio/generated/en/af_heart/fc07964918671a2b8877b14cb1ba94dc.m4a"
+    },
+    {
+      "offset": 7.103999999999999,
+      "end": 10.517375,
+      "sha256": "9a0a05d51f34c8a645696f6816ae79e2071130de15896b8dfd973998930f6473",
+      "src": "./audio/generated/en/am_puck/7d80df98c51c0f49f6a2ecdb15d6caf3.m4a"
+    },
+    {
+      "offset": 11.117375,
+      "end": 13.165375,
+      "sha256": "ffa6371dca171cbde1a49befd89b09867ac3a71dc6c8d2c5a0176133faf7ce7d",
+      "src": "./audio/generated/en/af_bella/eab7359328cf389b342dc1629235092b.m4a"
+    },
+    {
+      "offset": 13.765374999999999,
+      "end": 16.15475,
+      "sha256": "84bddc3819df31b9c9907a363cef1e34f1466254a67bc5226e53c86198015d9c",
+      "src": "./audio/generated/en/af_bella/b371c88b32e73244c18bc3b61cf88316.m4a"
+    },
+    {
+      "offset": 16.75475,
+      "end": 18.632125000000002,
+      "sha256": "bee529ffefb5278526e79b7141cd195d14acd1de2e23fe47b61de82e18e53518",
+      "src": "./audio/generated/en/af_bella/763c23e5f4ecd1e630145be617672cd7.m4a"
+    },
+    {
+      "offset": 19.232125000000003,
+      "end": 22.816125000000003,
+      "sha256": "bb07039cbc034aeefd8145b8c7f70713021c66e86b59055cf502016b8f581df2",
+      "src": "./audio/generated/en/af_heart/2cac2aa67c9e6fe6763b5b3927808123.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " We",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.9082223773002625
+    },
+    {
+      "word": " posted",
+      "start": 0.54,
+      "end": 0.84,
+      "probability": 0.9904474020004272
+    },
+    {
+      "word": " that",
+      "start": 0.84,
+      "end": 1.1,
+      "probability": 0.9849810600280762
+    },
+    {
+      "word": " credit",
+      "start": 1.1,
+      "end": 1.44,
+      "probability": 0.9965409636497498
+    },
+    {
+      "word": " after",
+      "start": 1.44,
+      "end": 1.94,
+      "probability": 0.9715288877487183
+    },
+    {
+      "word": " this",
+      "start": 1.94,
+      "end": 2.16,
+      "probability": 0.9902397394180298
+    },
+    {
+      "word": " invoice",
+      "start": 2.16,
+      "end": 2.4,
+      "probability": 0.9968891739845276
+    },
+    {
+      "word": " closed.",
+      "start": 2.4,
+      "end": 2.96,
+      "probability": 0.9953302145004272
+    },
+    {
+      "word": " The",
+      "start": 3.86,
+      "end": 3.98,
+      "probability": 0.991240918636322
+    },
+    {
+      "word": " invoice",
+      "start": 3.98,
+      "end": 4.32,
+      "probability": 0.9915913343429565
+    },
+    {
+      "word": " uses",
+      "start": 4.32,
+      "end": 4.9,
+      "probability": 0.9934160709381104
+    },
+    {
+      "word": " the",
+      "start": 4.9,
+      "end": 5.18,
+      "probability": 0.9989224672317505
+    },
+    {
+      "word": " same",
+      "start": 5.18,
+      "end": 5.46,
+      "probability": 0.9986535310745239
+    },
+    {
+      "word": " customer",
+      "start": 5.46,
+      "end": 5.86,
+      "probability": 0.9791793823242188
+    },
+    {
+      "word": " number.",
+      "start": 5.86,
+      "end": 6.2,
+      "probability": 0.9973080158233643
+    },
+    {
+      "word": " Should",
+      "start": 6.94,
+      "end": 7.26,
+      "probability": 0.7040205597877502
+    },
+    {
+      "word": " we",
+      "start": 7.26,
+      "end": 7.42,
+      "probability": 0.9985590577125549
+    },
+    {
+      "word": " reject",
+      "start": 7.42,
+      "end": 7.76,
+      "probability": 0.9912029504776001
+    },
+    {
+      "word": " the",
+      "start": 7.76,
+      "end": 7.9,
+      "probability": 0.9977908134460449
+    },
+    {
+      "word": " test",
+      "start": 7.9,
+      "end": 8.1,
+      "probability": 0.9962946772575378
+    },
+    {
+      "word": " result",
+      "start": 8.1,
+      "end": 8.48,
+      "probability": 0.9913554787635803
+    },
+    {
+      "word": " or",
+      "start": 8.48,
+      "end": 8.76,
+      "probability": 0.8974646329879761
+    },
+    {
+      "word": " rerun",
+      "start": 8.76,
+      "end": 9.08,
+      "probability": 0.922684907913208
+    },
+    {
+      "word": " the",
+      "start": 9.08,
+      "end": 9.24,
+      "probability": 0.9969045519828796
+    },
+    {
+      "word": " sample",
+      "start": 9.24,
+      "end": 9.52,
+      "probability": 0.9984651803970337
+    },
+    {
+      "word": " first?",
+      "start": 9.52,
+      "end": 9.86,
+      "probability": 0.9960923790931702
+    },
+    {
+      "word": " We",
+      "start": 10.740000000000002,
+      "end": 11.3,
+      "probability": 0.9925693869590759
+    },
+    {
+      "word": " haven't",
+      "start": 11.3,
+      "end": 11.64,
+      "probability": 0.9944258332252502
+    },
+    {
+      "word": " ruled",
+      "start": 11.64,
+      "end": 11.88,
+      "probability": 0.9978610873222351
+    },
+    {
+      "word": " out",
+      "start": 11.88,
+      "end": 12.08,
+      "probability": 0.9973840117454529
+    },
+    {
+      "word": " a",
+      "start": 12.08,
+      "end": 12.16,
+      "probability": 0.9900528788566589
+    },
+    {
+      "word": " fault",
+      "start": 12.16,
+      "end": 12.4,
+      "probability": 0.9931436777114868
+    },
+    {
+      "word": " in",
+      "start": 12.4,
+      "end": 12.58,
+      "probability": 0.9956782460212708
+    },
+    {
+      "word": " the",
+      "start": 12.58,
+      "end": 12.66,
+      "probability": 0.9882723689079285
+    },
+    {
+      "word": " meter.",
+      "start": 12.66,
+      "end": 12.84,
+      "probability": 0.9084757566452026
+    },
+    {
+      "word": " The",
+      "start": 13.64,
+      "end": 13.92,
+      "probability": 0.9947969317436218
+    },
+    {
+      "word": " sample",
+      "start": 13.92,
+      "end": 14.22,
+      "probability": 0.9990043044090271
+    },
+    {
+      "word": " came",
+      "start": 14.22,
+      "end": 14.52,
+      "probability": 0.9984418749809265
+    },
+    {
+      "word": " in",
+      "start": 14.52,
+      "end": 14.66,
+      "probability": 0.9986221790313721
+    },
+    {
+      "word": " a",
+      "start": 14.66,
+      "end": 14.76,
+      "probability": 0.9980247020721436
+    },
+    {
+      "word": " sealed",
+      "start": 14.76,
+      "end": 15.02,
+      "probability": 0.9988014698028564
+    },
+    {
+      "word": " plastic",
+      "start": 15.02,
+      "end": 15.48,
+      "probability": 0.9921980500221252
+    },
+    {
+      "word": " bag.",
+      "start": 15.48,
+      "end": 15.86,
+      "probability": 0.9991618394851685
+    },
+    {
+      "word": " The",
+      "start": 16.7,
+      "end": 16.92,
+      "probability": 0.9918836355209351
+    },
+    {
+      "word": " meter",
+      "start": 16.92,
+      "end": 17.1,
+      "probability": 0.9873629808425903
+    },
+    {
+      "word": " readings",
+      "start": 17.1,
+      "end": 17.38,
+      "probability": 0.996720016002655
+    },
+    {
+      "word": " are",
+      "start": 17.38,
+      "end": 17.62,
+      "probability": 0.9989493489265442
+    },
+    {
+      "word": " stored",
+      "start": 17.62,
+      "end": 17.84,
+      "probability": 0.9983940720558167
+    },
+    {
+      "word": " by",
+      "start": 17.84,
+      "end": 18.08,
+      "probability": 0.9993246793746948
+    },
+    {
+      "word": " date.",
+      "start": 18.08,
+      "end": 18.36,
+      "probability": 0.9974138140678406
+    },
+    {
+      "word": " Our",
+      "start": 19.24,
+      "end": 19.4,
+      "probability": 0.9973681569099426
+    },
+    {
+      "word": " total",
+      "start": 19.4,
+      "end": 19.72,
+      "probability": 0.9988740086555481
+    },
+    {
+      "word": " is",
+      "start": 19.72,
+      "end": 20.08,
+      "probability": 0.9979462027549744
+    },
+    {
+      "word": " higher",
+      "start": 20.08,
+      "end": 20.44,
+      "probability": 0.9951338171958923
+    },
+    {
+      "word": " than",
+      "start": 20.44,
+      "end": 20.8,
+      "probability": 0.9961887001991272
+    },
+    {
+      "word": " the",
+      "start": 20.8,
+      "end": 20.9,
+      "probability": 0.9982627034187317
+    },
+    {
+      "word": " distributor's",
+      "start": 20.9,
+      "end": 21.54,
+      "probability": 0.9176591038703918
+    },
+    {
+      "word": " figure",
+      "start": 21.54,
+      "end": 21.8,
+      "probability": 0.9988380074501038
+    },
+    {
+      "word": " for",
+      "start": 21.8,
+      "end": 22.02,
+      "probability": 0.996067225933075
+    },
+    {
+      "word": " the",
+      "start": 22.02,
+      "end": 22.12,
+      "probability": 0.9989597797393799
+    },
+    {
+      "word": " same",
+      "start": 22.12,
+      "end": 22.36,
+      "probability": 0.9984647035598755
+    },
+    {
+      "word": " month.",
+      "start": 22.36,
+      "end": 22.62,
+      "probability": 0.9992932081222534
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.96,
+      "text": " We posted that credit after this invoice closed.",
+      "avgLogprob": -0.12994651650560313,
+      "noSpeechProb": 0.027280518785119057
+    },
+    {
+      "start": 3.86,
+      "end": 6.2,
+      "text": " The invoice uses the same customer number.",
+      "avgLogprob": -0.12994651650560313,
+      "noSpeechProb": 0.027280518785119057
+    },
+    {
+      "start": 6.94,
+      "end": 9.86,
+      "text": " Should we reject the test result or rerun the sample first?",
+      "avgLogprob": -0.12994651650560313,
+      "noSpeechProb": 0.027280518785119057
+    },
+    {
+      "start": 10.740000000000002,
+      "end": 12.84,
+      "text": " We haven't ruled out a fault in the meter.",
+      "avgLogprob": -0.12994651650560313,
+      "noSpeechProb": 0.027280518785119057
+    },
+    {
+      "start": 13.64,
+      "end": 15.86,
+      "text": " The sample came in a sealed plastic bag.",
+      "avgLogprob": -0.12994651650560313,
+      "noSpeechProb": 0.027280518785119057
+    },
+    {
+      "start": 16.7,
+      "end": 18.36,
+      "text": " The meter readings are stored by date.",
+      "avgLogprob": -0.12994651650560313,
+      "noSpeechProb": 0.027280518785119057
+    },
+    {
+      "start": 19.24,
+      "end": 22.62,
+      "text": " Our total is higher than the distributor's figure for the same month.",
+      "avgLogprob": -0.12994651650560313,
+      "noSpeechProb": 0.027280518785119057
+    }
+  ]
+}

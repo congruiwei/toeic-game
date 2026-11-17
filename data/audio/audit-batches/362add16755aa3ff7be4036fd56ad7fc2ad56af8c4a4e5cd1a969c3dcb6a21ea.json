@@ -1,0 +1,480 @@
+{
+  "version": 1,
+  "id": "362add16755aa3ff7be4036fd56ad7fc2ad56af8c4a4e5cd1a969c3dcb6a21ea",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 17.482750000000003,
+  "elapsedSeconds": 6.539,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.3626875,
+      "sha256": "637fbaab5d49b2dcd0d4e6e674756e783fd3d9967cbcb53195403b8f4927cd71",
+      "src": "./audio/generated/ja/jf_alpha/3cbf4bfc1aaecc3d78ed3b5c7773c7cd.m4a"
+    },
+    {
+      "offset": 2.9626875,
+      "end": 4.925375,
+      "sha256": "cc26302f679ca97f0c202299d3280cbce203c1a09a4e9c65c3f1c39ceec28180",
+      "src": "./audio/generated/ja/jf_alpha/eb45db15b0c23e12529fd99f30c2ce44.m4a"
+    },
+    {
+      "offset": 5.5253749999999995,
+      "end": 7.445374999999999,
+      "sha256": "e371748ca095393b385e7ba614c59e6421887ed92b7b572c0b5ee1d2983140ef",
+      "src": "./audio/generated/ja/jf_alpha/5ce86bd4696ff4bac1349955758c218c.m4a"
+    },
+    {
+      "offset": 8.045375,
+      "end": 10.733375,
+      "sha256": "1f6b7063d3f199264e1201e690dbe2ec591a0af3e13e42662c8fd10bd6029f28",
+      "src": "./audio/generated/ja/jf_alpha/436d4ab4a248771cab5aa6749f4cd51c.m4a"
+    },
+    {
+      "offset": 11.333375,
+      "end": 13.8080625,
+      "sha256": "7667b731e94b23b1c9662e80c50d530841a91bc09433aa756082565c93875b08",
+      "src": "./audio/generated/ja/jf_alpha/2b6d3c0d94674f5df09159766df10d00.m4a"
+    },
+    {
+      "offset": 14.4080625,
+      "end": 16.88275,
+      "sha256": "3074f369f42909fa980c7f747c67a5c73d8bd94f0393f1152b371ca69e98f9ab",
+      "src": "./audio/generated/ja/jf_alpha/9786bdad2d0d8e8546bae288c57e631b.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "紹",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.4955545663833618
+    },
+    {
+      "word": "介",
+      "start": 0.7,
+      "end": 0.96,
+      "probability": 0.9983598589897156
+    },
+    {
+      "word": "リ",
+      "start": 0.96,
+      "end": 1.12,
+      "probability": 0.6177154779434204
+    },
+    {
+      "word": "ン",
+      "start": 1.12,
+      "end": 1.2,
+      "probability": 0.9812650084495544
+    },
+    {
+      "word": "ク",
+      "start": 1.2,
+      "end": 1.32,
+      "probability": 0.9985357522964478
+    },
+    {
+      "word": "を",
+      "start": 1.32,
+      "end": 1.44,
+      "probability": 0.9813344478607178
+    },
+    {
+      "word": "共",
+      "start": 1.44,
+      "end": 1.66,
+      "probability": 0.9858278036117554
+    },
+    {
+      "word": "有",
+      "start": 1.66,
+      "end": 1.86,
+      "probability": 0.9846805930137634
+    },
+    {
+      "word": "する、",
+      "start": 1.86,
+      "end": 2.16,
+      "probability": 0.9837828278541565
+    },
+    {
+      "word": "初",
+      "start": 2.8,
+      "end": 3.18,
+      "probability": 0.4271247982978821
+    },
+    {
+      "word": "回",
+      "start": 3.18,
+      "end": 3.4,
+      "probability": 0.661735475063324
+    },
+    {
+      "word": "の",
+      "start": 3.4,
+      "end": 3.56,
+      "probability": 0.9937430024147034
+    },
+    {
+      "word": "授",
+      "start": 3.56,
+      "end": 3.74,
+      "probability": 0.9921417832374573
+    },
+    {
+      "word": "業",
+      "start": 3.74,
+      "end": 3.92,
+      "probability": 0.9987038373947144
+    },
+    {
+      "word": "に",
+      "start": 3.92,
+      "end": 4.1,
+      "probability": 0.8982685208320618
+    },
+    {
+      "word": "参",
+      "start": 4.1,
+      "end": 4.34,
+      "probability": 0.985065221786499
+    },
+    {
+      "word": "加",
+      "start": 4.34,
+      "end": 4.5,
+      "probability": 0.9950482249259949
+    },
+    {
+      "word": "する、",
+      "start": 4.5,
+      "end": 4.74,
+      "probability": 0.9778175950050354
+    },
+    {
+      "word": "2",
+      "start": 5.52,
+      "end": 5.72,
+      "probability": 0.6335636973381042
+    },
+    {
+      "word": "つ",
+      "start": 5.72,
+      "end": 5.96,
+      "probability": 0.9797402024269104
+    },
+    {
+      "word": "目",
+      "start": 5.96,
+      "end": 6.1,
+      "probability": 0.9549192786216736
+    },
+    {
+      "word": "の",
+      "start": 6.1,
+      "end": 6.22,
+      "probability": 0.9989792704582214
+    },
+    {
+      "word": "ア",
+      "start": 6.22,
+      "end": 6.4,
+      "probability": 0.9900450110435486
+    },
+    {
+      "word": "カ",
+      "start": 6.4,
+      "end": 6.48,
+      "probability": 0.9960881471633911
+    },
+    {
+      "word": "ウ",
+      "start": 6.48,
+      "end": 6.64,
+      "probability": 0.9977420568466187
+    },
+    {
+      "word": "ント",
+      "start": 6.64,
+      "end": 6.78,
+      "probability": 0.9976849555969238
+    },
+    {
+      "word": "を",
+      "start": 6.78,
+      "end": 6.92,
+      "probability": 0.9938814640045166
+    },
+    {
+      "word": "作",
+      "start": 6.92,
+      "end": 7.06,
+      "probability": 0.9140303730964661
+    },
+    {
+      "word": "る、",
+      "start": 7.06,
+      "end": 7.62,
+      "probability": 0.9961187839508057
+    },
+    {
+      "word": "最後",
+      "start": 8.0,
+      "end": 8.42,
+      "probability": 0.8219401836395264
+    },
+    {
+      "word": "の",
+      "start": 8.42,
+      "end": 8.68,
+      "probability": 0.9992699027061462
+    },
+    {
+      "word": "変",
+      "start": 8.68,
+      "end": 8.9,
+      "probability": 0.44578835368156433
+    },
+    {
+      "word": "動",
+      "start": 8.9,
+      "end": 9.12,
+      "probability": 0.16823530197143555
+    },
+    {
+      "word": "から",
+      "start": 9.12,
+      "end": 9.4,
+      "probability": 0.9907107949256897
+    },
+    {
+      "word": "何",
+      "start": 9.4,
+      "end": 9.6,
+      "probability": 0.91197669506073
+    },
+    {
+      "word": "が",
+      "start": 9.6,
+      "end": 9.82,
+      "probability": 0.9965336322784424
+    },
+    {
+      "word": "分",
+      "start": 9.82,
+      "end": 9.98,
+      "probability": 0.5500302910804749
+    },
+    {
+      "word": "か",
+      "start": 9.98,
+      "end": 10.06,
+      "probability": 0.9993029832839966
+    },
+    {
+      "word": "ります",
+      "start": 10.06,
+      "end": 10.28,
+      "probability": 0.9863220453262329
+    },
+    {
+      "word": "か。",
+      "start": 10.28,
+      "end": 10.56,
+      "probability": 0.996347963809967
+    },
+    {
+      "word": "見",
+      "start": 11.139999999999999,
+      "end": 11.52,
+      "probability": 0.22741946578025818
+    },
+    {
+      "word": "使",
+      "start": 11.52,
+      "end": 11.74,
+      "probability": 0.2688891291618347
+    },
+    {
+      "word": "用",
+      "start": 11.74,
+      "end": 11.94,
+      "probability": 0.9979104399681091
+    },
+    {
+      "word": "の",
+      "start": 11.94,
+      "end": 12.08,
+      "probability": 0.9658824801445007
+    },
+    {
+      "word": "リ",
+      "start": 12.08,
+      "end": 12.26,
+      "probability": 0.973599910736084
+    },
+    {
+      "word": "ン",
+      "start": 12.26,
+      "end": 12.34,
+      "probability": 0.9831399321556091
+    },
+    {
+      "word": "ク",
+      "start": 12.34,
+      "end": 12.48,
+      "probability": 0.9994812607765198
+    },
+    {
+      "word": "は",
+      "start": 12.48,
+      "end": 12.6,
+      "probability": 0.989343523979187
+    },
+    {
+      "word": "機",
+      "start": 12.6,
+      "end": 12.8,
+      "probability": 0.23502837121486664
+    },
+    {
+      "word": "嫌",
+      "start": 12.8,
+      "end": 12.96,
+      "probability": 0.6818174719810486
+    },
+    {
+      "word": "切",
+      "start": 12.96,
+      "end": 13.16,
+      "probability": 0.8294897079467773
+    },
+    {
+      "word": "れ",
+      "start": 13.16,
+      "end": 13.28,
+      "probability": 0.9918234944343567
+    },
+    {
+      "word": "で",
+      "start": 13.28,
+      "end": 13.38,
+      "probability": 0.9274435043334961
+    },
+    {
+      "word": "ある",
+      "start": 13.38,
+      "end": 13.6,
+      "probability": 0.907529890537262
+    },
+    {
+      "word": " あ",
+      "start": 13.6,
+      "end": 14.58,
+      "probability": 0.3301118016242981
+    },
+    {
+      "word": "と",
+      "start": 14.58,
+      "end": 14.7,
+      "probability": 0.9956931471824646
+    },
+    {
+      "word": "に",
+      "start": 14.7,
+      "end": 14.9,
+      "probability": 0.826244056224823
+    },
+    {
+      "word": "剣",
+      "start": 14.9,
+      "end": 15.08,
+      "probability": 0.7443391680717468
+    },
+    {
+      "word": "の",
+      "start": 15.08,
+      "end": 15.28,
+      "probability": 0.9946697354316711
+    },
+    {
+      "word": "特",
+      "start": 15.28,
+      "end": 15.46,
+      "probability": 0.608869731426239
+    },
+    {
+      "word": "典",
+      "start": 15.46,
+      "end": 15.7,
+      "probability": 0.9470593333244324
+    },
+    {
+      "word": "を",
+      "start": 15.7,
+      "end": 15.88,
+      "probability": 0.9986022114753723
+    },
+    {
+      "word": "獲",
+      "start": 15.88,
+      "end": 16.0,
+      "probability": 0.9941475689411163
+    },
+    {
+      "word": "得",
+      "start": 16.0,
+      "end": 16.24,
+      "probability": 0.9992183446884155
+    },
+    {
+      "word": "でき",
+      "start": 16.24,
+      "end": 16.44,
+      "probability": 0.955865204334259
+    },
+    {
+      "word": "る",
+      "start": 16.44,
+      "end": 16.7,
+      "probability": 0.9994951486587524
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.56,
+      "text": "紹介リンクを共有する、初回の授業に参加する、2つ目のアカウントを作る、最後の変動から何が分かりますか。",
+      "avgLogprob": -0.28449862599372866,
+      "noSpeechProb": 0.0955844298005104
+    },
+    {
+      "start": 11.139999999999999,
+      "end": 16.7,
+      "text": "見使用のリンクは機嫌切れである あとに剣の特典を獲得できる",
+      "avgLogprob": -0.34783178387266217,
+      "noSpeechProb": 0.14537745714187622
+    }
+  ]
+}

@@ -1,0 +1,571 @@
+{
+  "version": 1,
+  "id": "d4490073a4883752a1872c9ffbf0b826d75d0b4225e4f1faf2c13c6c3c16954c",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.770750000000003,
+  "elapsedSeconds": 4.971,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.3386875,
+      "sha256": "4991ea5b253c2662f4e19f33839bbefe0b205d3a8f3754e4b833fa7fe8064afc",
+      "src": "./audio/generated/ja/jf_alpha/ac72e4443629efe81533cbba1ee0054d.m4a"
+    },
+    {
+      "offset": 1.9386875,
+      "end": 3.4746875,
+      "sha256": "27620bbd61eeb094e42b69c431f7d2ed4c7d109b1a1b159661f23bc7cbead34a",
+      "src": "./audio/generated/ja/jf_alpha/e3c0c4361bce5e7949dbb97d8b13fe19.m4a"
+    },
+    {
+      "offset": 4.0746875,
+      "end": 9.5786875,
+      "sha256": "6c89b7c99ca6126144914b2ca0ad11c321bd19e67a2b205872d6fd42616c9efe",
+      "src": "./audio/generated/ja/jf_alpha/a507e489d5c1e4f6c96ffb2287825b7e.m4a"
+    },
+    {
+      "offset": 10.178687499999999,
+      "end": 17.5600625,
+      "sha256": "11969dcd5f0cfb3e867cffbb41c1d3e94820e9b1c381c5372a36a18da8889a56",
+      "src": "./audio/generated/ja/jf_alpha/ec2fe04353dd50a4e2a64334f4be502c.m4a"
+    },
+    {
+      "offset": 18.160062500000002,
+      "end": 22.17075,
+      "sha256": "a8d5874e60d69924d9f19754e76540558a26a0fb42ab4eb35a85f3ab6dcfc176",
+      "src": "./audio/generated/ja/jf_alpha/d1ad573fa975dece508d2083ee0bb4df.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "ま",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.7792601585388184
+    },
+    {
+      "word": "と",
+      "start": 0.62,
+      "end": 0.76,
+      "probability": 0.9983959794044495
+    },
+    {
+      "word": "め",
+      "start": 0.76,
+      "end": 0.9,
+      "probability": 0.9967957139015198
+    },
+    {
+      "word": "る",
+      "start": 0.9,
+      "end": 1.12,
+      "probability": 0.9989228844642639
+    },
+    {
+      "word": "中",
+      "start": 1.12,
+      "end": 2.22,
+      "probability": 0.583598256111145
+    },
+    {
+      "word": "庭",
+      "start": 2.22,
+      "end": 2.46,
+      "probability": 0.909314751625061
+    },
+    {
+      "word": "の",
+      "start": 2.46,
+      "end": 2.66,
+      "probability": 0.9371528625488281
+    },
+    {
+      "word": "整",
+      "start": 2.66,
+      "end": 2.9,
+      "probability": 0.8245542645454407
+    },
+    {
+      "word": "備",
+      "start": 2.9,
+      "end": 3.08,
+      "probability": 0.999437153339386
+    },
+    {
+      "word": "案",
+      "start": 3.08,
+      "end": 3.26,
+      "probability": 0.9903832077980042
+    },
+    {
+      "word": "入",
+      "start": 3.26,
+      "end": 4.32,
+      "probability": 0.6746628284454346
+    },
+    {
+      "word": "居",
+      "start": 4.32,
+      "end": 4.5,
+      "probability": 0.8091888427734375
+    },
+    {
+      "word": "者",
+      "start": 4.5,
+      "end": 4.7,
+      "probability": 0.9262133836746216
+    },
+    {
+      "word": "の",
+      "start": 4.7,
+      "end": 4.82,
+      "probability": 0.9835411906242371
+    },
+    {
+      "word": "投",
+      "start": 4.82,
+      "end": 5.06,
+      "probability": 0.9799473285675049
+    },
+    {
+      "word": "票",
+      "start": 5.06,
+      "end": 5.22,
+      "probability": 0.9944414496421814
+    },
+    {
+      "word": "では",
+      "start": 5.22,
+      "end": 5.5,
+      "probability": 0.8896191716194153
+    },
+    {
+      "word": "20",
+      "start": 5.5,
+      "end": 6.3,
+      "probability": 0.7221589088439941
+    },
+    {
+      "word": "人",
+      "start": 6.3,
+      "end": 6.62,
+      "probability": 0.9780235886573792
+    },
+    {
+      "word": "が",
+      "start": 6.62,
+      "end": 6.86,
+      "probability": 0.961444079875946
+    },
+    {
+      "word": "ベ",
+      "start": 6.86,
+      "end": 7.06,
+      "probability": 0.4828405976295471
+    },
+    {
+      "word": "ンチ",
+      "start": 7.06,
+      "end": 7.26,
+      "probability": 0.9982510805130005
+    },
+    {
+      "word": "12",
+      "start": 7.26,
+      "end": 7.56,
+      "probability": 0.8602743148803711
+    },
+    {
+      "word": "人",
+      "start": 7.56,
+      "end": 7.82,
+      "probability": 0.9976969361305237
+    },
+    {
+      "word": "が",
+      "start": 7.82,
+      "end": 8.04,
+      "probability": 0.9897398948669434
+    },
+    {
+      "word": "プ",
+      "start": 8.04,
+      "end": 8.22,
+      "probability": 0.9882348775863647
+    },
+    {
+      "word": "ラ",
+      "start": 8.22,
+      "end": 8.34,
+      "probability": 0.987129271030426
+    },
+    {
+      "word": "ン",
+      "start": 8.34,
+      "end": 8.4,
+      "probability": 0.9226385951042175
+    },
+    {
+      "word": "ター",
+      "start": 8.4,
+      "end": 8.56,
+      "probability": 0.9816548824310303
+    },
+    {
+      "word": "を",
+      "start": 8.56,
+      "end": 8.74,
+      "probability": 0.9885932207107544
+    },
+    {
+      "word": "選",
+      "start": 8.74,
+      "end": 8.9,
+      "probability": 0.9880130290985107
+    },
+    {
+      "word": "び",
+      "start": 8.9,
+      "end": 9.04,
+      "probability": 0.9938884377479553
+    },
+    {
+      "word": "ました",
+      "start": 9.04,
+      "end": 9.36,
+      "probability": 0.9395811557769775
+    },
+    {
+      "word": "委",
+      "start": 10.02,
+      "end": 10.42,
+      "probability": 0.17785540223121643
+    },
+    {
+      "word": "員",
+      "start": 10.42,
+      "end": 10.58,
+      "probability": 0.9962747097015381
+    },
+    {
+      "word": "会",
+      "start": 10.58,
+      "end": 10.76,
+      "probability": 0.997815728187561
+    },
+    {
+      "word": "は",
+      "start": 10.76,
+      "end": 11.0,
+      "probability": 0.9902822971343994
+    },
+    {
+      "word": "多",
+      "start": 11.0,
+      "end": 11.34,
+      "probability": 0.9288014769554138
+    },
+    {
+      "word": "数",
+      "start": 11.34,
+      "end": 11.6,
+      "probability": 0.9996910095214844
+    },
+    {
+      "word": "票",
+      "start": 11.6,
+      "end": 11.82,
+      "probability": 0.900175154209137
+    },
+    {
+      "word": "を",
+      "start": 11.82,
+      "end": 12.0,
+      "probability": 0.9981385469436646
+    },
+    {
+      "word": "得",
+      "start": 12.0,
+      "end": 12.12,
+      "probability": 0.9953656196594238
+    },
+    {
+      "word": "た",
+      "start": 12.12,
+      "end": 12.28,
+      "probability": 0.9980440139770508
+    },
+    {
+      "word": "案",
+      "start": 12.28,
+      "end": 12.46,
+      "probability": 0.9917421340942383
+    },
+    {
+      "word": "を",
+      "start": 12.46,
+      "end": 12.6,
+      "probability": 0.9942196607589722
+    },
+    {
+      "word": "指",
+      "start": 12.6,
+      "end": 12.76,
+      "probability": 0.4895872175693512
+    },
+    {
+      "word": "示",
+      "start": 12.76,
+      "end": 12.86,
+      "probability": 0.9987308382987976
+    },
+    {
+      "word": "しました",
+      "start": 12.86,
+      "end": 13.14,
+      "probability": 0.9884248971939087
+    },
+    {
+      "word": "が、",
+      "start": 13.14,
+      "end": 13.54,
+      "probability": 0.9775853157043457
+    },
+    {
+      "word": "数",
+      "start": 13.86,
+      "end": 14.18,
+      "probability": 0.3871040344238281
+    },
+    {
+      "word": "項",
+      "start": 14.18,
+      "end": 14.4,
+      "probability": 0.8820762038230896
+    },
+    {
+      "word": "に",
+      "start": 14.4,
+      "end": 14.6,
+      "probability": 0.9910503625869751
+    },
+    {
+      "word": "問題",
+      "start": 14.6,
+      "end": 14.9,
+      "probability": 0.992572009563446
+    },
+    {
+      "word": "が",
+      "start": 14.9,
+      "end": 15.2,
+      "probability": 0.9981918931007385
+    },
+    {
+      "word": "ない",
+      "start": 15.2,
+      "end": 15.42,
+      "probability": 0.895155131816864
+    },
+    {
+      "word": "可能",
+      "start": 15.42,
+      "end": 15.68,
+      "probability": 0.4814431071281433
+    },
+    {
+      "word": "確",
+      "start": 15.68,
+      "end": 15.92,
+      "probability": 0.988719642162323
+    },
+    {
+      "word": "認",
+      "start": 15.92,
+      "end": 16.18,
+      "probability": 0.9957228899002075
+    },
+    {
+      "word": "を",
+      "start": 16.18,
+      "end": 16.36,
+      "probability": 0.9966222047805786
+    },
+    {
+      "word": "条",
+      "start": 16.36,
+      "end": 16.56,
+      "probability": 0.9850969910621643
+    },
+    {
+      "word": "件",
+      "start": 16.56,
+      "end": 16.8,
+      "probability": 0.9932443499565125
+    },
+    {
+      "word": "と",
+      "start": 16.8,
+      "end": 16.96,
+      "probability": 0.9984191656112671
+    },
+    {
+      "word": "しました",
+      "start": 16.96,
+      "end": 17.34,
+      "probability": 0.9961512684822083
+    },
+    {
+      "word": "表示",
+      "start": 18.0,
+      "end": 18.4,
+      "probability": 0.9109463691711426
+    },
+    {
+      "word": "さ",
+      "start": 18.4,
+      "end": 18.74,
+      "probability": 0.9994701743125916
+    },
+    {
+      "word": "れた",
+      "start": 18.74,
+      "end": 18.92,
+      "probability": 0.9963136315345764
+    },
+    {
+      "word": "消",
+      "start": 18.92,
+      "end": 19.2,
+      "probability": 0.9369145035743713
+    },
+    {
+      "word": "防",
+      "start": 19.2,
+      "end": 19.44,
+      "probability": 0.9802370667457581
+    },
+    {
+      "word": "通",
+      "start": 19.44,
+      "end": 19.68,
+      "probability": 0.6998428702354431
+    },
+    {
+      "word": "路",
+      "start": 19.68,
+      "end": 19.82,
+      "probability": 0.9940113425254822
+    },
+    {
+      "word": "は",
+      "start": 19.82,
+      "end": 19.96,
+      "probability": 0.9873623847961426
+    },
+    {
+      "word": "常",
+      "start": 19.96,
+      "end": 20.16,
+      "probability": 0.9927114248275757
+    },
+    {
+      "word": "に",
+      "start": 20.16,
+      "end": 20.36,
+      "probability": 0.9949283599853516
+    },
+    {
+      "word": "開",
+      "start": 20.36,
+      "end": 20.52,
+      "probability": 0.738457977771759
+    },
+    {
+      "word": "けて",
+      "start": 20.52,
+      "end": 20.68,
+      "probability": 0.9993261098861694
+    },
+    {
+      "word": "お",
+      "start": 20.68,
+      "end": 20.86,
+      "probability": 0.9761892557144165
+    },
+    {
+      "word": "く",
+      "start": 20.86,
+      "end": 20.98,
+      "probability": 0.9996262788772583
+    },
+    {
+      "word": "必",
+      "start": 20.98,
+      "end": 21.12,
+      "probability": 0.9970665574073792
+    },
+    {
+      "word": "要",
+      "start": 21.12,
+      "end": 21.4,
+      "probability": 0.9997047781944275
+    },
+    {
+      "word": "が",
+      "start": 21.4,
+      "end": 21.56,
+      "probability": 0.9968916773796082
+    },
+    {
+      "word": "あります",
+      "start": 21.56,
+      "end": 21.84,
+      "probability": 0.9903862476348877
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 9.36,
+      "text": "まとめる中庭の整備案入居者の投票では20人がベンチ12人がプランターを選びました",
+      "avgLogprob": -0.1696381780409044,
+      "noSpeechProb": 0.02732299081981182
+    },
+    {
+      "start": 10.02,
+      "end": 17.34,
+      "text": "委員会は多数票を得た案を指示しましたが、数項に問題がない可能確認を条件としました",
+      "avgLogprob": -0.1696381780409044,
+      "noSpeechProb": 0.02732299081981182
+    },
+    {
+      "start": 18.0,
+      "end": 21.84,
+      "text": "表示された消防通路は常に開けておく必要があります",
+      "avgLogprob": -0.1696381780409044,
+      "noSpeechProb": 0.02732299081981182
+    }
+  ]
+}

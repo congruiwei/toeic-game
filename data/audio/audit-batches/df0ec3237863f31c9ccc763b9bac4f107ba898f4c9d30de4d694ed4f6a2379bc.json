@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "id": "df0ec3237863f31c9ccc763b9bac4f107ba898f4c9d30de4d694ed4f6a2379bc",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 1.6826875000000001,
+  "elapsedSeconds": 2.902,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.0826875,
+      "sha256": "6a52447f77f9d6a3d3cb3d6a696e346bef47295a7dc81e44693ff9507fcd4b19",
+      "src": "./audio/generated/en/am_puck/bad9f619edffef43465d6798357104aa.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Florey.",
+      "start": 0.0,
+      "end": 0.96,
+      "probability": 0.3288066436847051
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.96,
+      "text": " Florey.",
+      "avgLogprob": -0.9707692010062081,
+      "noSpeechProb": 0.10581446439027786
+    }
+  ]
+}

@@ -1,0 +1,419 @@
+{
+  "version": 1,
+  "id": "a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.752125000000007,
+  "elapsedSeconds": 4.389,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.04,
+      "sha256": "4cec8b9c24d66c1f9117ef4393749ca163f171eebca7e2b1391784cef4676d2d",
+      "src": "./audio/generated/en/am_puck/5b9439c0651430eb963bc0e5281dbc64.m4a"
+    },
+    {
+      "offset": 1.6400000000000001,
+      "end": 2.3226875000000002,
+      "sha256": "8d327d3da62c7a9258f23725a1d106044529b7302421dd71d787b3f51c8e4fd4",
+      "src": "./audio/generated/en/am_puck/ff5afb52570b231095c7b82a3d7bc57c.m4a"
+    },
+    {
+      "offset": 2.9226875000000003,
+      "end": 4.5866875,
+      "sha256": "d4cae311c52678ae045b472d9a28b2472f096af21877488b020434631c90f49a",
+      "src": "./audio/generated/en/am_puck/8542998a2c33426578897e853bca4c3e.m4a"
+    },
+    {
+      "offset": 5.1866875,
+      "end": 5.826687499999999,
+      "sha256": "ca812fcc849827a045c6c4bed81543dee159c3f82613e67525ef1e116aa38606",
+      "src": "./audio/generated/en/af_heart/af3df0f35a8477c663336da2e24a0c46.m4a"
+    },
+    {
+      "offset": 6.426687499999999,
+      "end": 7.066687499999999,
+      "sha256": "fc61b8b0a644ffbf171148a20f4254a05c2a87d8edf044b6c913c60b416a5898",
+      "src": "./audio/generated/en/af_heart/89ec35903e6135f443234050bf0203c7.m4a"
+    },
+    {
+      "offset": 7.666687499999998,
+      "end": 8.306687499999999,
+      "sha256": "ab1fa9e14c101818e22b83e33bea841d78b6e5d5e40d9955ead2faf304f9f04b",
+      "src": "./audio/generated/en/af_heart/415e2c8234aee81530d4da0a3ec09b84.m4a"
+    },
+    {
+      "offset": 8.906687499999999,
+      "end": 10.826687499999998,
+      "sha256": "775757344b066a2c895c9580acd826b185d358a7f666be692f2c3a268d3a12bc",
+      "src": "./audio/generated/en/am_puck/782cf5831c4d78c5b793eb96385e37e6.m4a"
+    },
+    {
+      "offset": 11.426687499999998,
+      "end": 12.109374999999998,
+      "sha256": "5f9a807ba9000a5ec83eb864366f95fc415ddcd0a9e90b687f93a17144071eea",
+      "src": "./audio/generated/en/af_bella/e132ec4da237ee51ed4be48968e930de.m4a"
+    },
+    {
+      "offset": 12.709374999999998,
+      "end": 13.349374999999998,
+      "sha256": "e4bdff071763a6df242a16e608821f9ec521ee31b2f43e89c5e4d552ea7fc397",
+      "src": "./audio/generated/en/af_bella/74c4f1a89884fddded87823f6f93f6e5.m4a"
+    },
+    {
+      "offset": 13.949374999999998,
+      "end": 14.546749999999998,
+      "sha256": "8e55c66a3980a74301788741878a21a557ef34f936b563d0531d9a8f2899b813",
+      "src": "./audio/generated/en/af_bella/6e8be55c67f5596706e3c79e60d5cb25.m4a"
+    },
+    {
+      "offset": 15.146749999999997,
+      "end": 17.19475,
+      "sha256": "d678d4a11e730cce62ff2a0c34998347645ea25c5cdd80bd5f2dc8a8bdbb4548",
+      "src": "./audio/generated/en/af_heart/b9e756e95c97fb12249f8235a008d1b0.m4a"
+    },
+    {
+      "offset": 17.79475,
+      "end": 18.4774375,
+      "sha256": "f2569826e6871a96b56d6b13980059abaeb8755a0df38f9e70f4025a9e8d26af",
+      "src": "./audio/generated/en/am_puck/57d1dc52df02fe7b99102510d27fa11d.m4a"
+    },
+    {
+      "offset": 19.077437500000002,
+      "end": 19.760125000000002,
+      "sha256": "69fb9acedca36e667935ddfa0c326d62344301b1f379ea67baa35c361900e18f",
+      "src": "./audio/generated/en/am_puck/12c25a646091846ea3bfb66173280213.m4a"
+    },
+    {
+      "offset": 20.360125000000004,
+      "end": 22.152125000000005,
+      "sha256": "2a015bee3b67890ab416946def4f65c2991b65f29e6b7f72ec20d9faca2778c3",
+      "src": "./audio/generated/en/af_bella/1e6c785cfa4b094da462319e306b8174.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " When...",
+      "start": 1.3400000000000039,
+      "end": 2.100000000000002,
+      "probability": 0.4565623700618744
+    },
+    {
+      "word": " Will...",
+      "start": 2.100000000000002,
+      "end": 2.86,
+      "probability": 0.8465482294559479
+    },
+    {
+      "word": " Could",
+      "start": 2.86,
+      "end": 3.08,
+      "probability": 0.7049628496170044
+    },
+    {
+      "word": " you",
+      "start": 3.08,
+      "end": 3.18,
+      "probability": 0.9967971444129944
+    },
+    {
+      "word": " check",
+      "start": 3.18,
+      "end": 3.38,
+      "probability": 0.9974147081375122
+    },
+    {
+      "word": " the",
+      "start": 3.38,
+      "end": 3.5,
+      "probability": 0.9931005239486694
+    },
+    {
+      "word": " invoice",
+      "start": 3.5,
+      "end": 3.7,
+      "probability": 0.9681240320205688
+    },
+    {
+      "word": " total?",
+      "start": 3.7,
+      "end": 4.08,
+      "probability": 0.9866612553596497
+    },
+    {
+      "word": " She",
+      "start": 5.24,
+      "end": 5.38,
+      "probability": 0.16868844628334045
+    },
+    {
+      "word": " said",
+      "start": 5.38,
+      "end": 5.52,
+      "probability": 0.981196403503418
+    },
+    {
+      "word": " it.",
+      "start": 5.52,
+      "end": 5.66,
+      "probability": 0.9485801458358765
+    },
+    {
+      "word": " Could.",
+      "start": 6.42,
+      "end": 6.74,
+      "probability": 0.8887513875961304
+    },
+    {
+      "word": " Would.",
+      "start": 7.72,
+      "end": 7.96,
+      "probability": 0.956914484500885
+    },
+    {
+      "word": " Has",
+      "start": 8.76,
+      "end": 9.1,
+      "probability": 0.9799461960792542
+    },
+    {
+      "word": " anyone",
+      "start": 9.1,
+      "end": 9.34,
+      "probability": 0.9949571490287781
+    },
+    {
+      "word": " returned",
+      "start": 9.34,
+      "end": 9.66,
+      "probability": 0.9849143624305725
+    },
+    {
+      "word": " the",
+      "start": 9.66,
+      "end": 9.88,
+      "probability": 0.996800422668457
+    },
+    {
+      "word": " storage",
+      "start": 9.88,
+      "end": 10.12,
+      "probability": 0.9755443334579468
+    },
+    {
+      "word": " key?",
+      "start": 10.12,
+      "end": 10.42,
+      "probability": 0.9978891015052795
+    },
+    {
+      "word": " Has.",
+      "start": 11.34,
+      "end": 11.8,
+      "probability": 0.8508585095405579
+    },
+    {
+      "word": " Have.",
+      "start": 12.6,
+      "end": 13.0,
+      "probability": 0.9638407826423645
+    },
+    {
+      "word": " Had.",
+      "start": 13.96,
+      "end": 14.26,
+      "probability": 0.994126558303833
+    },
+    {
+      "word": " Would",
+      "start": 15.1,
+      "end": 15.32,
+      "probability": 0.9603627324104309
+    },
+    {
+      "word": " Tuesday",
+      "start": 15.32,
+      "end": 15.62,
+      "probability": 0.9918273687362671
+    },
+    {
+      "word": " afternoon",
+      "start": 15.62,
+      "end": 16.1,
+      "probability": 0.8567015528678894
+    },
+    {
+      "word": " suit",
+      "start": 16.1,
+      "end": 16.52,
+      "probability": 0.9920684099197388
+    },
+    {
+      "word": " your",
+      "start": 16.52,
+      "end": 16.68,
+      "probability": 0.9978917241096497
+    },
+    {
+      "word": " team?",
+      "start": 16.68,
+      "end": 16.9,
+      "probability": 0.9950332641601562
+    },
+    {
+      "word": " Would.",
+      "start": 17.74,
+      "end": 18.12,
+      "probability": 0.9499842524528503
+    },
+    {
+      "word": " Was.",
+      "start": 18.92,
+      "end": 19.32,
+      "probability": 0.9821502566337585
+    },
+    {
+      "word": " Which",
+      "start": 20.2,
+      "end": 20.58,
+      "probability": 0.9890826940536499
+    },
+    {
+      "word": " boxes",
+      "start": 20.58,
+      "end": 20.96,
+      "probability": 0.8138477802276611
+    },
+    {
+      "word": " for",
+      "start": 20.96,
+      "end": 21.2,
+      "probability": 0.9836465716362
+    },
+    {
+      "word": " spare",
+      "start": 21.2,
+      "end": 21.4,
+      "probability": 0.9979543685913086
+    },
+    {
+      "word": " cables?",
+      "start": 21.4,
+      "end": 21.8,
+      "probability": 0.9918964505195618
+    }
+  ],
+  "segments": [
+    {
+      "start": 1.3400000000000039,
+      "end": 2.86,
+      "text": " When... Will...",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 2.86,
+      "end": 4.08,
+      "text": " Could you check the invoice total?",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 5.24,
+      "end": 5.66,
+      "text": " She said it.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 6.42,
+      "end": 6.74,
+      "text": " Could.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 7.72,
+      "end": 7.96,
+      "text": " Would.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 8.76,
+      "end": 10.42,
+      "text": " Has anyone returned the storage key?",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 11.34,
+      "end": 11.8,
+      "text": " Has.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 12.6,
+      "end": 13.0,
+      "text": " Have.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 13.96,
+      "end": 14.26,
+      "text": " Had.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 15.1,
+      "end": 16.9,
+      "text": " Would Tuesday afternoon suit your team?",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 17.74,
+      "end": 18.12,
+      "text": " Would.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 18.92,
+      "end": 19.32,
+      "text": " Was.",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    },
+    {
+      "start": 20.2,
+      "end": 21.8,
+      "text": " Which boxes for spare cables?",
+      "avgLogprob": -0.4970462110481764,
+      "noSpeechProb": 0.08546583354473114
+    }
+  ]
+}

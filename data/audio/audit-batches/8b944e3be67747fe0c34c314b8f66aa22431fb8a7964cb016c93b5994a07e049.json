@@ -1,0 +1,673 @@
+{
+  "version": 1,
+  "id": "8b944e3be67747fe0c34c314b8f66aa22431fb8a7964cb016c93b5994a07e049",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.762812500000006,
+  "elapsedSeconds": 4.452,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.8079999999999998,
+      "sha256": "c78c4dd60e73ab435f9056d6061c687e58e3cad7f24d09e9cae620691d7c32e1",
+      "src": "./audio/generated/ja/jf_alpha/f21165b54cca96bde76f94b55776bcb7.m4a"
+    },
+    {
+      "offset": 2.408,
+      "end": 4.4986875,
+      "sha256": "505b7a791e364ee90c603d5bfbd7a3a6fbe2b276f24b3001e68221c2b82e73ac",
+      "src": "./audio/generated/ja/jf_alpha/674e0adb5fd2a549fe86e05015919fb5.m4a"
+    },
+    {
+      "offset": 5.0986875,
+      "end": 7.2746875,
+      "sha256": "33afde42bfc6d15729ccf29dc332a18a78d84f2cb527ab462719288099ee5546",
+      "src": "./audio/generated/ja/jf_alpha/911d47c9291b188764b34fdcc8b929a6.m4a"
+    },
+    {
+      "offset": 7.874687499999999,
+      "end": 9.6666875,
+      "sha256": "2612ee3cc4044b43d9f1635e8bd73498877c8e2509788dffa70a8b104ee75013",
+      "src": "./audio/generated/ja/jf_alpha/9c6b2704e08b50e0da14e818708b33e6.m4a"
+    },
+    {
+      "offset": 10.2666875,
+      "end": 12.7840625,
+      "sha256": "ee69b77679202404964e6f554b3a3d8515da9fe88e81fbb43fa3f81588357771",
+      "src": "./audio/generated/ja/jf_alpha/70c192badd32ae0c20fa93ea64f6fe42.m4a"
+    },
+    {
+      "offset": 13.384062499999999,
+      "end": 15.5174375,
+      "sha256": "0177e91de3e032ed0b1a9d7a682cfba6a7f2e2c7ba6394f789a56c03cbb85063",
+      "src": "./audio/generated/ja/jf_alpha/1ba6900902445c43dbe1fdce094c1c41.m4a"
+    },
+    {
+      "offset": 16.1174375,
+      "end": 19.1894375,
+      "sha256": "ae7bad1af753b8f328920cb2db402a54fdc66ede6fccc69d11580301893eff4e",
+      "src": "./audio/generated/ja/jf_alpha/937fa05fdd6e169f2bfe5c5b633a9ed8.m4a"
+    },
+    {
+      "offset": 19.789437500000002,
+      "end": 21.112125000000002,
+      "sha256": "c3bdee68fbfe4148325c48e2b4f4ef0bcf586e5b8b85f54686780156b1db0606",
+      "src": "./audio/generated/ja/jf_alpha/64fc7d28ff2c54ffce0d6812dcfc321b.m4a"
+    },
+    {
+      "offset": 21.712125000000004,
+      "end": 23.162812500000005,
+      "sha256": "5ebea69502dd9c4b66c74b19346b345fce96dc376ca23211573333f19414041e",
+      "src": "./audio/generated/ja/jf_alpha/6357e74fc3de9f5635f9c2eae60d268a.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "折",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.6294537037611008
+    },
+    {
+      "word": "り",
+      "start": 0.64,
+      "end": 0.78,
+      "probability": 0.8127245306968689
+    },
+    {
+      "word": "た",
+      "start": 0.78,
+      "end": 0.86,
+      "probability": 0.5606732368469238
+    },
+    {
+      "word": "た",
+      "start": 0.86,
+      "end": 1.0,
+      "probability": 0.7277265787124634
+    },
+    {
+      "word": "み",
+      "start": 1.0,
+      "end": 1.14,
+      "probability": 0.8571209907531738
+    },
+    {
+      "word": "ー",
+      "start": 1.14,
+      "end": 1.26,
+      "probability": 0.20931033790111542
+    },
+    {
+      "word": "す",
+      "start": 1.26,
+      "end": 1.3,
+      "probability": 0.8871191143989563
+    },
+    {
+      "word": "です。",
+      "start": 1.3,
+      "end": 1.58,
+      "probability": 0.8671590685844421
+    },
+    {
+      "word": "大",
+      "start": 2.32,
+      "end": 2.64,
+      "probability": 0.6959959268569946
+    },
+    {
+      "word": "雨",
+      "start": 2.64,
+      "end": 2.86,
+      "probability": 0.9840462803840637
+    },
+    {
+      "word": "の",
+      "start": 2.86,
+      "end": 3.06,
+      "probability": 0.9934425354003906
+    },
+    {
+      "word": "場",
+      "start": 3.06,
+      "end": 3.22,
+      "probability": 0.9904274940490723
+    },
+    {
+      "word": "合",
+      "start": 3.22,
+      "end": 3.38,
+      "probability": 0.9983349442481995
+    },
+    {
+      "word": "は",
+      "start": 3.38,
+      "end": 3.52,
+      "probability": 0.995445728302002
+    },
+    {
+      "word": "どう",
+      "start": 3.52,
+      "end": 3.7,
+      "probability": 0.9016139507293701
+    },
+    {
+      "word": "な",
+      "start": 3.7,
+      "end": 3.84,
+      "probability": 0.9929831027984619
+    },
+    {
+      "word": "ります",
+      "start": 3.84,
+      "end": 4.1,
+      "probability": 0.994823694229126
+    },
+    {
+      "word": "か?",
+      "start": 4.1,
+      "end": 4.76,
+      "probability": 0.9962245225906372
+    },
+    {
+      "word": "活",
+      "start": 5.2,
+      "end": 5.28,
+      "probability": 0.7730199694633484
+    },
+    {
+      "word": "動",
+      "start": 5.28,
+      "end": 5.6,
+      "probability": 0.9995707869529724
+    },
+    {
+      "word": "の",
+      "start": 5.6,
+      "end": 5.76,
+      "probability": 0.9983121156692505
+    },
+    {
+      "word": "開始",
+      "start": 5.76,
+      "end": 6.04,
+      "probability": 0.9784901738166809
+    },
+    {
+      "word": "が",
+      "start": 6.04,
+      "end": 6.3,
+      "probability": 0.9943464398384094
+    },
+    {
+      "word": "遅",
+      "start": 6.3,
+      "end": 6.48,
+      "probability": 0.9895394444465637
+    },
+    {
+      "word": "く",
+      "start": 6.48,
+      "end": 6.64,
+      "probability": 0.9995054006576538
+    },
+    {
+      "word": "な",
+      "start": 6.64,
+      "end": 6.74,
+      "probability": 0.9967601895332336
+    },
+    {
+      "word": "ります。",
+      "start": 6.74,
+      "end": 7.1,
+      "probability": 0.9945582151412964
+    },
+    {
+      "word": "屋",
+      "start": 7.94,
+      "end": 8.06,
+      "probability": 0.8441704213619232
+    },
+    {
+      "word": "内",
+      "start": 8.06,
+      "end": 8.38,
+      "probability": 0.9925429821014404
+    },
+    {
+      "word": "で",
+      "start": 8.38,
+      "end": 8.56,
+      "probability": 0.9800496101379395
+    },
+    {
+      "word": "手",
+      "start": 8.56,
+      "end": 8.72,
+      "probability": 0.3588496148586273
+    },
+    {
+      "word": "を",
+      "start": 8.72,
+      "end": 8.84,
+      "probability": 0.9722729921340942
+    },
+    {
+      "word": "仕",
+      "start": 8.84,
+      "end": 8.94,
+      "probability": 0.822605550289154
+    },
+    {
+      "word": "分",
+      "start": 8.94,
+      "end": 9.08,
+      "probability": 0.956683874130249
+    },
+    {
+      "word": "け",
+      "start": 9.08,
+      "end": 9.2,
+      "probability": 0.9989369511604309
+    },
+    {
+      "word": "ます。",
+      "start": 9.2,
+      "end": 9.5,
+      "probability": 0.9972374439239502
+    },
+    {
+      "word": "植",
+      "start": 10.3,
+      "end": 10.46,
+      "probability": 0.9233696162700653
+    },
+    {
+      "word": "え",
+      "start": 10.46,
+      "end": 10.58,
+      "probability": 0.9335334300994873
+    },
+    {
+      "word": "付",
+      "start": 10.58,
+      "end": 10.66,
+      "probability": 0.877984881401062
+    },
+    {
+      "word": "け",
+      "start": 10.66,
+      "end": 10.8,
+      "probability": 0.9823395609855652
+    },
+    {
+      "word": "は",
+      "start": 10.8,
+      "end": 10.92,
+      "probability": 0.9979426264762878
+    },
+    {
+      "word": "日",
+      "start": 10.92,
+      "end": 11.1,
+      "probability": 0.982273280620575
+    },
+    {
+      "word": "曜",
+      "start": 11.1,
+      "end": 11.38,
+      "probability": 0.764106273651123
+    },
+    {
+      "word": "日",
+      "start": 11.38,
+      "end": 11.56,
+      "probability": 0.9982028007507324
+    },
+    {
+      "word": "に",
+      "start": 11.56,
+      "end": 11.68,
+      "probability": 0.9985126852989197
+    },
+    {
+      "word": "変",
+      "start": 11.68,
+      "end": 11.88,
+      "probability": 0.9853047728538513
+    },
+    {
+      "word": "更",
+      "start": 11.88,
+      "end": 12.08,
+      "probability": 0.9896765351295471
+    },
+    {
+      "word": "さ",
+      "start": 12.08,
+      "end": 12.28,
+      "probability": 0.9863117337226868
+    },
+    {
+      "word": "れ",
+      "start": 12.28,
+      "end": 12.38,
+      "probability": 0.9982492923736572
+    },
+    {
+      "word": "ます。",
+      "start": 12.38,
+      "end": 12.64,
+      "probability": 0.995488703250885
+    },
+    {
+      "word": "小",
+      "start": 13.44,
+      "end": 13.58,
+      "probability": 0.3441982567310333
+    },
+    {
+      "word": "屋",
+      "start": 13.58,
+      "end": 13.72,
+      "probability": 0.9925402998924255
+    },
+    {
+      "word": "で",
+      "start": 13.72,
+      "end": 13.86,
+      "probability": 0.9971514344215393
+    },
+    {
+      "word": "道",
+      "start": 13.86,
+      "end": 14.08,
+      "probability": 0.9210772514343262
+    },
+    {
+      "word": "具",
+      "start": 14.08,
+      "end": 14.24,
+      "probability": 0.9996606111526489
+    },
+    {
+      "word": "が",
+      "start": 14.24,
+      "end": 14.38,
+      "probability": 0.9965560436248779
+    },
+    {
+      "word": "販",
+      "start": 14.38,
+      "end": 14.6,
+      "probability": 0.9953939020633698
+    },
+    {
+      "word": "売",
+      "start": 14.6,
+      "end": 14.78,
+      "probability": 0.9954201579093933
+    },
+    {
+      "word": "さ",
+      "start": 14.78,
+      "end": 15.0,
+      "probability": 0.9979894161224365
+    },
+    {
+      "word": "れ",
+      "start": 15.0,
+      "end": 15.08,
+      "probability": 0.9986829161643982
+    },
+    {
+      "word": "ます。",
+      "start": 15.08,
+      "end": 15.34,
+      "probability": 0.9981841444969177
+    },
+    {
+      "word": "雨",
+      "start": 16.16,
+      "end": 16.34,
+      "probability": 0.9764502644538879
+    },
+    {
+      "word": "の",
+      "start": 16.34,
+      "end": 16.56,
+      "probability": 0.9991840720176697
+    },
+    {
+      "word": "場",
+      "start": 16.56,
+      "end": 16.74,
+      "probability": 0.9991059899330139
+    },
+    {
+      "word": "合",
+      "start": 16.74,
+      "end": 16.88,
+      "probability": 0.9996821880340576
+    },
+    {
+      "word": "でも",
+      "start": 16.88,
+      "end": 17.12,
+      "probability": 0.9951699376106262
+    },
+    {
+      "word": "変",
+      "start": 17.12,
+      "end": 17.36,
+      "probability": 0.9463081359863281
+    },
+    {
+      "word": "わ",
+      "start": 17.36,
+      "end": 17.48,
+      "probability": 0.9996329545974731
+    },
+    {
+      "word": "ら",
+      "start": 17.48,
+      "end": 17.56,
+      "probability": 0.9989306330680847
+    },
+    {
+      "word": "ない",
+      "start": 17.56,
+      "end": 17.78,
+      "probability": 0.9989660978317261
+    },
+    {
+      "word": "のは",
+      "start": 17.78,
+      "end": 18.04,
+      "probability": 0.9815576076507568
+    },
+    {
+      "word": "ど",
+      "start": 18.04,
+      "end": 18.2,
+      "probability": 0.9618064761161804
+    },
+    {
+      "word": "の",
+      "start": 18.2,
+      "end": 18.36,
+      "probability": 0.9991698265075684
+    },
+    {
+      "word": "事",
+      "start": 18.36,
+      "end": 18.46,
+      "probability": 0.6649665832519531
+    },
+    {
+      "word": "項",
+      "start": 18.46,
+      "end": 18.6,
+      "probability": 0.8225002288818359
+    },
+    {
+      "word": "ですか?",
+      "start": 18.6,
+      "end": 18.94,
+      "probability": 0.9839677214622498
+    },
+    {
+      "word": "集",
+      "start": 19.92,
+      "end": 20.08,
+      "probability": 0.8694512844085693
+    },
+    {
+      "word": "合",
+      "start": 20.08,
+      "end": 20.32,
+      "probability": 0.9955667853355408
+    },
+    {
+      "word": "場",
+      "start": 20.32,
+      "end": 20.48,
+      "probability": 0.9932703375816345
+    },
+    {
+      "word": "所",
+      "start": 20.48,
+      "end": 20.64,
+      "probability": 0.9998313188552856
+    },
+    {
+      "word": "です。",
+      "start": 20.64,
+      "end": 20.9,
+      "probability": 0.9921838641166687
+    },
+    {
+      "word": "作",
+      "start": 21.84,
+      "end": 21.98,
+      "probability": 0.9753073453903198
+    },
+    {
+      "word": "業",
+      "start": 21.98,
+      "end": 22.16,
+      "probability": 0.9999065399169922
+    },
+    {
+      "word": "の",
+      "start": 22.16,
+      "end": 22.32,
+      "probability": 0.9979096055030823
+    },
+    {
+      "word": "種",
+      "start": 22.32,
+      "end": 22.48,
+      "probability": 0.9760265946388245
+    },
+    {
+      "word": "類",
+      "start": 22.48,
+      "end": 22.68,
+      "probability": 0.9999419450759888
+    },
+    {
+      "word": "です。",
+      "start": 22.68,
+      "end": 22.92,
+      "probability": 0.9976050853729248
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.58,
+      "text": "折りたたみーすです。",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 2.32,
+      "end": 4.76,
+      "text": "大雨の場合はどうなりますか?",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 5.2,
+      "end": 7.1,
+      "text": "活動の開始が遅くなります。",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 7.94,
+      "end": 9.5,
+      "text": "屋内で手を仕分けます。",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 10.3,
+      "end": 12.64,
+      "text": "植え付けは日曜日に変更されます。",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 13.44,
+      "end": 15.34,
+      "text": "小屋で道具が販売されます。",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 16.16,
+      "end": 18.94,
+      "text": "雨の場合でも変わらないのはどの事項ですか?",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 19.92,
+      "end": 20.9,
+      "text": "集合場所です。",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    },
+    {
+      "start": 21.84,
+      "end": 22.92,
+      "text": "作業の種類です。",
+      "avgLogprob": -0.13733688306808473,
+      "noSpeechProb": 0.0720001757144928
+    }
+  ]
+}

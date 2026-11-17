@@ -1,0 +1,576 @@
+{
+  "version": 1,
+  "id": "2c46cd96b0ed2392f6f954924c29cea83235b6f163ae66f4a88a727c3f072c87",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.33887500000001,
+  "elapsedSeconds": 3.998,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.552,
+      "sha256": "a00703283865f6d18f367e58c078cec8eee272d4287d0ca00af58feedd8d79c8",
+      "src": "./audio/generated/ja/jf_alpha/4d8930a18e7e34377c32d6ad52f4480f.m4a"
+    },
+    {
+      "offset": 2.152,
+      "end": 3.8586875000000003,
+      "sha256": "0d4ebe479efe5d25f60f98dec19f060a89f00066c0d375ed279c0eb864a76727",
+      "src": "./audio/generated/ja/jf_alpha/1be99eac06219570190a98407e28c571.m4a"
+    },
+    {
+      "offset": 4.4586875,
+      "end": 6.0800625,
+      "sha256": "a535d687157ac7b95bf856c0892e07a90afed0c9dd39f21abd8e57bac26a4648",
+      "src": "./audio/generated/ja/jf_alpha/0de5fabaa16bdf3bce263ef13980321d.m4a"
+    },
+    {
+      "offset": 6.6800625,
+      "end": 10.306750000000001,
+      "sha256": "313fc7862134dde7f3c0c01669bb1bc8c98f442ada8ff2fe863533c5cae21a70",
+      "src": "./audio/generated/ja/jf_alpha/19ef2787c8043d52a2fb4dfb6aa49f03.m4a"
+    },
+    {
+      "offset": 10.90675,
+      "end": 11.674750000000001,
+      "sha256": "8564083aa04770053d1c628c6734d4eff540dbe5c11b6c887761fd275f2b502b",
+      "src": "./audio/generated/ja/jf_alpha/36921733221b8d6268f6f93d8c441729.m4a"
+    },
+    {
+      "offset": 12.274750000000001,
+      "end": 14.1094375,
+      "sha256": "62e2a78116b8a86ece1de25562847801882895e762354a27855c78efa5172873",
+      "src": "./audio/generated/ja/jf_alpha/12d005411fc739c5d5b80c81e6815ca8.m4a"
+    },
+    {
+      "offset": 14.7094375,
+      "end": 16.8428125,
+      "sha256": "d5a780561e5fd772afd6873678bb8a1337c7787f455e640ef603802997bd137c",
+      "src": "./audio/generated/ja/jf_alpha/f6319d65a675ec1b96f1a38e16769c20.m4a"
+    },
+    {
+      "offset": 17.442812500000002,
+      "end": 18.893500000000003,
+      "sha256": "ce1f3063ecb55163786eebc2d8d5bfaecdd3b0a6932bc8701af1a9f56357e8df",
+      "src": "./audio/generated/ja/jf_alpha/b65ce35c66f82709fd521f686f684973.m4a"
+    },
+    {
+      "offset": 19.493500000000004,
+      "end": 21.541500000000006,
+      "sha256": "f2db40e3e6220ccbd13ec5f2993d7da4d406c03e133718dbbe49a871cd37f5dc",
+      "src": "./audio/generated/ja/jf_alpha/6a0b2b9c6eaf4ba265263a9aacc9a933.m4a"
+    },
+    {
+      "offset": 22.141500000000008,
+      "end": 22.738875000000007,
+      "sha256": "1ee74cbd3dd4bdf0472b4caee6790aaec57f3161d36607c777fd0002a3ca3b98",
+      "src": "./audio/generated/ja/jf_alpha/840a71fb672033afee886d435f4abca5.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "3",
+      "start": 0.0,
+      "end": 0.76,
+      "probability": 0.3045620620250702
+    },
+    {
+      "word": "本",
+      "start": 0.76,
+      "end": 0.96,
+      "probability": 0.7548449635505676
+    },
+    {
+      "word": "コ",
+      "start": 0.96,
+      "end": 1.22,
+      "probability": 0.16565774381160736
+    },
+    {
+      "word": "ウ。",
+      "start": 1.22,
+      "end": 1.66,
+      "probability": 0.4285576641559601
+    },
+    {
+      "word": "リ",
+      "start": 2.14,
+      "end": 2.38,
+      "probability": 0.6619276404380798
+    },
+    {
+      "word": "フ",
+      "start": 2.38,
+      "end": 2.48,
+      "probability": 0.44499531388282776
+    },
+    {
+      "word": "乾",
+      "start": 2.48,
+      "end": 2.72,
+      "probability": 0.9099810719490051
+    },
+    {
+      "word": "燥",
+      "start": 2.72,
+      "end": 2.92,
+      "probability": 0.9943200945854187
+    },
+    {
+      "word": "した",
+      "start": 2.92,
+      "end": 3.18,
+      "probability": 0.9908558130264282
+    },
+    {
+      "word": "と",
+      "start": 3.18,
+      "end": 3.34,
+      "probability": 0.8139662742614746
+    },
+    {
+      "word": "だ",
+      "start": 3.34,
+      "end": 3.48,
+      "probability": 0.8734496831893921
+    },
+    {
+      "word": "な。",
+      "start": 3.48,
+      "end": 4.0,
+      "probability": 0.9905028343200684
+    },
+    {
+      "word": "ウ",
+      "start": 4.4,
+      "end": 4.64,
+      "probability": 0.6566871404647827
+    },
+    {
+      "word": "ェ",
+      "start": 4.64,
+      "end": 4.72,
+      "probability": 0.9173040390014648
+    },
+    {
+      "word": "ーフ",
+      "start": 4.72,
+      "end": 4.84,
+      "probability": 0.9050680696964264
+    },
+    {
+      "word": "立",
+      "start": 4.84,
+      "end": 4.98,
+      "probability": 0.3928469121456146
+    },
+    {
+      "word": "て",
+      "start": 4.98,
+      "end": 5.12,
+      "probability": 0.9778558611869812
+    },
+    {
+      "word": "置",
+      "start": 5.12,
+      "end": 5.22,
+      "probability": 0.6540302038192749
+    },
+    {
+      "word": "き",
+      "start": 5.22,
+      "end": 5.4,
+      "probability": 0.7983779311180115
+    },
+    {
+      "word": "を",
+      "start": 5.4,
+      "end": 5.5,
+      "probability": 0.2521609365940094
+    },
+    {
+      "word": "ラ",
+      "start": 5.5,
+      "end": 5.66,
+      "probability": 0.5867419242858887
+    },
+    {
+      "word": "ック。",
+      "start": 5.66,
+      "end": 5.86,
+      "probability": 0.883585512638092
+    },
+    {
+      "word": "サ",
+      "start": 6.68,
+      "end": 6.92,
+      "probability": 0.7395111918449402
+    },
+    {
+      "word": "ンプ",
+      "start": 6.92,
+      "end": 7.14,
+      "probability": 0.9927226006984711
+    },
+    {
+      "word": "ル",
+      "start": 7.14,
+      "end": 7.24,
+      "probability": 0.9980104565620422
+    },
+    {
+      "word": "には",
+      "start": 7.24,
+      "end": 7.5,
+      "probability": 0.9752805233001709
+    },
+    {
+      "word": "ど",
+      "start": 7.5,
+      "end": 7.92,
+      "probability": 0.6226239800453186
+    },
+    {
+      "word": "の",
+      "start": 7.92,
+      "end": 8.06,
+      "probability": 0.9991909861564636
+    },
+    {
+      "word": "よう",
+      "start": 8.06,
+      "end": 8.2,
+      "probability": 0.9958639144897461
+    },
+    {
+      "word": "な",
+      "start": 8.2,
+      "end": 8.38,
+      "probability": 0.9989136457443237
+    },
+    {
+      "word": "保",
+      "start": 8.38,
+      "end": 8.58,
+      "probability": 0.8773216009140015
+    },
+    {
+      "word": "管",
+      "start": 8.58,
+      "end": 8.74,
+      "probability": 0.9178656339645386
+    },
+    {
+      "word": "条",
+      "start": 8.74,
+      "end": 8.92,
+      "probability": 0.9759800434112549
+    },
+    {
+      "word": "件",
+      "start": 8.92,
+      "end": 9.14,
+      "probability": 0.9968791007995605
+    },
+    {
+      "word": "が",
+      "start": 9.14,
+      "end": 9.3,
+      "probability": 0.9928580522537231
+    },
+    {
+      "word": "必",
+      "start": 9.3,
+      "end": 9.48,
+      "probability": 0.9791123867034912
+    },
+    {
+      "word": "要",
+      "start": 9.48,
+      "end": 9.72,
+      "probability": 0.999290943145752
+    },
+    {
+      "word": "ですか。",
+      "start": 9.72,
+      "end": 10.08,
+      "probability": 0.9897992610931396
+    },
+    {
+      "word": "保",
+      "start": 10.94,
+      "end": 11.2,
+      "probability": 0.6326064467430115
+    },
+    {
+      "word": "温",
+      "start": 11.2,
+      "end": 11.32,
+      "probability": 0.892384946346283
+    },
+    {
+      "word": "か。",
+      "start": 11.32,
+      "end": 11.52,
+      "probability": 0.42521849274635315
+    },
+    {
+      "word": "縦",
+      "start": 12.34,
+      "end": 12.52,
+      "probability": 0.8284101784229279
+    },
+    {
+      "word": "型",
+      "start": 12.52,
+      "end": 12.78,
+      "probability": 0.8852823376655579
+    },
+    {
+      "word": "の",
+      "start": 12.78,
+      "end": 13.02,
+      "probability": 0.9982481002807617
+    },
+    {
+      "word": "乾",
+      "start": 13.02,
+      "end": 13.28,
+      "probability": 0.9924817681312561
+    },
+    {
+      "word": "燥",
+      "start": 13.28,
+      "end": 13.46,
+      "probability": 0.9993582963943481
+    },
+    {
+      "word": "ラ",
+      "start": 13.46,
+      "end": 13.68,
+      "probability": 0.9756516218185425
+    },
+    {
+      "word": "ック。",
+      "start": 13.68,
+      "end": 13.88,
+      "probability": 0.9958221912384033
+    },
+    {
+      "word": "溶",
+      "start": 14.78,
+      "end": 14.92,
+      "probability": 0.6918914467096329
+    },
+    {
+      "word": "結",
+      "start": 14.92,
+      "end": 15.12,
+      "probability": 0.3210919499397278
+    },
+    {
+      "word": "し",
+      "start": 15.12,
+      "end": 15.36,
+      "probability": 0.9792363047599792
+    },
+    {
+      "word": "ない",
+      "start": 15.36,
+      "end": 15.52,
+      "probability": 0.9972443580627441
+    },
+    {
+      "word": "温",
+      "start": 15.52,
+      "end": 15.76,
+      "probability": 0.95903280377388
+    },
+    {
+      "word": "度",
+      "start": 15.76,
+      "end": 15.9,
+      "probability": 0.9999281167984009
+    },
+    {
+      "word": "で",
+      "start": 15.9,
+      "end": 16.0,
+      "probability": 0.9976834058761597
+    },
+    {
+      "word": "の",
+      "start": 16.0,
+      "end": 16.14,
+      "probability": 0.9982280135154724
+    },
+    {
+      "word": "冷",
+      "start": 16.14,
+      "end": 16.36,
+      "probability": 0.9560282826423645
+    },
+    {
+      "word": "蔵。",
+      "start": 16.36,
+      "end": 16.56,
+      "probability": 0.9779127538204193
+    },
+    {
+      "word": "湿",
+      "start": 17.5,
+      "end": 17.8,
+      "probability": 0.772891640663147
+    },
+    {
+      "word": "温",
+      "start": 17.8,
+      "end": 18.02,
+      "probability": 0.9841913282871246
+    },
+    {
+      "word": "で",
+      "start": 18.02,
+      "end": 18.16,
+      "probability": 0.9909155964851379
+    },
+    {
+      "word": "の",
+      "start": 18.16,
+      "end": 18.28,
+      "probability": 0.9973921775817871
+    },
+    {
+      "word": "保",
+      "start": 18.28,
+      "end": 18.46,
+      "probability": 0.9956830739974976
+    },
+    {
+      "word": "管。",
+      "start": 18.46,
+      "end": 18.68,
+      "probability": 0.9114482402801514
+    },
+    {
+      "word": "ど",
+      "start": 19.48,
+      "end": 19.7,
+      "probability": 0.994346559047699
+    },
+    {
+      "word": "の",
+      "start": 19.7,
+      "end": 19.86,
+      "probability": 0.9979037046432495
+    },
+    {
+      "word": "ラ",
+      "start": 19.86,
+      "end": 20.0,
+      "probability": 0.8800048232078552
+    },
+    {
+      "word": "ベ",
+      "start": 20.0,
+      "end": 20.12,
+      "probability": 0.9908398985862732
+    },
+    {
+      "word": "ル",
+      "start": 20.12,
+      "end": 20.24,
+      "probability": 0.999735414981842
+    },
+    {
+      "word": "を",
+      "start": 20.24,
+      "end": 20.36,
+      "probability": 0.9984305500984192
+    },
+    {
+      "word": "使",
+      "start": 20.36,
+      "end": 20.54,
+      "probability": 0.9949134588241577
+    },
+    {
+      "word": "う",
+      "start": 20.54,
+      "end": 20.74,
+      "probability": 0.9903674125671387
+    },
+    {
+      "word": "べ",
+      "start": 20.74,
+      "end": 20.84,
+      "probability": 0.9990901947021484
+    },
+    {
+      "word": "き",
+      "start": 20.84,
+      "end": 20.9,
+      "probability": 0.9998154044151306
+    },
+    {
+      "word": "ですか。",
+      "start": 20.9,
+      "end": 21.26,
+      "probability": 0.9867209196090698
+    },
+    {
+      "word": "ウ",
+      "start": 22.14,
+      "end": 22.38,
+      "probability": 0.5666561126708984
+    },
+    {
+      "word": "ェ",
+      "start": 22.38,
+      "end": 22.44,
+      "probability": 0.9734396934509277
+    },
+    {
+      "word": "ーフ。",
+      "start": 22.44,
+      "end": 22.6,
+      "probability": 0.996230810880661
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.08,
+      "text": "3本コウ。リフ乾燥したとだな。ウェーフ立て置きをラック。サンプルにはどのような保管条件が必要ですか。",
+      "avgLogprob": -0.276402675537836,
+      "noSpeechProb": 0.04457119107246399
+    },
+    {
+      "start": 10.94,
+      "end": 22.6,
+      "text": "保温か。縦型の乾燥ラック。溶結しない温度での冷蔵。湿温での保管。どのラベルを使うべきですか。ウェーフ。",
+      "avgLogprob": -0.276402675537836,
+      "noSpeechProb": 0.04457119107246399
+    }
+  ]
+}

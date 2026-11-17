@@ -1,0 +1,595 @@
+{
+  "version": 1,
+  "id": "f3e8ec3b96c0ad8f519a0e8ab4b0c489d01264f4226b18c9a3898a9f8aac9978",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.746750000000006,
+  "elapsedSeconds": 5.466,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.4906875,
+      "sha256": "96baa25ef2c22772e6364fb8afe18661c2fb2e5b1fe0c0a8935cb4d2ed57aa21",
+      "src": "./audio/generated/ja/jf_alpha/3bfee81ffe6a2f41e8a6199f23f7347a.m4a"
+    },
+    {
+      "offset": 3.0906875,
+      "end": 10.301375,
+      "sha256": "cfe272896ece14e69971343ea1fcbc1eb75e02917d4c3b93daba1c2ed29462df",
+      "src": "./audio/generated/ja/jf_alpha/0611dc0f5cd2d9f608fe53791dfaad55.m4a"
+    },
+    {
+      "offset": 10.901375,
+      "end": 12.01075,
+      "sha256": "7afd5d615bbe29b11c74cd629e2cd43e62452525b86da92a52a5b31b198a8616",
+      "src": "./audio/generated/ja/jf_alpha/c3206fdcde582fcc4e241cefbccb192a.m4a"
+    },
+    {
+      "offset": 12.61075,
+      "end": 19.01075,
+      "sha256": "fedc7c30f985d4dca597409b30da42da8935f95461a9df9ac0b5a04fe3ae2a7c",
+      "src": "./audio/generated/ja/jf_alpha/2d75a8da1526a8580195f90f2a97dbb8.m4a"
+    },
+    {
+      "offset": 19.610750000000003,
+      "end": 21.146750000000004,
+      "sha256": "ddd650595b9085606a0d74bef2d682231009e1597c20e02ddc9c463d3f0d305c",
+      "src": "./audio/generated/ja/jf_alpha/31b8b7f97b8e481e659b6b1e8ba7353b.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "定",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.8397067785263062
+    },
+    {
+      "word": "義",
+      "start": 0.66,
+      "end": 0.8,
+      "probability": 0.9628004431724548
+    },
+    {
+      "word": "する",
+      "start": 0.8,
+      "end": 1.08,
+      "probability": 0.949248731136322
+    },
+    {
+      "word": "明",
+      "start": 1.08,
+      "end": 1.38,
+      "probability": 0.7458982467651367
+    },
+    {
+      "word": "確",
+      "start": 1.38,
+      "end": 1.64,
+      "probability": 0.9906578063964844
+    },
+    {
+      "word": "に",
+      "start": 1.64,
+      "end": 1.82,
+      "probability": 0.9904831647872925
+    },
+    {
+      "word": "定",
+      "start": 1.82,
+      "end": 2.0,
+      "probability": 0.9638668298721313
+    },
+    {
+      "word": "め",
+      "start": 2.0,
+      "end": 2.22,
+      "probability": 0.9980858564376831
+    },
+    {
+      "word": "る。",
+      "start": 2.22,
+      "end": 2.38,
+      "probability": 0.9991926550865173
+    },
+    {
+      "word": "契",
+      "start": 3.04,
+      "end": 3.32,
+      "probability": 0.9523102641105652
+    },
+    {
+      "word": "約",
+      "start": 3.32,
+      "end": 3.56,
+      "probability": 0.999037504196167
+    },
+    {
+      "word": "は",
+      "start": 3.56,
+      "end": 3.8,
+      "probability": 0.9611166715621948
+    },
+    {
+      "word": "受",
+      "start": 3.8,
+      "end": 4.04,
+      "probability": 0.46668514609336853
+    },
+    {
+      "word": "け",
+      "start": 4.04,
+      "end": 4.22,
+      "probability": 0.8609994053840637
+    },
+    {
+      "word": "おい",
+      "start": 4.22,
+      "end": 4.3,
+      "probability": 0.11793345957994461
+    },
+    {
+      "word": "業",
+      "start": 4.3,
+      "end": 4.56,
+      "probability": 0.9716647267341614
+    },
+    {
+      "word": "者",
+      "start": 4.56,
+      "end": 4.76,
+      "probability": 0.9978759288787842
+    },
+    {
+      "word": "が",
+      "start": 4.76,
+      "end": 4.9,
+      "probability": 0.9741228222846985
+    },
+    {
+      "word": "担",
+      "start": 4.9,
+      "end": 5.16,
+      "probability": 0.9961798787117004
+    },
+    {
+      "word": "当",
+      "start": 5.16,
+      "end": 5.36,
+      "probability": 0.9963790774345398
+    },
+    {
+      "word": "する",
+      "start": 5.36,
+      "end": 5.62,
+      "probability": 0.9841656684875488
+    },
+    {
+      "word": "作",
+      "start": 5.62,
+      "end": 5.84,
+      "probability": 0.9484128355979919
+    },
+    {
+      "word": "業",
+      "start": 5.84,
+      "end": 6.06,
+      "probability": 0.9996649026870728
+    },
+    {
+      "word": "を",
+      "start": 6.06,
+      "end": 6.2,
+      "probability": 0.9897554516792297
+    },
+    {
+      "word": "正",
+      "start": 6.2,
+      "end": 6.42,
+      "probability": 0.8923982977867126
+    },
+    {
+      "word": "確",
+      "start": 6.42,
+      "end": 6.66,
+      "probability": 0.9950286746025085
+    },
+    {
+      "word": "に",
+      "start": 6.66,
+      "end": 6.84,
+      "probability": 0.9962419271469116
+    },
+    {
+      "word": "示",
+      "start": 6.84,
+      "end": 7.02,
+      "probability": 0.9445375204086304
+    },
+    {
+      "word": "し",
+      "start": 7.02,
+      "end": 7.28,
+      "probability": 0.9448738694190979
+    },
+    {
+      "word": "各",
+      "start": 7.28,
+      "end": 7.44,
+      "probability": 0.8376909494400024
+    },
+    {
+      "word": "職",
+      "start": 7.44,
+      "end": 7.7,
+      "probability": 0.9828080832958221
+    },
+    {
+      "word": "務",
+      "start": 7.7,
+      "end": 7.9,
+      "probability": 0.9436314702033997
+    },
+    {
+      "word": "を",
+      "start": 7.9,
+      "end": 8.02,
+      "probability": 0.9950610995292664
+    },
+    {
+      "word": "明",
+      "start": 8.02,
+      "end": 8.2,
+      "probability": 0.9957577586174011
+    },
+    {
+      "word": "確",
+      "start": 8.2,
+      "end": 8.42,
+      "probability": 0.9990912675857544
+    },
+    {
+      "word": "に",
+      "start": 8.42,
+      "end": 8.6,
+      "probability": 0.9984636306762695
+    },
+    {
+      "word": "定",
+      "start": 8.6,
+      "end": 8.78,
+      "probability": 0.9846146702766418
+    },
+    {
+      "word": "め",
+      "start": 8.78,
+      "end": 8.98,
+      "probability": 0.9996341466903687
+    },
+    {
+      "word": "る",
+      "start": 8.98,
+      "end": 9.08,
+      "probability": 0.9997685551643372
+    },
+    {
+      "word": "必",
+      "start": 9.08,
+      "end": 9.24,
+      "probability": 0.9949380159378052
+    },
+    {
+      "word": "要",
+      "start": 9.24,
+      "end": 9.54,
+      "probability": 0.9997068047523499
+    },
+    {
+      "word": "が",
+      "start": 9.54,
+      "end": 9.72,
+      "probability": 0.9920212626457214
+    },
+    {
+      "word": "あります。",
+      "start": 9.72,
+      "end": 10.04,
+      "probability": 0.988838791847229
+    },
+    {
+      "word": "利",
+      "start": 11.0,
+      "end": 11.14,
+      "probability": 0.5296899080276489
+    },
+    {
+      "word": "益",
+      "start": 11.14,
+      "end": 11.34,
+      "probability": 0.6479038596153259
+    },
+    {
+      "word": "する。",
+      "start": 11.34,
+      "end": 11.7,
+      "probability": 0.9885793924331665
+    },
+    {
+      "word": "この",
+      "start": 12.7,
+      "end": 12.9,
+      "probability": 0.9555562138557434
+    },
+    {
+      "word": "小",
+      "start": 12.9,
+      "end": 13.14,
+      "probability": 0.9947686195373535
+    },
+    {
+      "word": "さ",
+      "start": 13.14,
+      "end": 13.36,
+      "probability": 0.9841341376304626
+    },
+    {
+      "word": "な",
+      "start": 13.36,
+      "end": 13.52,
+      "probability": 0.9593861699104309
+    },
+    {
+      "word": "ラ",
+      "start": 13.52,
+      "end": 13.62,
+      "probability": 0.9481536149978638
+    },
+    {
+      "word": "ベ",
+      "start": 13.62,
+      "end": 13.74,
+      "probability": 0.9915904402732849
+    },
+    {
+      "word": "ル",
+      "start": 13.74,
+      "end": 13.84,
+      "probability": 0.9996581077575684
+    },
+    {
+      "word": "では",
+      "start": 13.84,
+      "end": 14.04,
+      "probability": 0.9835925102233887
+    },
+    {
+      "word": "ス",
+      "start": 14.04,
+      "end": 14.34,
+      "probability": 0.6112406253814697
+    },
+    {
+      "word": "ペ",
+      "start": 14.34,
+      "end": 14.46,
+      "probability": 0.9907344877719879
+    },
+    {
+      "word": "ー",
+      "start": 14.46,
+      "end": 14.62,
+      "probability": 0.9919081330299377
+    },
+    {
+      "word": "ス",
+      "start": 14.62,
+      "end": 14.72,
+      "probability": 0.9997733235359192
+    },
+    {
+      "word": "を",
+      "start": 14.72,
+      "end": 14.84,
+      "probability": 0.9921978116035461
+    },
+    {
+      "word": "節",
+      "start": 14.84,
+      "end": 15.06,
+      "probability": 0.8098572492599487
+    },
+    {
+      "word": "約",
+      "start": 15.06,
+      "end": 15.24,
+      "probability": 0.9986323714256287
+    },
+    {
+      "word": "する",
+      "start": 15.24,
+      "end": 15.52,
+      "probability": 0.9966848492622375
+    },
+    {
+      "word": "ため",
+      "start": 15.52,
+      "end": 15.72,
+      "probability": 0.9647684693336487
+    },
+    {
+      "word": "デ",
+      "start": 15.72,
+      "end": 15.92,
+      "probability": 0.24275805056095123
+    },
+    {
+      "word": "パ",
+      "start": 15.92,
+      "end": 16.06,
+      "probability": 0.9664470553398132
+    },
+    {
+      "word": "ート",
+      "start": 16.06,
+      "end": 16.2,
+      "probability": 0.42457279562950134
+    },
+    {
+      "word": "メ",
+      "start": 16.2,
+      "end": 16.32,
+      "probability": 0.3539651334285736
+    },
+    {
+      "word": "ント",
+      "start": 16.32,
+      "end": 16.46,
+      "probability": 0.9881395101547241
+    },
+    {
+      "word": "・",
+      "start": 16.46,
+      "end": 16.56,
+      "probability": 0.45747023820877075
+    },
+    {
+      "word": "デ",
+      "start": 16.56,
+      "end": 16.64,
+      "probability": 0.9814456105232239
+    },
+    {
+      "word": "パ",
+      "start": 16.64,
+      "end": 16.78,
+      "probability": 0.9892459511756897
+    },
+    {
+      "word": "ート",
+      "start": 16.78,
+      "end": 16.9,
+      "probability": 0.9908219575881958
+    },
+    {
+      "word": "メ",
+      "start": 16.9,
+      "end": 17.04,
+      "probability": 0.9394784569740295
+    },
+    {
+      "word": "ント、",
+      "start": 17.04,
+      "end": 17.26,
+      "probability": 0.9818015694618225
+    },
+    {
+      "word": "と",
+      "start": 17.54,
+      "end": 17.74,
+      "probability": 0.25649428367614746
+    },
+    {
+      "word": "利",
+      "start": 17.74,
+      "end": 17.88,
+      "probability": 0.9892067909240723
+    },
+    {
+      "word": "益",
+      "start": 17.88,
+      "end": 18.04,
+      "probability": 0.9996690452098846
+    },
+    {
+      "word": "して",
+      "start": 18.04,
+      "end": 18.28,
+      "probability": 0.9959024786949158
+    },
+    {
+      "word": "ください。",
+      "start": 18.28,
+      "end": 18.68,
+      "probability": 0.8004520535469055
+    },
+    {
+      "word": "価",
+      "start": 19.66,
+      "end": 19.84,
+      "probability": 0.9540722668170929
+    },
+    {
+      "word": "格",
+      "start": 19.84,
+      "end": 20.1,
+      "probability": 0.9965922236442566
+    },
+    {
+      "word": "を",
+      "start": 20.1,
+      "end": 20.24,
+      "probability": 0.9969672560691833
+    },
+    {
+      "word": "定",
+      "start": 20.24,
+      "end": 20.46,
+      "probability": 0.44525885581970215
+    },
+    {
+      "word": "義",
+      "start": 20.46,
+      "end": 20.6,
+      "probability": 0.3406967520713806
+    },
+    {
+      "word": "する。",
+      "start": 20.6,
+      "end": 20.88,
+      "probability": 0.9986634254455566
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 10.04,
+      "text": "定義する明確に定める。契約は受けおい業者が担当する作業を正確に示し各職務を明確に定める必要があります。",
+      "avgLogprob": -0.23638162385849726,
+      "noSpeechProb": 0.034699708223342896
+    },
+    {
+      "start": 11.0,
+      "end": 18.68,
+      "text": "利益する。この小さなラベルではスペースを節約するためデパートメント・デパートメント、と利益してください。",
+      "avgLogprob": -0.23638162385849726,
+      "noSpeechProb": 0.034699708223342896
+    },
+    {
+      "start": 19.66,
+      "end": 20.88,
+      "text": "価格を定義する。",
+      "avgLogprob": -0.23638162385849726,
+      "noSpeechProb": 0.034699708223342896
+    }
+  ]
+}

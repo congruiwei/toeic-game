@@ -1,0 +1,479 @@
+{
+  "version": 1,
+  "id": "4ff444f3723a105f3d8acee0627de655d1d84438d73293ac7f817a074410bf35",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 22.520187500000006,
+  "elapsedSeconds": 6.477,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.856,
+      "sha256": "394650933ec225fc5ee42a1f32172e6f4cd69dc3b3c9e86d14092eb42eebefca",
+      "src": "./audio/generated/en/af_heart/4f4112ebc93b4022b9fe1c6c05c5ac74.m4a"
+    },
+    {
+      "offset": 4.4559999999999995,
+      "end": 6.461374999999999,
+      "sha256": "5352bfd4e19e945452d9bd0b3da6e38d186084b8a010edc7f969e810920ee5ed",
+      "src": "./audio/generated/en/af_heart/fe68d3e6625e4c97c2899444eb495bc2.m4a"
+    },
+    {
+      "offset": 7.061374999999999,
+      "end": 9.45075,
+      "sha256": "7e65697fb9fe6d0572135e285de676bddb287376d3391e7300c422610f606fa7",
+      "src": "./audio/generated/en/af_heart/c5172dd5ca1c002ef8725774e06caa41.m4a"
+    },
+    {
+      "offset": 10.050749999999999,
+      "end": 13.080124999999999,
+      "sha256": "80d4422171d273998ae44a7408a13584c7dbccc1753ad52ce94bad629e88201c",
+      "src": "./audio/generated/en/am_puck/8c11a2ad9b0779c63e8b118dcb212eb3.m4a"
+    },
+    {
+      "offset": 13.680124999999999,
+      "end": 16.4108125,
+      "sha256": "149b44ca740f74a4471da140bcc9fec099c29483f95c7606146db9a279e555ca",
+      "src": "./audio/generated/en/af_bella/800144bd451753ac3e7e3b4b6292da5b.m4a"
+    },
+    {
+      "offset": 17.0108125,
+      "end": 19.1015,
+      "sha256": "8a0d2d74230aa423f01f25c807effa1bc904a1d6cda2421318892fdf7cd2f2e0",
+      "src": "./audio/generated/en/af_bella/00344f29dce764ec81f8f66842ccc0d3.m4a"
+    },
+    {
+      "offset": 19.701500000000003,
+      "end": 21.920187500000004,
+      "sha256": "4eb478bde56ea015652b16067bc88c17bd66413035242abbd124d2b449e21af8",
+      "src": "./audio/generated/en/af_bella/4404f4daa69971925b88a3dc02e65a1c.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Rosa",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.8963041305541992
+    },
+    {
+      "word": " has",
+      "start": 0.7,
+      "end": 1.04,
+      "probability": 0.9926227331161499
+    },
+    {
+      "word": " the",
+      "start": 1.04,
+      "end": 1.18,
+      "probability": 0.9930433034896851
+    },
+    {
+      "word": " drawing",
+      "start": 1.18,
+      "end": 1.4,
+      "probability": 0.9890367388725281
+    },
+    {
+      "word": " open",
+      "start": 1.4,
+      "end": 1.74,
+      "probability": 0.990994393825531
+    },
+    {
+      "word": " and",
+      "start": 1.74,
+      "end": 2.28,
+      "probability": 0.8057148456573486
+    },
+    {
+      "word": " is",
+      "start": 2.28,
+      "end": 2.42,
+      "probability": 0.996947705745697
+    },
+    {
+      "word": " entering",
+      "start": 2.42,
+      "end": 2.76,
+      "probability": 0.9976758360862732
+    },
+    {
+      "word": " the",
+      "start": 2.76,
+      "end": 2.96,
+      "probability": 0.9920116066932678
+    },
+    {
+      "word": " new",
+      "start": 2.96,
+      "end": 3.1,
+      "probability": 0.9830517768859863
+    },
+    {
+      "word": " measurements.",
+      "start": 3.1,
+      "end": 3.5,
+      "probability": 0.9964014291763306
+    },
+    {
+      "word": " The",
+      "start": 4.2,
+      "end": 4.6,
+      "probability": 0.9921460747718811
+    },
+    {
+      "word": " plans",
+      "start": 4.6,
+      "end": 4.92,
+      "probability": 0.980540931224823
+    },
+    {
+      "word": " are",
+      "start": 4.92,
+      "end": 5.12,
+      "probability": 0.9981542229652405
+    },
+    {
+      "word": " printed",
+      "start": 5.12,
+      "end": 5.36,
+      "probability": 0.9986849427223206
+    },
+    {
+      "word": " on",
+      "start": 5.36,
+      "end": 5.56,
+      "probability": 0.9982028007507324
+    },
+    {
+      "word": " large",
+      "start": 5.56,
+      "end": 5.8,
+      "probability": 0.9961256384849548
+    },
+    {
+      "word": " sheets.",
+      "start": 5.8,
+      "end": 6.18,
+      "probability": 0.997722327709198
+    },
+    {
+      "word": " The",
+      "start": 7.06,
+      "end": 7.2,
+      "probability": 0.992790699005127
+    },
+    {
+      "word": " partition",
+      "start": 7.2,
+      "end": 7.58,
+      "probability": 0.7983248829841614
+    },
+    {
+      "word": " slides",
+      "start": 7.58,
+      "end": 8.0,
+      "probability": 0.9806053638458252
+    },
+    {
+      "word": " along",
+      "start": 8.0,
+      "end": 8.44,
+      "probability": 0.9985367059707642
+    },
+    {
+      "word": " a",
+      "start": 8.44,
+      "end": 8.64,
+      "probability": 0.9934244155883789
+    },
+    {
+      "word": " metal",
+      "start": 8.64,
+      "end": 8.82,
+      "probability": 0.997616171836853
+    },
+    {
+      "word": " track.",
+      "start": 8.82,
+      "end": 9.16,
+      "probability": 0.9881458282470703
+    },
+    {
+      "word": " The",
+      "start": 10.02,
+      "end": 10.2,
+      "probability": 0.961284875869751
+    },
+    {
+      "word": " tasting",
+      "start": 10.2,
+      "end": 10.46,
+      "probability": 0.9313429594039917
+    },
+    {
+      "word": " cards",
+      "start": 10.46,
+      "end": 10.78,
+      "probability": 0.9903464913368225
+    },
+    {
+      "word": " don't",
+      "start": 10.78,
+      "end": 11.1,
+      "probability": 0.9875077605247498
+    },
+    {
+      "word": " say",
+      "start": 11.1,
+      "end": 11.28,
+      "probability": 0.998252809047699
+    },
+    {
+      "word": " which",
+      "start": 11.28,
+      "end": 11.48,
+      "probability": 0.9932428002357483
+    },
+    {
+      "word": " juice",
+      "start": 11.48,
+      "end": 11.72,
+      "probability": 0.9981990456581116
+    },
+    {
+      "word": " contains",
+      "start": 11.72,
+      "end": 12.28,
+      "probability": 0.9981118440628052
+    },
+    {
+      "word": " ginger.",
+      "start": 12.28,
+      "end": 12.66,
+      "probability": 0.9761784672737122
+    },
+    {
+      "word": " The",
+      "start": 13.6,
+      "end": 13.82,
+      "probability": 0.9945815205574036
+    },
+    {
+      "word": " card",
+      "start": 13.82,
+      "end": 14.04,
+      "probability": 0.9950247406959534
+    },
+    {
+      "word": " stock",
+      "start": 14.04,
+      "end": 14.36,
+      "probability": 0.5150997042655945
+    },
+    {
+      "word": " is",
+      "start": 14.36,
+      "end": 14.8,
+      "probability": 0.9955924153327942
+    },
+    {
+      "word": " suitable",
+      "start": 14.8,
+      "end": 15.06,
+      "probability": 0.998763918876648
+    },
+    {
+      "word": " for",
+      "start": 15.06,
+      "end": 15.38,
+      "probability": 0.9992092251777649
+    },
+    {
+      "word": " color",
+      "start": 15.38,
+      "end": 15.66,
+      "probability": 0.8972095847129822
+    },
+    {
+      "word": " printing.",
+      "start": 15.66,
+      "end": 16.04,
+      "probability": 0.9729270339012146
+    },
+    {
+      "word": " There",
+      "start": 16.88,
+      "end": 17.16,
+      "probability": 0.9955829977989197
+    },
+    {
+      "word": " are",
+      "start": 17.16,
+      "end": 17.26,
+      "probability": 0.9983096122741699
+    },
+    {
+      "word": " six",
+      "start": 17.26,
+      "end": 17.5,
+      "probability": 0.8454700708389282
+    },
+    {
+      "word": " cups",
+      "start": 17.5,
+      "end": 17.74,
+      "probability": 0.998907208442688
+    },
+    {
+      "word": " on",
+      "start": 17.74,
+      "end": 17.96,
+      "probability": 0.9926167130470276
+    },
+    {
+      "word": " each",
+      "start": 17.96,
+      "end": 18.14,
+      "probability": 0.9995235204696655
+    },
+    {
+      "word": " tasting",
+      "start": 18.14,
+      "end": 18.48,
+      "probability": 0.9962906837463379
+    },
+    {
+      "word": " tray.",
+      "start": 18.48,
+      "end": 18.8,
+      "probability": 0.9993706345558167
+    },
+    {
+      "word": " I'll",
+      "start": 19.62,
+      "end": 19.94,
+      "probability": 0.9938409626483917
+    },
+    {
+      "word": " ask",
+      "start": 19.94,
+      "end": 20.2,
+      "probability": 0.9970375299453735
+    },
+    {
+      "word": " the",
+      "start": 20.2,
+      "end": 20.36,
+      "probability": 0.99620121717453
+    },
+    {
+      "word": " kitchen",
+      "start": 20.36,
+      "end": 20.6,
+      "probability": 0.9959546327590942
+    },
+    {
+      "word": " before",
+      "start": 20.6,
+      "end": 21.04,
+      "probability": 0.9877694249153137
+    },
+    {
+      "word": " we",
+      "start": 21.04,
+      "end": 21.22,
+      "probability": 0.9990572333335876
+    },
+    {
+      "word": " put",
+      "start": 21.22,
+      "end": 21.34,
+      "probability": 0.9991699457168579
+    },
+    {
+      "word": " them",
+      "start": 21.34,
+      "end": 21.48,
+      "probability": 0.9987205266952515
+    },
+    {
+      "word": " out.",
+      "start": 21.48,
+      "end": 21.7,
+      "probability": 0.9997867941856384
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.5,
+      "text": " Rosa has the drawing open and is entering the new measurements.",
+      "avgLogprob": -0.09780987091811306,
+      "noSpeechProb": 0.019030964002013206
+    },
+    {
+      "start": 4.2,
+      "end": 6.18,
+      "text": " The plans are printed on large sheets.",
+      "avgLogprob": -0.09780987091811306,
+      "noSpeechProb": 0.019030964002013206
+    },
+    {
+      "start": 7.06,
+      "end": 9.16,
+      "text": " The partition slides along a metal track.",
+      "avgLogprob": -0.09780987091811306,
+      "noSpeechProb": 0.019030964002013206
+    },
+    {
+      "start": 10.02,
+      "end": 12.66,
+      "text": " The tasting cards don't say which juice contains ginger.",
+      "avgLogprob": -0.09780987091811306,
+      "noSpeechProb": 0.019030964002013206
+    },
+    {
+      "start": 13.6,
+      "end": 16.04,
+      "text": " The card stock is suitable for color printing.",
+      "avgLogprob": -0.09780987091811306,
+      "noSpeechProb": 0.019030964002013206
+    },
+    {
+      "start": 16.88,
+      "end": 18.8,
+      "text": " There are six cups on each tasting tray.",
+      "avgLogprob": -0.09780987091811306,
+      "noSpeechProb": 0.019030964002013206
+    },
+    {
+      "start": 19.62,
+      "end": 21.7,
+      "text": " I'll ask the kitchen before we put them out.",
+      "avgLogprob": -0.09780987091811306,
+      "noSpeechProb": 0.019030964002013206
+    }
+  ]
+}

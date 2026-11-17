@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "id": "9bbe0f7b3468ab85d4f13897710656cef53d63c6a5486518fe3b2ab33ab25fc9",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 3.7306875,
+  "elapsedSeconds": 2.733,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 3.1306875,
+      "sha256": "28c1bdebe8fb87fc58859e60e168b1e7637797642e6459fe591a75ae2917ce6a",
+      "src": "./audio/generated/en/af_heart/48b667c1eb5789078f15261bb918a020.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Repair",
+      "start": 0.0,
+      "end": 0.84,
+      "probability": 0.9788333773612976
+    },
+    {
+      "word": " equipment",
+      "start": 0.84,
+      "end": 1.18,
+      "probability": 0.9253174662590027
+    },
+    {
+      "word": " will",
+      "start": 1.18,
+      "end": 1.62,
+      "probability": 0.9917586445808411
+    },
+    {
+      "word": " occupy",
+      "start": 1.62,
+      "end": 2.02,
+      "probability": 0.9977152347564697
+    },
+    {
+      "word": " the",
+      "start": 2.02,
+      "end": 2.24,
+      "probability": 0.9987059831619263
+    },
+    {
+      "word": " loading",
+      "start": 2.24,
+      "end": 2.5,
+      "probability": 0.9944406151771545
+    },
+    {
+      "word": " area.",
+      "start": 2.5,
+      "end": 2.88,
+      "probability": 0.9992722868919373
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.88,
+      "text": " Repair equipment will occupy the loading area.",
+      "avgLogprob": -0.32464976360400516,
+      "noSpeechProb": 0.002190775005146861
+    }
+  ]
+}

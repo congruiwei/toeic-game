@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "id": "996dae26e6d8c2e889bf985057fd6144e8fa9eeb01703498cd32f5d91c3d138d",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 3.56,
+  "elapsedSeconds": 2.995,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.96,
+      "sha256": "c9105f070d8937e7a574a443272ca5cfb193392da83c0cb7560033b194a0e6a9",
+      "src": "./audio/generated/ja/jf_alpha/da3594c13678dbde65560b42a8823380.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "細",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.7102357149124146
+    },
+    {
+      "word": "か",
+      "start": 0.64,
+      "end": 0.9,
+      "probability": 0.9264706373214722
+    },
+    {
+      "word": "い",
+      "start": 0.9,
+      "end": 1.0,
+      "probability": 0.9961037635803223
+    },
+    {
+      "word": "条",
+      "start": 1.0,
+      "end": 1.18,
+      "probability": 0.9788909554481506
+    },
+    {
+      "word": "件",
+      "start": 1.18,
+      "end": 1.44,
+      "probability": 0.9991063475608826
+    },
+    {
+      "word": "は",
+      "start": 1.44,
+      "end": 1.62,
+      "probability": 0.9558420181274414
+    },
+    {
+      "word": "確",
+      "start": 1.62,
+      "end": 1.78,
+      "probability": 0.9820444583892822
+    },
+    {
+      "word": "認",
+      "start": 1.78,
+      "end": 2.06,
+      "probability": 0.9990707039833069
+    },
+    {
+      "word": "しました",
+      "start": 2.06,
+      "end": 2.34,
+      "probability": 0.9779009222984314
+    },
+    {
+      "word": "か。",
+      "start": 2.34,
+      "end": 2.72,
+      "probability": 0.9859806299209595
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.72,
+      "text": "細かい条件は確認しましたか。",
+      "avgLogprob": -0.3236191655908312,
+      "noSpeechProb": 0.008944995701313019
+    }
+  ]
+}

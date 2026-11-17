@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "id": "af5e97b949f89c5094f346bedb9eb5385bba402fd797a3ae2296dd57d243e2c3",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 1.8533750000000002,
+  "elapsedSeconds": 4.222,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.2533750000000001,
+      "sha256": "2c1bab19da64ea8831401427f51743cd76cde3c0d1e2ae66b5918ffa7524a05e",
+      "src": "./audio/generated/en/am_puck/282dc4b14aca62b04e56553202caff52.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " annuals",
+      "start": 0.0,
+      "end": 1.14,
+      "probability": 0.7066808193922043
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.14,
+      "text": " annuals",
+      "avgLogprob": -0.5016392230987549,
+      "noSpeechProb": 0.06304994225502014
+    }
+  ]
+}

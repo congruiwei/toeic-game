@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "id": "9ea574d5744ec2daf23812a83b12c178c800812ee87ec6de135b2f2c9e94e368",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 4.800062499999999,
+  "elapsedSeconds": 3.629,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.4666875,
+      "sha256": "b67bdd87127dab7761ce870abacbf8ad680ab81adcb64ebb1e6e4dd78ab118cb",
+      "src": "./audio/generated/en/am_puck/b9765cb81cbfe8e4c0ee03bc1ffb4946.m4a"
+    },
+    {
+      "offset": 2.0666875,
+      "end": 4.2000625,
+      "sha256": "c02d6c96b7488d4d9e095c315eb68260c2ae8a2e310b0227b4bac0b75cf1fbce",
+      "src": "./audio/generated/en/am_puck/bee52dc0a153f3236f01b5e41877bde5.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " franchisee.",
+      "start": 0.0,
+      "end": 1.22,
+      "probability": 0.6900972574949265
+    },
+    {
+      "word": " This",
+      "start": 2.0,
+      "end": 2.26,
+      "probability": 0.6752671003341675
+    },
+    {
+      "word": " independent",
+      "start": 2.26,
+      "end": 2.58,
+      "probability": 0.9776175618171692
+    },
+    {
+      "word": " shop",
+      "start": 2.58,
+      "end": 2.92,
+      "probability": 0.9945106506347656
+    },
+    {
+      "word": " is",
+      "start": 2.92,
+      "end": 3.14,
+      "probability": 0.9938058853149414
+    },
+    {
+      "word": " a",
+      "start": 3.14,
+      "end": 3.22,
+      "probability": 0.9941771030426025
+    },
+    {
+      "word": " franchise.",
+      "start": 3.22,
+      "end": 3.58,
+      "probability": 0.9931343793869019
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.58,
+      "text": " franchisee. This independent shop is a franchise.",
+      "avgLogprob": -0.471004266005296,
+      "noSpeechProb": 0.024777406826615334
+    }
+  ]
+}

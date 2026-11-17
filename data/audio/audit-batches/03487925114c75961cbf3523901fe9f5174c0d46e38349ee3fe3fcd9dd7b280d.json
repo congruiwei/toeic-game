@@ -1,0 +1,469 @@
+{
+  "version": 1,
+  "id": "03487925114c75961cbf3523901fe9f5174c0d46e38349ee3fe3fcd9dd7b280d",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 20.085437500000005,
+  "elapsedSeconds": 4.371,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.8079999999999998,
+      "sha256": "7c8b31a1d2b787aaed0440d5378298b06ff5625e94952516d2f6401838a40691",
+      "src": "./audio/generated/ja/jf_alpha/92a76240008bc0af1a768b442e31833e.m4a"
+    },
+    {
+      "offset": 2.408,
+      "end": 7.784000000000001,
+      "sha256": "2c64e7f9de7420ea170cc085944abc933a5f45bfd5ee0fd665bb3c59779f3339",
+      "src": "./audio/generated/ja/jf_alpha/fd32102095930c124714c18c7cd4c479.m4a"
+    },
+    {
+      "offset": 8.384,
+      "end": 10.261375000000001,
+      "sha256": "6858c0c756ea22ac51d01de109d82ea84a44e6f99feb18c6de92628d38b14e3d",
+      "src": "./audio/generated/ja/jf_alpha/37da4f2bcd8351450aa50ad06723f9ef.m4a"
+    },
+    {
+      "offset": 10.861375,
+      "end": 13.805375000000002,
+      "sha256": "175473cc64a067bc76b831342a13fc036f97d6b5f6542fb9285636c4e092ee0c",
+      "src": "./audio/generated/ja/jf_alpha/9ed0998c3c0f461b2f98939ae9934866.m4a"
+    },
+    {
+      "offset": 14.405375000000001,
+      "end": 17.05075,
+      "sha256": "2d9d2aff12bfa56ca4979c80a4a8af18630b3c6610186e268c8a9d574ceeb938",
+      "src": "./audio/generated/ja/jf_alpha/70f61caf59e7533fcd8072caf4a66e4e.m4a"
+    },
+    {
+      "offset": 17.650750000000002,
+      "end": 19.485437500000003,
+      "sha256": "7798f1c6599f8c97d6fc90ead6e168426dbf471896953e7e69d184eda71dc608",
+      "src": "./audio/generated/ja/jf_alpha/09602821594f2407bc345df79c29a4af.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "3",
+      "start": 0.0,
+      "end": 0.78,
+      "probability": 0.3487233519554138
+    },
+    {
+      "word": "10",
+      "start": 0.78,
+      "end": 1.2,
+      "probability": 0.9754905700683594
+    },
+    {
+      "word": "ド",
+      "start": 1.2,
+      "end": 1.44,
+      "probability": 0.9285508990287781
+    },
+    {
+      "word": "ル。",
+      "start": 1.44,
+      "end": 1.62,
+      "probability": 0.9895250797271729
+    },
+    {
+      "word": "土",
+      "start": 2.42,
+      "end": 2.64,
+      "probability": 0.9783786535263062
+    },
+    {
+      "word": "曜",
+      "start": 2.64,
+      "end": 2.82,
+      "probability": 0.9962590634822845
+    },
+    {
+      "word": "日",
+      "start": 2.82,
+      "end": 3.02,
+      "probability": 0.9992766976356506
+    },
+    {
+      "word": "の",
+      "start": 3.02,
+      "end": 3.14,
+      "probability": 0.9959639310836792
+    },
+    {
+      "word": "160",
+      "start": 3.14,
+      "end": 3.52,
+      "probability": 0.695341169834137
+    },
+    {
+      "word": "ド",
+      "start": 3.52,
+      "end": 4.06,
+      "probability": 0.9915217161178589
+    },
+    {
+      "word": "ル",
+      "start": 4.06,
+      "end": 4.16,
+      "probability": 0.9992367029190063
+    },
+    {
+      "word": "の",
+      "start": 4.16,
+      "end": 4.3,
+      "probability": 0.99665367603302
+    },
+    {
+      "word": "約",
+      "start": 4.3,
+      "end": 4.48,
+      "probability": 0.9981714487075806
+    },
+    {
+      "word": "束",
+      "start": 4.48,
+      "end": 4.7,
+      "probability": 0.9893490076065063
+    },
+    {
+      "word": "だけ",
+      "start": 4.7,
+      "end": 4.9,
+      "probability": 0.9921427965164185
+    },
+    {
+      "word": "では",
+      "start": 4.9,
+      "end": 5.24,
+      "probability": 0.936538577079773
+    },
+    {
+      "word": "対",
+      "start": 5.24,
+      "end": 5.78,
+      "probability": 0.4744808077812195
+    },
+    {
+      "word": "象",
+      "start": 5.78,
+      "end": 6.02,
+      "probability": 0.8660000562667847
+    },
+    {
+      "word": "にな",
+      "start": 6.02,
+      "end": 6.26,
+      "probability": 0.8761171698570251
+    },
+    {
+      "word": "ら",
+      "start": 6.26,
+      "end": 6.44,
+      "probability": 0.9935606718063354
+    },
+    {
+      "word": "ない",
+      "start": 6.44,
+      "end": 6.66,
+      "probability": 0.9583761692047119
+    },
+    {
+      "word": "のは",
+      "start": 6.66,
+      "end": 6.92,
+      "probability": 0.9776437878608704
+    },
+    {
+      "word": "な",
+      "start": 6.92,
+      "end": 7.06,
+      "probability": 0.9150698184967041
+    },
+    {
+      "word": "ぜ",
+      "start": 7.06,
+      "end": 7.2,
+      "probability": 0.9985076785087585
+    },
+    {
+      "word": "ですか。",
+      "start": 7.2,
+      "end": 7.6,
+      "probability": 0.9593749046325684
+    },
+    {
+      "word": "や",
+      "start": 8.44,
+      "end": 8.6,
+      "probability": 0.33256831765174866
+    },
+    {
+      "word": "ら",
+      "start": 8.6,
+      "end": 8.76,
+      "probability": 0.9804326295852661
+    },
+    {
+      "word": "り",
+      "start": 8.76,
+      "end": 8.92,
+      "probability": 0.9434034824371338
+    },
+    {
+      "word": "ー",
+      "start": 8.92,
+      "end": 9.02,
+      "probability": 0.44049644470214844
+    },
+    {
+      "word": "が",
+      "start": 9.02,
+      "end": 9.14,
+      "probability": 0.9911684989929199
+    },
+    {
+      "word": "断",
+      "start": 9.14,
+      "end": 9.32,
+      "probability": 0.9598594307899475
+    },
+    {
+      "word": "った",
+      "start": 9.32,
+      "end": 9.7,
+      "probability": 0.9464649558067322
+    },
+    {
+      "word": "から、",
+      "start": 9.7,
+      "end": 9.98,
+      "probability": 0.996637225151062
+    },
+    {
+      "word": "入",
+      "start": 10.84,
+      "end": 11.14,
+      "probability": 0.9019066095352173
+    },
+    {
+      "word": "金",
+      "start": 11.14,
+      "end": 11.38,
+      "probability": 0.7690190076828003
+    },
+    {
+      "word": "が",
+      "start": 11.38,
+      "end": 11.6,
+      "probability": 0.9944848418235779
+    },
+    {
+      "word": "確",
+      "start": 11.6,
+      "end": 11.82,
+      "probability": 0.9548355937004089
+    },
+    {
+      "word": "定",
+      "start": 11.82,
+      "end": 12.02,
+      "probability": 0.9899864792823792
+    },
+    {
+      "word": "した",
+      "start": 12.02,
+      "end": 12.26,
+      "probability": 0.9985766410827637
+    },
+    {
+      "word": "のは",
+      "start": 12.26,
+      "end": 12.52,
+      "probability": 0.9929808378219604
+    },
+    {
+      "word": "月",
+      "start": 12.52,
+      "end": 12.78,
+      "probability": 0.9940739274024963
+    },
+    {
+      "word": "曜",
+      "start": 12.78,
+      "end": 13.04,
+      "probability": 0.9998979866504669
+    },
+    {
+      "word": "日",
+      "start": 13.04,
+      "end": 13.2,
+      "probability": 0.9999408721923828
+    },
+    {
+      "word": "だから、",
+      "start": 13.2,
+      "end": 13.52,
+      "probability": 0.9822824001312256
+    },
+    {
+      "word": "手",
+      "start": 14.44,
+      "end": 14.6,
+      "probability": 0.6373854875564575
+    },
+    {
+      "word": "数",
+      "start": 14.6,
+      "end": 14.86,
+      "probability": 0.9971116781234741
+    },
+    {
+      "word": "量",
+      "start": 14.86,
+      "end": 15.04,
+      "probability": 0.7599199414253235
+    },
+    {
+      "word": "で",
+      "start": 15.04,
+      "end": 15.24,
+      "probability": 0.9959702491760254
+    },
+    {
+      "word": "約",
+      "start": 15.24,
+      "end": 15.46,
+      "probability": 0.9997287392616272
+    },
+    {
+      "word": "束",
+      "start": 15.46,
+      "end": 15.68,
+      "probability": 0.9997963309288025
+    },
+    {
+      "word": "の",
+      "start": 15.68,
+      "end": 15.86,
+      "probability": 0.9981714487075806
+    },
+    {
+      "word": "額",
+      "start": 15.86,
+      "end": 16.06,
+      "probability": 0.988254725933075
+    },
+    {
+      "word": "が",
+      "start": 16.06,
+      "end": 16.26,
+      "probability": 0.999168872833252
+    },
+    {
+      "word": "減",
+      "start": 16.26,
+      "end": 16.38,
+      "probability": 0.9782988429069519
+    },
+    {
+      "word": "った",
+      "start": 16.38,
+      "end": 16.58,
+      "probability": 0.9947025179862976
+    },
+    {
+      "word": "から、",
+      "start": 16.58,
+      "end": 16.84,
+      "probability": 0.9979096055030823
+    },
+    {
+      "word": "上",
+      "start": 17.62,
+      "end": 17.96,
+      "probability": 0.9075907468795776
+    },
+    {
+      "word": "限",
+      "start": 17.96,
+      "end": 18.18,
+      "probability": 0.8762580156326294
+    },
+    {
+      "word": "に",
+      "start": 18.18,
+      "end": 18.38,
+      "probability": 0.9964203834533691
+    },
+    {
+      "word": "足",
+      "start": 18.38,
+      "end": 18.54,
+      "probability": 0.8621019721031189
+    },
+    {
+      "word": "して",
+      "start": 18.54,
+      "end": 18.78,
+      "probability": 0.9954149723052979
+    },
+    {
+      "word": "いた",
+      "start": 18.78,
+      "end": 18.96,
+      "probability": 0.9789703488349915
+    },
+    {
+      "word": "から。",
+      "start": 18.96,
+      "end": 19.2,
+      "probability": 0.9968968629837036
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 7.6,
+      "text": "310ドル。土曜日の160ドルの約束だけでは対象にならないのはなぜですか。",
+      "avgLogprob": -0.18227407961715886,
+      "noSpeechProb": 0.08969233930110931
+    },
+    {
+      "start": 8.44,
+      "end": 13.52,
+      "text": "やらりーが断ったから、入金が確定したのは月曜日だから、",
+      "avgLogprob": -0.18227407961715886,
+      "noSpeechProb": 0.08969233930110931
+    },
+    {
+      "start": 14.44,
+      "end": 19.2,
+      "text": "手数量で約束の額が減ったから、上限に足していたから。",
+      "avgLogprob": -0.18227407961715886,
+      "noSpeechProb": 0.08969233930110931
+    }
+  ]
+}

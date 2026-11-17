@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "id": "0eae66c98f7373a588182dc1c7ec6a11b70586ff120c54b0c9cd242a19ddd259",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.061375,
+  "elapsedSeconds": 4.334,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 4.965375000000001,
+      "sha256": "b9e438324078795448fa5ca5252bb8cbb28fd592f0867876d6c6d39a2e6119cb",
+      "src": "./audio/generated/en/af_heart/3669ef8521002f5e404966e97161aaf2.m4a"
+    },
+    {
+      "offset": 5.565375,
+      "end": 6.461375,
+      "sha256": "6b7157445a05bbeb7911319fe82ff1a1185b4455bf06b44de6cd12bd72fd861a",
+      "src": "./audio/generated/en/am_puck/679c6b99b8ecdaaec6e0eaaaed9845ea.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Help",
+      "start": 0.0,
+      "end": 0.62,
+      "probability": 0.9212664365768433
+    },
+    {
+      "word": " yourself",
+      "start": 0.62,
+      "end": 0.96,
+      "probability": 0.9971083998680115
+    },
+    {
+      "word": " to",
+      "start": 0.96,
+      "end": 1.16,
+      "probability": 0.9963862895965576
+    },
+    {
+      "word": " complimentary",
+      "start": 1.16,
+      "end": 1.64,
+      "probability": 0.7171751856803894
+    },
+    {
+      "word": " coffee.",
+      "start": 1.64,
+      "end": 2.2,
+      "probability": 0.994167685508728
+    },
+    {
+      "word": " There",
+      "start": 2.74,
+      "end": 2.86,
+      "probability": 0.9882290363311768
+    },
+    {
+      "word": " is",
+      "start": 2.86,
+      "end": 3.0,
+      "probability": 0.9929163455963135
+    },
+    {
+      "word": " no",
+      "start": 3.0,
+      "end": 3.18,
+      "probability": 0.9976039528846741
+    },
+    {
+      "word": " charge",
+      "start": 3.18,
+      "end": 3.5,
+      "probability": 0.9980617165565491
+    },
+    {
+      "word": " for",
+      "start": 3.5,
+      "end": 3.76,
+      "probability": 0.9971631169319153
+    },
+    {
+      "word": " registered",
+      "start": 3.76,
+      "end": 4.16,
+      "probability": 0.995964765548706
+    },
+    {
+      "word": " guests.",
+      "start": 4.16,
+      "end": 4.68,
+      "probability": 0.9965488314628601
+    },
+    {
+      "word": " Costumes.",
+      "start": 5.3,
+      "end": 6.08,
+      "probability": 0.6119331866502762
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.68,
+      "text": " Help yourself to complimentary coffee. There is no charge for registered guests.",
+      "avgLogprob": -0.28463323278860614,
+      "noSpeechProb": 0.008272862993180752
+    },
+    {
+      "start": 5.3,
+      "end": 6.08,
+      "text": " Costumes.",
+      "avgLogprob": -0.28463323278860614,
+      "noSpeechProb": 0.008272862993180752
+    }
+  ]
+}

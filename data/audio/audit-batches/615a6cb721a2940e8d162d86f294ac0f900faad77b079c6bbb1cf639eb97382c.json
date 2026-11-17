@@ -1,0 +1,169 @@
+{
+  "version": 1,
+  "id": "615a6cb721a2940e8d162d86f294ac0f900faad77b079c6bbb1cf639eb97382c",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 9.624062499999999,
+  "elapsedSeconds": 4.177,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.424,
+      "sha256": "4beb10c787b2388e1dfaf1cb2be251c2357a4e9441fe7d46051570b63af3e045",
+      "src": "./audio/generated/en/am_puck/54f023e443d6551cde9b72665c5be1d3.m4a"
+    },
+    {
+      "offset": 2.024,
+      "end": 7.4426875,
+      "sha256": "cd505ef059be05e0418ac3c313c164fbadda484797401cc04ef0d36d2ecf0e8a",
+      "src": "./audio/generated/en/am_puck/1daccf72e966a8ef059791e10a0758ea.m4a"
+    },
+    {
+      "offset": 8.0426875,
+      "end": 9.0240625,
+      "sha256": "75974ab51c3d118e55de02fdd35e11e55611c806ebaa690b2d0d78aab87e081f",
+      "src": "./audio/generated/en/af_bella/99be68bb8ba3ade21fc947759115ecae.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Fluctuating",
+      "start": 0.0,
+      "end": 0.96,
+      "probability": 0.8689388632774353
+    },
+    {
+      "word": " The",
+      "start": 1.7500000000000002,
+      "end": 2.12,
+      "probability": 0.7364288568496704
+    },
+    {
+      "word": " fluctuating",
+      "start": 2.12,
+      "end": 2.7,
+      "probability": 0.9805226922035217
+    },
+    {
+      "word": " price",
+      "start": 2.7,
+      "end": 3.02,
+      "probability": 0.998151957988739
+    },
+    {
+      "word": " rose",
+      "start": 3.02,
+      "end": 3.38,
+      "probability": 0.9980556964874268
+    },
+    {
+      "word": " on",
+      "start": 3.38,
+      "end": 3.66,
+      "probability": 0.9958990216255188
+    },
+    {
+      "word": " Monday,",
+      "start": 3.66,
+      "end": 4.04,
+      "probability": 0.9900919795036316
+    },
+    {
+      "word": " fell",
+      "start": 4.42,
+      "end": 4.58,
+      "probability": 0.9945790767669678
+    },
+    {
+      "word": " on",
+      "start": 4.58,
+      "end": 4.78,
+      "probability": 0.9974797368049622
+    },
+    {
+      "word": " Tuesday",
+      "start": 4.78,
+      "end": 5.06,
+      "probability": 0.998156726360321
+    },
+    {
+      "word": " and",
+      "start": 5.06,
+      "end": 5.54,
+      "probability": 0.8762937784194946
+    },
+    {
+      "word": " rose",
+      "start": 5.54,
+      "end": 5.8,
+      "probability": 0.9988700747489929
+    },
+    {
+      "word": " again",
+      "start": 5.8,
+      "end": 6.08,
+      "probability": 0.9988941550254822
+    },
+    {
+      "word": " on",
+      "start": 6.08,
+      "end": 6.34,
+      "probability": 0.997140645980835
+    },
+    {
+      "word": " Wednesday.",
+      "start": 6.34,
+      "end": 6.76,
+      "probability": 0.9993581175804138
+    },
+    {
+      "word": " Substantial",
+      "start": 8.06,
+      "end": 8.8,
+      "probability": 0.9625209967295328
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 0.96,
+      "text": " Fluctuating",
+      "avgLogprob": -0.2269073858857155,
+      "noSpeechProb": 0.031121578067541122
+    },
+    {
+      "start": 2.0,
+      "end": 6.76,
+      "text": " The fluctuating price rose on Monday, fell on Tuesday and rose again on Wednesday.",
+      "avgLogprob": -0.2269073858857155,
+      "noSpeechProb": 0.031121578067541122
+    },
+    {
+      "start": 8.06,
+      "end": 8.8,
+      "text": " Substantial",
+      "avgLogprob": -0.2269073858857155,
+      "noSpeechProb": 0.031121578067541122
+    }
+  ]
+}

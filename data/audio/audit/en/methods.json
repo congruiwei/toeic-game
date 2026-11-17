@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "language": "en",
+  "bank": "methods",
+  "records": {},
+  "generation": {
+    "individual": {
+      "model": "whisper-small",
+      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "device": "cpu",
+      "computeType": "int8",
+      "packages": {
+        "faster-whisper": "1.2.1",
+        "ctranslate2": "4.9.0",
+        "av": "16.0.1"
+      },
+      "beamSize": 5,
+      "conditionOnPreviousText": false,
+      "prompt": null,
+      "vadFilter": false
+    },
+    "screening": null,
+    "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
+  },
+  "sourceSha256": "8aa409e2e809672e6ed61f4a86c0947b716aae2144f223ff6a5b76d6d16b5504"
+}

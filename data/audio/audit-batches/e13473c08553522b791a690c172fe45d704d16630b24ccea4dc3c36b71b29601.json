@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "id": "e13473c08553522b791a690c172fe45d704d16630b24ccea4dc3c36b71b29601",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.6986875,
+  "elapsedSeconds": 5.774,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 7.0986875000000005,
+      "sha256": "f7e86819df554c25f87e3c4859a0bdeaae3a34287aa87bf84fccfc6e4ceeebc4",
+      "src": "./audio/generated/en/am_puck/799b876c9d981c078911123e2d55177e.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Please",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.8179060220718384
+    },
+    {
+      "word": " deduct",
+      "start": 0.7,
+      "end": 1.06,
+      "probability": 0.9960770010948181
+    },
+    {
+      "word": " our",
+      "start": 1.06,
+      "end": 1.32,
+      "probability": 0.9840117692947388
+    },
+    {
+      "word": " $20",
+      "start": 1.32,
+      "end": 1.74,
+      "probability": 0.9361959099769592
+    },
+    {
+      "word": " deposit",
+      "start": 1.74,
+      "end": 2.52,
+      "probability": 0.9643628001213074
+    },
+    {
+      "word": " from",
+      "start": 2.52,
+      "end": 2.8,
+      "probability": 0.9960222840309143
+    },
+    {
+      "word": " the",
+      "start": 2.8,
+      "end": 2.92,
+      "probability": 0.9937567710876465
+    },
+    {
+      "word": " $80",
+      "start": 2.92,
+      "end": 3.2,
+      "probability": 0.9951379895210266
+    },
+    {
+      "word": " price",
+      "start": 3.2,
+      "end": 3.76,
+      "probability": 0.9801679849624634
+    },
+    {
+      "word": " and",
+      "start": 3.76,
+      "end": 4.14,
+      "probability": 0.924728274345398
+    },
+    {
+      "word": " invoice",
+      "start": 4.14,
+      "end": 4.48,
+      "probability": 0.992998480796814
+    },
+    {
+      "word": " us",
+      "start": 4.48,
+      "end": 4.78,
+      "probability": 0.9938313961029053
+    },
+    {
+      "word": " for",
+      "start": 4.78,
+      "end": 4.98,
+      "probability": 0.9958341121673584
+    },
+    {
+      "word": " the",
+      "start": 4.98,
+      "end": 5.08,
+      "probability": 0.9973999261856079
+    },
+    {
+      "word": " remaining",
+      "start": 5.08,
+      "end": 5.4,
+      "probability": 0.9994650483131409
+    },
+    {
+      "word": " $60.",
+      "start": 5.4,
+      "end": 5.98,
+      "probability": 0.9939794838428497
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.98,
+      "text": " Please deduct our $20 deposit from the $80 price and invoice us for the remaining $60.",
+      "avgLogprob": -0.16948191627212192,
+      "noSpeechProb": 0.007681815419346094
+    }
+  ]
+}

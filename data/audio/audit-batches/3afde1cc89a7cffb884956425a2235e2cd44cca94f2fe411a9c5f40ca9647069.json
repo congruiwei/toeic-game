@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "id": "3afde1cc89a7cffb884956425a2235e2cd44cca94f2fe411a9c5f40ca9647069",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.12,
+  "elapsedSeconds": 4.073,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.5200000000000005,
+      "sha256": "4e34b1ddcddd0e3f7b24a5783b1d88800e857badd1f08eb4b3f5060402dd6787",
+      "src": "./audio/generated/en/am_puck/e3f85860e4b7cc47b758dc5afdebcfb2.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Guests",
+      "start": 0.0,
+      "end": 0.72,
+      "probability": 0.9520674049854279
+    },
+    {
+      "word": " who",
+      "start": 0.72,
+      "end": 0.9,
+      "probability": 0.9894385933876038
+    },
+    {
+      "word": " prefer",
+      "start": 0.9,
+      "end": 1.18,
+      "probability": 0.9969685673713684
+    },
+    {
+      "word": " a",
+      "start": 1.18,
+      "end": 1.4,
+      "probability": 0.9961712956428528
+    },
+    {
+      "word": " firmer",
+      "start": 1.4,
+      "end": 1.76,
+      "probability": 0.9846782982349396
+    },
+    {
+      "word": " sleeping",
+      "start": 1.76,
+      "end": 2.08,
+      "probability": 0.9922116994857788
+    },
+    {
+      "word": " surface",
+      "start": 2.08,
+      "end": 2.6,
+      "probability": 0.9958569407463074
+    },
+    {
+      "word": " can",
+      "start": 2.6,
+      "end": 2.94,
+      "probability": 0.9456438422203064
+    },
+    {
+      "word": " request",
+      "start": 2.94,
+      "end": 3.26,
+      "probability": 0.9950726628303528
+    },
+    {
+      "word": " a",
+      "start": 3.26,
+      "end": 3.48,
+      "probability": 0.9949493408203125
+    },
+    {
+      "word": " room",
+      "start": 3.48,
+      "end": 3.78,
+      "probability": 0.9983807802200317
+    },
+    {
+      "word": " with",
+      "start": 3.78,
+      "end": 4.02,
+      "probability": 0.9969744682312012
+    },
+    {
+      "word": " a",
+      "start": 4.02,
+      "end": 4.16,
+      "probability": 0.9942352175712585
+    },
+    {
+      "word": " different",
+      "start": 4.16,
+      "end": 4.36,
+      "probability": 0.997369647026062
+    },
+    {
+      "word": " mattress.",
+      "start": 4.36,
+      "end": 4.82,
+      "probability": 0.9983813762664795
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.82,
+      "text": " Guests who prefer a firmer sleeping surface can request a room with a different mattress.",
+      "avgLogprob": -0.19145992540177845,
+      "noSpeechProb": 0.0013016823213547468
+    }
+  ]
+}

@@ -1,0 +1,552 @@
+{
+  "version": 1,
+  "id": "034f6e33de37438301d064862bb7039a2a1ab6c243dd4c4956c39fbd7faa7378",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 23.850812500000004,
+  "elapsedSeconds": 7.331,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 1.8079999999999998,
+      "sha256": "b370741d5c18b19a814d91f38e9744fccd7937af153b3ca249686ea3870976da",
+      "src": "./audio/generated/en/af_bella/1860f091180479b26411384056b570a2.m4a"
+    },
+    {
+      "offset": 2.408,
+      "end": 3.7306875,
+      "sha256": "321bc6eabe8a080a88e47f5c8207cc7975c6fa96a1e32211dcb5f74d095bf305",
+      "src": "./audio/generated/en/af_bella/a02c3b37863d7cdf45acc87277772d7d.m4a"
+    },
+    {
+      "offset": 4.3306875,
+      "end": 6.1226875,
+      "sha256": "b1cb93504bae000a29eb41f2e27a3b4cb8fe2e032e47ffe36ed968f3cad40285",
+      "src": "./audio/generated/en/af_bella/e9672476171d41b3f67a653da87cd1bf.m4a"
+    },
+    {
+      "offset": 6.722687499999999,
+      "end": 8.386687499999999,
+      "sha256": "4f45bf18b452e694a08a18d98761c7f659b45f004b2256f1a4503d6791a6bde1",
+      "src": "./audio/generated/en/af_heart/5059c0fd0ca8068ccaa342d9b048bfc1.m4a"
+    },
+    {
+      "offset": 8.986687499999999,
+      "end": 10.693374999999998,
+      "sha256": "cc89f20601f877964ffdd28f32fc167eda3bbdd868ba2deedec615dc960a1a33",
+      "src": "./audio/generated/en/am_puck/82ed35bc37c5dcafeec46ffe39aa4bf9.m4a"
+    },
+    {
+      "offset": 11.293374999999997,
+      "end": 12.701374999999997,
+      "sha256": "57458517fb13a050bc43b5b7b5b0cf70fd5f576616b8f032dfd6f83f06c9bad5",
+      "src": "./audio/generated/en/am_puck/129f39c193d88622879ec51a0d31920c.m4a"
+    },
+    {
+      "offset": 13.301374999999997,
+      "end": 15.221374999999997,
+      "sha256": "c0c07ac0c323544b0c0523ebd90a5c9ac79de363cb3891070286bc677bc18966",
+      "src": "./audio/generated/en/am_puck/fabea4789914bd4ec4212f176d2d2a5c.m4a"
+    },
+    {
+      "offset": 15.821374999999996,
+      "end": 18.594749999999998,
+      "sha256": "e65caca7ecf0eb1482b144e15226f8644d65a05695ea3aca24b1d442ceadfb66",
+      "src": "./audio/generated/en/af_bella/ea8c804d5834bece1d797f46b110472f.m4a"
+    },
+    {
+      "offset": 19.19475,
+      "end": 20.6454375,
+      "sha256": "9b7fe8f726a32c7cc7f06707bea576b81eed38a113842846419c83113079cf6c",
+      "src": "./audio/generated/en/am_puck/d761b81248c8b819790543861ea08ef5.m4a"
+    },
+    {
+      "offset": 21.2454375,
+      "end": 23.250812500000002,
+      "sha256": "534a7e72381fd183d82b1b338e8a2165b41bb9d61912753fc246a1703c46dc75",
+      "src": "./audio/generated/en/am_puck/7318ce5ca9d70f583b12a36fac886e8b.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.58,
+      "probability": 0.8180984258651733
+    },
+    {
+      "word": " route",
+      "start": 0.58,
+      "end": 0.78,
+      "probability": 0.7269747257232666
+    },
+    {
+      "word": " is",
+      "start": 0.78,
+      "end": 1.04,
+      "probability": 0.9919541478157043
+    },
+    {
+      "word": " on",
+      "start": 1.04,
+      "end": 1.16,
+      "probability": 0.9969103932380676
+    },
+    {
+      "word": " this",
+      "start": 1.16,
+      "end": 1.28,
+      "probability": 0.990717351436615
+    },
+    {
+      "word": " map.",
+      "start": 1.28,
+      "end": 1.58,
+      "probability": 0.9979193806648254
+    },
+    {
+      "word": " I'll",
+      "start": 2.18,
+      "end": 2.6,
+      "probability": 0.9888871014118195
+    },
+    {
+      "word": " have",
+      "start": 2.6,
+      "end": 2.72,
+      "probability": 0.9980683922767639
+    },
+    {
+      "word": " the",
+      "start": 2.72,
+      "end": 2.86,
+      "probability": 0.9968416690826416
+    },
+    {
+      "word": " chicken",
+      "start": 2.86,
+      "end": 3.06,
+      "probability": 0.9115390777587891
+    },
+    {
+      "word": " curry.",
+      "start": 3.06,
+      "end": 3.44,
+      "probability": 0.9850073456764221
+    },
+    {
+      "word": " His",
+      "start": 4.26,
+      "end": 4.52,
+      "probability": 0.9801790118217468
+    },
+    {
+      "word": " van",
+      "start": 4.52,
+      "end": 4.76,
+      "probability": 0.9951542615890503
+    },
+    {
+      "word": " just",
+      "start": 4.76,
+      "end": 4.98,
+      "probability": 0.9899522662162781
+    },
+    {
+      "word": " pulled",
+      "start": 4.98,
+      "end": 5.2,
+      "probability": 0.9919052124023438
+    },
+    {
+      "word": " up",
+      "start": 5.2,
+      "end": 5.38,
+      "probability": 0.9963272213935852
+    },
+    {
+      "word": " outside.",
+      "start": 5.38,
+      "end": 5.78,
+      "probability": 0.9973506927490234
+    },
+    {
+      "word": " Why",
+      "start": 6.5,
+      "end": 6.96,
+      "probability": 0.9798879623413086
+    },
+    {
+      "word": " did",
+      "start": 6.96,
+      "end": 7.12,
+      "probability": 0.9955207109451294
+    },
+    {
+      "word": " you",
+      "start": 7.12,
+      "end": 7.22,
+      "probability": 0.9989080429077148
+    },
+    {
+      "word": " book",
+      "start": 7.22,
+      "end": 7.36,
+      "probability": 0.9964872598648071
+    },
+    {
+      "word": " a",
+      "start": 7.36,
+      "end": 7.48,
+      "probability": 0.9956545829772949
+    },
+    {
+      "word": " smaller",
+      "start": 7.48,
+      "end": 7.74,
+      "probability": 0.9943760633468628
+    },
+    {
+      "word": " room?",
+      "start": 7.74,
+      "end": 8.14,
+      "probability": 0.9991555213928223
+    },
+    {
+      "word": " Only",
+      "start": 8.84,
+      "end": 9.24,
+      "probability": 0.9647315144538879
+    },
+    {
+      "word": " four",
+      "start": 9.24,
+      "end": 9.46,
+      "probability": 0.8229321837425232
+    },
+    {
+      "word": " people",
+      "start": 9.46,
+      "end": 9.74,
+      "probability": 0.9990631937980652
+    },
+    {
+      "word": " are",
+      "start": 9.74,
+      "end": 9.9,
+      "probability": 0.9971904158592224
+    },
+    {
+      "word": " attending.",
+      "start": 9.9,
+      "end": 10.2,
+      "probability": 0.9935688972473145
+    },
+    {
+      "word": " It's",
+      "start": 11.2,
+      "end": 11.52,
+      "probability": 0.9892661273479462
+    },
+    {
+      "word": " at",
+      "start": 11.52,
+      "end": 11.62,
+      "probability": 0.9900292754173279
+    },
+    {
+      "word": " the",
+      "start": 11.62,
+      "end": 11.68,
+      "probability": 0.9991369843482971
+    },
+    {
+      "word": " end",
+      "start": 11.68,
+      "end": 11.86,
+      "probability": 0.9987465143203735
+    },
+    {
+      "word": " of",
+      "start": 11.86,
+      "end": 11.96,
+      "probability": 0.9986506104469299
+    },
+    {
+      "word": " the",
+      "start": 11.96,
+      "end": 12.04,
+      "probability": 0.9986942410469055
+    },
+    {
+      "word": " hall.",
+      "start": 12.04,
+      "end": 12.26,
+      "probability": 0.9743483066558838
+    },
+    {
+      "word": " I",
+      "start": 13.1,
+      "end": 13.46,
+      "probability": 0.9974589943885803
+    },
+    {
+      "word": " Borrowed",
+      "start": 13.46,
+      "end": 13.8,
+      "probability": 0.6562529125755342
+    },
+    {
+      "word": " a",
+      "start": 13.8,
+      "end": 13.84,
+      "probability": 0.9942724704742432
+    },
+    {
+      "word": " guide",
+      "start": 13.84,
+      "end": 14.0,
+      "probability": 0.5307959914207458
+    },
+    {
+      "word": " to",
+      "start": 14.0,
+      "end": 14.2,
+      "probability": 0.9950213432312012
+    },
+    {
+      "word": " room",
+      "start": 14.2,
+      "end": 14.38,
+      "probability": 0.941585123538971
+    },
+    {
+      "word": " design.",
+      "start": 14.38,
+      "end": 14.78,
+      "probability": 0.9901601672172546
+    },
+    {
+      "word": " Would",
+      "start": 15.52,
+      "end": 16.0,
+      "probability": 0.9781008958816528
+    },
+    {
+      "word": " you",
+      "start": 16.0,
+      "end": 16.12,
+      "probability": 0.998932421207428
+    },
+    {
+      "word": " rather",
+      "start": 16.12,
+      "end": 16.32,
+      "probability": 0.9953752756118774
+    },
+    {
+      "word": " call",
+      "start": 16.32,
+      "end": 16.58,
+      "probability": 0.9949830770492554
+    },
+    {
+      "word": " the",
+      "start": 16.58,
+      "end": 16.76,
+      "probability": 0.9964732527732849
+    },
+    {
+      "word": " supplier",
+      "start": 16.76,
+      "end": 17.14,
+      "probability": 0.9899420738220215
+    },
+    {
+      "word": " or",
+      "start": 17.14,
+      "end": 17.62,
+      "probability": 0.9280310273170471
+    },
+    {
+      "word": " send",
+      "start": 17.62,
+      "end": 17.86,
+      "probability": 0.9953624606132507
+    },
+    {
+      "word": " a",
+      "start": 17.86,
+      "end": 17.98,
+      "probability": 0.9982056617736816
+    },
+    {
+      "word": " message?",
+      "start": 17.98,
+      "end": 18.32,
+      "probability": 0.9973281621932983
+    },
+    {
+      "word": " He",
+      "start": 18.94,
+      "end": 19.36,
+      "probability": 0.7143601179122925
+    },
+    {
+      "word": " supplied",
+      "start": 19.36,
+      "end": 19.6,
+      "probability": 0.977732241153717
+    },
+    {
+      "word": " all",
+      "start": 19.6,
+      "end": 19.8,
+      "probability": 0.9984045624732971
+    },
+    {
+      "word": " the",
+      "start": 19.8,
+      "end": 19.9,
+      "probability": 0.9980790615081787
+    },
+    {
+      "word": " chairs.",
+      "start": 19.9,
+      "end": 20.18,
+      "probability": 0.9917402267456055
+    },
+    {
+      "word": " Let's",
+      "start": 21.02,
+      "end": 21.5,
+      "probability": 0.9915255904197693
+    },
+    {
+      "word": " call",
+      "start": 21.5,
+      "end": 21.68,
+      "probability": 0.9972684383392334
+    },
+    {
+      "word": " so",
+      "start": 21.68,
+      "end": 21.86,
+      "probability": 0.9608754515647888
+    },
+    {
+      "word": " we",
+      "start": 21.86,
+      "end": 21.98,
+      "probability": 0.8006353378295898
+    },
+    {
+      "word": " can",
+      "start": 21.98,
+      "end": 22.08,
+      "probability": 0.9982861876487732
+    },
+    {
+      "word": " get",
+      "start": 22.08,
+      "end": 22.2,
+      "probability": 0.9974039196968079
+    },
+    {
+      "word": " an",
+      "start": 22.2,
+      "end": 22.3,
+      "probability": 0.9977442026138306
+    },
+    {
+      "word": " answer",
+      "start": 22.3,
+      "end": 22.58,
+      "probability": 0.9977039694786072
+    },
+    {
+      "word": " now.",
+      "start": 22.58,
+      "end": 22.86,
+      "probability": 0.9776574373245239
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.78,
+      "text": " The route is on this map. I'll have the chicken curry. His van just pulled up outside.",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    },
+    {
+      "start": 6.5,
+      "end": 8.14,
+      "text": " Why did you book a smaller room?",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    },
+    {
+      "start": 8.84,
+      "end": 10.2,
+      "text": " Only four people are attending.",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    },
+    {
+      "start": 11.2,
+      "end": 13.46,
+      "text": " It's at the end of the hall. I",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    },
+    {
+      "start": 13.46,
+      "end": 14.78,
+      "text": " Borrowed a guide to room design.",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    },
+    {
+      "start": 15.52,
+      "end": 18.32,
+      "text": " Would you rather call the supplier or send a message?",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    },
+    {
+      "start": 18.94,
+      "end": 20.18,
+      "text": " He supplied all the chairs.",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    },
+    {
+      "start": 21.02,
+      "end": 22.86,
+      "text": " Let's call so we can get an answer now.",
+      "avgLogprob": -0.2047147239097441,
+      "noSpeechProb": 0.01953152008354664
+    }
+  ]
+}

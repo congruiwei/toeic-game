@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "id": "fb851a7fc9ff719a889b51986ee5711b9573cab3d55d5222fdf45b22e67411ff",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.800187500000003,
+  "elapsedSeconds": 7.673,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.2346875,
+      "sha256": "085fb74b24f29acdb7b0b7cb62d718f9d110bd8d33c02f59f0519960e80f747c",
+      "src": "./audio/generated/en/am_puck/7e4e34fa5c81b04fde1a48a31609f119.m4a"
+    },
+    {
+      "offset": 2.8346875000000002,
+      "end": 4.6266875,
+      "sha256": "0cd9077db562fb22151d47f587f28c809e748b528afa6affb152527c24c6d5f3",
+      "src": "./audio/generated/en/am_puck/06e1848d7f390a427b423e7cdb874cb8.m4a"
+    },
+    {
+      "offset": 5.2266875,
+      "end": 7.317375,
+      "sha256": "fe5428423f3be76c6ff78d9acbaed906d679db381d98113bc6c632a19dc7c0d9",
+      "src": "./audio/generated/en/am_puck/31a53947ce8a856c0280eef9bceafdf0.m4a"
+    },
+    {
+      "offset": 7.917375,
+      "end": 9.709375,
+      "sha256": "a2794a0505212ac6f5f1983e134101109fafd7211879511811e899920ea430a0",
+      "src": "./audio/generated/en/af_heart/627fb517d8d8727584c1207b5348fe5c.m4a"
+    },
+    {
+      "offset": 10.309375,
+      "end": 12.357375,
+      "sha256": "178461ff526d56dad97c699d3fcc27ba3c3ae3890a4f4005c43902993d474a05",
+      "src": "./audio/generated/en/af_heart/e08ba5c9109cda969bc25421c4d45160.m4a"
+    },
+    {
+      "offset": 12.957374999999999,
+      "end": 14.83475,
+      "sha256": "b3bd1b8b32a070b13941671d964d667af86034bf78d57058f10fcd8486bed534",
+      "src": "./audio/generated/en/af_heart/67f13951e4fed136f233fb6b9a25619e.m4a"
+    },
+    {
+      "offset": 15.43475,
+      "end": 17.440125,
+      "sha256": "045b887671beb98643063621a0f16ba8077ca4c628010106fc0d1cbcd0d5a325",
+      "src": "./audio/generated/en/am_puck/fdddea6d94124594c074caf8ead09094.m4a"
+    },
+    {
+      "offset": 18.040125,
+      "end": 19.2348125,
+      "sha256": "7e083bc9bc6bbda9914f1efd82b458a871908881e85f9816753ff44f2bc54b68",
+      "src": "./audio/generated/en/af_bella/9c056db51b46bd39196a6b493893b707.m4a"
+    },
+    {
+      "offset": 19.8348125,
+      "end": 21.200187500000002,
+      "sha256": "3bb8953dadb5e705cc20604db3830f0e05ded3aebe8258bf0ad6506192fcaf19",
+      "src": "./audio/generated/en/af_bella/ae0dbec697599806132db5403363311f.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " I",
+      "start": 0.0,
+      "end": 0.56,
+      "probability": 0.9128773808479309
+    },
+    {
+      "word": " used",
+      "start": 0.56,
+      "end": 0.82,
+      "probability": 0.9909063577651978
+    },
+    {
+      "word": " it",
+      "start": 0.82,
+      "end": 0.94,
+      "probability": 0.996062695980072
+    },
+    {
+      "word": " on",
+      "start": 0.94,
+      "end": 1.02,
+      "probability": 0.9936233162879944
+    },
+    {
+      "word": " my",
+      "start": 1.02,
+      "end": 1.14,
+      "probability": 0.9951720833778381
+    },
+    {
+      "word": " last",
+      "start": 1.14,
+      "end": 1.4,
+      "probability": 0.9966673254966736
+    },
+    {
+      "word": " holiday.",
+      "start": 1.4,
+      "end": 1.84,
+      "probability": 0.9934390187263489
+    },
+    {
+      "word": " The",
+      "start": 2.84,
+      "end": 3.0,
+      "probability": 0.9853238463401794
+    },
+    {
+      "word": " suitcases",
+      "start": 3.0,
+      "end": 3.42,
+      "probability": 0.994070440530777
+    },
+    {
+      "word": " are",
+      "start": 3.42,
+      "end": 3.6,
+      "probability": 0.9932536482810974
+    },
+    {
+      "word": " beside",
+      "start": 3.6,
+      "end": 3.8,
+      "probability": 0.9972277283668518
+    },
+    {
+      "word": " the",
+      "start": 3.8,
+      "end": 4.0,
+      "probability": 0.9979050159454346
+    },
+    {
+      "word": " lift.",
+      "start": 4.0,
+      "end": 4.28,
+      "probability": 0.9585164189338684
+    },
+    {
+      "word": " Is",
+      "start": 5.18,
+      "end": 5.38,
+      "probability": 0.9794387817382812
+    },
+    {
+      "word": " the",
+      "start": 5.38,
+      "end": 5.5,
+      "probability": 0.998816967010498
+    },
+    {
+      "word": " phone",
+      "start": 5.5,
+      "end": 5.72,
+      "probability": 0.9956369996070862
+    },
+    {
+      "word": " charger",
+      "start": 5.72,
+      "end": 6.04,
+      "probability": 0.995364785194397
+    },
+    {
+      "word": " in",
+      "start": 6.04,
+      "end": 6.18,
+      "probability": 0.9955959916114807
+    },
+    {
+      "word": " this",
+      "start": 6.18,
+      "end": 6.32,
+      "probability": 0.994495689868927
+    },
+    {
+      "word": " drawer",
+      "start": 6.32,
+      "end": 6.54,
+      "probability": 0.9992727637290955
+    },
+    {
+      "word": " yours?",
+      "start": 6.54,
+      "end": 6.84,
+      "probability": 0.9942295551300049
+    },
+    {
+      "word": " The",
+      "start": 7.72,
+      "end": 8.08,
+      "probability": 0.9687127470970154
+    },
+    {
+      "word": " runners",
+      "start": 8.08,
+      "end": 8.28,
+      "probability": 0.5166154503822327
+    },
+    {
+      "word": " slide",
+      "start": 8.28,
+      "end": 8.68,
+      "probability": 0.9298032522201538
+    },
+    {
+      "word": " quite",
+      "start": 8.68,
+      "end": 8.96,
+      "probability": 0.981640636920929
+    },
+    {
+      "word": " quietly.",
+      "start": 8.96,
+      "end": 9.4,
+      "probability": 0.9986145496368408
+    },
+    {
+      "word": " Our",
+      "start": 10.34,
+      "end": 10.46,
+      "probability": 0.9951202273368835
+    },
+    {
+      "word": " monthly",
+      "start": 10.46,
+      "end": 10.76,
+      "probability": 0.9978408813476562
+    },
+    {
+      "word": " bill",
+      "start": 10.76,
+      "end": 11.04,
+      "probability": 0.998984158039093
+    },
+    {
+      "word": " arrives",
+      "start": 11.04,
+      "end": 11.44,
+      "probability": 0.9937095642089844
+    },
+    {
+      "word": " on",
+      "start": 11.44,
+      "end": 11.68,
+      "probability": 0.9984209537506104
+    },
+    {
+      "word": " Friday.",
+      "start": 11.68,
+      "end": 12.0,
+      "probability": 0.9934251308441162
+    },
+    {
+      "word": " Mine",
+      "start": 13.02,
+      "end": 13.26,
+      "probability": 0.9494726657867432
+    },
+    {
+      "word": " plugs",
+      "start": 13.26,
+      "end": 13.56,
+      "probability": 0.9911239147186279
+    },
+    {
+      "word": " into",
+      "start": 13.56,
+      "end": 13.82,
+      "probability": 0.9928344488143921
+    },
+    {
+      "word": " a",
+      "start": 13.82,
+      "end": 14.0,
+      "probability": 0.991124153137207
+    },
+    {
+      "word": " round",
+      "start": 14.0,
+      "end": 14.14,
+      "probability": 0.9972930550575256
+    },
+    {
+      "word": " socket.",
+      "start": 14.14,
+      "end": 14.52,
+      "probability": 0.9616215825080872
+    },
+    {
+      "word": " When",
+      "start": 15.46,
+      "end": 15.62,
+      "probability": 0.9914931654930115
+    },
+    {
+      "word": " does",
+      "start": 15.62,
+      "end": 15.74,
+      "probability": 0.9963614344596863
+    },
+    {
+      "word": " the",
+      "start": 15.74,
+      "end": 15.86,
+      "probability": 0.9903576970100403
+    },
+    {
+      "word": " last",
+      "start": 15.86,
+      "end": 16.08,
+      "probability": 0.973193883895874
+    },
+    {
+      "word": " ferry",
+      "start": 16.08,
+      "end": 16.32,
+      "probability": 0.9756118059158325
+    },
+    {
+      "word": " cross",
+      "start": 16.32,
+      "end": 16.58,
+      "probability": 0.9967072606086731
+    },
+    {
+      "word": " the",
+      "start": 16.58,
+      "end": 16.78,
+      "probability": 0.9991863369941711
+    },
+    {
+      "word": " river?",
+      "start": 16.78,
+      "end": 16.98,
+      "probability": 0.9974516034126282
+    },
+    {
+      "word": " From",
+      "start": 17.76,
+      "end": 18.24,
+      "probability": 0.9806236624717712
+    },
+    {
+      "word": " the",
+      "start": 18.24,
+      "end": 18.34,
+      "probability": 0.9983963370323181
+    },
+    {
+      "word": " north",
+      "start": 18.34,
+      "end": 18.52,
+      "probability": 0.672738790512085
+    },
+    {
+      "word": " landing.",
+      "start": 18.52,
+      "end": 18.96,
+      "probability": 0.9462976455688477
+    },
+    {
+      "word": " At",
+      "start": 19.76,
+      "end": 20.0,
+      "probability": 0.9878272414207458
+    },
+    {
+      "word": " a",
+      "start": 20.0,
+      "end": 20.1,
+      "probability": 0.925732433795929
+    },
+    {
+      "word": " quarter",
+      "start": 20.1,
+      "end": 20.22,
+      "probability": 0.9902613759040833
+    },
+    {
+      "word": " past",
+      "start": 20.22,
+      "end": 20.54,
+      "probability": 0.8734671473503113
+    },
+    {
+      "word": " nine.",
+      "start": 20.54,
+      "end": 20.88,
+      "probability": 0.7398573160171509
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 1.84,
+      "text": " I used it on my last holiday.",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 2.84,
+      "end": 4.28,
+      "text": " The suitcases are beside the lift.",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 5.18,
+      "end": 6.84,
+      "text": " Is the phone charger in this drawer yours?",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 7.72,
+      "end": 9.4,
+      "text": " The runners slide quite quietly.",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 10.34,
+      "end": 12.0,
+      "text": " Our monthly bill arrives on Friday.",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 13.02,
+      "end": 14.52,
+      "text": " Mine plugs into a round socket.",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 15.46,
+      "end": 16.98,
+      "text": " When does the last ferry cross the river?",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 17.76,
+      "end": 18.96,
+      "text": " From the north landing.",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    },
+    {
+      "start": 19.76,
+      "end": 20.88,
+      "text": " At a quarter past nine.",
+      "avgLogprob": -0.2377098346395152,
+      "noSpeechProb": 0.020470313727855682
+    }
+  ]
+}

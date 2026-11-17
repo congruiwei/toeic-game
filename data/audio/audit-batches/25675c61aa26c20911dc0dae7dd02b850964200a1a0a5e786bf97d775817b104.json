@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "id": "25675c61aa26c20911dc0dae7dd02b850964200a1a0a5e786bf97d775817b104",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 8.984062499999999,
+  "elapsedSeconds": 3.846,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 2.8746875,
+      "sha256": "b7e2b83ecefd3847d5a8b4f6e2f23e6205e7c6276f7459719cdb4a5170ef77a7",
+      "src": "./audio/generated/en/am_puck/116c1e0601cd383a4d062b77acf6de47.m4a"
+    },
+    {
+      "offset": 3.4746875,
+      "end": 5.949375,
+      "sha256": "f70b63c4e1f8e858802924593f2c987117bf7e21dacdad58c6b48e83ede7440c",
+      "src": "./audio/generated/en/am_puck/f940bf992d5e28bd2bb531019022a626.m4a"
+    },
+    {
+      "offset": 6.5493749999999995,
+      "end": 8.384062499999999,
+      "sha256": "a86f7a015d806cd6c2e9cd7290d58455ac59553819cdd7761233e7234630a595",
+      "src": "./audio/generated/en/am_puck/e183fd7830f0b111b838c0ae8aa9dab5.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " The",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.906041145324707
+    },
+    {
+      "word": " distributor",
+      "start": 0.54,
+      "end": 0.94,
+      "probability": 0.9735697507858276
+    },
+    {
+      "word": " delivers",
+      "start": 0.94,
+      "end": 1.38,
+      "probability": 0.9960596561431885
+    },
+    {
+      "word": " only",
+      "start": 1.38,
+      "end": 1.78,
+      "probability": 0.9841269850730896
+    },
+    {
+      "word": " on",
+      "start": 1.78,
+      "end": 1.96,
+      "probability": 0.9920421242713928
+    },
+    {
+      "word": " weekdays.",
+      "start": 1.96,
+      "end": 2.46,
+      "probability": 0.9801591634750366
+    },
+    {
+      "word": " The",
+      "start": 3.4,
+      "end": 3.62,
+      "probability": 0.9842118620872498
+    },
+    {
+      "word": " monthly",
+      "start": 3.62,
+      "end": 3.84,
+      "probability": 0.9815545082092285
+    },
+    {
+      "word": " report",
+      "start": 3.84,
+      "end": 4.26,
+      "probability": 0.9978854060173035
+    },
+    {
+      "word": " uses",
+      "start": 4.26,
+      "end": 4.6,
+      "probability": 0.9933052659034729
+    },
+    {
+      "word": " a",
+      "start": 4.6,
+      "end": 4.8,
+      "probability": 0.9859012961387634
+    },
+    {
+      "word": " landscape",
+      "start": 4.8,
+      "end": 5.12,
+      "probability": 0.9746484160423279
+    },
+    {
+      "word": " layout.",
+      "start": 5.12,
+      "end": 5.56,
+      "probability": 0.9978653788566589
+    },
+    {
+      "word": " Other",
+      "start": 6.32,
+      "end": 6.74,
+      "probability": 0.791803240776062
+    },
+    {
+      "word": " figures",
+      "start": 6.74,
+      "end": 7.06,
+      "probability": 0.9681720733642578
+    },
+    {
+      "word": " net",
+      "start": 7.06,
+      "end": 7.36,
+      "probability": 0.829861044883728
+    },
+    {
+      "word": " of",
+      "start": 7.36,
+      "end": 7.48,
+      "probability": 0.9868839383125305
+    },
+    {
+      "word": " returns.",
+      "start": 7.48,
+      "end": 7.84,
+      "probability": 0.9883137941360474
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.46,
+      "text": " The distributor delivers only on weekdays.",
+      "avgLogprob": -0.19460989072405058,
+      "noSpeechProb": 0.009484960697591305
+    },
+    {
+      "start": 3.4,
+      "end": 5.56,
+      "text": " The monthly report uses a landscape layout.",
+      "avgLogprob": -0.19460989072405058,
+      "noSpeechProb": 0.009484960697591305
+    },
+    {
+      "start": 6.32,
+      "end": 7.84,
+      "text": " Other figures net of returns.",
+      "avgLogprob": -0.19460989072405058,
+      "noSpeechProb": 0.009484960697591305
+    }
+  ]
+}
