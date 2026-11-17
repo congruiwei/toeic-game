@@ -30,7 +30,7 @@ module.exports=async({page,act,nav,state,store})=>{
     assert.equal(info[1],.8);
     assert.equal(info[2],r.id==='p3-g17-q1'?'karen':'ava');
     await page.evaluate(()=>window.replayLog.at(-1).onend());
-    assert.equal(await page.evaluate(()=>window.replayLog.length),2);
+    await page.waitForFunction(()=>window.replayLog.length===2);
     await first.click();assert.equal(await first.getAttribute('aria-pressed'),'false');
     await page.evaluate(()=>window.replayLog.at(-1).onend());assert.equal(await page.evaluate(()=>window.replayLog.length),2);
     await first.click();await nav('home');

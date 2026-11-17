@@ -1,12 +1,32 @@
 import {gradeError,responseRating} from './review-scheduler.js';
 import {bank,catalog} from './bank.js';
 import {speak,hush} from './audio.js';
-import {buildExam,examIds,readingIds,listeningScript} from './exam.js';
+import {buildExam,examIds,readingIds,listeningScript,listeningStepSentences} from './exam.js';
 import {duration} from './exam-ui.js';
 
 export function examController({state,page,show,redraw,save,notify,confirm,onGrade}) {
   let timer=0, waitUntil=0, activeSince=0, ticket=0, live=false;
+  let preparation=null, preparationController=null;
   const current=()=>state().exam;
+  function cancelPreparation(){preparationController?.abort();preparationController=null;preparation=null;}
+  async function beginResume(){
+    const e=current();if(!e)return;
+    if(e.phase!=='listening'||state().settings.audioMode==='system'){cancelPreparation();resume();return;}
+    cancelPreparation();const controller=new AbortController();preparationController=controller;
+    preparation={status:'loading',done:0,total:0,message:'正在检查本套听力音频…'};show('examPrepare');
+    try{
+      const {prepareExamAudio}=await import('./audio-downloads.js');
+      await prepareExamAudio(e,catalog,{signal:controller.signal,onProgress:p=>{
+        if(preparationController!==controller||page()!=='examPrepare')return;
+        preparation={...p,status:'loading',message:`正在准备本套听力：${p.done} / ${p.total}`};redraw();
+      }});
+      if(controller.signal.aborted||current()!==e||page()!=='examPrepare')return;
+      preparation={...preparation,status:'ready',message:'本套听力音频已下载。点击下面的按钮开始，听力将连续播放。'};redraw();
+    }catch(error){
+      if(controller.signal.aborted||current()!==e||page()!=='examPrepare')return;
+      preparation={...preparation,status:'error',message:error.code==='AUDIO_QUOTA'?'本机空间不足。可到设置删除部分音频后重试。':'本套音频未能全部准备好，已下载部分保留。请联网重试，或在设置中选择系统语音。'};redraw();
+    }
+  }
   function clear(){
     ticket++;clearTimeout(timer);clearInterval(timer);timer=0;hush();live=false;
   }
@@ -64,19 +84,27 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
     }
     const u=e.units[e.unit], script=listeningScript(u,catalog);
     if(e.step>=script.length){
-      account();e.unit++;e.step=0;e.focus=null;
+      account();e.unit++;e.step=0;e.sentence=0;e.focus=null;
       if(e.units[e.unit].part>=5){readingTimer();redraw();return;}
       if(!save() && current()!==e)return;redraw();window.scrollTo(0,0);pump();return;
     }
     const step=script[e.step];
     if(step.item&&e.focus!==step.item){account();e.focus=step.item;}
-    if(step.delay){e.step++;e.wait=step.delay;save();pump();return;}
+    if(step.delay){e.step++;e.sentence=0;e.wait=step.delay;save();pump();return;}
+    const sentences=listeningStepSentences(step),sentence=e.sentence??0;
     const seq=++ticket,i=e.step;
-    // Each utterance is checkpointed at its first audible event. Resuming skips the started line.
-    const advance=()=>{if(e.step===i){e.step++;save();}};
+    // Checkpoint the sentence that actually started, while retaining the old
+    // whole-turn step index so existing exam archives resume without replay.
+    const advance=()=>{if(e.step===i&&(e.sentence??0)===sentence){
+      if(sentence+1<sentences.length)e.sentence=sentence+1;
+      else{e.step++;e.sentence=0;}
+      save();
+    }};
     const seed=catalog.get(u.ids[0]).data.set?.id || u.ids[0];
-    speak([step],state().settings,message=>{if(live&&current()===e&&ticket===seq)audioError(message);},{seed,castTurns:script.filter(t=>t.speaker),onStart:()=>{if(live&&ticket===seq)advance();},
-      onEnd:()=>{if(!live||ticket!==seq)return;advance();pump();}});
+    speak([{...step,text:sentences[sentence]}],state().settings,message=>{if(live&&current()===e&&ticket===seq)audioError(message);},{seed,noFallbackAfterStart:true,castTurns:script.filter(t=>t.speaker),onStart:()=>{if(live&&ticket===seq)advance();},
+      onEnd:()=>{if(!live||ticket!==seq)return;advance();
+        const gap=Number(state().settings.audioGapMs);
+        e.wait=Math.min(1500,Math.max(0,Number.isFinite(gap)?gap:200));save();pump();}});
   }
   function resume(){
     const e=current();if(!e)return;show('exam');if(e.phase==='done')return;
@@ -94,9 +122,11 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
     const s=state(),e=s.exam;
     if(name==='exam-lobby'){suspend();show('examLobby');}
     if(name==='exam-start'&&(!e||e.phase==='done')){
-      try{s.exam=buildExam(bank,s,el.dataset.size);if(save())resume();}catch(err){notify(err.message);}
+      try{s.exam=buildExam(bank,s,el.dataset.size);if(save())beginResume();}catch(err){notify(err.message);}
     }
-    if(name==='exam-resume'||name==='exam-result')resume();
+    if(name==='exam-resume'||name==='exam-result'||name==='exam-download-retry')beginResume();
+    if(name==='exam-prepare-cancel'){cancelPreparation();show('examLobby');}
+    if(name==='exam-listen-ready'&&page()==='examPrepare'&&preparation?.status==='ready'){cancelPreparation();resume();}
     if(name==='exam-leave'){suspend();show('examLobby');}
     if(name==='exam-prev')jump(e.cursor-1);
     if(name==='exam-next')jump(e.cursor+1);
@@ -118,5 +148,5 @@ export function examController({state,page,show,redraw,save,notify,confirm,onGra
       const selected=document.querySelector('#exam-jump option:checked');if(selected)selected.textContent=(e.cursor+1)+' · 已答';
     }
   }
-  return {action,jump,suspend,stop(){activeSince=0;waitUntil=0;clear();},get live(){return live;}};
+  return {action,jump,suspend,cancelPreparation,stop(){cancelPreparation();activeSince=0;waitUntil=0;clear();},get preparation(){return preparation;},get live(){return live;}};
 }

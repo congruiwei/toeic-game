@@ -6,12 +6,17 @@ const prompts={
 };
 
 module.exports=async ({page,quiz,act,nav,state,store})=>{
-  const installClipboard=()=>page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async t=>{window.copied=t;}}}));
+  const installClipboard=()=>page.evaluate(()=>Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async t=>{window.copied=t;window.copyWritten=true;}}}));
   const inspect=async(result,heading,button)=>{
-    await page.evaluate(()=>{window.copied='';});
+    await page.evaluate(()=>{window.copied='';window.copyWritten=false;});
     if(button)await button.click();else await act('copy-claude');
+    // Observe this write explicitly; click completion is not a clipboard signal.
+    await page.waitForFunction(()=>window.copyWritten===true).catch(async error=>{
+      error.message+='\nClipboard write did not complete: '+JSON.stringify({result,heading,text:await page.evaluate(()=>window.copied)});
+      throw error;
+    });
     const text=await page.evaluate(()=>window.copied);
-    for(const field of ['题目 ID','题干',heading,'我的答案','正确答案','现有解析'])assert(text.includes(field));
+    for(const field of ['题目 ID','题干',heading,'我的答案','正确答案','现有解析'])assert(text.includes(field),'Missing '+JSON.stringify(field)+' in '+result+' copy: '+JSON.stringify(text));
     assert.equal(text.split('\n\n').at(-1),prompts[result]);
     return text;
   };

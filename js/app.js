@@ -11,7 +11,7 @@ import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
 import {examController} from './exam-controller.js';
-import {examView,examLobby} from './exam-ui.js';
+import {examView,examLobby,examPreparationView} from './exam-ui.js';
 import { practiceView } from './practice.js';
 import { libraryView } from './library.js';
 import { learnView, configureView } from './training.js';
@@ -32,6 +32,7 @@ import {
 } from './state.js';
 import { bank, catalog, loadBank, select, question, formats, vocabularyFormats, ensureVocabLanguage, ensureVocabMeanings, japaneseMeaning } from './bank.js';
 import { hush, speak, tone, voices, quality, voiceKey } from './audio.js';
+import {unlockRecordedAudio} from './recorded-audio.js';
 const openedUnder=navigator.serviceWorker?.controller;
 let predictionRange='30',predictionSeries='total';
 const $ = (s) => document.querySelector(s),
@@ -157,6 +158,7 @@ function go(p) {
   pauseClock();
   hush();
   if(page==='exam'&&p!=='exam')exam.suspend();
+  if(page==='examPrepare'&&p!=='examPrepare')exam.cancelPreparation();
   if(dialog.open)close();
   page = p;
   if(p==='learn' && !bank.vocab)loadBank(['vocab']).catch(()=>{});
@@ -185,6 +187,19 @@ function home() {
  <div class="continue"><span class="continue-icon">${icon('compass', 27)}</span><div><h3>${s.session ? '上次的探险' : '自由练习'}</h3><p>${s.session ? esc(s.session.title) + ' · ' + Math.min(s.session.index + 1, s.session.items.length) + ' / ' + s.session.items.length : '按主题与题型选择练习'}</p></div>${act(s.session ? 'resume' : 'nav', s.session ? '继续学习 ' + icon('arrow', 16) : '进入练习 ' + icon('arrow', 16), 'primary', 'data-page="learn"')}</div>`;
 }
 let translationModule, translationRuntime, translationRetry=0;
+let audioSettingsModule;
+function hydrateAudioSettings(){
+  const host=document.querySelector('#audio-settings-host');if(!host)return;
+  (audioSettingsModule??=import('./audio-settings.js').catch(error=>{audioSettingsModule=null;throw error;})).then(ui=>{
+    if(!host.isConnected)return;host.innerHTML=ui.audioSettingsView();ui.mountAudioSettings();
+  }).catch(()=>{if(host.isConnected)host.textContent='音频下载界面尚未缓存，请联网后重新打开设置。';});
+}
+function prepareVisibleAudio(){
+  if(s.settings.audioMode==='system')return;
+  const ref=page==='practice'?s.session?.items[s.session.index]:page==='diagnosis'?s.diagnosis?.active?.current:null;
+  const name=ref?({dialogue:'listening',dictation:'listening'})[ref.mode]||ref.mode:page==='library'?'vocab':page==='methods'?'methods':null;
+  if(name)import('./recorded-audio.js').then(ui=>ui.prepareRecordedAudio({banks:[name]})).catch(()=>{});
+}
 function translationUI() {
   if (!document.querySelector('link[data-translation-style]')) {
     const link=document.createElement('link');link.rel='stylesheet';link.href='./translation.css';link.dataset.translationStyle='';link.onerror=()=>link.remove();document.head.append(link);
@@ -262,7 +277,7 @@ function render() {
   frame();
   if(wordLanguagePending())return;
   root.innerHTML =
-    page==='expressions'?expressionUI.expressionView(s,expressionPractice):page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='examPrepare'?examPreparationView(exam.preparation):page==='expressions'?expressionUI.expressionView(s,expressionPractice):page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -272,6 +287,7 @@ function render() {
   hydrateTranslations(root);
   hydrateWordMeanings(root);
   hydrateTerms(root);
+  prepareVisibleAudio();
   root.setAttribute('aria-busy', 'false');
   if(page==='practice')showFirstMethod();
   if (page === 'practice' || page === 'diagnosis') startClock();
@@ -379,16 +395,16 @@ function accentOptions() {
 function voiceControls(){
   const list=voices(), slots=s.settings.voiceSlots||{};
   const title=v=>esc(v.name)+' · '+esc(v.lang)+' · '+['普通','增强','高级'][quality(v)];
-  return `<h3>声音</h3><label class="setting">英语口音<select data-pref="accent">${accentOptions()}</select></label>
+  return `<h3>声音</h3><label class="setting">播放方式<select data-pref="audioMode"><option value="recorded" ${s.settings.audioMode!=='system'?'selected':''}>Kokoro 录音（推荐）</option><option value="system" ${s.settings.audioMode==='system'?'selected':''}>系统语音</option></select></label><p class="fine muted">Kokoro：Heart / Puck / Bella（美式英语），Alpha（日语）。无对应音频时使用系统语音。以下口音和声音选择用于系统播放。</p><label class="setting">系统英语口音<select data-pref="accent">${accentOptions()}</select></label>
     ${['A','B','C'].map((slot,i)=>`<label class="setting">说话人 ${i+1}<select data-voice-slot="${slot}"><option value="">自动分配</option>${list.map(v=>`<option value="${esc(voiceKey(v))}" ${voiceKey(v)===slots[slot]?'selected':''}>${title(v)}</option>`).join('')}</select></label>`).join('')}
     <details><summary>英语声音与试听（${list.length}）</summary>${list.map(v=>`<div class="setting"><span>${title(v)}</span>${act('preview-voice','试听','secondary','data-voice="'+esc(voiceKey(v))+'"')}</div>`).join('') || '<p class="muted">设备尚未列出英语声音。可先点击测试声音。</p>'}</details>
     ${act('test',icon('sound',16)+' 测试声音','secondary')}
-    <p class="fine muted">iPhone 设置 → 辅助功能 → 朗读内容（部分版本为「阅读与朗读」）→ 声音 → 英语。下载标有「增强」或「高级」的声音。返回游戏后，自动分配会优先使用可用的高音质声音。</p>${japaneseVoiceControls()}`;
+    <p class="fine muted">网页只能使用此处列出的设备语音；iPhone 中另外下载的 Siri、增强或高级声音不一定对网页开放。Kokoro 音频无需安装系统声音。</p>${japaneseVoiceControls()}`;
 }
 function japaneseVoiceControls() {
   const list=japaneseVoices(),selected=s.settings.japaneseVoice||'';
   const title=v=>esc(v.name)+' · '+['普通','增强','高级'][quality(v)];
-  return `<h4>日语声音</h4><label class="setting">日语<select data-pref="japaneseVoice"><option value="">自动选择高音质</option>${list.map(v=>`<option value="${esc(voiceKey(v))}" ${voiceKey(v)===selected?'selected':''}>${title(v)}</option>`).join('')}</select></label><details><summary>日语声音与试听（${list.length}）</summary>${list.map(v=>`<div class="setting"><span>${title(v)}</span>${act('preview-japanese','试听','secondary','data-voice="'+esc(voiceKey(v))+'"')}</div>`).join('')||'<p class="muted">设备尚未列出日语声音，请在系统中下载后返回。</p>'}</details><p class="fine muted">iPhone 设置 → 辅助功能 → 朗读内容（部分版本为「阅读与朗读」）→ 声音 → 日语。可下载 Kyoko、Otoya 的「增强」或「高级」声音，自动选择会优先使用高音质版本。</p>`;
+  return `<h4>日语声音</h4>${act('test-japanese','测试日语声音','secondary')}<label class="setting">日语<select data-pref="japaneseVoice"><option value="">自动选择高音质</option>${list.map(v=>`<option value="${esc(voiceKey(v))}" ${voiceKey(v)===selected?'selected':''}>${title(v)}</option>`).join('')}</select></label><details><summary>日语声音与试听（${list.length}）</summary>${list.map(v=>`<div class="setting"><span>${title(v)}</span>${act('preview-japanese','试听','secondary','data-voice="'+esc(voiceKey(v))+'"')}</div>`).join('')||'<p class="muted">设备尚未列出日语声音，请在系统中下载后返回。</p>'}</details><p class="fine muted">这里列出网页实际可用的日语声音；系统中下载的高级声音不一定对网页开放。默认使用预生成的 Alpha，系统声音用于后备或手动选择系统播放。</p>`;
 }
 function settings() {
   if(page==='exam'&&exam.live){toast('考试中如需调整设置，请先保存离开。');return;}
@@ -417,7 +433,8 @@ function settings() {
  <label class="setting">翻译语言<select data-pref="translationLanguage">${[['zh','中'],['ja','日'],['both','中日']].map(([v,n])=>option(v,n,p.translationLanguage||'both')).join('')}</select></label>
  <label class="setting">目标记忆率<select data-pref="retention">${[.85,.90,.95].map(r=>option(r,Math.round(100*r)+'%',p.retention??.90)).join('')}</select></label><p class="fine muted">目标记忆率越高，复习越频繁。</p>
  <label class="setting">朗读速度 <span><output id="rate-val">${p.rate}×</output> <input aria-label="朗读速度" type="range" min="0.75" max="1.2" step="0.05" value="${p.rate}" data-pref="rate"></span></label>
- <section id="voice-controls">${voiceControls()}</section><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p>${issueSettings(s.issues)}<div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
+ <section id="voice-controls">${voiceControls()}</section><div id="audio-settings-host"><p>正在打开离线音频设置…</p></div><p id="offline-status" class="fine muted">${offlineReady ? '离线题库已就绪' : '离线题库尚未就绪，请保持联网'}</p>${issueSettings(s.issues)}<div class="backup"><h3>进度备份</h3>${act('export', '导出进度', 'secondary')} ${act('import', '导入进度', 'secondary')}<input type="file" accept=".json,application/json" id="import-file" hidden></div>`);
+  hydrateAudioSettings();
 }
 let pending = null;
 function markVisit() {
@@ -558,6 +575,7 @@ document.addEventListener('change', async (e) => {
     applyPrefs();
     if(k==='translationLanguage' && document.querySelector('.translations'))translationUI().then(ui=>ui.applyTranslationLanguage(document,s.settings.translationLanguage)).catch(()=>toast('翻译界面暂时无法载入，联网后请重试。'));
     if (k === 'rate') $('#rate-val').textContent = el.value + '×';
+    if(k==='audioMode'){hush();prepareVisibleAudio();}
     return;
   }
   if (el.id === 'library-theme') {
@@ -586,7 +604,15 @@ document.addEventListener('click', async (e) => {
   const el = e.target.closest('[data-act]');
   if (!el || el.disabled) return;
   const { act: a, mode, page: p, i, filter, id } = el.dataset;
+  if(['audio-download','audio-cancel','audio-delete'].includes(a)){
+    if(!el.closest('#audio-downloads')||!dialog.open)return;
+    if(a==='audio-delete')hush();
+    try{await (await (audioSettingsModule??=import('./audio-settings.js'))).audioSettingsAction(a,el,toast);}catch{toast('音频操作暂时无法完成，请重试。');}
+    return;
+  }
   const needed=requiredBanks(a,el).filter(k=>!bank[k]);
+  // Vocab may still be loading on a fresh island; unlock the first automatic word before awaiting it.
+  if(a==='screen-open' && needed.length && s.settings.audioMode!=='system')unlockRecordedAudio();
   const needsMethods=s.settings.methodHints!==false && !methodById('photo') &&
     ['start','configured','replace','review-one','resume'].includes(a);
   if(needed.length || needsMethods){
@@ -595,19 +621,20 @@ document.addEventListener('click', async (e) => {
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
+  if(a==='test-japanese'){speakJapanese('タクシー代を精算したいので、領収書をメールで送っていただけますか。',s.settings,toast,{key:'v-receipt/example/0',bank:'vocab'});return;}
   if(a==='preview-japanese'){
     speakJapanese('ご確認いただき、ありがとうございます。',s.settings,toast,{preview:el.dataset.voice});return;
   }
   if(a==='translation-ja'){
     const panel=el.closest('.translations');if(!translationAllowed(panel)||!translationRuntime)return;
     const unit=translationRuntime.unitsForPanel(panel).find(unit=>unit.key===el.dataset.key&&unit.bank===el.dataset.bank);
-    if(unit){const text=translationRuntime.translated(unit.bank,unit.key,'ja');if(text){stopReplay();speakJapanese(text,s.settings,toast);}}
+    if(unit&&!/^\s*\[\d+\]\s*$/.test(unit.text)){const text=translationRuntime.translated(unit.bank,unit.key,'ja');if(text){stopReplay();speakJapanese(text,s.settings,toast,{key:unit.key,bank:unit.bank});}}
     return;
   }
   if(a==='meaning-ja-speak'){
     const id=el.dataset.vocabJa;
     if(!((page==='library'&&el.closest('.lib-card'))||reviewedAnswer(id)))return;
-    try{stopReplay();speakJapanese(japaneseMeaning(id),s.settings,toast);}catch{toast('日语释义尚未载入，请稍后重试。');}
+    try{stopReplay();speakJapanese(japaneseMeaning(id),s.settings,toast,{key:id+'/meaning',bank:'vocab'});}catch{toast('日语释义尚未载入，请稍后重试。');}
     return;
   }
   if(a==='collect-expression') {
@@ -642,8 +669,8 @@ document.addEventListener('click', async (e) => {
     const item=s.expressions.items.find(item=>item.key===el.dataset.key);if(!item)return;
     const run=s.expressions.run,shown=!expressionPractice||run?.flipped||el.dataset.language===(run?.direction==='ja-en'?'ja':'en');
     if(!shown)return;
-    if(el.dataset.language==='ja')speakJapanese(item.ja,s.settings,toast);
-    else if(el.dataset.language==='en')speak([{speaker:'A',text:item.en}],s.settings,toast);
+    if(el.dataset.language==='ja')speakJapanese(item.ja,s.settings,toast,{key:item.key,bank:item.bank});
+    else if(el.dataset.language==='en')speak([{speaker:'A',text:item.en,key:item.key,bank:item.bank}],s.settings,toast,{seed:item.sourceId});
     return;
   }
   if(a==='load-word-meanings'){hydrateWordMeanings(document);return;}
@@ -809,7 +836,7 @@ document.addEventListener('click', async (e) => {
   if(a==='preview-voice')speak([{text:'The next train leaves at nine thirty.',speaker:'A'}],s.settings,toast,{preview:el.dataset.voice});
   if (a === 'test')
     speak(
-      [{ text: 'Welcome to Sprout Island. Your sound is ready.', speaker: 'A' }],
+      [{ text: 'Could you email me the receipt so I can claim the taxi fare?', speaker: 'A',key:'v-receipt/example/0',bank:'vocab' }],
       s.settings,
       toast,
     );
@@ -831,6 +858,7 @@ document.addEventListener('visibilitychange', () => {
   if (root.getAttribute('aria-busy') === 'true') return;
   if (document.hidden) {
   stopReplay();
+    if(page==='examPrepare'){exam.cancelPreparation();page='examLobby';render();}
     if(page==='exam'&&exam.live){exam.suspend();page='examLobby';render();}
     pauseClock();
     hush();

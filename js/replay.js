@@ -34,7 +34,11 @@ export function replayRows(q, mode) {
       mode === 'part2' ? 'Q' : mode === 'dictation' ? '听写' : turn.speaker;
     // Letter prefixes belong to an entire choice and should not become one-letter sentences.
     const text = option ? turn.text.replace(/^[A-D]\.\s*/, '') : turn.text;
-    return splitSentences(text).map(sentence => ({text:sentence, speaker:turn.speaker, label}));
+    return splitSentences(text).map((sentence,j) => {
+      const bank=mode==='part1'?'part1':mode==='part2'?'part2':'listening';
+      const path=mode==='part1'?`${q.id}/options/${i}`:mode==='part2'?(i===0?`${q.id}/audio`:`${q.id}/options/${i-1}`):mode==='dictation'?`${q.id}/text`:`${q.set?.id||q.id}/turns/${i}`;
+      return {text:sentence,speaker:turn.speaker,label,bank,key:`${path}/${j}`};
+    });
   });
 }
 
@@ -88,9 +92,10 @@ export function playLine(button, q, ref, prefs, notify) {
     speak([row], prefs, message => { clearRow(); notify(message); }, {
       seed:q.set?.id || q.id,
       castTurns:q.turns,
+      onCancel:clearRow,
       onEnd() {
         if (active?.button !== button) return;
-        if (panel.querySelector('[data-replay-loop]').checked) run();
+        if (panel.querySelector('[data-replay-loop]').checked) setTimeout(run,Math.min(1500,Math.max(0,Number.isFinite(Number(prefs.audioGapMs))?Number(prefs.audioGapMs):200)));
         else clearRow();
       }
     });

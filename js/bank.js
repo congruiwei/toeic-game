@@ -3,6 +3,7 @@ export { ensureVocabLanguage, ensureVocabMeanings, japaneseMeaning } from './voc
 import {errorDue} from './review-scheduler.js';
 import {screenedQueue} from './screening.js';
 import { difficulty } from './state.js';
+import { splitSentences } from './replay.js';
 const bank = {},
   catalog = new Map(),
   entry = (ref, data) => catalog.set(ref.id, { ref, data });
@@ -164,7 +165,7 @@ export function question(ref) {
       prompt: blank(d.text, d.answer),
       instruction: '听写 · 填入缺失的单词',
       audio: true,
-      turns: [{ text: d.text, speaker: 'A' }],
+      turns: [{ text: d.text, speaker: d.set.turns.find(turn=>turn.text.includes(d.text))?.speaker||'A', bank:'listening', keys:splitSentences(d.text).map((_,i)=>`${d.id}/text/${i}`) }],
       evidence: d.answer,
       en: d.text,
       zh: '对照原句，留意空格处单词的拼写。',

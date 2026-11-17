@@ -8,7 +8,7 @@ import {validIssues} from './question-tools.js';
 import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
-  VERSION = 4;
+  VERSION = 5;
 export const skills = ['vocab', 'grammar', 'listening', 'reading'];
 export const labels = { vocab: '单词', grammar: '语法', listening: '听力', reading: '阅读' };
 export const forms = ['芽团', '双叶芽', '蕨羽灵', '铃花灵', '云冠灵', '星冠灵'];
@@ -28,7 +28,7 @@ export function fresh() {
     session: null,
     lastVisit: 0,
     methodsSeen: [],
-    settings: { japaneseVoice:"", vocabLanguage:"both", translationLanguage:"both", translationExpanded:false, methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
+    settings: { audioMode:'recorded', audioGapMs:200, japaneseVoice:"", vocabLanguage:"both", translationLanguage:"both", translationExpanded:false, methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
   };
 }
 const record = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
@@ -43,7 +43,7 @@ function mapOk(m, fn) {
 export function decode(raw, catalog) {
   const x = JSON.parse(raw);
   // Version 1 stored every missed answer together. Its existing verdicts stay intact.
-  if (record(x) && [1,2,3].includes(x.version)) x.version = VERSION;
+  if (record(x) && [1,2,3,4].includes(x.version)) x.version = VERSION;
   if (!record(x) || x.version !== VERSION) throw Error('存档版本无法识别');
   if (
     !number(x.xp) ||
@@ -101,6 +101,10 @@ export function decode(raw, catalog) {
   if (x.settings.translationExpanded!==undefined && typeof x.settings.translationExpanded!=='boolean') throw Error('翻译展开设置有误');
   if(x.settings.vocabLanguage!==undefined && !['zh','ja','both'].includes(x.settings.vocabLanguage))throw Error('单词题释义语言有误');
   if(x.settings.japaneseVoice!==undefined && (typeof x.settings.japaneseVoice!=='string'||x.settings.japaneseVoice.length>=1000))throw Error('日语声音设置有误');
+  if(x.settings.audioMode!==undefined && !['recorded','system'].includes(x.settings.audioMode))throw Error('音频播放设置有误');
+  if(x.settings.audioGapMs!==undefined && (!number(x.settings.audioGapMs,1500)))throw Error('音频停顿设置有误');
+  x.settings.audioMode ??= 'recorded';
+  x.settings.audioGapMs ??= 200;
   x.settings.japaneseVoice ??= '';
   x.settings.vocabLanguage ??= 'both';
   x.settings.translationLanguage ??= 'both';

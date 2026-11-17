@@ -36,7 +36,7 @@ export function screenController({state,go,render,save,toast,study}) {
   let pointer;
   function pronounce() {
     const s=state(),r=s.screening?.run,w=catalog.get(r?.ids[r.index])?.data;
-    if(w && !r.pending && !r.feedback)speak([{speaker:'A',text:w.word}],s.settings,toast,{seed:w.id});
+    if(w && !r.pending && !r.feedback)speak([{speaker:'A',text:w.word,key:w.id+'/meaning',bank:'vocab'}],s.settings,toast,{seed:w.id});
   }
   function choose(id,knows) {
     const s=state();

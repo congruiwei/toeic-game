@@ -3,12 +3,18 @@ module.exports=async ({page,act,nav,state})=>{
  await nav('learn');await act('screen-open');await page.locator('.screen-card').waitFor();
  const first=(await state()).screening.run;
  assert.equal(first.ids.length,20);
- // Synthesize Chromium touchscreen input through the compositor, including pointer capture.
- const touch=await page.context().newCDPSession(page);
  const box=await page.locator('.screen-card').boundingBox(),x=Math.round(box.x+box.width*.7),y=Math.round(box.y+box.height*.5);
- await touch.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});
- await touch.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x-90,y}]});
- await touch.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await touch.detach();
+ if(process.env.PW_ENGINE==='webkit'){
+  // Playwright exposes touch taps, but no native WebKit swipe API. Exercise
+  // the same primary-pointer/capture path with a trusted drag; phone touch
+  // behavior remains on the real-device checklist.
+  await page.mouse.move(x,y);await page.mouse.down();await page.mouse.move(x-90,y,{steps:5});await page.mouse.up();
+ }else{
+  const touch=await page.context().newCDPSession(page);
+  await touch.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});
+  await touch.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x-90,y}]});
+  await touch.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await touch.detach();
+ }
  await page.waitForFunction(()=>JSON.parse(localStorage.getItem('sprout-isle.save')).screening.run.index===1);
  assert.equal((await state()).screening.marks[first.ids[0]],'learn');
  await act('screen-yes');await act('screen-yes');await act('screen-yes');

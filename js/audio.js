@@ -1,3 +1,4 @@
+import { cancelRecordedAudio, playAudioPieces, resolveAudioPieces, unloadedAudioPacks, loadAudioPack, unlockRecordedAudio } from './recorded-audio.js';
 let ctx;
 export function tone(kind, enabled) {
   if (!enabled) return;
@@ -30,10 +31,15 @@ export function tone(kind, enabled) {
 }
 let active = [],
   generation = 0;
+let cleanup;
+export const audioGeneration = () => generation;
+export function setAudioCleanup(callback) { cleanup=callback; }
 export function hush() {
   generation++;
-  if ('speechSynthesis' in window) speechSynthesis.cancel();
+  cancelRecordedAudio();
+  if (typeof window !== 'undefined' && window.speechSynthesis) window.speechSynthesis.cancel();
   active = [];
+  const previous=cleanup;cleanup=null;previous?.();
 }
 export const accents = ['en-US','en-GB','en-AU','en-CA'];
 const novelty = /\b(albert|bad news|bells|boing|bubbles|jester|trinoids|whisper|zarvox|good news|cellos|deranged|hysterical|pipe organ|wobble|bahh)\b/i;
@@ -41,6 +47,8 @@ const eloquence = /eloquence|\b(eddy|flo|grandma|grandpa|reed|rocko|sandy|shelle
 const names = /\b(samantha|ava|allison|tom|zoe|evan|nathan|daniel|kate|serena|karen|lee)\b/i;
 const traits = v => (v.name+' '+v.voiceURI).normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[_-]/g,' ');
 export const voiceKey = v => v.voiceURI || v.name+'|'+v.lang;
+// Insertion positions are display cues, not spoken numbers. Keep all other text.
+export const systemSpeechText = text => String(text ?? '').replace(/\[[1-4]\]/g, '').trim();
 export const quality = v => /premium|高级|高級/i.test(traits(v))?2:/enhanced|增强|增強/i.test(traits(v))?1:0;
 const person = v => (v.name || v.voiceURI).replace(/\s*[（(].*?[）)]/g,'').trim().toLowerCase();
 const gender = v => /\b(samantha|ava|allison|zoe|kate|serena|karen|tessa|moira)\b/i.test(traits(v))?'f':/\b(tom|evan|nathan|daniel|lee|oliver|aaron)\b/i.test(traits(v))?'m':'';
@@ -65,7 +73,7 @@ export function castVoices(turns, prefs, seed, list) {
   for(const s of cast){
     if(assigned.has(s))continue;
     const assignedVoices=[...assigned.values()], i=Math.max(0,'ABC'.indexOf(s));
-    const target=prefs.accent==='auto'?rotating[(start+i)%rotating.length]:prefs.accent;
+    const target=!prefs.accent||prefs.accent==='auto'?rotating[(start+i)%rotating.length]:prefs.accent;
     const distinct=list.filter(v=>!assignedVoices.includes(v));
     const rank=v=>Number(assignedVoices.some(w=>person(w)===person(v)))*100
       +Number(language(v)!==target.toLowerCase())*20 + (2-quality(v))*5
@@ -76,25 +84,54 @@ export function castVoices(turns, prefs, seed, list) {
   }
   return assigned;
 }
-export function speak(turns, prefs, fail, {seed='',preview='',onEnd,onStart,castTurns=turns}={}) {
+export function speak(turns, prefs={}, fail=()=>{}, options={}) {
+  const {seed='',preview='',onEnd,onStart,onCancel,onSegment,onSegmentEnd,castTurns=turns,bank,loop=false,noFallbackAfterStart=false}=options;
   hush();
-  if (!window.speechSynthesis || !window.SpeechSynthesisUtterance) { fail('此浏览器无法朗读。请在 Safari 中测试英语语音。'); return; }
-  const raw=speechSynthesis.getVoices(),list=englishVoices(raw);
-  if(raw.length && !list.length){fail('未发现可用的英语语音。请在系统设置中下载英语声音后重试。');return;}
-  const cast=castVoices(castTurns,prefs,seed,list), token=generation;
-  let started=false;
-  active=turns.map(({text,speaker},i)=>{
-    const u=new SpeechSynthesisUtterance(text);
-    const voice=(preview && list.find(v=>voiceKey(v)===preview))||cast.get(speaker);
+  if(!turns?.length)return false;
+  if(!turns.some(piece=>systemSpeechText(piece.text))){onEnd?.();return true;}
+  const raw=window.speechSynthesis?.getVoices()||[],list=englishVoices(raw);
+  const cast=castVoices(castTurns,prefs,seed,list),token=generation;
+  const available=()=>Boolean(window.speechSynthesis&&window.SpeechSynthesisUtterance&&(!raw.length||list.length));
+  function utter(piece,callbacks) {
+    const text=systemSpeechText(piece.text);
+    if(!text){callbacks.onEnd?.();return true;}
+    if(!available())return false;
+    const u=new window.SpeechSynthesisUtterance(text),speaker=piece.speaker||'A';
+    const voice=(preview&&list.find(v=>voiceKey(v)===preview))||cast.get(speaker);
     if(voice)u.voice=voice;
-    u.lang=voice?.lang||(prefs.accent==='auto'?'en-US':prefs.accent);
-    u.rate=prefs.rate;
-    const index=Math.max(0,'ABC'.indexOf(speaker));
-    u.pitch=list.length<cast.size||!list.length||new Set(cast.values()).size<cast.size?[1,1.12,.88][index]:1;
-    u.onstart=()=>{if(token===generation&&!started){started=true;onStart?.();}};
-    u.onerror=e=>{if(token!==generation)return;hush();fail('声音未能播放，请在设置中测试已安装的英语语音。');};
-    if(i===turns.length-1)u.onend=()=>{if(token===generation){active=[];onEnd?.();}};
-    return u;
-  });
-  try{for(const u of active)speechSynthesis.speak(u);}catch{hush();fail('朗读启动失败，请重新测试声音。');}
+    u.lang=voice?.lang||(!prefs.accent||prefs.accent==='auto'?'en-US':prefs.accent);
+    u.rate=Math.min(1.2,Math.max(.75,Number(prefs.rate)||1));
+    const i=Math.max(0,'ABC'.indexOf(speaker));
+    u.pitch=list.length<cast.size||!list.length||new Set(cast.values()).size<cast.size?[1,1.12,.88][i]:1;
+    u.onstart=()=>{if(token===generation)callbacks.onStart?.();};
+    u.onend=()=>{if(token!==generation)return;active=active.filter(x=>x!==u);callbacks.onEnd?.();};
+    u.onerror=event=>{if(token===generation&&!['canceled','interrupted'].includes(event.error))callbacks.onError?.(event);};
+    active.push(u);window.speechSynthesis.speak(u);return true;
+  }
+  const failure=()=>{hush();fail('声音未能播放，请再次点击，或在设置中测试设备英语语音。');};
+  const useRecorded=!preview&&prefs.audioMode!=='system';
+  const resolve=()=>resolveAudioPieces(turns,{seed,bank});
+  const play=pieces=>playAudioPieces(pieces,prefs,{onStart,onEnd,onCancel,onSegment,onSegmentEnd,loop,noFallbackAfterStart,fallback:utter,onError:failure});
+  const missing=useRecorded?unloadedAudioPacks(turns,{seed,bank}):[];
+  if(missing.length){
+    // Unlock the shared media element in this trusted click, before fetching metadata.
+    setAudioCleanup(onCancel);unlockRecordedAudio();
+    Promise.allSettled(missing.map(({bank,language})=>loadAudioPack(bank,language))).then(()=>{
+      if(token!==generation)return;
+      const pieces=resolve();
+      if(pieces.some(piece=>piece.src)){cleanup=null;play(pieces);}
+      else{hush();fail('此句录音暂不可用，请再点一次使用设备英语语音。');}
+    });
+    return true;
+  }
+  const pieces=useRecorded?resolve():[];
+  if(pieces.some(piece=>piece.src))return play(pieces);
+  if(!available()){fail(raw.length?'未发现可用的英语语音。请在系统设置中下载英语声音后重试。':'此浏览器无法朗读。请在 Safari 中测试英语语音。');return false;}
+  // Queue every system utterance synchronously in the trusted click for iOS.
+  let started=false,remaining=turns.length;
+  setAudioCleanup(onCancel);
+  try{turns.forEach((piece,i)=>utter(piece,{
+    onStart(){if(!started){started=true;onStart?.();}onSegment?.(piece,i);},
+    onEnd(){onSegmentEnd?.(piece,i);if(--remaining===0){cleanup=null;onEnd?.();}},onError:failure
+  }));return true;}catch{failure();return false;}
 }

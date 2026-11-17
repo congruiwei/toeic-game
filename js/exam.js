@@ -1,3 +1,5 @@
+import {splitSentences} from './replay.js';
+
 // A full form keeps its passages intact. Four disjoint passage pools survive reloads and reordering of the bank.
 export const fullCounts=[6,25,39,30,30,16,54], halfCounts=[3,12,20,15,15,8,27];
 const keyOf=g=>g.id;
@@ -107,7 +109,14 @@ export function examValid(e,catalog){
   if(e.phase==='listening'&&e.units[e.unit].part>4)return false;
   if(e.remaining>(e.size==='half'?38:75)*60000)return false;
   if(e.focus!==null && !ids.has(e.focus))return false;
-  if(e.phase==='listening'&&catalog&&e.step>listeningScript(e.units[e.unit],catalog).length)return false;
+  // Old archives checkpointed whole script steps. Missing sentence means the
+  // first unstarted sentence of that same step; never reinterpret old step IDs.
+  const sentence=e.sentence===undefined?0:e.sentence;
+  if(!Number.isSafeInteger(sentence)||sentence<0||sentence>100||e.phase!=='listening'&&sentence!==0)return false;
+  if(e.phase==='listening'&&catalog){
+    const script=listeningScript(e.units[e.unit],catalog);
+    if(e.step>script.length||sentence>=Math.max(1,listeningStepSentences(script[e.step]).length))return false;
+  }
   if(e.phase==='done' && (!e.keys || [...ids].some(id=>typeof e.keys[id]!=='string')))return false;
   if(e.reviewMs!==undefined && (!e.reviewMs||typeof e.reviewMs!=='object'||Array.isArray(e.reviewMs)||Object.entries(e.reviewMs).some(([id,n])=>!ids.has(id)||!Number.isSafeInteger(n)||n<0)))return false;
   return [e.answers,e.times,e.answeredAt].every(m=>m&&typeof m==='object'&&!Array.isArray(m)&&Object.keys(m).every(id=>ids.has(id)))
@@ -120,6 +129,9 @@ export function listeningScript(unit,catalog){
  if(unit.part<=2)return [...(unit.part===2?[utter('A',first.audio)]:[]),
    ...first.options.map((option,i)=>utter(unit.part===2?'B':'A',String.fromCharCode(65+i)+'. '+option)),{delay:5500}];
  return [...first.set.turns,...unit.ids.flatMap(id=>[{...utter('N',catalog.get(id).data.prompt),item:id},{delay:5500,item:id}])];
+}
+export function listeningStepSentences(step){
+ return step?.text?splitSentences(step.text):[];
 }
 export function examScores(e,catalog){
  const parts=Array.from({length:7},()=>({correct:0,total:0}));

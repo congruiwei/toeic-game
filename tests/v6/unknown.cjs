@@ -5,6 +5,14 @@ module.exports=async ({page,act,nav,state,quiz})=>{
   const first=await state(), id=first.session.items[0].id;
   assert.equal(first.xp,4);assert.equal(first.errors[id].misses,1);assert.equal(first.words[id].right,0);
   assert.equal(first.report.parts.vocab.unknown,1);assert.equal(first.report.parts.vocab.right,0);
+  // This reload verifies the saved answer. Let its visible feedback finish
+  // hydrating; interrupted translation requests have a separate recovery case.
+  if(await page.locator(`[data-vocab-ja="${id}"]`).isVisible())await page.waitForFunction(id=>{
+    const node=document.querySelector(`[data-vocab-ja="${id}"]`);
+    return node?.textContent.trim()&&!node.textContent.includes('正在载入')&&!node.querySelector('button');
+  },id);
+  const options=page.locator(`[data-options-id="${id}"]`);
+  if(await options.isVisible())await options.locator('.option-details').waitFor();
   await page.reload();await act('resume');
   assert.match(await page.locator('.lesson-feedback').innerText(),/不知道.*已加入复习/);
   assert.equal((await state()).xp,4);

@@ -2,7 +2,7 @@
 
 [打开游戏](https://congruiwei.github.io/toeic-game/)
 
-[Kokoro 声音试听](https://congruiwei.github.io/toeic-game/audition.html)：用相同材料比较10个英语和3个日语候选，也可与设备日语声音对照。试听选择单独保存；正式游戏仍使用原朗读方式，选声后再批量制作音频。[本地生成与试听验收](docs/KOKORO-AUDITION.md)
+英语预生成音频使用 Kokoro Heart、Puck、Bella，日语使用 Alpha，均由本地开源模型合成。保留[声音试听](https://congruiwei.github.io/toeic-game/audition.html)和[本地生成说明](docs/AUDIO-GENERATION.md)。
 
 用几道商务英语练习培育一只住在浮岛上的芽团。单词、语法、听力和阅读分别积累经验，共同解锁六个形态。练习可以随时离开，回到小岛后点「继续学习」即可从上次的位置继续。
 
@@ -11,9 +11,9 @@
 1. 用 Safari 打开游戏，首次打开时保持联网，在设置看到「离线题库已就绪」。
 2. 轻点「分享」。部分 Safari 布局先点「更多」，再选「分享」。
 3. 选择「添加到主屏幕」。如有「作为网页 App 打开」选项，将它打开，然后点「添加」。
-4. 从主屏幕图标打开游戏。在设置里点「测试声音」。普通练习点「点击开始」，可以重听；模考听力由一次点击启动，随后连续播放。
+4. 从主屏幕图标打开游戏。在设置里点「测试声音」。普通练习点「点击开始」，可以重听；模考先下载本套听力，再点「开始听力」，随后连续播放。
 
-页面和题库可以离线使用。朗读使用设备提供的英语和日语语音，部分语音需要联网或预先下载。中日译文首次展开时下载，下载过的部分可离线查看。不同 iOS 版本和语音包提供的口音不同。[Apple 主屏幕网页 App 指南](https://support.apple.com/zh-cn/guide/iphone/iphea86e5236/ios)
+页面和题库可以离线使用。已播放的音频会自动缓存；设置可批量下载听力、单词、阅读和日语音频，显示实际大小、进度及已用空间，也可取消或删除音频。没有对应音频时使用系统语音后备。中日译文首次展开时下载，下载过的部分可离线查看。[Apple 主屏幕网页 App 指南](https://support.apple.com/zh-cn/guide/iphone/iphea86e5236/ios)
 
 ## 游戏内容
 
@@ -50,7 +50,7 @@
 - **精听与学习卡：** 逐句重听列表可单独展开翻译；图鉴词卡与方法卡的英文例句可以随时查看。17 个语法主题和 22 张方法卡均附日语术语。
 - **日语词义：** 1087 张词卡详情同时显示中日释义。「设置 → 单词题释义语言」默认混合，中日释义题交替；也可固定中文或日语。「练习 → 单词」可固定「看英文选日语」或「看日语选英文」。快筛抽查和诊断保持既有题型。
 - **收藏与复习：** 在答后展开的听力、阅读或词汇译文旁点「收藏」，进入「练习 → 表达本」。可按日语回想英文或按英文回想日语，翻开后自评「不会 / 模糊 / 会了 / 很熟」，用现有 FSRS 安排复习；「报告」显示收藏和掌握数量。练习进度、三语快照及复习时间都随 JSON 备份。
-- **日语朗读：** 点日语译文、词义或表达本中的日语即可朗读；表达本另有英／日朗读按钮。设置的「声音」中可以选择、试听日语音色，自动模式优先高音质 Kyoko / Otoya。
+- **日语朗读：** 点日语译文、词义或表达本中的日语即可朗读；表达本另有英／日朗读按钮。默认使用预生成的 Alpha；切到「使用系统语音」后，可在「声音」中选择、试听设备提供的日语音色。
 - **纠正译文：** 答后点「这题有问题 → 翻译不自然」，备注具体句子和语言；设置里可以复制全部问题报告，再自行交给审校者。
 
 两种语言各有 7699 条对齐记录，另有 39 个日语术语标签；[术语表](docs/glossary.md)统一 50 项常见表达。首次展开按题库分包下载，首页与首题不请求译文。尚未下载的译文需要先联网打开一次；导出进度会保存收藏句子的三语快照，不会打包整套翻译缓存。[翻译数据格式](docs/I18N_DATA.md)及[审校与验收记录](docs/BILINGUAL_QA.md)供后续维护。
@@ -65,11 +65,11 @@
 
 ## iPhone 声音与安装核对
 
-在系统「设置 → 辅助功能 → 朗读内容」（部分系统为「阅读与朗读」）中进入「声音 → 英语」，下载带「增强」或「高级」的音色，回到游戏设置试听。可分别指定说话人 1、2、3，或让游戏在可用地区语音间轮换。[Apple 语音设置说明](https://support.apple.com/en-ie/guide/iphone/iph96b214f0/ios)
+设置中可切换「Kokoro 预生成音频」与「使用系统语音」。预生成的三个英语声音均为美式，双人对话男女声错开，三人对话各用一个声音；角色配声在同组内保持一致。系统模式的音色、口音和手动说话人设置只控制设备语音，不改变预生成配声。iOS 系统语音设置中下载的音色不保证向网页开放，以游戏实际列出的语音为准。
 
 - 在 Safari 及主屏幕 App 各测试一次首次点击发声、语速、音量和蓝牙耳机。
-- 试听下载前后的音色列表，以三人对话检查角色一致性、美英澳加口音与系统实际发音。日语在同一路径选择「日语」，下载增强／高级声音后回到游戏试听、选择。
-- 在线等到「离线题库已就绪」，先展开需要的译文，再开飞行模式重启，检查插画、已下载的中日译文与本地英／日语音。未下载的译文会提示联网重试。
+- 播放双人、三人对话，核对 Heart／Puck／Bella 的角色一致性；播放日语 Alpha，再切系统模式对照。测试 0.75×、1×、1.2× 时的音调与句间停顿。
+- 在线等到「离线题库已就绪」，下载一包音频并展开需要的译文，再开飞行模式重启，检查插画、已下载的音频与中日译文。删除音频后确认用量减少，学习进度保留。
 - 模考中途锁屏再回来，点「继续考试」确认语句接续、阅读剩余时间和答案。设备上保存最近一套成绩，换设备前可导出 JSON。
 
 ## 保存与换设备
@@ -100,6 +100,7 @@ node scripts/validate.mjs
 
 ~~~sh
 node scripts/validate.mjs
+node scripts/validate-bank-audio.mjs
 node tests/voices.mjs
 node tests/saves.mjs
 node tests/forms.mjs
@@ -111,12 +112,31 @@ node tests/v6/replay-logic.mjs
 node tests/v6/methods-logic.mjs
 npm install --prefix /tmp/island-browser-test playwright
 /tmp/island-browser-test/node_modules/.bin/playwright install chromium
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio-app.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio-metadata.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=chromium node tests/audio-cache-usage.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/e2e.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/v6.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/shell-update.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/i18n-offline.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/performance.cjs
 ~~~
+
+也可安装 Playwright WebKit 并选择它运行音频回归；未指定 `PW_ENGINE` 时仍使用 Chromium，`PW_CHANNEL` 仅对 Chromium 生效：
+
+~~~sh
+/tmp/island-browser-test/node_modules/.bin/playwright install webkit
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-app.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-metadata.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-cache-usage.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/v6.cjs
+~~~
+
+`v6.cjs` 的 WebKit 场景使用各自独立的临时持久 profile，并在测试结束后删除。当前 WebKit 的非持久上下文会在最后一个 CacheStorage 连接随页面重载关闭时清空缓存；独立持久 profile 保留了普通 Safari 的跨导航存储行为，不需要修改生产缓存代码或放宽断言。
+
+WebKit 的离线回归通过关闭本地 HTTP 服务器模拟网络中断，保留原缓存、冷重开和字节范围断言。当前测试引擎的 `setOffline(true)` 连独立 Service Worker 的固定响应也会阻断，因此不能用它判定离线功能。自动化结果仍需在真实 iPhone 上用飞行模式复核。 快筛手势在 Chromium 使用原生触摸输入，在 WebKit 使用可信指针拖动覆盖同一捕获逻辑；真实手指滑动仍列入 iPhone 手测。
 
 已有 Chrome 可给浏览器测试命令加 `PW_CHANNEL=chrome`。运行 `node tests/v6.cjs screen fsrs` 可单独检查快筛和复习；统一入口会在每个功能的 375、390、430px 三档各建独立上下文。脚本启动临时本地 HTTP 服务，模拟 iPhone 并使用可控语音事件。模考测试实际开始、回答、退出、恢复和交卷，并用测试存档推进到听力末段及阅读到期点。真实设备的系统音色与音响效果需另行试听。
 

@@ -6,6 +6,12 @@ import {passages,graphic} from './practice.js';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const duration=ms=>{const n=Math.ceil(Math.max(0,ms)/1000);return Math.floor(n/60)+':'+String(n%60).padStart(2,'0');};
 const action=(name,text,extra='')=>`<button class="secondary" data-act="${name}" ${extra}>${text}</button>`;
+export function examPreparationView(progress){
+  return `<section class="lesson-shell"><h1>准备模拟考试音频</h1><section class="lesson-panel"><p role="status">${esc(progress?.message||'正在准备…')}</p>
+    <progress style="width:100%" aria-label="本套音频下载进度" max="${progress?.total||1}" value="${progress?.done||0}"></progress>
+    ${progress?.status==='ready'?action('exam-listen-ready','点击开始听力'):progress?.status==='error'?action('exam-download-retry','重试下载'):''}</section>
+    <p class="muted">准备期间不计时。已下载的音频可以离线使用；听力开始后，每段只播放一次。</p>${action('exam-prepare-cancel','保存离开')}</section>`;
+}
 function choices(q,e,part){
  const hide=part<=2;
  return `<div class="lesson-choices">${q.options.map((o,i)=>`<button class="lesson-option ${e.answers[q.id]===o?'exam-chosen':''}" data-act="exam-choice" data-id="${esc(q.id)}" data-i="${i}" aria-pressed="${e.answers[q.id]===o}"><b>${'ABCD'[i]}</b>${hide?'选择 '+ 'ABCD'[i]:esc(o)}</button>`).join('')}</div>`;
