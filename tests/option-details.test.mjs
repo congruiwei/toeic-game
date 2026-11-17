@@ -71,6 +71,42 @@ test('polysemous words preserve exact target senses, and translated options expo
  const ref={id:'v-available',mode:'vocab',format:'meaning'};const d=await loadOptionDetails(ref,question(ref),{vocab:bank.vocab});assert.equal(d.options.find(x=>x.correct).spokenEnglish,'available');
 });
 
+test('cloze distractors use compatible verb senses rather than same-spelling noun cards',async()=>{
+ const optionFor=async(id,text)=>{const ref={id,mode:'vocab',format:'cloze'};const detail=await loadOptionDetails(ref,question(ref),{vocab:bank.vocab});return detail.options.find(option=>option.text===text);};
+ const transfer=await optionFor('v-redeem','transfer');
+ assert.equal(transfer.pos,'v.');assert.equal(transfer.zh,'调动；转移；转接');assert.equal(transfer.ja,'異動させる；移す；転送する');
+ assert.equal(transfer.lexemes.length,1);assert.equal(transfer.lexemes[0].id,'lex-86b30500');assert(!transfer.lexemes[0].wordId,'a verb must not collect the unrelated noun card');
+ assert(transfer.reasonZh.includes('转移'));assert(transfer.reasonZh.includes('兑换'));
+ const survey=await optionFor('v-landscape','survey');
+ assert.equal(survey.pos,'v.');assert.equal(survey.zh,'勘测；调查');assert.equal(survey.ja,'測量する；調査する');
+ assert.equal(survey.lexemes.length,1);assert.equal(survey.lexemes[0].word,'survey');assert(!survey.lexemes[0].wordId);assert(survey.reasonZh.includes('铺草皮'));
+ const record=await optionFor('v-reduce','record');
+ assert.equal(record.pos,'v.');assert.deepEqual(record.lexemes.map(x=>x.wordId),['v-record-enter']);assert.equal(record.zh,'将信息记录保存');
+});
+
+test('cloze keeps legitimate participle and gerund surface explanations and underlying collectible verbs',async()=>{
+ for(const [id,text,base,form]of [['v-tentative','confirmed','confirm','过去式／过去分词'],['v-correspondence','advertising','advertise','现在分词／动名词']]){
+  const ref={id,mode:'vocab',format:'cloze'},details=await loadOptionDetails(ref,question(ref),{vocab:bank.vocab});
+  const option=details.options.find(item=>item.text===text);
+  assert(option.pos.includes(form),text+' retains the inflection label rather than inventing a new POS sense');
+  assert(option.zh.includes(base));assert(option.ja.includes(base));assert(option.lexemes.length>0);
+  assert(option.lexemes.every(item=>item.word===base),text+' still collects its underlying verb');
+ }
+});
+
+test('the other six vocabulary formats retain the exact original canonical target senses',async()=>{
+ const ja=read('data/i18n/ja/vocab-meanings.json').entries;
+ for(const id of ['v-survey','v-transfer','v-record-stored','v-record-enter']){
+  const word=bank.vocab.find(item=>item.id===id);
+  for(const format of vocabularyFormats.filter(value=>value!=='cloze')){
+   const ref={id,mode:'vocab',format},q=question(ref),details=await loadOptionDetails(ref,q,{vocab:bank.vocab});
+   const correct=details.options.find(option=>option.correct);
+   assert.equal(correct.pos,word.pos,id+':'+format);assert.equal(correct.zh,word.zh);assert.equal(correct.ja,ja[id+'/meaning']);
+   assert.deepEqual(correct.lexemes.map(item=>item.wordId),[id]);
+  }
+ }
+});
+
 test('a loaded bank is cached offline; failed first loads retry; changed signatures and unrecognized options fail explicitly',async()=>{
  const ref={id:'gram-time-01',mode:'grammar'},q=question(ref);let calls=0;const savedFetch=globalThis.fetch;
  const fakeCache=new Map();globalThis.caches={open:async()=>({put:async(k,v)=>fakeCache.set(k,v.clone()),match:async k=>fakeCache.get(k)?.clone()})};

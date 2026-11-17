@@ -668,13 +668,13 @@ document.addEventListener('click', async (e) => {
     const host=el.closest('[data-options-id]'),current=host&&optionPanels.get(host);
     if(!current?.details||!reviewedAnswer(host.dataset.optionsId,()=>true))return;
     const index=Number(el.dataset.optionIndex),option=current.details.options[index];if(!option||option.kind==='position')return;
-    const ref=current.details.ref,canonical=option.lexemes.find(l=>l.wordId&&l.word.toLowerCase()===option.text.toLowerCase());
-    const bankName=canonical?'vocab':({dialogue:'listening'})[ref.mode]||ref.mode;
-    const key=canonical?canonical.wordId+'/meaning':ref.mode==='vocab'?undefined:ref.id+'/options/'+index+'/0';
+    const ref=current.details.ref,head=option.lexemes.find(l=>l.word.toLowerCase()===option.text.toLowerCase());
+    const bankName=head?'vocab':({dialogue:'listening'})[ref.mode]||ref.mode;
+    const key=head?(head.wordId||head.id)+'/meaning':ref.mode==='vocab'?undefined:ref.id+'/options/'+index+'/0';
     if(a==='option-en'){
-      const turns=['meaning','meaning-ja'].includes(ref.format)?[...new Map(option.lexemes.map(l=>[l.word,{speaker:'A',text:l.word,bank:'vocab',key:l.wordId?l.wordId+'/meaning':undefined}])).values()]:[{speaker:'A',text:option.spokenEnglish||option.text,bank:bankName,key}];
-      speak(turns,s.settings,toast,{seed:canonical?.wordId||ref.id});
-    }else speakJapanese(option.ja,s.settings,toast,{bank:bankName,key,seed:canonical?.wordId||ref.id});
+      const turns=['meaning','meaning-ja'].includes(ref.format)?[...new Map(option.lexemes.map(l=>[l.word,{speaker:'A',text:l.word,bank:'vocab',key:(l.wordId||l.id)+'/meaning'}])).values()]:[{speaker:'A',text:option.spokenEnglish||option.text,bank:bankName,key}];
+      speak(turns,s.settings,toast,{seed:head?.wordId||ref.id});
+    }else speakJapanese(option.ja,s.settings,toast,{bank:bankName,key,seed:head?.wordId||ref.id});
     return;
   }
   if(['option-collect','option-word'].includes(a)){
@@ -708,7 +708,7 @@ document.addEventListener('click', async (e) => {
       if(text)speak([{speaker:'A',text,bank:item.wordId&&field==='example'?'vocab':undefined,key:item.wordId&&field==='example'?item.wordId+'/example/0':undefined}],s.settings,toast);
       return;
     }
-    const key=item.wordId?item.wordId+'/meaning':undefined;
+    const key=(item.wordId||item.key.replace(/^personal-/,''))+'/meaning';
     if(language==='ja')speakJapanese(item.ja,s.settings,toast,{key,bank:'vocab'});
     else if(language==='en')speak([{speaker:'A',text:item.word,key,bank:'vocab'}],s.settings,toast);
     return;

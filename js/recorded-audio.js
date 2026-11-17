@@ -127,12 +127,12 @@ export function resolveAudioPieces(turns,{language='en',bank,seed=''}={}) {
   return turns.flatMap((turn,turnIndex)=>{
     const lang=turn.language||language,context={language:lang,bank:turn.bank||bank,seed:turn.seed||seed,speaker:turn.speaker};
     const keys=turn.keys||((turn.key||turn.audioKey)?[turn.key||turn.audioKey]:null);
-    const exactHead=keys?.length===1&&/^v-[^/]+\/meaning$/.test(keys[0]);
+    const exactHead=keys?.length===1&&/^(?:v-|lex-)[^/]+\/meaning$/.test(keys[0]);
     let clips=keys?.map(key=>getAudioClip(key,context));
     if(clips?.some(clip=>!clip)||clips&&normalized(clips.map(clip=>clip.text).join(' '))!==normalized(turn.text))clips=null;
     if(!clips&&!exactHead)clips=exactClips(turn.text,context);
-    // Generated vocabulary choices have no stable option key. A known word head is safe
-    // to reuse across exercises, while dialogue turns remain scoped to their scene.
+    // Only untyped choices may reuse a word head. Explicit vocabulary or external
+    // lexeme senses must keep their own pronunciation; missing clips use speech.
     if(!clips&&!exactHead&&lang==='en'&&/^[\p{L}][\p{L}'’ -]*$/u.test(turn.text.trim())){
       const heads=packs.get('en/vocab')?.byText.get(normalized(turn.text))||[];
       const head=heads.find(clip=>clip.key.endsWith('/meaning'));if(head)clips=[head];

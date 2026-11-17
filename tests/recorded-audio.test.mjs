@@ -8,7 +8,7 @@ const make=(text,voiceId='af_heart')=>({text,voiceId,src:'./audio/generated/en/'
 const pack={version:1,sourceSha256:'1'.repeat(64),bank:'part2',language:'en',complete:true,clips:{'p2-test/audio/0':make('When is lunch?'),'p2-test/options/0/0':make('At noon.'),'p2-test/options/1/0':make('After the meeting.'),'p2-test/options/2/0':make('Tomorrow.') }};
 const labels={version:1,sourceSha256:'1'.repeat(64),bank:'labels',language:'en',complete:true,clips:Object.fromEntries(['A','B','C'].map(letter=>['labels/af_heart/'+letter,make(letter+'.')]))};
 const listening={version:1,sourceSha256:'1'.repeat(64),bank:'listening',language:'en',complete:true,clips:{'p3-demo/turns/0/0':{...make('Good morning.'),speaker:'A'},'p3-demo/turns/1/0':{...make('Good morning.','am_puck'),speaker:'B'},'p3-demo/turns/2/0':{...make('Please sit down.'),speaker:'A'},'p3-demo/turns/2/1':{...make('We will begin.'),speaker:'A'}}};
-const vocab={version:1,sourceSha256:'1'.repeat(64),bank:'vocab',language:'en',complete:false,requiredComplete:true,clips:{'v-available/meaning':make('available'),'v-record/meaning':make('record','am_puck'),'v-record-document/meaning':make('record')}};
+const vocab={version:1,sourceSha256:'1'.repeat(64),bank:'vocab',language:'en',complete:false,requiredComplete:true,clips:{'v-available/meaning':make('available'),'v-record/meaning':make('record','am_puck'),'v-record-document/meaning':make('record'),'v-transfer/meaning':make('transfer'),'v-survey/meaning':make('survey'),'lex-record-verb/meaning':make('record','am_puck')}};
 const index={version:1,complete:true,sourceSha256:'1'.repeat(64),packs:[pack,labels,listening,vocab].map(p=>({bank:p.bank,language:'en',complete:true,count:Object.keys(p.clips).length,src:'./data/audio/en/'+p.bank+'.json',bytes:Buffer.byteLength(JSON.stringify(p)),sha256:createHash('sha256').update(JSON.stringify(p)).digest('hex')}))};
 const storage=new Map();let quota=false,requests=[],pendingFetch;
 const cache={async match(key){return storage.get(String(key))?.clone();},async put(key,response){if(quota)throw new DOMException('full','QuotaExceededError');storage.set(String(key),response.clone());},async delete(key){return storage.delete(String(key));},async keys(){return [...storage.keys()].filter(url=>url.includes('/audio/generated/')).map(url=>({url,toString(){return url;}}));}};
@@ -88,4 +88,12 @@ test('vocabulary audio keeps the selected sense instead of a hyphen-prefixed sib
   assert.equal(resolveAudioPieces([{text:'record',key:id+'/meaning',bank:'vocab'}],{seed:id})[0].key,id+'/meaning');
  }
  assert.equal(resolveAudioPieces([{text:'record',key:'v-record-missing/meaning',bank:'vocab'}],{seed:'v-record-missing'})[0].src,undefined,'a missing sense must not borrow a different pronunciation');
+});
+test('external option senses never borrow a canonical noun recording',async()=>{
+ await loadAudioPack('vocab');
+ for(const [text,id] of [['transfer','lex-86b30500'],['survey','lex-9db35cc7']]){
+  assert.equal(resolveAudioPieces([{text,key:id+'/meaning',bank:'vocab'}])[0].src,undefined);
+ }
+ const recorded=resolveAudioPieces([{text:'record',key:'lex-record-verb/meaning',bank:'vocab'}])[0];
+ assert.equal(recorded.key,'lex-record-verb/meaning');assert.equal(recorded.voiceId,'am_puck');
 });

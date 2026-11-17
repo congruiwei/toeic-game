@@ -1,0 +1,419 @@
+{
+  "date": "2026-11-18",
+  "shellCache": 43,
+  "commandsPassed": 33,
+  "node": {
+    "passed": 173,
+    "failed": 0,
+    "skipped": 0
+  },
+  "python": {
+    "passed": 82,
+    "failed": 0
+  },
+  "browserLearningScenarios": {
+    "chromium": 63,
+    "webkit": 63
+  },
+  "widths": [
+    375,
+    390,
+    430
+  ],
+  "darkModeWidth": 390,
+  "bankValidatorOutput": [
+    "Part 2 原词重复：干扰项 150/378 (39.7%)，正确回应 52/189 (27.5%)，仅靠排除即可作对 8/189 (4.2%)。",
+    "Part 6 插句位置 [1]/[2]/[3]/[4]：4/4/4/4",
+    "Part 7 插句位置 [1]/[2]/[3]/[4]：3/3/4/3",
+    "Part 7 专项：词义 25，NOT 16，插句 13；3–4 题单篇 30/40。插句排除于位置统计。",
+    "题型 | 最长（含并列） | 唯一最短¹ | 唯一最长¹ | 正确位置 A/B/C/D",
+    "Vocab meaning | 354/1087 (32.6%) | 178/1079 (16.5%) | 237/1079 (22.0%) | 260/273/275/279",
+    "Vocab english | 341/1087 (31.4%) | 177/1079 (16.4%) | 193/1079 (17.9%) | 281/253/269/284",
+    "Vocab sound | 330/1087 (30.4%) | 176/1082 (16.3%) | 183/1082 (16.9%) | 254/275/265/293",
+    "Vocab cloze | 306/1087 (28.2%) | 239/1078 (22.2%) | 163/1078 (15.1%) | 278/288/236/285",
+    "Vocab match | 305/1087 (28.1%) | 229/1087 (21.1%) | 259/1087 (23.8%) | 302/246/286/253",
+    "Part 1 | 15/60 (25.0%) | 15/60 (25.0%) | 15/60 (25.0%) | 15/15/15/15",
+    "Part 2 first | 4/11 (36.4%) | 3/10 (30.0%) | 3/10 (30.0%) | 4/4/3",
+    "Part 2 response | 70/189 (37.0%) | 52/188 (27.7%) | 60/188 (31.9%) | 63/63/63",
+    "Part 5 语法 | 78/240 (32.5%) | 34/238 (14.3%) | 36/238 (15.1%) | 60/60/60/60",
+    "Part 5 词汇 | 27/100 (27.0%) | 12/96 (12.5%) | 13/96 (13.5%) | 25/25/25/25",
+    "Part 3 | 53/156 (34.0%) | 44/147 (29.9%) | 35/147 (23.8%) | 39/39/39/39",
+    "Part 4 | 35/120 (29.2%) | 35/115 (30.4%) | 24/115 (20.9%) | 30/30/30/30",
+    "Part 6 | 21/64 (32.8%) | 16/62 (25.8%) | 14/62 (22.6%) | 16/16/15/17",
+    "Part 7 | 82/222 (36.9%) | 54/189 (28.6%) | 40/189 (21.2%) | 52/52/53/52",
+    "¹ 唯一最短、唯一最长的分母均排除所有选项等长的题。",
+    "i18n zh/vocab: 2181/2181 units",
+    "i18n ja/vocab: 2181/2181 units",
+    "i18n zh/part1: 240/240 units",
+    "i18n ja/part1: 240/240 units",
+    "i18n zh/part2: 803/803 units",
+    "i18n ja/part2: 803/803 units",
+    "i18n zh/listening: 2166/2166 units",
+    "i18n ja/listening: 2166/2166 units",
+    "i18n zh/grammar: 360/360 units",
+    "i18n ja/grammar: 360/360 units",
+    "i18n zh/reading: 1905/1905 units",
+    "i18n ja/reading: 1905/1905 units",
+    "i18n zh/methods: 44/44 units",
+    "i18n ja/methods: 44/44 units",
+    "Glossary: 50 rules; 7699 Chinese + 7699 Japanese units; term/cell hits 743 + 743; exact exceptions 2; quoted references 0.",
+    "Translation validation passed: 7699 Chinese + 7699 Japanese units; aligned keys and table columns.",
+    "Japanese derived meanings: 1087 exact entries; Japanese titles: 17 grammar + 22 methods.",
+    "options/part1: 60 questions, 240 choices",
+    "options/part2: 200 questions, 600 choices",
+    "options/grammar: 340 questions, 1360 choices",
+    "options/listening: 276 questions, 1104 choices",
+    "options/reading: 286 questions, 1144 choices",
+    "options/vocab: 1087 cloze cards; all canonical senses and external confusables covered",
+    "词卡 1087 · 多义词头 44 · Part 1 60 · Part 2 200 · Part 5 340 · Part 3/4 组 92 · Part 6/7 组 76 · 解题方法卡 22",
+    "题库与方法卡通过校验，含 2548 个唯一 ID。"
+  ],
+  "audioValidator": {
+    "ok": true,
+    "required": 13917,
+    "generated": 13917,
+    "audited": 13917,
+    "unresolved": 2505,
+    "uniqueFiles": 13549,
+    "audioBytes": 274968880,
+    "orphanFiles": [],
+    "unexpectedMetadataFiles": [],
+    "pendingInputCorrections": [],
+    "errorCount": 0,
+    "strictQuality": false
+  },
+  "strictQuality": {
+    "passed": false,
+    "remainingReview": 2505,
+    "english": 403,
+    "japanese": 2102,
+    "evidence": "../data/audio/validation.json"
+  },
+  "commands": [
+    {
+      "name": "validate",
+      "command": [
+        "node",
+        "scripts/validate.mjs"
+      ],
+      "exit": 0,
+      "seconds": 7.217
+    },
+    {
+      "name": "audio-validate",
+      "command": [
+        "node",
+        "scripts/validate-bank-audio.mjs"
+      ],
+      "exit": 0,
+      "seconds": 5.503
+    },
+    {
+      "name": "node-all",
+      "command": [
+        "node",
+        "--test",
+        "tests/answer-corrections.test.mjs",
+        "tests/audio-cache-usage.test.mjs",
+        "tests/audio-save.test.mjs",
+        "tests/audio-sw.test.mjs",
+        "tests/bank-audio-archive.test.mjs",
+        "tests/bank-audio-known-corrections.test.mjs",
+        "tests/bank-audio.test.mjs",
+        "tests/dictation-audio.test.mjs",
+        "tests/exam-edge.test.mjs",
+        "tests/exam-sentence-resume.test.mjs",
+        "tests/expressions.test.mjs",
+        "tests/fsrs.test.mjs",
+        "tests/glossary.test.mjs",
+        "tests/japanese-terms.test.mjs",
+        "tests/japanese-vocab.test.mjs",
+        "tests/japanese-voices.test.mjs",
+        "tests/option-details.test.mjs",
+        "tests/option-personal.test.mjs",
+        "tests/part6-distractors.test.mjs",
+        "tests/personal-save.test.mjs",
+        "tests/prediction-migration.test.mjs",
+        "tests/recorded-audio.test.mjs",
+        "tests/report.test.mjs",
+        "tests/screen.test.mjs",
+        "tests/speech-markers.test.mjs",
+        "tests/translation-source.test.mjs",
+        "tests/translations.test.mjs",
+        "tests/validate-i18n.test.mjs"
+      ],
+      "exit": 0,
+      "seconds": 26.37
+    },
+    {
+      "name": "bank-audio-completion.test",
+      "command": [
+        "python3",
+        "tests/bank-audio-completion.test.py"
+      ],
+      "exit": 0,
+      "seconds": 0.576
+    },
+    {
+      "name": "bank-audio-correction.test",
+      "command": [
+        "python3",
+        "tests/bank-audio-correction.test.py"
+      ],
+      "exit": 0,
+      "seconds": 2.725
+    },
+    {
+      "name": "bank-audio-io.test",
+      "command": [
+        "python3",
+        "tests/bank-audio-io.test.py"
+      ],
+      "exit": 0,
+      "seconds": 0.938
+    },
+    {
+      "name": "bank-audio-normalization.test",
+      "command": [
+        "python3",
+        "tests/bank-audio-normalization.test.py"
+      ],
+      "exit": 0,
+      "seconds": 8.637
+    },
+    {
+      "name": "bank-audio-retry-flow.test",
+      "command": [
+        "python3",
+        "tests/bank-audio-retry-flow.test.py"
+      ],
+      "exit": 0,
+      "seconds": 0.637
+    },
+    {
+      "name": "bank-audio-retry.test",
+      "command": [
+        "python3",
+        "tests/bank-audio-retry.test.py"
+      ],
+      "exit": 0,
+      "seconds": 0.483
+    },
+    {
+      "name": "bank-audio-stream.test",
+      "command": [
+        "python3",
+        "tests/bank-audio-stream.test.py"
+      ],
+      "exit": 0,
+      "seconds": 4.27
+    },
+    {
+      "name": "voices",
+      "command": [
+        "node",
+        "tests/voices.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.181
+    },
+    {
+      "name": "saves",
+      "command": [
+        "node",
+        "tests/saves.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.189
+    },
+    {
+      "name": "forms",
+      "command": [
+        "node",
+        "tests/forms.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.388
+    },
+    {
+      "name": "diagnosis-logic",
+      "command": [
+        "node",
+        "tests/diagnosis-logic.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.292
+    },
+    {
+      "name": "prediction-logic",
+      "command": [
+        "node",
+        "tests/prediction-logic.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.243
+    },
+    {
+      "name": "v6-replay-logic",
+      "command": [
+        "node",
+        "tests/v6/replay-logic.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.164
+    },
+    {
+      "name": "v6-methods-logic",
+      "command": [
+        "node",
+        "tests/v6/methods-logic.mjs"
+      ],
+      "exit": 0,
+      "seconds": 0.241
+    },
+    {
+      "name": "chromium-audio",
+      "command": [
+        "node",
+        "tests/audio.cjs"
+      ],
+      "exit": 0,
+      "seconds": 14.44
+    },
+    {
+      "name": "chromium-audio-app",
+      "command": [
+        "node",
+        "tests/audio-app.cjs"
+      ],
+      "exit": 0,
+      "seconds": 25.572
+    },
+    {
+      "name": "chromium-audio-metadata",
+      "command": [
+        "node",
+        "tests/audio-metadata.cjs"
+      ],
+      "exit": 0,
+      "seconds": 4.632
+    },
+    {
+      "name": "chromium-audio-cache-usage",
+      "command": [
+        "node",
+        "tests/audio-cache-usage.cjs"
+      ],
+      "exit": 0,
+      "seconds": 6.316
+    },
+    {
+      "name": "chromium-v6",
+      "command": [
+        "node",
+        "tests/v6.cjs"
+      ],
+      "exit": 0,
+      "seconds": 370.381
+    },
+    {
+      "name": "chromium-options-offline",
+      "command": [
+        "node",
+        "tests/options-offline.cjs"
+      ],
+      "exit": 0,
+      "seconds": 9.462
+    },
+    {
+      "name": "webkit-audio",
+      "command": [
+        "node",
+        "tests/audio.cjs"
+      ],
+      "exit": 0,
+      "seconds": 14.017
+    },
+    {
+      "name": "webkit-audio-app",
+      "command": [
+        "node",
+        "tests/audio-app.cjs"
+      ],
+      "exit": 0,
+      "seconds": 34.818
+    },
+    {
+      "name": "webkit-audio-metadata",
+      "command": [
+        "node",
+        "tests/audio-metadata.cjs"
+      ],
+      "exit": 0,
+      "seconds": 5.174
+    },
+    {
+      "name": "webkit-audio-cache-usage",
+      "command": [
+        "node",
+        "tests/audio-cache-usage.cjs"
+      ],
+      "exit": 0,
+      "seconds": 5.816
+    },
+    {
+      "name": "webkit-v6",
+      "command": [
+        "node",
+        "tests/v6.cjs"
+      ],
+      "exit": 0,
+      "seconds": 426.633
+    },
+    {
+      "name": "webkit-options-offline",
+      "command": [
+        "node",
+        "tests/options-offline.cjs"
+      ],
+      "exit": 0,
+      "seconds": 8.734
+    },
+    {
+      "name": "e2e",
+      "command": [
+        "node",
+        "tests/e2e.cjs"
+      ],
+      "exit": 0,
+      "seconds": 16.188
+    },
+    {
+      "name": "i18n-offline",
+      "command": [
+        "node",
+        "tests/i18n-offline.cjs"
+      ],
+      "exit": 0,
+      "seconds": 21.108
+    },
+    {
+      "name": "shell-update",
+      "command": [
+        "node",
+        "tests/shell-update.cjs"
+      ],
+      "exit": 0,
+      "seconds": 12.225
+    },
+    {
+      "name": "audition",
+      "command": [
+        "node",
+        "tests/audition.cjs"
+      ],
+      "exit": 0,
+      "seconds": 13.784
+    }
+  ]
+}

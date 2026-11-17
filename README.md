@@ -4,6 +4,8 @@
 
 英语预生成音频使用 Kokoro Heart、Puck、Bella，日语使用 Alpha，均由本地开源模型合成。保留[声音试听](https://congruiwei.github.io/toeic-game/audition.html)和[本地生成说明](docs/AUDIO-GENERATION.md)。
 
+音频覆盖范围、识别待核对清单、加载性能和浏览器测试结果见[音频与选项释义验收](docs/AUDIO-RELEASE-CHECKS.md)。
+
 用几道商务英语练习培育一只住在浮岛上的芽团。单词、语法、听力和阅读分别积累经验，共同解锁六个形态。练习可以随时离开，回到小岛后点「继续学习」即可从上次的位置继续。
 
 ## 在 iPhone 上安装

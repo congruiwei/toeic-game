@@ -39,7 +39,7 @@
 
 词典中的每项有 `pos/zh/ja/lexemes`。`lexemes` 的每个义项包含 `id/word/pos/zh/ja`，已有词卡还带精确的 `wordId`、音标、原例句和可选的 `sense`。同词不同义项分别保留原词卡 ID；词性不同而释义也不同的库外词可以分别成条。屈折形式在显示时解释当前形式，收藏时可指向相应原形。`to applying / to enrolling / to trying` 的选项保留介词与不定式的区别说明，收藏目标则为 `apply / enroll / try`，避免把语法说明当作词义来背。非规范语法干扰项说明其问题并设置空 `lexemes`，不会收藏成错误词汇。
 
-词汇填空包的每项为 `{signature,reasons:{exactOption:reasonZh}}`。其余六种词汇题型根据实际选项反查中文、日文、英文词头或 paraphrase，以精确词义作对照。日语词汇题只加载 `ja/vocab-meanings.json` 小包，不为选项释义下载完整词汇例句译包。
+词汇填空包的每项为 `{signature,reasons:{exactOption:reasonZh}}`。填空干扰项优先显示与本句目标词性兼容的已有义项；同拼写的原词卡只有其他词性时，改用词典中明确兼容的义项，收藏也保留该义项，不能链接到无关的原词卡。没有明确兼容义项的分词、动名词等，仍保留既有表面形式说明与原形收藏，不凭词性标签杜撰新释义。其余六种词汇题型根据实际选项反查中文、日文、英文词头或 paraphrase，以精确词义作对照。日语词汇题只加载 `ja/vocab-meanings.json` 小包，不为选项释义下载完整词汇例句译包。
 
 ## 加载、版本与重试
 
@@ -65,7 +65,7 @@ node --test tests/option-details.test.mjs tests/option-personal.test.mjs
 
 `--inspect` 只将缺词和词典预览写到临时目录，方便排查，不输出有缺项的运行时包。校验器导出 `validateOptionsFiles(root)`，供主校验调用，返回 `{errors,summaries,questionCount,optionCount,lexicalCount}`。它覆盖全部静态选项、所有词汇填空和易混词、精确义项映射、现有译文键以及源签名。缺整包或缺一项都报错。
 
-覆盖测试实际生成七种词汇题型，并为每题的每个实际选项加载解析；还检查多义词准确映射、离线缓存、过期缓存显式刷新、逆序网络响应、失效时已进行中的持久写入、写入失败后的恢复、初次失败后的重试和 HTML 转义。`tests/options-offline.cjs` 使用真实 Service Worker 与服务器延迟的旧响应，核对刷新后的包不被覆盖、HTML错误页回退及离线冷重开；支持 Chromium 和 `PW_ENGINE=webkit`。个人本测试检查重复收藏、旧档与非法导入、退役 ID、断点、共享 FSRS、客观统计不变和安全删除。
+覆盖测试实际生成七种词汇题型，并为每题的每个实际选项加载解析；还检查填空词性匹配、分词与动名词原形收藏、其余六题型的准确义项、多义词准确映射、离线缓存、过期缓存显式刷新、逆序网络响应、失效时已进行中的持久写入、写入失败后的恢复、初次失败后的重试和 HTML 转义。`tests/options-offline.cjs` 使用真实 Service Worker 与服务器延迟的旧响应，核对刷新后的包不被覆盖、HTML错误页回退及离线冷重开；支持 Chromium 和 `PW_ENGINE=webkit`。个人本测试检查重复收藏、旧档与非法导入、退役 ID、断点、共享 FSRS、客观统计不变和安全删除。
 
 ## 存档与 FSRS
 

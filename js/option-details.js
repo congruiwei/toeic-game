@@ -70,6 +70,22 @@ function wordLexeme(word,meanings){
 const compactMeanings=lexemes=>[...new Set(lexemes.map(item=>item.zh))].join('；');
 const compactJapanese=lexemes=>[...new Set(lexemes.map(item=>item.ja))].join('；');
 const compactPOS=lexemes=>[...new Set(lexemes.map(item=>item.pos))].join(' / ');
+const lexemeDefinition=lexemes=>({pos:compactPOS(lexemes),zh:compactMeanings(lexemes),ja:compactJapanese(lexemes),lexemes});
+const partsOfSpeech=pos=>[...String(pos).matchAll(/(?:^|[^A-Za-z])(adj|adv|prep|n|v)\./g)].map(match=>match[1]);
+async function clozeDefinition(option,target,canonical){
+  const required=partsOfSpeech(target.pos);
+  const compatible=lexeme=>partsOfSpeech(lexeme.pos).some(pos=>required.includes(pos));
+  const matching=canonical.filter(compatible);
+  if(matching.length)return lexemeDefinition(matching);
+  const surface=await lexical(option),dictionary=surface.lexemes.filter(compatible);
+  if(dictionary.length){
+    // Keep derived-form labels when every underlying sense already fits.
+    return dictionary.length===surface.lexemes.length?surface:lexemeDefinition(dictionary);
+  }
+  // A participle can act as an adjective, and a gerund as a noun. Without an
+  // explicit compatible sense, retain the known surface form and base card.
+  return canonical.length?lexemeDefinition(canonical):surface;
+}
 const refCopy=ref=>({id:ref.id,mode:ref.mode,...(ref.format?{format:ref.format}:{})});
 
 async function vocabularyDetails(ref,q,{vocab,jaMeanings}={}){
@@ -93,7 +109,7 @@ async function vocabularyDetails(ref,q,{vocab,jaMeanings}={}){
     else if(format==='match')candidates=vocab.filter(word=>word.paraphrase===option);
     else candidates=vocab.filter(word=>normalize(word.word)===normalize(option));
     const lexemes=candidates.map(word=>wordLexeme(word,meanings));
-    const definition=lexemes.length?{pos:compactPOS(lexemes),zh:compactMeanings(lexemes),ja:compactJapanese(lexemes),lexemes}:await lexical(option);
+    const definition=format==='cloze'&&!correct?await clozeDefinition(option,target,lexemes):lexemes.length?lexemeDefinition(lexemes):await lexical(option);
     let reasonZh;
     if(format==='cloze'){
       reasonZh=cloze.reasons?.[option];
