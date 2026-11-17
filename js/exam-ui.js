@@ -3,6 +3,7 @@ import {reviewTools,reviewAnswer} from './question-tools.js';
 import {question,catalog} from './bank.js';
 import {examIds,readingIds,examScores} from './exam.js';
 import {passages,graphic} from './practice.js';
+import {readable} from './readable.js';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const duration=ms=>{const n=Math.ceil(Math.max(0,ms)/1000);return Math.floor(n/60)+':'+String(n%60).padStart(2,'0');};
 const action=(name,text,extra='')=>`<button class="secondary" data-act="${name}" ${extra}>${text}</button>`;
@@ -46,12 +47,13 @@ function reviewEntry(e,id,i){
  const {ref}=catalog.get(id),q=question(ref),answer=reviewAnswer(q,e.keys[id]);
  const verdict=e.answers[id]===answer?'正确':e.answers[id]?'错误':'未答';
  return `<details class="exam-item-review"><summary>${i+1}. ${esc(id)} · ${duration(e.times[id]||0)} · ${verdict}</summary>
-  <h3>${esc(q.prompt)}</h3>${ref.mode==='reading'?passages(q,true):''}
-  ${q.set?.graphic?graphic(q.set.graphic):''}${q.description?'<p>'+esc(q.description)+'</p>':''}
-  <ol type="A">${q.options.map(o=>'<li>'+esc(o)+'</li>').join('')}</ol>
+  <h3>${['reading','dialogue'].includes(ref.mode)?readable(q.prompt,{id,seed:id}):esc(q.prompt)}</h3>${ref.mode==='reading'?passages(q,true):''}
+  ${q.set?.graphic?graphic(q.set.graphic,'',{id,bank:'listening',seed:q.set.id}):''}${q.description?'<p>'+esc(q.description)+'</p>':''}
+  <ol type="A">${q.options.map((o,index)=>'<li>'+readable(o,{id,seed:q.set?.id||id,bank:({dialogue:'listening'})[ref.mode]||ref.mode,key:id+'/options/'+index+'/0'})+'</li>').join('')}</ol>
+  ${ref.mode==='grammar'?readable(q.prompt.replace(/_{3,}/g,q.answer),{id,bank:'grammar',key:id+'/sentence/0'}):''}
   <p>我的答案　${esc(e.answers[id]||'未作答')}</p><p>正确答案　${esc(answer)}</p>
   ${e.keys[id]!==answer?'<p class="fine muted">此题答案已更正；本次模考原成绩保留。</p>':''}
-  <p lang="en">${esc(q.en)}</p><p>${esc(q.zh)}</p>${replayView(q,ref)}${reviewTools(id)}</details>`;
+  <p lang="en">${readable(q.en,{id,seed:id})}</p><p>${esc(q.zh)}</p>${replayView(q,ref)}${reviewTools(id)}</details>`;
 }
 function resultView(e){
  const scores=examScores(e,catalog);

@@ -1,4 +1,5 @@
 import {collectExpression,beginExpressions,rateExpression} from './expressions.js';
+import {playReadAloud,stopReadAloud} from './read-aloud.js';
 import {speakJapanese,japaneseVoices} from './japanese-audio.js';
 import {watchShellUpdates} from './shell-update.js';
 import {loadMethods,newMethod,methodIndex,methodById,methodCard,methodExample,methodBank} from './methods.js';
@@ -272,6 +273,7 @@ function translationAllowed(panel) {
   return Boolean(study||diagnosed||reviewedAnswer(id));
 }
 function render() {
+  stopReadAloud();
   stopReplay();
   applyPrefs();
   frame();
@@ -346,6 +348,7 @@ function startClock() {
   tick = setInterval(update, 500);
 }
 function modal(content, cls = '') {
+  stopReadAloud();
   stopReplay();
   pauseClock();
   dialog.className = cls;
@@ -609,6 +612,13 @@ document.addEventListener('click', async (e) => {
     if(a==='audio-delete')hush();
     try{await (await (audioSettingsModule??=import('./audio-settings.js'))).audioSettingsAction(a,el,toast);}catch{toast('音频操作暂时无法完成，请重试。');}
     return;
+  }
+  if(a==='read-aloud'){
+    if(page==='exam'&&s.exam?.phase!=='done')return;
+    const panel=el.closest('.translations'),method=el.closest('[data-method-card]');
+    const allowed=panel?translationAllowed(panel):method?Boolean(methodById(method.dataset.methodCard)):
+      (el.hasAttribute('data-read-study')&&((page==='library'&&el.closest('.lib-card'))||(page==='expressions'&&el.closest('.expression-entry'))))||reviewedAnswer(el.dataset.readId,()=>true);
+    if(allowed&&!el.closest('details:not([open]),[hidden]')){stopReplay();playReadAloud(el,s.settings,toast);}return;
   }
   const needed=requiredBanks(a,el).filter(k=>!bank[k]);
   // Vocab may still be loading on a fresh island; unlock the first automatic word before awaiting it.

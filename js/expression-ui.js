@@ -1,14 +1,15 @@
 import {expressionStats} from './expressions.js';
+import {readable,readButton} from './readable.js';
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 function say(item,lang){return `<button type="button" class="secondary" data-act="expression-speak" data-key="${esc(item.key)}" data-language="${lang}">朗读${lang==='en'?'英文':'日语'}</button>`;}
-function card(item){return `<article class="panel expression-entry"><div class="translation-line"><p lang="en">${esc(item.en)}</p><p lang="zh-CN">${esc(item.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="expression-speak" data-key="${esc(item.key)}" data-language="ja">${esc(item.ja)}</p></div><div class="expression-actions">${say(item,'en')}${say(item,'ja')}</div><small class="muted">${esc(item.sourceId)}${item.fsrs?' · 下次 '+new Date(item.fsrs.due).toLocaleDateString('zh-CN'):''}</small></article>`;}
+function card(item){return `<article class="panel expression-entry"><div class="translation-line"><div>${readable(item.en,{study:true,id:item.sourceId,key:item.key,bank:item.bank,seed:item.sourceId})}</div><p lang="zh-CN">${esc(item.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="expression-speak" data-key="${esc(item.key)}" data-language="ja">${esc(item.ja)}</p></div><div class="expression-actions">${say(item,'en')}${say(item,'ja')}</div><small class="muted">${esc(item.sourceId)}${item.fsrs?' · 下次 '+new Date(item.fsrs.due).toLocaleDateString('zh-CN'):''}</small></article>`;}
 export function expressionView(s,practice=false){
   const items=s.expressions?.items||[],r=s.expressions?.run,stats=expressionStats(s);
   if(practice&&r){
     const item=items.find(i=>i.key===r.keys[r.index]);
     if(!item)return `<section class="lesson-shell"><h1>本轮表达复习完成</h1><p>复习时间已安排好，想继续时再来。</p><button class="primary" data-act="expression-open">回到表达本</button></section>`;
     const source=r.direction==='ja-en'?'ja':'en';
-    return `<section class="lesson-shell"><header class="lesson-header"><h1>${source==='ja'?'看日语 → 说英文':'看英文 → 说日语'}</h1><button class="secondary" data-act="expression-open">保存离开</button></header><p>${r.index+1} / ${r.keys.length}</p>${r.flipped?card(item):`<article class="panel expression-entry"><p class="expression-prompt" lang="${source}">${esc(item[source])}</p>${say(item,source)}</article>`}
+    return `<section class="lesson-shell"><header class="lesson-header"><h1>${source==='ja'?'看日语 → 说英文':'看英文 → 说日语'}</h1><button class="secondary" data-act="expression-open">保存离开</button></header><p>${r.index+1} / ${r.keys.length}</p>${r.flipped?card(item):`<article class="panel expression-entry"><p class="expression-prompt" lang="${source}">${esc(item[source])}</p>${source==='en'?readButton(item.en,{study:true,id:item.sourceId,key:item.key,bank:item.bank,seed:item.sourceId}):''}${say(item,source)}</article>`}
       ${r.flipped?`<div class="expression-ratings">${['不会','模糊','会了','很熟'].map((label,i)=>`<button type="button" class="secondary" data-act="expression-rate" data-grade="${i+1}">${label}</button>`).join('')}</div>`:'<button class="lesson-primary" data-act="expression-flip">翻开对照</button>'}</section>`;
   }
   return `<section class="lesson-shell"><h1>职场三语表达本</h1><p>收藏 ${stats.total} · 已掌握 ${stats.mastered} · 到期 ${stats.due}</p><p class="muted">答题后展开翻译，点句子旁的「收藏」即可收进这里。表达与复习记录随进度备份保存。</p>

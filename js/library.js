@@ -1,6 +1,7 @@
 import {errorDue} from './review-scheduler.js';
 import { bank, catalog, question } from './bank.js';
 import { icon } from './icons.js';
+import {readable,readButton} from './readable.js';
 
 const escape = value => String(value ?? '').replace(/[&<>"']/g, char => ({
   '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -23,9 +24,10 @@ function cardBody(word) {
   return `<div class="lib-card-body">
     <p class="lib-phonetic" lang="en">${escape(word.ipa)} · ${escape(word.pos)}</p>
     <p lang="zh-CN">${escape(word.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${escape(word.id)}">正在载入日语释义…</p>
-    <blockquote lang="en">${escape(word.example)}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
-    <dl><dt>常见搭配</dt><dd lang="en">${escape(word.collocation)}</dd>
-      <dt>同义替换</dt><dd lang="en">${escape(word.paraphrase)}</dd></dl>
+    <p>${readButton(word.word,{study:true,id:word.id,bank:'vocab',key:word.id+'/meaning'})}</p>
+    <blockquote lang="en">${readable(word.example,{study:true,id:word.id,bank:'vocab',key:word.id+'/example/0'})}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
+    <dl><dt>常见搭配</dt><dd lang="en">${readable(word.collocation,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd>
+      <dt>同义替换</dt><dd lang="en">${readable(word.paraphrase,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd></dl>
   </div>`;
 }
 

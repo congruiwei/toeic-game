@@ -3,6 +3,8 @@ import {reviewTools} from './question-tools.js';
 import {UNKNOWN} from './answers.js';
 import {question} from './bank.js';
 import {icon} from './icons.js';
+import {readable,readButton} from './readable.js';
+import {splitSentences} from './replay.js';
 
 const entities = {'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'};
 const esc = value => String(value ?? '').replace(/[&<>"']/g, char => entities[char]);
@@ -51,20 +53,24 @@ function player(q, ref, answered) {
     <span class="lesson-wave" aria-hidden="true">${waveform}</span></button>`;
 }
 
-export function graphic(table, evidence = '') {
-  const cells = row => row.map(cell => `<td>${mark(cell,evidence)}</td>`).join('');
+export function graphic(table, evidence = '',readOptions=null) {
+  const cells = row => row.map(cell => `<td>${mark(cell,evidence)}</td>`).join('')+(readOptions?`<td>${readButton(row.join(' | '),readOptions)}</td>`:'');
   return `<div class="lesson-graphic" tabindex="0" role="region" aria-label="题目附表"><table lang="en">
     <caption>${esc(table.title || 'Reference table')}</caption>
-    <thead><tr>${table.headers.map(h => `<th scope="col">${esc(h)}</th>`).join('')}</tr></thead>
+    <thead><tr>${table.headers.map(h => `<th scope="col">${esc(h)}</th>`).join('')}${readOptions?`<th scope="col">${readButton(table.headers.join(' | '),readOptions)}</th>`:''}</tr></thead>
     <tbody>${table.rows.map(row => `<tr>${cells(row)}</tr>`).join('')}</tbody>
   </table></div>`;
 }
 
-export function passages(q, answered) {
-  return `<div class="lesson-sources">${q.set.documents.map(doc => `
+export function passages(q, answered, readablePassage=answered) {
+  return `<div class="lesson-sources">${q.set.documents.map((doc,docIndex) => {
+    let text=doc.text;
+    if(readablePassage && q.set.part===6)for(const item of q.set.questions){const slot=item.prompt.match(/\[\d+\]/)?.[0];if(slot)text=text.replace(slot,item.answer);}
+    const body=readablePassage?splitSentences(text).map((sentence,i)=>`<span class="read-sentence">${readable(sentence,{id:q.id,bank:'reading',seed:q.set.id,key:`${q.set.id}/documents/${docIndex}/text/${i}`,html:mark(sentence,q.evidence)})}</span>`).join(''):mark(text,answered?q.evidence:null);
+    return `
     <article class="lesson-document"><header>${icon('note',17)} ${esc(doc.type)}</header>
-    <h3 lang="en">${esc(doc.title)}</h3>
-    <div lang="en" class="lesson-source-text">${mark(doc.text, answered ? q.evidence : null)}</div>${doc.table ? graphic({...doc.table, title:doc.title},answered ? q.evidence : '') : ''}</article>`).join('')}</div>`;
+    <h3 lang="en">${esc(doc.title)}${readablePassage?readButton(doc.title,{id:q.id,bank:'reading',seed:q.set.id,key:`${q.set.id}/documents/${docIndex}/title`}):''}</h3>
+    <div lang="en" class="lesson-source-text">${body}</div>${doc.table ? graphic({...doc.table, title:doc.title},answered ? q.evidence : '',readablePassage?{id:q.id,bank:'reading',seed:q.set.id}:null) : ''}</article>`;}).join('')}${answered&&!readablePassage?'<p class="fine muted">本篇还有未答空格，答完本篇后可点读填好答案的原文。</p>':''}</div>`;
 }
 
 function choices(q, ref, run) {
@@ -82,7 +88,7 @@ function choices(q, ref, run) {
     const status = correct ? '正确答案' : wrong ? '你的选择' : '';
     return `<button type="button" class="lesson-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}" data-act="answer" data-i="${i}" ${answered ? 'disabled' : ''} aria-label="${esc([letter(i),(!audioOnly ? option : ''),status].filter(Boolean).join(' '))}">
       <span class="lesson-letter">${letter(i)}</span><span lang="${ref.format==='meaning-ja'?'ja':ref.format==='meaning'?'zh-CN':'en'}">${audioOnly ? '选择 ' + letter(i) : esc(option)}</span>
-      ${status ? '<span class="lesson-option-mark">' + icon(correct ? 'check' : 'close',18) + '</span>' : ''}</button>`;
+      ${status ? '<span class="lesson-option-mark">' + icon(correct ? 'check' : 'close',18) + '</span>' : ''}</button>${answered&&!['meaning','meaning-ja'].includes(ref.format)?`<div class="option-read">${readButton(option,{id:q.id,bank:({dialogue:'listening',dictation:'listening'})[ref.mode]||ref.mode,seed:q.set?.id||q.id,key:ref.mode==='vocab'?'':`${q.id}/options/${i}/0`})}</div>`:''}`;
   }).join('')}</div>${answered ? '' : '<button type="button" class="secondary lesson-unknown" data-act="unknown">不知道</button>'}`;
 }
 
@@ -91,8 +97,8 @@ function vocabNote(q) {
     <div class="lesson-meta"><span>${icon('cards', 16)} 词卡</span><span>${esc(q.theme)}</span></div>
     <div class="lesson-word-line"><h3 lang="en">${esc(q.word)}</h3><button type="button" data-act="play" class="lesson-speaker" aria-label="播放单词发音">${icon('sound',20)}</button></div>
     <p class="lesson-ipa" lang="en">${esc(q.ipa)} · ${esc(q.pos)}</p><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p>
-    <blockquote lang="en">${mark(q.example, q.word)}</blockquote>
-    <dl class="lesson-terms"><dt>常见搭配</dt><dd lang="en">${esc(q.collocation)}</dd><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>
+    <blockquote lang="en">${readable(q.example,{id:q.id,bank:'vocab',key:`${q.id}/example/0`,html:mark(q.example,q.word)})}</blockquote>
+    <dl class="lesson-terms"><dt>常见搭配</dt><dd lang="en">${readable(q.collocation,{id:q.id,bank:'vocab',seed:q.id})}</dd><dt>同义替换</dt><dd lang="en">${readable(q.paraphrase,{id:q.id,bank:'vocab',seed:q.id})}</dd></dl>
   </section>`;
 }
 
@@ -103,9 +109,10 @@ function feedback(q, ref, run) {
   return `<section class="lesson-feedback ${correct ? 'is-right' : 'is-miss'}" aria-label="答题反馈">
     <h2>${icon(correct ? 'check' : 'note',19)} ${correct ? '答对了' : run.selected === UNKNOWN ? '不知道 · 已加入复习' : '再记一次'}</h2>
     <p><b>正确答案</b> <span>${esc(q.answer)}</span></p>
+    ${ref.mode==='grammar'?`<div class="lesson-complete-sentence">${readable(q.prompt.replace(/_{3,}/g,q.answer),{id:q.id,bank:'grammar',seed:q.id,key:`${q.id}/sentence/0`})}</div>`:''}
     ${ref.mode==='part1'?`<p><b>画面说明</b> ${esc(q.description)}</p>`:''}
-    ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${esc(q.en)}</p><p lang="zh-CN">${esc(q.zh)}</p></div>`}
-    ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${esc(q.paraphrase)}</dd></dl>` : ''}
+    ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${readable(q.en,{id:q.id,seed:q.id})}</p><p lang="zh-CN">${esc(q.zh)}</p></div>`}
+    ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${readable(q.paraphrase,{id:q.id,seed:q.id})}</dd></dl>` : ''}
     ${replayView(q,ref)}
     ${reviewTools(ref.id)}
   </section>${ref.mode === 'vocab' ? vocabNote(q) : ''}
@@ -133,15 +140,16 @@ export function practiceView(state) {
     <div class="lesson-meta lesson-section-meta"><span>${icon(({vocab:'cards',grammar:'grammar',reading:'reading'})[ref.mode] || 'headphones',17)} ${esc(q.instruction)}</span>
     <span>${run.timed ? `${icon('clock',15)} <b id="timer">${clock(run.elapsed)}</b> · ` : ''}${q.level} 级</span></div>
     ${ref.mode==='part1'?`<figure class="lesson-photo"><img src="./${esc(q.image)}" alt="本题原创场景插画"><figcaption>原创场景插画</figcaption></figure>`:''}
-    ${ref.mode === 'reading' ? passages(q, answered) : ''}
-    ${ref.mode === 'dialogue' && q.set.graphic ? graphic(q.set.graphic) : ''}
+    ${ref.mode === 'reading' ? passages(q, answered,answered && !(q.set.part===6 && run.items.slice(run.index+1).some(item=>question(item)?.set?.id===q.set.id))) : ''}
+    ${ref.mode === 'dialogue' && q.set.graphic ? graphic(q.set.graphic,'',answered?{id:q.id,bank:'listening',seed:q.set.id}:null) : ''}
     <div class="lesson-panel lesson-question">
       ${q.set && ref.mode !== 'reading' ? `<p class="lesson-source-title">${esc(q.set.title)}</p>` : ''}
       <h2 class="${ref.mode === 'vocab' && !['cloze','sound'].includes(ref.format) ? 'lesson-word' : ''}" lang="${ref.format==='english-ja'?'ja':ref.format==='english'?'zh-CN':['reading','grammar','dialogue','dictation','vocab'].includes(ref.mode)?'en':'zh-CN'}">${esc(q.prompt)}</h2>
+      ${answered&&['reading','dialogue'].includes(ref.mode)?readButton(q.prompt,{id:q.id,seed:q.id,bank:ref.mode==='dialogue'?'listening':'reading',key:q.id+'/prompt/0'}):''}
       ${ref.mode === 'vocab' && ['meaning','meaning-ja','match'].includes(ref.format) ? `<p class="lesson-ipa">${esc(q.ipa)} · ${esc(q.pos)}</p>` : ''}
       ${q.context ? `<blockquote lang="en">${mark(q.context,q.word)}</blockquote>` : ''}
       ${needPlayer ? player(q, ref, answered) : ''}
-      ${!needPlayer && ref.mode === 'vocab' && ['meaning','meaning-ja','match'].includes(ref.format) ? '<button type="button" class="lesson-listen" data-act="play">'+icon('sound',16)+' 听发音</button>' : ''}
+      ${answered && !needPlayer && ref.mode === 'vocab' && ['meaning','meaning-ja','match'].includes(ref.format) ? '<button type="button" class="lesson-listen" data-act="play">'+icon('sound',16)+' 听发音</button>' : ''}
     </div>
     ${choices(q, ref, run)}
     ${answered ? feedback(q, ref, run) : ''}

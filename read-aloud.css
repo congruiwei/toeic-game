@@ -1,0 +1,10 @@
+.readable-line { line-height: 1.8; border-radius: 8px; }
+.read-aloud { display: inline-flex; align-items: center; justify-content: center; gap: 4px; min-width: 44px; min-height: 44px; padding: 5px 8px; margin: 0 3px; vertical-align: middle; border: 1px solid transparent; border-radius: 10px; background: transparent; color: var(--muted, #736d88); font: inherit; font-size: 12px; cursor: pointer; touch-action: manipulation; }
+.read-aloud:hover, .read-aloud:focus-visible { border-color: currentColor; }
+.read-aloud[aria-pressed=true], .readable-line.is-reading { background: var(--lilac, #e9e1f8); color: var(--ink, #332d43); }
+.readable-line [lang=en] { overflow-wrap: anywhere; }
+.read-sentence { display: block; margin-bottom: 8px; }
+.option-read { display: flex; justify-content: flex-end; margin-top: -8px; margin-bottom: 6px; }
+.lesson-complete-sentence { margin: 14px 0; }
+[data-theme=dark] .read-aloud[aria-pressed=true], [data-theme=dark] .readable-line.is-reading { background: #40334f; color: #f4edf9; }
+@media (prefers-color-scheme: dark) { [data-theme=auto] .read-aloud[aria-pressed=true], [data-theme=auto] .readable-line.is-reading { background: #40334f; color: #f4edf9; } }

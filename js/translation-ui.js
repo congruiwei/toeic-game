@@ -4,6 +4,7 @@ import {catalog,question} from './bank.js';
 import {translated,loadTranslations,questionUnits,bankFor} from './translations.js';
 export {translated};
 import {replayRows} from './replay.js';
+import {readButton} from './readable.js';
 const esc = value => String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'})[c]);
 export const translationPanel = (id, study=false) => `<section class="translations" data-translation-id="${esc(id)}" ${study?'data-study-translation':''}><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>`;
 export function languageButtons(language) {
@@ -13,7 +14,7 @@ export function bilingualLine(unit, {includeEnglish=true}={}) {
   const zh=translated(unit.bank,unit.key,'zh'), ja=translated(unit.bank,unit.key,'ja');
   if(!zh || !ja) return '<p class="muted">本句译文尚未下载。</p>';
   const cells = text => unit.kind==='table' ? `<div class="translation-table-row" style="--columns:${unit.columns}">${text.split(' | ').map(cell=>`<span>${esc(cell)}</span>`).join('')}</div>` : esc(text);
-  return `<div class="translation-line" data-translation-key="${esc(unit.key)}" data-translation-bank="${esc(unit.bank)}">${includeEnglish?`<div lang="en">${cells(unit.text)}</div>`:''}<div lang="zh-CN">${cells(zh)}</div><div lang="ja" role="button" tabindex="0" class="translation-japanese" data-act="translation-ja" data-key="${esc(unit.key)}" data-bank="${esc(unit.bank)}" aria-label="朗读日语：${esc(ja)}">${cells(ja)}</div>${unit.kind==='sentence'?`<button type="button" class="secondary expression-collect" data-act="collect-expression" data-key="${esc(unit.key)}" data-bank="${esc(unit.bank)}">收藏</button>`:''}</div>`;
+  return `<div class="translation-line" data-translation-key="${esc(unit.key)}" data-translation-bank="${esc(unit.bank)}">${includeEnglish?`<div data-read-text="${esc(unit.text)}"><div lang="en">${cells(unit.text)}</div>${readButton(unit.text,{id:unit.id,bank:unit.bank,key:unit.key,seed:unit.id})}</div>`:''}<div lang="zh-CN">${cells(zh)}</div><div lang="ja" ${/^\s*\[\d+\]\s*$/.test(unit.text)?'':`role="button" tabindex="0" class="translation-japanese" data-act="translation-ja" data-key="${esc(unit.key)}" data-bank="${esc(unit.bank)}" aria-label="朗读日语：${esc(ja)}"`}>${cells(ja)}</div>${unit.kind==='sentence'?`<button type="button" class="secondary expression-collect" data-act="collect-expression" data-key="${esc(unit.key)}" data-bank="${esc(unit.bank)}">收藏</button>`:''}</div>`;
 }
 export function unitsForPanel(panel) {
   const id=panel.dataset.translationId;
