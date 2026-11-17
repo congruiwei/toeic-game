@@ -38,6 +38,8 @@
 | 快速找出生词 | 在「练习 → 单词快筛」查看最多 20 个未学词，左滑不认识、右滑认识，也可用按钮。每 3 次自报认识，立即抽查 1 次。结束后点「练习待学词」学习生词和需要确认的词。 |
 | 记录可疑题目 | 答后点「这题有问题」，选原因并可写备注。设置中的问题报告保存在本机，可复制全部记录。 |
 | 请 Claude 解释 | 在答后点复制给 Claude 的按钮，再自行粘贴到对话。复制内容包含题目、材料、选项、你的答案、正确答案和解析。 |
+| 看懂每个选项 | 答后展开的选项释义列出中日意思、词性和具体对错理由；已有词卡可点开详情。释义包按需下载，读过后可离线看。 |
+| 建立自己的词汇复习队列 | 在答后选项旁点「加入我的单词本」，到「练习 → 我的单词本」双向翻卡复习。库外词生成简易卡，按 FSRS 复习；报告显示收藏、掌握及到期数量；词本支持全本搜索和分批显示。 |
 | 点读英文 | 答题后点英文旁的小喇叭；词卡详情、方法卡和表达本可随时点读。Part 6 填好所有答案的全文等本篇完成后开放。 |
 | 精听一句 | 答后展开「听力原文 · 逐句重听」，点某句即可按对应角色和当前语速播放，也可打开单句循环。 |
 | 找到练习起点 | 首页的「水平诊断」含 30 道自适应题，可分次完成。结果提供四项能力起点和本次听读参考区间，可以在报告中查看历次诊断。 |
@@ -89,7 +91,7 @@ python3 -m http.server 8000 --bind 127.0.0.1
 
 浏览器打开 `http://localhost:8000/`。本地文件协议无法正常加载 ES modules。Service Worker 需要 HTTPS 或 localhost；用 iPhone 真机验证离线安装时，可直接访问上方的 Pages 网址。
 
-校验题库（推荐 Node.js 22.7 或更高版本）：
+校验题库、翻译和选项释义（推荐 Node.js 22.7 或更高版本）：
 
 ```sh
 node scripts/validate.mjs
@@ -101,6 +103,7 @@ node scripts/validate.mjs
 
 ~~~sh
 node scripts/validate.mjs
+node scripts/validate-options.mjs
 node scripts/validate-bank-audio.mjs
 node tests/voices.mjs
 node tests/saves.mjs
@@ -121,10 +124,11 @@ NODE_PATH=/tmp/island-browser-test/node_modules node tests/e2e.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/v6.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/shell-update.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/i18n-offline.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/options-offline.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/performance.cjs
 ~~~
 
-也可安装 Playwright WebKit 并选择它运行音频回归；未指定 `PW_ENGINE` 时仍使用 Chromium，`PW_CHANNEL` 仅对 Chromium 生效：
+也可安装 Playwright WebKit，并用下面的命令显式选择它运行音频及离线回归；`PW_CHANNEL` 仅对 Chromium 生效：
 
 ~~~sh
 /tmp/island-browser-test/node_modules/.bin/playwright install webkit
@@ -133,6 +137,7 @@ NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audi
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-metadata.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-cache-usage.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/v6.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/options-offline.cjs
 ~~~
 
 `v6.cjs` 的 WebKit 场景使用各自独立的临时持久 profile，并在测试结束后删除。当前 WebKit 的非持久上下文会在最后一个 CacheStorage 连接随页面重载关闭时清空缓存；独立持久 profile 保留了普通 Safari 的跨导航存储行为，不需要修改生产缓存代码或放宽断言。
@@ -141,7 +146,7 @@ WebKit 的离线回归通过关闭本地 HTTP 服务器模拟网络中断，保�
 
 已有 Chrome 可给浏览器测试命令加 `PW_CHANNEL=chrome`。运行 `node tests/v6.cjs screen fsrs` 可单独检查快筛和复习；统一入口会在每个功能的 375、390、430px 三档各建独立上下文。脚本启动临时本地 HTTP 服务，模拟 iPhone 并使用可控语音事件。模考测试实际开始、回答、退出、恢复和交卷，并用测试存档推进到听力末段及阅读到期点。音频专门回归还测试真实 M4A 播放、速度、系统后备、按需下载、取消与删除、离线分段播放，以及模考下载后开始／中断／恢复／交卷。真实 iPhone 的首次点击和音响效果需另行试听。[播放、缓存与点读说明](docs/AUDIO-PLAYBACK.md)
 
-中日功能回归包含答前隐藏、答后显示、三语言切换、模考隔离、日语题型、收藏及备份、FSRS、日语点击朗读、术语标签和翻译问题报告。`tests/i18n-offline.cjs` 另启真实 Service Worker，检查离线冷启动与升级保留翻译缓存。`tests/performance.cjs` 用 2 Mbps / 80 ms 网络、5 次冷启动记录首页及首题中位数。最新答案与日语修订见 [修正记录](docs/ANSWER-JA-CORRECTIONS.md)。详细结果见 [双语测试与性能](docs/BILINGUAL-CHECKS.md)，翻译修订与后续复核项见 [双语自查](docs/BILINGUAL_QA.md)。
+中日功能回归包含答前隐藏、答后显示、三语言切换、模考隔离、日语题型、收藏及备份、FSRS、日语点击朗读、术语标签和翻译问题报告。`tests/i18n-offline.cjs` 另启真实 Service Worker，检查离线冷启动与升级保留翻译缓存。`tests/performance.cjs` 用 2 Mbps / 80 ms 网络、5 次冷启动记录首页及首题中位数。最新答案与日语修订见 [修正记录](docs/ANSWER-JA-CORRECTIONS.md)。选项释义结构及个人词卡备份契约见 [选项释义维护说明](docs/OPTION-DETAILS.md)。详细结果见 [双语测试与性能](docs/BILINGUAL-CHECKS.md)，翻译修订与后续复核项见 [双语自查](docs/BILINGUAL_QA.md)。
 
 估分模拟与测试输出见 [估分修正验收](docs/PREDICTION-CHECKS.md)。
 

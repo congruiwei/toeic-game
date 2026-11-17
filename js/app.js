@@ -1,5 +1,6 @@
 import {collectExpression,beginExpressions,rateExpression} from './expressions.js';
 import {playReadAloud,stopReadAloud} from './read-aloud.js';
+import {syncPersonalVocab,collectPersonalWord,beginPersonalVocab,flipPersonalWord,ratePersonalWord,removePersonalWord,personalVocabView} from './personal-vocab.js';
 import {speakJapanese,japaneseVoices} from './japanese-audio.js';
 import {watchShellUpdates} from './shell-update.js';
 import {loadMethods,newMethod,methodIndex,methodById,methodCard,methodExample,methodBank} from './methods.js';
@@ -14,7 +15,7 @@ import {recordStudy,reportView} from './report.js';
 import {examController} from './exam-controller.js';
 import {examView,examLobby,examPreparationView} from './exam-ui.js';
 import { practiceView } from './practice.js';
-import { libraryView } from './library.js';
+import { libraryView,wordDetailView } from './library.js';
 import { learnView, configureView } from './training.js';
 import { icon } from './icons.js';
 import { creature, landscape } from './art.js';
@@ -36,6 +37,7 @@ import { hush, speak, tone, voices, quality, voiceKey } from './audio.js';
 import {unlockRecordedAudio} from './recorded-audio.js';
 const openedUnder=navigator.serviceWorker?.controller;
 let predictionRange='30',predictionSeries='total';
+let personalPractice=false,personalFilter='',personalLimit=50,personalComposing=false;
 const $ = (s) => document.querySelector(s),
   root = $('#app'),
   dialog = $('#modal');
@@ -102,6 +104,7 @@ function toast(t) {
 function save() {
   if (storageBroken) return false;
   try {
+    syncPersonalVocab(s);
     const current = localStorage.getItem(KEY);
     if(current!==lastRaw && visitOnlyUpdate(lastRaw,current)){
       s.lastVisit=Math.max(s.lastVisit,JSON.parse(current).lastVisit);
@@ -149,7 +152,7 @@ function navItems() {
       act(
         'nav',
         icon(i) + '<span>' + n + '</span>',
-        (['practice','expressions'].includes(page) ? 'learn' : page) === p ? 'active' : '',
+        (['practice','expressions','personal'].includes(page) ? 'learn' : page) === p ? 'active' : '',
         `data-page="${p}"`,
       ),
     )
@@ -188,6 +191,28 @@ function home() {
  <div class="continue"><span class="continue-icon">${icon('compass', 27)}</span><div><h3>${s.session ? '上次的探险' : '自由练习'}</h3><p>${s.session ? esc(s.session.title) + ' · ' + Math.min(s.session.index + 1, s.session.items.length) + ' / ' + s.session.items.length : '按主题与题型选择练习'}</p></div>${act(s.session ? 'resume' : 'nav', s.session ? '继续学习 ' + icon('arrow', 16) : '进入练习 ' + icon('arrow', 16), 'primary', 'data-page="learn"')}</div>`;
 }
 let translationModule, translationRuntime, translationRetry=0;
+let optionModule;
+const optionPanels=new WeakMap();
+function optionUI(){
+  if(!document.querySelector('link[data-option-style]')){const link=document.createElement('link');link.rel='stylesheet';link.href='./option-details.css';link.dataset.optionStyle='';link.onerror=()=>link.remove();document.head.append(link);}
+  return optionModule??=import('./option-details.js').catch(error=>{optionModule=null;throw error;});
+}
+function hydrateOptions(scope){
+  for(const panel of scope.querySelectorAll('[data-options-id]')){
+    if(panel.closest('details:not([open])')||optionPanels.has(panel))continue;
+    const context=reviewedAnswer(panel.dataset.optionsId,(ref,q)=>({ref,q}));
+    if(!context?.q.options?.length){panel.hidden=true;continue;}
+    optionPanels.set(panel,{pending:true});
+    optionUI().then(async ui=>{
+      const details=await ui.loadOptionDetails(context.ref,context.q,{vocab:bank.vocab});
+      if(!panel.isConnected||!reviewedAnswer(panel.dataset.optionsId,()=>true))return;
+      optionPanels.set(panel,{ui,details});panel.innerHTML=ui.renderOptionDetails(details,s);
+    }).catch(error=>{
+      if(!panel.isConnected)return;optionPanels.delete(panel);
+      panel.innerHTML=`<p class="fine muted">${esc(error.message||'选项释义暂时无法载入。')}</p>${act('option-retry','重试选项释义','secondary')}`;
+    });
+  }
+}
 let audioSettingsModule;
 function hydrateAudioSettings(){
   const host=document.querySelector('#audio-settings-host');if(!host)return;
@@ -268,7 +293,7 @@ async function openExpressions(practice=false) {
 function translationAllowed(panel) {
   if(!panel?.isConnected || (page==='exam' && s.exam?.phase!=='done'))return false;
   const id=panel.dataset.translationId;
-  const study=(panel.hasAttribute('data-study-translation')&&page==='library') || (panel.hasAttribute('data-translation-method')&&panel.closest('[data-method-card]')&&methodById(id));
+  const study=(panel.hasAttribute('data-study-translation')&&(page==='library'||dialog.open&&panel.closest('[data-option-word-study]'))) || (panel.hasAttribute('data-translation-method')&&panel.closest('[data-method-card]')&&methodById(id));
   const diagnosed=page==='report'&&s.diagnosis?.results.some(result=>result.items.some(item=>item.id===id));
   return Boolean(study||diagnosed||reviewedAnswer(id));
 }
@@ -279,7 +304,7 @@ function render() {
   frame();
   if(wordLanguagePending())return;
   root.innerHTML =
-    page==='examPrepare'?examPreparationView(exam.preparation):page==='expressions'?expressionUI.expressionView(s,expressionPractice):page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
+    page==='personal'?personalVocabView(s,{practice:personalPractice,filter:personalFilter,limit:personalLimit}):page==='examPrepare'?examPreparationView(exam.preparation):page==='expressions'?expressionUI.expressionView(s,expressionPractice):page==='methods'?methodIndex():page==='diagnosis'?diagnosisView(s):page==='screen'?screenView(s):page==='report'?reportView(s,bank)+predictionView(s,predictionRange,Date.now(),predictionSeries)+diagnosisHistory(s):page==='examLobby'?examLobby(s.exam):page==='exam'&&s.exam?examView(s.exam):page === 'home'
       ? home()
       : page === 'learn'
         ? learnView(s)
@@ -289,6 +314,7 @@ function render() {
   hydrateTranslations(root);
   hydrateWordMeanings(root);
   hydrateTerms(root);
+  hydrateOptions(root);
   prepareVisibleAudio();
   root.setAttribute('aria-busy', 'false');
   if(page==='practice')showFirstMethod();
@@ -358,6 +384,7 @@ function modal(content, cls = '') {
   hydrateTranslations(dialog);
   hydrateWordMeanings(dialog);
   hydrateTerms(dialog);
+  hydrateOptions(dialog);
 }
 function close() {
   dialog.close();
@@ -539,6 +566,7 @@ function reviewedAnswer(id, format = answerText) {
   return ref && ref.id===id ? format(ref,question(ref),selected,correct) : null;
 }
 function exportSave() {
+  syncPersonalVocab(s);
   const blob = new Blob([JSON.stringify(s, null, 2)], { type: 'application/json' }),
     url = URL.createObjectURL(blob),
     a = document.createElement('a');
@@ -600,8 +628,23 @@ document.addEventListener('change', async (e) => {
     el.value = '';
   }
 });
+function filterPersonalWords(input){
+  if(!input.isConnected||personalFilter===input.value)return;
+  personalFilter=input.value;personalLimit=50;
+  const start=input.selectionStart,end=input.selectionEnd,y=window.scrollY;
+  render();const next=$('#personal-vocab-filter');next?.focus({preventScroll:true});
+  try{next?.setSelectionRange(start,end);}catch{}
+  window.scrollTo(0,y);
+}
+document.addEventListener('compositionstart',e=>{
+  if(e.target.id==='personal-vocab-filter')personalComposing=true;
+});
+document.addEventListener('compositionend',e=>{
+  if(e.target.id==='personal-vocab-filter'){personalComposing=false;filterPersonalWords(e.target);}
+});
 document.addEventListener('input', (e) => {
   if (e.target.dataset.pref === 'rate') $('#rate-val').textContent = e.target.value + '×';
+  if(e.target.id==='personal-vocab-filter'&&!e.isComposing&&!personalComposing)filterPersonalWords(e.target);
 });
 document.addEventListener('click', async (e) => {
   const el = e.target.closest('[data-act]');
@@ -617,8 +660,58 @@ document.addEventListener('click', async (e) => {
     if(page==='exam'&&s.exam?.phase!=='done')return;
     const panel=el.closest('.translations'),method=el.closest('[data-method-card]');
     const allowed=panel?translationAllowed(panel):method?Boolean(methodById(method.dataset.methodCard)):
-      (el.hasAttribute('data-read-study')&&((page==='library'&&el.closest('.lib-card'))||(page==='expressions'&&el.closest('.expression-entry'))))||reviewedAnswer(el.dataset.readId,()=>true);
+      (el.hasAttribute('data-read-study')&&((page==='library'&&el.closest('.lib-card'))||(dialog.open&&el.closest('[data-option-word-study]'))||(page==='expressions'&&el.closest('.expression-entry'))))||reviewedAnswer(el.dataset.readId,()=>true);
     if(allowed&&!el.closest('details:not([open]),[hidden]')){stopReplay();playReadAloud(el,s.settings,toast);}return;
+  }
+  if(a==='option-retry'){const host=el.closest('[data-options-id]');if(host){(await optionUI()).invalidateOptionDetails();optionPanels.delete(host);hydrateOptions(host.parentElement);}return;}
+  if(['option-en','option-ja'].includes(a)){
+    const host=el.closest('[data-options-id]'),current=host&&optionPanels.get(host);
+    if(!current?.details||!reviewedAnswer(host.dataset.optionsId,()=>true))return;
+    const index=Number(el.dataset.optionIndex),option=current.details.options[index];if(!option||option.kind==='position')return;
+    const ref=current.details.ref,canonical=option.lexemes.find(l=>l.wordId&&l.word.toLowerCase()===option.text.toLowerCase());
+    const bankName=canonical?'vocab':({dialogue:'listening'})[ref.mode]||ref.mode;
+    const key=canonical?canonical.wordId+'/meaning':ref.mode==='vocab'?undefined:ref.id+'/options/'+index+'/0';
+    if(a==='option-en'){
+      const turns=['meaning','meaning-ja'].includes(ref.format)?[...new Map(option.lexemes.map(l=>[l.word,{speaker:'A',text:l.word,bank:'vocab',key:l.wordId?l.wordId+'/meaning':undefined}])).values()]:[{speaker:'A',text:option.spokenEnglish||option.text,bank:bankName,key}];
+      speak(turns,s.settings,toast,{seed:canonical?.wordId||ref.id});
+    }else speakJapanese(option.ja,s.settings,toast,{bank:bankName,key,seed:canonical?.wordId||ref.id});
+    return;
+  }
+  if(['option-collect','option-word'].includes(a)){
+    const host=el.closest('[data-options-id]'),current=host&&optionPanels.get(host);
+    if(!current?.details||!reviewedAnswer(host.dataset.optionsId,()=>true))return;
+    const option=current.details.options[Number(el.dataset.optionIndex)],lexeme=option?.lexemes[Number(el.dataset.lexemeIndex)];if(!lexeme)return;
+    if(a==='option-word'){
+      if(!lexeme.wordId)return;
+      try{await loadBank(['vocab']);const word=catalog.get(lexeme.wordId);if(word?.ref.mode==='vocab'&&host.isConnected)modal(wordDetailView(word.data),'word-detail');}catch{toast('词卡暂未下载，联网后请重试。');}
+    }else try{
+      const result=collectPersonalWord(s,lexeme,{ref:current.details.ref,context:current.details.context,option:option.text});
+      if(save()){host.innerHTML=current.ui.renderOptionDetails(current.details,s);toast(result.added?'已加入我的单词本，复习时间已安排':'这个词已经收藏过了');}
+    }catch(error){toast(error.message);}
+    return;
+  }
+  if(a==='personal-open'){try{await optionUI();personalPractice=false;personalLimit=50;personalComposing=false;go('personal');}catch{toast('我的单词本界面尚未缓存，联网后请重试。');}return;}
+  if(a==='personal-resume'&&s.personalVocab?.run){try{await optionUI();personalPractice=true;go('personal');}catch{toast('我的单词本界面尚未缓存，联网后请重试。');}return;}
+  if(a==='personal-more'&&page==='personal'&&!personalPractice){const y=window.scrollY;personalLimit+=50;render();window.scrollTo(0,y);return;}
+  if(a==='personal-start'&&page==='personal'){if(beginPersonalVocab(s,el.dataset.direction)&&save()){personalPractice=true;render();}return;}
+  if(a==='personal-flip'&&page==='personal'){if(flipPersonalWord(s)&&save())render();return;}
+  if(a==='personal-rate'&&page==='personal'){if(ratePersonalWord(s,Number(el.dataset.grade))&&save())render();return;}
+  if(a==='personal-remove'&&page==='personal'){if(removePersonalWord(s,el.dataset.key)&&save())render();return;}
+  if(a==='personal-speak'&&page==='personal'){
+    const item=s.personalVocab.items.find(item=>item.key===el.dataset.key);if(!item)return;
+    const language=el.dataset.language,run=s.personalVocab.run;
+    if(personalPractice&&!run?.flipped&&(run?.direction.split('-')[0]!==language||run.keys[run.index]!==item.key))return;
+    const field=el.dataset.field;
+    if(field){
+      if(personalPractice&&!run?.flipped)return;
+      const text=field==='example'?item.example:field==='context'?item.source.context:null;
+      if(text)speak([{speaker:'A',text,bank:item.wordId&&field==='example'?'vocab':undefined,key:item.wordId&&field==='example'?item.wordId+'/example/0':undefined}],s.settings,toast);
+      return;
+    }
+    const key=item.wordId?item.wordId+'/meaning':undefined;
+    if(language==='ja')speakJapanese(item.ja,s.settings,toast,{key,bank:'vocab'});
+    else if(language==='en')speak([{speaker:'A',text:item.word,key,bank:'vocab'}],s.settings,toast);
+    return;
   }
   const needed=requiredBanks(a,el).filter(k=>!bank[k]);
   // Vocab may still be loading on a fresh island; unlock the first automatic word before awaiting it.
@@ -643,7 +736,7 @@ document.addEventListener('click', async (e) => {
   }
   if(a==='meaning-ja-speak'){
     const id=el.dataset.vocabJa;
-    if(!((page==='library'&&el.closest('.lib-card'))||reviewedAnswer(id)))return;
+    if(!((page==='library'&&el.closest('.lib-card'))||(dialog.open&&el.closest('[data-option-word-study]'))||reviewedAnswer(id)))return;
     try{stopReplay();speakJapanese(japaneseMeaning(id),s.settings,toast,{key:id+'/meaning',bank:'vocab'});}catch{toast('日语释义尚未载入，请稍后重试。');}
     return;
   }
@@ -914,7 +1007,7 @@ window.addEventListener('storage', async (e) => {
     render();
   } catch {}
 });
-document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open)hydrateTranslations(e.target);}, true);
+document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open){hydrateTranslations(e.target);hydrateOptions(e.target);}}, true);
 window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};

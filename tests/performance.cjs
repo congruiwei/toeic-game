@@ -35,12 +35,15 @@ const mime = {'.js':'text/javascript','.json':'application/json','.css':'text/cs
         await page.goto('http://127.0.0.1:' + server.address().port);
         await page.locator('.habitat').waitFor();
         const home = Date.now() - start;
+        const homeAudioRequests=requests.filter(url=>url.includes('/data/audio/')||url.includes('/audio/generated/')).length;
         await page.locator('#mobile-nav [data-page=learn]').click();
         await page.locator('[data-act=configure][data-mode=vocab]').click();
         start = Date.now();
         await page.locator('[data-act=configured]').click();
         await page.locator('.lesson-option').first().waitFor();
-        rows.push({home, first:Date.now()-start, translations:requests.filter(url=>url.includes('/i18n/')).length});
+        rows.push({home, first:Date.now()-start, translations:requests.filter(url=>url.includes('/i18n/')).length,
+          homeAudioRequests,optionPacks:requests.filter(url=>url.includes('/data/options/')).length,
+          audioFiles:requests.filter(url=>url.includes('/audio/generated/')).length});
       } finally { await context.close(); }
     }
     console.log(JSON.stringify({network:'2 Mbps down / 1 Mbps up / 80 ms latency, cold cache, SW blocked', rows,

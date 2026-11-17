@@ -1,4 +1,5 @@
 import {migrateExpressions} from './expressions.js';
+import {migratePersonalVocab} from './personal-vocab.js';
 import {migratePrediction} from './prediction-migration.js';
 import {validDiagnosis,restoreDiagnosisRanges,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
 import {migrateReview,advance,gradeError,responseRating,reviewBand} from './review-scheduler.js';
@@ -8,7 +9,7 @@ import {validIssues} from './question-tools.js';
 import {validReport} from './report.js';
 import {examValid} from './exam.js';
 export const KEY = 'sprout-isle.save',
-  VERSION = 5;
+  VERSION = 6;
 export const skills = ['vocab', 'grammar', 'listening', 'reading'];
 export const labels = { vocab: '单词', grammar: '语法', listening: '听力', reading: '阅读' };
 export const forms = ['芽团', '双叶芽', '蕨羽灵', '铃花灵', '云冠灵', '星冠灵'];
@@ -17,6 +18,7 @@ export function fresh() {
   return {
     version: VERSION,
     expressions:{version:1,items:[],run:null},
+    personalVocab:{version:1,items:[],run:null},
     stats: { vocab: 0, grammar: 0, listening: 0, reading: 0 },
     xp: 0,
     stage: 0,
@@ -43,7 +45,7 @@ function mapOk(m, fn) {
 export function decode(raw, catalog) {
   const x = JSON.parse(raw);
   // Version 1 stored every missed answer together. Its existing verdicts stay intact.
-  if (record(x) && [1,2,3,4].includes(x.version)) x.version = VERSION;
+  if (record(x) && [1,2,3,4,5].includes(x.version)) x.version = VERSION;
   if (!record(x) || x.version !== VERSION) throw Error('存档版本无法识别');
   if (
     !number(x.xp) ||
@@ -153,6 +155,7 @@ export function decode(raw, catalog) {
     if(catalog && x.exam.units.some(unit=>unit.ids.some(id=>!catalog.has(id)))) x.exam=null;
     else if(catalog && !examValid(x.exam,catalog))throw Error('模考试卷题型与题库不符');
   }
+  migratePersonalVocab(x);
   if (catalog) reconcileBank(x, catalog);
   migrateReview(x);
   migrateExpressions(x);

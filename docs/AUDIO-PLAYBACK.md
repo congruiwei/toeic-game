@@ -123,8 +123,8 @@ Safari 常以 `Range` 请求探测、拖动音频。worker 缓存完整 200 响�
 `playReadAloud(button, settings, notify)` 播放或再次点击停止，给最近的 `[data-read-text]` 加 `is-reading` 并维护 `aria-pressed`。`mountReadAloud()` 仅处理显式标记的容器，不往按钮、选项或隐藏区域嵌套交互控件。全局路由仍由 `app.js` 负责，并再次核对当前答题／模考状态。
 
 - 普通练习答题前保留原题型的必要听力入口，隐藏答案、译文、解析和新增点读按钮；答后才开放相应内容。
-- Part 6 若本轮同组还有未答空格，文章继续保留空白，整篇填好答案的点读及翻译延后；当前已答题的解析仍可查看。同组在本轮全部答完后才生成完整原文。
-- 词库、方法卡等独立学习卡可直接点读；表达本仍遵循翻面前只显示当前面的规则。
+- Part 6 若本轮同组还有未答空格，文章继续保留空白，整篇填好答案的点读及翻译延后；当前已答题的选项解释仍可查看。同组在本轮全部答完后才生成完整原文。
+- 词库、方法卡等独立学习卡可直接点读；个人词本和表达本仍遵循翻面前只显示当前面的规则。
 - 隐藏区域、关闭的折叠区和未完成模考的点读动作还受 app 事件层校验。不要只靠 CSS 隐藏答案保护内容。
 
 ## 测试与交接
@@ -141,12 +141,13 @@ node --test tests/recorded-audio.test.mjs tests/japanese-voices.test.mjs tests/v
 node tests/audio.cjs
 node tests/audio-app.cjs
 node tests/audio-metadata.cjs
+node tests/options-offline.cjs
 node tests/i18n-offline.cjs
 node tests/shell-update.cjs
 node tests/audition.cjs
 ```
 
-音频契约、应用联动和清单缓存脚本也支持 `PW_ENGINE=webkit`。使用同一份 Playwright 安装提供的 CLI 安装 WebKit 后运行（`PW_CHANNEL` 只传给 Chromium）：
+音频契约、应用联动、清单缓存和选项离线脚本也支持 `PW_ENGINE=webkit`。使用同一份 Playwright 安装提供的 CLI 安装 WebKit 后运行（`PW_CHANNEL` 只传给 Chromium）：
 
 ```sh
 /tmp/island-browser-test/node_modules/.bin/playwright install webkit
@@ -154,6 +155,7 @@ NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audi
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-app.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-metadata.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/v6.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/options-offline.cjs
 ```
 
 `v6.cjs` 的 WebKit 场景使用各自独立的临时持久 profile，并在测试结束后删除。当前 WebKit 的非持久上下文会在最后一个 CacheStorage 连接随页面重载关闭时清空缓存；独立持久 profile 保留了普通 Safari 的跨导航存储行为，不需要修改生产缓存代码或放宽断言。
@@ -162,7 +164,7 @@ WebKit 离线场景会关闭本地 HTTP 服务器，直接验证网络中断时�
 
 `audio.cjs` 覆盖共享播放／冷点击／取消、文件校验、缓存配额、原生 M4A、离线重开与 Range；`audio-app.cjs` 覆盖首次无存档快筛在词库慢请求期间的点击解锁、真实 app 下载／删除、模考准备及开始／离开／继续／交卷后重听。它们用小音频 fixture 和真实源键生成测试清单，不依赖整库生成完成，也不冒充对全部音频的内容审听。两者覆盖 375、390 深色、430 宽度。
 
-`audio-metadata.cjs` 使用真实 Service Worker 检查 HTML／指纹不符的清单不能覆盖已验证缓存，以及旧缓存离线恢复、有效版本更新和更新后的离线恢复。
+`audio-metadata.cjs` 使用真实 Service Worker 检查 HTML／指纹不符的清单不能覆盖已验证缓存，以及旧缓存离线恢复、有效版本更新和更新后的离线恢复；`options-offline.cjs` 检查选项释义和我的单词本在网络中断后冷重开时保留。
 
 `i18n-offline.cjs` 检查真实 worker 下翻译包按需下载与离线恢复；`shell-update.cjs` 检查更新时保留存档且不打断进行中的学习；`audition.cjs` 检查独立试听页控制、真实媒体播放及旧 shell-34 导航升级。试听页与主游戏音频使用不同清单，不应互相替换。
 

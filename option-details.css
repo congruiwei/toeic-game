@@ -1,0 +1,107 @@
+.option-details {
+  margin-top: 20px;
+  text-align: left;
+}
+.option-details > h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+.option-detail {
+  margin-top: 9px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--paper);
+  overflow: hidden;
+}
+.option-detail > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 52px;
+  padding: 13px 14px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.option-detail > summary::-webkit-details-marker { display: none; }
+.option-detail > summary > span:first-child {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.option-result {
+  flex: none;
+  padding: 4px 7px;
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--muted);
+  font-size: 11px;
+}
+.option-result.is-correct {
+  background: var(--lilac);
+  color: var(--accent);
+}
+.option-detail[open] > summary { border-bottom: 1px solid var(--border); }
+.option-detail-body { padding: 14px; }
+.option-detail-body p { margin: 0 0 10px; line-height: 1.7; overflow-wrap: anywhere; }
+.option-detail-body p[lang=ja], .personal-word [lang=ja] {
+  font-family: 'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'Noto Sans JP', system-ui, sans-serif;
+}
+.option-pos, .personal-meta { color: var(--muted); font-size: 12px; }
+.option-reason {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  font-size: 13px;
+}
+.option-reason strong { color: var(--accent); }
+.option-collect-list { display: grid; gap: 8px; }
+.option-collect-list button {
+  min-height: 46px;
+  padding: 10px 12px;
+  text-align: left;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.option-collect-list button:disabled { opacity: .65; }
+.personal-review-header { grid-template-columns: minmax(0,1fr) auto; }
+.personal-word {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  margin-top: 15px;
+  text-align: left;
+  min-width: 0;
+}
+.personal-word h2 { font-size: 22px; margin: 0 0 7px; overflow-wrap: anywhere; }
+.personal-word p { margin: 8px 0; line-height: 1.7; overflow-wrap: anywhere; }
+.personal-word small { display: block; margin-top: 13px; line-height: 1.6; overflow-wrap: anywhere; }
+.personal-example { padding-top: 12px; border-top: 1px solid var(--border); font-size: 14px; }
+.personal-prompt { font-size: 25px; text-align: center; padding-block: 30px; }
+.personal-actions { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 9px; margin-top: 15px; }
+.personal-actions button { min-height: 48px; padding: 11px 9px; font-size: 13px; }
+.personal-ratings { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 8px; margin-top: 16px; }
+.personal-ratings button { min-height: 50px; padding: 10px 4px; }
+.personal-search { display: block; margin-top: 19px; font-size: 13px; color: var(--muted); }
+.personal-search input {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  margin-top: 7px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 16px;
+  padding: 11px 13px;
+}
+.personal-remove { color: var(--muted); min-height: 44px; padding: 10px 7px; font-size: 12px; }
+.personal-more { width: 100%; min-height: 48px; margin-top: 16px; }
+.option-detail summary:focus-visible, .personal-search input:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: -3px;
+}
+
+.option-lexeme-actions { display: grid; gap: 7px; }
+.personal-source { margin-top: 13px; border-top: 1px solid var(--border); padding-top: 2px; font-size: 13px; }

@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-37';
+const CACHE = 'toeic-island-shell-42';
 const files = [
   './',
   './index.html',
@@ -14,6 +14,7 @@ const files = [
   './translation.css','./js/translations.js','./js/translation-ui.js','./js/translation-source.js',
   './report.css','./js/report.js',
   './read-aloud.css','./js/readable.js','./js/read-aloud.js',
+  './option-details.css','./js/option-details.js','./js/personal-vocab.js',
   './js/shell-update.js','./js/app.js','./js/exam.js','./js/exam-ui.js','./js/exam-controller.js',
   './js/prediction.js','./js/prediction-migration.js','./diagnosis.css','./js/diagnosis.js','./js/diagnosis-ui.js','./data/methods.json','./js/methods.js','./js/japanese-terms.js','./js/replay.js','./js/question-tools.js','./js/answers.js',
   './js/art.js',
@@ -145,6 +146,8 @@ self.addEventListener('fetch', (event) => {
       if(request.url.startsWith(new URL('audio/generated/',self.registration.scope).href))return audioResource(request);
       // The page validates metadata before caching it; a bad download must not replace a good pack.
       if(request.url.startsWith(new URL('data/audio/',self.registration.scope).href))return auditionResource(request,await caches.open('toeic-island-audio-meta-v1'),false);
+      // The page owns validated, generation-ordered option-pack writes too.
+      if(request.url.startsWith(new URL('data/options/',self.registration.scope).href))return auditionResource(request,await caches.open('toeic-island-option-details-v1'),false);
       if(auditionFiles.has(new URL(request.url).pathname))return auditionResource(request,cache);
       if (request.url.startsWith(new URL('data/i18n/',self.registration.scope).href)) {
         return updateBank(request,await caches.open('toeic-island-translations-v1'),true);

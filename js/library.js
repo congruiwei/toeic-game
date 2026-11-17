@@ -40,6 +40,7 @@ function wordCard(word, opened = false) {
     ${cardBody(word)}
   </details>`;
 }
+export function wordDetailView(word){return `<section data-option-word-study="${escape(word.id)}">${wordCard(word,true)}</section>`;}
 
 function themeSelect(words, filter) {
   return `<label class="lib-filter">主题
