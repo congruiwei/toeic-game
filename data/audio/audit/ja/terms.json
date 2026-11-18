@@ -1407,23 +1407,23 @@
       "src": "./audio/generated/ja/jf_alpha/ea5df6c831dc0c9562db09cc7927ec87.m4a",
       "sha256": "8b436b29dafd9fa11a09c11e61509141e5aa2afa7dfd67a43737af05a022d28b",
       "voiceId": "jf_alpha",
-      "fingerprint": "0b1411cef0d1d4046511a4bcdb53fb93051ac87280a62131f7554c3f1e27df76",
+      "fingerprint": "78002966b04eed2e40e3fde1503e9f4cdd1426d3dc20f85631b6d64b4f6c3bee",
       "expected": "過去形と現在完了形",
       "spoken": "かこけいと現在完了形",
-      "recognized": "過去計と現在完了計",
+      "recognized": "過去形と現在完了形。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "過去計と現在完了計",
-          "avgLogprob": -0.35126566886901855,
-          "noSpeechProb": 0.02092248760163784
+          "end": 1.92,
+          "text": "過去形と現在完了形。",
+          "avgLogprob": -0.1519906058907509,
+          "noSpeechProb": 3.2908732162939547e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -1438,47 +1438,25 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65",
-        "evidence": "./data/audio/audit-batches/b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65.json",
-        "offset": 18.1228125,
-        "end": 20.298812499999997,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "過去計と現在完了計。",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.5,
-      "phonemeErrorRate": 0.04,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "か こ け い",
-          "recognized": "過 去 計"
-        },
-        {
-          "operation": "replace",
-          "expected": "形",
-          "recognized": "計"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-time",
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "audioSha256": "8b436b29dafd9fa11a09c11e61509141e5aa2afa7dfd67a43737af05a022d28b",
-        "recognized": "過去計と現在完了計",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "かこけいと現在完了形",
+        "recognized": "過去形と現在完了形。",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "author-number-and-input-normalization",
+          "exact-normalized-japanese-text"
         ],
         "normalizedExpected": "カコケイトゲンザイカンリョオケエ",
-        "normalizedRecognized": "カコケエトゲンザイカンリョオケエ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "カコケイトゲンザイカンリョオケエ",
+        "proofExpected": "written:かこけいと現在完了形",
+        "proofRecognized": "written:かこけいと現在完了形",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -1487,7 +1465,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "226f927828a7b0b4e4a0bf7c80594a36960d15bf495b54534a619a9ddb606276"
         },
@@ -1532,21 +1510,21 @@
           ],
           "recognized": [
             {
-              "surface": "過去",
-              "reading": "カコ",
-              "normalized": "カコ",
+              "surface": "か",
+              "reading": "カ",
+              "normalized": "カ",
               "method": "unidic-pron"
             },
             {
-              "surface": "計",
-              "reading": "ケー",
-              "normalized": "ケエ",
+              "surface": "こ",
+              "reading": "コ",
+              "normalized": "コ",
               "method": "unidic-pron"
             },
             {
-              "surface": "と",
-              "reading": "ト",
-              "normalized": "ト",
+              "surface": "けいと",
+              "reading": "ケイト",
+              "normalized": "ケイト",
               "method": "unidic-pron"
             },
             {
@@ -1562,13 +1540,14 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "計",
+              "surface": "形",
               "reading": "ケー",
               "normalized": "ケエ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "8b436b29dafd9fa11a09c11e61509141e5aa2afa7dfd67a43737af05a022d28b"
       }
     },
     "gram-conditional": {
@@ -1576,23 +1555,23 @@
       "src": "./audio/generated/ja/jf_alpha/8820d81c1959422ed8df67481ae85c6d.m4a",
       "sha256": "d3c47f715b7f89e368df7197ff609cd98c74a782201e8c4373f4b1d6a3c0c5ed",
       "voiceId": "jf_alpha",
-      "fingerprint": "973261600f06211bc4fb417caa728b385ed4bc2864f1b1581753fc4e269062e1",
+      "fingerprint": "c72edbb33c3d4eea9e82fcbfd69731514b696fe8e5d0ca7334bf23e42fa9218d",
       "expected": "仮定法過去",
       "spoken": "仮定法過去",
-      "recognized": "家庭放課校",
+      "recognized": "家庭法加工",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "家庭放課校",
-          "avgLogprob": -0.4608074247837067,
-          "noSpeechProb": 0.05113577842712402
+          "end": 1.04,
+          "text": "家庭法加工",
+          "avgLogprob": -0.33413007524278426,
+          "noSpeechProb": 5.170954810174155e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -1607,35 +1586,28 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65",
-        "evidence": "./data/audio/audit-batches/b8fd8a22bea3c7cb1fe1fb05c235efcf2b177ae425d7c2f89c3a33f5e6e94a65.json",
-        "offset": 20.8988125,
-        "end": 22.1788125,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "家庭法加工。",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "CER",
-      "errorRate": 1.0,
+      "errorRate": 0.8,
       "phonemeErrorRate": 0.0833,
       "differences": [
         {
           "operation": "replace",
-          "expected": "仮 定 法 過 去",
-          "recognized": "家 庭 放 課 校"
+          "expected": "仮 定",
+          "recognized": "家 庭"
+        },
+        {
+          "operation": "replace",
+          "expected": "過 去",
+          "recognized": "加 工"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-conditional",
       "comparison": {
-        "audioSha256": "d3c47f715b7f89e368df7197ff609cd98c74a782201e8c4373f4b1d6a3c0c5ed",
-        "recognized": "家庭放課校",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "仮定法過去",
+        "recognized": "家庭法加工",
         "reasons": [
           "non-equivalent-morae-remain"
         ],
@@ -1651,7 +1623,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "650f67302a1b874aebf33e4b5b90880d83a26d2cd33e69454c2af6f39daa9ee3"
         },
@@ -1684,19 +1656,20 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "放課",
-              "reading": "ホーカ",
-              "normalized": "ホオカ",
+              "surface": "法",
+              "reading": "ホー",
+              "normalized": "ホオ",
               "method": "unidic-pron"
             },
             {
-              "surface": "校",
-              "reading": "コー",
-              "normalized": "コオ",
+              "surface": "加工",
+              "reading": "カコー",
+              "normalized": "カコオ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "d3c47f715b7f89e368df7197ff609cd98c74a782201e8c4373f4b1d6a3c0c5ed"
       }
     },
     "gram-word-form": {
@@ -1704,23 +1677,23 @@
       "src": "./audio/generated/ja/jf_alpha/37da243bd0d4f5e1cb873f77d49392bc.m4a",
       "sha256": "ce312ef336e6c397414764935f5014f6c55cdd337df9c05a1b072da43b58e5a0",
       "voiceId": "jf_alpha",
-      "fingerprint": "14e963437cdd9f04643baffb99bb1da60657d84ac41cf816dc83537a3cf0b68b",
+      "fingerprint": "b4a8144f32cff052592c3df94b99ee11b912f9938e8515dacfa2e4e927545ec8",
       "expected": "品詞と文中の位置",
       "spoken": "品詞と文中の位置",
-      "recognized": "品質と分中の位置",
+      "recognized": "品種と文柱の1",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "品質と分中の位置",
-          "avgLogprob": -0.53415601903742,
-          "noSpeechProb": 0.07274162024259567
+          "end": 1.3,
+          "text": "品種と文柱の1",
+          "avgLogprob": -0.25652825832366943,
+          "noSpeechProb": 3.678802054651875e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -1735,47 +1708,39 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
-        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
-        "offset": 0.4,
-        "end": 1.9786875,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "子と文中の位",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.25,
-      "phonemeErrorRate": 0.1667,
+      "errorRate": 0.5,
+      "phonemeErrorRate": 0.4444,
       "differences": [
         {
           "operation": "replace",
           "expected": "詞",
-          "recognized": "質"
+          "recognized": "種"
         },
         {
           "operation": "replace",
-          "expected": "文",
-          "recognized": "分"
+          "expected": "中",
+          "recognized": "柱"
+        },
+        {
+          "operation": "replace",
+          "expected": "位 置",
+          "recognized": "一"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-word-form",
       "comparison": {
-        "audioSha256": "ce312ef336e6c397414764935f5014f6c55cdd337df9c05a1b072da43b58e5a0",
-        "recognized": "品質と分中の位置",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "品詞と文中の位置",
+        "recognized": "品種と文柱の1",
         "reasons": [
+          "author-number-and-input-normalization",
           "non-equivalent-morae-remain"
         ],
         "normalizedExpected": "ヒンシトブンチュウノイチ",
-        "normalizedRecognized": "ヒンシツトブンチュウノイチ",
+        "normalizedRecognized": "ヒンシュトブンハシラノイチ",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -1786,7 +1751,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "d4f4d747f3d7c132da17167c4c089c5aa7fbca6f2ff099316702f836afa22eef"
         },
@@ -1825,9 +1790,9 @@
           ],
           "recognized": [
             {
-              "surface": "品質",
-              "reading": "ヒンシツ",
-              "normalized": "ヒンシツ",
+              "surface": "品種",
+              "reading": "ヒンシュ",
+              "normalized": "ヒンシュ",
               "method": "unidic-pron"
             },
             {
@@ -1837,15 +1802,15 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "分",
+              "surface": "文",
               "reading": "ブン",
               "normalized": "ブン",
               "method": "unidic-pron"
             },
             {
-              "surface": "中",
-              "reading": "チュー",
-              "normalized": "チュウ",
+              "surface": "柱",
+              "reading": "ハシラ",
+              "normalized": "ハシラ",
               "method": "unidic-pron"
             },
             {
@@ -1855,13 +1820,14 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "位置",
+              "surface": "一",
               "reading": "イチ",
               "normalized": "イチ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "ce312ef336e6c397414764935f5014f6c55cdd337df9c05a1b072da43b58e5a0"
       }
     },
     "gram-preposition": {
@@ -1923,23 +1889,23 @@
       "src": "./audio/generated/ja/jf_alpha/6aeaa293aa48199b87c6cde7f0876a80.m4a",
       "sha256": "d7c5e8985652aaa94ca52c15b8d704b3d3f78feddf6272531c2a34fb264a2abc",
       "voiceId": "jf_alpha",
-      "fingerprint": "3a7b220818f6d9692b682b4861d18c601bb291c2602f89a359bff009f384ee75",
+      "fingerprint": "6b3c5e14b1dfdb10a798de53d81b16467fa6a55d8efbb31b1e462f0b04c875e1",
       "expected": "受動態",
       "spoken": "受動態",
-      "recognized": "駿道隊",
+      "recognized": "受動体",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.0,
-          "text": "駿道隊",
-          "avgLogprob": -0.7079955413937569,
-          "noSpeechProb": 0.04987670108675957
+          "end": 0.74,
+          "text": "受動体",
+          "avgLogprob": -0.24423408011595407,
+          "noSpeechProb": 4.257887879083322e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -1953,33 +1919,31 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "recognitionAttempts": 2,
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 1.0,
-      "phonemeErrorRate": 0.25,
+      "errorRate": 0.3333,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
-          "expected": "受 動 態",
-          "recognized": "駿 道 隊"
+          "expected": "態",
+          "recognized": "体"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-passive",
       "comparison": {
-        "audioSha256": "d7c5e8985652aaa94ca52c15b8d704b3d3f78feddf6272531c2a34fb264a2abc",
-        "recognized": "駿道隊",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "受動態",
+        "recognized": "受動体",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "ジュドオタイ",
-        "normalizedRecognized": "シュンドオタイ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "ジュドオタイ",
+        "proofExpected": "ジュドオタイ",
+        "proofRecognized": "ジュドオタイ",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -1988,7 +1952,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "33e6a54e9bb13e0740b2e85131c99c290c2eebc3e817c6c8371a2668b17c8308"
         },
@@ -2009,25 +1973,20 @@
           ],
           "recognized": [
             {
-              "surface": "駿",
-              "reading": "シュン",
-              "normalized": "シュン",
+              "surface": "受動",
+              "reading": "ジュドー",
+              "normalized": "ジュドオ",
               "method": "unidic-pron"
             },
             {
-              "surface": "道",
-              "reading": "ドー",
-              "normalized": "ドオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "隊",
+              "surface": "体",
               "reading": "タイ",
               "normalized": "タイ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "d7c5e8985652aaa94ca52c15b8d704b3d3f78feddf6272531c2a34fb264a2abc"
       }
     },
     "gram-inversion": {
@@ -2035,23 +1994,23 @@
       "src": "./audio/generated/ja/jf_alpha/3c5d58fc3c6c78326681d04ba4fd3923.m4a",
       "sha256": "807259c93b187150936ca6c54e5bafa7cfe019ce0fdcd88ec50908aca18f3e75",
       "voiceId": "jf_alpha",
-      "fingerprint": "9a90851784610c994a77c8c40cb35f6746dcde17e846e52c360fc67086a15e1e",
+      "fingerprint": "c0d56ef34fb23d2ae1c757a875398b0eae36761b878f4d2122dd18bb0d00460b",
       "expected": "倒置と強調",
       "spoken": "倒置と強調",
-      "recognized": "当地と共町",
+      "recognized": "当時度行上",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "当地と共町",
-          "avgLogprob": -0.8932482401529948,
-          "noSpeechProb": 0.12445182353258133
+          "end": 1.04,
+          "text": "当時度行上",
+          "avgLogprob": -0.5698813572525978,
+          "noSpeechProb": 6.415962379435758e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -2066,47 +2025,28 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4",
-        "evidence": "./data/audio/audit-batches/6e3ea4e07f4a9464d50bcd8fdc21f778d2de1d63ee3104c1a398bb96eeeba7f4.json",
-        "offset": 12.786749999999998,
-        "end": 14.152124999999998,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "統治と強調、",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.8,
-      "phonemeErrorRate": 0.5,
+      "errorRate": 1.0,
+      "phonemeErrorRate": 0.2857,
       "differences": [
         {
           "operation": "replace",
-          "expected": "倒 置",
-          "recognized": "当 地"
-        },
-        {
-          "operation": "replace",
-          "expected": "強 調",
-          "recognized": "共 町"
+          "expected": "倒 置 と 強 調",
+          "recognized": "当 時 度 行 上"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-inversion",
       "comparison": {
-        "audioSha256": "807259c93b187150936ca6c54e5bafa7cfe019ce0fdcd88ec50908aca18f3e75",
-        "recognized": "当地と共町",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "倒置と強調",
+        "recognized": "当時度行上",
         "reasons": [
           "non-equivalent-morae-remain"
         ],
         "normalizedExpected": "トオチトキョオチョオ",
-        "normalizedRecognized": "トオチトトモマチ",
+        "normalizedRecognized": "トオジドギョオジョオ",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -2117,7 +2057,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "d22a82831db4bc82133630da40c3f7f470486037a676899e1fa56090f414fc82"
         },
@@ -2144,31 +2084,32 @@
           ],
           "recognized": [
             {
-              "surface": "当地",
-              "reading": "トーチ",
-              "normalized": "トオチ",
+              "surface": "当時",
+              "reading": "トージ",
+              "normalized": "トオジ",
               "method": "unidic-pron"
             },
             {
-              "surface": "と",
-              "reading": "ト",
-              "normalized": "ト",
+              "surface": "度",
+              "reading": "ド",
+              "normalized": "ド",
               "method": "unidic-pron"
             },
             {
-              "surface": "共",
-              "reading": "トモ",
-              "normalized": "トモ",
+              "surface": "行",
+              "reading": "ギョー",
+              "normalized": "ギョオ",
               "method": "unidic-pron"
             },
             {
-              "surface": "町",
-              "reading": "マチ",
-              "normalized": "マチ",
+              "surface": "上",
+              "reading": "ジョー",
+              "normalized": "ジョオ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "807259c93b187150936ca6c54e5bafa7cfe019ce0fdcd88ec50908aca18f3e75"
       }
     },
     "gram-agreement": {
@@ -2176,23 +2117,23 @@
       "src": "./audio/generated/ja/jf_alpha/9a15487e6c389372ddc9a62e03b45f3b.m4a",
       "sha256": "1138ba8d0c02aea733b92d9012c24782f2a6f2d02de56efa0f4a47d4c72bb1b1",
       "voiceId": "jf_alpha",
-      "fingerprint": "447d4ecc7eb8ad7c37f3d3c391dadb21f0cfac9a933a3ee6e75dab58a7f282eb",
+      "fingerprint": "10436f6ae160191b47a8dc4f30d9d5c86ef906c8d5987b9473c69986cb9bca10",
       "expected": "主語と動詞の一致",
       "spoken": "主語と動詞の一致",
       "recognized": "仕事同士の位置",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
+          "end": 1.3800000000000001,
           "text": "仕事同士の位置",
-          "avgLogprob": -0.22136777639389038,
-          "noSpeechProb": 0.0693233534693718
+          "avgLogprob": -0.16498453237793662,
+          "noSpeechProb": 3.0524140073179273e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -2207,18 +2148,6 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
-        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
-        "offset": 0.4,
-        "end": 2.021375,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "事同士の位置、",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "CER",
       "errorRate": 0.875,
@@ -2235,14 +2164,12 @@
           "recognized": "位 置"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-agreement",
       "comparison": {
-        "audioSha256": "1138ba8d0c02aea733b92d9012c24782f2a6f2d02de56efa0f4a47d4c72bb1b1",
-        "recognized": "仕事同士の位置",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "主語と動詞の一致",
+        "recognized": "仕事同士の位置",
         "reasons": [
           "non-equivalent-morae-remain"
         ],
@@ -2258,7 +2185,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "b5edec944327a1edfec15e2fbb4a85d326bf057f972e8fd6bec80573eeb87ee5"
         },
@@ -2321,7 +2248,8 @@
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "1138ba8d0c02aea733b92d9012c24782f2a6f2d02de56efa0f4a47d4c72bb1b1"
       }
     },
     "gram-sequence": {
@@ -2329,23 +2257,23 @@
       "src": "./audio/generated/ja/jf_alpha/fc294ae0411cda598d9a75c1855698fb.m4a",
       "sha256": "e3de228819e1a44b7ce4a5552abe6963a7396d5680a24341919e4a4aff36cd39",
       "voiceId": "jf_alpha",
-      "fingerprint": "76e6c5b7391d39c2c3e36d36c48eda326bd2ef0eb0d7d593eb527c1b1ea30972",
+      "fingerprint": "fe06e29dec36a2d66a0bc61d5ee77cb890684e2b646aa2fdc8b7e7da6797c43f",
       "expected": "未来表現と過去完了形",
       "spoken": "未来表現と過去完了形",
-      "recognized": "未来証言と過去完了計",
+      "recognized": "未来証言と過去完了形",
       "segments": [
         {
           "start": 0.0,
           "end": 2.0,
-          "text": "未来証言と過去完了計",
-          "avgLogprob": -0.3409517630934715,
-          "noSpeechProb": 0.0658540353178978
+          "text": "未来証言と過去完了形",
+          "avgLogprob": -0.16686653594175974,
+          "noSpeechProb": 3.829925092346809e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -2360,40 +2288,23 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
-        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
-        "offset": 5.8240625,
-        "end": 8.04275,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "未来証言と過去完了計、",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.3,
+      "errorRate": 0.2,
       "phonemeErrorRate": 0.0357,
       "differences": [
         {
           "operation": "replace",
           "expected": "表 現",
           "recognized": "証 言"
-        },
-        {
-          "operation": "replace",
-          "expected": "形",
-          "recognized": "計"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-sequence",
       "comparison": {
-        "audioSha256": "e3de228819e1a44b7ce4a5552abe6963a7396d5680a24341919e4a4aff36cd39",
-        "recognized": "未来証言と過去完了計",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "未来表現と過去完了形",
+        "recognized": "未来証言と過去完了形",
         "reasons": [
           "non-equivalent-morae-remain"
         ],
@@ -2409,7 +2320,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "7cd96bc531b29bf178a112003f99a28851fbf67d839e6cc51a453cc51e954282"
         },
@@ -2484,13 +2395,14 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "計",
+              "surface": "形",
               "reading": "ケー",
               "normalized": "ケエ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "e3de228819e1a44b7ce4a5552abe6963a7396d5680a24341919e4a4aff36cd39"
       }
     },
     "gram-linkers": {
@@ -2498,23 +2410,23 @@
       "src": "./audio/generated/ja/jf_alpha/dcc3b3f922e5cfc050f849820333b916.m4a",
       "sha256": "72c46a0f164f4c4801456872d548a2b8bad1306e463abf8a5e179ad882104ce5",
       "voiceId": "jf_alpha",
-      "fingerprint": "bebf9018342f6c69ad1cf9c1e99d713b7c387f9c8bade970980be3480065e5dd",
+      "fingerprint": "c4385e2541546353ff40c584cbb7aa490a61d31c778a615b80437d6574772054",
       "expected": "前置詞句と接続詞",
       "spoken": "前置詞句と接続詞",
-      "recognized": "レンチ軸と接続し",
+      "recognized": "レンチ軸と接続し、",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "レンチ軸と接続し",
-          "avgLogprob": -0.41599105795224506,
-          "noSpeechProb": 0.030800852924585342
+          "end": 1.54,
+          "text": "レンチ軸と接続し、",
+          "avgLogprob": -0.17509141335120568,
+          "noSpeechProb": 2.3510911099922094e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -2529,16 +2441,6 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
-        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
-        "offset": 8.64275,
-        "end": 10.349437499999999,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "連地績と接続し、",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "CER",
       "errorRate": 0.625,
@@ -2555,14 +2457,12 @@
           "recognized": "し"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:gram-linkers",
       "comparison": {
-        "audioSha256": "72c46a0f164f4c4801456872d548a2b8bad1306e463abf8a5e179ad882104ce5",
-        "recognized": "レンチ軸と接続し",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "前置詞句と接続詞",
+        "recognized": "レンチ軸と接続し、",
         "reasons": [
           "non-equivalent-morae-remain"
         ],
@@ -2578,7 +2478,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "911fd7b261ff5058a6c366e602dfd2902def39b62496d97670727fc6915f264c"
         },
@@ -2653,7 +2553,8 @@
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "72c46a0f164f4c4801456872d548a2b8bad1306e463abf8a5e179ad882104ce5"
       }
     },
     "first-word": {
@@ -2661,23 +2562,23 @@
       "src": "./audio/generated/ja/jf_alpha/8395aecba7062f100817bd16f9add5ab.m4a",
       "sha256": "b9a0206a4bb9376b00913ded427843e01fe4c3b64e2d58e25acdf55ceb6112d3",
       "voiceId": "jf_alpha",
-      "fingerprint": "34788eb0c0ee88de60ebcd96bd041eca0c7cb6d9f6be11443afb9b682f950e9d",
+      "fingerprint": "8d83e62519cca925875fa5da1e572cbb63983f687e5970671acfbc396f44167f",
       "expected": "文頭の聞き取り",
       "spoken": "文頭の聞き取り",
-      "recognized": "文童の聞き取り",
+      "recognized": "文頭の聞き取り",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "文童の聞き取り",
-          "avgLogprob": -0.45097724957899615,
-          "noSpeechProb": 0.03792646899819374
+          "end": 1.46,
+          "text": "文頭の聞き取り",
+          "avgLogprob": -0.28020916879177094,
+          "noSpeechProb": 3.4685819754604053e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -2692,44 +2593,24 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
-        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
-        "offset": 19.661499999999997,
-        "end": 21.240187499999998,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "文党の聞き取",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.1429,
-      "phonemeErrorRate": 0.1053,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "頭",
-          "recognized": "童"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:first-word",
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "audioSha256": "b9a0206a4bb9376b00913ded427843e01fe4c3b64e2d58e25acdf55ceb6112d3",
-        "recognized": "文童の聞き取り",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "文頭の聞き取り",
+        "recognized": "文頭の聞き取り",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-normalized-japanese-text"
         ],
         "normalizedExpected": "ブントオノキキトリ",
-        "normalizedRecognized": "ブンドオノキキトリ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "ブントオノキキトリ",
+        "proofExpected": "written:文頭の聞き取り",
+        "proofRecognized": "written:文頭の聞き取り",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -2738,7 +2619,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "45715ea8f3a10e8a890cb4aec64ee9b78d5b9da5eac8d71bd2677d5c14ccd307"
         },
@@ -2765,15 +2646,9 @@
           ],
           "recognized": [
             {
-              "surface": "文",
-              "reading": "ブン",
-              "normalized": "ブン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "童",
-              "reading": "ドー",
-              "normalized": "ドオ",
+              "surface": "文頭",
+              "reading": "ブントー",
+              "normalized": "ブントオ",
               "method": "unidic-pron"
             },
             {
@@ -2789,7 +2664,8 @@
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "b9a0206a4bb9376b00913ded427843e01fe4c3b64e2d58e25acdf55ceb6112d3"
       }
     },
     "indirect": {
@@ -2797,23 +2673,23 @@
       "src": "./audio/generated/ja/jf_alpha/e1579029cd4e9c2bd5d8c732cd1419d0.m4a",
       "sha256": "7711ce76475cb401d44ff3783fdb5067d94c6a38c3ac9fdeb75a532bc7fd978b",
       "voiceId": "jf_alpha",
-      "fingerprint": "47d787d3ec94d70b657de8f6fc37c99b2184e230a444e812d1f7849762e2cc31",
+      "fingerprint": "91505282d57c64a6349a16deff9b4423b7689abd006609b4f92a634068ce907b",
       "expected": "間接応答",
       "spoken": "間接応答",
-      "recognized": "関節音",
+      "recognized": "関節応答",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "関節音",
-          "avgLogprob": -0.5670165845326015,
-          "noSpeechProb": 0.08464229851961136
+          "end": 0.98,
+          "text": "関節応答",
+          "avgLogprob": -0.17925421396891275,
+          "noSpeechProb": 9.008796313103584e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -2828,44 +2704,30 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c",
-        "evidence": "./data/audio/audit-batches/87ff35b6c9791100cdf8744db2d66d626a4595f7e6f4b2d7f57e53c340a1166c.json",
-        "offset": 21.8401875,
-        "end": 23.1201875,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "関節応答",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 1.0,
-      "phonemeErrorRate": 0.3333,
+      "errorRate": 0.5,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
-          "expected": "間 接 応 答",
-          "recognized": "関 節 音"
+          "expected": "間 接",
+          "recognized": "関 節"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:indirect",
       "comparison": {
-        "audioSha256": "7711ce76475cb401d44ff3783fdb5067d94c6a38c3ac9fdeb75a532bc7fd978b",
-        "recognized": "関節音",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "間接応答",
+        "recognized": "関節応答",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "カンセツオオトオ",
-        "normalizedRecognized": "カンセツオン",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "カンセツオオトオ",
+        "proofExpected": "カンセツオオトオ",
+        "proofRecognized": "カンセツオオトオ",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -2874,7 +2736,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "d980ecf198550562791fb7c5c1b9a3516cd24373058eeac70d60256240a00e6a"
         },
@@ -2901,13 +2763,14 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "音",
-              "reading": "オン",
-              "normalized": "オン",
+              "surface": "応答",
+              "reading": "オートー",
+              "normalized": "オオトオ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "7711ce76475cb401d44ff3783fdb5067d94c6a38c3ac9fdeb75a532bc7fd978b"
       }
     },
     "tense": {
@@ -2915,23 +2778,23 @@
       "src": "./audio/generated/ja/jf_alpha/3d6f2ad43a9f0e861778fb79b516ea8e.m4a",
       "sha256": "83966a7d7b74c17924fa3572926915468322dc51be6f2d41b162aef211b4af97",
       "voiceId": "jf_alpha",
-      "fingerprint": "4540d85eb0d417d8d5efd24503a00ba95549e661043a33be30c5194e73c0f01a",
+      "fingerprint": "c64d02352a5d4f65386b76e797556718ffe38f81ebb2fb6688b1bae6e5e517f2",
       "expected": "時制問題",
       "spoken": "時制問題",
-      "recognized": "事成問題",
+      "recognized": "時勢問題",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.0,
-          "text": "事成問題",
-          "avgLogprob": -0.7691489656766256,
-          "noSpeechProb": 0.16996340453624725
+          "end": 0.76,
+          "text": "時勢問題",
+          "avgLogprob": -0.4639320373535156,
+          "noSpeechProb": 3.803733803625642e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -2946,44 +2809,30 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f",
-        "evidence": "./data/audio/audit-batches/add835a93b26f5ffb97aecb8b03e6d76b668bc8f81534fcb17e7e618a86e157f.json",
-        "offset": 17.91475,
-        "end": 19.066750000000003,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "invalid-word-timestamp"
-        ],
-        "recognized": "自製問題。",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.5,
-      "phonemeErrorRate": 0.3636,
+      "errorRate": 0.25,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
-          "expected": "時 制",
-          "recognized": "事 成"
+          "expected": "制",
+          "recognized": "勢"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:tense",
       "comparison": {
-        "audioSha256": "83966a7d7b74c17924fa3572926915468322dc51be6f2d41b162aef211b4af97",
-        "recognized": "事成問題",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "時制問題",
+        "recognized": "時勢問題",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "ジセエモンダイ",
-        "normalizedRecognized": "コトセエモンダイ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "ジセエモンダイ",
+        "proofExpected": "ジセエモンダイ",
+        "proofRecognized": "ジセエモンダイ",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -2992,7 +2841,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "3e5e8fc3a45dd81e4a0614d6523bf30e6caf336b13975b8fd6ffe96841ce87b1"
         },
@@ -3013,15 +2862,9 @@
           ],
           "recognized": [
             {
-              "surface": "事",
-              "reading": "コト",
-              "normalized": "コト",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "成",
-              "reading": "セー",
-              "normalized": "セエ",
+              "surface": "時勢",
+              "reading": "ジセー",
+              "normalized": "ジセエ",
               "method": "unidic-pron"
             },
             {
@@ -3031,7 +2874,8 @@
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "83966a7d7b74c17924fa3572926915468322dc51be6f2d41b162aef211b4af97"
       }
     },
     "link": {
@@ -3093,23 +2937,23 @@
       "src": "./audio/generated/ja/jf_alpha/29f33a0f838c527a7c9794119f5e0c36.m4a",
       "sha256": "4db43384df25270259591059112a4db25e59105ca1ffa6dea721060a4f915641",
       "voiceId": "jf_alpha",
-      "fingerprint": "48031672caa319d832d04f845684ff55b6af0c64ca1d5479f80aaef7284f87ed",
+      "fingerprint": "e578568b06ff3fc64ed1b8e15d82285c53ec98e32073ac1435250c8e1ccf0103",
       "expected": "文挿入問題の指示語と接続表現",
       "spoken": "文挿入問題の指示語と接続表現",
-      "recognized": "文総入問題の指示ごと接続表現",
+      "recognized": "分挿入問題の指示語と接続表現",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.0,
-          "text": "文総入問題の指示ごと接続表現",
-          "avgLogprob": -0.3532884822172277,
-          "noSpeechProb": 0.04170596972107887
+          "end": 2.9,
+          "text": "分挿入問題の指示語と接続表現",
+          "avgLogprob": -0.13406910615808823,
+          "noSpeechProb": 3.0044762251019153e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -3124,49 +2968,30 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
-        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
-        "offset": 2.621375,
-        "end": 5.693375,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "文総入問題の指示ごと接続表現",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.1429,
-      "phonemeErrorRate": 0.1026,
+      "errorRate": 0.0714,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
-          "expected": "挿",
-          "recognized": "総"
-        },
-        {
-          "operation": "replace",
-          "expected": "語",
-          "recognized": "ご"
+          "expected": "文",
+          "recognized": "分"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p6-insert",
       "comparison": {
-        "audioSha256": "4db43384df25270259591059112a4db25e59105ca1ffa6dea721060a4f915641",
-        "recognized": "文総入問題の指示ごと接続表現",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "文挿入問題の指示語と接続表現",
+        "recognized": "分挿入問題の指示語と接続表現",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "ブンソオニュウモンダイノシジゴトセツゾクヒョオゲン",
-        "normalizedRecognized": "ブンソオイリモンダイノシジゴトセツゾクヒョオゲン",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "ブンソオニュウモンダイノシジゴトセツゾクヒョオゲン",
+        "proofExpected": "ブンソオニュウモンダイノシジゴトセツゾクヒョオゲン",
+        "proofRecognized": "ブンソオニュウモンダイノシジゴトセツゾクヒョオゲン",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -3175,7 +3000,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "ee4f33127f6f68873ab8627250ccc6c246c07744bf7a3688b78ad5a4353e5415"
         },
@@ -3238,21 +3063,15 @@
           ],
           "recognized": [
             {
-              "surface": "文",
+              "surface": "分",
               "reading": "ブン",
               "normalized": "ブン",
               "method": "unidic-pron"
             },
             {
-              "surface": "総",
-              "reading": "ソー",
-              "normalized": "ソオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "入",
-              "reading": "イリ",
-              "normalized": "イリ",
+              "surface": "挿入",
+              "reading": "ソーニュー",
+              "normalized": "ソオニュウ",
               "method": "unidic-pron"
             },
             {
@@ -3274,9 +3093,15 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "ごと",
-              "reading": "ゴト",
-              "normalized": "ゴト",
+              "surface": "語",
+              "reading": "ゴ",
+              "normalized": "ゴ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "と",
+              "reading": "ト",
+              "normalized": "ト",
               "method": "unidic-pron"
             },
             {
@@ -3292,7 +3117,8 @@
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "4db43384df25270259591059112a4db25e59105ca1ffa6dea721060a4f915641"
       }
     },
     "p7-not": {
@@ -3300,23 +3126,23 @@
       "src": "./audio/generated/ja/jf_alpha/a9d449d356cb1ae4e08dbcf9cf465f15.m4a",
       "sha256": "6204787afebefeedcf36045912560b1e6f904bb7f01418c84d5acb53896ca588",
       "voiceId": "jf_alpha",
-      "fingerprint": "5db3fc65113a70e4d557369e6763a7bd42eb6cea76e6d116b3094c1089e6d8da",
+      "fingerprint": "2986edcd0e31f6f8eb70da8e00242ee6d1a6ce65aa655d648ae9f31c3866df70",
       "expected": "NOT問題の選択肢の照合",
       "spoken": "エヌ オー ティー 問題の選択肢の照合",
-      "recognized": "NOT問題の選択肢の証語",
+      "recognized": "NOT問題の選択肢の称号",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.4,
-          "text": "NOT問題の選択肢の証語",
-          "avgLogprob": -0.4199676029384136,
-          "noSpeechProb": 0.022635208442807198
+          "end": 2.52,
+          "text": "NOT問題の選択肢の称号",
+          "avgLogprob": -0.05262842634692788,
+          "noSpeechProb": 3.0390551186698644e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -3331,45 +3157,31 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
-        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
-        "offset": 8.856062499999998,
-        "end": 11.586749999999999,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "NOT問題の選択肢の証拠",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
       "errorRate": 0.125,
-      "phonemeErrorRate": 0.1765,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
           "expected": "照 合",
-          "recognized": "証 語"
+          "recognized": "称 号"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-not",
       "comparison": {
-        "audioSha256": "6204787afebefeedcf36045912560b1e6f904bb7f01418c84d5acb53896ca588",
-        "recognized": "NOT問題の選択肢の証語",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "エヌ オー ティー 問題の選択肢の照合",
+        "recognized": "NOT問題の選択肢の称号",
         "reasons": [
           "author-number-and-input-normalization",
-          "non-equivalent-morae-remain"
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "エヌオオティイモンダイノセンタクシノショオゴオ",
-        "normalizedRecognized": "エヌオオティイモンダイノセンタクシノアカシゴ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "エヌオオティイモンダイノセンタクシノショオゴオ",
+        "proofExpected": "エヌオオティイモンダイノセンタクシノショオゴオ",
+        "proofRecognized": "エヌオオティイモンダイノセンタクシノショオゴオ",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -3378,7 +3190,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "acc36fcc27e96be41df0829ac5cfc66381eb46601d0c0bbd28eed38ceeb5a6b7"
         },
@@ -3489,19 +3301,14 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "証",
-              "reading": "アカシ",
-              "normalized": "アカシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "語",
-              "reading": "ゴ",
-              "normalized": "ゴ",
+              "surface": "称号",
+              "reading": "ショーゴー",
+              "normalized": "ショオゴオ",
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "6204787afebefeedcf36045912560b1e6f904bb7f01418c84d5acb53896ca588"
       }
     },
     "p7-syn": {
@@ -3558,23 +3365,23 @@
       "src": "./audio/generated/ja/jf_alpha/5e1256700edf3b13572d1daec0c1f5ab.m4a",
       "sha256": "f912d91405936cc44e42eb9563efbc21796d7fc8bac9059a8f7be22b7ee696e0",
       "voiceId": "jf_alpha",
-      "fingerprint": "ddf55773260fc42dfaa4a8449c525103bb69c30335bd21d575fc820867199d75",
+      "fingerprint": "b1609d66aa10c6c75c37fbb9d950bab12d054ebd4557144f413ede9b23ceb34f",
       "expected": "文挿入位置問題",
       "spoken": "文挿入位置問題",
-      "recognized": "文総入一問題",
+      "recognized": "分挿入1問題",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "文総入一問題",
-          "avgLogprob": -0.5727505154079862,
-          "noSpeechProb": 0.07388576865196228
+          "end": 1.3,
+          "text": "分挿入1問題",
+          "avgLogprob": -0.3308487468295627,
+          "noSpeechProb": 2.6665844012063733e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -3589,28 +3396,15 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
-        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
-        "offset": 14.322749999999997,
-        "end": 15.901437499999997,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary",
-          "word-in-padding"
-        ],
-        "recognized": "文総入1問題",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
       "errorRate": 0.4286,
-      "phonemeErrorRate": 0.2222,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
-          "expected": "挿",
-          "recognized": "総"
+          "expected": "文",
+          "recognized": "分"
         },
         {
           "operation": "replace",
@@ -3618,21 +3412,20 @@
           "recognized": "一"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-position",
       "comparison": {
-        "audioSha256": "f912d91405936cc44e42eb9563efbc21796d7fc8bac9059a8f7be22b7ee696e0",
-        "recognized": "文総入一問題",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "文挿入位置問題",
+        "recognized": "分挿入1問題",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "author-number-and-input-normalization",
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "ブンソオニュウイチモンダイ",
-        "normalizedRecognized": "ブンソオイリイチモンダイ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "ブンソオニュウイチモンダイ",
+        "proofExpected": "ブンソオニュウイチモンダイ",
+        "proofRecognized": "ブンソオニュウイチモンダイ",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -3641,7 +3434,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "5c203b603d5b69a8a5e6bed79dd8ae9e1fe90528b5e911d5bfa37e8c449c74cc"
         },
@@ -3674,21 +3467,15 @@
           ],
           "recognized": [
             {
-              "surface": "文",
+              "surface": "分",
               "reading": "ブン",
               "normalized": "ブン",
               "method": "unidic-pron"
             },
             {
-              "surface": "総",
-              "reading": "ソー",
-              "normalized": "ソオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "入",
-              "reading": "イリ",
-              "normalized": "イリ",
+              "surface": "挿入",
+              "reading": "ソーニュー",
+              "normalized": "ソオニュウ",
               "method": "unidic-pron"
             },
             {
@@ -3704,7 +3491,8 @@
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "f912d91405936cc44e42eb9563efbc21796d7fc8bac9059a8f7be22b7ee696e0"
       }
     },
     "p7-multi": {
@@ -3712,23 +3500,23 @@
       "src": "./audio/generated/ja/jf_alpha/97f35cadf676dda77b6b076db0eb000f.m4a",
       "sha256": "1b30b91fe5cf062c768a1773608e6b4e9cee64f4bc946ad0ee693a0b818a70ba",
       "voiceId": "jf_alpha",
-      "fingerprint": "5d516f2d1eccb0af6fda029c32aa8cd3c17ed6c76cd75a5441f491b6aa5b74b4",
+      "fingerprint": "b45adf3e0444ba138eb4e960a93fd5b966165a71684155612ab19ef211e64971",
       "expected": "複数文書の照合問題",
       "spoken": "複数文書の照合問題",
-      "recognized": "複数文書の集合問題",
+      "recognized": "複数文書の称号問題",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": "複数文書の集合問題",
-          "avgLogprob": -0.3135480055442223,
-          "noSpeechProb": 0.17512854933738708
+          "end": 1.84,
+          "text": "複数文書の称号問題",
+          "avgLogprob": -0.12461917634521212,
+          "noSpeechProb": 3.042503965780541e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -3743,44 +3531,30 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1",
-        "evidence": "./data/audio/audit-batches/aceba7dbb6a6f58eeb0d51397c4e4bd05912bc94563b1520b7dccfc319d1d7e1.json",
-        "offset": 16.501437499999998,
-        "end": 18.549437499999996,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "数文書の証拠問題",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.1111,
-      "phonemeErrorRate": 0.0385,
+      "errorRate": 0.2222,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
-          "expected": "照",
-          "recognized": "集"
+          "expected": "照 合",
+          "recognized": "称 号"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#ja:terms:p7-multi",
       "comparison": {
-        "audioSha256": "1b30b91fe5cf062c768a1773608e6b4e9cee64f4bc946ad0ee693a0b818a70ba",
-        "recognized": "複数文書の集合問題",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "複数文書の照合問題",
+        "recognized": "複数文書の称号問題",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "フクスウブンショノショオゴオモンダイ",
-        "normalizedRecognized": "フクスウブンショノシュウゴオモンダイ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "フクスウブンショノショオゴオモンダイ",
+        "proofExpected": "フクスウブンショノショオゴオモンダイ",
+        "proofRecognized": "フクスウブンショノショオゴオモンダイ",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -3789,7 +3563,7 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "bf9629a78b57c315635053ff20de21a8c503c5ff39d7ea7ec6f9e774d363ac0d"
         },
@@ -3846,9 +3620,9 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "集合",
-              "reading": "シューゴー",
-              "normalized": "シュウゴオ",
+              "surface": "称号",
+              "reading": "ショーゴー",
+              "normalized": "ショオゴオ",
               "method": "unidic-pron"
             },
             {
@@ -3858,14 +3632,15 @@
               "method": "unidic-pron"
             }
           ]
-        }
+        },
+        "audioSha256": "1b30b91fe5cf062c768a1773608e6b4e9cee64f4bc946ad0ee693a0b818a70ba"
       }
     }
   },
   "generation": {
     "individual": {
-      "model": "whisper-small",
-      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "model": "whisper-large-v3-turbo",
+      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
       "device": "cpu",
       "computeType": "int8",
       "packages": {
@@ -3881,5 +3656,5 @@
     "screening": null,
     "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
   },
-  "sourceSha256": "8aa409e2e809672e6ed61f4a86c0947b716aae2144f223ff6a5b76d6d16b5504"
+  "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2"
 }

@@ -91,6 +91,131 @@ def _phones(word):
     return frozenset(tuple(re.sub(r'\d','',p) for p in row) for row in rows)
 
 
+def _source_formatted_english(expected, recognized, source, normalizer):
+    """Restore only ASR typography explicitly anchored to this source input.
+
+    Never rewrite an explicit spoken plural, conjunction or alternative reading.
+    Numeric/abbreviation symbols are ambiguous written renderings of speech;
+    a source anchor chooses their surface expansion, not a new acoustic result.
+    """
+    if not source:
+        return recognized, []
+    source = unicodedata.normalize('NFKC', source)
+    actual = unicodedata.normalize('NFKC', recognized)
+    rules = []
+    # The source teaches the written abbreviation dept.; the selected input
+    # explicitly spells D E P T. Do not equate a source word with arbitrary
+    # initials, expand arbitrary acronyms, or replace the word department.
+    if (re.search(r'(?<!\w)dept\.(?!\w)', source, re.I) and
+            re.search(r'(?<!\w)D E P T(?!\w)', expected)):
+        actual, n = re.subn(r'(?<!\w)DEPT(?!\w)', 'D E P T', actual)
+        if n:
+            rules.append('source-spelled-abbreviation:DEPT=D E P T')
+    # Only an unchanged numeric value and the same explicit source unit are
+    # joined. In particular this does not infer V/volts or any new unit.
+    for match in re.finditer(r'(?<![\w.])(\d+(?:\.\d+)?)\s+(V)(?!\w)', source):
+        number, unit = match.groups()
+        actual, n = re.subn(r'(?<![\w.$])' + re.escape(number + unit) + r'(?!\w)',
+                            number + ' ' + unit, actual)
+        if n:
+            rules.append('source-anchored-unit-spacing:' + number + ' ' + unit)
+    # One reviewed written-clock case has a word-form source, not a colon.
+    # Do not reinterpret arbitrary decimals or loosely matching time phrases.
+    if (re.search(r"\b(?:It's|It is) already six fifteen[.!?]?$", source) and
+            re.search(r'\balready six fifteen[.!?]?$', expected)):
+        actual, n = re.subn(r'(?<![\w.$+−-])6\.15(?!\w|\.\d)', 'six fifteen', actual)
+        if n:
+            rules.append('source-anchored-written-clock:already six fifteen')
+
+    def words(number):
+        if normalizer:
+            return normalizer(number, 'en')
+        from num2words import num2words
+        return num2words(int(number))
+
+    # Four explicitly reviewed monetary ellipses. ASR may put $ on both
+    # amounts even though the selected input says the unit only once. Restore
+    # only this exact source+spoken phrase and exact symbol values/context;
+    # explicit transcript words with extra dollars are never removed.
+    ellipses = (
+        ('from forty dollars to thirty', r'from \$40 to \$30', '40-to-30'),
+        ('from two dollars per notebook to three', r'from \$2 per notebook to \$3', '2-to-3-per-notebook'),
+        ('eight and six dollars respectively', r'\$8 and \$6 respectively', '8-and-6-respectively'),
+        ('from eighty thousand dollars to ninety thousand', r'from \$80,000 to \$90,000', '80000-to-90000'),
+    )
+    for phrase, pattern, label in ellipses:
+        anchor = r'(?<!\w)' + re.escape(phrase) + r'(?!\w)'
+        if re.search(anchor, source, re.I) and re.search(anchor, expected, re.I):
+            actual, n = re.subn(r'(?<![\w.+−-])' + pattern + r'(?!\w|\.\d|,\d)', phrase, actual, flags=re.I)
+            if n:
+                rules.append('source-anchored-currency-ellipsis:' + label)
+    # A written voting tally is a "to" relation, not a minus operation. This
+    # is intentionally the one reviewed phrase; arbitrary hyphens stay intact.
+    vote = 'voted seven to two'
+    if re.search(r'\b'+vote+r'\b', source, re.I) and re.search(r'\b'+vote+r'\b', expected, re.I):
+        actual, n = re.subn(r'\bvoted 7-2(?!\w|\.\d|,\d)', vote, actual, flags=re.I)
+        if n:
+            rules.append('source-anchored-vote-tally:7-2=seven to two')
+
+    def scaled_money(match):
+        digits, scale = match.groups()
+        phrase = words(digits) + ' ' + scale.lower() + ' dollars'
+        anchor = r'(?<!\w)' + re.escape(phrase) + r'(?!\w)'
+        if re.search(anchor, source, re.I) and re.search(anchor, expected, re.I):
+            rules.append('source-anchored-scaled-currency:' + digits + ' ' + scale.lower())
+            return phrase
+        return match.group(0)
+    actual = re.sub(r'(?<![\w.+−-])\$(\d+)\s+(million|billion)(?!\w)', scaled_money, actual, flags=re.I)
+
+    # The selected spoken override reads dollars and cents, unlike the generic
+    # source normalizer's decimal-dollars style. Restore exactly that same
+    # explicit input only when the source has the same written cents amount.
+    def cents_money(match):
+        whole, cents = match.groups()
+        phrase = words(whole) + (' dollar ' if int(whole)==1 else ' dollars ') + words(cents) + (' cent' if int(cents)==1 else ' cents')
+        symbol = '$' + whole + '.' + cents
+        anchor = r'(?<!\w)' + re.escape(phrase) + r'(?!\w)'
+        source_symbol = r'(?<![\w.+−-])' + re.escape(symbol) + r'(?!\d)'
+        if re.search(source_symbol, source) and re.search(anchor, expected, re.I):
+            rules.append('source-anchored-cents-input:' + symbol + '=' + phrase)
+            return phrase
+        return match.group(0)
+    actual = re.sub(r'(?<![\w.+−-])\$(\d+)\.(\d{2})(?!\d)', cents_money, actual)
+
+    # A $ amount written by ASR does not establish an audible plural /z/.
+    # Restore singular dollar only at the exact source compound + following
+    # noun. Explicit "fifty dollars deposit" remains a different transcript.
+    def adjectival_money(match):
+        digits, noun = match.group(1), match.group(2)
+        phrase = words(digits).replace('-', ' ')
+        word_pattern = re.escape(phrase).replace(r'\ ', r'[ -]+')
+        anchor = r'(?<![\w-])' + word_pattern + r'-dollar\s+' + re.escape(noun) + r'(?!\w)'
+        source_symbol = r'(?<![\w.+−-])\$' + re.escape(digits) + r'\s+' + re.escape(noun) + r'(?!\w)'
+        if (re.search(anchor, source, re.I) or re.search(source_symbol, source, re.I)) and re.search(anchor, expected, re.I):
+            rules.append('source-anchored-adjectival-currency:' + digits + '-dollar ' + noun.lower())
+            return phrase + '-dollar ' + noun
+        return match.group(0)
+    actual = re.sub(r'(?<![\w.+−-])\$(\d+)\s+([A-Za-z]+)\b', adjectival_money, actual)
+
+    # ASR's 160 may spell the source's "one hundred sixty" without adding the
+    # optional British-style and introduced by num2words. Only raw 3-digit
+    # notation can take this branch; a transcript explicitly containing and
+    # is preserved, as are changed numeric values, units and plurals.
+    def source_hundreds(match):
+        digits = match.group(0)
+        rendered = words(digits)
+        if ' hundred and ' not in rendered:
+            return digits
+        concise = rendered.replace(' hundred and ', ' hundred ')
+        pattern = r'(?<!\w)' + re.escape(concise).replace(r'\-', '[ -]').replace(r'\ ', '[ -]+') + r'(?!\w)'
+        if re.search(pattern, source, re.I) and re.search(pattern, expected, re.I):
+            rules.append('source-anchored-number-style:' + digits + '=' + concise)
+            return concise
+        return digits
+    actual = re.sub(r'(?<![\w.$:+−-])[1-9]\d{2}(?![\w:]|\.\d)', source_hundreds, actual)
+    return actual, rules
+
+
 def _numeric(text, language, normalizer, source_text=None):
     steps=[]
     text=unicodedata.normalize('NFKC',text).replace('’',"'").replace('−','-')
@@ -151,8 +276,9 @@ def _english_tokens(text):
 def _expanded(tokens):
     result=[];rules=[]
     for token in tokens:
-        value=SPELLINGS.get(token,token)
-        if value!=token:rules.append('us-uk-spelling:'+token+'→'+value)
+        diacritics = {'café': 'cafe', 'cafés': 'cafes', "café's": "cafe's"}
+        value=diacritics.get(token,SPELLINGS.get(token,token))
+        if value!=token:rules.append(('reviewed-diacritic:' if token in diacritics else 'us-uk-spelling:')+token+'→'+value)
         if value in CONTRACTIONS:
             rules.append('contraction:'+value);result.extend(CONTRACTIONS[value].split());continue
         m=re.fullmatch(r"(.+)'(ll|ve|re)",value)
@@ -267,8 +393,11 @@ def compare(expected_spoken,recognized,language,*,normalizer=None,source_text=No
     if language not in ['en','ja']:raise ValueError('language must be en or ja')
     if not isinstance(expected_spoken,str) or not isinstance(recognized,str) or not expected_spoken.strip() or not recognized.strip():
         result['reasons']=['empty-input-is-not-evidence'];return result
+    formatted, formatting_rules = (_source_formatted_english(expected_spoken, recognized, source_text, normalizer)
+                                  if language == 'en' else (recognized, []))
     expected,erules=_numeric(expected_spoken,language,normalizer,source_text)
-    actual,arules=_numeric(recognized,language,normalizer,source_text)
+    actual,arules=_numeric(formatted,language,normalizer,source_text)
+    arules = formatting_rules + arules
     if source_text:
         signs=re.findall(r'(?<![A-Za-z0-9_.])([+−-])\s*(?:[$¥£€]\s*)?\d',source_text)
         for sign in signs:

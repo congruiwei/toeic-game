@@ -29159,7 +29159,7 @@
       "src": "./audio/generated/en/am_puck/719ba06516b20d022914b2df7338f398.m4a",
       "sha256": "2c5735e23c6917a8ef79cede20f9331cb8204c5d6257e944d06a151124c149b8",
       "voiceId": "am_puck",
-      "fingerprint": "fb2d09bd67487b8f8d741a2e6421163284638dfa40e25be82abe5b57b64faf91",
+      "fingerprint": "8eff6396399e33cb69ee5539d9d1aea1ea62ff04e1884b3d63fd6c97eca6acd6",
       "expected": "The new café opens on Monday.",
       "spoken": "The new café opens on Monday.",
       "recognized": "The new cafe opens on Monday.",
@@ -29168,14 +29168,14 @@
           "start": 0.0,
           "end": 2.0,
           "text": " The new cafe opens on Monday.",
-          "avgLogprob": -0.34038509130477906,
-          "noSpeechProb": 0.004685439169406891
+          "avgLogprob": -0.3959649682044983,
+          "noSpeechProb": 4.9510413130393616e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -29190,17 +29190,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "fcf3425106a6dbbc1cef498b9d29abf4caf02f9ee88ba4fb2a601904a5c96b5e",
-        "evidence": "./data/audio/audit-batches/fcf3425106a6dbbc1cef498b9d29abf4caf02f9ee88ba4fb2a601904a5c96b5e.json",
-        "offset": 8.8960625,
-        "end": 10.730749999999999,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "The new cafe opens on Monday.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
       "errorRate": 0.1667,
       "phonemeErrorRate": null,
@@ -29211,21 +29201,19 @@
           "recognized": "cafe"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-preposition-02/sentence/0",
       "comparison": {
-        "audioSha256": "2c5735e23c6917a8ef79cede20f9331cb8204c5d6257e944d06a151124c149b8",
-        "recognized": "The new cafe opens on Monday.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The new café opens on Monday.",
+        "recognized": "The new cafe opens on Monday.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "reviewed-diacritic:café→cafe"
         ],
         "normalizedExpected": [
           "the",
           "new",
-          "café",
+          "cafe",
           "opens",
           "on",
           "monday"
@@ -29238,8 +29226,8 @@
           "on",
           "monday"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:new | t:cafe | t:opens | t:on | t:monday",
+        "proofRecognized": "t:the | t:new | t:cafe | t:opens | t:on | t:monday",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -29248,10 +29236,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "240185a1e1a8063a1d73db2c49b95c81cf7833f80afeaef34b3bd1b69fa39230"
-        }
+        },
+        "audioSha256": "2c5735e23c6917a8ef79cede20f9331cb8204c5d6257e944d06a151124c149b8"
       }
     },
     "gram-relative-04/sentence/0": {
@@ -29259,23 +29248,23 @@
       "src": "./audio/generated/en/af_heart/ad31c905c3c3e8e5b462c662445f41a7.m4a",
       "sha256": "b3039a21823a9d927ef0c15c2d1c9cd3d8447026e5cae724389980a1b6a926cc",
       "voiceId": "af_heart",
-      "fingerprint": "d380b109b7288a9ccea52ac7f910cbb5b74a278665fc0de45daedf56ff916c01",
+      "fingerprint": "25f5e049e645f5804225b55772e69d75ee9f3f43b4861abe9699b90287be11dc",
       "expected": "The café where we usually meet will reopen next week.",
       "spoken": "The café where we usually meet will reopen next week.",
-      "recognized": "The cafe where we usually meet will reopen next week.",
+      "recognized": "The café, where we usually meet, will reopen next week.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.08,
-          "text": " The cafe where we usually meet will reopen next week.",
-          "avgLogprob": -0.2828277477196285,
-          "noSpeechProb": 0.0011631364468485117
+          "end": 3.02,
+          "text": " The café, where we usually meet, will reopen next week.",
+          "avgLogprob": -0.15868816059082747,
+          "noSpeechProb": 9.13674843248946e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -29290,37 +29279,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "17ab65abd60736ad4099144a20eff82f41ee108869f359a329a98db300856cd0",
-        "evidence": "./data/audio/audit-batches/17ab65abd60736ad4099144a20eff82f41ee108869f359a329a98db300856cd0.json",
-        "offset": 15.813437499999997,
-        "end": 19.0134375,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "The cafe where we usually meet will reopen next week.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "caf",
-          "recognized": "cafe"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-relative-04/sentence/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "b3039a21823a9d927ef0c15c2d1c9cd3d8447026e5cae724389980a1b6a926cc",
-        "recognized": "The cafe where we usually meet will reopen next week.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The café where we usually meet will reopen next week.",
+        "recognized": "The café, where we usually meet, will reopen next week.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "the",
@@ -29336,7 +29307,7 @@
         ],
         "normalizedRecognized": [
           "the",
-          "cafe",
+          "café",
           "where",
           "we",
           "usually",
@@ -29346,8 +29317,8 @@
           "next",
           "week"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:café | t:where | t:we | t:usually | t:meet | t:will | t:reopen | t:next | t:week",
+        "proofRecognized": "t:the | t:café | t:where | t:we | t:usually | t:meet | t:will | t:reopen | t:next | t:week",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -29356,10 +29327,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "3a4ce1fd79645fab79dadf8610c425f58797e1df56275c58709d041eba3112b8"
-        }
+        },
+        "audioSha256": "b3039a21823a9d927ef0c15c2d1c9cd3d8447026e5cae724389980a1b6a926cc"
       }
     },
     "gram-passive-15/sentence/0": {
@@ -29367,23 +29339,23 @@
       "src": "./audio/generated/en/af_heart/88297344d49f79d02b365c1578f93c96.m4a",
       "sha256": "457a4a64f043c01221389232713bacf518eeb7ed10ff6d7daf531b556227ffbf",
       "voiceId": "af_heart",
-      "fingerprint": "e8e0b61b8e32b562c22e5f7bbbf2d1fad434b525b80cdc3804004088516726b8",
+      "fingerprint": "83ae99ddefbbcd8f601f0b6ebddd269c1929ce0735dcbe81f6718cce7d9483f7",
       "expected": "Last Friday the temporary bridge was opened to cyclists for the first time.",
       "spoken": "Last Friday the temporary bridge was opened to cyclists for the first time.",
       "recognized": "Last Friday, the temporary bridge was open to cyclists for the first time.",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.32,
+          "end": 4.28,
           "text": " Last Friday, the temporary bridge was open to cyclists for the first time.",
-          "avgLogprob": -0.22784195291368584,
-          "noSpeechProb": 0.0007692271610721946
+          "avgLogprob": -0.08000255885877107,
+          "noSpeechProb": 1.1763479079718309e-11
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -29398,18 +29370,6 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "48569888ae2b001984bec10eba81d0a4496a1c0ed9cd3d74d4f39fabe088278d",
-        "evidence": "./data/audio/audit-batches/48569888ae2b001984bec10eba81d0a4496a1c0ed9cd3d74d4f39fabe088278d.json",
-        "offset": 13.7200625,
-        "end": 18.2000625,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "Last Friday the temporary bridge was open to cyclists for the first time.",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "WER",
       "errorRate": 0.0769,
@@ -29421,14 +29381,12 @@
           "recognized": "open"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-passive-15/sentence/0",
       "comparison": {
-        "audioSha256": "457a4a64f043c01221389232713bacf518eeb7ed10ff6d7daf531b556227ffbf",
-        "recognized": "Last Friday, the temporary bridge was open to cyclists for the first time.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Last Friday the temporary bridge was opened to cyclists for the first time.",
+        "recognized": "Last Friday, the temporary bridge was open to cyclists for the first time.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -29472,10 +29430,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "966cb4bbba93817e29c5c09de78657db2d7c9be28cfab2f95d6ef03a4a30ebcd"
-        }
+        },
+        "audioSha256": "457a4a64f043c01221389232713bacf518eeb7ed10ff6d7daf531b556227ffbf"
       }
     },
     "gram-pronouns-03/sentence/0": {
@@ -29483,23 +29442,23 @@
       "src": "./audio/generated/en/am_puck/d8a52763cb6fe745b45279ad7f67f2fc.m4a",
       "sha256": "d7af1cd96f5929b3c63742673b436548d937fc79bd5eddc84b91c7f9b7284d49",
       "voiceId": "am_puck",
-      "fingerprint": "835f968999d63612407d2ffc257e2bb7c209fe7ea358749c05d7448d83483251",
+      "fingerprint": "3c737aa6c9878bf3693b8f6e2f461a2a13815e2a7f02fe3dceabd4a146e58545",
       "expected": "The owner checked the lock herself, without asking a technician to come.",
       "spoken": "The owner checked the lock herself, without asking a technician to come.",
-      "recognized": "The owner checked the locker self without asking a technician to come.",
+      "recognized": "The owner checked the lock herself, without asking a technician to come.",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.0,
-          "text": " The owner checked the locker self without asking a technician to come.",
-          "avgLogprob": -0.2757966611534357,
-          "noSpeechProb": 0.0008863374241627753
+          "end": 3.56,
+          "text": " The owner checked the lock herself, without asking a technician to come.",
+          "avgLogprob": -0.10188139186185949,
+          "noSpeechProb": 4.683630870291888e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -29514,39 +29473,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "6bf652bccb55392e74d2b41166694b870eaddf44c0a73c274d8c20db674eec09",
-        "evidence": "./data/audio/audit-batches/6bf652bccb55392e74d2b41166694b870eaddf44c0a73c274d8c20db674eec09.json",
-        "offset": 7.829375,
-        "end": 11.925374999999999,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "The owner checked the locker self without asking a technician to come.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "lock herself",
-          "recognized": "locker self"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-pronouns-03/sentence/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "d7af1cd96f5929b3c63742673b436548d937fc79bd5eddc84b91c7f9b7284d49",
-        "recognized": "The owner checked the locker self without asking a technician to come.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The owner checked the lock herself, without asking a technician to come.",
+        "recognized": "The owner checked the lock herself, without asking a technician to come.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "the",
@@ -29567,8 +29506,8 @@
           "owner",
           "checked",
           "the",
-          "locker",
-          "self",
+          "lock",
+          "herself",
           "without",
           "asking",
           "a",
@@ -29576,8 +29515,8 @@
           "to",
           "come"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:owner | t:checked | t:the | t:lock | t:herself | t:without | t:asking | t:a | t:technician | t:to | t:come",
+        "proofRecognized": "t:the | t:owner | t:checked | t:the | t:lock | t:herself | t:without | t:asking | t:a | t:technician | t:to | t:come",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -29586,10 +29525,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "f6844a5d622d9208d234f8d28fbf5beec003bd91373dcf89cbb7c4daa7d1a593"
-        }
+        },
+        "audioSha256": "d7af1cd96f5929b3c63742673b436548d937fc79bd5eddc84b91c7f9b7284d49"
       }
     },
     "gram-pronouns-06/sentence/0": {
@@ -29640,23 +29580,23 @@
       "src": "./audio/generated/en/af_heart/9749cfd024dcb603a3178ca671c192c1.m4a",
       "sha256": "d2e97eace52ee2e26e220280e9e8776b311a9761298befa4e4a20df9d5563d81",
       "voiceId": "af_heart",
-      "fingerprint": "bb558045048908469133435623419425f4546ee5e7535b87af800c63644f6683",
+      "fingerprint": "2ecbafa401f599626aa91f57f4657f47f81d8214f3946eb894a93d50982682c9",
       "expected": "The forms misplaced during the move had to be printed again.",
       "spoken": "The forms misplaced during the move had to be printed again.",
-      "recognized": "The form's misplace during the move had to be printed again.",
+      "recognized": "The forms misplaced during the move had to be printed again.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.2800000000000002,
-          "text": " The form's misplace during the move had to be printed again.",
-          "avgLogprob": -0.266414810629452,
-          "noSpeechProb": 0.001650695689022541
+          "end": 3.16,
+          "text": " The forms misplaced during the move had to be printed again.",
+          "avgLogprob": -0.06137926438275505,
+          "noSpeechProb": 5.515142921345972e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -29671,37 +29611,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "36315fb4efa01c8cf1d10cdd43a3570bc5f3d19c34e0bb0fc263ff60f56461cb",
-        "evidence": "./data/audio/audit-batches/36315fb4efa01c8cf1d10cdd43a3570bc5f3d19c34e0bb0fc263ff60f56461cb.json",
-        "offset": 14.658749999999998,
-        "end": 18.029437499999997,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "The form's misplace during the move had to be printed again.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.2727,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "forms misplaced",
-          "recognized": "form s misplace"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-modifiers-12/sentence/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "d2e97eace52ee2e26e220280e9e8776b311a9761298befa4e4a20df9d5563d81",
-        "recognized": "The form's misplace during the move had to be printed again.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The forms misplaced during the move had to be printed again.",
+        "recognized": "The forms misplaced during the move had to be printed again.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "the",
@@ -29718,8 +29640,8 @@
         ],
         "normalizedRecognized": [
           "the",
-          "form's",
-          "misplace",
+          "forms",
+          "misplaced",
           "during",
           "the",
           "move",
@@ -29729,8 +29651,8 @@
           "printed",
           "again"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:forms | t:misplaced | t:during | t:the | t:move | t:had | t:to | t:be | t:printed | t:again",
+        "proofRecognized": "t:the | t:forms | t:misplaced | t:during | t:the | t:move | t:had | t:to | t:be | t:printed | t:again",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -29739,10 +29661,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "1c1a6764e7320dc906d751d1ae24f52f66b52bcc7d3e1888593caaf11d46d127"
-        }
+        },
+        "audioSha256": "d2e97eace52ee2e26e220280e9e8776b311a9761298befa4e4a20df9d5563d81"
       }
     },
     "gram-quantity-04/sentence/0": {
@@ -29988,23 +29911,23 @@
       "src": "./audio/generated/en/af_heart/e6e04227597b5898442d3c365dc52b69.m4a",
       "sha256": "725f00538057b856198874dd1454524da15d7a4096e640c83aee86d7d43009a6",
       "voiceId": "af_heart",
-      "fingerprint": "1d01e522454f51868f874bd8d23b0c7786383d7d432694c55b06527d33d15047",
+      "fingerprint": "cc51164dc05e2991d6ccb63e23953c7b28b2547abd3433d5d05732bb464169ad",
       "expected": "The glass is too wide for its frame, so the glazier will trim two millimeters off one edge.",
       "spoken": "The glass is too wide for its frame, so the glazier will trim two millimeters off one edge.",
-      "recognized": "The glass is too wide for its frame, so the glacier will trim two millimeters off one edge.",
+      "recognized": "The glass is too wide for its frame, so the glazier will trim 2 millimeters off one edge.",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.0,
-          "text": " The glass is too wide for its frame, so the glacier will trim two millimeters off one edge.",
-          "avgLogprob": -0.20450776685839114,
-          "noSpeechProb": 0.0006315243663266301
+          "end": 4.9,
+          "text": " The glass is too wide for its frame, so the glazier will trim 2 millimeters off one edge.",
+          "avgLogprob": -0.07201423558096091,
+          "noSpeechProb": 2.2758318667104316e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -30019,37 +29942,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "a3ca49a70e71301e086d4298d9c23561402f1bcf8f7767b5a315293535fe9f29",
-        "evidence": "./data/audio/audit-batches/a3ca49a70e71301e086d4298d9c23561402f1bcf8f7767b5a315293535fe9f29.json",
-        "offset": 16.106687500000003,
-        "end": 21.184062500000003,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "The glass is too wide for its frame, so the glacier will trim 2 millimeters off one edge.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.0556,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "glazier",
-          "recognized": "glacier"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-25/sentence/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "725f00538057b856198874dd1454524da15d7a4096e640c83aee86d7d43009a6",
-        "recognized": "The glass is too wide for its frame, so the glacier will trim two millimeters off one edge.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The glass is too wide for its frame, so the glazier will trim two millimeters off one edge.",
+        "recognized": "The glass is too wide for its frame, so the glazier will trim 2 millimeters off one edge.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "author-number-and-input-normalization"
         ],
         "normalizedExpected": [
           "the",
@@ -30082,7 +29987,7 @@
           "frame",
           "so",
           "the",
-          "glacier",
+          "glazier",
           "will",
           "trim",
           "two",
@@ -30091,8 +29996,8 @@
           "one",
           "edge"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:glass | t:is | t:too | t:wide | t:for | t:its | t:frame | t:so | t:the | t:glazier | t:will | t:trim | t:two | t:millimeters | t:off | t:one | t:edge",
+        "proofRecognized": "t:the | t:glass | t:is | t:too | t:wide | t:for | t:its | t:frame | t:so | t:the | t:glazier | t:will | t:trim | t:two | t:millimeters | t:off | t:one | t:edge",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -30101,10 +30006,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "258ba1330ab125dafab8caf3907d989e7e729555ffcedb0c9fff0dd1456aa5f1"
-        }
+        },
+        "audioSha256": "725f00538057b856198874dd1454524da15d7a4096e640c83aee86d7d43009a6"
       }
     },
     "gram-lexis-26/sentence/0": {
@@ -30244,23 +30150,23 @@
       "src": "./audio/generated/en/af_heart/f60f4d6fdc6ab1c0955d9426b9cfbcbe.m4a",
       "sha256": "d58399849a7a4bd32cece114a929409c175ab86badbea0bdd75707b7bfe4ce72",
       "voiceId": "af_heart",
-      "fingerprint": "9a32ee33171ce7c85ad16304542fe76b29867c868bd0e919aecdc33b910cc0c4",
+      "fingerprint": "2f3372f8300d6e48dac20534ccafeea8896f363b23cb7a0a200413714e688fac",
       "expected": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
       "spoken": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
       "recognized": "A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.0,
+          "end": 5.14,
           "text": " A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
-          "avgLogprob": -0.19060608386993408,
-          "noSpeechProb": 0.0011285902000963688
+          "avgLogprob": -0.11190894842147828,
+          "noSpeechProb": 1.3847574345873803e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -30275,18 +30181,6 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "3a1ec7e3b2fa8a4902425bf91ece5d142b28ccc0308127f73b854dfc0cbaffec",
-        "evidence": "./data/audio/audit-batches/3a1ec7e3b2fa8a4902425bf91ece5d142b28ccc0308127f73b854dfc0cbaffec.json",
-        "offset": 0.4,
-        "end": 5.6906875,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "WER",
       "errorRate": 0.0526,
@@ -30298,14 +30192,12 @@
           "recognized": "root"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:grammar:gram-lexis-52/sentence/0",
       "comparison": {
-        "audioSha256": "d58399849a7a4bd32cece114a929409c175ab86badbea0bdd75707b7bfe4ce72",
-        "recognized": "A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
+        "recognized": "A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -30361,10 +30253,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "38db924f3c5ce81d9d779668a025e06ef0be2fba1824b1388b56826bc0df6cf3"
-        }
+        },
+        "audioSha256": "d58399849a7a4bd32cece114a929409c175ab86badbea0bdd75707b7bfe4ce72"
       }
     },
     "gram-lexis-78/sentence/0": {
@@ -30627,8 +30520,8 @@
   },
   "generation": {
     "individual": {
-      "model": "whisper-small",
-      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "model": "whisper-large-v3-turbo",
+      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
       "device": "cpu",
       "computeType": "int8",
       "packages": {
@@ -30644,5 +30537,5 @@
     "screening": null,
     "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
   },
-  "sourceSha256": "8aa409e2e809672e6ed61f4a86c0947b716aae2144f223ff6a5b76d6d16b5504"
+  "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2"
 }

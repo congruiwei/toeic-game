@@ -55309,23 +55309,23 @@
       "src": "./audio/generated/en/am_puck/804e571e655290192e17d0d6551bb20a.m4a",
       "sha256": "b357814b8483cc9280d94bafeca709992f9d7be1ddbbebb88227cd90b79be0fe",
       "voiceId": "am_puck",
-      "fingerprint": "2476c298e1f79a8ca1c91a569c86a0735ac73391dc390ae53942e77997b27f39",
+      "fingerprint": "a45ccef4d4461854c1320631a687e8c14b2fe593485ecb9ad4462d53549b2b55",
       "expected": "Who",
       "spoken": "Who",
-      "recognized": "HELL",
+      "recognized": "Who?",
       "segments": [
         {
           "start": 0.0,
           "end": 0.5,
-          "text": " HELL",
-          "avgLogprob": -0.9493315696716309,
-          "noSpeechProb": 0.21786126494407654
+          "text": " Who?",
+          "avgLogprob": -1.2249491691589356,
+          "noSpeechProb": 1.6581580553065578e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -55339,48 +55339,29 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "ffcac3b6aa1f7be8b3dea119f7833d0ce91f5d0cced70851cbae95a6e065d895",
-        "evidence": "./data/audio/audit-batches/ffcac3b6aa1f7be8b3dea119f7833d0ce91f5d0cced70851cbae95a6e065d895.json",
-        "offset": 17.197499999999998,
-        "end": 17.794874999999998,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "Who?",
-        "normalizedExact": true
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 1.0,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "who",
-          "recognized": "hell"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-003/options/2/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "b357814b8483cc9280d94bafeca709992f9d7be1ddbbebb88227cd90b79be0fe",
-        "recognized": "HELL",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Who",
+        "recognized": "Who?",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "who"
         ],
         "normalizedRecognized": [
-          "hell"
+          "who"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:who",
+        "proofRecognized": "t:who",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -55389,10 +55370,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "c17b94b8c9394d40151ba4078f384f0bfe77936d258bc2029bd8b857685cd3f1"
-        }
+        },
+        "audioSha256": "b357814b8483cc9280d94bafeca709992f9d7be1ddbbebb88227cd90b79be0fe"
       }
     },
     "p2-007/options/1/0": {
@@ -55400,23 +55382,23 @@
       "src": "./audio/generated/en/am_puck/7c6ad6e80270fbd1bf85ea1f4135aeb6.m4a",
       "sha256": "aba262d8745980db2175f2f1bf3da011905b86a81c516a40881e441f1ad6a5a5",
       "voiceId": "am_puck",
-      "fingerprint": "468f6098867a84ce85e8284b886f1d9b69d39526a94eb70bb13837d446ef3780",
+      "fingerprint": "b435b11425be1aaa82c81054731635d91c75907acf8d1312d4790b5558a3a385",
       "expected": "Are",
       "spoken": "Are",
-      "recognized": "All right.",
+      "recognized": "Ari.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " All right.",
-          "avgLogprob": -0.9597172339757284,
-          "noSpeechProb": 0.15646274387836456
+          "end": 0.32,
+          "text": " Ari.",
+          "avgLogprob": -0.8642670631408691,
+          "noSpeechProb": 1.0808728911904097e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -55430,37 +55412,24 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "03c0726befec0c09627f16c004bbc4485b23e764da5158f2930dd791ba3fc675",
-        "evidence": "./data/audio/audit-batches/03c0726befec0c09627f16c004bbc4485b23e764da5158f2930dd791ba3fc675.json",
-        "offset": 13.861499999999998,
-        "end": 14.501499999999998,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "R.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 2.0,
+      "errorRate": 1.0,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "are",
-          "recognized": "all right"
+          "recognized": "ari"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-007/options/1/0",
       "comparison": {
-        "audioSha256": "aba262d8745980db2175f2f1bf3da011905b86a81c516a40881e441f1ad6a5a5",
-        "recognized": "All right.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Are",
+        "recognized": "Ari.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -55468,8 +55437,7 @@
           "are"
         ],
         "normalizedRecognized": [
-          "all",
-          "right"
+          "ari"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -55481,10 +55449,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "36521b4fc24dbcafd9929311fdd882a0abcf32556ba4f873bab68dc21b69ec71"
-        }
+        },
+        "audioSha256": "aba262d8745980db2175f2f1bf3da011905b86a81c516a40881e441f1ad6a5a5"
       }
     },
     "p2-011/options/2/0": {
@@ -55492,23 +55461,23 @@
       "src": "./audio/generated/en/am_puck/ff5afb52570b231095c7b82a3d7bc57c.m4a",
       "sha256": "8d327d3da62c7a9258f23725a1d106044529b7302421dd71d787b3f51c8e4fd4",
       "voiceId": "am_puck",
-      "fingerprint": "07f85ea36c26e47ebef99201cb86d7cd7b21a64d3387d3c5f601da41bd7642a7",
+      "fingerprint": "55ab8347b39d6a1008723fab12e20fec12ffb10ae3d593689a8db2ef65ca6d25",
       "expected": "Will",
       "spoken": "Will",
-      "recognized": "Well...",
+      "recognized": "Well,",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.5,
-          "text": " Well...",
-          "avgLogprob": -0.648771095275879,
-          "noSpeechProb": 0.09315679222345352
+          "end": 0.32,
+          "text": " Well,",
+          "avgLogprob": -0.6670786380767822,
+          "noSpeechProb": 2.5767533939902165e-11
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -55522,19 +55491,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f",
-        "evidence": "./data/audio/audit-batches/a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f.json",
-        "offset": 1.6400000000000001,
-        "end": 2.3226875000000002,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary",
-          "word-in-padding"
-        ],
-        "recognized": "When...",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 1.0,
@@ -55546,14 +55503,12 @@
           "recognized": "well"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-011/options/2/0",
       "comparison": {
-        "audioSha256": "8d327d3da62c7a9258f23725a1d106044529b7302421dd71d787b3f51c8e4fd4",
-        "recognized": "Well...",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Will",
+        "recognized": "Well,",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -55573,10 +55528,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "6cef4ccc1019d6cee6b9cad39d49cabf808ba2e0665d5832b70c44c09c2dfae0"
-        }
+        },
+        "audioSha256": "8d327d3da62c7a9258f23725a1d106044529b7302421dd71d787b3f51c8e4fd4"
       }
     },
     "p2-014/options/0/0": {
@@ -55584,23 +55540,23 @@
       "src": "./audio/generated/en/am_puck/ff5afb52570b231095c7b82a3d7bc57c.m4a",
       "sha256": "8d327d3da62c7a9258f23725a1d106044529b7302421dd71d787b3f51c8e4fd4",
       "voiceId": "am_puck",
-      "fingerprint": "07f85ea36c26e47ebef99201cb86d7cd7b21a64d3387d3c5f601da41bd7642a7",
+      "fingerprint": "55ab8347b39d6a1008723fab12e20fec12ffb10ae3d593689a8db2ef65ca6d25",
       "expected": "Will",
       "spoken": "Will",
-      "recognized": "Well...",
+      "recognized": "Well,",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.5,
-          "text": " Well...",
-          "avgLogprob": -0.648771095275879,
-          "noSpeechProb": 0.09315679222345352
+          "end": 0.32,
+          "text": " Well,",
+          "avgLogprob": -0.6670786380767822,
+          "noSpeechProb": 2.5767533939902165e-11
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -55614,19 +55570,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f",
-        "evidence": "./data/audio/audit-batches/a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f.json",
-        "offset": 1.6400000000000001,
-        "end": 2.3226875000000002,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary",
-          "word-in-padding"
-        ],
-        "recognized": "When...",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 1.0,
@@ -55638,14 +55582,12 @@
           "recognized": "well"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-014/options/0/0",
       "comparison": {
-        "audioSha256": "8d327d3da62c7a9258f23725a1d106044529b7302421dd71d787b3f51c8e4fd4",
-        "recognized": "Well...",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Will",
+        "recognized": "Well,",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -55665,10 +55607,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "6cef4ccc1019d6cee6b9cad39d49cabf808ba2e0665d5832b70c44c09c2dfae0"
-        }
+        },
+        "audioSha256": "8d327d3da62c7a9258f23725a1d106044529b7302421dd71d787b3f51c8e4fd4"
       }
     },
     "p2-012/options/0/0": {
@@ -55676,23 +55619,23 @@
       "src": "./audio/generated/en/af_heart/af3df0f35a8477c663336da2e24a0c46.m4a",
       "sha256": "ca812fcc849827a045c6c4bed81543dee159c3f82613e67525ef1e116aa38606",
       "voiceId": "af_heart",
-      "fingerprint": "ce18a21fbbd09e59bc8fb5665aac643ab93d1a8026d75be9f6727d88e47027d1",
+      "fingerprint": "b3eb24c63bca8bab00532ce4ccd03dcb7f3fd869e2e2b174424f405143449cc3",
       "expected": "Should",
       "spoken": "Should",
-      "recognized": "She said it.",
+      "recognized": "See you next time.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.56,
-          "text": " She said it.",
-          "avgLogprob": -0.8374702078955514,
-          "noSpeechProb": 0.1411942094564438
+          "end": 0.5,
+          "text": " See you next time.",
+          "avgLogprob": -1.0253320038318634,
+          "noSpeechProb": 6.410664776801411e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -55706,35 +55649,24 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f",
-        "evidence": "./data/audio/audit-batches/a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f.json",
-        "offset": 5.1866875,
-        "end": 5.826687499999999,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "She said it.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 3.0,
+      "errorRate": 4.0,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "should",
-          "recognized": "she said it"
+          "recognized": "see you next time"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-012/options/0/0",
       "comparison": {
-        "audioSha256": "ca812fcc849827a045c6c4bed81543dee159c3f82613e67525ef1e116aa38606",
-        "recognized": "She said it.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Should",
+        "recognized": "See you next time.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -55742,9 +55674,10 @@
           "should"
         ],
         "normalizedRecognized": [
-          "she",
-          "said",
-          "it"
+          "see",
+          "you",
+          "next",
+          "time"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -55756,10 +55689,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "4a48acd1eabea70a005dba6db1fd2627ca767555b678c39f83f56a044644fdc6"
-        }
+        },
+        "audioSha256": "ca812fcc849827a045c6c4bed81543dee159c3f82613e67525ef1e116aa38606"
       }
     },
     "p2-013/audio/0": {
@@ -55810,23 +55744,23 @@
       "src": "./audio/generated/en/am_puck/12c25a646091846ea3bfb66173280213.m4a",
       "sha256": "69fb9acedca36e667935ddfa0c326d62344301b1f379ea67baa35c361900e18f",
       "voiceId": "am_puck",
-      "fingerprint": "f24eb303b33b5eecd8326e3177a28a6852186a7fc1dd7a70b90715d8296477a1",
+      "fingerprint": "de7be5cbbaa23609e54c5958c721f0a7fe93bda51c0dc9b0698bf78b37ac5817",
       "expected": "Was",
       "spoken": "Was",
-      "recognized": "wise",
+      "recognized": "why is",
       "segments": [
         {
           "start": 0.0,
           "end": 2.0,
-          "text": " wise",
-          "avgLogprob": -0.6455210298299789,
-          "noSpeechProb": 0.19811470806598663
+          "text": " why is",
+          "avgLogprob": -0.9367003440856934,
+          "noSpeechProb": 6.249804146429838e-11
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -55840,37 +55774,24 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f",
-        "evidence": "./data/audio/audit-batches/a7dfd6f9545119a91e3c557479586af618f57ae143e0c296f3adda99ff6d670f.json",
-        "offset": 19.077437500000002,
-        "end": 19.760125000000002,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "Was.",
-        "normalizedExact": true
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 1.0,
+      "errorRate": 2.0,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "was",
-          "recognized": "wise"
+          "recognized": "why is"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-014/options/2/0",
       "comparison": {
-        "audioSha256": "69fb9acedca36e667935ddfa0c326d62344301b1f379ea67baa35c361900e18f",
-        "recognized": "wise",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Was",
+        "recognized": "why is",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -55878,7 +55799,8 @@
           "was"
         ],
         "normalizedRecognized": [
-          "wise"
+          "why",
+          "is"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -55890,10 +55812,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "9f276c3991cc8cd213a676e35ca16d43271a98f2237684b215bb118ae5cc8cd3"
-        }
+        },
+        "audioSha256": "69fb9acedca36e667935ddfa0c326d62344301b1f379ea67baa35c361900e18f"
       }
     },
     "p2-015/audio/0": {
@@ -55987,23 +55910,23 @@
       "src": "./audio/generated/en/af_bella/1e2b94eb4fec9f7061b0c0522020b6e7.m4a",
       "sha256": "d00facbef9db3645545195328c2eb19b481941b31b943cf5b52d58b15fb41fc4",
       "voiceId": "af_bella",
-      "fingerprint": "5053bb7a1fb5d89861ac8f841b060e0dc45d95096ede0eded8e1a464776f25b0",
+      "fingerprint": "12af96de00a04f6aca5c8de6f3df0e62eb40cbf1759f9126425580175ea12154",
       "expected": "Luis has the front desk till noon.",
       "spoken": "Luis has the front desk till noon.",
-      "recognized": "Lewis has the front desk till noon.",
+      "recognized": "Louis has the front desk till noon.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " Lewis has the front desk till noon.",
-          "avgLogprob": -0.29244807633486664,
-          "noSpeechProb": 0.01931227743625641
+          "end": 1.68,
+          "text": " Louis has the front desk till noon.",
+          "avgLogprob": -0.35452625968239526,
+          "noSpeechProb": 1.1523156560888648e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56017,18 +55940,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "44f2d682ec650d48299b648094f1a9ceecac6d5ea80fa4eb1d463d55cfbacbdf",
-        "evidence": "./data/audio/audit-batches/44f2d682ec650d48299b648094f1a9ceecac6d5ea80fa4eb1d463d55cfbacbdf.json",
-        "offset": 0.4,
-        "end": 2.32,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "has the front desk till noon.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 0.1429,
@@ -56037,17 +55949,15 @@
         {
           "operation": "replace",
           "expected": "luis",
-          "recognized": "lewis"
+          "recognized": "louis"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-017/options/2/0",
       "comparison": {
-        "audioSha256": "d00facbef9db3645545195328c2eb19b481941b31b943cf5b52d58b15fb41fc4",
-        "recognized": "Lewis has the front desk till noon.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Luis has the front desk till noon.",
+        "recognized": "Louis has the front desk till noon.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -56061,7 +55971,7 @@
           "noon"
         ],
         "normalizedRecognized": [
-          "lewis",
+          "louis",
           "has",
           "the",
           "front",
@@ -56079,10 +55989,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "dd3eaf8ec39f693f3c6038f33e53c078e7f480a706a8af3e9a4e232fad0d7f85"
-        }
+        },
+        "audioSha256": "d00facbef9db3645545195328c2eb19b481941b31b943cf5b52d58b15fb41fc4"
       }
     },
     "p2-020/audio/0": {
@@ -56090,23 +56001,23 @@
       "src": "./audio/generated/en/am_puck/8195e32b8264b17f1b55f6aebebd7ab5.m4a",
       "sha256": "50e6d1d01749f690bfb8e231cf8c992b1437e06ee43644071e069a5dace63ce2",
       "voiceId": "am_puck",
-      "fingerprint": "8d583d300b6f666487d85b67955d68f008b50ef8943d7476b27af8f696e80468",
+      "fingerprint": "df7497dda6646f54979994afa9cd6ea6bf7917b86c653f354cb2fbacaf28f520",
       "expected": "Has the courier arrived yet?",
       "spoken": "Has the courier arrived yet?",
-      "recognized": "Has the career arrived yet?",
+      "recognized": "Has the courier arrived yet?",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " Has the career arrived yet?",
-          "avgLogprob": -0.40854724248250324,
-          "noSpeechProb": 0.019646279513835907
+          "end": 1.24,
+          "text": " Has the courier arrived yet?",
+          "avgLogprob": -0.36625218093395234,
+          "noSpeechProb": 3.4276947599720664e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56120,39 +56031,20 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "44f2d682ec650d48299b648094f1a9ceecac6d5ea80fa4eb1d463d55cfbacbdf",
-        "evidence": "./data/audio/audit-batches/44f2d682ec650d48299b648094f1a9ceecac6d5ea80fa4eb1d463d55cfbacbdf.json",
-        "offset": 20.6908125,
-        "end": 22.2695,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "Has the courier arrived yet?",
-        "normalizedExact": true
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.2,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "courier",
-          "recognized": "career"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-020/audio/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "50e6d1d01749f690bfb8e231cf8c992b1437e06ee43644071e069a5dace63ce2",
-        "recognized": "Has the career arrived yet?",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Has the courier arrived yet?",
+        "recognized": "Has the courier arrived yet?",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "has",
@@ -56164,12 +56056,12 @@
         "normalizedRecognized": [
           "has",
           "the",
-          "career",
+          "courier",
           "arrived",
           "yet"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:has | t:the | t:courier | t:arrived | t:yet",
+        "proofRecognized": "t:has | t:the | t:courier | t:arrived | t:yet",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -56178,10 +56070,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "3d970de7a7ce5170cef51b3bb381c5a198e15847c104018734de2b48238fb50f"
-        }
+        },
+        "audioSha256": "50e6d1d01749f690bfb8e231cf8c992b1437e06ee43644071e069a5dace63ce2"
       }
     },
     "p2-022/options/0/0": {
@@ -56232,23 +56125,23 @@
       "src": "./audio/generated/en/af_bella/8abdd6098f3aa2421256a6e69b983b34.m4a",
       "sha256": "ac89bef5b5d87143d21b8bfb9391fbdf68e992fd257ec6db95edcd5dc0fedbe6",
       "voiceId": "af_bella",
-      "fingerprint": "05066bdf0928338a90cb91c7b685efacacb04a1acd6b2bfde0bbdcb79e702385",
+      "fingerprint": "66844e16483555c2da720698745232e9a70a48233b76a6c4bf1f49ac3e19e85f",
       "expected": "Most of the staff liked the invitation design.",
       "spoken": "Most of the staff liked the invitation design.",
-      "recognized": "Most of the staff, like the invitation design.",
+      "recognized": "Most of the staff like the invitation design.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.0,
-          "text": " Most of the staff, like the invitation design.",
-          "avgLogprob": -0.35429529960338885,
-          "noSpeechProb": 0.003911682870239019
+          "end": 2.72,
+          "text": " Most of the staff like the invitation design.",
+          "avgLogprob": -0.19129625956217447,
+          "noSpeechProb": 2.1800126807913767e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56262,18 +56155,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "6ef1797563d2c93aa66bfc896c76641140acade7ad26e1a73a0550c0e8708e14",
-        "evidence": "./data/audio/audit-batches/6ef1797563d2c93aa66bfc896c76641140acade7ad26e1a73a0550c0e8708e14.json",
-        "offset": 15.904062499999997,
-        "end": 18.890749999999997,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "Most of the staff, like the invitation design,",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 0.125,
@@ -56285,14 +56167,12 @@
           "recognized": "like"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-031/options/2/0",
       "comparison": {
-        "audioSha256": "ac89bef5b5d87143d21b8bfb9391fbdf68e992fd257ec6db95edcd5dc0fedbe6",
-        "recognized": "Most of the staff, like the invitation design.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Most of the staff liked the invitation design.",
+        "recognized": "Most of the staff like the invitation design.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -56326,10 +56206,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "fe82429809c14ebffd2d493efe0e49d374460c111482ee830d4c8091ad020d93"
-        }
+        },
+        "audioSha256": "ac89bef5b5d87143d21b8bfb9391fbdf68e992fd257ec6db95edcd5dc0fedbe6"
       }
     },
     "p2-037/audio/0": {
@@ -56337,23 +56218,23 @@
       "src": "./audio/generated/en/af_bella/914ba0a5f59e12b29aa638af0066e7f0.m4a",
       "sha256": "86c6ae03fd108f0a3e688b1a6b8c6a3987c8a198874b636334dd731e610da6da",
       "voiceId": "af_bella",
-      "fingerprint": "6b6799039e260d812ebb4d8252b86cebba8916491bc1e539f1efb9efa851bc15",
+      "fingerprint": "b519eea701568f48689ecf057d625f89702c3605d14b6fa51977e81e9abc741c",
       "expected": "Who'll take minutes if Dana is presenting?",
       "spoken": "Who'll take minutes if Dana is presenting?",
       "recognized": "We'll take minutes if Dana is presenting.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
+          "end": 1.86,
           "text": " We'll take minutes if Dana is presenting.",
-          "avgLogprob": -0.24470988661050797,
-          "noSpeechProb": 0.0037157288752496243
+          "avgLogprob": -0.08780693883697192,
+          "noSpeechProb": 3.914346711347827e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56367,18 +56248,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "e3daa4776eb7ef45247e61af3d83de9d70579ea9e69e96db6ad08282a0afd40d",
-        "evidence": "./data/audio/audit-batches/e3daa4776eb7ef45247e61af3d83de9d70579ea9e69e96db6ad08282a0afd40d.json",
-        "offset": 0.4,
-        "end": 2.6186875,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "take minutes if Dana is presenting.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 0.25,
@@ -56390,14 +56260,12 @@
           "recognized": "we will"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-037/audio/0",
       "comparison": {
-        "audioSha256": "86c6ae03fd108f0a3e688b1a6b8c6a3987c8a198874b636334dd731e610da6da",
-        "recognized": "We'll take minutes if Dana is presenting.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Who'll take minutes if Dana is presenting?",
+        "recognized": "We'll take minutes if Dana is presenting.",
         "reasons": [
           "contraction:who'll",
           "contraction:we'll",
@@ -56433,10 +56301,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "6f1b4a1a7b7584dfd6f8ac88dfd9ec340f7e4c821f9b24b6a299826cbcd80f8e"
-        }
+        },
+        "audioSha256": "86c6ae03fd108f0a3e688b1a6b8c6a3987c8a198874b636334dd731e610da6da"
       }
     },
     "p2-037/options/1/0": {
@@ -56444,23 +56313,23 @@
       "src": "./audio/generated/en/am_puck/cc57dd8bc2ba8c01c0435585faa30e3d.m4a",
       "sha256": "a79a54181a9860f76842722223849083611717a1b042f71aef54cab8ffbfee35",
       "voiceId": "am_puck",
-      "fingerprint": "bfa08472444fec31a3de51c7c94a2af358a0ebc77d5b24c35e8958eb62835686",
+      "fingerprint": "464fe97d27526ccc90a2247f13b63e68572871c53a8b8af22388bdb95e0eaef4",
       "expected": "I'll bring my laptop and type them up.",
       "spoken": "I'll bring my laptop and type them up.",
-      "recognized": "I'll bring my laptop and tape them up.",
+      "recognized": "I'll bring my laptop and type them up.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " I'll bring my laptop and tape them up.",
-          "avgLogprob": -0.194909733075362,
-          "noSpeechProb": 0.0030726550612598658
+          "end": 1.9000000000000001,
+          "text": " I'll bring my laptop and type them up.",
+          "avgLogprob": -0.2052898406982422,
+          "noSpeechProb": 1.8542319643686384e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56474,44 +56343,23 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "e3daa4776eb7ef45247e61af3d83de9d70579ea9e69e96db6ad08282a0afd40d",
-        "evidence": "./data/audio/audit-batches/e3daa4776eb7ef45247e61af3d83de9d70579ea9e69e96db6ad08282a0afd40d.json",
-        "offset": 6.5066875,
-        "end": 8.4266875,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "bring my laptop and tape them up.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1111,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "type",
-          "recognized": "tape"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-037/options/1/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "a79a54181a9860f76842722223849083611717a1b042f71aef54cab8ffbfee35",
-        "recognized": "I'll bring my laptop and tape them up.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "I'll bring my laptop and type them up.",
+        "recognized": "I'll bring my laptop and type them up.",
         "reasons": [
-          "contraction:i'll",
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
-          "i",
-          "will",
+          "i'll",
           "bring",
           "my",
           "laptop",
@@ -56521,18 +56369,17 @@
           "up"
         ],
         "normalizedRecognized": [
-          "i",
-          "will",
+          "i'll",
           "bring",
           "my",
           "laptop",
           "and",
-          "tape",
+          "type",
           "them",
           "up"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:i'll | t:bring | t:my | t:laptop | t:and | t:type | t:them | t:up",
+        "proofRecognized": "t:i'll | t:bring | t:my | t:laptop | t:and | t:type | t:them | t:up",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -56541,10 +56388,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "f56318773d24af423a552fd095668f647874991de819f84e05a56600d9c5bd5d"
-        }
+        },
+        "audioSha256": "a79a54181a9860f76842722223849083611717a1b042f71aef54cab8ffbfee35"
       }
     },
     "p2-038/options/1/0": {
@@ -56595,23 +56443,23 @@
       "src": "./audio/generated/en/af_heart/c38ae5153055cdf46b1109d16a446124.m4a",
       "sha256": "f3a8988317355f210022675a26ba232bf957b8240687ff7e0b67c7bad6a871f9",
       "voiceId": "af_heart",
-      "fingerprint": "826c6b138c8496568f9ef0a1d6ef094d208b961d35a525714e65d85e663aa104",
+      "fingerprint": "94cc8c6923c801f0bf1b9ee5b03599873ab66ccdf1f0072acb39409095e44bcf",
       "expected": "I'd go with whichever one insures fragile items.",
       "spoken": "I'd go with whichever one insures fragile items.",
       "recognized": "I'd go with whichever one ensures fragile items.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.72,
+          "end": 2.52,
           "text": " I'd go with whichever one ensures fragile items.",
-          "avgLogprob": -0.27397334575653076,
-          "noSpeechProb": 0.003094341140240431
+          "avgLogprob": -0.17807013713396513,
+          "noSpeechProb": 2.255822265095908e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56625,18 +56473,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "af75d7d2269d0c7fc270314d2ec53fdb838da4e899c1bd620ec5c5d9319db6a2",
-        "evidence": "./data/audio/audit-batches/af75d7d2269d0c7fc270314d2ec53fdb838da4e899c1bd620ec5c5d9319db6a2.json",
-        "offset": 8.6000625,
-        "end": 11.3734375,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "I'd go with whichever one ensures fragile items.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 0.1111,
@@ -56648,14 +56485,12 @@
           "recognized": "ensures"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-045/options/0/0",
       "comparison": {
-        "audioSha256": "f3a8988317355f210022675a26ba232bf957b8240687ff7e0b67c7bad6a871f9",
-        "recognized": "I'd go with whichever one ensures fragile items.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "I'd go with whichever one insures fragile items.",
+        "recognized": "I'd go with whichever one ensures fragile items.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -56689,10 +56524,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "67a5e9c44fc0af83c0e9fca27efd3ea85c95a1f547628c48168f1a292f088aba"
-        }
+        },
+        "audioSha256": "f3a8988317355f210022675a26ba232bf957b8240687ff7e0b67c7bad6a871f9"
       }
     },
     "p2-050/options/1/0": {
@@ -56700,23 +56536,23 @@
       "src": "./audio/generated/en/am_puck/291ec2312b38d2ca56018d787c04229a.m4a",
       "sha256": "297331c92bedc886a9f1a54f54a2e401ae8b3871332292a97325da1b8a97704d",
       "voiceId": "am_puck",
-      "fingerprint": "36b7c8f7b34ee7090132cf0e7384c1112465ff592a244841db433d1983a7fb16",
+      "fingerprint": "ccb455c90d71322693b62a2a312afdf4b5efe86e5c126c413ea5fc4a7dab3871",
       "expected": "We sponsored the concert in May.",
       "spoken": "We sponsored the concert in May.",
-      "recognized": "We sponsor the concert in May.",
+      "recognized": "We sponsored the concert in May.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " We sponsor the concert in May.",
-          "avgLogprob": -0.3815024971961975,
-          "noSpeechProb": 0.005575884133577347
+          "end": 1.48,
+          "text": " We sponsored the concert in May.",
+          "avgLogprob": -0.1742224171757698,
+          "noSpeechProb": 5.255628831440928e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56730,37 +56566,20 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "4fe5706a1bfad8b6a05363c57b1bf63c00e87b20b57e7735bd5b20dda6713000",
-        "evidence": "./data/audio/audit-batches/4fe5706a1bfad8b6a05363c57b1bf63c00e87b20b57e7735bd5b20dda6713000.json",
-        "offset": 18.7600625,
-        "end": 20.59475,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "We sponsor the concert in May.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "sponsored",
-          "recognized": "sponsor"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-050/options/1/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "297331c92bedc886a9f1a54f54a2e401ae8b3871332292a97325da1b8a97704d",
-        "recognized": "We sponsor the concert in May.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "We sponsored the concert in May.",
+        "recognized": "We sponsored the concert in May.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "we",
@@ -56772,14 +56591,14 @@
         ],
         "normalizedRecognized": [
           "we",
-          "sponsor",
+          "sponsored",
           "the",
           "concert",
           "in",
           "may"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:we | t:sponsored | t:the | t:concert | t:in | t:may",
+        "proofRecognized": "t:we | t:sponsored | t:the | t:concert | t:in | t:may",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -56788,10 +56607,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "907087d433764a98bcf2892115c432701c6a64b0fcda208abc4e51f20f8c2c22"
-        }
+        },
+        "audioSha256": "297331c92bedc886a9f1a54f54a2e401ae8b3871332292a97325da1b8a97704d"
       }
     },
     "p2-051/audio/0": {
@@ -56908,23 +56728,23 @@
       "src": "./audio/generated/en/af_bella/44b230c862b7f06d098b9896943c86d0.m4a",
       "sha256": "fddd9f507ab7e509172034fd1df94e2d768a1b8cced9e76f6e63907c7c367ade",
       "voiceId": "af_bella",
-      "fingerprint": "7a3352fe75528d81680ee6550507fdb5dacbd4240f19f35dcdb24769b50f378a",
+      "fingerprint": "032449b5a41306c2fbb97e5cd677a50f4fae3b608107507333ab9c74d99a0144",
       "expected": "We need four tea bags.",
       "spoken": "We need four tea bags.",
-      "recognized": "We need 4T bags.",
+      "recognized": "We need four tea bags.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " We need 4T bags.",
-          "avgLogprob": -0.5373341772291396,
-          "noSpeechProb": 0.018218467012047768
+          "end": 1.1400000000000001,
+          "text": " We need four tea bags.",
+          "avgLogprob": -0.2802799542744954,
+          "noSpeechProb": 4.315548786382184e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -56938,40 +56758,20 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "68d1d12444a34cb5a8d74a38fd2ef6abffb24bad3d2d771a753254c044957ab0",
-        "evidence": "./data/audio/audit-batches/68d1d12444a34cb5a8d74a38fd2ef6abffb24bad3d2d771a753254c044957ab0.json",
-        "offset": 2.7920000000000003,
-        "end": 4.2,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "need four tea bags.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.4,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "four tea",
-          "recognized": "fourt"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-060/options/0/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "fddd9f507ab7e509172034fd1df94e2d768a1b8cced9e76f6e63907c7c367ade",
-        "recognized": "We need 4T bags.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "We need four tea bags.",
+        "recognized": "We need four tea bags.",
         "reasons": [
-          "author-number-and-input-normalization",
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "we",
@@ -56983,11 +56783,12 @@
         "normalizedRecognized": [
           "we",
           "need",
-          "fourt",
+          "four",
+          "tea",
           "bags"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:we | t:need | t:four | t:tea | t:bags",
+        "proofRecognized": "t:we | t:need | t:four | t:tea | t:bags",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -56996,10 +56797,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "1166329d11d422234d42896418358a88655c1e099e5d05787984b3a544418949"
-        }
+        },
+        "audioSha256": "fddd9f507ab7e509172034fd1df94e2d768a1b8cced9e76f6e63907c7c367ade"
       }
     },
     "p2-065/options/0/0": {
@@ -57111,23 +56913,23 @@
       "src": "./audio/generated/en/am_puck/3d2c8b0e968001ed75bebf09510133fc.m4a",
       "sha256": "90484d29123521b0af5ca4db030481f0324ae36ada672b18e4e9aa6b05dda244",
       "voiceId": "am_puck",
-      "fingerprint": "8efd1b7b4f8feb07c50c162da138470b51ec0dbae3a70fec7e23e943d321a68c",
+      "fingerprint": "4e3b0fb2b91338bbfd4e0f8dbe56fdc2f8e034ceb9559067a4f0e00a27b01e02",
       "expected": "Aren't the children's tickets free?",
       "spoken": "Aren't the children's tickets free?",
-      "recognized": "on the children's tickets free.",
+      "recognized": "Aren't the children's tickets free?",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " on the children's tickets free.",
-          "avgLogprob": -0.35481312274932864,
-          "noSpeechProb": 0.01854119449853897
+          "end": 1.3800000000000001,
+          "text": " Aren't the children's tickets free?",
+          "avgLogprob": -0.18971035426313226,
+          "noSpeechProb": 1.3769041245711988e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -57141,56 +56943,37 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "228012de743cd3f096187ef419c8ca550501742cbb0f3a82d6fde711c5026265",
-        "evidence": "./data/audio/audit-batches/228012de743cd3f096187ef419c8ca550501742cbb0f3a82d6fde711c5026265.json",
-        "offset": 18.1255625,
-        "end": 19.8749375,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "On the children's tickets free.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.2857,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "are not",
-          "recognized": "on"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-071/audio/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "90484d29123521b0af5ca4db030481f0324ae36ada672b18e4e9aa6b05dda244",
-        "recognized": "on the children's tickets free.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Aren't the children's tickets free?",
+        "recognized": "Aren't the children's tickets free?",
         "reasons": [
-          "contraction:aren't",
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
-          "are",
-          "not",
+          "aren't",
           "the",
           "children's",
           "tickets",
           "free"
         ],
         "normalizedRecognized": [
-          "on",
+          "aren't",
           "the",
           "children's",
           "tickets",
           "free"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:aren't | t:the | t:children's | t:tickets | t:free",
+        "proofRecognized": "t:aren't | t:the | t:children's | t:tickets | t:free",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -57199,10 +56982,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "06eb3bb5ad4a1694f775b8b4e354a09e7a9fe8440313c3ff42e0654b991d2ed6"
-        }
+        },
+        "audioSha256": "90484d29123521b0af5ca4db030481f0324ae36ada672b18e4e9aa6b05dda244"
       }
     },
     "p2-074/options/0/0": {
@@ -57312,23 +57096,23 @@
       "src": "./audio/generated/en/am_puck/ab16af38888c435e9f0a5af43d7a8a51.m4a",
       "sha256": "734dfc7798b616893d3f8da471f6c2f59224482212a4bcff6e4c12a520e9a461",
       "voiceId": "am_puck",
-      "fingerprint": "8067c2a7a7b432d9b273ca82eaf0c292240870e5d8964391f5863f1ab3211897",
+      "fingerprint": "a21469889b6c3555ffac226cd6b4e540f46782e1f04158c1f25c21c0eac980d7",
       "expected": "The guests arrived ten minutes early.",
       "spoken": "The guests arrived ten minutes early.",
       "recognized": "The guests arrive 10 minutes early.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
+          "end": 1.48,
           "text": " The guests arrive 10 minutes early.",
-          "avgLogprob": -0.4197030007839203,
-          "noSpeechProb": 0.0030379213858395815
+          "avgLogprob": -0.26374574303627013,
+          "noSpeechProb": 5.273311084671994e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -57342,16 +57126,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "fe3748841e9e469956e9894830727779c1f72b50d04e7d7d387566a580a51a66",
-        "evidence": "./data/audio/audit-batches/fe3748841e9e469956e9894830727779c1f72b50d04e7d7d387566a580a51a66.json",
-        "offset": 5.09875,
-        "end": 6.9334375,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "The guests arrive 10 minutes early.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 0.1667,
@@ -57363,14 +57138,12 @@
           "recognized": "arrive"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-083/options/1/0",
       "comparison": {
-        "audioSha256": "734dfc7798b616893d3f8da471f6c2f59224482212a4bcff6e4c12a520e9a461",
-        "recognized": "The guests arrive 10 minutes early.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The guests arrived ten minutes early.",
+        "recognized": "The guests arrive 10 minutes early.",
         "reasons": [
           "author-number-and-input-normalization",
           "non-equivalent-segments-remain"
@@ -57401,10 +57174,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "33668487a7ad9e735d73fbe2ba5296fa1a16b84106ab8c35b74647c238b64b4f"
-        }
+        },
+        "audioSha256": "734dfc7798b616893d3f8da471f6c2f59224482212a4bcff6e4c12a520e9a461"
       }
     },
     "p2-091/options/0/0": {
@@ -57455,23 +57229,23 @@
       "src": "./audio/generated/en/am_puck/0be16b2c8db09b9c329a4eafc83adefe.m4a",
       "sha256": "dfc8c3135871764d5ce33b64888c6d82fdd8456dc4b3d3d5bb1b10a6a98d18f1",
       "voiceId": "am_puck",
-      "fingerprint": "0bcfaf49891fd74dab0a733c37261eea4a4e3c0be4da8e98dfd2af5c305a58c6",
+      "fingerprint": "137db8bd1da484043748a46d60626bbb8fa3dcded30e7de084bcdfea951b387a",
       "expected": "The jugs hold a liter each.",
       "spoken": "The jugs hold a liter each.",
-      "recognized": "The jugs hold a leader each.",
+      "recognized": "The jugs hold a liter each.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " The jugs hold a leader each.",
-          "avgLogprob": -0.3372285582802512,
-          "noSpeechProb": 0.014536231756210327
+          "end": 1.24,
+          "text": " The jugs hold a liter each.",
+          "avgLogprob": -0.12559023770419034,
+          "noSpeechProb": 8.16900258375497e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -57485,39 +57259,20 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "0081691c25c842a300fb8318848a2f0ed37ededc712c802bf4a3adab1d911053",
-        "evidence": "./data/audio/audit-batches/0081691c25c842a300fb8318848a2f0ed37ededc712c802bf4a3adab1d911053.json",
-        "offset": 9.75475,
-        "end": 11.333437499999999,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "jugs hold a leader each.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "liter",
-          "recognized": "leader"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-094/options/2/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "dfc8c3135871764d5ce33b64888c6d82fdd8456dc4b3d3d5bb1b10a6a98d18f1",
-        "recognized": "The jugs hold a leader each.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The jugs hold a liter each.",
+        "recognized": "The jugs hold a liter each.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "the",
@@ -57532,11 +57287,11 @@
           "jugs",
           "hold",
           "a",
-          "leader",
+          "liter",
           "each"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:jugs | t:hold | t:a | t:liter | t:each",
+        "proofRecognized": "t:the | t:jugs | t:hold | t:a | t:liter | t:each",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -57545,10 +57300,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "0dd57a50a80fc60503ce493e23851d4593035474569de3b4e232a7624ef36810"
-        }
+        },
+        "audioSha256": "dfc8c3135871764d5ce33b64888c6d82fdd8456dc4b3d3d5bb1b10a6a98d18f1"
       }
     },
     "p2-097/audio/0": {
@@ -57556,23 +57312,23 @@
       "src": "./audio/generated/en/am_puck/96dd2d314a40b88740130824d65d2c9a.m4a",
       "sha256": "b12bcc15f1021a3c2896701fdfb5c7940082896192d1db95d89093ba81cdf329",
       "voiceId": "am_puck",
-      "fingerprint": "e49980652c315ae016a5a53b679e26be01f45c2360d97b1ff21330f369ca94fa",
+      "fingerprint": "7f5938a82c1d13f4726a8131555771ac24eb96bba5404565057a2fb0f362dbfd",
       "expected": "When should the guest artist go on stage?",
       "spoken": "When should the guest artist go on stage?",
-      "recognized": "When should the guest artists go on stage?",
+      "recognized": "When should the guest artist go on stage?",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " When should the guest artists go on stage?",
-          "avgLogprob": -0.249917504688104,
-          "noSpeechProb": 0.0038592375349253416
+          "end": 1.8,
+          "text": " When should the guest artist go on stage?",
+          "avgLogprob": -0.1577791435023149,
+          "noSpeechProb": 2.3845654183868303e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -57586,37 +57342,20 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "612b78884d10218feaf71ab48c400e73e364c79a15e961e4012e8c3c50c7eb34",
-        "evidence": "./data/audio/audit-batches/612b78884d10218feaf71ab48c400e73e364c79a15e961e4012e8c3c50c7eb34.json",
-        "offset": 10.4374375,
-        "end": 12.570812499999999,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "When should the guest artists go on stage?",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.125,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "artist",
-          "recognized": "artists"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-097/audio/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "b12bcc15f1021a3c2896701fdfb5c7940082896192d1db95d89093ba81cdf329",
-        "recognized": "When should the guest artists go on stage?",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "When should the guest artist go on stage?",
+        "recognized": "When should the guest artist go on stage?",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "when",
@@ -57633,13 +57372,13 @@
           "should",
           "the",
           "guest",
-          "artists",
+          "artist",
           "go",
           "on",
           "stage"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:when | t:should | t:the | t:guest | t:artist | t:go | t:on | t:stage",
+        "proofRecognized": "t:when | t:should | t:the | t:guest | t:artist | t:go | t:on | t:stage",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -57648,10 +57387,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "1963bb52d8d31268ae58b4f1e30c77dabfb0ee2db726dcd4d634812727e23c96"
-        }
+        },
+        "audioSha256": "b12bcc15f1021a3c2896701fdfb5c7940082896192d1db95d89093ba81cdf329"
       }
     },
     "p2-099/options/0/0": {
@@ -57760,7 +57500,7 @@
       "src": "./audio/generated/en/am_puck/4e2aba6fea532831cc593548198e8f70.m4a",
       "sha256": "dc7d14929c2c4d34b1c267c8660de1ecccdcc4d086bb40219252b97761ebabf3",
       "voiceId": "am_puck",
-      "fingerprint": "ecbd0f8687a2a98c07a801eb21856c321e462ee30356382fbc116c570d112d1e",
+      "fingerprint": "f909e626351296041e1bb65cb8f6384b0e6adffd43630ed139aa081ef04b0c4f",
       "expected": "I tightened the handle screws.",
       "spoken": "I tightened the handle screws.",
       "recognized": "I tighten the handle screws.",
@@ -57769,14 +57509,14 @@
           "start": 0.0,
           "end": 2.0,
           "text": " I tighten the handle screws.",
-          "avgLogprob": -0.3317421012454563,
-          "noSpeechProb": 0.006634998135268688
+          "avgLogprob": -0.36195622550116646,
+          "noSpeechProb": 3.0899135789082266e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -57790,16 +57530,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "cccd41b14181611af474afce2900cc17e523017d99d7b584295c5cfd08f418ed",
-        "evidence": "./data/audio/audit-batches/cccd41b14181611af474afce2900cc17e523017d99d7b584295c5cfd08f418ed.json",
-        "offset": 4.672062499999999,
-        "end": 6.336062499999999,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "I tighten the handle screws.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 0.2,
@@ -57811,14 +57542,12 @@
           "recognized": "tighten"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-099/options/2/0",
       "comparison": {
-        "audioSha256": "dc7d14929c2c4d34b1c267c8660de1ecccdcc4d086bb40219252b97761ebabf3",
-        "recognized": "I tighten the handle screws.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "I tightened the handle screws.",
+        "recognized": "I tighten the handle screws.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -57846,10 +57575,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "8280e67d30d1edd9b3b3c2edd268e0f88974b590ee820f21889208bd5a3d5a13"
-        }
+        },
+        "audioSha256": "dc7d14929c2c4d34b1c267c8660de1ecccdcc4d086bb40219252b97761ebabf3"
       }
     },
     "p2-104/options/2/0": {
@@ -57962,23 +57692,23 @@
       "src": "./audio/generated/en/am_puck/3433482177aed6a1d6d92322bd2fcd32.m4a",
       "sha256": "3eb950ffc43f4f33583f69d17980abdddf78b79ec2a1263c837d196af3788a43",
       "voiceId": "am_puck",
-      "fingerprint": "b7683373124469caff69626cbda8f3fc08506f77d8f698cc4c8bbd62956df6e3",
+      "fingerprint": "1f4bb9ce40c481de7abb65166681182241522778fe3787d7893fa44c2d14aac8",
       "expected": "The guest's surname is spelled two ways in the program.",
       "spoken": "The guest's surname is spelled two ways in the program.",
       "recognized": "The guest surname is spelled two ways in the program.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.7600000000000002,
+          "end": 2.46,
           "text": " The guest surname is spelled two ways in the program.",
-          "avgLogprob": -0.30530459327357157,
-          "noSpeechProb": 0.00334942783229053
+          "avgLogprob": -0.19483876760516847,
+          "noSpeechProb": 1.306725886350557e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -57992,16 +57722,7 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "b205e6c6db8e49a7b8e63a18a4d20b50ab539aba864500a1b7c11faf8a616fbb",
-        "evidence": "./data/audio/audit-batches/b205e6c6db8e49a7b8e63a18a4d20b50ab539aba864500a1b7c11faf8a616fbb.json",
-        "offset": 9.794687499999998,
-        "end": 12.610687499999997,
-        "boundaryStable": true,
-        "boundaryReasons": [],
-        "recognized": "The guest surname is spelled two ways in the program.",
-        "normalizedExact": false
-      },
+      "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
       "errorRate": 0.0909,
@@ -58013,14 +57734,12 @@
           "recognized": ""
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-119/audio/0",
       "comparison": {
-        "audioSha256": "3eb950ffc43f4f33583f69d17980abdddf78b79ec2a1263c837d196af3788a43",
-        "recognized": "The guest surname is spelled two ways in the program.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The guest's surname is spelled two ways in the program.",
+        "recognized": "The guest surname is spelled two ways in the program.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -58058,10 +57777,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "c45e82ab26af3c2798ac2ca0786d54a63aff33d91631169198d46e48a96439ae"
-        }
+        },
+        "audioSha256": "3eb950ffc43f4f33583f69d17980abdddf78b79ec2a1263c837d196af3788a43"
       }
     },
     "p2-121/options/2/0": {
@@ -58378,23 +58098,23 @@
       "src": "./audio/generated/en/am_puck/bb8b7ffc5dc51cdfce2d48f7f99a5302.m4a",
       "sha256": "0ad656df727006f8dab6b1b73ed430f52e50fb3bf18cc998f21534825416f344",
       "voiceId": "am_puck",
-      "fingerprint": "f05d3e411b864f1a99c494856e479f924a631632822c370039ca2343b1f22f1c",
+      "fingerprint": "c006170d2d5100383310a40c68d5d77123293a06fda034839174bef5dd4c515a",
       "expected": "Both vans have recently had their annual service.",
       "spoken": "Both vans have recently had their annual service.",
-      "recognized": "Both fans have recently had their annual service.",
+      "recognized": "Both vans have recently had their annual service.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.56,
-          "text": " Both fans have recently had their annual service.",
-          "avgLogprob": -0.29640690982341766,
-          "noSpeechProb": 0.0032574518118053675
+          "end": 2.38,
+          "text": " Both vans have recently had their annual service.",
+          "avgLogprob": -0.20221585035324097,
+          "noSpeechProb": 6.873912788800396e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -58409,39 +58129,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "ffe6b252f785778cfb79d4464fdc23daae88f071d6083d11e508cf29762e7a1f",
-        "evidence": "./data/audio/audit-batches/ffe6b252f785778cfb79d4464fdc23daae88f071d6083d11e508cf29762e7a1f.json",
-        "offset": 9.922749999999999,
-        "end": 12.653437499999999,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-crosses-file-boundary"
-        ],
-        "recognized": "Both vans have recently had their annual service.",
-        "normalizedExact": true
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.125,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "vans",
-          "recognized": "fans"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-150/options/0/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "0ad656df727006f8dab6b1b73ed430f52e50fb3bf18cc998f21534825416f344",
-        "recognized": "Both fans have recently had their annual service.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Both vans have recently had their annual service.",
+        "recognized": "Both vans have recently had their annual service.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "both",
@@ -58455,7 +58155,7 @@
         ],
         "normalizedRecognized": [
           "both",
-          "fans",
+          "vans",
           "have",
           "recently",
           "had",
@@ -58463,8 +58163,8 @@
           "annual",
           "service"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:both | t:vans | t:have | t:recently | t:had | t:their | t:annual | t:service",
+        "proofRecognized": "t:both | t:vans | t:have | t:recently | t:had | t:their | t:annual | t:service",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -58473,10 +58173,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "7a3e0dbd581b41f8f46f22aaad06e44b92ffdaac0df39afe2648ac9590dcf836"
-        }
+        },
+        "audioSha256": "0ad656df727006f8dab6b1b73ed430f52e50fb3bf18cc998f21534825416f344"
       }
     },
     "p2-152/options/0/0": {
@@ -58613,23 +58314,23 @@
       "src": "./audio/generated/en/af_heart/41283e92634bda2eda06434b06761010.m4a",
       "sha256": "3c64a6b2661511ed8685c61aeaedc919753bde461493eb647a1841dc5ac395fb",
       "voiceId": "af_heart",
-      "fingerprint": "74f014b20a24d74bc6ae3a61d814cc084da66f309aecf097d0f40e28f39ce9be",
+      "fingerprint": "a3033aed820eb9ab7bc9272121a03ac6120f7b556e9654de8e91db5a1702db77",
       "expected": "Shall we post the finalists' names on the lobby screen?",
       "spoken": "Shall we post the finalists' names on the lobby screen?",
-      "recognized": "Shall we post the finalist's names on the lobby screen?",
+      "recognized": "Shall we post the finalists' names on the lobby screen?",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.66,
-          "text": " Shall we post the finalist's names on the lobby screen?",
-          "avgLogprob": -0.2996924053877592,
-          "noSpeechProb": 0.003703658701851964
+          "end": 2.52,
+          "text": " Shall we post the finalists' names on the lobby screen?",
+          "avgLogprob": -0.12959298212081194,
+          "noSpeechProb": 4.15650500129594e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -58644,39 +58345,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "f640879f88ba9622ecebca97a5f33c2cb0542a767cefcb25937b8fc8e228ee4e",
-        "evidence": "./data/audio/audit-batches/f640879f88ba9622ecebca97a5f33c2cb0542a767cefcb25937b8fc8e228ee4e.json",
-        "offset": 6.5493749999999995,
-        "end": 9.2800625,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "Shall we post the finalists' names on the lobby screen?",
-        "normalizedExact": true
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.2,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "finalists",
-          "recognized": "finalist s"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-160/audio/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "3c64a6b2661511ed8685c61aeaedc919753bde461493eb647a1841dc5ac395fb",
-        "recognized": "Shall we post the finalist's names on the lobby screen?",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Shall we post the finalists' names on the lobby screen?",
+        "recognized": "Shall we post the finalists' names on the lobby screen?",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "shall",
@@ -58695,15 +58376,15 @@
           "we",
           "post",
           "the",
-          "finalist's",
+          "finalists",
           "names",
           "on",
           "the",
           "lobby",
           "screen"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:shall | t:we | t:post | t:the | t:finalists | t:names | t:on | t:the | t:lobby | t:screen",
+        "proofRecognized": "t:shall | t:we | t:post | t:the | t:finalists | t:names | t:on | t:the | t:lobby | t:screen",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -58712,10 +58393,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "f152ac0711c45b4dda2098ef810d854e492b573141d2f4822ff115cd5b4822f1"
-        }
+        },
+        "audioSha256": "3c64a6b2661511ed8685c61aeaedc919753bde461493eb647a1841dc5ac395fb"
       }
     },
     "p2-163/audio/0": {
@@ -59227,23 +58909,23 @@
       "src": "./audio/generated/en/af_bella/7f1aa60952f55ca9740bb3c5c7f67e81.m4a",
       "sha256": "f512278760795af11e8f03c0791a4b9842d909ac158be8ab82362ff1d56fb0ab",
       "voiceId": "af_bella",
-      "fingerprint": "b8ee58ae79bb2b13fcbe11c5e5fcd28ac2390d4445e44b3f37e2e4f37ddb80d1",
+      "fingerprint": "6c6960e85d99d2ece4f4f12289c5397e48150131e2ffdec1f3aaa9594b896a5e",
       "expected": "The agreement ties release to written approval, not to the meeting.",
       "spoken": "The agreement ties release to written approval, not to the meeting.",
-      "recognized": "The agreement ties released a written approval, not to the meeting.",
+      "recognized": "The agreement ties release to written approval, not to the meeting.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.44,
-          "text": " The agreement ties released a written approval, not to the meeting.",
-          "avgLogprob": -0.287889176979661,
-          "noSpeechProb": 0.009033090434968472
+          "end": 3.3000000000000003,
+          "text": " The agreement ties release to written approval, not to the meeting.",
+          "avgLogprob": -0.11450916761532426,
+          "noSpeechProb": 1.85542488491397e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -59258,39 +58940,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "403a6d110dc42c192de7507deb94d2a6d1cb1890ce5c9648e8efd8f42a9d006a",
-        "evidence": "./data/audio/audit-batches/403a6d110dc42c192de7507deb94d2a6d1cb1890ce5c9648e8efd8f42a9d006a.json",
-        "offset": 0.4,
-        "end": 3.941375,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "agreement ties released to written approval, not to the meeting.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1818,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "release to",
-          "recognized": "released a"
-        }
-      ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-192/options/2/0",
+      "differences": [],
       "comparison": {
-        "audioSha256": "f512278760795af11e8f03c0791a4b9842d909ac158be8ab82362ff1d56fb0ab",
-        "recognized": "The agreement ties released a written approval, not to the meeting.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The agreement ties release to written approval, not to the meeting.",
+        "recognized": "The agreement ties release to written approval, not to the meeting.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "the",
@@ -59309,8 +58971,8 @@
           "the",
           "agreement",
           "ties",
-          "released",
-          "a",
+          "release",
+          "to",
           "written",
           "approval",
           "not",
@@ -59318,8 +58980,8 @@
           "the",
           "meeting"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:agreement | t:ties | t:release | t:to | t:written | t:approval | t:not | t:to | t:the | t:meeting",
+        "proofRecognized": "t:the | t:agreement | t:ties | t:release | t:to | t:written | t:approval | t:not | t:to | t:the | t:meeting",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -59328,10 +58990,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "1eb2d7a9f8272dc16845a03b26eb7476c5c327cc13e2195a3fd8387dcb86a71f"
-        }
+        },
+        "audioSha256": "f512278760795af11e8f03c0791a4b9842d909ac158be8ab82362ff1d56fb0ab"
       }
     },
     "p2-194/options/1/0": {
@@ -59445,23 +59108,23 @@
       "src": "./audio/generated/en/am_puck/47be09f813b1a7040eec2141a7274cee.m4a",
       "sha256": "8c177c34d1bbd5f0e507e1cbd92d979ff96a2a7eea964cddd2107ec314a741b8",
       "voiceId": "am_puck",
-      "fingerprint": "d1ac34a6b591de4ba4eb6a4fa31dff39b8b0f14336751981fa89f9fb4b0349bc",
+      "fingerprint": "501e5d7dff11061d748108889b70d84afcf11e6aba928435da8e5d070612fab0",
       "expected": "Extending the pilot should remove the bias in its results, shouldn't it?",
       "spoken": "Extending the pilot should remove the bias in its results, shouldn't it?",
       "recognized": "Extending the pilot should remove the bias and its results, shouldn't it?",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.6,
+          "end": 3.2800000000000002,
           "text": " Extending the pilot should remove the bias and its results, shouldn't it?",
-          "avgLogprob": -0.2206605641465438,
-          "noSpeechProb": 0.0024017884861677885
+          "avgLogprob": -0.1932166250128495,
+          "noSpeechProb": 4.589073804121824e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -59476,18 +59139,6 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "f4512e65d657a6640bc10e5db2762a8632a90e233fa18b2893aaad82986f1b46",
-        "evidence": "./data/audio/audit-batches/f4512e65d657a6640bc10e5db2762a8632a90e233fa18b2893aaad82986f1b46.json",
-        "offset": 11.4586875,
-        "end": 15.1706875,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "Extending the pilot should remove the bias and its results shouldn't it?",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "WER",
       "errorRate": 0.0769,
@@ -59499,14 +59150,12 @@
           "recognized": "and"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-196/audio/0",
       "comparison": {
-        "audioSha256": "8c177c34d1bbd5f0e507e1cbd92d979ff96a2a7eea964cddd2107ec314a741b8",
-        "recognized": "Extending the pilot should remove the bias and its results, shouldn't it?",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Extending the pilot should remove the bias in its results, shouldn't it?",
+        "recognized": "Extending the pilot should remove the bias and its results, shouldn't it?",
         "reasons": [
           "contraction:shouldn't",
           "non-equivalent-segments-remain"
@@ -59551,10 +59200,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "5ca75079b5fd366f668fd7cd9f10ad3ede78e495169f5697b53087a74bf6c354"
-        }
+        },
+        "audioSha256": "8c177c34d1bbd5f0e507e1cbd92d979ff96a2a7eea964cddd2107ec314a741b8"
       }
     },
     "p2-199/options/0/0": {
@@ -59562,23 +59212,23 @@
       "src": "./audio/generated/en/af_heart/5577e8a5b6a4b239acc11dfa4b36a071.m4a",
       "sha256": "2f7f2aa5fa6ecbf6666e7415bda542989e6b7509b6971008bc7678e9fd22d3fb",
       "voiceId": "af_heart",
-      "fingerprint": "373ce70d0009ad572ec540c4a6332e896caf3f8663c4d0606940540e25bbc41d",
+      "fingerprint": "fc9fb4b1865f4ca939d2d41794aeb9780ae66cf83d736446c28699799ec43e38",
       "expected": "The bidders used the same online submission portal.",
       "spoken": "The bidders used the same online submission portal.",
       "recognized": "The bidders use the same online submission portal.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.64,
+          "end": 2.5,
           "text": " The bidders use the same online submission portal.",
-          "avgLogprob": -0.35728044693286604,
-          "noSpeechProb": 0.00507162231951952
+          "avgLogprob": -0.1206820194537823,
+          "noSpeechProb": 8.930169429453849e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -59593,18 +59243,6 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "screening": {
-        "batchId": "b4c2c8d455d5ae325eb13d52ba5b847bb1f49dbf390b4670d83f9668d4a7060a",
-        "evidence": "./data/audio/audit-batches/b4c2c8d455d5ae325eb13d52ba5b847bb1f49dbf390b4670d83f9668d4a7060a.json",
-        "offset": 0.4,
-        "end": 3.1306875,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "bidders used the same online submission portal.",
-        "normalizedExact": false
-      },
       "status": "review",
       "metric": "WER",
       "errorRate": 0.125,
@@ -59616,14 +59254,12 @@
           "recognized": "use"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part2:p2-199/options/0/0",
       "comparison": {
-        "audioSha256": "2f7f2aa5fa6ecbf6666e7415bda542989e6b7509b6971008bc7678e9fd22d3fb",
-        "recognized": "The bidders use the same online submission portal.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The bidders used the same online submission portal.",
+        "recognized": "The bidders use the same online submission portal.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -59657,17 +59293,18 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "d32f40efb17482fa84e3c2e8d7c62fa436db20fbfd73d8e7acbc8e8c07ff7fa0"
-        }
+        },
+        "audioSha256": "2f7f2aa5fa6ecbf6666e7415bda542989e6b7509b6971008bc7678e9fd22d3fb"
       }
     }
   },
   "generation": {
     "individual": {
-      "model": "whisper-small",
-      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "model": "whisper-large-v3-turbo",
+      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
       "device": "cpu",
       "computeType": "int8",
       "packages": {
@@ -59683,5 +59320,5 @@
     "screening": null,
     "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
   },
-  "sourceSha256": "8aa409e2e809672e6ed61f4a86c0947b716aae2144f223ff6a5b76d6d16b5504"
+  "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2"
 }

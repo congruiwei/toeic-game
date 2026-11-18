@@ -623,34 +623,23 @@
       "src": "./audio/generated/en/af_heart/1737a4748934840270f9ce8230de0f2a.m4a",
       "sha256": "be650c54195b6fc5d83c143647c6e4f2e5b4a687f665b57f63a4f176ce28b279",
       "voiceId": "af_heart",
-      "fingerprint": "ad241893971a9c7d4c145b90c585c11c5594277cba77a952d8c10c6def4a3b3a",
-      "status": "review",
+      "fingerprint": "b469806747efdc4976b25119d3b086c4dde3fe991be82ad5a27e64d1e1df3f69",
       "expected": "Water is flowing from a can toward a plant.",
       "spoken": "Water is flowing from a can toward a plant.",
-      "recognized": "Water is flowing from a contorted plant.",
-      "metric": "WER",
-      "errorRate": 0.3333,
-      "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "can toward a",
-          "recognized": "contorted"
-        }
-      ],
+      "recognized": "Water is flowing from a contorta plant.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.24,
-          "text": " Water is flowing from a contorted plant.",
-          "avgLogprob": -0.38414499163627625,
-          "noSpeechProb": 0.002223482821136713
+          "end": 2.06,
+          "text": " Water is flowing from a contorta plant.",
+          "avgLogprob": -0.2194163016974926,
+          "noSpeechProb": 1.4416514856896434e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -664,14 +653,24 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-004/options/1/0",
+      "recognitionAttempts": 1,
+      "status": "review",
+      "metric": "WER",
+      "errorRate": 0.3333,
+      "phonemeErrorRate": null,
+      "differences": [
+        {
+          "operation": "replace",
+          "expected": "can toward a",
+          "recognized": "contorta"
+        }
+      ],
       "comparison": {
-        "audioSha256": "be650c54195b6fc5d83c143647c6e4f2e5b4a687f665b57f63a4f176ce28b279",
-        "recognized": "Water is flowing from a contorted plant.",
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Water is flowing from a can toward a plant.",
+        "recognized": "Water is flowing from a contorta plant.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -692,7 +691,7 @@
           "flowing",
           "from",
           "a",
-          "contorted",
+          "contorta",
           "plant"
         ],
         "proofExpected": null,
@@ -705,10 +704,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "98a051b2d75b691c831f57710223f6e458edbc3bff5f1189e1b9cf912c33ce4e"
-        }
+        },
+        "audioSha256": "be650c54195b6fc5d83c143647c6e4f2e5b4a687f665b57f63a4f176ce28b279"
       }
     },
     "p1-004/options/2/0": {
@@ -14121,23 +14121,23 @@
       "src": "./audio/generated/en/am_puck/34b8c3e6139f3d91c68f37b642dec076.m4a",
       "sha256": "8d42b478088198d565fb35c4a3c52553591fcc452e3287f7cb4434c5bed8c07c",
       "voiceId": "am_puck",
-      "fingerprint": "3ccb140594e5e798519ce3fa7235b4f04223fc5ee12045b57293f79380cf3c3c",
+      "fingerprint": "20e021f484f8f9b74d34c1af88ab6d958b137d32369292c8641e105de95f7751",
       "expected": "A glass has fallen beneath the table.",
       "spoken": "A glass has fallen beneath the table.",
-      "recognized": "The glass is falling beneath the table.",
+      "recognized": "The glass has fallen beneath the table.",
       "segments": [
         {
           "start": 0.0,
           "end": 2.0,
-          "text": " The glass is falling beneath the table.",
-          "avgLogprob": -0.4257932034405795,
-          "noSpeechProb": 0.003417376196011901
+          "text": " The glass has fallen beneath the table.",
+          "avgLogprob": -0.38579507307572797,
+          "noSpeechProb": 4.0092386875689723e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+        "model": "whisper-large-v3-turbo",
+        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -14151,44 +14151,27 @@
         "vadFilter": false
       },
       "singleFileVerification": true,
-      "screening": {
-        "batchId": "76ea289f3e879b10524866f97d5c241aeb924e1bf315d51377fb00a0b485dccc",
-        "evidence": "./data/audio/audit-batches/76ea289f3e879b10524866f97d5c241aeb924e1bf315d51377fb00a0b485dccc.json",
-        "offset": 2.9626875,
-        "end": 4.882687499999999,
-        "boundaryStable": false,
-        "boundaryReasons": [
-          "word-in-padding"
-        ],
-        "recognized": "glasses fall beneath the table.",
-        "normalizedExact": false
-      },
-      "status": "review",
+      "recognitionAttempts": 1,
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.4286,
+      "errorRate": 0.1429,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "a",
           "recognized": "the"
-        },
-        {
-          "operation": "replace",
-          "expected": "has fallen",
-          "recognized": "is falling"
         }
       ],
-      "retryEvidence": "./data/audio/retries.json#en:part1:p1-050/options/2/0",
       "comparison": {
-        "audioSha256": "8d42b478088198d565fb35c4a3c52553591fcc452e3287f7cb4434c5bed8c07c",
-        "recognized": "The glass is falling beneath the table.",
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A glass has fallen beneath the table.",
+        "recognized": "The glass has fallen beneath the table.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "user-allowed-article:expected-a",
+          "user-allowed-article:recognized-the"
         ],
         "normalizedExpected": [
           "a",
@@ -14202,14 +14185,14 @@
         "normalizedRecognized": [
           "the",
           "glass",
-          "is",
-          "falling",
+          "has",
+          "fallen",
           "beneath",
           "the",
           "table"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:glass | t:has | t:fallen | t:beneath | t:the | t:table",
+        "proofRecognized": "t:glass | t:has | t:fallen | t:beneath | t:the | t:table",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -14218,10 +14201,11 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "786121de96662e611dfa685ec02388c24785589b37718ae55a8b29705cf9e0f3",
+          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
           "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
           "sourceTextSha256": "f13773b5dbe71f69258fa54cebaffb93ca85184990f679cbb8cf6270eaaca579"
-        }
+        },
+        "audioSha256": "8d42b478088198d565fb35c4a3c52553591fcc452e3287f7cb4434c5bed8c07c"
       }
     },
     "p1-052/options/1/0": {
@@ -14332,8 +14316,8 @@
   },
   "generation": {
     "individual": {
-      "model": "whisper-small",
-      "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+      "model": "whisper-large-v3-turbo",
+      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
       "device": "cpu",
       "computeType": "int8",
       "packages": {
@@ -14349,5 +14333,5 @@
     "screening": null,
     "policy": "Stable boundary and normalized exact only; every other file gets individual beam-5 inference"
   },
-  "sourceSha256": "8aa409e2e809672e6ed61f4a86c0947b716aae2144f223ff6a5b76d6d16b5504"
+  "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2"
 }
