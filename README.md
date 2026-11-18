@@ -1,6 +1,6 @@
 # 芽语岛 · TOEIC 学习养成
 
-[打开游戏](https://congruiwei.github.io/toeic-game/)
+[打开游戏](https://congruiwei.github.io/toeic-game/) · [音频复听](https://congruiwei.github.io/toeic-game/audio-review.html)
 
 英语预生成音频使用 Kokoro Heart、Puck、Bella，日语使用 Alpha，均由本地开源模型合成。保留[声音试听](https://congruiwei.github.io/toeic-game/audition.html)和[本地生成说明](docs/AUDIO-GENERATION.md)。
 
@@ -9,6 +9,8 @@
 后续读音规则、较强本地识别与待复听数量更新见[音频质量二次复核](docs/AUDIO-QUALITY.md)。
 
 用几道商务英语练习培育一只住在浮岛上的芽团。单词、语法、听力和阅读分别积累经验，共同解锁六个形态。练习可以随时离开，回到小岛后点「继续学习」即可从上次的位置继续。
+
+复听页按题型列出仍需人工判断的可播放录音，支持慢速重听、三个判断标签、备注和本机记录导出。已处理的日语系统后备单独计数，不混入复听队列。[复听与维护说明](docs/AUDIO-REVIEW.md)
 
 ## 在 iPhone 上安装
 
@@ -109,6 +111,7 @@ node scripts/validate.mjs
 node scripts/validate.mjs
 node scripts/validate-options.mjs
 node scripts/validate-bank-audio.mjs
+node scripts/build-review-queue.mjs --check
 node tests/voices.mjs
 node tests/saves.mjs
 node tests/forms.mjs
@@ -123,6 +126,8 @@ npm install --prefix /tmp/island-browser-test playwright
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio-app.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio-metadata.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio-review.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/audio-review-live.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=chromium node tests/audio-cache-usage.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/e2e.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/v6.cjs
@@ -139,6 +144,8 @@ NODE_PATH=/tmp/island-browser-test/node_modules node tests/performance.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-app.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-metadata.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-review.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-review-live.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-cache-usage.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/v6.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/options-offline.cjs

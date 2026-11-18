@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-45';
+const CACHE = 'toeic-island-shell-46';
 const files = [
   './',
   './index.html',
@@ -88,6 +88,7 @@ async function updateBank(request, cache, translation=false) {
 // The optional audition is fetched only when visited. Its object-shaped JSON
 // is neither a question-bank array nor a translation pack; audio is not prefetched.
 const auditionFiles = new Set(['audition.html','audition.css','js/audition.js',
+  'audio-review.html','audio-review.css','js/audio-review.js',
   'data/audio-audition-source.json','data/audio-audition-manifest.json']
   .map(path=>new URL(path,self.registration.scope).pathname));
 async function auditionResource(request,cache,write=true) {

@@ -23,7 +23,7 @@ export const AUDIO_METADATA_REPORTS=Object.freeze([
   'regenerations.json','retries.json','audit-summary.json','generation-run.json',
   'benchmark.json','benchmark-asr.json','benchmark-asr-batch.json',
   'normalization-review.json','pronunciation-review.json','archive.json',
-  'unpublished-optional.json','validation.json','retry-coverage-error.json','quality-review.json','comparison-revision.json',
+  'unpublished-optional.json','validation.json','retry-coverage-error.json','quality-review.json','comparison-revision.json','review-queue.json',
 ]);
 export async function unexpectedAudioMetadata(root,index){
   const allowedFiles=new Set(AUDIO_METADATA_REPORTS.map(name=>'./data/audio/'+name));

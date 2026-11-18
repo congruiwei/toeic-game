@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f7f7fb">
+  <link rel="icon" href="./assets/mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./audio-review.css">
+  <title>音频复核 · 芽语岛</title>
+</head>
+<body>
+  <header class="review-header"><a href="./index.html">‹ 返回芽语岛</a><span>声音复核</span></header>
+  <main>
+    <section class="review-hero"><h1>音频复听</h1><p>对照原文听录音，再判断是否有问题。自动转写只是线索，拼写差异不一定代表读音错误。</p><p class="fine">按 Part 1 → Part 2 → 对话与独白 → 语法 → 单词 → 阅读 → 日语排列。判断保存在本机。录音更新后可以重新判断。</p></section>
+    <div id="review-notice" role="status" aria-live="polite"></div>
+    <section class="review-tools" aria-label="复核筛选">
+      <div id="review-counts" class="review-counts" aria-live="polite"></div>
+      <div class="review-filters"><label>查看<select id="review-filter"><option value="unresolved">尚未判断</option><option value="mine">我的记录</option><option value="all">全部条目</option></select></label><label>搜索<input id="review-search" type="search" placeholder="原文、转写或题号" autocomplete="off"></label></div>
+      <button class="primary" id="review-export" data-act="review-export">复制我的复核记录</button>
+      <p id="review-copy-status" class="fine" role="status"></p>
+      <div id="review-copy-wrap" hidden><label for="review-copy-text">手动复制（已全选）</label><textarea id="review-copy-text" readonly spellcheck="false"></textarea></div>
+    </section>
+    <p id="review-processed" class="fine"></p>
+    <p id="review-queue-status" class="fine" role="status"></p>
+    <p id="review-result-count" class="fine"></p>
+    <section id="review-list" aria-label="待复核音频" aria-busy="true"><p class="empty">正在读取复核清单…</p></section>
+    <button class="secondary more" id="review-more" data-act="review-more" hidden>再显示 50 条</button>
+    <noscript><p>请启用 JavaScript 后使用音频复核页。</p></noscript>
+  </main>
+  <aside class="review-player" aria-label="当前播放"><p id="review-audio-status" role="status" aria-live="polite" data-state="idle">选择一段录音开始</p><button class="secondary" id="review-stop" data-act="review-stop" disabled>停止播放</button></aside>
+  <audio id="review-audio" preload="none" playsinline hidden></audio>
+  <script type="module" src="./js/audio-review.js"></script>
+</body>
+</html>
