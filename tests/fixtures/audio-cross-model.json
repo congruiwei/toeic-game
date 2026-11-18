@@ -1,0 +1,386 @@
+{
+  "unit": {
+    "language": "en",
+    "bank": "grammar",
+    "key": "g/sentence/0",
+    "text": "The staff signed the report.",
+    "voiceId": "af_heart",
+    "required": true
+  },
+  "clip": {
+    "language": "en",
+    "bank": "grammar",
+    "key": "g/sentence/0",
+    "text": "The staff signed the report.",
+    "voiceId": "af_heart",
+    "required": true,
+    "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "bytes": 10,
+    "duration": 2,
+    "spoken": "The staff signed the report.",
+    "inputSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "phonemeSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "asrStatus": "review"
+  },
+  "row": {
+    "repair": {
+      "complete": true,
+      "disposition": "recorded-review",
+      "candidate": {
+        "clip": {
+          "language": "en",
+          "bank": "grammar",
+          "key": "g/sentence/0",
+          "text": "The staff signed the report.",
+          "voiceId": "af_heart",
+          "required": true,
+          "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 10,
+          "duration": 2,
+          "spoken": "The staff signed the report.",
+          "inputSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "phonemeSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "asrStatus": "review"
+        },
+        "asr": {
+          "key": "g/sentence/0",
+          "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "voiceId": "af_heart",
+          "expected": "The staff signed the report.",
+          "spoken": "The staff signed the report.",
+          "recognized": "The staff sign the report.",
+          "segments": [
+            {
+              "text": "The staff sign the report.",
+              "start": 0,
+              "end": 2
+            }
+          ],
+          "fingerprint": "2db1ee1512ba9ff628df8fb4ad16023c089596270783cc2c74d6406852ae5132",
+          "recognitionGeneration": {
+            "model": "whisper-large-v3-turbo",
+            "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+            "device": "cpu",
+            "computeType": "int8",
+            "beamSize": 5,
+            "prompt": null,
+            "conditionOnPreviousText": false,
+            "vadFilter": false,
+            "packages": {}
+          },
+          "recognitionMethod": "individual-beam5",
+          "singleFileVerification": true,
+          "recognitionAttempts": 1,
+          "status": "review",
+          "comparison": {
+            "equivalent": false,
+            "ruleVersion": "strict-audio-equivalence-1",
+            "language": "en",
+            "expectedSpoken": "The staff signed the report.",
+            "recognized": "The staff sign the report.",
+            "reasons": [
+              "non-equivalent-segments-remain"
+            ],
+            "normalizedExpected": [
+              "the",
+              "staff",
+              "signed",
+              "the",
+              "report"
+            ],
+            "normalizedRecognized": [
+              "the",
+              "staff",
+              "sign",
+              "the",
+              "report"
+            ],
+            "proofExpected": null,
+            "proofRecognized": null,
+            "provenance": {
+              "comparison": "exact transforms only; no edit-distance acceptance",
+              "cmudict": "1.1.3",
+              "fugashi": "1.5.2",
+              "unidic": "1.1.0",
+              "pykakasi": "2.3.0",
+              "normalizer": "normalize",
+              "phonemeOverride": false,
+              "articlePolicyEnabled": true,
+              "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+              "normalizerFileSha256": "c6837e06c1b639f71c19b3cc96c9e915c6e8bf4dc764a640d5cddad6589b0faf",
+              "sourceTextSha256": "d735d1358724fdc7d27dfa3388eaf93ecb4c258e0301ca9eb8c05cc625b5380a"
+            },
+            "audioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        }
+      },
+      "appliedOverride": {}
+    },
+    "crossModelChecks": [
+      {
+        "version": 1,
+        "id": "07a339545d157338e97879fc9c9b63b83a87d66024557be25d2bf5cbe4717fa1",
+        "method": "same-media-full-model-crosscheck-v1",
+        "token": "en:grammar:g/sentence/0",
+        "sourceAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "sourceClip": {
+          "language": "en",
+          "bank": "grammar",
+          "key": "g/sentence/0",
+          "text": "The staff signed the report.",
+          "voiceId": "af_heart",
+          "required": true,
+          "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "bytes": 10,
+          "duration": 2,
+          "spoken": "The staff signed the report.",
+          "inputSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "phonemeSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "originalASR": {
+          "key": "g/sentence/0",
+          "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "voiceId": "af_heart",
+          "expected": "The staff signed the report.",
+          "spoken": "The staff signed the report.",
+          "recognized": "The staff sign the report.",
+          "segments": [
+            {
+              "text": "The staff sign the report.",
+              "start": 0,
+              "end": 2
+            }
+          ],
+          "fingerprint": "2db1ee1512ba9ff628df8fb4ad16023c089596270783cc2c74d6406852ae5132",
+          "recognitionGeneration": {
+            "model": "whisper-large-v3-turbo",
+            "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+            "device": "cpu",
+            "computeType": "int8",
+            "beamSize": 5,
+            "prompt": null,
+            "conditionOnPreviousText": false,
+            "vadFilter": false,
+            "packages": {}
+          },
+          "recognitionMethod": "individual-beam5",
+          "singleFileVerification": true,
+          "recognitionAttempts": 1,
+          "status": "review",
+          "comparison": {
+            "equivalent": false,
+            "ruleVersion": "strict-audio-equivalence-1",
+            "language": "en",
+            "expectedSpoken": "The staff signed the report.",
+            "recognized": "The staff sign the report.",
+            "reasons": [
+              "non-equivalent-segments-remain"
+            ],
+            "normalizedExpected": [
+              "the",
+              "staff",
+              "signed",
+              "the",
+              "report"
+            ],
+            "normalizedRecognized": [
+              "the",
+              "staff",
+              "sign",
+              "the",
+              "report"
+            ],
+            "proofExpected": null,
+            "proofRecognized": null,
+            "provenance": {
+              "comparison": "exact transforms only; no edit-distance acceptance",
+              "cmudict": "1.1.3",
+              "fugashi": "1.5.2",
+              "unidic": "1.1.0",
+              "pykakasi": "2.3.0",
+              "normalizer": "normalize",
+              "phonemeOverride": false,
+              "articlePolicyEnabled": true,
+              "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+              "normalizerFileSha256": "c6837e06c1b639f71c19b3cc96c9e915c6e8bf4dc764a640d5cddad6589b0faf",
+              "sourceTextSha256": "d735d1358724fdc7d27dfa3388eaf93ecb4c258e0301ca9eb8c05cc625b5380a"
+            },
+            "audioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        "fullASR": {
+          "key": "g/sentence/0",
+          "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "voiceId": "af_heart",
+          "expected": "The staff signed the report.",
+          "spoken": "The staff signed the report.",
+          "recognized": "The staff signed the report.",
+          "segments": [
+            {
+              "text": "The staff signed the report.",
+              "start": 0,
+              "end": 2
+            }
+          ],
+          "fingerprint": "cc90a09f0ea2e3ff63eab93b0bfc9ae52245e0eaa1cf470177416ebcab9a2695",
+          "recognitionGeneration": {
+            "model": "whisper-large-v3",
+            "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+            "device": "cpu",
+            "computeType": "int8",
+            "beamSize": 5,
+            "prompt": null,
+            "conditionOnPreviousText": false,
+            "vadFilter": false,
+            "packages": {},
+            "modelRepository": "Systran/faster-whisper-large-v3",
+            "modelRevision": "edaa852ec7e145841d8ffdb056a99866b5f0a478",
+            "temperature": 0,
+            "wordTimestamps": false,
+            "hotwords": null,
+            "task": "transcribe",
+            "audioInput": "unchanged-delivered-m4a"
+          },
+          "recognitionMethod": "individual-beam5",
+          "singleFileVerification": true,
+          "recognitionAttempts": 1,
+          "status": "matched",
+          "comparison": {
+            "equivalent": true,
+            "ruleVersion": "strict-audio-equivalence-1",
+            "language": "en",
+            "expectedSpoken": "The staff signed the report.",
+            "recognized": "The staff signed the report.",
+            "reasons": [
+              "exact-normalized-text"
+            ],
+            "normalizedExpected": [
+              "the",
+              "staff",
+              "signed",
+              "the",
+              "report"
+            ],
+            "normalizedRecognized": [
+              "the",
+              "staff",
+              "signed",
+              "the",
+              "report"
+            ],
+            "proofExpected": "t:the | t:staff | t:signed | t:the | t:report",
+            "proofRecognized": "t:the | t:staff | t:signed | t:the | t:report",
+            "provenance": {
+              "comparison": "exact transforms only; no edit-distance acceptance",
+              "cmudict": "1.1.3",
+              "fugashi": "1.5.2",
+              "unidic": "1.1.0",
+              "pykakasi": "2.3.0",
+              "normalizer": "normalize",
+              "phonemeOverride": false,
+              "articlePolicyEnabled": true,
+              "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+              "normalizerFileSha256": "c6837e06c1b639f71c19b3cc96c9e915c6e8bf4dc764a640d5cddad6589b0faf",
+              "sourceTextSha256": "d735d1358724fdc7d27dfa3388eaf93ecb4c258e0301ca9eb8c05cc625b5380a"
+            },
+            "audioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          }
+        },
+        "originalASRCanonical": "{\"comparison\":{\"audioSha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"equivalent\":false,\"expectedSpoken\":\"The staff signed the report.\",\"language\":\"en\",\"normalizedExpected\":[\"the\",\"staff\",\"signed\",\"the\",\"report\"],\"normalizedRecognized\":[\"the\",\"staff\",\"sign\",\"the\",\"report\"],\"proofExpected\":null,\"proofRecognized\":null,\"provenance\":{\"articlePolicyEnabled\":true,\"cmudict\":\"1.1.3\",\"comparison\":\"exact transforms only; no edit-distance acceptance\",\"fugashi\":\"1.5.2\",\"normalizer\":\"normalize\",\"normalizerFileSha256\":\"c6837e06c1b639f71c19b3cc96c9e915c6e8bf4dc764a640d5cddad6589b0faf\",\"phonemeOverride\":false,\"pykakasi\":\"2.3.0\",\"ruleFileSha256\":\"6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11\",\"sourceTextSha256\":\"d735d1358724fdc7d27dfa3388eaf93ecb4c258e0301ca9eb8c05cc625b5380a\",\"unidic\":\"1.1.0\"},\"reasons\":[\"non-equivalent-segments-remain\"],\"recognized\":\"The staff sign the report.\",\"ruleVersion\":\"strict-audio-equivalence-1\"},\"expected\":\"The staff signed the report.\",\"fingerprint\":\"2db1ee1512ba9ff628df8fb4ad16023c089596270783cc2c74d6406852ae5132\",\"key\":\"g/sentence/0\",\"recognitionAttempts\":1,\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3-turbo\",\"modelSha256\":\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\",\"packages\":{},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"The staff sign the report.\",\"segments\":[{\"end\":2,\"start\":0,\"text\":\"The staff sign the report.\"}],\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"singleFileVerification\":true,\"spoken\":\"The staff signed the report.\",\"src\":\"./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a\",\"status\":\"review\",\"voiceId\":\"af_heart\"}",
+        "fullASRCanonical": "{\"comparison\":{\"audioSha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"equivalent\":true,\"expectedSpoken\":\"The staff signed the report.\",\"language\":\"en\",\"normalizedExpected\":[\"the\",\"staff\",\"signed\",\"the\",\"report\"],\"normalizedRecognized\":[\"the\",\"staff\",\"signed\",\"the\",\"report\"],\"proofExpected\":\"t:the | t:staff | t:signed | t:the | t:report\",\"proofRecognized\":\"t:the | t:staff | t:signed | t:the | t:report\",\"provenance\":{\"articlePolicyEnabled\":true,\"cmudict\":\"1.1.3\",\"comparison\":\"exact transforms only; no edit-distance acceptance\",\"fugashi\":\"1.5.2\",\"normalizer\":\"normalize\",\"normalizerFileSha256\":\"c6837e06c1b639f71c19b3cc96c9e915c6e8bf4dc764a640d5cddad6589b0faf\",\"phonemeOverride\":false,\"pykakasi\":\"2.3.0\",\"ruleFileSha256\":\"6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11\",\"sourceTextSha256\":\"d735d1358724fdc7d27dfa3388eaf93ecb4c258e0301ca9eb8c05cc625b5380a\",\"unidic\":\"1.1.0\"},\"reasons\":[\"exact-normalized-text\"],\"recognized\":\"The staff signed the report.\",\"ruleVersion\":\"strict-audio-equivalence-1\"},\"expected\":\"The staff signed the report.\",\"fingerprint\":\"cc90a09f0ea2e3ff63eab93b0bfc9ae52245e0eaa1cf470177416ebcab9a2695\",\"key\":\"g/sentence/0\",\"recognitionAttempts\":1,\"recognitionGeneration\":{\"audioInput\":\"unchanged-delivered-m4a\",\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"hotwords\":null,\"model\":\"whisper-large-v3\",\"modelRepository\":\"Systran/faster-whisper-large-v3\",\"modelRevision\":\"edaa852ec7e145841d8ffdb056a99866b5f0a478\",\"modelSha256\":\"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\",\"packages\":{},\"prompt\":null,\"task\":\"transcribe\",\"temperature\":0,\"vadFilter\":false,\"wordTimestamps\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"The staff signed the report.\",\"segments\":[{\"end\":2,\"start\":0,\"text\":\"The staff signed the report.\"}],\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"singleFileVerification\":true,\"spoken\":\"The staff signed the report.\",\"src\":\"./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a\",\"status\":\"matched\",\"voiceId\":\"af_heart\"}",
+        "originalFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"packages\": {}, \"prompt\": null, \"vadFilter\": false}, \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"en\"]",
+        "fullFingerprintInput": "[{\"audioInput\": \"unchanged-delivered-m4a\", \"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"hotwords\": null, \"model\": \"whisper-large-v3\", \"modelRepository\": \"Systran/faster-whisper-large-v3\", \"modelRevision\": \"edaa852ec7e145841d8ffdb056a99866b5f0a478\", \"modelSha256\": \"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\", \"packages\": {}, \"prompt\": null, \"task\": \"transcribe\", \"temperature\": 0, \"vadFilter\": false, \"wordTimestamps\": false}, \"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\", \"en\"]",
+        "status": "accepted",
+        "originalIndividualASRMatched": false,
+        "originalAudioResynthesized": false,
+        "audioInput": "unchanged-delivered-m4a",
+        "articlePolicyEnabled": true,
+        "reason": "strict-same-media-full-model-equivalence"
+      }
+    ]
+  },
+  "record": {
+    "key": "g/sentence/0",
+    "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+    "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "voiceId": "af_heart",
+    "expected": "The staff signed the report.",
+    "spoken": "The staff signed the report.",
+    "recognized": "The staff sign the report.",
+    "segments": [
+      {
+        "text": "The staff sign the report.",
+        "start": 0,
+        "end": 2
+      }
+    ],
+    "fingerprint": "2db1ee1512ba9ff628df8fb4ad16023c089596270783cc2c74d6406852ae5132",
+    "recognitionGeneration": {
+      "model": "whisper-large-v3-turbo",
+      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "device": "cpu",
+      "computeType": "int8",
+      "beamSize": 5,
+      "prompt": null,
+      "conditionOnPreviousText": false,
+      "vadFilter": false,
+      "packages": {}
+    },
+    "recognitionMethod": "individual-beam5",
+    "singleFileVerification": true,
+    "recognitionAttempts": 1,
+    "status": "accepted",
+    "comparison": {
+      "equivalent": false,
+      "ruleVersion": "strict-audio-equivalence-1",
+      "language": "en",
+      "expectedSpoken": "The staff signed the report.",
+      "recognized": "The staff sign the report.",
+      "reasons": [
+        "non-equivalent-segments-remain"
+      ],
+      "normalizedExpected": [
+        "the",
+        "staff",
+        "signed",
+        "the",
+        "report"
+      ],
+      "normalizedRecognized": [
+        "the",
+        "staff",
+        "sign",
+        "the",
+        "report"
+      ],
+      "proofExpected": null,
+      "proofRecognized": null,
+      "provenance": {
+        "comparison": "exact transforms only; no edit-distance acceptance",
+        "cmudict": "1.1.3",
+        "fugashi": "1.5.2",
+        "unidic": "1.1.0",
+        "pykakasi": "2.3.0",
+        "normalizer": "normalize",
+        "phonemeOverride": false,
+        "articlePolicyEnabled": true,
+        "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+        "normalizerFileSha256": "c6837e06c1b639f71c19b3cc96c9e915c6e8bf4dc764a640d5cddad6589b0faf",
+        "sourceTextSha256": "d735d1358724fdc7d27dfa3388eaf93ecb4c258e0301ca9eb8c05cc625b5380a"
+      },
+      "audioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+    },
+    "acceptance": {
+      "method": "same-media-full-model-crosscheck-v1",
+      "proofId": "07a339545d157338e97879fc9c9b63b83a87d66024557be25d2bf5cbe4717fa1",
+      "sourceAudioSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "originalIndividualStatus": "review"
+    }
+  }
+}

@@ -45,7 +45,7 @@ def prepare_correction(unit,proposal,base=None):
 def correction_matches(unit,corrected,clip,generation):
     if not clip:return False
     spoken,input_sha=bank.input_fingerprint(generation,unit,corrected)
-    return bool(all(clip.get(k)==unit[k] for k in ['text','voiceId','language']) and
+    return bool(bank.voice_rules.matches_selection(unit,clip,corrected) and
         clip.get('spoken')==spoken and clip.get('inputSha256')==input_sha and
         float(clip.get('synthesisSpeed',1))==float(corrected.get('speed',1)) and
         ('phonemes' not in corrected or clip.get('phonemeSha256')==sha(corrected['phonemes'].encode())))
@@ -55,7 +55,7 @@ def initial_matches(entry,unit):
     initial=entry.get('initial',{})
     clip=initial.get('clip') or {}
     return bool(retry.has_actual_asr(clip,initial.get('asr')) and
-        all(clip.get(k)==unit[k] for k in ['text','voiceId','language']) and
+        bank.voice_rules.matches_selection(unit,clip,entry.get('baseOverride')) and
         clip.get('spoken')==retry.binding_for(unit,entry.get('baseOverride'))['spoken'])
 
 
@@ -66,7 +66,8 @@ def completed_history_evidence(entry):
     return bool(entry.get('complete') and len(versions)>=2 and
         entry.get('synthesisAttemptCount',0)>=2 and entry.get('asrAttemptCount',0)>=2 and
         all(v and retry.has_actual_asr(v.get('clip'),v.get('asr')) and
-            all(v['clip'].get(k)==first.get(k) for k in ['text','voiceId','language']) for v in versions) and
+            all(v['clip'].get(k)==first.get(k) for k in ['text','language']) for v in versions) and
+        retry.bank.voice_rules.valid_entry_voices(entry) and
         len({v['clip']['sha256'] for v in versions})>=2 and
         any(v['clip']['sha256']==entry.get('selectedSha256') for v in versions))
 

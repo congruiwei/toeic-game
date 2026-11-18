@@ -29336,26 +29336,26 @@
     },
     "gram-passive-15/sentence/0": {
       "key": "gram-passive-15/sentence/0",
-      "src": "./audio/generated/en/af_heart/88297344d49f79d02b365c1578f93c96.m4a",
-      "sha256": "457a4a64f043c01221389232713bacf518eeb7ed10ff6d7daf531b556227ffbf",
+      "src": "./audio/generated/en/af_heart/1e390ce3cc0e0b42dc92c746e6a7cd6f.m4a",
+      "sha256": "8aa373935f0d74dfffce0a49a29a3abdaea4961752a3a0b49cb72bc0c541543a",
       "voiceId": "af_heart",
-      "fingerprint": "83ae99ddefbbcd8f601f0b6ebddd269c1929ce0735dcbe81f6718cce7d9483f7",
+      "fingerprint": "174cce2a106ccb0e9aab06c81e8baafc0d5a426213a70af9797f4da8a119d7b5",
       "expected": "Last Friday the temporary bridge was opened to cyclists for the first time.",
       "spoken": "Last Friday the temporary bridge was opened to cyclists for the first time.",
       "recognized": "Last Friday, the temporary bridge was open to cyclists for the first time.",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.28,
+          "end": 4.4,
           "text": " Last Friday, the temporary bridge was open to cyclists for the first time.",
-          "avgLogprob": -0.08000255885877107,
-          "noSpeechProb": 1.1763479079718309e-11
+          "avgLogprob": -0.1519553143727152,
+          "noSpeechProb": 0.0052457344718277454
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -29429,12 +29429,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "3fbfd4407db56cbc81539c4e73baa587647a2bf2eef4ffbeb8b27b2fb65423fb",
           "sourceTextSha256": "966cb4bbba93817e29c5c09de78657db2d7c9be28cfab2f95d6ef03a4a30ebcd"
         },
-        "audioSha256": "457a4a64f043c01221389232713bacf518eeb7ed10ff6d7daf531b556227ffbf"
+        "audioSha256": "8aa373935f0d74dfffce0a49a29a3abdaea4961752a3a0b49cb72bc0c541543a"
       }
     },
     "gram-pronouns-03/sentence/0": {
@@ -30147,20 +30148,20 @@
     },
     "gram-lexis-52/sentence/0": {
       "key": "gram-lexis-52/sentence/0",
-      "src": "./audio/generated/en/af_heart/f60f4d6fdc6ab1c0955d9426b9cfbcbe.m4a",
-      "sha256": "d58399849a7a4bd32cece114a929409c175ab86badbea0bdd75707b7bfe4ce72",
+      "src": "./audio/generated/en/af_heart/fb1b6195ac8cbc9debfcf54a958a3c7b.m4a",
+      "sha256": "5c6081dd79bedee53d06d6aa08569a9ddc6c75bda0f50fe9db6442089743a93b",
       "voiceId": "af_heart",
-      "fingerprint": "2f3372f8300d6e48dac20534ccafeea8896f363b23cb7a0a200413714e688fac",
+      "fingerprint": "730607608fc4f8d95599cd0939903ae7ef45a3638fd0947e5054e8881320b13f",
       "expected": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
       "spoken": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
-      "recognized": "A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
+      "recognized": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.14,
-          "text": " A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
-          "avgLogprob": -0.11190894842147828,
-          "noSpeechProb": 1.3847574345873803e-12
+          "end": 5.5,
+          "text": " A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
+          "avgLogprob": -0.10149625539779664,
+          "noSpeechProb": 6.533952632420403e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -30181,25 +30182,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.0526,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "route",
-          "recognized": "root"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
-        "recognized": "A rigid wall blocks the root shown on the old plan, so the engineer drew a detour around it.",
+        "recognized": "A rigid wall blocks the route shown on the old plan, so the engineer drew a detour around it.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "a",
@@ -30228,7 +30223,7 @@
           "wall",
           "blocks",
           "the",
-          "root",
+          "route",
           "shown",
           "on",
           "the",
@@ -30243,8 +30238,8 @@
           "around",
           "it"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:a | t:rigid | t:wall | t:blocks | t:the | t:route | t:shown | t:on | t:the | t:old | t:plan | t:so | t:the | t:engineer | t:drew | t:a | t:detour | t:around | t:it",
+        "proofRecognized": "t:a | t:rigid | t:wall | t:blocks | t:the | t:route | t:shown | t:on | t:the | t:old | t:plan | t:so | t:the | t:engineer | t:drew | t:a | t:detour | t:around | t:it",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -30252,12 +30247,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "38db924f3c5ce81d9d779668a025e06ef0be2fba1824b1388b56826bc0df6cf3"
         },
-        "audioSha256": "d58399849a7a4bd32cece114a929409c175ab86badbea0bdd75707b7bfe4ce72"
+        "audioSha256": "5c6081dd79bedee53d06d6aa08569a9ddc6c75bda0f50fe9db6442089743a93b"
       }
     },
     "gram-lexis-78/sentence/0": {
@@ -30520,8 +30516,8 @@
   },
   "generation": {
     "individual": {
-      "model": "whisper-large-v3-turbo",
-      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
       "device": "cpu",
       "computeType": "int8",
       "packages": {

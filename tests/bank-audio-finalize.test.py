@@ -7,10 +7,12 @@ import json
 import os
 from pathlib import Path
 import shutil
+import sys
 import tempfile
 import time
 import types
 import unittest
+from unittest.mock import patch
 
 HERE = Path(__file__).resolve().parent
 REPO = Path(os.environ.get('TOEIC_TEST_REPO', Path(__file__).resolve().parents[1])).resolve()
@@ -21,6 +23,11 @@ spec.loader.exec_module(review)
 
 class FinalizeTest(unittest.TestCase):
     def setUp(self):
+        # Keep the full-tree immutability assertion about authored files: an
+        # import cache is not a publication, and need not be created in fixtures.
+        bytecode = patch.object(sys, 'dont_write_bytecode', True)
+        bytecode.start()
+        self.addCleanup(bytecode.stop)
         self.temp = tempfile.TemporaryDirectory()
         parent = Path(self.temp.name)
         self.root = parent / 'repo'
@@ -29,7 +36,7 @@ class FinalizeTest(unittest.TestCase):
         self.out.mkdir(parents=True)
         (self.root / 'scripts').mkdir()
         (self.work / 'tmp/bank-asr').mkdir(parents=True)
-        for name in ('audio-evidence.py', 'audio-compare.py', 'generate-bank-audio.py'):
+        for name in ('audio-evidence.py', 'audio-compare.py', 'audio-voice-override.py', 'generate-bank-audio.py'):
             shutil.copyfile(REPO / 'scripts' / name, self.root / 'scripts' / name)
         self.code = {'ruleFileSha256': review.sha((self.root / 'scripts/audio-compare.py').read_bytes()),
                      'normalizerFileSha256': review.sha((self.root / 'scripts/generate-bank-audio.py').read_bytes())}
@@ -130,14 +137,16 @@ class FinalizeTest(unittest.TestCase):
         # Execute the actual generator's atomic/read/flush functions, not a fake
         # flush. Discard only module imports/top-level synthesis dependencies;
         # these functions have no inference calls. Works in stdlib Python.
-        names = {'public_error', 'public_errors', 'atomic', 'read', 'audit_records', 'flush'}
+        names = {'public_error', 'public_errors', 'atomic', 'read', 'audit_records',
+                 'valid_published_asr', 'valid_system_fallback', 'validate_fallback_packs', 'flush'}
         tree = ast.parse((root / 'scripts/generate-bank-audio.py').read_text())
         body = [node for node in tree.body if isinstance(node, ast.FunctionDef) and node.name in names]
         self.assertEqual({node.name for node in body}, names)
         import re
         namespace = dict(ROOT=root, OUT=root / 'data/audio', Path=Path, json=json, os=os, tempfile=tempfile,
                          time=time, re=re, sha=review.sha,
-                         evidence=review.module(root, 'fixture_evidence', 'audio-evidence.py'))
+                         evidence=review.module(root, 'fixture_evidence', 'audio-evidence.py'),
+                         voice_rules=review.module(root, 'fixture_voice_rules', 'audio-voice-override.py'))
         exec(compile(ast.Module(body=body, type_ignores=[]), str(root / 'scripts/generate-bank-audio.py'), 'exec'), namespace)
         original = namespace['flush']
         def flush(*args):

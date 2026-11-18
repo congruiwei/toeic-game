@@ -1,4 +1,4 @@
-import { AUDIO_CACHE, audioURL, loadAudioPack, inferAudioBank, getAudioClip, prepareRecordedAudio, resolveAudioPieces } from './recorded-audio.js';
+import { AUDIO_CACHE, audioURL, loadAudioPack, inferAudioBank, getAudioClip, getAudioFallback, prepareRecordedAudio, resolveAudioPieces } from './recorded-audio.js';
 import { listeningScript } from './exam.js';
 let cacheGeneration=0;
 const abortError=()=>new DOMException('录音下载已取消','AbortError');
@@ -50,16 +50,19 @@ async function download(clips,{signal,onProgress=()=>{}}={}) {
 }
 export async function downloadAudioPack(bank,language='en',options={}) {
   const pack=await abortable(loadAudioPack(bank,language),options.signal);
-  if(pack.complete!==true&&pack.requiredComplete!==true)throw Error('这一类录音尚未生成完整，暂不能整包下载。');
-  return download(Object.entries(pack.clips).map(([key,clip])=>({...clip,key})),options);
+  if(pack.complete!==true&&pack.requiredComplete!==true&&pack.requiredPlaybackComplete!==true)throw Error('这一类录音尚未生成完整，暂不能整包下载。');
+  const result=await download(Object.entries(pack.clips).map(([key,clip])=>({...clip,key})),options);
+  const systemFallbacks=Object.keys(pack.fallbacks||{}).length;return systemFallbacks?{...result,systemFallbacks}:result;
 }
 export async function precacheAudio(refs,options={}) {
   const groups=new Map();
   for(const ref of refs){const bank=ref.bank||inferAudioBank(ref.key),language=ref.language||'en';if(!bank)throw Error('无法识别录音分类');groups.set(language+'/'+bank,{bank,language});}
   await abortable(Promise.all([...groups.values()].map(({bank,language})=>loadAudioPack(bank,language))),options.signal);
   const clips=refs.map(ref=>getAudioClip(ref.key,{bank:ref.bank||inferAudioBank(ref.key),language:ref.language||'en'}));
-  if(clips.some(clip=>!clip))throw Error('所需录音缺失，请重新下载或使用设备语音。');
-  return download(clips,options);
+  const fallback=refs.map(ref=>getAudioFallback(ref.key,{bank:ref.bank||inferAudioBank(ref.key),language:ref.language||'en'}));
+  if(clips.some((clip,i)=>!clip&&!fallback[i]))throw Error('所需录音缺失，请重新下载或使用设备语音。');
+  const result=await download(clips.filter(Boolean),options),systemFallbacks=fallback.filter(Boolean).length;
+  return systemFallbacks?{...result,systemFallbacks}:result;
 }
 export async function prepareExamAudio(exam,catalog,options={}) {
   const units=exam.units.filter(unit=>unit.part<=4),banks=[...new Set(units.map(unit=>unit.part===1?'part1':unit.part===2?'part2':'listening'))];

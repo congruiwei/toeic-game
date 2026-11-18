@@ -290,7 +290,7 @@ def _expanded(tokens):
     return result,rules
 
 
-def _en_align(a,b):
+def _en_align(a,b,allow_articles=True):
     """Exact token DP; transitions are explicit equivalences, never edit costs."""
     @functools.lru_cache(None)
     def walk(i,j):
@@ -309,8 +309,8 @@ def _en_align(a,b):
             if y.endswith("'s") and i+1<len(a) and a[i:i+2]==[y[:-2],'is']:
                 transitions.append((i+2,j+1,'contracted-s-is:'+y,'t:'+y[:-2]+' is'))
         # Explicit user policy, not a claim that articles sound identical.
-        if i<len(a) and a[i] in ARTICLES:transitions.append((i+1,j,'user-allowed-article:expected-'+a[i],None))
-        if j<len(b) and b[j] in ARTICLES:transitions.append((i,j+1,'user-allowed-article:recognized-'+b[j],None))
+        if allow_articles and i<len(a) and a[i] in ARTICLES:transitions.append((i+1,j,'user-allowed-article:expected-'+a[i],None))
+        if allow_articles and j<len(b) and b[j] in ARTICLES:transitions.append((i,j+1,'user-allowed-article:recognized-'+b[j],None))
         for ni,nj,reason,canonical in transitions:
             rest=walk(ni,nj)
             if rest is not None:
@@ -374,7 +374,7 @@ def _japanese_reading(text):
     return ''.join(out),trace,fallback
 
 
-def compare(expected_spoken,recognized,language,*,normalizer=None,source_text=None,phoneme_override=False):
+def compare(expected_spoken,recognized,language,*,normalizer=None,source_text=None,phoneme_override=False,allow_articles=True):
     """Return auditable strict equivalence of one current actual ASR transcript.
 
     source_text anchors ASR's compact clock spelling (815 vs explicit 8:15).
@@ -387,7 +387,7 @@ def compare(expected_spoken,recognized,language,*,normalizer=None,source_text=No
         'provenance':{'comparison':'exact transforms only; no edit-distance acceptance',
             'cmudict':_version('cmudict'),'fugashi':_version('fugashi'),
             'unidic':_version('unidic'),'pykakasi':_version('pykakasi'),
-            'normalizer':getattr(normalizer,'__name__',None),'phonemeOverride':bool(phoneme_override),
+            'normalizer':getattr(normalizer,'__name__',None),'phonemeOverride':bool(phoneme_override),'articlePolicyEnabled':bool(allow_articles),
             'ruleFileSha256':_code_sha(),'normalizerFileSha256':_code_sha(normalizer) if normalizer else None,
             'sourceTextSha256':hashlib.sha256(source_text.encode()).hexdigest() if source_text else None}}
     if language not in ['en','ja']:raise ValueError('language must be en or ja')
@@ -407,10 +407,10 @@ def compare(expected_spoken,recognized,language,*,normalizer=None,source_text=No
                 return result
     if language=='en':
         raw_a=_english_tokens(expected);raw_b=_english_tokens(actual)
-        proof=_en_align(raw_a,raw_b)
+        proof=_en_align(raw_a,raw_b,allow_articles)
         if proof is not None:a,b,ea,eb=raw_a,raw_b,[],[]
         else:
-            a,ea=_expanded(raw_a);b,eb=_expanded(raw_b);proof=_en_align(a,b)
+            a,ea=_expanded(raw_a);b,eb=_expanded(raw_b);proof=_en_align(a,b,allow_articles)
         result.update(normalizedExpected=a,normalizedRecognized=b)
         result['equivalent']=proof is not None
         if proof is not None:

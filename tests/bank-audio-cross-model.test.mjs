@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {pathToFileURL} from 'node:url';
+import path from 'node:path';
+import {validateCrossModelAcceptance as valid} from '../scripts/audio-cross-model-proof.mjs';
+const {validASREvidence}=await import(pathToFileURL(path.join(process.cwd(),'scripts/validate-bank-audio.mjs')).href);
+const fixture=()=>JSON.parse(readFileSync(new URL('./fixtures/audio-cross-model.json',import.meta.url),'utf8'));
+const check=x=>valid(x.unit,x.clip,x.record,x.row,{validateOriginal:validASREvidence});
+test('actual full-model match admits additional proof while original Turbo remains review',()=>{const x=fixture();assert.equal(check(x),true);assert.equal(x.row.repair.candidate.asr.status,'review');assert.equal(x.record.recognized,x.row.repair.candidate.asr.recognized);assert.notEqual(x.record.recognized,x.row.crossModelChecks[0].fullASR.recognized);});
+test('missing or duplicate proof cannot admit accepted',()=>{for(const kind of ['missing','duplicate']){const x=fixture();x.row.crossModelChecks=kind==='missing'?[]:[...x.row.crossModelChecks,...x.row.crossModelChecks];assert.equal(check(x),false);}});
+test('changed final clip cannot borrow previous proof',()=>{const x=fixture();x.clip.sha256='e'.repeat(64);assert.equal(check(x),false);});
+test('wrong fixed model, supplied prompt and mismatched actual fingerprint are rejected',()=>{for(const mutate of [p=>p.fullASR.recognitionGeneration.model='whisper-large-v3-turbo',p=>p.fullASR.recognitionGeneration.prompt='The staff signed',p=>p.fullASR.fingerprint='f'.repeat(64)]){const x=fixture();mutate(x.row.crossModelChecks[0]);assert.equal(check(x),false);}});
+test('rewritten original Turbo transcript or empty semantic proof are rejected',()=>{const x=fixture();x.record.recognized=x.row.crossModelChecks[0].fullASR.recognized;assert.equal(check(x),false);const y=fixture();y.row.crossModelChecks[0].fullASR.comparison.proofExpected='';assert.equal(check(y),false);});

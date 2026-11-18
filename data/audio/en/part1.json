@@ -3731,22 +3731,6 @@
       "asrStatus": "matched",
       "required": true
     },
-    "p1-004/options/1/0": {
-      "src": "./audio/generated/en/af_heart/1737a4748934840270f9ce8230de0f2a.m4a",
-      "duration": 2.24,
-      "bytes": 14998,
-      "sha256": "be650c54195b6fc5d83c143647c6e4f2e5b4a687f665b57f63a4f176ce28b279",
-      "decodedPeak": 0.703633,
-      "headroomDb": 0.0,
-      "phonemeSha256": "c0fb021f703a43a556c20e2844520839abd7d6ba744b615b55d53a300f7ae76a",
-      "voiceId": "af_heart",
-      "language": "en",
-      "text": "Water is flowing from a can toward a plant.",
-      "spoken": "Water is flowing from a can toward a plant.",
-      "inputSha256": "d24798285d18d08543c70866aa593f58b504e5ebd04f52a35ca5c7c1707f09e5",
-      "asrStatus": "review",
-      "required": true
-    },
     "p1-019/options/2/0": {
       "src": "./audio/generated/en/af_heart/357dacc8b5a5495138184895d991bc66.m4a",
       "duration": 2.4,
@@ -3860,6 +3844,23 @@
       "inputSha256": "1cf8f019f3fc4bd00475f90ad5152dc3b3acea06bab4deec8a6142b72d13cea6",
       "asrStatus": "matched",
       "required": true
+    },
+    "p1-004/options/1/0": {
+      "src": "./audio/generated/en/af_heart/ff1012a5f6308df32c565910c82fd531.m4a",
+      "duration": 2.52,
+      "bytes": 16766,
+      "sha256": "6b5e40a637d05a559b430887f56fd31100620f87d6dbe1242165f2ce578c90cc",
+      "decodedPeak": 0.724338,
+      "headroomDb": 0.0,
+      "phonemeSha256": "343c143b1a8747ae9e911c76203ce6cab7652d45f4cd5289c145261030f7e9ca",
+      "voiceId": "af_heart",
+      "language": "en",
+      "text": "Water is flowing from a can toward a plant.",
+      "spoken": "Water is flowing from a can toward a plant.",
+      "inputSha256": "688776fac101e09d2a77aae659155147f0fc0981ada9dbb7644c6f9797396fed",
+      "asrStatus": "matched",
+      "required": true,
+      "synthesisSpeed": 0.88
     }
   },
   "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2",
@@ -3877,8 +3878,12 @@
     "encoding": "lufs16-tp3-aac48-decoded-4x-peak095",
     "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2",
     "normalization": "bank-v3-japanese-contextual-numbers",
-    "overridesSha256": "f393a91ab1c519e60c36c1671b2664bc64562641497a2277e16c95c9692686d9"
+    "overridesSha256": "988777ac558df6f9207f91cebca8707b9b170e41199dbc36a3dfe6ecf3bf5032"
   },
   "complete": false,
-  "requiredComplete": true
+  "requiredComplete": true,
+  "fallbackCount": 0,
+  "requiredFallbackCount": 0,
+  "requiredPlaybackComplete": true,
+  "recordedAuditComplete": true
 }

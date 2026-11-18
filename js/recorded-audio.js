@@ -6,6 +6,9 @@ const normalized = value => String(value ?? '').normalize('NFC').trim().replace(
 const validLanguage = value => ['en','ja'].includes(value);
 const validBank = value => /^(vocab|part1|part2|grammar|listening|reading|methods|terms|labels)$/.test(value);
 const sha = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
+const count = value => Number.isSafeInteger(value)&&value>=0;
+const optionalFallbackCounts = value => ['fallbackCount','requiredFallbackCount'].every(key=>value[key]===undefined||count(value[key]))&&(value.requiredPlaybackComplete===undefined||typeof value.requiredPlaybackComplete==='boolean')&&(value.fallbackCount===undefined||value.requiredFallbackCount===undefined||value.requiredFallbackCount<=value.fallbackCount);
+const validFallback = (value,language) => record(value)&&language==='ja'&&value.playback==='system'&&value.language==='ja'&&typeof value.text==='string'&&value.text.trim()&&typeof value.voiceId==='string'&&value.voiceId.trim()&&value.reason==='unresolved-after-strong-asr-retry'&&sha(value.auditedSha256)&&!Object.hasOwn(value,'src');
 let index, indexPending;
 const packs = new Map(), pending = new Map(), failed = new Map();
 
@@ -20,11 +23,13 @@ function metadataURL(src) {
   return url.href;
 }
 export function validAudioIndex(value) {
-  return record(value)&&value.version===1&&typeof value.complete==='boolean'&&sha(value.sourceSha256)&&Array.isArray(value.packs)&&value.packs.every(pack=>record(pack)&&validBank(pack.bank)&&validLanguage(pack.language)&&typeof pack.src==='string'&&Number.isSafeInteger(pack.count)&&pack.count>=0&&typeof pack.complete==='boolean'&&Number.isSafeInteger(pack.bytes)&&pack.bytes>0&&sha(pack.sha256))
+  return record(value)&&value.version===1&&typeof value.complete==='boolean'&&sha(value.sourceSha256)&&optionalFallbackCounts(value)&&Array.isArray(value.packs)&&value.packs.every(pack=>record(pack)&&optionalFallbackCounts(pack)&&(pack.language==='ja'||!pack.fallbackCount)&&validBank(pack.bank)&&validLanguage(pack.language)&&typeof pack.src==='string'&&Number.isSafeInteger(pack.count)&&pack.count>=0&&typeof pack.complete==='boolean'&&Number.isSafeInteger(pack.bytes)&&pack.bytes>0&&sha(pack.sha256))
     &&new Set(value.packs.map(pack=>pack.language+'/'+pack.bank)).size===value.packs.length;
 }
 export function validAudioPack(value,bank,language) {
-  return record(value)&&value.version===1&&value.bank===bank&&value.language===language&&record(value.clips)
+  return record(value)&&value.version===1&&value.bank===bank&&value.language===language&&record(value.clips)&&optionalFallbackCounts(value)
+    &&(value.fallbacks===undefined||record(value.fallbacks)&&Object.entries(value.fallbacks).every(([key,item])=>key.length>0&&!Object.hasOwn(value.clips,key)&&validFallback(item,language)))
+    &&(value.fallbackCount===undefined||value.fallbackCount===Object.keys(value.fallbacks||{}).length)
     &&Object.entries(value.clips).every(([key,clip])=>key.length>0&&record(clip)&&clip.language===language&&typeof clip.text==='string'&&clip.text.trim()&&typeof clip.voiceId==='string'&&Number.isFinite(clip.duration)&&clip.duration>0&&Number.isSafeInteger(clip.bytes)&&clip.bytes>0&&sha(clip.sha256)&&(()=>{try{audioURL(clip.src);return true;}catch{return false;}})());
 }
 async function readMetadata(src,valid,expected) {
@@ -57,7 +62,7 @@ export function loadAudioIndex() {
 }
 function registerPack(value) {
   const byText=new Map(),byGroup=new Map();
-  for(const [key,raw] of Object.entries(value.clips)) {
+  for(const [key,raw] of Object.entries({...value.clips,...value.fallbacks})) {
     const clip={...raw,key,bank:value.bank};
     const text=normalized(clip.text);if(!byText.has(text))byText.set(text,[]);byText.get(text).push(clip);
     const match=/^(.*)\/(\d+)$/.exec(key);
@@ -104,9 +109,15 @@ export function inferAudioBank(key='') {
 }
 export function getAudioClip(key,{bank=inferAudioBank(key),language='en'}={}) {
   const candidates=bank?[packs.get(language+'/'+bank)]:[...packs.entries()].filter(([name])=>name.startsWith(language+'/')).map(([,pack])=>pack);
-  for(const pack of candidates){const clip=pack?.value.clips[key];if(clip)return {...clip,key,bank:pack.value.bank};}
+  for(const pack of candidates){const clip=pack&&Object.hasOwn(pack.value.clips,key)&&pack.value.clips[key];if(clip)return {...clip,key,bank:pack.value.bank};}
   return null;
 }
+export function getAudioFallback(key,{bank=inferAudioBank(key),language='ja'}={}) {
+  const candidates=bank?[packs.get(language+'/'+bank)]:[...packs.entries()].filter(([name])=>name.startsWith(language+'/')).map(([,pack])=>pack);
+  for(const pack of candidates){const items=pack?.value.fallbacks;if(items&&Object.hasOwn(items,key))return {...items[key],key,bank:pack.value.bank};}
+  return null;
+}
+const getAudioEntry=(key,context)=>getAudioFallback(key,context)||getAudioClip(key,context);
 function exactClips(text,{bank,language='en',seed='',speaker}={}) {
   const wanted=normalized(text);let choices=[];
   for(const [name,pack] of packs){if(!name.startsWith(language+'/')||bank&&pack.value.bank!==bank)continue;
@@ -121,15 +132,19 @@ function exactClips(text,{bank,language='en',seed='',speaker}={}) {
     if(scoped.length||bank==='listening'||/^p[34]-/.test(seed))choices=scoped;
   }
   if(speaker&&choices.some(clips=>clips[0].speaker))choices=choices.filter(clips=>clips[0].speaker===speaker);
-  return choices.sort((a,b)=>a[0].key.localeCompare(b[0].key))[0]||null;
+  // A keyless exact-text lookup is ambiguous if an explicitly excluded source
+  // shares that text; keep the conservative system route instead of borrowing it.
+  return choices.sort((a,b)=>Number(b.some(piece=>piece.playback==='system'))-Number(a.some(piece=>piece.playback==='system'))||a[0].key.localeCompare(b[0].key))[0]||null;
 }
 export function resolveAudioPieces(turns,{language='en',bank,seed=''}={}) {
   return turns.flatMap((turn,turnIndex)=>{
     const lang=turn.language||language,context={language:lang,bank:turn.bank||bank,seed:turn.seed||seed,speaker:turn.speaker};
     const keys=turn.keys||((turn.key||turn.audioKey)?[turn.key||turn.audioKey]:null);
     const exactHead=keys?.length===1&&/^(?:v-|lex-)[^/]+\/meaning$/.test(keys[0]);
-    let clips=keys?.map(key=>getAudioClip(key,context));
+    const forced=keys?.map(key=>getAudioFallback(key,context)).filter(Boolean)||[];
+    let clips=keys?.map(key=>getAudioEntry(key,context));
     if(clips?.some(clip=>!clip)||clips&&normalized(clips.map(clip=>clip.text).join(' '))!==normalized(turn.text))clips=null;
+    if(!clips&&forced.length)return [{...forced[0],text:turn.text,keys,speaker:turn.speaker,language:lang,turnIndex}];
     if(!clips&&!exactHead)clips=exactClips(turn.text,context);
     // Only untyped choices may reuse a word head. Explicit vocabulary or external
     // lexeme senses must keep their own pronunciation; missing clips use speech.

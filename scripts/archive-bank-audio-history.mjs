@@ -39,7 +39,11 @@ const children=await read(path.join(work,'bank-retry-children.json'),{});
 if(children.state==='running')for(const [role,processInfo] of Object.entries(children.children||{})){
   try{process.kill(processInfo.pid,0);throw Error(`Wait for retry child ${role} PID ${processInfo.pid} to exit before final cleanup`);}catch(e){if(e.code!=='ESRCH')throw e;}
 }
-if(!manifest.requiredComplete||!manifest.requiredAuditComplete)throw Error('Required generation and actual ASR must be complete before cleanup');
+if(!(manifest.requiredPlaybackComplete??manifest.requiredComplete))throw Error('Required playback coverage must be complete before cleanup');
+// Optional, unaudited files may still be reversibly unpublished below. Every
+// required recording and explicit fallback must already have its own evidence.
+const preflight=await validateAudio({allowIncomplete:true,ignoreOrphans:true,ignoreUnexpectedMetadata:true});
+if(!preflight.ok||preflight.audited!==preflight.generated)throw Error('Pre-cleanup coverage/fallback evidence failed: '+preflight.errors.slice(0,8).join('; '));
 // Pruning is reversible metadata work; final coverage validation happens before
 // the archive removes anything. The source list retains optional fallback keys.
 for(const meta of manifest.packs){
@@ -51,6 +55,8 @@ const unpublished=new Map(oldOptional.entries.map(row=>[row.token,row]));for(con
 await write(path.join(root,'data/audio/unpublished-optional.json'),{version:1,entries:[...unpublished.values()]});
 const sync=spawnSync(path.join(work,'venv/bin/python'),['scripts/generate-bank-audio.py','--workdir',work,'--sync-only'],{cwd:root,stdio:'inherit'});
 if(sync.status!==0)throw Error('Could not synchronize publication packs');
+manifest=await read(path.join(root,'data/audio/manifest.json'),{});
+if(!(manifest.requiredPlaybackComplete??manifest.requiredComplete)||!(manifest.recordedAuditComplete??manifest.requiredAuditComplete))throw Error('Required playback coverage and published recording ASR must be complete before archive removal');
 // These two known cleanup classes are handled below; all content/provenance
 // validation must still pass before any historical files can be removed.
 const checked=await validateAudio({ignoreOrphans:true,ignoreUnexpectedMetadata:true});
@@ -91,6 +97,21 @@ for(const entry of [...Object.values(retries.records),...(retries.archivedCases|
   }
 }
 await write(path.join(root,'data/audio/retries.json'),retries);
+// Repair snapshots are independent of immutable baseline/comparison evidence.
+// Bind archive copies before removing unreferenced candidates or originals.
+const quality=await read(path.join(root,'data/audio/quality-review.json'),null);
+if(quality){
+  for(const row of Object.values(quality.records||{})){
+    if(row.repair?.complete!==true||row.repair.disposition!=='system-fallback')continue;
+    for(const version of [row.repair.original,row.repair.candidate]){
+      const clip=version?.clip;if(!clip||active.has(clip.src))continue;
+      const record=archived.get(clip.src);
+      if(!record||record.sha256!==clip.sha256||record.bytes!==clip.bytes)throw Error('Cannot bind archived system-fallback evidence '+row.token);
+      version.archive={published:false,sha256:record.sha256,bytes:record.bytes,copyVerified:true};
+    }
+  }
+  await write(path.join(root,'data/audio/quality-review.json'),quality);
+}
 // This is the only destructive step, after every backup and its provenance was
 // written and verified. A partial interruption is safe to run again.
 for(const src of checked.orphanFiles)await fs.unlink(path.join(root,src));
@@ -102,4 +123,4 @@ for(const record of metadataToRemove){
 const final=await validateAudio();
 await write(path.join(root,'data/audio/validation.json'),final);
 if(!final.ok)throw Error('Post-cleanup validation failed: '+final.errors.slice(0,8).join('; '));
-console.log(JSON.stringify({ok:true,archivedFiles:checked.orphanFiles.length,archivedMetadataFiles:metadataToRemove.length,optionalUnpublished:optional.length,activeFiles:final.uniqueFiles,activeAudioBytes:final.audioBytes,required:final.required,audited:final.audited,remainingReview:final.unresolved,warnings:final.warnings},null,2));
+console.log(JSON.stringify({ok:true,archivedFiles:checked.orphanFiles.length,archivedMetadataFiles:metadataToRemove.length,optionalUnpublished:optional.length,activeFiles:final.uniqueFiles,activeAudioBytes:final.audioBytes,required:final.required,audited:final.audited,systemFallbackCount:final.systemFallbackCount,remainingReview:final.unresolved,warnings:final.warnings},null,2));

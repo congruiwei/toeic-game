@@ -33,12 +33,13 @@ def binding_for(unit,base_override=None):
     override=base_override or {}
     return {'text':unit['text'],'voiceId':unit['voiceId'],'language':unit['language'],
         'spoken':override.get('spoken',bank.normalize(unit['text'],unit['language'])),
-        'phonemes':override.get('phonemes'),'speed':float(override.get('speed',1.0))}
+        'phonemes':override.get('phonemes'),'speed':float(override.get('speed',1.0)),
+        **({'selectedVoiceId':bank.voice_rules.selected_voice(unit,override)} if 'voiceId' in override else {})}
 
 
 def override_audio(override):
     override=override or {}
-    return {k:override.get(k,1.0 if k=='speed' else None) for k in ['spoken','phonemes','speed']}
+    return {k:override.get(k,1.0 if k=='speed' else None) for k in ['spoken','phonemes','speed','voiceId']}
 
 
 def case_matches(entry,unit,current_override=None):
@@ -48,9 +49,10 @@ def case_matches(entry,unit,current_override=None):
     base=entry.get('baseOverride')
     if override_audio(current_override) not in [override_audio(base),override_audio(entry.get('retryOverride',base))]:return False
     initial=entry.get('initial',{}).get('clip',{})
-    before=entry.get('sourceBinding') or {'text':initial.get('text'),'voiceId':initial.get('voiceId'),
+    before=entry.get('sourceBinding') or {'text':initial.get('text'),'voiceId':bank.voice_rules.source_voice(initial),
         'language':initial.get('language'),'spoken':initial.get('spoken'),
-        'phonemes':(base or {}).get('phonemes'),'speed':float((base or {}).get('speed',1.0))}
+        'phonemes':(base or {}).get('phonemes'),'speed':float((base or {}).get('speed',1.0)),
+        **({'selectedVoiceId':initial.get('voiceId')} if 'voiceId' in (base or {}) else {})}
     return before==binding_for(unit,base)
 
 
@@ -64,7 +66,7 @@ def initial_coverage(source,packs,audits):
         if not unit.get('required') or unit.get('nonSpoken'):continue
         pair=(unit['language'],unit['bank']);clip=packs.get(pair,{}).get('clips',{}).get(unit['key'])
         record=audits.get(pair,{}).get('records',{}).get(unit['key'])
-        if not clip or clip.get('text')!=unit['text'] or clip.get('voiceId')!=unit['voiceId'] or not has_actual_asr(clip,record):
+        if not clip or not bank.voice_rules.clip_recipe_proof(unit,clip) or not has_actual_asr(clip,record):
             errors.append(f"{unit['language']}:{unit['bank']}:{unit['key']}")
     return errors
 

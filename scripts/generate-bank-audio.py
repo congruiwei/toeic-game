@@ -25,6 +25,8 @@ RATE = 24000
 evidence_spec=importlib.util.spec_from_file_location('audio_evidence',Path(__file__).with_name('audio-evidence.py'))
 evidence=importlib.util.module_from_spec(evidence_spec)
 evidence_spec.loader.exec_module(evidence)
+voice_spec=importlib.util.spec_from_file_location('audio_voice_override',Path(__file__).with_name('audio-voice-override.py'))
+voice_rules=importlib.util.module_from_spec(voice_spec);voice_spec.loader.exec_module(voice_rules)
 spec = importlib.util.spec_from_file_location('audition_encoder', ROOT / 'scripts/generate-audition.py')
 codec = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(codec)
@@ -242,20 +244,139 @@ def audit_records(language, bank):
     return read(OUT / 'audit' / language / (bank + '.json'), {}).get('records', {})
 
 
-def input_fingerprint(generation,unit,override=None):
+def input_payload(generation,unit,override=None):
     """Exact synthesis-input binding shared with reviewed correction delivery."""
     override=override or {}
     synthesis={k:generation[k] for k in ['recipe','modelSha256','voicesSha256','packages']}
     spoken=override.get('spoken',normalize(unit['text'],unit['language']))
     speed=float(override.get('speed',1.0))
     if not .75<=speed<=1.2:raise ValueError('Invalid speed override')
-    payload=[synthesis,generation.get('encoding',codec.ENCODING),unit['voiceId'],spoken,override.get('phonemes')]
+    payload=[synthesis,generation.get('encoding',codec.ENCODING),voice_rules.selected_voice(unit,override),spoken,override.get('phonemes')]
     if speed!=1.0:payload.append({'speed':speed})
     if unit['language']=='ja' and re.search('[A-Za-z]',spoken):payload.append('mixed-japanese-v1')
+    return spoken,payload
+
+
+def input_fingerprint(generation,unit,override=None):
+    spoken,payload=input_payload(generation,unit,override)
     return spoken,sha(json.dumps(payload,sort_keys=True).encode())
 
 
+def planned_clip_matches(clip,input_sha,override,unit=None):
+    return bool(clip and (unit is None or voice_rules.matches_selection(unit,clip,override) and voice_rules.clip_recipe_proof(unit,clip)) and clip.get('inputSha256')==input_sha and
+        (not override.get('phonemes') or clip.get('phonemeSha256')==sha(override['phonemes'].encode())))
+
+
+def resolve_phonemes(unit,spoken,override,engines):
+    # Explicit reviewed/prosodic inputs also take precedence for option labels.
+    if override.get('phonemes'):return override['phonemes']
+    if unit['kind']=='label':return {'A.':'ˈA','B.':'bˈi','C.':'sˈi','D.':'dˈi'}[unit['text']]
+    return phonemize(spoken,unit['language'],engines)
+
+
+STRONG_FALLBACK_MODEL = 'whisper-large-v3-turbo'
+STRONG_FALLBACK_SHA256 = 'e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da'
+_context_checks = None
+_lexical_checks = None
+_cross_model_checks = None
+
+
+def valid_published_asr(unit, clip, record, quality_rows=None, first_ids=None):
+    """Independent acceptance counts only with its method-specific bound proof."""
+    if unit and not voice_rules.clip_recipe_proof(unit,clip):return False
+    if clip and not voice_rules.strict_comparison_evidence(clip,record):return False
+    if not evidence.valid_asr(clip,record):return False
+    if 'acceptance' not in record:return record.get('status')!='accepted'
+    if record.get('status')=='accepted' and isinstance(record.get('acceptance'),dict) and record['acceptance'].get('method')=='same-media-full-model-crosscheck-v1':
+        if not unit:return False
+        global _cross_model_checks
+        if _cross_model_checks is None:
+            modules=[]
+            for name,file in [('published_cross_model','audio-cross-model.py'),('published_cross_comparison','audio-compare.py')]:
+                path=ROOT/'scripts'/file
+                if not path.is_file():return False
+                definition=importlib.util.spec_from_file_location(name,path)
+                module=importlib.util.module_from_spec(definition);definition.loader.exec_module(module);modules.append(module)
+            _cross_model_checks=modules
+        if quality_rows is None:quality_rows=read(OUT/'quality-review.json',{}).get('records',{})
+        token=f"{unit['language']}:{unit['bank']}:{unit['key']}"
+        proof,comparison=_cross_model_checks
+        return proof.valid_record(unit,clip,record,quality_rows.get(token,{}),comparison,normalize,evidence)
+    if record.get('status')=='accepted' and isinstance(record.get('acceptance'),dict) and record['acceptance'].get('method')=='selected-recipe-lexical-equivalence-v1':
+        if not unit:return False
+        global _lexical_checks
+        if _lexical_checks is None:
+            path=ROOT/'scripts/accept-repair-equivalence.py'
+            if not path.is_file():return False
+            spec=importlib.util.spec_from_file_location('published_lexical',path)
+            _lexical_checks=importlib.util.module_from_spec(spec);spec.loader.exec_module(_lexical_checks)
+        if quality_rows is None:quality_rows=read(OUT/'quality-review.json',{}).get('records',{})
+        token=f"{unit['language']}:{unit['bank']}:{unit['key']}"
+        return _lexical_checks.valid_lexical_record(unit,clip,record,quality_rows.get(token,{}))
+    if (record.get('status')!='accepted' or not isinstance(record.get('acceptance'),dict) or
+            record['acceptance'].get('method')!='unchanged-original-pcm-context-v1' or not unit):return False
+    global _context_checks
+    if _context_checks is None:
+        modules=[]
+        for name,file in [('published_context','contextual-audio-probe.py'),('published_context_comparison','audio-compare.py')]:
+            path=ROOT/'scripts'/file
+            if not path.is_file():return False
+            definition=importlib.util.spec_from_file_location(name,path)
+            module=importlib.util.module_from_spec(definition);definition.loader.exec_module(module);modules.append(module)
+        _context_checks=modules
+    if quality_rows is None:quality_rows=read(OUT/'quality-review.json',{}).get('records',{})
+    if first_ids is None:first_ids={q['id'] for q in read(ROOT/'data/part2.json',[]) if q.get('type')=='first'}
+    token=f"{unit['language']}:{unit['bank']}:{unit['key']}"
+    probe,comparison=_context_checks
+    return probe.valid_context_record(unit,clip,record,quality_rows.get(token,{}),comparison,normalize,evidence,first_ids)
+
+
+def valid_system_fallback(unit, fallback, row, record):
+    """A deliberate system route is coverage, never a locally audited voice."""
+    if not all(isinstance(x,dict) for x in [unit,fallback,row,record]):return False
+    token=f"{unit.get('language')}:{unit.get('bank')}:{unit.get('key')}"
+    if (unit.get('language')!='ja' or unit.get('required') is not True or unit.get('nonSpoken') or
+            row.get('token')!=token or fallback.get('playback')!='system' or fallback.get('language')!='ja' or
+            fallback.get('text')!=unit.get('text') or fallback.get('voiceId')!=unit.get('voiceId') or
+            fallback.get('reason')!='unresolved-after-strong-asr-retry' or 'src' in fallback):return False
+    repair=row.get('repair')
+    if not isinstance(repair,dict) or repair.get('complete') is not True or repair.get('disposition')!='system-fallback' or not isinstance(repair.get('method'),str) or not repair['method'].strip():return False
+    original,candidate=repair.get('original'),repair.get('candidate')
+    if not all(isinstance(v,dict) and isinstance(v.get('clip'),dict) and isinstance(v.get('asr'),dict) for v in [original,candidate]):return False
+    before,after=original['clip'],candidate['clip']
+    if not all(re.fullmatch('[a-f0-9]{64}',c.get('sha256','')) for c in [before,after]) or before['sha256']==after['sha256'] or fallback.get('auditedSha256')!=after['sha256']:return False
+    for version in [original,candidate]:
+        c=version['clip']
+        if any(c.get(k)!=unit.get(k) for k in ['text','language','voiceId','required']) or (unit.get('speaker') and c.get('speaker')!=unit['speaker']):return False
+        if not evidence.valid_asr(c,version['asr']):return False
+    if after.get('asrStatus')!='review' or candidate['asr'].get('status')!='review':return False
+    for asr in [candidate['asr'],record]:
+        g=asr.get('recognitionGeneration',{})
+        if (not evidence.valid_asr(after,asr) or asr.get('status')!='review' or
+                asr.get('recognitionMethod')!='individual-beam5' or
+                g.get('model')!=STRONG_FALLBACK_MODEL or g.get('modelSha256')!=STRONG_FALLBACK_SHA256):return False
+    return record.get('recognized')==candidate['asr'].get('recognized')
+
+
+def validate_fallback_packs(source,packs):
+    units={(u['language'],u['bank'],u['key']):u for u in source['units']}
+    review=read(OUT/'quality-review.json',{'records':{}})
+    rows=review.get('records',{})
+    for pair,pack in packs.items():
+        fallbacks=pack.get('fallbacks',{})
+        if not isinstance(fallbacks,dict):raise ValueError('Invalid system fallback map')
+        checks=audit_records(*pair)
+        for key,fallback in fallbacks.items():
+            token=f'{pair[0]}:{pair[1]}:{key}'
+            if key in pack['clips'] or not valid_system_fallback(units.get((*pair,key)),fallback,rows.get(token),checks.get(key)):
+                raise ValueError('Invalid system fallback evidence: '+token)
+
+
 def flush(source, source_hash, generation, packs):
+    validate_fallback_packs(source,packs)
+    source_units={(u['language'],u['bank'],u['key']):u for u in source['units']}
+    quality_rows=read(OUT/'quality-review.json',{}).get('records',{})
+    first_ids={q['id'] for q in read(ROOT/'data/part2.json',[]) if q.get('type')=='first'}
     rows = []
     expected = {}
     required = {}
@@ -266,42 +387,54 @@ def flush(source, source_hash, generation, packs):
             required.setdefault((u['language'],u['bank']),set()).add(u['key'])
     total = {'count': 0, 'expected': sum(expected.values()),'sourceUnits':len(source['units']),
              'nonSpoken':sum(bool(u.get('nonSpoken')) for u in source['units']),'requiredExpected':sum(map(len,required.values())),
-             'requiredCount':0,'requiredAudited':0,'audioBytes': 0, 'duration': 0}
+             'requiredCount':0,'requiredAudited':0,'systemFallbackCount':0,'requiredFallbackCount':0,'audioBytes': 0, 'duration': 0}
     all_files = {}
     audited = 0
     for pair, count in expected.items():
         language, bank = pair
         pack = packs.setdefault(pair, {'version': 1, 'language': language, 'bank': bank, 'clips': {}})
         clips = pack['clips']
+        fallbacks=pack.get('fallbacks',{})
+        pack_audited=0
         checks = audit_records(language, bank)
         for key, clip in clips.items():
             review = checks.get(key, {})
-            clip['asrStatus'] = review['status'] if evidence.valid_asr(clip,review) else 'pending'
+            clip['asrStatus'] = review['status'] if valid_published_asr(source_units.get((*pair,key)),clip,review,quality_rows,first_ids) else 'pending'
             if clip['asrStatus'] in ('matched', 'review', 'accepted'):
                 audited += 1
+                pack_audited += 1
                 if key in required.get(pair,set()):total['requiredAudited']+=1
         required_count=len(set(clips)&required.get(pair,set()))
         required_expected=len(required.get(pair,set()))
+        required_fallback_count=len(set(fallbacks)&required.get(pair,set()))
         pack.update(sourceSha256=source_hash, generation=generation, complete=len(clips) == count,
-                    requiredComplete=required_count==required_expected)
+                    requiredComplete=required_count==required_expected,
+                    fallbackCount=len(fallbacks),requiredFallbackCount=required_fallback_count,
+                    requiredPlaybackComplete=required_count+required_fallback_count==required_expected,
+                    recordedAuditComplete=pack_audited==len(clips))
         target = OUT / language / (bank + '.json')
         atomic(target, pack)
         payload = target.read_bytes()
         unique = {c['src']: c for c in clips.values()}
         rows.append({'bank': bank, 'language': language, 'src': './' + target.relative_to(ROOT).as_posix(),
                      'count': len(clips), 'expected': count, 'requiredCount':required_count,'requiredExpected':required_expected,
-                     'requiredComplete':pack['requiredComplete'],'bytes': len(payload), 'sha256': sha(payload),
+                     'requiredComplete':pack['requiredComplete'],'fallbackCount':len(fallbacks),'requiredFallbackCount':required_fallback_count,
+                     'requiredPlaybackComplete':pack['requiredPlaybackComplete'],'recordedAuditComplete':pack['recordedAuditComplete'],'bytes': len(payload), 'sha256': sha(payload),
                      'duration': round(sum(c['duration'] for c in unique.values()), 3),
                      'audioBytes': sum(c['bytes'] for c in unique.values()), 'complete': pack['complete']})
         all_files.update(unique)
         total['count'] += len(clips)
         total['requiredCount'] += required_count
+        total['systemFallbackCount'] += len(fallbacks)
+        total['requiredFallbackCount'] += required_fallback_count
     total.update(files=len(all_files), audioBytes=sum(c['bytes'] for c in all_files.values()),
                  duration=round(sum(c['duration'] for c in all_files.values()), 3), asrReviewed=audited)
     atomic(OUT / 'manifest.json', {'version': 1, 'model': source['model'], 'voices': source['voices'],
            'sourceSha256': source_hash, 'generation': generation, 'complete': total['count'] == total['expected'],
            'requiredComplete':total['requiredCount']==total['requiredExpected'],
            'requiredAuditComplete':total['requiredAudited']==total['requiredExpected'],
+           'requiredPlaybackComplete':total['requiredCount']+total['requiredFallbackCount']==total['requiredExpected'],
+           'recordedAuditComplete':audited==total['count'],
            'auditComplete': audited == total['expected'], 'packs': rows, 'totals': total})
 
 
@@ -340,10 +473,11 @@ def main():
         if pair not in packs:
             old = read(OUT/pair[0]/(pair[1]+'.json'), {})
             # Entry input hashes decide reuse; adding unrelated sources does not discard audio.
-            packs[pair] = {'version': 1, 'language': pair[0], 'bank': pair[1], 'clips': old.get('clips', {})}
+            packs[pair] = {'version': 1, 'language': pair[0], 'bank': pair[1], 'clips': old.get('clips', {}),**({'fallbacks':old['fallbacks']} if 'fallbacks' in old else {})}
     valid = {(u['language'], u['bank'], u['key']) for u in source['units'] if not u.get('nonSpoken')}
     for pair, pack in packs.items():
         pack['clips'] = {k: v for k, v in pack['clips'].items() if (*pair, k) in valid}
+    validate_fallback_packs(source,packs)
     planned, retired, integrity_failures = {}, {}, {}
     for u in source['units']:
         if u.get('nonSpoken'):continue
@@ -352,12 +486,16 @@ def main():
         spoken,input_sha=input_fingerprint(generation,u,override)
         planned[token] = (override, spoken, input_sha)
         clips = packs[(u['language'],u['bank'])]['clips']
+        if u['key'] in packs[(u['language'],u['bank'])].get('fallbacks',{}):
+            # Explicit removal of the declaration is required before a later
+            # author can replace it; --force must not undo a quality decision.
+            continue
         if u['key'] in clips:
             check=evidence.media_integrity(ROOT,clips[u['key']])
             if not check['ok']:
                 integrity_failures[token]=check
                 retired[token]=clips.pop(u['key'])
-        if u['key'] in clips and clips[u['key']].get('inputSha256') != input_sha:
+        if u['key'] in clips and not planned_clip_matches(clips[u['key']],input_sha,override,u):
             retired[token] = clips.pop(u['key'])
         if u['key'] in clips:
             # Metadata changes do not require fresh synthesis. Keep even older
@@ -378,13 +516,14 @@ def main():
     for pack in packs.values():
         for clip in pack['clips'].values():
             if (ROOT/clip['src']).exists():
-                emitted[Path(clip['src']).stem] = {k:v for k,v in clip.items() if k not in ('voiceId','language','text','spoken','inputSha256','asrStatus','required','speaker')}
+                emitted[Path(clip['src']).stem] = {k:v for k,v in clip.items() if k not in ('voiceId','sourceVoiceId','voiceOverrideInput','language','text','spoken','inputSha256','asrStatus','required','speaker')}
     selected_tokens=set(read(args.tokens_file,[])) if args.tokens_file else None
     chosen = [u for u in source['units'] if (not args.language or u['language'] == args.language)
               and (not args.banks or u['bank'] in args.banks) and (not args.keys or u['key'] in args.keys)
               and (selected_tokens is None or f"{u['language']}:{u['bank']}:{u['key']}" in selected_tokens)
+              and u['key'] not in packs[(u['language'],u['bank'])].get('fallbacks',{})
               and not u.get('nonSpoken') and (u.get('required',True) or args.include_optional or args.benchmark or args.keys or selected_tokens is not None)]
-    if args.benchmark:
+    if args.benchmark and chosen:
         chosen = [chosen[round(i*(len(chosen)-1)/(args.benchmark-1))] for i in range(args.benchmark)]
     else:
         # Finish the learning material before optional explanations and distractor glossaries.
@@ -402,13 +541,14 @@ def main():
         stamp = time.monotonic()
         inferred, encoded = 0, 0
         try:
-            language, vid = u['language'], u['voiceId']
+            language = u['language']
             override, spoken, input_sha = planned[token]
+            vid=voice_rules.selected_voice(u,override)
             speed=float(override.get('speed',1.0))
             if not spoken or re.search(r'\[[1-4]\]|\d|\$', spoken):
                 raise ValueError('Unresolved numeric/empty spoken input')
             previous = packs[(language,u['bank'])]['clips'].get(u['key']) or retired.get(token)
-            if previous and token not in integrity_failures and not args.force and previous.get('inputSha256') == input_sha and (ROOT/previous['src']).exists():
+            if previous and token not in integrity_failures and not args.force and planned_clip_matches(previous,input_sha,override,u) and (ROOT/previous['src']).exists():
                 previous['text'] = u['text']
                 previous['required'] = u.get('required',True)
                 if u.get('speaker'):previous['speaker']=u['speaker']
@@ -417,9 +557,7 @@ def main():
                 continue
             cache_key = (language,spoken,override.get('phonemes'),u['kind']=='label')
             if cache_key not in phones:
-                phonemes = override.get('phonemes') or phonemize(spoken,language,phonemizers)
-                if u['kind'] == 'label':
-                    phonemes = {'A.':'ˈA','B.':'bˈi','C.':'sˈi','D.':'dˈi'}[u['text']]
+                phonemes = resolve_phonemes(u,spoken,override,phonemizers)
                 missing = set(phonemes) - set(kokoro.tokenizer.vocab)
                 if not phonemes.strip() or '❓' in phonemes or missing:
                     raise ValueError(f'Unsupported phonemes: {sorted(missing)} / {phonemes}')
@@ -451,9 +589,13 @@ def main():
                 encoded=time.monotonic()-encoding_start
                 record['phonemeSha256'] = sha(phonemes.encode())
                 emitted[file_id] = dict(record)
-                atomic(temp/(fingerprint+'.json'), {**u,'spoken':spoken,'phonemes':phonemes,'generation':generation})
+                atomic(temp/(fingerprint+'.json'), {**u,'voiceId':vid,**({'sourceVoiceId':u['voiceId']} if vid!=u['voiceId'] else {}),'spoken':spoken,'phonemes':phonemes,'generation':generation})
             record.update(voiceId=vid,language=language,text=u['text'],spoken=spoken,inputSha256=input_sha,
                           asrStatus='pending',required=u.get('required',True),synthesisSpeed=speed)
+            record.pop('sourceVoiceId',None);record.pop('voiceOverrideInput',None)
+            if vid!=u['voiceId']:
+                record['sourceVoiceId']=u['voiceId']
+                record['voiceOverrideInput']=json.dumps(input_payload(generation,u,override)[1],sort_keys=True)
             if u.get('speaker'):record['speaker']=u['speaker']
             packs[(language,u['bank'])]['clips'][u['key']] = record
             if previous:

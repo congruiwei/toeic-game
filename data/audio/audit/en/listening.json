@@ -139313,20 +139313,20 @@
     },
     "p4-g01-q3/options/0/0": {
       "key": "p4-g01-q3/options/0/0",
-      "src": "./audio/generated/en/am_puck/e097917f018518e9a70390a9293141f1.m4a",
-      "sha256": "4d401e08035ce96faa987e013bb5efd01dfa4c75616a8e024bddb7b30870066e",
+      "src": "./audio/generated/en/am_puck/e25e1fe2dd9b5ffce47fa1e72d69b964.m4a",
+      "sha256": "d275036f0d6a6cf99b308770e5e2169afbfe3100e192f3bbf719c1bfb5b2d353",
       "voiceId": "am_puck",
-      "fingerprint": "c654396698faa8c7a310b170affda2adbd26e4b5f902618cecf92af9a71aa66e",
+      "fingerprint": "63c961c07076df0a6c330b0054d4182bde83ba579f3c63174138c70d02237825",
       "expected": "An order number",
       "spoken": "An order number",
-      "recognized": "in order numbers",
+      "recognized": "In order number.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " in order numbers",
-          "avgLogprob": -0.6304484109083811,
-          "noSpeechProb": 1.3340842102901873e-12
+          "end": 0.6,
+          "text": " In order number.",
+          "avgLogprob": -0.35784047842025757,
+          "noSpeechProb": 5.875169708374761e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -139349,18 +139349,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 0.6667,
+      "errorRate": 0.3333,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "an",
           "recognized": "in"
-        },
-        {
-          "operation": "replace",
-          "expected": "number",
-          "recognized": "numbers"
         }
       ],
       "comparison": {
@@ -139368,7 +139363,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "An order number",
-        "recognized": "in order numbers",
+        "recognized": "In order number.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -139380,7 +139375,7 @@
         "normalizedRecognized": [
           "in",
           "order",
-          "numbers"
+          "number"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -139391,30 +139386,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "0aad0feed5fdc3fd6f69171b94b59d1ec3cfcbf5a93825bdf9e3ebdee5afbf07"
         },
-        "audioSha256": "4d401e08035ce96faa987e013bb5efd01dfa4c75616a8e024bddb7b30870066e"
+        "audioSha256": "d275036f0d6a6cf99b308770e5e2169afbfe3100e192f3bbf719c1bfb5b2d353"
       }
     },
     "p4-g01-q3/options/1/0": {
       "key": "p4-g01-q3/options/1/0",
-      "src": "./audio/generated/en/am_puck/9faf0ad5a179d169aae069f5f1b2782b.m4a",
-      "sha256": "003cbdfdaa8e2aaa657c39896f85c42e507d7e941971521b6d3ac8098c1ccef4",
+      "src": "./audio/generated/en/am_puck/56b4d52d73c6a4946eb95564ec5f5116.m4a",
+      "sha256": "875321397a551f691a5ce2e412f313e945068c94dc7bd2a22bd55ceedb8df2b5",
       "voiceId": "am_puck",
-      "fingerprint": "67d3bcefea139fa238b85ed70373957dff6deb599950b082b2362ac6fa3d1db2",
+      "fingerprint": "a33b1748fe19156c0775f6e801071aa8dcc715fb148aeebfcd998c5ac9639088",
       "expected": "A locker number",
       "spoken": "A locker number",
-      "recognized": "Locker numbers",
+      "recognized": "A locker number.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " Locker numbers",
-          "avgLogprob": -0.592054526011149,
-          "noSpeechProb": 1.2380626038255294e-12
+          "end": 0.68,
+          "text": " A locker number.",
+          "avgLogprob": -0.5075849124363491,
+          "noSpeechProb": 1.1475812704622723e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -139435,30 +139431,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.6667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "delete",
-          "expected": "a",
-          "recognized": ""
-        },
-        {
-          "operation": "replace",
-          "expected": "number",
-          "recognized": "numbers"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A locker number",
-        "recognized": "Locker numbers",
+        "recognized": "A locker number.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "a",
@@ -139466,11 +139451,12 @@
           "number"
         ],
         "normalizedRecognized": [
+          "a",
           "locker",
-          "numbers"
+          "number"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:a | t:locker | t:number",
+        "proofRecognized": "t:a | t:locker | t:number",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -139478,12 +139464,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "78c7096556086c2067f8de5c52ac6d67e334dba6dd11092d72a69917e60f0e84"
         },
-        "audioSha256": "003cbdfdaa8e2aaa657c39896f85c42e507d7e941971521b6d3ac8098c1ccef4"
+        "audioSha256": "875321397a551f691a5ce2e412f313e945068c94dc7bd2a22bd55ceedb8df2b5"
       }
     },
     "p3-g02-q2/options/3/0": {
@@ -139798,20 +139785,20 @@
     },
     "p3-g04-q1/options/1/0": {
       "key": "p3-g04-q1/options/1/0",
-      "src": "./audio/generated/en/af_heart/5a6b6d819c51af7520e9b260d5ad353d.m4a",
-      "sha256": "9f1a035a7b5a3b20a061fc23bc5eeb277586e2cd103ae200ec055056f73de9d0",
+      "src": "./audio/generated/en/af_heart/0b97ba16cb7f05aabc2f85bc45007fb5.m4a",
+      "sha256": "0d8770909bc859a189476a0d06233fdc5f6de2569882fcdd3bce77a6d1f00343",
       "voiceId": "af_heart",
-      "fingerprint": "f65922dad12f2f2daf8bd87bc926c983d4725024c48964b392dc5cbf6182b5e5",
+      "fingerprint": "5d6aeed7e55532b1aecb16a3f9c4aba35aa2c9de57be7acf859cc0c92b516d4d",
       "expected": "The sponsor may need a larger stage",
       "spoken": "The sponsor may need a larger stage",
-      "recognized": "The sponsor may need a larger stay.",
+      "recognized": "The sponsor may need a larger stage.",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.76,
-          "text": " The sponsor may need a larger stay.",
-          "avgLogprob": -0.14592387459494852,
-          "noSpeechProb": 2.8517787090120983e-12
+          "end": 1.92,
+          "text": " The sponsor may need a larger stage.",
+          "avgLogprob": -0.10515525259754875,
+          "noSpeechProb": 8.946990284058876e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -139832,25 +139819,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1429,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "stage",
-          "recognized": "stay"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The sponsor may need a larger stage",
-        "recognized": "The sponsor may need a larger stay.",
+        "recognized": "The sponsor may need a larger stage.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "the",
@@ -139868,10 +139849,10 @@
           "need",
           "a",
           "larger",
-          "stay"
+          "stage"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:sponsor | t:may | t:need | t:a | t:larger | t:stage",
+        "proofRecognized": "t:the | t:sponsor | t:may | t:need | t:a | t:larger | t:stage",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -139879,36 +139860,37 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "250c94007ae0db8d423dcb1f04a6bdfbaede5dd4e56f167bbb034eef618ed7bc"
         },
-        "audioSha256": "9f1a035a7b5a3b20a061fc23bc5eeb277586e2cd103ae200ec055056f73de9d0"
+        "audioSha256": "0d8770909bc859a189476a0d06233fdc5f6de2569882fcdd3bce77a6d1f00343"
       }
     },
     "p4-g04/turns/0/2": {
       "key": "p4-g04/turns/0/2",
-      "src": "./audio/generated/en/am_puck/dfef6737d3615e39585b2c6022b266cc.m4a",
-      "sha256": "43237314045a0143d5be1c0eaf38eb6bcaf4205a59c96f055bdc473892e2025f",
+      "src": "./audio/generated/en/am_puck/304698b419f9e0691e0e172497181ede.m4a",
+      "sha256": "5b78a490dce42fdb2edc545baaab21a359361420b3fe7736d1d9693da5664a70",
       "voiceId": "am_puck",
-      "fingerprint": "60d2f90da2de8b5c650ebc8ed8d6d3a151b31660f8d9d5285374ba648209ea7c",
+      "fingerprint": "60fde3b807c76d4ad625709bfd75f192696106d654e4442062215c9b5b308c0c",
       "expected": "That is encouraging, but two returned trays had loose corners.",
       "spoken": "That is encouraging, but two returned trays had loose corners.",
       "recognized": "That is encouraging, but two return trays had loose corners.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.92,
+          "end": 3.52,
           "text": " That is encouraging, but two return trays had loose corners.",
-          "avgLogprob": -0.1585647940635681,
-          "noSpeechProb": 4.135710599938863e-13
+          "avgLogprob": -0.2544894138971964,
+          "noSpeechProb": 0.017650596797466278
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -139976,12 +139958,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "3fbfd4407db56cbc81539c4e73baa587647a2bf2eef4ffbeb8b27b2fb65423fb",
           "sourceTextSha256": "ed2f193307e2b612ff41b1fdb2d739e8c4ba88ed800e1d576c8701344523db54"
         },
-        "audioSha256": "43237314045a0143d5be1c0eaf38eb6bcaf4205a59c96f055bdc473892e2025f"
+        "audioSha256": "5b78a490dce42fdb2edc545baaab21a359361420b3fe7736d1d9693da5664a70"
       }
     },
     "p3-g05/turns/2/0": {
@@ -140202,20 +140185,20 @@
     },
     "p4-g05/turns/0/2": {
       "key": "p4-g05/turns/0/2",
-      "src": "./audio/generated/en/af_bella/f29f0da5eba733f23096da0ae56014c9.m4a",
-      "sha256": "d076f10d38fae46a5bc250905e6fd34f0c787f8f93e8bfdea7a52c1b858c90dd",
+      "src": "./audio/generated/en/af_bella/bbf76ed596a00b4bc7ad4d8ecf8d09ea.m4a",
+      "sha256": "92e2ed9506acba187c0253dfd11630de25f7d6c36f388e807b052c014b0289c8",
       "voiceId": "af_bella",
-      "fingerprint": "496f8811a5f6e28fd7ac68e6b102a73f48736f424bf8161839497ab8f36566ff",
+      "fingerprint": "ca26741c6314770120a311a8b3d39e364dde13ca0415bf7bc140047dd5f659eb",
       "expected": "You asked to pause it while our large kiln is being replaced.",
       "spoken": "You asked to pause it while our large kiln is being replaced.",
-      "recognized": "You ask to pause it, while our large kiln is being replaced.",
+      "recognized": "You ask to pause it while our large kiln is being replaced.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.2,
-          "text": " You ask to pause it, while our large kiln is being replaced.",
-          "avgLogprob": -0.1223961752321985,
-          "noSpeechProb": 2.5623799956853155e-12
+          "end": 3.24,
+          "text": " You ask to pause it while our large kiln is being replaced.",
+          "avgLogprob": -0.09160866456873276,
+          "noSpeechProb": 1.6806807681679636e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -140236,7 +140219,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "accepted",
       "metric": "WER",
       "errorRate": 0.0833,
       "phonemeErrorRate": null,
@@ -140252,7 +140235,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "You asked to pause it while our large kiln is being replaced.",
-        "recognized": "You ask to pause it, while our large kiln is being replaced.",
+        "recognized": "You ask to pause it while our large kiln is being replaced.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -140293,12 +140276,19 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "e2760d088801f8815ab803f12be51a01e00fe2bef51767f50519070a4e6c8734"
         },
-        "audioSha256": "d076f10d38fae46a5bc250905e6fd34f0c787f8f93e8bfdea7a52c1b858c90dd"
+        "audioSha256": "92e2ed9506acba187c0253dfd11630de25f7d6c36f388e807b052c014b0289c8"
+      },
+      "acceptance": {
+        "method": "same-media-full-model-crosscheck-v1",
+        "proofId": "80ba6477e54ce6522877df16f2cb04cd6c933cf8373da9d7d0b75b33cb842085",
+        "sourceAudioSha256": "92e2ed9506acba187c0253dfd11630de25f7d6c36f388e807b052c014b0289c8",
+        "originalIndividualStatus": "review"
       }
     },
     "p4-g05-q1/options/0/0": {
@@ -140403,20 +140393,20 @@
     },
     "p4-g05-q2/options/2/0": {
       "key": "p4-g05-q2/options/2/0",
-      "src": "./audio/generated/en/af_bella/b222eb2e53b90fe49ecb5ebb14084013.m4a",
-      "sha256": "27f6f199d350ba21964a93257882ccf6464a1825ee6a41b00e39e9ca8ebaf1e4",
+      "src": "./audio/generated/en/af_bella/7b101cd40fee8c4ffa59b58a35c0551d.m4a",
+      "sha256": "9b865de547d1b8672a1a67c6877d7e07af0bb528e29e1b11bc3ac2c7dc148c51",
       "voiceId": "af_bella",
-      "fingerprint": "aff32198c342ee14bf089f6080c28422716d14b2945b2c595523ee52374f48d1",
+      "fingerprint": "6268ed512a7500a9ae9d8edf3b769e97da3a8e90e02082e156398af6821683c9",
       "expected": "Sent the member a new wheel",
       "spoken": "Sent the member a new wheel",
-      "recognized": "Set the member a new wheel.",
+      "recognized": "Sent the member a new wheel.",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.24,
-          "text": " Set the member a new wheel.",
-          "avgLogprob": -0.32592119872570036,
-          "noSpeechProb": 1.2235106591068634e-12
+          "end": 1.4000000000000001,
+          "text": " Sent the member a new wheel.",
+          "avgLogprob": -0.26694564521312714,
+          "noSpeechProb": 2.2339690861072903e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -140437,25 +140427,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "sent",
-          "recognized": "set"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Sent the member a new wheel",
-        "recognized": "Set the member a new wheel.",
+        "recognized": "Sent the member a new wheel.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "sent",
@@ -140466,15 +140450,15 @@
           "wheel"
         ],
         "normalizedRecognized": [
-          "set",
+          "sent",
           "the",
           "member",
           "a",
           "new",
           "wheel"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:sent | t:the | t:member | t:a | t:new | t:wheel",
+        "proofRecognized": "t:sent | t:the | t:member | t:a | t:new | t:wheel",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -140482,12 +140466,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "3c3872a31662fca22bd8dd2b245d14f9685e4f11915f53a530089eb5bf1c08ac"
         },
-        "audioSha256": "27f6f199d350ba21964a93257882ccf6464a1825ee6a41b00e39e9ca8ebaf1e4"
+        "audioSha256": "9b865de547d1b8672a1a67c6877d7e07af0bb528e29e1b11bc3ac2c7dc148c51"
       }
     },
     "p3-g06-q3/options/3/0": {
@@ -140957,20 +140942,20 @@
     },
     "p3-g11-q2/options/2/0": {
       "key": "p3-g11-q2/options/2/0",
-      "src": "./audio/generated/en/am_puck/5286737a6e32834039e814275705b078.m4a",
-      "sha256": "ec9d2fb6a89743909f2abf209f9dfe31d282e8b766ab9e00616f43d9a899efff",
+      "src": "./audio/generated/en/am_puck/91641e172da10d744cce058df37cdeb3.m4a",
+      "sha256": "038efcd675130da26257a0555e6d205753c4ec5ed155f1527c3f19b3dcdc0252",
       "voiceId": "am_puck",
-      "fingerprint": "9a9ca2795b443cdf6c3c7865d6de5cada2ed3ed89406aed724c6b70e7ab718e4",
+      "fingerprint": "603c5456fcc3c0ba81002754a80b3139d4bcff2b0d3b8721f9b2275b9b6177ed",
       "expected": "It has closed.",
       "spoken": "It has closed.",
-      "recognized": "It is closed.",
+      "recognized": "It has closed.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.7000000000000001,
-          "text": " It is closed.",
-          "avgLogprob": -0.38193810837609427,
-          "noSpeechProb": 7.119637453374683e-13
+          "end": 0.8200000000000001,
+          "text": " It has closed.",
+          "avgLogprob": -0.26797416380473543,
+          "noSpeechProb": 4.954189727728042e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -140991,25 +140976,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.3333,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "has",
-          "recognized": "is"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "It has closed.",
-        "recognized": "It is closed.",
+        "recognized": "It has closed.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "it",
@@ -141018,11 +140997,11 @@
         ],
         "normalizedRecognized": [
           "it",
-          "is",
+          "has",
           "closed"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:it | t:has | t:closed",
+        "proofRecognized": "t:it | t:has | t:closed",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -141030,12 +141009,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "ba3536f7e7e29e9da2b133a752a96e82bedf6517afb02f21ed07a3250b0517d2"
         },
-        "audioSha256": "ec9d2fb6a89743909f2abf209f9dfe31d282e8b766ab9e00616f43d9a899efff"
+        "audioSha256": "038efcd675130da26257a0555e6d205753c4ec5ed155f1527c3f19b3dcdc0252"
       }
     },
     "p3-g11-q2/options/3/0": {
@@ -141083,10 +141063,10 @@
     },
     "p3-g11-q3/options/0/0": {
       "key": "p3-g11-q3/options/0/0",
-      "src": "./audio/generated/en/am_puck/fbf074f523c6a5917cd3cfb4e3f385c2.m4a",
-      "sha256": "b293cad02ca1056ba35979da0c9d600cc0950a7ac932b86d756802ec64e42cd5",
+      "src": "./audio/generated/en/am_puck/761678c5dade46e0632c7c921ad32365.m4a",
+      "sha256": "7e315c1a3bf05e73c5b067411700264ecd81bdb38ab73ddf4fb352ddd33dd9a1",
       "voiceId": "am_puck",
-      "fingerprint": "0eb529ebf9b5db00e8364c5332e31982b98d2eff25540c7ccd9666bc267416a7",
+      "fingerprint": "ad160571ef872e3eba8f0ad0d8d05a456976ed6141ef453ac066f6d606d82977",
       "expected": "Inside the closed shop",
       "spoken": "Inside the closed shop",
       "recognized": "inside the clothes shop.",
@@ -141095,8 +141075,8 @@
           "start": 0.0,
           "end": 7.0,
           "text": " inside the clothes shop.",
-          "avgLogprob": -0.3865281641483307,
-          "noSpeechProb": 3.2820664588872894e-13
+          "avgLogprob": -0.4540194347500801,
+          "noSpeechProb": 3.625277161800611e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -141158,12 +141138,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "47f08c670cda05782edbcf20818139988fc50b1dd14f84d9173b2b608492ee1a"
         },
-        "audioSha256": "b293cad02ca1056ba35979da0c9d600cc0950a7ac932b86d756802ec64e42cd5"
+        "audioSha256": "7e315c1a3bf05e73c5b067411700264ecd81bdb38ab73ddf4fb352ddd33dd9a1"
       }
     },
     "p3-g12-q1/options/2/0": {
@@ -141397,20 +141378,20 @@
     },
     "p3-g14/turns/1/0": {
       "key": "p3-g14/turns/1/0",
-      "src": "./audio/generated/en/am_puck/4bf961a1c02f3cd44729c4a3d58decf4.m4a",
-      "sha256": "2bac839a3c96faf9079da4233a19cfbdb605a262089ded6f09db36c8c2494273",
+      "src": "./audio/generated/en/am_puck/2603689c992779962d2170d4fe346efc.m4a",
+      "sha256": "8ab98401a90783ba812ce9064a9b85f454bc28c6b3c7988e2fcc66320c6aee0c",
       "voiceId": "am_puck",
-      "fingerprint": "07e9d7efe83c2360543c6dce0d7964cd168d06a627d2a2397704786607744814",
+      "fingerprint": "ef0bf1a6e28c8186c85d4789934bb182fd2767d9037fa3b5042c5cc4f0ea9309",
       "expected": "Would the small editing booth work?",
       "spoken": "Would the small editing booth work?",
-      "recognized": "with the small editing booth work.",
+      "recognized": "Would the small editing booth work?",
       "segments": [
         {
           "start": 0.0,
           "end": 2.0,
-          "text": " with the small editing booth work.",
-          "avgLogprob": -0.3482589304447174,
-          "noSpeechProb": 2.407297180605922e-13
+          "text": " Would the small editing booth work?",
+          "avgLogprob": -0.34933401346206666,
+          "noSpeechProb": 3.255010464723457e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -141431,25 +141412,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "would",
-          "recognized": "with"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Would the small editing booth work?",
-        "recognized": "with the small editing booth work.",
+        "recognized": "Would the small editing booth work?",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "would",
@@ -141460,15 +141435,15 @@
           "work"
         ],
         "normalizedRecognized": [
-          "with",
+          "would",
           "the",
           "small",
           "editing",
           "booth",
           "work"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:would | t:the | t:small | t:editing | t:booth | t:work",
+        "proofRecognized": "t:would | t:the | t:small | t:editing | t:booth | t:work",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -141476,30 +141451,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "2c3604410c2bd2ac41d947fc3ce34f61a3a42e20b4b411727337946972e57275"
         },
-        "audioSha256": "2bac839a3c96faf9079da4233a19cfbdb605a262089ded6f09db36c8c2494273"
+        "audioSha256": "8ab98401a90783ba812ce9064a9b85f454bc28c6b3c7988e2fcc66320c6aee0c"
       }
     },
     "p3-g14/turns/1/1": {
       "key": "p3-g14/turns/1/1",
-      "src": "./audio/generated/en/am_puck/b9a06b29d2c82dd7afa12b021de0b285.m4a",
-      "sha256": "eca92ab40fefced0d8ccb9b172b5cfc29be741e02c379e765a83209cef365722",
+      "src": "./audio/generated/en/am_puck/5062d62765204c4349f6b9d120b75cee.m4a",
+      "sha256": "f4d2b66327cc715c9709c916e2c28af394884e570ee8d3c439cb76e920dad343",
       "voiceId": "am_puck",
-      "fingerprint": "5431f008231796513cde5a92484fde951b4c60313600c7913f493602c77bebcc",
+      "fingerprint": "76f787bda05776738e03e6ae654c4c3757c033bf4883141083fd5748e1b2da8d",
       "expected": "It has soft walls.",
       "spoken": "It has soft walls.",
-      "recognized": "It is soft walls.",
+      "recognized": "It has soft walls.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.88,
-          "text": " It is soft walls.",
-          "avgLogprob": -0.4237557351589203,
-          "noSpeechProb": 3.975039969492805e-13
+          "end": 1.1,
+          "text": " It has soft walls.",
+          "avgLogprob": -0.3883431516587734,
+          "noSpeechProb": 4.418270220171716e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -141520,25 +141496,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.25,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "has",
-          "recognized": "is"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "It has soft walls.",
-        "recognized": "It is soft walls.",
+        "recognized": "It has soft walls.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "it",
@@ -141548,12 +141518,12 @@
         ],
         "normalizedRecognized": [
           "it",
-          "is",
+          "has",
           "soft",
           "walls"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:it | t:has | t:soft | t:walls",
+        "proofRecognized": "t:it | t:has | t:soft | t:walls",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -141561,12 +141531,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "76f5819aebd53c649bf729cb3416f880aa281986ba9bcf1f1a60c38ce31b1036"
         },
-        "audioSha256": "eca92ab40fefced0d8ccb9b172b5cfc29be741e02c379e765a83209cef365722"
+        "audioSha256": "f4d2b66327cc715c9709c916e2c28af394884e570ee8d3c439cb76e920dad343"
       }
     },
     "p3-g15/turns/1/1": {
@@ -142148,20 +142119,20 @@
     },
     "p3-g19-q2/prompt/0": {
       "key": "p3-g19-q2/prompt/0",
-      "src": "./audio/generated/en/af_heart/29e4f3d948f9bc019d3641ccb17d744d.m4a",
-      "sha256": "fd8cbcbc666e8d388251e71dc471d2eae28ccfd20c3c4c7637f134ab6edb864e",
+      "src": "./audio/generated/en/af_heart/aa3b24ecb985ac7bb25e12630d77753a.m4a",
+      "sha256": "f4a8ebf1f5b3994a92179fade95dabfb3e3df07932c590c1357be13788de62a5",
       "voiceId": "af_heart",
-      "fingerprint": "7953df09f46729b88f39f3ff23c6294ac0cefc5e2f29668a3950b9bf5d520b18",
+      "fingerprint": "80bfec65520a7bb437d846a0dee685ec97171c22484880b419d0ef9644d2e2ee",
       "expected": "What did the cancellation affect?",
       "spoken": "What did the cancellation affect?",
-      "recognized": "What did the cancellation effect?",
+      "recognized": "What did the cancellation affect?",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.5,
-          "text": " What did the cancellation effect?",
-          "avgLogprob": -0.3644017113579644,
-          "noSpeechProb": 5.073432451062343e-13
+          "end": 1.6,
+          "text": " What did the cancellation affect?",
+          "avgLogprob": -0.2548459635840522,
+          "noSpeechProb": 4.64069538005929e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -142182,25 +142153,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.2,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "affect",
-          "recognized": "effect"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "What did the cancellation affect?",
-        "recognized": "What did the cancellation effect?",
+        "recognized": "What did the cancellation affect?",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "what",
@@ -142214,10 +142179,10 @@
           "did",
           "the",
           "cancellation",
-          "effect"
+          "affect"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:what | t:did | t:the | t:cancellation | t:affect",
+        "proofRecognized": "t:what | t:did | t:the | t:cancellation | t:affect",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -142225,12 +142190,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "7d04d9b2863f08a4bff532d2892e23d90cb7e0634645f3ea71ae46a0c299a4f3"
         },
-        "audioSha256": "fd8cbcbc666e8d388251e71dc471d2eae28ccfd20c3c4c7637f134ab6edb864e"
+        "audioSha256": "f4a8ebf1f5b3994a92179fade95dabfb3e3df07932c590c1357be13788de62a5"
       }
     },
     "p3-g20-q2/options/3/0": {
@@ -142278,20 +142244,20 @@
     },
     "p3-g21/turns/0/0": {
       "key": "p3-g21/turns/0/0",
-      "src": "./audio/generated/en/af_heart/59a2cb2fd45fde3ddea6208cb6e56ed5.m4a",
-      "sha256": "68858059ca44dbf0623aa71eb6c5db74b004c771dbdd64d5d823c5b1dc6143e7",
+      "src": "./audio/generated/en/af_heart/d674cf0c6a90be39f09abea0d51c9caf.m4a",
+      "sha256": "10f50694c839d749ebf38d41f7129ed042ce4606c900aa2ea5ba8949aff50a0d",
       "voiceId": "af_heart",
-      "fingerprint": "1bef56eaedcb1276f5815a14f6cc68ee9cbd70f065977d6b6ed6b74a160a39b8",
+      "fingerprint": "46a1bfb3baaa7b24b749f2733b28966542d1ab24f8eec85c36f46137351e8eec",
       "expected": "I need the coat I checked at the theater, but I lost the paper ticket.",
       "spoken": "I need the coat I checked at the theater, but I lost the paper ticket.",
-      "recognized": "I need the code I checked at the theater, but I lost the paper ticket.",
+      "recognized": "I need the coat I checked at the theater, but I lost the paper ticket.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.42,
-          "text": " I need the code I checked at the theater, but I lost the paper ticket.",
-          "avgLogprob": -0.11544990800321102,
-          "noSpeechProb": 1.4561268857349319e-12
+          "end": 3.6,
+          "text": " I need the coat I checked at the theater, but I lost the paper ticket.",
+          "avgLogprob": -0.05686905477195978,
+          "noSpeechProb": 8.83711506749485e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -142312,25 +142278,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.0667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "coat",
-          "recognized": "code"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "I need the coat I checked at the theater, but I lost the paper ticket.",
-        "recognized": "I need the code I checked at the theater, but I lost the paper ticket.",
+        "recognized": "I need the coat I checked at the theater, but I lost the paper ticket.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "i",
@@ -142353,7 +142313,7 @@
           "i",
           "need",
           "the",
-          "code",
+          "coat",
           "i",
           "checked",
           "at",
@@ -142366,8 +142326,8 @@
           "paper",
           "ticket"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:i | t:need | t:the | t:coat | t:i | t:checked | t:at | t:the | t:theater | t:but | t:i | t:lost | t:the | t:paper | t:ticket",
+        "proofRecognized": "t:i | t:need | t:the | t:coat | t:i | t:checked | t:at | t:the | t:theater | t:but | t:i | t:lost | t:the | t:paper | t:ticket",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -142375,12 +142335,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "ded2148c8855fce2e7027d249e81f0c3121c0e0a9a6e95c44ab030296b54764b"
         },
-        "audioSha256": "68858059ca44dbf0623aa71eb6c5db74b004c771dbdd64d5d823c5b1dc6143e7"
+        "audioSha256": "10f50694c839d749ebf38d41f7129ed042ce4606c900aa2ea5ba8949aff50a0d"
       }
     },
     "p3-g21/turns/1/0": {
@@ -142428,20 +142389,20 @@
     },
     "p3-g21-q3/options/1/0": {
       "key": "p3-g21-q3/options/1/0",
-      "src": "./audio/generated/en/af_bella/bcd64d3ba52f052dd85036dff6efac9d.m4a",
-      "sha256": "f676f77f5f92437ccb141c3580d8ba3fcbb6b0ef4d0e913ecfbf849d54f17ab1",
+      "src": "./audio/generated/en/af_bella/56fc4bd61416d15160b348fb3adf1ef6.m4a",
+      "sha256": "ffb2efba11381cc21d502d9f91ab219bb9b7ccf0b34da0ea94c2ffe7df251240",
       "voiceId": "af_bella",
-      "fingerprint": "addf2a9a9be7bdcbd98c90b10f32322871960f286b2bc614f13c8ab5ec438ed6",
+      "fingerprint": "14349a2f90863e881e7511376674d8aabfe8e7a6a0d3dff2063da3cb9c48787d",
       "expected": "Select a coat for a costume change",
       "spoken": "Select a coat for a costume change",
-      "recognized": "Select a coat for a costume chain.",
+      "recognized": "Select a coat for a costume change.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " Select a coat for a costume chain.",
-          "avgLogprob": -0.2186925167387182,
-          "noSpeechProb": 1.0321562398177275e-12
+          "end": 2.02,
+          "text": " Select a coat for a costume change.",
+          "avgLogprob": -0.2111588012088429,
+          "noSpeechProb": 6.668475450652411e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -142462,25 +142423,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1429,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "change",
-          "recognized": "chain"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Select a coat for a costume change",
-        "recognized": "Select a coat for a costume chain.",
+        "recognized": "Select a coat for a costume change.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "select",
@@ -142498,10 +142453,10 @@
           "for",
           "a",
           "costume",
-          "chain"
+          "change"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:select | t:a | t:coat | t:for | t:a | t:costume | t:change",
+        "proofRecognized": "t:select | t:a | t:coat | t:for | t:a | t:costume | t:change",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -142509,12 +142464,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "bf7a752aba234c970c50b7e7b4d251a44e9a4f66b84f1fc44b5b30bfd615d2fc"
         },
-        "audioSha256": "f676f77f5f92437ccb141c3580d8ba3fcbb6b0ef4d0e913ecfbf849d54f17ab1"
+        "audioSha256": "ffb2efba11381cc21d502d9f91ab219bb9b7ccf0b34da0ea94c2ffe7df251240"
       }
     },
     "p3-g23/turns/5/1": {
@@ -142630,26 +142586,26 @@
     },
     "p3-g23-q1/options/3/0": {
       "key": "p3-g23-q1/options/3/0",
-      "src": "./audio/generated/en/am_puck/1b1dc23f8907d6bc89f6b25e15591280.m4a",
-      "sha256": "4bf27d74a637b8a1fd6b64d8745aac6d935b81acf7125aafbf180abbafa772fd",
+      "src": "./audio/generated/en/am_puck/53012ba1d07dd6910d27b4c435a9dce9.m4a",
+      "sha256": "c332945123d4b1ec59b29face23090a679c83be0fce4d919b243c94fa65214b9",
       "voiceId": "am_puck",
-      "fingerprint": "601efac83835e13211da0e72d83c385710ce0cb574e6ec42f6f50dece68f4edb",
+      "fingerprint": "72ab4f7507c82e8ffd0184a266e89a5c1f0151598a1b1dc274dd8c8970473b56",
       "expected": "Fewer credits appeared than expected.",
       "spoken": "Fewer credits appeared than expected.",
       "recognized": "Fewer credits appear than expected.",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.44,
+          "end": 2.0,
           "text": " Fewer credits appear than expected.",
-          "avgLogprob": -0.2257265031337738,
-          "noSpeechProb": 6.58714998779536e-13
+          "avgLogprob": -0.29205613732337954,
+          "noSpeechProb": 0.0332128070294857
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -142707,12 +142663,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "3fbfd4407db56cbc81539c4e73baa587647a2bf2eef4ffbeb8b27b2fb65423fb",
           "sourceTextSha256": "7394c55414db31cfdfb44ca94887ffb99adb648cdfcd0655d0f15fb85e36e2d8"
         },
-        "audioSha256": "4bf27d74a637b8a1fd6b64d8745aac6d935b81acf7125aafbf180abbafa772fd"
+        "audioSha256": "c332945123d4b1ec59b29face23090a679c83be0fce4d919b243c94fa65214b9"
       }
     },
     "p3-g23-q3/prompt/0": {
@@ -142760,20 +142717,20 @@
     },
     "p3-g29-q1/options/2/0": {
       "key": "p3-g29-q1/options/2/0",
-      "src": "./audio/generated/en/am_puck/d1943d2f823830bd48f67904519fbca6.m4a",
-      "sha256": "e8bc9e360676a0efdc1a72da24b34bee45282f06826615c8834f368b35ddeb19",
+      "src": "./audio/generated/en/am_puck/b07e785e6699df85c4fdd3cef5c275bf.m4a",
+      "sha256": "d4196b66403e8d587466475c3c386e29d3490f42f0b10484296beec9093400ba",
       "voiceId": "am_puck",
-      "fingerprint": "6ab38156ec40af910bb8b96b08e362cfe4376a76a6b6cd95b052c70a6626d9f7",
+      "fingerprint": "94423801674e2039e880bb671b869b6de8a810a5bd2388f7190d1aeca4f2a343",
       "expected": "R",
       "spoken": "R.",
-      "recognized": "All right.",
+      "recognized": "Arr.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.4,
-          "text": " All right.",
-          "avgLogprob": -0.8201692004998525,
-          "noSpeechProb": 1.1586735737534326e-10
+          "end": 0.5,
+          "text": " Arr.",
+          "avgLogprob": -0.9512974818547567,
+          "noSpeechProb": 2.878038085629697e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -142796,13 +142753,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 2.0,
+      "errorRate": 1.0,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "r",
-          "recognized": "all right"
+          "recognized": "arr"
         }
       ],
       "comparison": {
@@ -142810,7 +142767,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "R.",
-        "recognized": "All right.",
+        "recognized": "Arr.",
         "reasons": [
           "source-anchored-letter:R",
           "non-equivalent-segments-remain"
@@ -142819,8 +142776,7 @@
           "letterr"
         ],
         "normalizedRecognized": [
-          "all",
-          "right"
+          "arr"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -142831,30 +142787,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
         },
-        "audioSha256": "e8bc9e360676a0efdc1a72da24b34bee45282f06826615c8834f368b35ddeb19"
+        "audioSha256": "d4196b66403e8d587466475c3c386e29d3490f42f0b10484296beec9093400ba"
       }
     },
     "p3-g29-q1/options/3/0": {
       "key": "p3-g29-q1/options/3/0",
-      "src": "./audio/generated/en/am_puck/b97fbfb8a06e9b55f5f3fdeaa3ec799d.m4a",
-      "sha256": "885fa8d10996348069f25d0c1ebbd0f379054ac9def4b0826d8332a99761ec71",
+      "src": "./audio/generated/en/am_puck/ba7621c65e2beac1bd0c3333234217f7.m4a",
+      "sha256": "c3c3ba01d4c7719feab2677b3c64959f1959ed60ccec6e152f44cf1d76dc53b6",
       "voiceId": "am_puck",
-      "fingerprint": "027737971535934f69d8db85383c82332d7049e20be77253eaa2ade7d9d86c30",
+      "fingerprint": "e2998e21585555cd1241e9843b08a927e930199c8441655981ef6751cae39806",
       "expected": "N",
       "spoken": "N.",
-      "recognized": "End.",
+      "recognized": "and",
       "segments": [
         {
           "start": 0.0,
           "end": 2.0,
-          "text": " End.",
-          "avgLogprob": -0.6808319091796875,
-          "noSpeechProb": 1.0860670002221795e-11
+          "text": " and",
+          "avgLogprob": -0.8476521670818329,
+          "noSpeechProb": 2.5753235655123774e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -142883,7 +142840,7 @@
         {
           "operation": "replace",
           "expected": "n",
-          "recognized": "end"
+          "recognized": "and"
         }
       ],
       "comparison": {
@@ -142891,7 +142848,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "N.",
-        "recognized": "End.",
+        "recognized": "and",
         "reasons": [
           "source-anchored-letter:N",
           "non-equivalent-segments-remain"
@@ -142900,7 +142857,7 @@
           "lettern"
         ],
         "normalizedRecognized": [
-          "end"
+          "and"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -142911,12 +142868,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "8ce86a6ae65d3692e7305e2c58ac62eebd97d3d943e093f577da25c36988246b"
         },
-        "audioSha256": "885fa8d10996348069f25d0c1ebbd0f379054ac9def4b0826d8332a99761ec71"
+        "audioSha256": "c3c3ba01d4c7719feab2677b3c64959f1959ed60ccec6e152f44cf1d76dc53b6"
       }
     },
     "p3-g29-q3/prompt/0": {
@@ -143145,20 +143103,20 @@
     },
     "p4-g10-q1/options/1/0": {
       "key": "p4-g10-q1/options/1/0",
-      "src": "./audio/generated/en/am_puck/844d2075ec8342b6cdd90be5ea863d7c.m4a",
-      "sha256": "7cfcf209c69f19d60d4db50bee13ad0b454578c5737e2f11b308111d630ec6ea",
+      "src": "./audio/generated/en/am_puck/8dba9c6947f2880cb6b9556333e56abf.m4a",
+      "sha256": "596229d24930c39ee3683dc3fc84057039e8c435eec815eff0145aba1e811bef",
       "voiceId": "am_puck",
-      "fingerprint": "82244ee377157d8266ce694f8dc90236586aaff4f20c01ed76ab0138946b3096",
+      "fingerprint": "ae52b3d59e1c694074ae8d48aff90b69c127884ff303005a9d511f26ad3fd07e",
       "expected": "A library card",
       "spoken": "A library card",
-      "recognized": "library cards",
+      "recognized": "Library card",
       "segments": [
         {
           "start": 0.0,
           "end": 2.0,
-          "text": " library cards",
-          "avgLogprob": -0.33185567855834963,
-          "noSpeechProb": 1.1094955249674188e-12
+          "text": " Library card",
+          "avgLogprob": -0.7266917705535889,
+          "noSpeechProb": 4.152359879550094e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -143179,30 +143137,25 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.6667,
+      "errorRate": 0.3333,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "delete",
           "expected": "a",
           "recognized": ""
-        },
-        {
-          "operation": "replace",
-          "expected": "card",
-          "recognized": "cards"
         }
       ],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A library card",
-        "recognized": "library cards",
+        "recognized": "Library card",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "user-allowed-article:expected-a"
         ],
         "normalizedExpected": [
           "a",
@@ -143211,10 +143164,10 @@
         ],
         "normalizedRecognized": [
           "library",
-          "cards"
+          "card"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:library | t:card",
+        "proofRecognized": "t:library | t:card",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -143222,12 +143175,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "254d56bdbe9db9701447add2508450c8c4045a7a320a3814b4d9d0a6b800665b"
         },
-        "audioSha256": "7cfcf209c69f19d60d4db50bee13ad0b454578c5737e2f11b308111d630ec6ea"
+        "audioSha256": "596229d24930c39ee3683dc3fc84057039e8c435eec815eff0145aba1e811bef"
       }
     },
     "p4-g10-q1/options/2/0": {
@@ -143847,20 +143801,20 @@
     },
     "p4-g13-q1/options/2/0": {
       "key": "p4-g13-q1/options/2/0",
-      "src": "./audio/generated/en/am_puck/b46a19ba9634e71b9d46bfc23a047718.m4a",
-      "sha256": "f29fdb3cd94c1562a910b152a336bbfcac706df93dff1a577f20314a30be1537",
+      "src": "./audio/generated/en/am_puck/f8fdda5a2d4becf81c454b92b5e8963f.m4a",
+      "sha256": "540f71bd110f274c32b9bb543b613ccdfd006fb8e00bf795fd7a5fcdd47ded46",
       "voiceId": "am_puck",
-      "fingerprint": "504366b8474f3deefb33c6ec7f873b6fbc9ecccda60da1cccc665796672aec69",
+      "fingerprint": "932058331fd9d493dda605b7bcfeecb73fb83dffa1ab9649db73bafc7d30a7ab",
       "expected": "The shop has sold out of salad.",
       "spoken": "The shop has sold out of salad.",
-      "recognized": "The shop is sold out of salad.",
+      "recognized": "The shop has sold out of salad.",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.54,
-          "text": " The shop is sold out of salad.",
-          "avgLogprob": -0.35922156138853595,
-          "noSpeechProb": 5.82759480862588e-13
+          "end": 2.0,
+          "text": " The shop has sold out of salad.",
+          "avgLogprob": -0.2707971226085316,
+          "noSpeechProb": 3.727512818806761e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -143881,25 +143835,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.1429,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "has",
-          "recognized": "is"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "The shop has sold out of salad.",
-        "recognized": "The shop is sold out of salad.",
+        "recognized": "The shop has sold out of salad.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "the",
@@ -143913,14 +143861,14 @@
         "normalizedRecognized": [
           "the",
           "shop",
-          "is",
+          "has",
           "sold",
           "out",
           "of",
           "salad"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:the | t:shop | t:has | t:sold | t:out | t:of | t:salad",
+        "proofRecognized": "t:the | t:shop | t:has | t:sold | t:out | t:of | t:salad",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -143928,30 +143876,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "b7056ab53ec2c7b4ffdbbcb5c3e112f5e9818d03c2a990e6843b8133a4f30994"
         },
-        "audioSha256": "f29fdb3cd94c1562a910b152a336bbfcac706df93dff1a577f20314a30be1537"
+        "audioSha256": "540f71bd110f274c32b9bb543b613ccdfd006fb8e00bf795fd7a5fcdd47ded46"
       }
     },
     "p4-g13-q3/options/1/0": {
       "key": "p4-g13-q3/options/1/0",
-      "src": "./audio/generated/en/am_puck/eba5457807841f4e2c2d38754d351b0d.m4a",
-      "sha256": "bab4490357e775e4b368e7515071cc0a69730e0159568ffd754b0098468b874a",
+      "src": "./audio/generated/en/am_puck/627d240faea197f6677efb1b1a4ffefc.m4a",
+      "sha256": "4d4bd9c1fab0f4b960d16a0a76c2ce0418059762dfe307ad74ba9fd61992d776",
       "voiceId": "am_puck",
-      "fingerprint": "61cdb5603a1ff850ea99bc1df58c25ec0a42e872adf45de2fa873a67d5c90b36",
+      "fingerprint": "1861174562479785ddfb07e988cf54a9011e104467ce0199e598133b36ccd7dd",
       "expected": "By the bread oven",
       "spoken": "By the bread oven",
-      "recognized": "by the bread ovens.",
+      "recognized": "by the bread oven.",
       "segments": [
         {
           "start": 0.0,
           "end": 1.0,
-          "text": " by the bread ovens.",
-          "avgLogprob": -0.41134418381585014,
-          "noSpeechProb": 7.28190402941864e-13
+          "text": " by the bread oven.",
+          "avgLogprob": -0.5083987042307854,
+          "noSpeechProb": 7.795536135016268e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -143972,25 +143921,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.25,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "oven",
-          "recognized": "ovens"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "By the bread oven",
-        "recognized": "by the bread ovens.",
+        "recognized": "by the bread oven.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "by",
@@ -144002,10 +143945,10 @@
           "by",
           "the",
           "bread",
-          "ovens"
+          "oven"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:by | t:the | t:bread | t:oven",
+        "proofRecognized": "t:by | t:the | t:bread | t:oven",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -144013,12 +143956,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "72e5620b609ec054629cb69830056ac2266d82724b99074c295d7541d8693c68"
         },
-        "audioSha256": "bab4490357e775e4b368e7515071cc0a69730e0159568ffd754b0098468b874a"
+        "audioSha256": "4d4bd9c1fab0f4b960d16a0a76c2ce0418059762dfe307ad74ba9fd61992d776"
       }
     },
     "p4-g14-q1/options/0/0": {
@@ -144245,20 +144189,20 @@
     },
     "p4-g22-q2/options/3/0": {
       "key": "p4-g22-q2/options/3/0",
-      "src": "./audio/generated/en/am_puck/4d4dad2ed7c678cfb6fa11f92bb3d452.m4a",
-      "sha256": "82cb7af41d75255bfdec32b83d302a8d301e9fe388ec303e7ff010e97a2d3606",
+      "src": "./audio/generated/en/am_puck/b7f135a92cd2c304a4decc9b80aff621.m4a",
+      "sha256": "7ec0307c5dd88cfc5b3fa7c2776529a9c15fa1c6652b3832cc1e8e4e64e0a8bd",
       "voiceId": "am_puck",
-      "fingerprint": "335f9ae56f04c819292c755456ea33884c735f4fbfd8527b4a3d8ff9af26e9ea",
+      "fingerprint": "daa96fe77bb6775f36a71f8f19bc81037f43ea55b8863befd0c6e95c4c4f86bc",
       "expected": "Continue normal work",
       "spoken": "Continue normal work",
-      "recognized": "Continue normally.",
+      "recognized": "Continue normal work.",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.0,
-          "text": " Continue normally.",
-          "avgLogprob": -0.6289709607760111,
-          "noSpeechProb": 1.5329183235268662e-12
+          "end": 1.18,
+          "text": " Continue normal work.",
+          "avgLogprob": -0.22574893917356217,
+          "noSpeechProb": 5.093695647565011e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -144279,25 +144223,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.6667,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "normal work",
-          "recognized": "normally"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Continue normal work",
-        "recognized": "Continue normally.",
+        "recognized": "Continue normal work.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "continue",
@@ -144306,10 +144244,11 @@
         ],
         "normalizedRecognized": [
           "continue",
-          "normally"
+          "normal",
+          "work"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:continue | t:normal | t:work",
+        "proofRecognized": "t:continue | t:normal | t:work",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -144317,12 +144256,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "37ca0e2ff7fb95484779a0fc20de1e9661d6956a13370c4b201eb5786798351c"
         },
-        "audioSha256": "82cb7af41d75255bfdec32b83d302a8d301e9fe388ec303e7ff010e97a2d3606"
+        "audioSha256": "7ec0307c5dd88cfc5b3fa7c2776529a9c15fa1c6652b3832cc1e8e4e64e0a8bd"
       }
     },
     "p4-g25/turns/0/2": {
@@ -144370,20 +144310,20 @@
     },
     "p4-g25-q3/options/2/0": {
       "key": "p4-g25-q3/options/2/0",
-      "src": "./audio/generated/en/am_puck/a7b974adbcf8ed2874442856ca4bf483.m4a",
-      "sha256": "298226f1c6584543e74e6453b6a93f8ddc419e363f29a1a3eb1e81eb743ec860",
+      "src": "./audio/generated/en/am_puck/9af7132b37aff6286f3f14ce33e1f490.m4a",
+      "sha256": "c739d3be74a084dc55964fc0db1ed960f2f6c0351d44518d8648391f135413a4",
       "voiceId": "am_puck",
-      "fingerprint": "15eaa2eaa8a782f691060597313db7fdd10e055db7cfc9117deb8eea1b2bb68e",
+      "fingerprint": "0155311221189ba906df9bee876fbad40954f08fe1e7b715520bb749f1d91dd2",
       "expected": "To reduce the staffing plan to one page",
       "spoken": "To reduce the staffing plan to one page",
-      "recognized": "to reduce the staffing plan to one pay.",
+      "recognized": "to reduce the staffing plan to one page.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
-          "text": " to reduce the staffing plan to one pay.",
-          "avgLogprob": -0.2945477291941643,
-          "noSpeechProb": 2.2512007449154714e-12
+          "end": 2.34,
+          "text": " to reduce the staffing plan to one page.",
+          "avgLogprob": -0.30813536047935486,
+          "noSpeechProb": 2.1591426563327687e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -144404,25 +144344,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.125,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "page",
-          "recognized": "pay"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "To reduce the staffing plan to one page",
-        "recognized": "to reduce the staffing plan to one pay.",
+        "recognized": "to reduce the staffing plan to one page.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "to",
@@ -144442,10 +144376,10 @@
           "plan",
           "to",
           "one",
-          "pay"
+          "page"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:to | t:reduce | t:the | t:staffing | t:plan | t:to | t:one | t:page",
+        "proofRecognized": "t:to | t:reduce | t:the | t:staffing | t:plan | t:to | t:one | t:page",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -144453,12 +144387,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "503ba93f0792f64a1e89a6ffe1da125d8ab446265dcb699c62dd793a6a3f68da"
         },
-        "audioSha256": "298226f1c6584543e74e6453b6a93f8ddc419e363f29a1a3eb1e81eb743ec860"
+        "audioSha256": "c739d3be74a084dc55964fc0db1ed960f2f6c0351d44518d8648391f135413a4"
       }
     },
     "p4-g26-q1/options/0/0": {
@@ -144506,20 +144441,20 @@
     },
     "p4-g26-q1/options/2/0": {
       "key": "p4-g26-q1/options/2/0",
-      "src": "./audio/generated/en/af_bella/a322abc983e2ae45c20fa5e1dd9918e8.m4a",
-      "sha256": "8c947d72ee0173f0068925c1f3cb67da5b35b7d2889466d9c30f2e41a8f99f1e",
+      "src": "./audio/generated/en/af_bella/ed2ce777a265259e2edbec83e6339e3b.m4a",
+      "sha256": "40bd6d5c86a5881df1e908d091a0d884a310fa1d1f8e32caed418cdc02a38cce",
       "voiceId": "af_bella",
-      "fingerprint": "58443f0a26b935abb0b5ed42d3aad05cf9a281a326654c6c1c092aaea7549b44",
+      "fingerprint": "3154267debd33b91c4eb99685c53a8111564bdc3856b140bfb1040c305255b3a",
       "expected": "A8",
       "spoken": "A. eight",
-      "recognized": "I ate",
+      "recognized": "Lay 8",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.7000000000000001,
-          "text": " I ate",
-          "avgLogprob": -0.5323249816894531,
-          "noSpeechProb": 3.012764083348829e-12
+          "end": 0.8,
+          "text": " Lay 8",
+          "avgLogprob": -0.6607876300811768,
+          "noSpeechProb": 7.74502424000234e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -144542,13 +144477,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 1.0,
+      "errorRate": 0.5,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
-          "expected": "a eight",
-          "recognized": "i ate"
+          "expected": "a",
+          "recognized": "lay"
         }
       ],
       "comparison": {
@@ -144556,8 +144491,9 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A. eight",
-        "recognized": "I ate",
+        "recognized": "Lay 8",
         "reasons": [
+          "author-number-and-input-normalization",
           "non-equivalent-segments-remain"
         ],
         "normalizedExpected": [
@@ -144565,8 +144501,8 @@
           "eight"
         ],
         "normalizedRecognized": [
-          "i",
-          "ate"
+          "lay",
+          "eight"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -144577,12 +144513,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "553a0fddbb387723578263570e63a83955482ae44f45bac9a90c65ddc058329f"
         },
-        "audioSha256": "8c947d72ee0173f0068925c1f3cb67da5b35b7d2889466d9c30f2e41a8f99f1e"
+        "audioSha256": "40bd6d5c86a5881df1e908d091a0d884a310fa1d1f8e32caed418cdc02a38cce"
       }
     },
     "p4-g27/turns/0/3": {
@@ -144718,20 +144655,20 @@
     },
     "p4-g27-q1/options/1/0": {
       "key": "p4-g27-q1/options/1/0",
-      "src": "./audio/generated/en/af_heart/e8df9ccdfa3e38dad55662bf86173c0a.m4a",
-      "sha256": "e66dafec1c16b71585d4f594fef6cdfd8ce59b325051f8fff46a844593251416",
+      "src": "./audio/generated/en/af_heart/aeeb49782342100fff6a4e3b0db53714.m4a",
+      "sha256": "3ae4088c3a5c4f25fcc009d2eb26575a802617d04e75d2cfc167e8dc2465bb56",
       "voiceId": "af_heart",
-      "fingerprint": "39337423ae034e606f08901832a89ced5c870d908802f0e67a2c09963ae84550",
+      "fingerprint": "1002fd1d10fd17b988539813bf9474d05093dbf5a64001d350245d60a71f99fb",
       "expected": "Accounts staff took over the desk entirely.",
       "spoken": "Accounts staff took over the desk entirely.",
       "recognized": "Account staff took over the desk entirely.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.2,
+          "end": 2.34,
           "text": " Account staff took over the desk entirely.",
-          "avgLogprob": -0.31520805575630884,
-          "noSpeechProb": 9.03678173957978e-13
+          "avgLogprob": -0.2959748289801858,
+          "noSpeechProb": 9.579655861971514e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -144799,12 +144736,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "823e88bb03c2417a67397193003ad1adb2e92690ce3f25608ca94fd35e9e51c1"
         },
-        "audioSha256": "e66dafec1c16b71585d4f594fef6cdfd8ce59b325051f8fff46a844593251416"
+        "audioSha256": "3ae4088c3a5c4f25fcc009d2eb26575a802617d04e75d2cfc167e8dc2465bb56"
       }
     },
     "p4-g27-q2/prompt/0": {
@@ -145213,20 +145151,20 @@
     },
     "p4-g29-q1/options/0/0": {
       "key": "p4-g29-q1/options/0/0",
-      "src": "./audio/generated/en/af_bella/2dd5293d077f47a3ae4777d4c3538055.m4a",
-      "sha256": "86e7fed2ea2136ccd43aa3d0cf0333c6c2a56edbc3100c977fdb56264098d435",
+      "src": "./audio/generated/en/af_bella/a8710c416a3a3fd9fff60c9b0c29227d.m4a",
+      "sha256": "7e1aae96395c183f12cfbbea88e8d24e1a38d9fd66c4d1caa37af80f804159ac",
       "voiceId": "af_bella",
-      "fingerprint": "621aee1635b681d15f9f661688a852ae167397dd99a58d5f8b409fa7738a04fd",
+      "fingerprint": "74ce3a176060159e0aa98c6f7247afa4c91d8001d52dfc19639e97adba447e22",
       "expected": "A",
       "spoken": "A.",
-      "recognized": "Aye.",
+      "recognized": "Right.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.22,
-          "text": " Aye.",
-          "avgLogprob": -0.6465569496154785,
-          "noSpeechProb": 1.8298063064747794e-10
+          "end": 0.26,
+          "text": " Right.",
+          "avgLogprob": -0.6664511680603027,
+          "noSpeechProb": 3.8655589840175253e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -145255,7 +145193,7 @@
         {
           "operation": "replace",
           "expected": "a",
-          "recognized": "aye"
+          "recognized": "right"
         }
       ],
       "comparison": {
@@ -145263,7 +145201,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A.",
-        "recognized": "Aye.",
+        "recognized": "Right.",
         "reasons": [
           "source-anchored-letter:A",
           "non-equivalent-segments-remain"
@@ -145272,7 +145210,7 @@
           "lettera"
         ],
         "normalizedRecognized": [
-          "aye"
+          "right"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -145283,12 +145221,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "559aead08264d5795d3909718cdd05abd49572e84fe55590eef31a88a08fdffd"
         },
-        "audioSha256": "86e7fed2ea2136ccd43aa3d0cf0333c6c2a56edbc3100c977fdb56264098d435"
+        "audioSha256": "7e1aae96395c183f12cfbbea88e8d24e1a38d9fd66c4d1caa37af80f804159ac"
       }
     },
     "p4-g29-q1/options/2/0": {
@@ -145827,20 +145766,20 @@
     },
     "p3-g38-q1/options/0/0": {
       "key": "p3-g38-q1/options/0/0",
-      "src": "./audio/generated/en/am_puck/089d68b9acc752685d1d5828495bb327.m4a",
-      "sha256": "9569a7bde8dcf6d08efaa18f90c0b839a69ad1ecd2d2db436a453ea0f3ca24ef",
+      "src": "./audio/generated/en/am_puck/9869a87058a1bcc815f1a50b8582d7a2.m4a",
+      "sha256": "f250da5ec557cf28f53d16e2d9c4b724cadfa98105c329c51245c460273e53c9",
       "voiceId": "am_puck",
-      "fingerprint": "905bf451367253ac135e4711efa0850ea112be5a14320092cbbeea991156185a",
+      "fingerprint": "8ab6c9498e773e6f24a3fb3e96734efb65b941a50ed8068f662493c25e36bd1b",
       "expected": "Q",
       "spoken": "Q.",
-      "recognized": "Kiehl.",
+      "recognized": "Kiev",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.5,
-          "text": " Kiehl.",
-          "avgLogprob": -0.9686374323708671,
-          "noSpeechProb": 3.191515940415002e-10
+          "end": 2.0,
+          "text": " Kiev",
+          "avgLogprob": -0.732558086514473,
+          "noSpeechProb": 2.8751850900121667e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -145869,7 +145808,7 @@
         {
           "operation": "replace",
           "expected": "q",
-          "recognized": "kiehl"
+          "recognized": "kiev"
         }
       ],
       "comparison": {
@@ -145877,7 +145816,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Q.",
-        "recognized": "Kiehl.",
+        "recognized": "Kiev",
         "reasons": [
           "source-anchored-letter:Q",
           "non-equivalent-segments-remain"
@@ -145886,7 +145825,7 @@
           "letterq"
         ],
         "normalizedRecognized": [
-          "kiehl"
+          "kiev"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -145897,30 +145836,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "4ae81572f06e1b88fd5ced7a1a000945432e83e1551e6f721ee9c00b8cc33260"
         },
-        "audioSha256": "9569a7bde8dcf6d08efaa18f90c0b839a69ad1ecd2d2db436a453ea0f3ca24ef"
+        "audioSha256": "f250da5ec557cf28f53d16e2d9c4b724cadfa98105c329c51245c460273e53c9"
       }
     },
     "p3-g38-q1/options/1/0": {
       "key": "p3-g38-q1/options/1/0",
-      "src": "./audio/generated/en/am_puck/d1943d2f823830bd48f67904519fbca6.m4a",
-      "sha256": "e8bc9e360676a0efdc1a72da24b34bee45282f06826615c8834f368b35ddeb19",
+      "src": "./audio/generated/en/am_puck/b07e785e6699df85c4fdd3cef5c275bf.m4a",
+      "sha256": "d4196b66403e8d587466475c3c386e29d3490f42f0b10484296beec9093400ba",
       "voiceId": "am_puck",
-      "fingerprint": "6ab38156ec40af910bb8b96b08e362cfe4376a76a6b6cd95b052c70a6626d9f7",
+      "fingerprint": "94423801674e2039e880bb671b869b6de8a810a5bd2388f7190d1aeca4f2a343",
       "expected": "R",
       "spoken": "R.",
-      "recognized": "All right.",
+      "recognized": "Arr.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.4,
-          "text": " All right.",
-          "avgLogprob": -0.8201692004998525,
-          "noSpeechProb": 1.1586735737534326e-10
+          "end": 0.5,
+          "text": " Arr.",
+          "avgLogprob": -0.9512974818547567,
+          "noSpeechProb": 2.878038085629697e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -145943,13 +145883,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 2.0,
+      "errorRate": 1.0,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "r",
-          "recognized": "all right"
+          "recognized": "arr"
         }
       ],
       "comparison": {
@@ -145957,7 +145897,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "R.",
-        "recognized": "All right.",
+        "recognized": "Arr.",
         "reasons": [
           "source-anchored-letter:R",
           "non-equivalent-segments-remain"
@@ -145966,8 +145906,7 @@
           "letterr"
         ],
         "normalizedRecognized": [
-          "all",
-          "right"
+          "arr"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -145978,12 +145917,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "8c2574892063f995fdf756bce07f46c1a5193e54cd52837ed91e32008ccf41ac"
         },
-        "audioSha256": "e8bc9e360676a0efdc1a72da24b34bee45282f06826615c8834f368b35ddeb19"
+        "audioSha256": "d4196b66403e8d587466475c3c386e29d3490f42f0b10484296beec9093400ba"
       }
     },
     "p3-g38-q1/options/2/0": {
@@ -146061,20 +146001,20 @@
     },
     "p3-g38-q1/options/3/0": {
       "key": "p3-g38-q1/options/3/0",
-      "src": "./audio/generated/en/am_puck/f556648721423be75ff53c5e193a87e6.m4a",
-      "sha256": "5a9ae618fed844923c9b2528326bef72625ee11e9009b4c401403ea0793e3a02",
+      "src": "./audio/generated/en/am_puck/931dd6eff74816cebc8b104fe38cf57d.m4a",
+      "sha256": "77bfd5319f83935a95c013fe86cabe77a379fe20af78ecdb3c31e6269acfdb90",
       "voiceId": "am_puck",
-      "fingerprint": "67e0ae3957ea4a8c8c06dbe37be309c312329220b1db5bcf54f54fd995edad6d",
+      "fingerprint": "e21b00eb4c20e405ccc72ed17ecd46e7188b5076f6b9a8acf0c6e3f0a4f65a1d",
       "expected": "S",
       "spoken": "S.",
-      "recognized": "Nice.",
+      "recognized": "Yes.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.38,
-          "text": " Nice.",
-          "avgLogprob": -0.7718535423278808,
-          "noSpeechProb": 1.934353788257681e-10
+          "end": 0.44,
+          "text": " Yes.",
+          "avgLogprob": -0.8266230583190918,
+          "noSpeechProb": 8.701361853269418e-11
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -146103,7 +146043,7 @@
         {
           "operation": "replace",
           "expected": "s",
-          "recognized": "nice"
+          "recognized": "yes"
         }
       ],
       "comparison": {
@@ -146111,7 +146051,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "S.",
-        "recognized": "Nice.",
+        "recognized": "Yes.",
         "reasons": [
           "source-anchored-letter:S",
           "non-equivalent-segments-remain"
@@ -146120,7 +146060,7 @@
           "letters"
         ],
         "normalizedRecognized": [
-          "nice"
+          "yes"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -146131,12 +146071,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "8de0b3c47f112c59745f717a626932264c422a7563954872e237b223af4ad643"
         },
-        "audioSha256": "5a9ae618fed844923c9b2528326bef72625ee11e9009b4c401403ea0793e3a02"
+        "audioSha256": "77bfd5319f83935a95c013fe86cabe77a379fe20af78ecdb3c31e6269acfdb90"
       }
     },
     "p3-g39-q3/options/2/0": {
@@ -146283,10 +146224,10 @@
     },
     "p3-g40-q3/options/1/0": {
       "key": "p3-g40-q3/options/1/0",
-      "src": "./audio/generated/en/af_heart/dd1849afb96331d16ed8b977e2c0022d.m4a",
-      "sha256": "d8519498e398824008d5c3140bb62c4a20b7b85d0a2ce411a0af7f4a5547c2b7",
+      "src": "./audio/generated/en/af_heart/6809effc0e4aa7b03463ce2a9013a981.m4a",
+      "sha256": "512b0c8a5d50968b7d27a2b7d49fe477d0fbb8c885c158541d68c7cb73bdb261",
       "voiceId": "af_heart",
-      "fingerprint": "0d7fc01006094e1df54402b743a5ecf11e4b32f0260b75c14a688310dda9e784",
+      "fingerprint": "39417aa9cf05233e26bbeb5c55e54af616d8489e2a0c887cabcba7cb488f25b4",
       "expected": "To remove the patterned section",
       "spoken": "To remove the patterned section",
       "recognized": "to remove the pattern section.",
@@ -146295,14 +146236,14 @@
           "start": 0.0,
           "end": 2.0,
           "text": " to remove the pattern section.",
-          "avgLogprob": -0.4284539222717285,
-          "noSpeechProb": 6.591985529484645e-13
+          "avgLogprob": -0.40404637654622394,
+          "noSpeechProb": 0.01154591515660286
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -146360,12 +146301,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "3fbfd4407db56cbc81539c4e73baa587647a2bf2eef4ffbeb8b27b2fb65423fb",
           "sourceTextSha256": "c430539fabefe73cc3d635e6c5190f3853a3c3011d23677f58b7a069ecf5411c"
         },
-        "audioSha256": "d8519498e398824008d5c3140bb62c4a20b7b85d0a2ce411a0af7f4a5547c2b7"
+        "audioSha256": "512b0c8a5d50968b7d27a2b7d49fe477d0fbb8c885c158541d68c7cb73bdb261"
       }
     },
     "p3-g41-q2/prompt/0": {
@@ -146746,20 +146688,20 @@
     },
     "p3-g47/turns/4/0": {
       "key": "p3-g47/turns/4/0",
-      "src": "./audio/generated/en/af_bella/702cd55ceebc0e142fad26f448de0f42.m4a",
-      "sha256": "7bd46bbdac81a812a713fa625ffe52f530a156b8897cae0652dad593b8da0dcd",
+      "src": "./audio/generated/en/af_bella/13e2daf04c175939f711981b2ed1849d.m4a",
+      "sha256": "cff337a00d559f24a34d385f0330c1fb1fb952f6f0f73896ed3322470c6ce086",
       "voiceId": "af_bella",
-      "fingerprint": "3d767fbe82e9dafd039911f30776e574c845eb69b71a37c6f36771bff463e5c4",
+      "fingerprint": "4997b2d0359edd523e0875692337927d101ba44cdb3ece5930993dd2524aea78",
       "expected": "We should measure the full tare before comparing net weights.",
       "spoken": "We should measure the full tare before comparing net weights.",
       "recognized": "We should measure the full tear before comparing net weights.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.04,
+          "end": 3.34,
           "text": " We should measure the full tear before comparing net weights.",
-          "avgLogprob": -0.1710773834160396,
-          "noSpeechProb": 9.081579889144709e-13
+          "avgLogprob": -0.15488151460886002,
+          "noSpeechProb": 2.490057856088801e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -146780,7 +146722,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "accepted",
       "metric": "WER",
       "errorRate": 0.1,
       "phonemeErrorRate": null,
@@ -146833,30 +146775,37 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20"
         },
-        "audioSha256": "7bd46bbdac81a812a713fa625ffe52f530a156b8897cae0652dad593b8da0dcd"
+        "audioSha256": "cff337a00d559f24a34d385f0330c1fb1fb952f6f0f73896ed3322470c6ce086"
+      },
+      "acceptance": {
+        "method": "selected-recipe-lexical-equivalence-v1",
+        "proofId": "548619aeb0ee16251ed3326bf2e77b503ba0d24230656fb34486d6a360291d00",
+        "sourceAudioSha256": "cff337a00d559f24a34d385f0330c1fb1fb952f6f0f73896ed3322470c6ce086",
+        "originalIndividualStatus": "review"
       }
     },
     "p3-g47-d/text/0": {
       "key": "p3-g47-d/text/0",
-      "src": "./audio/generated/en/af_bella/702cd55ceebc0e142fad26f448de0f42.m4a",
-      "sha256": "7bd46bbdac81a812a713fa625ffe52f530a156b8897cae0652dad593b8da0dcd",
+      "src": "./audio/generated/en/af_bella/13e2daf04c175939f711981b2ed1849d.m4a",
+      "sha256": "cff337a00d559f24a34d385f0330c1fb1fb952f6f0f73896ed3322470c6ce086",
       "voiceId": "af_bella",
-      "fingerprint": "3d767fbe82e9dafd039911f30776e574c845eb69b71a37c6f36771bff463e5c4",
+      "fingerprint": "4997b2d0359edd523e0875692337927d101ba44cdb3ece5930993dd2524aea78",
       "expected": "We should measure the full tare before comparing net weights.",
       "spoken": "We should measure the full tare before comparing net weights.",
       "recognized": "We should measure the full tear before comparing net weights.",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.04,
+          "end": 3.34,
           "text": " We should measure the full tear before comparing net weights.",
-          "avgLogprob": -0.1710773834160396,
-          "noSpeechProb": 9.081579889144709e-13
+          "avgLogprob": -0.15488151460886002,
+          "noSpeechProb": 2.490057856088801e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -146877,7 +146826,7 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "accepted",
       "metric": "WER",
       "errorRate": 0.1,
       "phonemeErrorRate": null,
@@ -146930,12 +146879,19 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20"
         },
-        "audioSha256": "7bd46bbdac81a812a713fa625ffe52f530a156b8897cae0652dad593b8da0dcd"
+        "audioSha256": "cff337a00d559f24a34d385f0330c1fb1fb952f6f0f73896ed3322470c6ce086"
+      },
+      "acceptance": {
+        "method": "selected-recipe-lexical-equivalence-v1",
+        "proofId": "2a1ff01f41ccf91f7694d045aaf163a9f8feac7706b7bfcd9a3b5b24cf1e7d57",
+        "sourceAudioSha256": "cff337a00d559f24a34d385f0330c1fb1fb952f6f0f73896ed3322470c6ce086",
+        "originalIndividualStatus": "review"
       }
     },
     "p3-g47-q1/options/3/0": {
@@ -147520,20 +147476,20 @@
     },
     "p4-g37/turns/0/3": {
       "key": "p4-g37/turns/0/3",
-      "src": "./audio/generated/en/am_puck/a36039339e8bbf2d7d4cb5a310ba3223.m4a",
-      "sha256": "4b1c0932a956b004935fd4d2d6f9536af599b23b0831fe9651d2b9a6caac4c10",
+      "src": "./audio/generated/en/am_puck/34731da18b95d54f5c8bea9322fab0bc.m4a",
+      "sha256": "3b030be564a200ba9c8494bc1fcb32f27999bcd8a4ddbaf5738a2e9d6ba21280",
       "voiceId": "am_puck",
-      "fingerprint": "f9f5f7fb1d8dadb47ff8d5bbf7530ed7fb2a76ec860ac5847c01e295eb41d7df",
+      "fingerprint": "11b5b33f220ca0e2342a90528766c453f36ca9ad6b11e919c93a8cc3e139452a",
       "expected": "Before drawing conclusions about attendance, add the side gate's scan total.",
       "spoken": "Before drawing conclusions about attendance, add the side gate's scan total.",
       "recognized": "Before drawing conclusions about attendance, add the side gate scan total.",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.0,
+          "end": 4.4,
           "text": " Before drawing conclusions about attendance, add the side gate scan total.",
-          "avgLogprob": -0.2792061399668455,
-          "noSpeechProb": 3.6239099828611065e-13
+          "avgLogprob": -0.26916311122477055,
+          "noSpeechProb": 4.01914829542549e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -147609,20 +147565,21 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "794edfc65daec8661f0a07913739d3e5048513af625fc9bb178453b4195b7841"
         },
-        "audioSha256": "4b1c0932a956b004935fd4d2d6f9536af599b23b0831fe9651d2b9a6caac4c10"
+        "audioSha256": "3b030be564a200ba9c8494bc1fcb32f27999bcd8a4ddbaf5738a2e9d6ba21280"
       }
     },
     "p4-g37-q1/options/1/0": {
       "key": "p4-g37-q1/options/1/0",
-      "src": "./audio/generated/en/am_puck/b4b4ea89287a411f94bceb44baf74685.m4a",
-      "sha256": "1380f63e2d2e79a436508bf2ee259a31dd0dde428abfdcb2ef71fc6183b7caff",
+      "src": "./audio/generated/en/am_puck/25ccd26681f8d8cabcbf402f20cefaf5.m4a",
+      "sha256": "39c13554a5839c7d48b02ae668a2ef05564b1318ecce18d783f08ed01e7db4a1",
       "voiceId": "am_puck",
-      "fingerprint": "a6612b00a343be0a4a9e94f8b5b268de755731e47b989dd0c6e23488f6e5c5e6",
+      "fingerprint": "4b56c616bc823757f8563a311ed10cdfa8f67397129b88e380d8dff5264171fd",
       "expected": "It missed entrants using phone passes.",
       "spoken": "It missed entrants using phone passes.",
       "recognized": "It missed entrance using phone passes.",
@@ -147631,8 +147588,8 @@
           "start": 0.0,
           "end": 2.0,
           "text": " It missed entrance using phone passes.",
-          "avgLogprob": -0.32297186851501464,
-          "noSpeechProb": 4.765965183270437e-13
+          "avgLogprob": -0.3734967201948166,
+          "noSpeechProb": 4.738000898736605e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -147698,36 +147655,37 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "66745d10a154edd83e33196bce963d2f8c165e6594e5e852d9ce14cbcc010544"
         },
-        "audioSha256": "1380f63e2d2e79a436508bf2ee259a31dd0dde428abfdcb2ef71fc6183b7caff"
+        "audioSha256": "39c13554a5839c7d48b02ae668a2ef05564b1318ecce18d783f08ed01e7db4a1"
       }
     },
     "p4-g40-q1/options/0/0": {
       "key": "p4-g40-q1/options/0/0",
-      "src": "./audio/generated/en/am_puck/fe9c1b0e5c5ea1b49ad78b9fb9c7d983.m4a",
-      "sha256": "1e3d41b85d0d389c412c2f0f4464041de05c80662be5bba2efa23e8dee60dbf7",
+      "src": "./audio/generated/en/am_puck/c41b8eba52c4866e97e5dfd79ad4be97.m4a",
+      "sha256": "bf3fcfd70818c2848d1c42b0260f73fa5f4df8e2b9ad94d8dd32e5cf9b3d056c",
       "voiceId": "am_puck",
-      "fingerprint": "c16063ee666c325ec6bf33436fc944f70ff0899784938ee1632aea0122e35a63",
+      "fingerprint": "ead2874dd710ac8b202ff8b9bfc55df3f4ba23c1d27b5e4264dbc55c25586cd9",
       "expected": "Packaging complaints moved to a separate list.",
       "spoken": "Packaging complaints moved to a separate list.",
       "recognized": "Packaging complaints move to a separate list.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.0,
+          "end": 2.24,
           "text": " Packaging complaints move to a separate list.",
-          "avgLogprob": -0.3643770292401314,
-          "noSpeechProb": 4.5125974354812137e-13
+          "avgLogprob": -0.3130755002299945,
+          "noSpeechProb": 0.01882101409137249
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -147789,30 +147747,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "3fbfd4407db56cbc81539c4e73baa587647a2bf2eef4ffbeb8b27b2fb65423fb",
           "sourceTextSha256": "1a2d23ca76edbbf77abdbad53f633a3b616b9e9373d2a1cbb95b272bcd65cee8"
         },
-        "audioSha256": "1e3d41b85d0d389c412c2f0f4464041de05c80662be5bba2efa23e8dee60dbf7"
+        "audioSha256": "bf3fcfd70818c2848d1c42b0260f73fa5f4df8e2b9ad94d8dd32e5cf9b3d056c"
       }
     },
     "p4-g40-q2/options/3/0": {
       "key": "p4-g40-q2/options/3/0",
-      "src": "./audio/generated/en/am_puck/e1704a89d4803c73942fa632dd8a8bbc.m4a",
-      "sha256": "b56e4eb9a99aab6edc4c89a0e11ed3591edac34c4f8e9e17b5df89c7f2626f29",
+      "src": "./audio/generated/en/am_puck/7df855d07a0faf84a3b7ce4e977f198c.m4a",
+      "sha256": "f8483c93e8738ec29cb285c9f72272ba5b5c6dec6f244e95b0f7566e0268841d",
       "voiceId": "am_puck",
-      "fingerprint": "a86cbb7f817cc362d138c2d722af5aa85d0676437e771d794f5a15f38d84da21",
+      "fingerprint": "d939f7e5583ee383a72da400c210f62f22930a76d3b0ffc54edad1df19573d59",
       "expected": "A lower reported rate may reflect reclassification.",
       "spoken": "A lower reported rate may reflect reclassification.",
-      "recognized": "A lower reported rate may reflect your classification.",
+      "recognized": "A lower reported rate may reflect reclassification.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.5,
-          "text": " A lower reported rate may reflect your classification.",
-          "avgLogprob": -0.24018493791421255,
-          "noSpeechProb": 4.680509452237303e-13
+          "end": 3.0,
+          "text": " A lower reported rate may reflect reclassification.",
+          "avgLogprob": -0.2505245667237502,
+          "noSpeechProb": 3.411293600028009e-13
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -147833,25 +147792,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.2857,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "reclassification",
-          "recognized": "your classification"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A lower reported rate may reflect reclassification.",
-        "recognized": "A lower reported rate may reflect your classification.",
+        "recognized": "A lower reported rate may reflect reclassification.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "a",
@@ -147869,11 +147822,10 @@
           "rate",
           "may",
           "reflect",
-          "your",
-          "classification"
+          "reclassification"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:a | t:lower | t:reported | t:rate | t:may | t:reflect | t:reclassification",
+        "proofRecognized": "t:a | t:lower | t:reported | t:rate | t:may | t:reflect | t:reclassification",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -147881,66 +147833,20 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "3b158559df12aa03f1d23ac053ebd35c22feb7f0f2251f853e7aa0b8fc9d9e54"
         },
-        "audioSha256": "b56e4eb9a99aab6edc4c89a0e11ed3591edac34c4f8e9e17b5df89c7f2626f29"
+        "audioSha256": "f8483c93e8738ec29cb285c9f72272ba5b5c6dec6f244e95b0f7566e0268841d"
       }
-    },
-    "p4-g34-q2/explanation/0": {
-      "key": "p4-g34-q2/explanation/0",
-      "src": "./audio/generated/en/am_puck/58f3df96b30e234a8b5bde2457d0404e.m4a",
-      "sha256": "b9b639ce0d1e4a3a0653e7a407cf6db9a1d760c187b2655f94d14f28f7bcc208",
-      "voiceId": "am_puck",
-      "fingerprint": "f6d7fa47c90291517a2e2168ca1b81d541d2d374d38d72ce5dcc34845d9fb3f9",
-      "status": "review",
-      "expected": "An indoor seed activity replaces outdoor planting.",
-      "spoken": "An indoor seed activity replaces outdoor planting.",
-      "recognized": "An indoor seat activity replaces outdoor planting.",
-      "metric": "WER",
-      "errorRate": 0.1429,
-      "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "seed",
-          "recognized": "seat"
-        }
-      ],
-      "segments": [
-        {
-          "start": 0.0,
-          "end": 3.0,
-          "text": " An indoor seat activity replaces outdoor planting.",
-          "avgLogprob": -0.4254931482401761,
-          "noSpeechProb": 0.003330260282382369
-        }
-      ],
-      "recognitionMethod": "individual-beam5",
-      "recognitionGeneration": {
-        "model": "whisper-small",
-        "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
-        "device": "cpu",
-        "computeType": "int8",
-        "packages": {
-          "faster-whisper": "1.2.1",
-          "ctranslate2": "4.9.0",
-          "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true
     }
   },
   "generation": {
     "individual": {
-      "model": "whisper-large-v3-turbo",
-      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
       "device": "cpu",
       "computeType": "int8",
       "packages": {

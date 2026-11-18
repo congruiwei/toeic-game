@@ -69,12 +69,17 @@ class CompletionTest(unittest.TestCase):
                 self.assertEqual(pack['clips'][self.unit['key']]['asrStatus'], 'pending')
 
     def test_real_flush_counts_current_executed_asr(self):
-        for status in ['matched', 'review', 'accepted']:
+        for status in ['matched', 'review']:
             with self.subTest(status=status):
                 index, pack = self.flush({**self.asr, 'status': status})
                 self.assertTrue(index['requiredAuditComplete'])
                 self.assertEqual(index['totals']['requiredAudited'], 1)
                 self.assertEqual(pack['clips'][self.unit['key']]['asrStatus'], status)
+
+    def test_accepted_without_its_independent_proof_is_not_complete(self):
+        index, pack = self.flush({**self.asr, 'status': 'accepted'})
+        self.assertFalse(index['requiredAuditComplete'])
+        self.assertEqual(pack['clips'][self.unit['key']]['asrStatus'], 'pending')
 
     def prepare_sync(self):
         models = self.work / 'models'
@@ -128,6 +133,32 @@ class CompletionTest(unittest.TestCase):
         index, pack = self.sync()
         self.assertFalse(index['requiredComplete'])
         self.assertNotIn(self.unit['key'], pack['clips'])
+
+    def test_explicit_label_phones_override_default_and_bind_reuse(self):
+        unit={**self.unit,'kind':'label','text':'A.'}
+        with patch.object(bank,'phonemize',side_effect=AssertionError('No G2P for a label')):
+            self.assertEqual(bank.resolve_phonemes(unit,'A.',{},{}),'ˈA')
+            self.assertEqual(bank.resolve_phonemes(unit,'A.',{'phonemes':'ˈA.'},{}),'ˈA.')
+        override={'phonemes':'ˈA.'}
+        clip={'inputSha256':'input','phonemeSha256':bank.sha('ˈA'.encode())}
+        self.assertFalse(bank.planned_clip_matches(clip,'input',override))
+        clip['phonemeSha256']=bank.sha('ˈA.'.encode())
+        self.assertTrue(bank.planned_clip_matches(clip,'input',override))
+        self.assertFalse(bank.planned_clip_matches(clip,'other',override))
+
+    def test_real_sync_removes_target_phone_mismatch_despite_current_input_hash(self):
+        self.prepare_sync()
+        override={'phonemes':'reviewed phones'}
+        generation={'recipe':bank.codec.RECIPE,'modelSha256':bank.sha(b'dummy model, never loaded'),
+                    'voicesSha256':bank.sha(b'dummy voices, never loaded'),
+                    'packages':{n:'test-version' for n in ['kokoro-onnx','misaki','onnxruntime','soundfile','numpy']}}
+        self.clip['inputSha256']=bank.input_fingerprint(generation,self.unit,override)[1]
+        self.clip['phonemeSha256']=bank.sha(b'wrong phones')
+        bank.atomic(self.out/'overrides.json',{'entries':{'en:vocab:v-test/example/0':override}})
+        bank.atomic(self.out/'en/vocab.json',{'clips':{self.unit['key']:self.clip}})
+        index,pack=self.sync()
+        self.assertFalse(index['requiredComplete'])
+        self.assertNotIn(self.unit['key'],pack['clips'])
 
 
 if __name__ == '__main__':

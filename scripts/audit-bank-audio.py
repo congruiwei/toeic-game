@@ -56,7 +56,7 @@ def generator_stopped(work, producer_pid=None):
 def watch_complete(manifest,stats,producer_pid=None,producer_dead=False):
     # A streaming retry starts from a previously complete manifest. Do not
     # mistake that old snapshot for the producer's completed replacement set.
-    return bool((manifest.get('requiredComplete') or manifest.get('complete')) and
+    return bool((manifest.get('requiredPlaybackComplete') or manifest.get('requiredComplete') or manifest.get('complete')) and
                 not stats['errors'] and (not producer_pid or producer_dead))
 
 
@@ -162,6 +162,8 @@ def main():
     ja=None
     phone_cache={}
     packs={}
+    recorded_keys={}
+    fallback_keys={}
     started=time.monotonic()
     counted=set()
     transcribed=0
@@ -238,7 +240,7 @@ def main():
             phoneme_rate=round(distance(a,b)/max(len(a),1),4)
         if not result['recognized'].strip():raise EmptyTranscriptError(result)
         comparison=comparison_engine.compare(clip['spoken'],result['recognized'],language,
-            normalizer=bank.normalize,source_text=clip['text'],phoneme_override=phoneme_override)
+            normalizer=bank.normalize,source_text=clip['text'],phoneme_override=phoneme_override,**bank.voice_rules.comparison_options(clip))
         comparison['audioSha256']=clip['sha256']
         # Old WER/CER and G2P distance remain diagnostic values, never a fuzzy
         # acceptance threshold. Only an explicit equivalence proof can pass.
@@ -343,13 +345,17 @@ def main():
             for item in items: finalize(item)
 
     def flush_stats():
-        records=[r for report in packs.values() for r in report['records'].values()]
+        records=[r for pair,report in packs.items() for key,r in report['records'].items() if key in recorded_keys.get(pair,set())]
         stats={'version':1,'generation':strategy,'transcribedFilesThisRun':transcribed,'records':len(records),
             'matched':sum(r['status']=='matched' for r in records),'review':sum(r['status']=='review' for r in records),
+            'contextAccepted':sum(r['status']=='accepted' and r.get('acceptance',{}).get('method')=='unchanged-original-pcm-context-v1' for r in records),
+            'lexicalAccepted':sum(r['status']=='accepted' and r.get('acceptance',{}).get('method')=='selected-recipe-lexical-equivalence-v1' for r in records),
+            'crossModelAccepted':sum(r['status']=='accepted' and r.get('acceptance',{}).get('method')=='same-media-full-model-crosscheck-v1' for r in records),
             'errors':sum(r['status']=='error' for r in records),'audioSecondsThisRun':round(audio_seconds,2),
             'inferenceSecondsThisRun':round(elapsed_transcribe,2),'wallSeconds':round(time.monotonic()-started,2),
             'batchCallsThisRun':batch_calls,'batchFilesThisRun':batch_files,'singleCallsThisRun':single_calls,
-            'fallbackFilesThisRun':fallback_files}
+            'fallbackFilesThisRun':fallback_files,
+            'retainedSystemFallbackRecords':sum(len(keys & set(packs[pair]['records'])) for pair,keys in fallback_keys.items())}
         atomic(OUT/'audit-summary.json',stats)
         print(json.dumps({k:v for k,v in stats.items() if k not in ['generation','version']}),flush=True)
         return stats
@@ -357,6 +363,9 @@ def main():
     idle_after_generator_exit=0
     while True:
         manifest=read(OUT/'manifest.json',{'packs':[]})
+        source_units={f"{u['language']}:{u['bank']}:{u['key']}":u for u in read(OUT/'source.json',{'units':[]})['units']}
+        quality_rows=read(OUT/'quality-review.json',{}).get('records',{})
+        first_ids={q['id'] for q in read(ROOT/'data/part2.json',[]) if q.get('type')=='first'}
         pending={}
         for meta in manifest['packs']:
             language,name=meta['language'],meta['bank']
@@ -368,13 +377,18 @@ def main():
             report=packs[pair]
             report['generation']=strategy
             report['sourceSha256']=source.get('sourceSha256')
-            # Removed/invalidated clips are not counted as current coverage.
-            report['records']={k:r for k,r in report['records'].items() if k in source['clips']}
+            # Keep the failed candidate evidence for explicit device fallback, but
+            # only published recordings enter ASR work and coverage statistics.
+            recorded_keys[pair]=set(source['clips'])
+            fallback_keys[pair]=set(source.get('fallbacks',{}))
+            report['records']={k:r for k,r in report['records'].items() if k in source['clips'] or k in source.get('fallbacks',{})}
             for key,clip in source['clips'].items():
                 if selected_tokens is not None and f'{language}:{name}:{key}' not in selected_tokens: continue
                 existing=report['records'].get(key,{})
                 identity=existing.get('recognitionGeneration',individual)
-                done=identity in [individual,screening] and existing.get('fingerprint')==fingerprint(identity,clip,language) and actual_evidence(clip,existing)
+                published_actual=bank.valid_published_asr(source_units.get(f'{language}:{name}:{key}'),clip,existing,quality_rows,first_ids)
+                context_accepted='acceptance' in existing and published_actual
+                done=context_accepted or (identity in [individual,screening] and existing.get('fingerprint')==fingerprint(identity,clip,language) and published_actual)
                 if done:
                     continue
                 token=(language,clip['sha256'])

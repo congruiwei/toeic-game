@@ -1,0 +1,321 @@
+{
+  "ruleId": "luis-lewis-loois",
+  "unit": {
+    "language": "en",
+    "bank": "part2",
+    "key": "p2-017/options/2/0",
+    "text": "Luis has the front desk till noon.",
+    "voiceId": "af_bella",
+    "required": true
+  },
+  "clip": {
+    "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+    "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+    "bytes": 28,
+    "duration": 0.6,
+    "language": "en",
+    "voiceId": "af_bella",
+    "required": true,
+    "text": "Luis has the front desk till noon.",
+    "spoken": "Luis has the front desk till noon.",
+    "phonemeSha256": "082fd866822ee50c0ddbcc4fd039e3e91982e7e309011282b752c141eb58530e",
+    "inputSha256": "c6edfb4fd6300a8eb65d7b9776ff9a01141a5f1a04454226ca604f7e583ebdcc",
+    "synthesisSpeed": 0.88,
+    "asrStatus": "review"
+  },
+  "record": {
+    "key": "p2-017/options/2/0",
+    "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+    "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+    "voiceId": "af_bella",
+    "expected": "Luis has the front desk till noon.",
+    "spoken": "Luis has the front desk till noon.",
+    "recognized": "Lewis has the front desk till noon.",
+    "status": "accepted",
+    "recognitionMethod": "individual-beam5",
+    "singleFileVerification": true,
+    "recognitionGeneration": {
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+      "device": "cpu",
+      "computeType": "int8",
+      "beamSize": 5,
+      "prompt": null,
+      "conditionOnPreviousText": false,
+      "vadFilter": false
+    },
+    "segments": [
+      {
+        "start": 0.0,
+        "end": 0.5,
+        "text": "Lewis has the front desk till noon.",
+        "avgLogprob": -0.1,
+        "noSpeechProb": 1e-10
+      }
+    ],
+    "fingerprint": "e4a57e4dc87301b531d66ca3ad02416131add84128ec2c838b3ec2c9abe62d0b",
+    "comparison": {
+      "ruleVersion": "strict-audio-equivalence-1",
+      "equivalent": false,
+      "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+      "expectedSpoken": "Luis has the front desk till noon.",
+      "recognized": "Lewis has the front desk till noon.",
+      "language": "en",
+      "reasons": [
+        "non-equivalent-segments-remain"
+      ],
+      "provenance": {
+        "sourceTextSha256": "dd3eaf8ec39f693f3c6038f33e53c078e7f480a706a8af3e9a4e232fad0d7f85",
+        "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+        "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+      }
+    },
+    "acceptance": {
+      "method": "selected-recipe-lexical-equivalence-v1",
+      "proofId": "d23ccf52965aa70b3c1aa3dfe4517fc8ab03638aa902b470a3e10871c158ec9d",
+      "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+      "originalIndividualStatus": "review"
+    }
+  },
+  "row": {
+    "token": "en:part2:p2-017/options/2/0",
+    "baseline": {
+      "immutable": true
+    },
+    "comparison": {
+      "immutable": true
+    },
+    "repair": {
+      "complete": true,
+      "disposition": "recorded-review",
+      "original": {
+        "clip": {
+          "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+          "bytes": 28,
+          "duration": 0.6,
+          "language": "en",
+          "voiceId": "af_bella",
+          "required": true,
+          "text": "Luis has the front desk till noon.",
+          "spoken": "Luis has the front desk till noon.",
+          "phonemeSha256": "082fd866822ee50c0ddbcc4fd039e3e91982e7e309011282b752c141eb58530e",
+          "inputSha256": "c6edfb4fd6300a8eb65d7b9776ff9a01141a5f1a04454226ca604f7e583ebdcc",
+          "synthesisSpeed": 0.88,
+          "asrStatus": "review"
+        },
+        "asr": {
+          "untouched": "original evidence"
+        }
+      },
+      "candidate": {
+        "clip": {
+          "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "bytes": 28,
+          "duration": 0.6,
+          "language": "en",
+          "voiceId": "af_bella",
+          "required": true,
+          "text": "Luis has the front desk till noon.",
+          "spoken": "Luis has the front desk till noon.",
+          "phonemeSha256": "082fd866822ee50c0ddbcc4fd039e3e91982e7e309011282b752c141eb58530e",
+          "inputSha256": "c6edfb4fd6300a8eb65d7b9776ff9a01141a5f1a04454226ca604f7e583ebdcc",
+          "synthesisSpeed": 0.88,
+          "asrStatus": "review"
+        },
+        "asr": {
+          "key": "p2-017/options/2/0",
+          "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "voiceId": "af_bella",
+          "expected": "Luis has the front desk till noon.",
+          "spoken": "Luis has the front desk till noon.",
+          "recognized": "Lewis has the front desk till noon.",
+          "status": "review",
+          "recognitionMethod": "individual-beam5",
+          "singleFileVerification": true,
+          "recognitionGeneration": {
+            "model": "whisper-large-v3",
+            "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+            "device": "cpu",
+            "computeType": "int8",
+            "beamSize": 5,
+            "prompt": null,
+            "conditionOnPreviousText": false,
+            "vadFilter": false
+          },
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 0.5,
+              "text": "Lewis has the front desk till noon.",
+              "avgLogprob": -0.1,
+              "noSpeechProb": 1e-10
+            }
+          ],
+          "fingerprint": "e4a57e4dc87301b531d66ca3ad02416131add84128ec2c838b3ec2c9abe62d0b",
+          "comparison": {
+            "ruleVersion": "strict-audio-equivalence-1",
+            "equivalent": false,
+            "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "expectedSpoken": "Luis has the front desk till noon.",
+            "recognized": "Lewis has the front desk till noon.",
+            "language": "en",
+            "reasons": [
+              "non-equivalent-segments-remain"
+            ],
+            "provenance": {
+              "sourceTextSha256": "dd3eaf8ec39f693f3c6038f33e53c078e7f480a706a8af3e9a4e232fad0d7f85",
+              "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+              "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+            }
+          }
+        }
+      },
+      "appliedOverride": {
+        "spoken": "Luis has the front desk till noon.",
+        "phonemes": "lˈuɪs hæz ðə fɹˈʌnt dˈɛsk tˈɪl nˈun.",
+        "speed": 0.88
+      }
+    },
+    "lexicalEquivalences": [
+      {
+        "version": 1,
+        "id": "d23ccf52965aa70b3c1aa3dfe4517fc8ab03638aa902b470a3e10871c158ec9d",
+        "method": "selected-recipe-lexical-equivalence-v1",
+        "token": "en:part2:p2-017/options/2/0",
+        "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "sourceClip": {
+          "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "bytes": 28,
+          "duration": 0.6,
+          "text": "Luis has the front desk till noon.",
+          "spoken": "Luis has the front desk till noon.",
+          "language": "en",
+          "voiceId": "af_bella",
+          "inputSha256": "c6edfb4fd6300a8eb65d7b9776ff9a01141a5f1a04454226ca604f7e583ebdcc",
+          "phonemeSha256": "082fd866822ee50c0ddbcc4fd039e3e91982e7e309011282b752c141eb58530e",
+          "required": true,
+          "synthesisSpeed": 0.88
+        },
+        "originalASR": {
+          "key": "p2-017/options/2/0",
+          "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "voiceId": "af_bella",
+          "expected": "Luis has the front desk till noon.",
+          "spoken": "Luis has the front desk till noon.",
+          "recognized": "Lewis has the front desk till noon.",
+          "status": "review",
+          "recognitionMethod": "individual-beam5",
+          "singleFileVerification": true,
+          "recognitionGeneration": {
+            "model": "whisper-large-v3",
+            "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+            "device": "cpu",
+            "computeType": "int8",
+            "beamSize": 5,
+            "prompt": null,
+            "conditionOnPreviousText": false,
+            "vadFilter": false
+          },
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 0.5,
+              "text": "Lewis has the front desk till noon.",
+              "avgLogprob": -0.1,
+              "noSpeechProb": 1e-10
+            }
+          ],
+          "fingerprint": "e4a57e4dc87301b531d66ca3ad02416131add84128ec2c838b3ec2c9abe62d0b",
+          "comparison": {
+            "ruleVersion": "strict-audio-equivalence-1",
+            "equivalent": false,
+            "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "expectedSpoken": "Luis has the front desk till noon.",
+            "recognized": "Lewis has the front desk till noon.",
+            "language": "en",
+            "reasons": [
+              "non-equivalent-segments-remain"
+            ],
+            "provenance": {
+              "sourceTextSha256": "dd3eaf8ec39f693f3c6038f33e53c078e7f480a706a8af3e9a4e232fad0d7f85",
+              "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+              "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+            }
+          }
+        },
+        "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3\", \"modelSha256\": \"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+        "rule": {
+          "id": "luis-lewis-loois",
+          "sourceWord": "Luis",
+          "recognizedWord": "Lewis",
+          "phoneToken": "lˈuɪs",
+          "category": "selected-pronunciation-homophone",
+          "sources": [
+            {
+              "url": "https://dictionary.cambridge.org/us/pronunciation/english/luis",
+              "supports": "Luis US /ˈluː.ɪs/"
+            },
+            {
+              "url": "https://dictionary.cambridge.org/us/pronunciation/english/lewis",
+              "supports": "lewis US /ˈluː.ɪs/"
+            }
+          ],
+          "scope": "Only the reviewed p2-017 sentence and its explicit lˈuɪs recipe; not other Luis readings or a general name-spelling substitution. Every other word must match exactly. The application plan separately binds the final audio SHA and actual ASR fingerprint.",
+          "approvedInputs": [
+            {
+              "tokens": [
+                "en:part2:p2-017/options/2/0"
+              ],
+              "sourceText": "Luis has the front desk till noon.",
+              "spoken": "Luis has the front desk till noon.",
+              "voiceId": "af_bella",
+              "phonemes": "lˈuɪs hæz ðə fɹˈʌnt dˈɛsk tˈɪl nˈun.",
+              "phonemeSha256": "082fd866822ee50c0ddbcc4fd039e3e91982e7e309011282b752c141eb58530e"
+            }
+          ]
+        },
+        "ruleSha256": "4aa87d959d2d5693f673e805e202ecdfc7cce25857527e2879918da33e70c1df",
+        "input": {
+          "phonemes": "lˈuɪs hæz ðə fɹˈʌnt dˈɛsk tˈɪl nˈun.",
+          "phonemeSha256": "082fd866822ee50c0ddbcc4fd039e3e91982e7e309011282b752c141eb58530e",
+          "spoken": "Luis has the front desk till noon.",
+          "voiceId": "af_bella",
+          "synthesisSpeed": 0.88
+        },
+        "decision": {
+          "expectedTokens": [
+            "luis",
+            "has",
+            "the",
+            "front",
+            "desk",
+            "till",
+            "noon"
+          ],
+          "recognizedTokens": [
+            "lewis",
+            "has",
+            "the",
+            "front",
+            "desk",
+            "till",
+            "noon"
+          ],
+          "differenceIndex": 0,
+          "sourceWord": "luis",
+          "recognizedWord": "lewis",
+          "phoneToken": "lˈuɪs"
+        },
+        "status": "accepted",
+        "originalAudioResynthesized": false,
+        "newRecognitionCalls": 0,
+        "originalIndividualASRMatched": false
+      }
+    ]
+  }
+}

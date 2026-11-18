@@ -49,7 +49,7 @@ export function speakJapanese(text,prefs={},notify=()=>{},options={}) {
       if(token!==audioGeneration())return;
       const pieces=resolve();
       if(pieces.some(piece=>piece.src)){setAudioCleanup(null);play(pieces);}
-      else{hush();notify('此句录音暂不可用，请再点一次使用设备日语语音。');}
+      else{hush();notify(pieces.some(piece=>piece.playback==='system')?'此句使用设备日语语音，请再点一次开始。':'此句录音暂不可用，请再点一次使用设备日语语音。');}
     });
     return true;
   }

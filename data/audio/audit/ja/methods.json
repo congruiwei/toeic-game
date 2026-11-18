@@ -3056,20 +3056,20 @@
     },
     "echo/steps/1/0": {
       "key": "echo/steps/1/0",
-      "src": "./audio/generated/ja/jf_alpha/08651081f90986b03fe42970cadc412b.m4a",
-      "sha256": "8f6700041f9c53254d4f7e07f8e567993826a317ba13ce7cf0fe67a6830bb68c",
+      "src": "./audio/generated/ja/jf_alpha/eb33dc818f5b949bb0f99cdfe26ba974.m4a",
+      "sha256": "d169ce87868c2f157715aefc696d16e26829443140685f80b257a4d5b8a6042d",
       "voiceId": "jf_alpha",
-      "fingerprint": "eb9b454d6cd45d8d62780479318d90ff6a3668ad5cdb519dffd0b8d7f93ba956",
+      "fingerprint": "ea150609b61c68331c085eec484713e4b04980fc1d9ad5cfc6d15b8d8012a6e1",
       "expected": "市場は Pine Street にあります。",
-      "spoken": "市場は Pine Street にあります。",
+      "spoken": "市場は パイン ストリート にあります。",
       "recognized": "市場はパインストリートにあります。",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.74,
+          "end": 2.1,
           "text": "市場はパインストリートにあります。",
-          "avgLogprob": -0.19554134408632914,
-          "noSpeechProb": 4.259424844083037e-12
+          "avgLogprob": -0.12690645654996235,
+          "noSpeechProb": 3.846491267861518e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -3090,30 +3090,24 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.5556,
-      "phonemeErrorRate": 0.4074,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "p i n e s t r e e t",
-          "recognized": "パ イ ン ス ト リ ー ト"
-        }
-      ],
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "市場は Pine Street にあります。",
+        "expectedSpoken": "市場は パイン ストリート にあります。",
         "recognized": "市場はパインストリートにあります。",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-normalized-japanese-text"
         ],
-        "normalizedExpected": "シジョオワ<pine><street>ニアリマス",
+        "normalizedExpected": "シジョオワパインストリイトニアリマス",
         "normalizedRecognized": "シジョオワパインストリイトニアリマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "written:市場はパインストリートにあります",
+        "proofRecognized": "written:市場はパインストリートにあります",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -3122,8 +3116,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "b8f109c7aff5582fa8ed9e9867c5fabeddb336c0b927356acad1d43c0c27d238"
         },
         "readingTrace": {
@@ -3141,16 +3136,16 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "Pine",
-              "reading": "<pine>",
-              "normalized": "<pine>",
-              "method": "literal-english-source"
+              "surface": "パイン",
+              "reading": "パイン",
+              "normalized": "パイン",
+              "method": "unidic-pron"
             },
             {
-              "surface": "Street",
-              "reading": "<street>",
-              "normalized": "<street>",
-              "method": "literal-english-source"
+              "surface": "ストリート",
+              "reading": "ストリート",
+              "normalized": "ストリイト",
+              "method": "unidic-pron"
             },
             {
               "surface": "に",
@@ -3216,7 +3211,7 @@
             }
           ]
         },
-        "audioSha256": "8f6700041f9c53254d4f7e07f8e567993826a317ba13ce7cf0fe67a6830bb68c"
+        "audioSha256": "d169ce87868c2f157715aefc696d16e26829443140685f80b257a4d5b8a6042d"
       }
     },
     "graphic/steps/0/0": {
@@ -3504,20 +3499,20 @@
     },
     "intent/steps/1/0": {
       "key": "intent/steps/1/0",
-      "src": "./audio/generated/ja/jf_alpha/54e049906a18140952ae11be5c95529b.m4a",
-      "sha256": "1c716e927e634913c764826577a99b88341188d4c001ca28b9eaf7aa5207023b",
+      "src": "./audio/generated/ja/jf_alpha/e9814c970db4a1b0dd958c2514408616.m4a",
+      "sha256": "6011c58a9a2f68b4b9c2d26f41a6a3bf0cce09bb9dd575a32724f31f22c82cff",
       "voiceId": "jf_alpha",
-      "fingerprint": "2e774eb198cb27ad0d45a87fe5076b3b2d541f46c1b51c2989b980bb65c6a9b0",
+      "fingerprint": "5b6232153995fd45072f04c5f491f3e64a4caaacd9ca45317029138b9d4fb9c6",
       "expected": "校正刷りはまだ法務部にあります。",
       "spoken": "校正刷りはまだ法務部にあります。",
       "recognized": "構成ずりはまだホーム部にあります。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.3000000000000003,
+          "end": 2.32,
           "text": "構成ずりはまだホーム部にあります。",
-          "avgLogprob": -0.2116323749224345,
-          "noSpeechProb": 4.499836267490842e-12
+          "avgLogprob": -0.22358907659848531,
+          "noSpeechProb": 4.03277368096755e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -3576,8 +3571,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "711294d13e61760293e4fc9cc6b2eac58faf7140eced80284d7b2bbdbc91252f"
         },
         "readingTrace": {
@@ -3694,7 +3690,7 @@
             }
           ]
         },
-        "audioSha256": "1c716e927e634913c764826577a99b88341188d4c001ca28b9eaf7aa5207023b"
+        "audioSha256": "6011c58a9a2f68b4b9c2d26f41a6a3bf0cce09bb9dd575a32724f31f22c82cff"
       }
     },
     "p6-context/steps/1/0": {
@@ -3742,20 +3738,20 @@
     },
     "p7-syn/steps/0/0": {
       "key": "p7-syn/steps/0/0",
-      "src": "./audio/generated/ja/jf_alpha/ed1c9dff7bf53f82400a0737658170e6.m4a",
-      "sha256": "6d360754e1254dd165467166eff3338d1aea74b5c81466b00c5e251e17b18074",
+      "src": "./audio/generated/ja/jf_alpha/4c05e05dab263deee17c164dc3291c25.m4a",
+      "sha256": "cb933027a0894e9629cfefb45d7a40656ed3f98d4b2a54ae6e22837a39bcfa00",
       "voiceId": "jf_alpha",
-      "fingerprint": "0a63ff2580c3e7bf7bb7c6f1261d8c64657fa3a62786489dd22e2aedeb2f9961",
+      "fingerprint": "c503e9abf426174c693a53f424cb452655da96161396c5a29ee83d93528f9d2b",
       "expected": "ご注文の商品をお受け取りいただけます。",
       "spoken": "ご注文の商品をお受け取りいただけます。",
       "recognized": "ご注文の商品を受け取りいただけます",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.72,
+          "end": 2.88,
           "text": "ご注文の商品を受け取りいただけます",
-          "avgLogprob": -0.08471132727230296,
-          "noSpeechProb": 4.182830297405626e-12
+          "avgLogprob": -0.09589540257173426,
+          "noSpeechProb": 4.024055828139028e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -3808,8 +3804,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "dc76eee7b889af7a4575e23f7636520c929d20a477b562d9a00a7364151fa2fb"
         },
         "readingTrace": {
@@ -3920,25 +3917,25 @@
             }
           ]
         },
-        "audioSha256": "6d360754e1254dd165467166eff3338d1aea74b5c81466b00c5e251e17b18074"
+        "audioSha256": "cb933027a0894e9629cfefb45d7a40656ed3f98d4b2a54ae6e22837a39bcfa00"
       }
     },
     "p7-multi/steps/0/0": {
       "key": "p7-multi/steps/0/0",
-      "src": "./audio/generated/ja/jf_alpha/87c8f930982d0a6ecd4b01f9f7672375.m4a",
-      "sha256": "31f363be79f5839d2b0ca90613a5b6b3c9831fd3dfceebe41b2707a787920fd9",
+      "src": "./audio/generated/ja/jf_alpha/4c1444907dc72ea6f1e0df4a3f9b1b73.m4a",
+      "sha256": "34f38daf8287cb025d2c679fdb47517d14aa5353336e1894d02bdf5624894ba1",
       "voiceId": "jf_alpha",
-      "fingerprint": "df1bd7f55ea696e91005a608eefaafd50586b63d09982de93e819fa11256a08d",
+      "fingerprint": "52d8d87a446ab4512b176d36488bbd379311ea1c1a354d450388b193674c2cd7",
       "expected": "East 向けの展示スタンド4台。",
-      "spoken": "East 向けの展示スタンド四台。",
+      "spoken": "イースト 向けの展示スタンド四台。",
       "recognized": "イースト向けの展示スタンド4台。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.08,
+          "end": 2.2600000000000002,
           "text": "イースト向けの展示スタンド4台。",
-          "avgLogprob": -0.19544104968800263,
-          "noSpeechProb": 4.419413619782819e-12
+          "avgLogprob": -0.10492375317741842,
+          "noSpeechProb": 3.2138252562680103e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -3959,31 +3956,25 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.2667,
-      "phonemeErrorRate": 0.1429,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "e a s t",
-          "recognized": "イ ー ス ト"
-        }
-      ],
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "East 向けの展示スタンド四台。",
+        "expectedSpoken": "イースト 向けの展示スタンド四台。",
         "recognized": "イースト向けの展示スタンド4台。",
         "reasons": [
           "author-number-and-input-normalization",
-          "non-equivalent-morae-remain"
+          "exact-normalized-japanese-text"
         ],
-        "normalizedExpected": "<east>ムケノテンジスタンドヨンダイ",
+        "normalizedExpected": "イイストムケノテンジスタンドヨンダイ",
         "normalizedRecognized": "イイストムケノテンジスタンドヨンダイ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "written:イースト向けの展示スタンド四台",
+        "proofRecognized": "written:イースト向けの展示スタンド四台",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -3992,17 +3983,18 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "8924a91068643a2e21d4ad100df86b8560af0fe1f0696a654c9a16df16aae28f"
         },
         "readingTrace": {
           "expected": [
             {
-              "surface": "East",
-              "reading": "<east>",
-              "normalized": "<east>",
-              "method": "literal-english-source"
+              "surface": "イースト",
+              "reading": "イースト",
+              "normalized": "イイスト",
+              "method": "unidic-pron"
             },
             {
               "surface": "向け",
@@ -4086,25 +4078,25 @@
             }
           ]
         },
-        "audioSha256": "31f363be79f5839d2b0ca90613a5b6b3c9831fd3dfceebe41b2707a787920fd9"
+        "audioSha256": "34f38daf8287cb025d2c679fdb47517d14aa5353336e1894d02bdf5624894ba1"
       }
     },
     "p7-multi/steps/1/0": {
       "key": "p7-multi/steps/1/0",
-      "src": "./audio/generated/ja/jf_alpha/3b0a49f39cea196ec311a0f60e9e46cb.m4a",
-      "sha256": "a0a8a49278cfcf0515e83fc031e0a3835f01054a68ce19fc5e592678f315eb4f",
+      "src": "./audio/generated/ja/jf_alpha/95d6723459ac3d0b3d391c9d553e5008.m4a",
+      "sha256": "2f1e7b41c9c35c72357cc740cc647d7eaf60dcac251dee18fef40e092ab35602",
       "voiceId": "jf_alpha",
-      "fingerprint": "6c385f239f25d0dc920e3256a4899448ac80e8c9ba5ab772bb2cc36cacb30055",
+      "fingerprint": "3611670b20c5554762ff5646891b1307a01e562795fd01f776d50a693a89b753",
       "expected": "East は3台受け取りました。",
-      "spoken": "East は三台受け取りました。",
-      "recognized": "椅子は3台受け取りました。",
+      "spoken": "イースト は三台受け取りました。",
+      "recognized": "イーストは3台受け取りました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.72,
-          "text": "椅子は3台受け取りました。",
-          "avgLogprob": -0.1717380764228957,
-          "noSpeechProb": 4.822572462898078e-12
+          "end": 1.96,
+          "text": "イーストは3台受け取りました。",
+          "avgLogprob": -0.14342304532017028,
+          "noSpeechProb": 5.731733230401881e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -4125,31 +4117,25 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.2857,
-      "phonemeErrorRate": 0.1154,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "e a s t",
-          "recognized": "椅 子"
-        }
-      ],
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "East は三台受け取りました。",
-        "recognized": "椅子は3台受け取りました。",
+        "expectedSpoken": "イースト は三台受け取りました。",
+        "recognized": "イーストは3台受け取りました。",
         "reasons": [
           "author-number-and-input-normalization",
-          "non-equivalent-morae-remain"
+          "exact-normalized-japanese-text"
         ],
-        "normalizedExpected": "<east>ワサンダイウケトリマシタ",
-        "normalizedRecognized": "イスワサンダイウケトリマシタ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "イイストワサンダイウケトリマシタ",
+        "normalizedRecognized": "イイストワサンダイウケトリマシタ",
+        "proofExpected": "written:イーストは三台受け取りました",
+        "proofRecognized": "written:イーストは三台受け取りました",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -4158,17 +4144,18 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "2131a6561d134ad072e318949148ba6cc722f4d3f3362028f1b56560fcc5ffba"
         },
         "readingTrace": {
           "expected": [
             {
-              "surface": "East",
-              "reading": "<east>",
-              "normalized": "<east>",
-              "method": "literal-english-source"
+              "surface": "イースト",
+              "reading": "イースト",
+              "normalized": "イイスト",
+              "method": "unidic-pron"
             },
             {
               "surface": "は",
@@ -4209,9 +4196,9 @@
           ],
           "recognized": [
             {
-              "surface": "椅子",
-              "reading": "イス",
-              "normalized": "イス",
+              "surface": "イースト",
+              "reading": "イースト",
+              "normalized": "イイスト",
               "method": "unidic-pron"
             },
             {
@@ -4252,14 +4239,14 @@
             }
           ]
         },
-        "audioSha256": "a0a8a49278cfcf0515e83fc031e0a3835f01054a68ce19fc5e592678f315eb4f"
+        "audioSha256": "2f1e7b41c9c35c72357cc740cc647d7eaf60dcac251dee18fef40e092ab35602"
       }
     }
   },
   "generation": {
     "individual": {
-      "model": "whisper-large-v3-turbo",
-      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
       "device": "cpu",
       "computeType": "int8",
       "packages": {

@@ -337,20 +337,20 @@
     },
     "labels/am_puck/A": {
       "key": "labels/am_puck/A",
-      "src": "./audio/generated/en/am_puck/861371891fb974e2aa5a217baeb960f5.m4a",
-      "sha256": "4c13e50e5a0f4e8fa820809c8c8698b1eb5f8e0cf36c9e37c796f7eb91103145",
+      "src": "./audio/generated/en/am_puck/d51fe90358e78634c65dab8d0daa66a5.m4a",
+      "sha256": "88f148063c3f3bed7440a2d327f99bea4131248c7685e84c7f875ce59a9d2e08",
       "voiceId": "am_puck",
-      "fingerprint": "e8c45378ef6c1d4a5698a277be05b1a917015e61c40b98f240517d693e7eb1d0",
+      "fingerprint": "959195d1cac980d8044b1faa885124c579ee803890694e16fe784ea10e0249c2",
       "expected": "A.",
       "spoken": "A.",
-      "recognized": "Bye.",
+      "recognized": "Hey.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.28,
-          "text": " Bye.",
-          "avgLogprob": -0.7309864044189454,
-          "noSpeechProb": 2.2605770033656825e-10
+          "end": 0.32,
+          "text": " Hey.",
+          "avgLogprob": -0.7552475452423095,
+          "noSpeechProb": 4.570970268957808e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -379,7 +379,7 @@
         {
           "operation": "replace",
           "expected": "a",
-          "recognized": "bye"
+          "recognized": "hey"
         }
       ],
       "comparison": {
@@ -387,7 +387,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A.",
-        "recognized": "Bye.",
+        "recognized": "Hey.",
         "reasons": [
           "source-anchored-letter:A",
           "non-equivalent-segments-remain"
@@ -396,7 +396,7 @@
           "lettera"
         ],
         "normalizedRecognized": [
-          "bye"
+          "hey"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -407,30 +407,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "e344a5d7aed450c8a3e4387366723b36519659b83cc8c26835f6b381c7a65ad3",
           "sourceTextSha256": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991"
         },
-        "audioSha256": "4c13e50e5a0f4e8fa820809c8c8698b1eb5f8e0cf36c9e37c796f7eb91103145"
+        "audioSha256": "88f148063c3f3bed7440a2d327f99bea4131248c7685e84c7f875ce59a9d2e08"
       }
     },
     "labels/am_puck/B": {
       "key": "labels/am_puck/B",
-      "src": "./audio/generated/en/am_puck/2ca97bdd30443e97be3cdb26283e6536.m4a",
-      "sha256": "f189462ea3880f809b0538fbb7418a07964820d5792df88ede4d233f7d671506",
+      "src": "./audio/generated/en/am_puck/7a59d34bf6e3952f3e0457b8a7a58838.m4a",
+      "sha256": "87f3aa9540e63d8756112ac342a990c10e290ad960d92c3cbe5b22ef211d19fb",
       "voiceId": "am_puck",
-      "fingerprint": "60c25d88e029522cc207d4f06c4ad60796e85252e9e12eb482d7132609ae6c2a",
+      "fingerprint": "68ce19eff00a78a0dad8421636dc8fa163560cc9887962ffcc2d174d357c45fc",
       "expected": "B.",
       "spoken": "B.",
-      "recognized": "Bye.",
+      "recognized": "Veil",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.24,
-          "text": " Bye.",
-          "avgLogprob": -0.7515829086303711,
-          "noSpeechProb": 6.232572236086753e-10
+          "end": 0.5,
+          "text": " Veil",
+          "avgLogprob": -0.9663355827331543,
+          "noSpeechProb": 1.8950557789665368e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -459,7 +460,7 @@
         {
           "operation": "replace",
           "expected": "b",
-          "recognized": "bye"
+          "recognized": "veil"
         }
       ],
       "comparison": {
@@ -467,7 +468,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "B.",
-        "recognized": "Bye.",
+        "recognized": "Veil",
         "reasons": [
           "source-anchored-letter:B",
           "non-equivalent-segments-remain"
@@ -476,7 +477,7 @@
           "letterb"
         ],
         "normalizedRecognized": [
-          "bye"
+          "veil"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -487,12 +488,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "e344a5d7aed450c8a3e4387366723b36519659b83cc8c26835f6b381c7a65ad3",
           "sourceTextSha256": "be651d5a8e97690fbb1fafd9b89ea7bb5458b27b1d24a449c67ca762317ac1df"
         },
-        "audioSha256": "f189462ea3880f809b0538fbb7418a07964820d5792df88ede4d233f7d671506"
+        "audioSha256": "87f3aa9540e63d8756112ac342a990c10e290ad960d92c3cbe5b22ef211d19fb"
       }
     },
     "labels/am_puck/C": {
@@ -590,20 +592,20 @@
     },
     "labels/am_puck/D": {
       "key": "labels/am_puck/D",
-      "src": "./audio/generated/en/am_puck/9b6c515401030b5b4979c799ba075989.m4a",
-      "sha256": "a7eb6223a1d962fbdb21ae133aaf967533bfa5495110686d859318fea6164292",
+      "src": "./audio/generated/en/am_puck/4389f3d3733d3fb0804c43f0a6bf7be2.m4a",
+      "sha256": "239f2446245e7f1c9936b8191ec5a004901e96b24d5732128b362db5b2f872fa",
       "voiceId": "am_puck",
-      "fingerprint": "23a425fcf92825ed257b3414582ae38fafc25fa0de8ac788b58fbcdc23ae911a",
+      "fingerprint": "2b0c7a52ab0e5daaf50cf5ca28ade544a7fe72da5998656ed13cd612a528221f",
       "expected": "D.",
       "spoken": "D.",
-      "recognized": "There you go.",
+      "recognized": "day",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.5,
-          "text": " There you go.",
-          "avgLogprob": -1.0942431858607702,
-          "noSpeechProb": 6.269038066442079e-10
+          "end": 2.0,
+          "text": " day",
+          "avgLogprob": -0.805881679058075,
+          "noSpeechProb": 1.2332125598479848e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -626,13 +628,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 3.0,
+      "errorRate": 1.0,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
           "expected": "d",
-          "recognized": "there you go"
+          "recognized": "day"
         }
       ],
       "comparison": {
@@ -640,7 +642,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "D.",
-        "recognized": "There you go.",
+        "recognized": "day",
         "reasons": [
           "source-anchored-letter:D",
           "non-equivalent-segments-remain"
@@ -649,9 +651,7 @@
           "letterd"
         ],
         "normalizedRecognized": [
-          "there",
-          "you",
-          "go"
+          "day"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -662,30 +662,31 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "e344a5d7aed450c8a3e4387366723b36519659b83cc8c26835f6b381c7a65ad3",
           "sourceTextSha256": "f9e487799dfc7882b1a0db047999249489d02726b2c82055cb68a6bb0311f118"
         },
-        "audioSha256": "a7eb6223a1d962fbdb21ae133aaf967533bfa5495110686d859318fea6164292"
+        "audioSha256": "239f2446245e7f1c9936b8191ec5a004901e96b24d5732128b362db5b2f872fa"
       }
     },
     "labels/af_bella/A": {
       "key": "labels/af_bella/A",
-      "src": "./audio/generated/en/af_bella/2dd5293d077f47a3ae4777d4c3538055.m4a",
-      "sha256": "86e7fed2ea2136ccd43aa3d0cf0333c6c2a56edbc3100c977fdb56264098d435",
+      "src": "./audio/generated/en/af_bella/ecb2756df06be861f3fb65b6c4bb772e.m4a",
+      "sha256": "ecff67bc2b7fdc8c5f7041a0ae32d84567bbace0356921a81d637488566629b5",
       "voiceId": "af_bella",
-      "fingerprint": "621aee1635b681d15f9f661688a852ae167397dd99a58d5f8b409fa7738a04fd",
+      "fingerprint": "65c338fa5d4a6f98a2e80ccedd6c235bef0ea45372d6f59e90b3808a9fdfb826",
       "expected": "A.",
       "spoken": "A.",
-      "recognized": "Aye.",
+      "recognized": "Play.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.22,
-          "text": " Aye.",
-          "avgLogprob": -0.6465569496154785,
-          "noSpeechProb": 1.8298063064747794e-10
+          "end": 0.36,
+          "text": " Play.",
+          "avgLogprob": -0.8028349876403809,
+          "noSpeechProb": 1.3138103105436727e-10
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -714,7 +715,7 @@
         {
           "operation": "replace",
           "expected": "a",
-          "recognized": "aye"
+          "recognized": "play"
         }
       ],
       "comparison": {
@@ -722,7 +723,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A.",
-        "recognized": "Aye.",
+        "recognized": "Play.",
         "reasons": [
           "source-anchored-letter:A",
           "non-equivalent-segments-remain"
@@ -731,7 +732,7 @@
           "lettera"
         ],
         "normalizedRecognized": [
-          "aye"
+          "play"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -742,12 +743,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "e344a5d7aed450c8a3e4387366723b36519659b83cc8c26835f6b381c7a65ad3",
           "sourceTextSha256": "e53657178cb6855ac4b2029197a64b0ce6af712b69433254ae18be74d224f991"
         },
-        "audioSha256": "86e7fed2ea2136ccd43aa3d0cf0333c6c2a56edbc3100c977fdb56264098d435"
+        "audioSha256": "ecff67bc2b7fdc8c5f7041a0ae32d84567bbace0356921a81d637488566629b5"
       }
     },
     "labels/af_bella/C": {
@@ -834,8 +836,8 @@
   },
   "generation": {
     "individual": {
-      "model": "whisper-large-v3-turbo",
-      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
       "device": "cpu",
       "computeType": "int8",
       "packages": {

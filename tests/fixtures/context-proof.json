@@ -1,0 +1,215 @@
+{
+  "unit": {
+    "language": "en",
+    "bank": "vocab",
+    "key": "v-test/meaning",
+    "text": "signed",
+    "voiceId": "af_heart",
+    "required": true,
+    "group": "p2-first"
+  },
+  "clip": {
+    "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+    "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "bytes": 100,
+    "duration": 0.5,
+    "text": "signed",
+    "spoken": "signed",
+    "language": "en",
+    "voiceId": "af_heart",
+    "required": true,
+    "inputSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "phonemeSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "asrStatus": "review"
+  },
+  "record": {
+    "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "expected": "signed",
+    "spoken": "signed",
+    "recognized": "incorrect original recognition",
+    "status": "accepted",
+    "recognitionMethod": "individual-beam5",
+    "singleFileVerification": true,
+    "recognitionGeneration": {
+      "model": "whisper-large-v3-turbo",
+      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "device": "cpu",
+      "computeType": "int8",
+      "beamSize": 5,
+      "conditionOnPreviousText": false,
+      "prompt": null,
+      "hotwords": null,
+      "vadFilter": false,
+      "wordTimestamps": true,
+      "temperature": 0
+    },
+    "acceptance": {
+      "method": "unchanged-original-pcm-context-v1",
+      "proofId": "e5e60cd18de4fe0bf708ca33c9833dad9c92594828d983eb134c896603e803bb",
+      "sourceAudioSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "originalIndividualStatus": "review"
+    }
+  },
+  "row": {
+    "contextProbes": [
+      {
+        "version": 1,
+        "id": "e5e60cd18de4fe0bf708ca33c9833dad9c92594828d983eb134c896603e803bb",
+        "method": "unchanged-original-pcm-context-v1",
+        "token": "en:vocab:v-test/meaning",
+        "sourceAudioSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "sourceClip": {
+          "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "bytes": 100,
+          "duration": 0.5,
+          "text": "signed",
+          "spoken": "signed",
+          "language": "en",
+          "voiceId": "af_heart",
+          "required": true,
+          "inputSha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "phonemeSha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "asrStatus": "review"
+        },
+        "originalASR": {
+          "sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "expected": "signed",
+          "spoken": "signed",
+          "recognized": "incorrect original recognition",
+          "status": "review",
+          "recognitionMethod": "individual-beam5",
+          "singleFileVerification": true,
+          "recognitionGeneration": {
+            "model": "whisper-large-v3-turbo",
+            "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+            "device": "cpu",
+            "computeType": "int8",
+            "beamSize": 5,
+            "conditionOnPreviousText": false,
+            "prompt": null,
+            "hotwords": null,
+            "vadFilter": false,
+            "wordTimestamps": true,
+            "temperature": 0
+          }
+        },
+        "carrier": {
+          "text": "The word is",
+          "voiceId": "af_heart",
+          "audioSha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+          "pcmSha256": "8b50d0c30fc9b5fc111424fefc2858e4e0e205effdcda8ae1fdb2a1c6bd6ec54",
+          "frames": 16000,
+          "sampleRate": 16000,
+          "synthesis": {
+            "modelSha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "voicesSha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "phonemeSha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+            "targetTextUsed": false
+          }
+        },
+        "pcm": {
+          "sampleRate": 16000,
+          "format": "float32-le-mono",
+          "sourcePCMSha256": "be3bf7df70703016c2ecc11153c8e6c9f5fafa4ffac1c76a27030e27b8ba8f40",
+          "carrierPCMSha256": "8b50d0c30fc9b5fc111424fefc2858e4e0e205effdcda8ae1fdb2a1c6bd6ec54",
+          "probePCMSha256": "e7edb605db7af8f4f469b15bb123cc3a5a7bdcd85b4171bec842dfa2eb125e99",
+          "carrierFrames": 16000,
+          "gapFrames": 3200,
+          "spanStartFrame": 19200,
+          "spanFrames": 8000,
+          "totalFrames": 27200,
+          "targetSpanSha256": "be3bf7df70703016c2ecc11153c8e6c9f5fafa4ffac1c76a27030e27b8ba8f40",
+          "targetPCMUnchanged": true
+        },
+        "asr": {
+          "recognized": "The word is signed",
+          "recognitionGeneration": {
+            "model": "whisper-large-v3-turbo",
+            "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+            "device": "cpu",
+            "computeType": "int8",
+            "beamSize": 5,
+            "conditionOnPreviousText": false,
+            "prompt": null,
+            "hotwords": null,
+            "vadFilter": false,
+            "wordTimestamps": true,
+            "temperature": 0
+          },
+          "recognitionMethod": "context-individual-beam5",
+          "probePCMSha256": "e7edb605db7af8f4f469b15bb123cc3a5a7bdcd85b4171bec842dfa2eb125e99",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 1.7,
+              "text": "The word is signed",
+              "avgLogprob": -0.1,
+              "noSpeechProb": 0.01
+            }
+          ],
+          "words": [
+            {
+              "word": " The",
+              "start": 0.0,
+              "end": 0.2
+            },
+            {
+              "word": " word",
+              "start": 0.2,
+              "end": 0.5
+            },
+            {
+              "word": " is",
+              "start": 0.5,
+              "end": 0.8
+            },
+            {
+              "word": " signed",
+              "start": 1.21,
+              "end": 1.66
+            }
+          ]
+        },
+        "recognizedTail": "signed",
+        "comparison": {
+          "equivalent": true,
+          "ruleVersion": "strict-audio-equivalence-1",
+          "language": "en",
+          "expectedSpoken": "signed",
+          "recognized": "signed",
+          "reasons": [
+            "exact-normalized-text"
+          ],
+          "normalizedExpected": [
+            "signed"
+          ],
+          "normalizedRecognized": [
+            "signed"
+          ],
+          "proofExpected": "t:signed",
+          "proofRecognized": "t:signed",
+          "provenance": {
+            "comparison": "exact transforms only; no edit-distance acceptance",
+            "cmudict": "1.1.3",
+            "fugashi": "1.5.2",
+            "unidic": "1.1.0",
+            "pykakasi": "2.3.0",
+            "normalizer": "normalizer",
+            "phonemeOverride": false,
+            "articlePolicyEnabled": false,
+            "ruleFileSha256": "41c8f8546fa3a2ff9232fee2b23d00ab8b6014f5b3c30428accbacb31fe8d67a",
+            "normalizerFileSha256": "43afa7cd0b0628bb5e1e58d14813b9619416c0b83fe0f0fabc41ecb115ee4bfe",
+            "sourceTextSha256": "4a3cdfae6f291c8f544daea5b72905cf9e74c1ed427d831ad0d7ca00c73c794d"
+          }
+        },
+        "status": "accepted",
+        "reasons": [
+          "strict-context-tail-equivalence"
+        ],
+        "originalAudioResynthesized": false,
+        "originalIndividualASRMatched": false
+      }
+    ]
+  }
+}

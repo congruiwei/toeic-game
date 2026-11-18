@@ -1716,20 +1716,20 @@
     },
     "p1-007/options/2/0": {
       "key": "p1-007/options/2/0",
-      "src": "./audio/generated/ja/jf_alpha/1994215681bfb5756c94500f98e62792.m4a",
-      "sha256": "faa950c12a5f5a33f83342256506f7a0d324decf3e1f0900205cb8c2f0303e28",
+      "src": "./audio/generated/ja/jf_alpha/feac4f7a01e75010f1fed1a9c3beb5a0.m4a",
+      "sha256": "eff24d3df1a0c49ef5a4b5fb7dacb8d3cf1fda3029d9a9eceaecc8b1ee78aebb",
       "voiceId": "jf_alpha",
-      "fingerprint": "0530ae9e6e88ea3dd3b6a172f4cf3f0c8fc4e81f298c6f11145d8d49693942d3",
+      "fingerprint": "0c076ea95136d9311908cec2d57c873330c9242f9e4486ba69ef1b1f94756772",
       "expected": "作業員が棚の缶に向かって手を伸ばしています。",
       "spoken": "作業員が棚の缶に向かって手を伸ばしています。",
       "recognized": "作業員が棚の管に向かって手を伸ばしています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.18,
+          "end": 3.3000000000000003,
           "text": "作業員が棚の管に向かって手を伸ばしています。",
-          "avgLogprob": -0.09198889589827994,
-          "noSpeechProb": 3.882615149525259e-12
+          "avgLogprob": -0.09941219182118126,
+          "noSpeechProb": 4.2046617923507945e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -1782,8 +1782,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "2500bac523231ddb55a1d9755fadab3fe0048af88ba621fd7c5772dd333f203d"
         },
         "readingTrace": {
@@ -1972,7 +1973,7 @@
             }
           ]
         },
-        "audioSha256": "faa950c12a5f5a33f83342256506f7a0d324decf3e1f0900205cb8c2f0303e28"
+        "audioSha256": "eff24d3df1a0c49ef5a4b5fb7dacb8d3cf1fda3029d9a9eceaecc8b1ee78aebb"
       }
     },
     "p1-007/options/3/0": {
@@ -3350,20 +3351,20 @@
     },
     "p1-014/options/3/0": {
       "key": "p1-014/options/3/0",
-      "src": "./audio/generated/ja/jf_alpha/121218df96b9b1183e498a1b653c9dba.m4a",
-      "sha256": "cab8b379467902528af998b88b6657624e7972b7b005851172afbea7ee647a8a",
+      "src": "./audio/generated/ja/jf_alpha/a6f5130d668b8c0bacf063714db80c0e.m4a",
+      "sha256": "9571b2ecb9a52d61f90841594a6ec9fdfcf8c80b470ef0db744b778641a4a8f3",
       "voiceId": "jf_alpha",
-      "fingerprint": "60b940c02952ddf5abecfd06dfbd21027577a2e904035190308b6841da17e5f7",
+      "fingerprint": "7cc68f1a4d0da5e73149d72ef5eb752c74cd36514f8ccc2b3cc2ee63dd5ee986",
       "expected": "作業員が2台の空の台車を押しています。",
       "spoken": "作業員が二台の空の台車を押しています。",
-      "recognized": "作業因果に台のからの台車を押しています。",
+      "recognized": "作業員が2台のからの台車を押しています",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.9,
-          "text": "作業因果に台のからの台車を押しています。",
-          "avgLogprob": -0.19819409325718879,
-          "noSpeechProb": 3.732902008335426e-12
+          "end": 2.98,
+          "text": "作業員が2台のからの台車を押しています",
+          "avgLogprob": -0.14850442660482308,
+          "noSpeechProb": 4.820325562315819e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -3386,14 +3387,9 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.2778,
-      "phonemeErrorRate": 0.0769,
+      "errorRate": 0.1111,
+      "phonemeErrorRate": 0.0513,
       "differences": [
-        {
-          "operation": "replace",
-          "expected": "員 が 二",
-          "recognized": "因 果 に"
-        },
         {
           "operation": "replace",
           "expected": "空",
@@ -3405,8 +3401,9 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "作業員が二台の空の台車を押しています。",
-        "recognized": "作業因果に台のからの台車を押しています。",
+        "recognized": "作業員が2台のからの台車を押しています",
         "reasons": [
+          "author-number-and-input-normalization",
           "non-equivalent-morae-remain",
           "ambiguous-contextual-kanji:空",
           "phoneme-override-not-proven-by-dictionary-reading"
@@ -3423,8 +3420,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "d8d4bc0627a44925be0a056ee4a911db5114d19b85d07b4d32885139207eb391"
         },
         "readingTrace": {
@@ -3522,13 +3520,19 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "因果",
-              "reading": "インガ",
-              "normalized": "インガ",
+              "surface": "員",
+              "reading": "イン",
+              "normalized": "イン",
               "method": "unidic-pron"
             },
             {
-              "surface": "に",
+              "surface": "が",
+              "reading": "ガ",
+              "normalized": "ガ",
+              "method": "unidic-pron"
+            },
+            {
+              "surface": "二",
               "reading": "ニ",
               "normalized": "ニ",
               "method": "unidic-pron"
@@ -3595,7 +3599,7 @@
             }
           ]
         },
-        "audioSha256": "cab8b379467902528af998b88b6657624e7972b7b005851172afbea7ee647a8a"
+        "audioSha256": "9571b2ecb9a52d61f90841594a6ec9fdfcf8c80b470ef0db744b778641a4a8f3"
       }
     },
     "p1-015/options/0/0": {
@@ -5966,20 +5970,20 @@
     },
     "p1-025/options/3/0": {
       "key": "p1-025/options/3/0",
-      "src": "./audio/generated/ja/jf_alpha/31c285c870db9e7d66a69bf49e2a5d22.m4a",
-      "sha256": "3e8af2bd94caae8e13793968cc0e888a43def8533acfd601578b9d7719d5d024",
+      "src": "./audio/generated/ja/jf_alpha/86022288660e4966823f023d77e481c0.m4a",
+      "sha256": "1232d81657532b113825d147f19ac30fa13393c35c62e00102a60f865f3e6165",
       "voiceId": "jf_alpha",
-      "fingerprint": "25b1537eb975c965fe8b8c8a39f8d3d97e548632e9fb61ab5246e14a2cb5f389",
+      "fingerprint": "5c8d86cacf6160dd3d03cd7f7d280b37e3aa55fc0158fecd8c3f4182c2b88fa7",
       "expected": "1人が靴を1足手渡しています。",
       "spoken": "ひとりが靴をいっそく手渡しています。",
       "recognized": "一人が靴を一足手渡しています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.36,
+          "end": 2.48,
           "text": "一人が靴を一足手渡しています。",
-          "avgLogprob": -0.11583137512207031,
-          "noSpeechProb": 4.91156290985395e-12
+          "avgLogprob": -0.14198600544649012,
+          "noSpeechProb": 4.4586639068311396e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -6037,8 +6041,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "e043ab18cd35439f5bf79deb6dbec57d7b40c751684d66aad12f2a0c2f486af1"
         },
         "readingTrace": {
@@ -6161,7 +6166,7 @@
             }
           ]
         },
-        "audioSha256": "3e8af2bd94caae8e13793968cc0e888a43def8533acfd601578b9d7719d5d024"
+        "audioSha256": "1232d81657532b113825d147f19ac30fa13393c35c62e00102a60f865f3e6165"
       }
     },
     "p1-026/options/0/0": {
@@ -6447,20 +6452,20 @@
     },
     "p1-027/options/2/0": {
       "key": "p1-027/options/2/0",
-      "src": "./audio/generated/ja/jf_alpha/7df3501fbeded25b3c8aab9adde9dac2.m4a",
-      "sha256": "63adf9a6236edf97e670c596c873336e8845bb16a645a6f535804393ded192c6",
+      "src": "./audio/generated/ja/jf_alpha/82ae182ca4c9b2ca5a5b68b6bc1edeef.m4a",
+      "sha256": "128a738c7169f5339f2055c556769bd3378b7db83cde42e7b801831e75ba069b",
       "voiceId": "jf_alpha",
-      "fingerprint": "df7d7769ccd1506af432a9967f86ed8efaddea111a33030af3f4045b771e0fb9",
+      "fingerprint": "9e13c81de66271e56b69537602cd5c3b05d449ab942250df10040cd950610d8c",
       "expected": "本が縁を下にして立てられています。",
       "spoken": "本が縁を下にして立てられています。",
-      "recognized": "本画縁を下にして立てられています",
+      "recognized": "本画縁を下に捨て立てられています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.36,
-          "text": "本画縁を下にして立てられています",
-          "avgLogprob": -0.18596881069242954,
-          "noSpeechProb": 4.5530623542233695e-12
+          "end": 2.42,
+          "text": "本画縁を下に捨て立てられています。",
+          "avgLogprob": -0.19652387342954936,
+          "noSpeechProb": 4.919393885305379e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -6483,13 +6488,18 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.0625,
-      "phonemeErrorRate": 0.0606,
+      "errorRate": 0.125,
+      "phonemeErrorRate": 0.1212,
       "differences": [
         {
           "operation": "replace",
           "expected": "が",
           "recognized": "画"
+        },
+        {
+          "operation": "replace",
+          "expected": "し",
+          "recognized": "捨"
         }
       ],
       "comparison": {
@@ -6497,13 +6507,13 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "本が縁を下にして立てられています。",
-        "recognized": "本画縁を下にして立てられています",
+        "recognized": "本画縁を下に捨て立てられています。",
         "reasons": [
           "non-equivalent-morae-remain",
           "phoneme-override-not-proven-by-dictionary-reading"
         ],
         "normalizedExpected": "ホンガエンオシタニシテタテラレテイマス",
-        "normalizedRecognized": "ホンエエンオシタニシテタテラレテイマス",
+        "normalizedRecognized": "ホンエエンオシタニステタテラレテイマス",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -6514,8 +6524,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "8836bdbd63ce568903850e9fdcac618523eb8ba7a24d37c0ab8c558e9dc0c05a"
         },
         "readingTrace": {
@@ -6637,15 +6648,9 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "し",
-              "reading": "シ",
-              "normalized": "シ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
+              "surface": "捨て",
+              "reading": "ステ",
+              "normalized": "ステ",
               "method": "unidic-pron"
             },
             {
@@ -6680,7 +6685,7 @@
             }
           ]
         },
-        "audioSha256": "63adf9a6236edf97e670c596c873336e8845bb16a645a6f535804393ded192c6"
+        "audioSha256": "128a738c7169f5339f2055c556769bd3378b7db83cde42e7b801831e75ba069b"
       }
     },
     "p1-027/options/3/0": {
@@ -7048,20 +7053,20 @@
     },
     "p1-031/options/0/0": {
       "key": "p1-031/options/0/0",
-      "src": "./audio/generated/ja/jf_alpha/9ffb6305f62281a5509ba7b39a20191e.m4a",
-      "sha256": "9aa69b3ae00c35b3fc5527778e60a3580cccffb5de3a87ce85985c677f35d33f",
+      "src": "./audio/generated/ja/jf_alpha/06f1c7318d38d2ce80239a9a5dd50c4d.m4a",
+      "sha256": "addef3466499a5656c5c4860070f9561e9dc9f30f1caf0802fde50b231a1f8d3",
       "voiceId": "jf_alpha",
-      "fingerprint": "92f1ad75e518b354a98c5c2d47bf67e4877ca3788370bc71766dd45b2d952ce9",
+      "fingerprint": "3a280c447e232cb99908bdfc1630cdd3c1fb81000ea3dd940a8b89a37296aab3",
       "expected": "2つのコーンの間を自転車で通っている人がいます。",
       "spoken": "二つのコーンの間を自転車で通っている人がいます。",
       "recognized": "2つの高温の間を自転車で通っている人がいます。",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.38,
+          "end": 3.46,
           "text": "2つの高温の間を自転車で通っている人がいます。",
-          "avgLogprob": -0.10607409446189801,
-          "noSpeechProb": 4.760961590244417e-12
+          "avgLogprob": -0.08372726353506248,
+          "noSpeechProb": 4.7663023701460805e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -7116,8 +7121,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "feb9a6e225d5eb3a1b5d6c94992c33046ec2f0aaa7c6ea9850bb7a4b2adf36ab"
         },
         "readingTrace": {
@@ -7330,7 +7336,7 @@
             }
           ]
         },
-        "audioSha256": "9aa69b3ae00c35b3fc5527778e60a3580cccffb5de3a87ce85985c677f35d33f"
+        "audioSha256": "addef3466499a5656c5c4860070f9561e9dc9f30f1caf0802fde50b231a1f8d3"
       }
     },
     "p1-031/options/3/0": {
@@ -14392,20 +14398,20 @@
     },
     "p1-055/options/1/0": {
       "key": "p1-055/options/1/0",
-      "src": "./audio/generated/ja/jf_alpha/bd0da23ee006965b30d9f68e10e006c3.m4a",
-      "sha256": "06f36eb41f175a56dccc11a95d72325e20594599acf65b1edf0f30bd4e31ada1",
+      "src": "./audio/generated/ja/jf_alpha/c0f21781cf584d7b876ab952b6f62f03.m4a",
+      "sha256": "c1c090192b492bf8358c38ef94291d177dd55eedb37001ecc0f5f0cc903c61d5",
       "voiceId": "jf_alpha",
-      "fingerprint": "b3cc159c9d2b9c1db6a6b49565e3f44ff85c1a4c3da4012e5fcf9a3d70517a68",
+      "fingerprint": "a319bea43a22e73df5f64ef0da7009782f1f17de78a6ca3784b3f7cc7e4e2544",
       "expected": "2人が開いた段ボール箱の上に身をかがめています。",
       "spoken": "ふたりが開いた段ボール箱の上に身をかがめています。",
-      "recognized": "二人が開いた段ボール箱の上に身をかがめています。",
+      "recognized": "2人が開いた段ボール箱の上に身をかがめています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.38,
-          "text": "二人が開いた段ボール箱の上に身をかがめています。",
-          "avgLogprob": -0.10219864482464998,
-          "noSpeechProb": 4.914597808575172e-12
+          "end": 3.5,
+          "text": "2人が開いた段ボール箱の上に身をかがめています。",
+          "avgLogprob": -0.10745098020719446,
+          "noSpeechProb": 5.689330517116842e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -14426,31 +14432,25 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.125,
+      "errorRate": 0.0,
       "phonemeErrorRate": 0.0,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "ふ た り",
-          "recognized": "二 人"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "ふたりが開いた段ボール箱の上に身をかがめています。",
-        "recognized": "二人が開いた段ボール箱の上に身をかがめています。",
+        "recognized": "2人が開いた段ボール箱の上に身をかがめています。",
         "reasons": [
-          "non-equivalent-morae-remain",
-          "phoneme-override-not-proven-by-dictionary-reading"
+          "author-number-and-input-normalization",
+          "exact-normalized-japanese-text"
         ],
         "normalizedExpected": "フタリガヒライタダンボオルハコノウエニミオカガメテイマス",
         "normalizedRecognized": "フタリガヒライタダンボオルハコノウエニミオカガメテイマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "written:ふたりが開いた段ボール箱の上に身をかがめています",
+        "proofRecognized": "written:ふたりが開いた段ボール箱の上に身をかがめています",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -14459,8 +14459,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "f19abb8963949e807fd9af69dcefcfbb1204148ce4112727bfb0252446e62d20"
         },
         "readingTrace": {
@@ -14564,7 +14565,7 @@
           ],
           "recognized": [
             {
-              "surface": "二人",
+              "surface": "ふたり",
               "reading": "フタリ",
               "normalized": "フタリ",
               "method": "unidic-pron"
@@ -14661,7 +14662,7 @@
             }
           ]
         },
-        "audioSha256": "06f36eb41f175a56dccc11a95d72325e20594599acf65b1edf0f30bd4e31ada1"
+        "audioSha256": "c1c090192b492bf8358c38ef94291d177dd55eedb37001ecc0f5f0cc903c61d5"
       }
     },
     "p1-060/options/0/0": {
@@ -15590,20 +15591,20 @@
     },
     "p1-031/options/1/0": {
       "key": "p1-031/options/1/0",
-      "src": "./audio/generated/ja/jf_alpha/00a9f03edbc0156d18c265580af0ae98.m4a",
-      "sha256": "3e0f70af3fb3e23ecc99e0c784b82dcc1c48025cb26e2a3c753d77155452c3d0",
+      "src": "./audio/generated/ja/jf_alpha/69b2ccc5d7c7433cdc97345f2e713ed2.m4a",
+      "sha256": "d496b0424bf7d2276b7531e06065d30f8b79ac304ee66613571b4b13f8120d29",
       "voiceId": "jf_alpha",
-      "fingerprint": "0ddae827c004db2ba7435e8f7d04362b339eb4d7b0c66cf5a809a29545121184",
+      "fingerprint": "0abf382c21a14d1ffe345dd57662167ce8522a2ac966ca64be1a6c08415b6013",
       "expected": "コーンが自転車のサドルの上でバランスを保っています。",
       "spoken": "コーンが自転車のサドルの上でバランスを保っています。",
-      "recognized": "高温が自転車のサドルの上でバランスを保っています",
+      "recognized": "コーンが自転車のサドルの上でバランスを保っています",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.52,
-          "text": "高温が自転車のサドルの上でバランスを保っています",
-          "avgLogprob": -0.07033658285553639,
-          "noSpeechProb": 5.61346498798021e-12
+          "end": 3.54,
+          "text": "コーンが自転車のサドルの上でバランスを保っています",
+          "avgLogprob": -0.08552814245224,
+          "noSpeechProb": 4.647430010273901e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -15624,30 +15625,24 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.12,
-      "phonemeErrorRate": 0.0213,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "コ ー ン",
-          "recognized": "高 温"
-        }
-      ],
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "コーンが自転車のサドルの上でバランスを保っています。",
-        "recognized": "高温が自転車のサドルの上でバランスを保っています",
+        "recognized": "コーンが自転車のサドルの上でバランスを保っています",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-normalized-japanese-text"
         ],
         "normalizedExpected": "コオンガジテンシャノサドルノウエデバランスオタモッテイマス",
-        "normalizedRecognized": "コオオンガジテンシャノサドルノウエデバランスオタモッテイマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "コオンガジテンシャノサドルノウエデバランスオタモッテイマス",
+        "proofExpected": "written:コーンが自転車のサドルの上でバランスを保っています",
+        "proofRecognized": "written:コーンが自転車のサドルの上でバランスを保っています",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -15656,8 +15651,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "a63088f62148a6c88793b3a40aa7a8b9ef33408c8415aa0a580c1b3491da6e8b"
         },
         "readingTrace": {
@@ -15755,9 +15751,9 @@
           ],
           "recognized": [
             {
-              "surface": "高温",
-              "reading": "コーオン",
-              "normalized": "コオオン",
+              "surface": "コーン",
+              "reading": "コーン",
+              "normalized": "コオン",
               "method": "unidic-pron"
             },
             {
@@ -15846,7 +15842,7 @@
             }
           ]
         },
-        "audioSha256": "3e0f70af3fb3e23ecc99e0c784b82dcc1c48025cb26e2a3c753d77155452c3d0"
+        "audioSha256": "d496b0424bf7d2276b7531e06065d30f8b79ac304ee66613571b4b13f8120d29"
       }
     },
     "p1-031/options/2/0": {
@@ -17045,20 +17041,20 @@
     },
     "p1-042/options/1/0": {
       "key": "p1-042/options/1/0",
-      "src": "./audio/generated/ja/jf_alpha/431f0ba55ef194e66ece2180ff188328.m4a",
-      "sha256": "a2ae5c3b1fd70dd6a633c1a4d9f96b6953a3d0a15d2a73c347b6ac69dc29857d",
+      "src": "./audio/generated/ja/jf_alpha/1770689b4c54bb8b9c7e35785dae9ae8.m4a",
+      "sha256": "7306d3c85b7ee33562dcf6e63d904247b8bf51935b77e9ba0acc31bcd38ccbf2",
       "voiceId": "jf_alpha",
-      "fingerprint": "8a814430d4f07b9034d6eecc17d5db27af3afe396d666f2d482f9f68b65de01f",
+      "fingerprint": "caff80850b83bdf1a0d90e6221ebd47ee2ab3f6091e9a7e9661aace8208f3da0",
       "expected": "コーンが入れ子に重ねられています。",
       "spoken": "コーンが入れ子に重ねられています。",
-      "recognized": "幸運が入れ子に重ねられています",
+      "recognized": "コーンが入れ子に重ねられています",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.12,
-          "text": "幸運が入れ子に重ねられています",
-          "avgLogprob": -0.14415448705355327,
-          "noSpeechProb": 4.992152524696536e-12
+          "end": 2.18,
+          "text": "コーンが入れ子に重ねられています",
+          "avgLogprob": -0.12476030985514323,
+          "noSpeechProb": 4.160208635917151e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -17079,30 +17075,24 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.1875,
-      "phonemeErrorRate": 0.0333,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "コ ー ン",
-          "recognized": "幸 運"
-        }
-      ],
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "コーンが入れ子に重ねられています。",
-        "recognized": "幸運が入れ子に重ねられています",
+        "recognized": "コーンが入れ子に重ねられています",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-normalized-japanese-text"
         ],
         "normalizedExpected": "コオンガイレコニカサネラレテイマス",
-        "normalizedRecognized": "コオウンガイレコニカサネラレテイマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "コオンガイレコニカサネラレテイマス",
+        "proofExpected": "written:コーンが入れ子に重ねられています",
+        "proofRecognized": "written:コーンが入れ子に重ねられています",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -17111,8 +17101,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "2f0910af1137b5a92ea5036ed5d797005e9b070d66a8523494759af64667bcf1"
         },
         "readingTrace": {
@@ -17174,9 +17165,9 @@
           ],
           "recognized": [
             {
-              "surface": "幸運",
-              "reading": "コーウン",
-              "normalized": "コオウン",
+              "surface": "コーン",
+              "reading": "コーン",
+              "normalized": "コオン",
               "method": "unidic-pron"
             },
             {
@@ -17229,25 +17220,25 @@
             }
           ]
         },
-        "audioSha256": "a2ae5c3b1fd70dd6a633c1a4d9f96b6953a3d0a15d2a73c347b6ac69dc29857d"
+        "audioSha256": "7306d3c85b7ee33562dcf6e63d904247b8bf51935b77e9ba0acc31bcd38ccbf2"
       }
     },
     "p1-043/options/0/0": {
       "key": "p1-043/options/0/0",
-      "src": "./audio/generated/ja/jf_alpha/8e29884aaa2bfe5d67bf30c7b20947d2.m4a",
-      "sha256": "00dc201c1d819f045cda83dc69d2a1a8533250dfa0c2836d84e3136cc3001036",
+      "src": "./audio/generated/ja/jf_alpha/fe1b5fb7a253916dc3ddc6dfb6b58992.m4a",
+      "sha256": "1b6529a77024685bd2ebe3809ed53750cb18cedfbcda3d37de54cf1f6b42e9ee",
       "voiceId": "jf_alpha",
-      "fingerprint": "6307178c83bd9b6c8491a1fd3b9117c313443511f3d8c064d6b708263ac476c5",
+      "fingerprint": "4af4e6c94c0352d92f62c435809ecf2fa635ac45a8ccbc8f413a58dd5909616e",
       "expected": "鍵が錠に差し込まれたままになっています。",
       "spoken": "鍵が錠に差し込まれたままになっています。",
-      "recognized": "鍵が上に差し込まれたままになっています。",
+      "recognized": "鍵が錠に差し込まれたままになっています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.6,
-          "text": "鍵が上に差し込まれたままになっています。",
-          "avgLogprob": -0.11585886366665363,
-          "noSpeechProb": 4.465127486502629e-12
+          "end": 2.7,
+          "text": "鍵が錠に差し込まれたままになっています。",
+          "avgLogprob": -0.12266594739187331,
+          "noSpeechProb": 4.677759048166141e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -17268,30 +17259,24 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.0526,
-      "phonemeErrorRate": 0.075,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "錠",
-          "recognized": "上"
-        }
-      ],
+      "errorRate": 0.0,
+      "phonemeErrorRate": 0.0,
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "鍵が錠に差し込まれたままになっています。",
-        "recognized": "鍵が上に差し込まれたままになっています。",
+        "recognized": "鍵が錠に差し込まれたままになっています。",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-normalized-japanese-text"
         ],
         "normalizedExpected": "カギガジョオニサシコマレタママニナッテイマス",
-        "normalizedRecognized": "カギガウエニサシコマレタママニナッテイマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedRecognized": "カギガジョオニサシコマレタママニナッテイマス",
+        "proofExpected": "written:鍵が錠に差し込まれたままになっています",
+        "proofRecognized": "written:鍵が錠に差し込まれたままになっています",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -17300,8 +17285,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "e1b6b565e9838d2fa01b66afec7fd160d97558100f374ca731ee8f797d5f06a7"
         },
         "readingTrace": {
@@ -17399,9 +17385,9 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "上",
-              "reading": "ウエ",
-              "normalized": "ウエ",
+              "surface": "錠",
+              "reading": "ジョー",
+              "normalized": "ジョオ",
               "method": "unidic-pron"
             },
             {
@@ -17466,7 +17452,7 @@
             }
           ]
         },
-        "audioSha256": "00dc201c1d819f045cda83dc69d2a1a8533250dfa0c2836d84e3136cc3001036"
+        "audioSha256": "1b6529a77024685bd2ebe3809ed53750cb18cedfbcda3d37de54cf1f6b42e9ee"
       }
     },
     "p1-052/options/0/0": {
@@ -18286,8 +18272,8 @@
   },
   "generation": {
     "individual": {
-      "model": "whisper-large-v3-turbo",
-      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
       "device": "cpu",
       "computeType": "int8",
       "packages": {

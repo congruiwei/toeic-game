@@ -41,7 +41,7 @@ async function fixture(t){
  const base=await fs.mkdtemp('/private/tmp/toeic-archive-test-'),f={base,repo:path.join(base,'repo'),work:path.join(base,'work')};
  t.after(()=>fs.rm(base,{recursive:true,force:true}));
  await fs.mkdir(path.join(f.repo,'scripts'),{recursive:true});
- for(const name of ['archive-bank-audio-history.mjs','validate-bank-audio.mjs','generate-bank-audio.py','generate-audition.py','audio-evidence.py'])await fs.copyFile(path.join(ROOT,'scripts',name),path.join(f.repo,'scripts',name));
+ for(const name of ['archive-bank-audio-history.mjs','validate-bank-audio.mjs','audio-context-proof.mjs','audio-lexical-proof.mjs','audio-cross-model-proof.mjs','audio-lexical-rules.json','generate-bank-audio.py','generate-audition.py','audio-evidence.py','audio-voice-override.py','audio-voice-override.mjs'])await fs.copyFile(path.join(ROOT,'scripts',name),path.join(f.repo,'scripts',name));
  await fs.cp(path.join(ROOT,'js'),path.join(f.repo,'js'),{recursive:true});
  for(const bank of ['part1','part2','listening','vocab','reading','grammar','methods']){await write(path.join(f.repo,'data',bank+'.json'),[]);await write(path.join(f.repo,'data/i18n/ja',bank+'.json'),{version:1,entries:{}});}
  await write(path.join(f.repo,'data/i18n/ja/terms.json'),{version:1,entries:{}});
@@ -223,4 +223,31 @@ test('a twice-corrected three-version chain survives real archive and public-clo
  await write(path.join(publicClone,'data/audio/retries.json'),damaged);
  const rejected=run(f,['scripts/validate-bank-audio.mjs'],{cwd:publicClone});assert.notEqual(rejected.status,0);
  assert.match(JSON.parse(rejected.stdout).errors.join('\n'),/Invalid archived retry ASR evidence/);
+});
+
+test('system fallback archives both actual repair versions, preserves its decision, and validates without external history',syncRequired,async t=>{
+ const f=await fixture(t),unit={language:'ja',bank:'reading',key:'read-fallback/documents/0/text/0',text:'領収書です。',voiceId:'jf_alpha',required:true};
+ const token='ja:reading:'+unit.key;
+ async function jaMedia(tag){const c=await media(f,tag,{...unit,spoken:unit.text,asrStatus:'review'}),src='./audio/generated/ja/jf_alpha/'+c.sha256.slice(0,32)+'.m4a';await fs.mkdir(path.dirname(path.join(f.repo,src)),{recursive:true});await fs.rename(path.join(f.repo,c.src),path.join(f.repo,src));return {...c,src};}
+ const original=await jaMedia(20),candidate=await jaMedia(21),originalASR={...asr(original),status:'review',recognized:'原版の誤認識'},candidateASR={...asr(candidate),status:'review',recognized:'候補の誤認識'};
+ candidateASR.recognitionGeneration={...candidateASR.recognitionGeneration,model:'whisper-large-v3-turbo',modelSha256:'e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da'};
+ const repair={method:'reviewed-pace-change',original:{clip:original,asr:originalASR},candidate:{clip:candidate,asr:candidateASR},disposition:'system-fallback',complete:true,baseOverride:{},appliedOverride:{speed:.9}};
+ const row={token,baseline:structuredClone(repair.original),comparison:{fixture:'immutable step-one comparison'},repair},quality={version:1,records:{[token]:row}};
+ const fallback={playback:'system',language:'ja',text:unit.text,voiceId:'jf_alpha',reason:'unresolved-after-strong-asr-retry',auditedSha256:candidate.sha256};
+ f.source.units=[unit];await write(path.join(f.repo,'data/audio/source.json'),f.source);await write(path.join(f.repo,'data/i18n/ja/reading.json'),{entries:{[unit.key]:unit.text}});
+ await write(path.join(f.repo,'data/audio/quality-review.json'),quality);await write(path.join(f.repo,'data/audio/ja/reading.json'),{version:1,bank:'reading',language:'ja',clips:{},fallbacks:{[unit.key]:fallback}});
+ await write(path.join(f.repo,'data/audio/audit/ja/reading.json'),{records:{[unit.key]:candidateASR}});
+ await write(path.join(f.repo,'data/audio/retries.json'),{version:1,records:{[token]:{token,complete:true,selectedSha256:candidate.sha256,synthesisAttemptCount:2,asrAttemptCount:2,initial:repair.original,retry:repair.candidate}}});sync(f);
+ const manifest=await json(path.join(f.repo,'data/audio/manifest.json'));assert.equal(manifest.requiredComplete,false);assert.equal(manifest.requiredAuditComplete,false);assert.equal(manifest.requiredPlaybackComplete,true);assert.equal(manifest.recordedAuditComplete,true);
+ // Invalid fallback proof must fail before archive/sync mutates even a metadata file.
+ const broken=structuredClone(quality);broken.records[token].repair.candidate.asr.recognitionGeneration.modelSha256='f'.repeat(64);await write(path.join(f.repo,'data/audio/quality-review.json'),broken);
+ const before=await snapshot(f.base),rejected=run(f,['scripts/archive-bank-audio-history.mjs','--apply']);assert.notEqual(rejected.status,0);assert.match(rejected.stderr,/Pre-cleanup coverage\/fallback evidence/);assert.deepEqual(await snapshot(f.base),before);
+ await write(path.join(f.repo,'data/audio/quality-review.json'),quality);
+ succeeded(run(f,['scripts/archive-bank-audio-history.mjs','--apply']));
+ const saved=await json(path.join(f.repo,'data/audio/quality-review.json')),savedRow=saved.records[token];
+ assert.deepEqual(savedRow.baseline,row.baseline);assert.deepEqual(savedRow.comparison,row.comparison);assert.equal(savedRow.repair.disposition,'system-fallback');
+ for(const name of ['original','candidate']){const v=savedRow.repair[name];assert.deepEqual(v.clip,repair[name].clip);assert.deepEqual(v.asr,repair[name].asr);assert.deepEqual(v.archive,{published:false,sha256:v.clip.sha256,bytes:v.clip.bytes,copyVerified:true});assert.equal(hash(await fs.readFile(path.join(f.work,'tmp/audio-history',v.clip.sha256+'.m4a'))),v.clip.sha256);await assert.rejects(fs.access(path.join(f.repo,v.clip.src)),{code:'ENOENT'});}
+ const pack=await json(path.join(f.repo,'data/audio/ja/reading.json'));assert.deepEqual(pack.fallbacks[unit.key],fallback);assert.deepEqual(pack.clips,{});
+ const publicClone=path.join(f.base,'public-clone');await fs.cp(f.repo,publicClone,{recursive:true});await fs.rm(f.work,{recursive:true,force:true});
+ const validation=run(f,['scripts/validate-bank-audio.mjs'],{cwd:publicClone});succeeded(validation);const report=JSON.parse(validation.stdout);assert.equal(report.generated,0);assert.equal(report.audited,0);assert.equal(report.systemFallbackCount,1);assert.equal(report.requiredFallbackCount,1);assert.equal(report.unresolved,0);assert.deepEqual(report.orphanFiles,[]);
 });

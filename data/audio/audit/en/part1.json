@@ -620,20 +620,20 @@
     },
     "p1-004/options/1/0": {
       "key": "p1-004/options/1/0",
-      "src": "./audio/generated/en/af_heart/1737a4748934840270f9ce8230de0f2a.m4a",
-      "sha256": "be650c54195b6fc5d83c143647c6e4f2e5b4a687f665b57f63a4f176ce28b279",
+      "src": "./audio/generated/en/af_heart/ff1012a5f6308df32c565910c82fd531.m4a",
+      "sha256": "6b5e40a637d05a559b430887f56fd31100620f87d6dbe1242165f2ce578c90cc",
       "voiceId": "af_heart",
-      "fingerprint": "b469806747efdc4976b25119d3b086c4dde3fe991be82ad5a27e64d1e1df3f69",
+      "fingerprint": "24e594002163e84ee4764f679ea1f2bc9eeeb89126b3d1316a09b84692bdb39c",
       "expected": "Water is flowing from a can toward a plant.",
       "spoken": "Water is flowing from a can toward a plant.",
-      "recognized": "Water is flowing from a contorta plant.",
+      "recognized": "Water is flowing from a can toward a plant.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.06,
-          "text": " Water is flowing from a contorta plant.",
-          "avgLogprob": -0.2194163016974926,
-          "noSpeechProb": 1.4416514856896434e-12
+          "end": 2.34,
+          "text": " Water is flowing from a can toward a plant.",
+          "avgLogprob": -0.14087544954740083,
+          "noSpeechProb": 1.760911728931891e-11
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -654,25 +654,19 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 0.3333,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "can toward a",
-          "recognized": "contorta"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Water is flowing from a can toward a plant.",
-        "recognized": "Water is flowing from a contorta plant.",
+        "recognized": "Water is flowing from a can toward a plant.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "water",
@@ -691,11 +685,13 @@
           "flowing",
           "from",
           "a",
-          "contorta",
+          "can",
+          "toward",
+          "a",
           "plant"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:water | t:is | t:flowing | t:from | t:a | t:can | t:toward | t:a | t:plant",
+        "proofRecognized": "t:water | t:is | t:flowing | t:from | t:a | t:can | t:toward | t:a | t:plant",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -703,12 +699,13 @@
           "unidic": "1.1.0",
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
-          "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
           "sourceTextSha256": "98a051b2d75b691c831f57710223f6e458edbc3bff5f1189e1b9cf912c33ce4e"
         },
-        "audioSha256": "be650c54195b6fc5d83c143647c6e4f2e5b4a687f665b57f63a4f176ce28b279"
+        "audioSha256": "6b5e40a637d05a559b430887f56fd31100620f87d6dbe1242165f2ce578c90cc"
       }
     },
     "p1-004/options/2/0": {
@@ -14316,8 +14313,8 @@
   },
   "generation": {
     "individual": {
-      "model": "whisper-large-v3-turbo",
-      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
       "device": "cpu",
       "computeType": "int8",
       "packages": {

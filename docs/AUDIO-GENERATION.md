@@ -256,11 +256,67 @@ node scripts/validate-bank-audio.mjs --strict-quality
 
 仍需人工试听的是上述转写差异及单独记录的重音/合法异读问题。可选来源未预生成时透明使用设备语音后备，不宣称全部 24,543 个来源键都有文件。后续修改题库后应重新生成来源清单、同步音频包，再执行归档预览、归档和两种校验；发布总量以最后一次同步后的现行包计算。
 
+## 强识别后的修复工具
+
+这一节描述追加质量工作的执行契约，具体交付结果见 [AUDIO-QUALITY-REVIEW.md](AUDIO-QUALITY-REVIEW.md) 和当前 `quality-review.json`。前面的初轮统计保留为历史快照，不能与追加修复后的现行媒体总量混用。
+
+`scripts/contextual-audio-probe.py` 只用于英文孤立词头、Part 2 首词选项和选项字母。它把当前交付 M4A 解码为 16kHz float32 PCM，原样放到固定无目标载句 `The word is` 和 200ms 数字零静音之后；不会重新合成目标词，也不向识别器提供目标提示。原始片段、载句、拼接波形和目标区间均有 SHA，真实 strong individual beam size 5 转写及词时间戳保留在 `quality-review.json` 的 `contextProbes`。
+
+第二版时间门允许尾词的时间戳从已知零静音区开始，但不能进入载句 PCM，且必须重叠原目标 PCM 的有效声段；原目标前导静音不能冒充目标发音。有效声段以 10ms 窗、RMS 至少 0.001 复算。版本号进入 proof ID，旧版判定和原始识别均不覆盖；使用 `--finish-only` 重评现成真实缓存不计为新的模型识别。只有完整证明门通过才另标 `accepted`，原 individual 转写仍完整保留为 `review`，不能把补充语境证据写成原孤立音频已被独立识别匹配。Python 生成/审计与 Node 发布校验都核对该门；伪造 accepted、错误媒体 SHA、缺失 proof 或未知 acceptance method 均不能放行。
+
+`scripts/build-audio-repair-plan.py` 从已经完成强识别的当前 review 创建仓库外计划，不修改题库。每项绑定原文、来源 SHA、旧音频与音素 SHA、具体朗读改动及理由。英文默认保持已核音素和原声音，以 0.88 合成速度重录；少数已审清晰度变体逐项列出。对没有显式音素覆盖、没有句末标点的孤立词，计划可仅给原音素追加句点，使收束韵律明确，不添加发音词。日语默认速度 0.94，专名与专业词读法仅使用 `japanese_repair_readings.py` 的明确表；已有人工复核的显式音素不会被文字规范化覆盖。
+
+```sh
+"$TOEIC_TTS_DIR/venv/bin/python" scripts/build-audio-repair-plan.py --language en --output "$TOEIC_TTS_DIR/tmp/en-repair-plan.json"
+"$TOEIC_TTS_DIR/venv/bin/python" scripts/repair-strong-bank-audio.py --plan "$TOEIC_TTS_DIR/tmp/en-repair-plan.json"  # 预览
+"$TOEIC_TTS_DIR/venv/bin/python" scripts/repair-strong-bank-audio.py --plan "$TOEIC_TTS_DIR/tmp/en-repair-plan.json" --threads 4 --apply
+```
+
+将 `en` 换为 `ja` 可制作日语计划。实际作者必须串行运行，禁止与语境探针或其他生成/审计作者重叠。修复工具先保存原版完整 strong ASR，再修改朗读覆盖，实际生成不同 SHA 的候选音频，并按计划选定的固定强识别模型（默认 `large-v3-turbo`）、CPU int8、individual beam size 5、无提示词重新识别。每个候选的来源、声音、朗读输入、音素和合成指纹都重新核对。中断后用同一计划恢复；`--finish-only` 只允许已有真实候选证据收尾，不能用它跳过合成或识别。完整旧 retry 保存到 `archivedCases`，新记录用 `predecessor` 连接实际版本，不覆盖早期纠音与减速证据。
+
+英文需要追加一轮经过审核的具体变体时，计划必须增加绑定上轮完整 repair 的 `previousRepairSha256`，并显式使用 `--next-round`。上轮必须已完成、仍为 review，且当前音频、真实 ASR、朗读覆盖及 retry 镜像与其最终候选一致。完整旧 repair 保存在 `priorRepairs`，新 repair 的 `previousRepair` 指向其索引和 SHA；恢复时同样核查该链，不允许用新计划覆盖未完成的旧计划。`counts.attempted` 统计不同来源键，`repairRounds` 统计这些键完成过的轮次，两者都不等于去重后的实际模型调用数。
+
+若候选已被真实识别，却未满足计划中的精确音素输入，先保存其 `priorCandidates`，随后重建目标输入；最终 retry 的 `priorRetries` 保留该中间版及实际转写。选项字母的默认音素不能覆盖显式修复输入，重用/同步也必须核对显式音素 SHA。修复作者在取锁后逐一复核预检时的质量账本、覆盖、音频包、审计包和索引字节，若其他作者在取锁前发布了新证据则拒绝写入，要求重新预检。
+
+独立英文单词头可在明确的追加计划中换用另外一个已选美式声音，范围只限 `en/vocab/*/meaning` 的单个单词，不能用于词组、例句、对话、首词选项或字母标签。来源清单的默认 `voiceId` 不变；新录音的 `voiceId` 如实记录实际音色，`sourceVoiceId` 保留原指派，`voiceOverrideInput` 保存参与输入指纹的完整合成配方。只有 Heart、Puck、Bella 三种已选音色和明确的原音素可用；实际声音、配方 SHA、已核音素、来源、当前覆盖及多轮真实 ASR 由 Python 与 Node 两端核对。旧 full-model proof 留在其原媒体 SHA 下，不冒充新录音的证明。
+
+此批新换声音频直接使用 `--asr-model whisper-large-v3`，计划须同时指定 `asrModel`；模型名与 SHA 必须匹配允许的固定版本，不允许恢复时悄悄改模型。`recognitionModels` 列出实际候选所用模型，原 Turbo 识别仍留在旧版本。换声后的独立单词比较明确禁用冠词删除，额外的 `a/an/the` 不能据此通过；原句子的既有比较口径保持不变。若仍需下一音色，使用新的 `--next-round` 计划，只重试尚未通过的词，并保留此前各声音的媒体、输入和真实转写。
+
+日语候选仍为 review 时，从录音 `clips` 移除并写入显式 `fallbacks`，同时保留原版与候选的实际强识别证据。后备条目没有媒体路径，标明 `playback: system`、原日文、未解决原因和最后审计 SHA；设备日语声音没有在本机自动验收，不能计为 Kokoro matched。索引的 `requiredPlaybackComplete` 可包含有完整证据的系统后备，而 `requiredComplete`、`requiredAudited` 仍只统计录音；`recordedAuditComplete` 只表明现行录音证据齐全。严格质量检查约束发布录音的 review，系统后备数量与 `systemVoiceAudited: false` 必须另行报告。
+
+全部作者退出后再做归档。新旧修复媒体、语境判定和 fallback 证据不得在生成过程中清除；归档先验证复制到仓库外的 SHA，再删除不再发布的媒体。最终重新运行默认和严格校验，使用同一停止后的快照统计当前唯一文件、录音 review、context accepted 和系统后备，不把这些类别合并成“全部语音质量通过”。
+
+## 追加质量修复后的现行快照
+
+2026-11-19 完成最后一轮真实重录、强识别、有限证明发布和归档；以下数值取自作者全部退出后的同一快照。原学习文本、题目 ID 和来源指纹不变。
+
+| 指标 | 现行值 |
+| --- | ---: |
+| 必需来源键 | 13,917 |
+| 必需预录音频键及当前实际 ASR | 13,125 / 13,125 |
+| 显式日语设备语音后备 | 792 |
+| 发布录音来源键（含已匹配可选项） | 13,159 |
+| 当前唯一 M4A | 12,793 |
+| 当前唯一媒体总时长 | 38,962.255 秒（约 10.82 小时） |
+| 当前唯一媒体容量 | 257,929,434 字节 |
+| 英语录音仍为 review | 50（含 11 个字母或代码条目） |
+| 日语发布录音仍为 review | 0；未解决的 792 项已显式改为系统后备 |
+| 补充证明 accepted | 4 个原样 PCM 语境、13 个有限词典等价、11 个同媒体完整模型复核 |
+| 已确认输入修正未交付 / 孤立媒体 / 多余元数据 | 0 / 0 / 0 |
+
+默认覆盖及真实证据校验通过；严格质量校验仍有 50 个 `review`，全部保留在当前 [validation.json](../data/audio/validation.json)。系统后备不计为本地录音识别通过，也不声称设备声音已被自动验收。剩余英语分布：Part 2 为 2、Part 3/4 为 16、单词与例句 19、阅读 8、语法 1、选项字母包 4；其中 11 个字母/代码包含题目选项里的单字母及 `A8`。
+
+独立词头换声共实际尝试两批：21 个来源键对应 20 个新媒体识别，新增 11 个匹配；仅对仍未通过的 10 个词再试第三种已选声音，实际识别 10 个媒体，新增 2 个匹配。原来已通过的词不重复换声。两批均保持已核音素，以完整 `large-v3` 单文件 beam size 5 识别；没有目标提示词，也未放宽独立词的冠词比较。
+
+最后 8 条重点过去式句和 1 条姓名句采用同声自然 0.92 速度，完整保留词尾辅音、正常词边界及标点，不插入词组内逗号停顿或额外音节。9 个新媒体均实际识别，前后转写逐字相同，继续保留其真实差异；这不能据此断言录音漏读了输入中已有的 `/d/`。姓名句随后仅按既有严格词典证明规则单独处理同音拼写，原识别文本及前后媒体仍保留。所有未解决项继续提供复听，不将文字或音素核对称为人耳验收。
+
+本阶段实际新增归档 1,873 个不再发布的媒体，均先复制并校验 SHA 后移除；累计外部历史为 4,873 个唯一媒体、115,923,181 字节和 8 份历史元数据。公开重试、修复和补充证明保留完整版本与指纹，公开校验无需访问外部历史目录。详尽阶段结果与比较口径见 [AUDIO-QUALITY-REVIEW.md](AUDIO-QUALITY-REVIEW.md)。
+
 ## 原作者资料
 
 - [Kokoro 模型与许可](https://huggingface.co/hexgrad/Kokoro-82M)，[官方声音列表](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md)。
 - [kokoro-onnx 作者的 CPU 封装](https://github.com/thewh1teagle/kokoro-onnx)，使用其 v1.0 ONNX 与声音包。
 - [faster-whisper 作者安装、CPU int8 和转写说明](https://github.com/SYSTRAN/faster-whisper)。
-- [OpenAI Whisper 原模型与许可](https://github.com/openai/whisper)，本机识别模型为 faster-whisper 作者维护的 [Whisper small 转换版](https://huggingface.co/Systran/faster-whisper-small)。
+- [OpenAI Whisper 原模型与许可](https://github.com/openai/whisper)，初轮采用 faster-whisper 作者维护的 [Whisper small 转换版](https://huggingface.co/Systran/faster-whisper-small)，后续强识别按质量报告记录固定模型及 SHA；完整模型来源为 [官方 large-v3 转换版](https://huggingface.co/Systran/faster-whisper-large-v3)。
 
 工具与模型各自的许可按原作者资料保留；本仓库发布学习文本的合成音频，不提交模型或依赖代码。

@@ -1,0 +1,3942 @@
+{
+  "fixture": true,
+  "records": [
+    {
+      "ruleId": "insures-ensures-in",
+      "unit": {
+        "language": "en",
+        "bank": "part2",
+        "key": "p2-045/options/0/0",
+        "text": "I'd go with whichever one insures fragile items.",
+        "voiceId": "af_heart",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_heart",
+        "required": true,
+        "text": "I'd go with whichever one insures fragile items.",
+        "spoken": "I'd go with whichever one insures fragile items.",
+        "phonemeSha256": "7f7dc0d370b6488a640603c460b74a74cf69a1b7c4cd1f6b83556bdbba1b373e",
+        "inputSha256": "31a4a38e2326118df452cc64a52e6cd33844b9d45438987e89e626c37fe62b50",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "p2-045/options/0/0",
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_heart",
+        "expected": "I'd go with whichever one insures fragile items.",
+        "spoken": "I'd go with whichever one insures fragile items.",
+        "recognized": "I'd go with whichever one ensures fragile items.",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "I'd go with whichever one ensures fragile items.",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "I'd go with whichever one insures fragile items.",
+          "recognized": "I'd go with whichever one ensures fragile items.",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "67a5e9c44fc0af83c0e9fca27efd3ea85c95a1f547628c48168f1a292f088aba",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "7de7d3e3d6e651155a20360d494bba1b8f90ffc2bde3b672f4c18ea8497f71bb",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:part2:p2-045/options/0/0",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "I'd go with whichever one insures fragile items.",
+              "spoken": "I'd go with whichever one insures fragile items.",
+              "phonemeSha256": "7f7dc0d370b6488a640603c460b74a74cf69a1b7c4cd1f6b83556bdbba1b373e",
+              "inputSha256": "31a4a38e2326118df452cc64a52e6cd33844b9d45438987e89e626c37fe62b50",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "I'd go with whichever one insures fragile items.",
+              "spoken": "I'd go with whichever one insures fragile items.",
+              "phonemeSha256": "7f7dc0d370b6488a640603c460b74a74cf69a1b7c4cd1f6b83556bdbba1b373e",
+              "inputSha256": "31a4a38e2326118df452cc64a52e6cd33844b9d45438987e89e626c37fe62b50",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "p2-045/options/0/0",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "I'd go with whichever one insures fragile items.",
+              "spoken": "I'd go with whichever one insures fragile items.",
+              "recognized": "I'd go with whichever one ensures fragile items.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "I'd go with whichever one ensures fragile items.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "I'd go with whichever one insures fragile items.",
+                "recognized": "I'd go with whichever one ensures fragile items.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "67a5e9c44fc0af83c0e9fca27efd3ea85c95a1f547628c48168f1a292f088aba",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "I'd go with whichever one insures fragile items.",
+            "phonemes": "ˌId ɡˌO wɪð wˌɪʧˈɛvəɹ wˈʌn ɪnʃˈʊɹz fɹˈæʤəl ˈITəmz.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "7de7d3e3d6e651155a20360d494bba1b8f90ffc2bde3b672f4c18ea8497f71bb",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:part2:p2-045/options/0/0",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "I'd go with whichever one insures fragile items.",
+              "spoken": "I'd go with whichever one insures fragile items.",
+              "language": "en",
+              "voiceId": "af_heart",
+              "inputSha256": "31a4a38e2326118df452cc64a52e6cd33844b9d45438987e89e626c37fe62b50",
+              "phonemeSha256": "7f7dc0d370b6488a640603c460b74a74cf69a1b7c4cd1f6b83556bdbba1b373e",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "p2-045/options/0/0",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "I'd go with whichever one insures fragile items.",
+              "spoken": "I'd go with whichever one insures fragile items.",
+              "recognized": "I'd go with whichever one ensures fragile items.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "I'd go with whichever one ensures fragile items.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "I'd go with whichever one insures fragile items.",
+                "recognized": "I'd go with whichever one ensures fragile items.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "67a5e9c44fc0af83c0e9fca27efd3ea85c95a1f547628c48168f1a292f088aba",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "insures-ensures-in",
+              "sourceWord": "insures",
+              "recognizedWord": "ensures",
+              "phoneToken": "ɪnʃˈʊɹz",
+              "category": "selected-pronunciation-homophone",
+              "sources": [
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/insure",
+                  "supports": "US /ɪnˈʃʊr/"
+                },
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/ensure",
+                  "supports": "US /ɪnˈʃʊr/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:part2:p2-045/options/0/0"
+                  ],
+                  "sourceText": "I'd go with whichever one insures fragile items.",
+                  "spoken": "I'd go with whichever one insures fragile items.",
+                  "voiceId": "af_heart",
+                  "phonemes": "ˌId ɡˌO wɪð wˌɪʧˈɛvəɹ wˈʌn ɪnʃˈʊɹz fɹˈæʤəl ˈITəmz.",
+                  "phonemeSha256": "7f7dc0d370b6488a640603c460b74a74cf69a1b7c4cd1f6b83556bdbba1b373e"
+                }
+              ]
+            },
+            "ruleSha256": "f40cc55affb7403b9ca9d98a9185e03489957e57e213779005a19457a424e7d1",
+            "input": {
+              "phonemes": "ˌId ɡˌO wɪð wˌɪʧˈɛvəɹ wˈʌn ɪnʃˈʊɹz fɹˈæʤəl ˈITəmz.",
+              "phonemeSha256": "7f7dc0d370b6488a640603c460b74a74cf69a1b7c4cd1f6b83556bdbba1b373e",
+              "spoken": "I'd go with whichever one insures fragile items.",
+              "voiceId": "af_heart",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "i'd",
+                "go",
+                "with",
+                "whichever",
+                "one",
+                "insures",
+                "fragile",
+                "items"
+              ],
+              "recognizedTokens": [
+                "i'd",
+                "go",
+                "with",
+                "whichever",
+                "one",
+                "ensures",
+                "fragile",
+                "items"
+              ],
+              "differenceIndex": 5,
+              "sourceWord": "insures",
+              "recognizedWord": "ensures",
+              "phoneToken": "ɪnʃˈʊɹz"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "tare-tear-ehr",
+      "unit": {
+        "language": "en",
+        "bank": "listening",
+        "key": "p3-g47-d/text/0",
+        "text": "We should measure the full tare before comparing net weights.",
+        "voiceId": "af_bella",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_bella",
+        "required": true,
+        "text": "We should measure the full tare before comparing net weights.",
+        "spoken": "We should measure the full tare before comparing net weights.",
+        "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+        "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "p3-g47-d/text/0",
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_bella",
+        "expected": "We should measure the full tare before comparing net weights.",
+        "spoken": "We should measure the full tare before comparing net weights.",
+        "recognized": "We should measure the full tear before comparing net weights.",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "We should measure the full tear before comparing net weights.",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "We should measure the full tare before comparing net weights.",
+          "recognized": "We should measure the full tear before comparing net weights.",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "3b0c9c1d35a67d6f81ec3c81e5690d5293386f136b3345578c6acf61ccd0be9b",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:listening:p3-g47-d/text/0",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "p3-g47-d/text/0",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "recognized": "We should measure the full tear before comparing net weights.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "We should measure the full tear before comparing net weights.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "We should measure the full tare before comparing net weights.",
+                "recognized": "We should measure the full tear before comparing net weights.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "We should measure the full tare before comparing net weights.",
+            "phonemes": "wˌi ʃˌʊd mˈɛʒəɹ ðə fˈʊl tˈɛɹ bəfˈɔɹ kəmpˈɛɹɪŋ nˈɛt wˈAts.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "3b0c9c1d35a67d6f81ec3c81e5690d5293386f136b3345578c6acf61ccd0be9b",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:listening:p3-g47-d/text/0",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "language": "en",
+              "voiceId": "af_bella",
+              "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "p3-g47-d/text/0",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "recognized": "We should measure the full tear before comparing net weights.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "We should measure the full tear before comparing net weights.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "We should measure the full tare before comparing net weights.",
+                "recognized": "We should measure the full tear before comparing net weights.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "tare-tear-ehr",
+              "sourceWord": "tare",
+              "recognizedWord": "tear",
+              "phoneToken": "tˈɛɹ",
+              "category": "selected-pronunciation-homophone",
+              "sources": [
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/tare",
+                  "supports": "US /ter/"
+                },
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/tear",
+                  "supports": "tear (HOLE/PULL APART) US /ter/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:listening:p3-g47-d/text/0",
+                    "en:listening:p3-g47/turns/4/0"
+                  ],
+                  "sourceText": "We should measure the full tare before comparing net weights.",
+                  "spoken": "We should measure the full tare before comparing net weights.",
+                  "voiceId": "af_bella",
+                  "phonemes": "wˌi ʃˌʊd mˈɛʒəɹ ðə fˈʊl tˈɛɹ bəfˈɔɹ kəmpˈɛɹɪŋ nˈɛt wˈAts.",
+                  "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729"
+                }
+              ]
+            },
+            "ruleSha256": "4e0dbcb2049479d07c541919e3d4828b2f7a99527c6c9384c1d8bf978c190777",
+            "input": {
+              "phonemes": "wˌi ʃˌʊd mˈɛʒəɹ ðə fˈʊl tˈɛɹ bəfˈɔɹ kəmpˈɛɹɪŋ nˈɛt wˈAts.",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "voiceId": "af_bella",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "we",
+                "should",
+                "measure",
+                "the",
+                "full",
+                "tare",
+                "before",
+                "comparing",
+                "net",
+                "weights"
+              ],
+              "recognizedTokens": [
+                "we",
+                "should",
+                "measure",
+                "the",
+                "full",
+                "tear",
+                "before",
+                "comparing",
+                "net",
+                "weights"
+              ],
+              "differenceIndex": 5,
+              "sourceWord": "tare",
+              "recognizedWord": "tear",
+              "phoneToken": "tˈɛɹ"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "tare-tear-ehr",
+      "unit": {
+        "language": "en",
+        "bank": "listening",
+        "key": "p3-g47/turns/4/0",
+        "text": "We should measure the full tare before comparing net weights.",
+        "voiceId": "af_bella",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_bella",
+        "required": true,
+        "text": "We should measure the full tare before comparing net weights.",
+        "spoken": "We should measure the full tare before comparing net weights.",
+        "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+        "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "p3-g47/turns/4/0",
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_bella",
+        "expected": "We should measure the full tare before comparing net weights.",
+        "spoken": "We should measure the full tare before comparing net weights.",
+        "recognized": "We should measure the full tear before comparing net weights.",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "We should measure the full tear before comparing net weights.",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "We should measure the full tare before comparing net weights.",
+          "recognized": "We should measure the full tear before comparing net weights.",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "37b3bc9a85027de7f46b1bec26c9fcd601f56e83e562d1437624894ea44b94b1",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:listening:p3-g47/turns/4/0",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "p3-g47/turns/4/0",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "recognized": "We should measure the full tear before comparing net weights.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "We should measure the full tear before comparing net weights.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "We should measure the full tare before comparing net weights.",
+                "recognized": "We should measure the full tear before comparing net weights.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "We should measure the full tare before comparing net weights.",
+            "phonemes": "wˌi ʃˌʊd mˈɛʒəɹ ðə fˈʊl tˈɛɹ bəfˈɔɹ kəmpˈɛɹɪŋ nˈɛt wˈAts.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "37b3bc9a85027de7f46b1bec26c9fcd601f56e83e562d1437624894ea44b94b1",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:listening:p3-g47/turns/4/0",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "language": "en",
+              "voiceId": "af_bella",
+              "inputSha256": "e956609058ef9400b507b8658503b5f73d967c7fe30c403c4352ad26e616ca97",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "p3-g47/turns/4/0",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "We should measure the full tare before comparing net weights.",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "recognized": "We should measure the full tear before comparing net weights.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "We should measure the full tear before comparing net weights.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "We should measure the full tare before comparing net weights.",
+                "recognized": "We should measure the full tear before comparing net weights.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "6479bb27d44269bc812456d7d13cbb562426edd31bde84404397e4ff9548dc20",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "tare-tear-ehr",
+              "sourceWord": "tare",
+              "recognizedWord": "tear",
+              "phoneToken": "tˈɛɹ",
+              "category": "selected-pronunciation-homophone",
+              "sources": [
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/tare",
+                  "supports": "US /ter/"
+                },
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/tear",
+                  "supports": "tear (HOLE/PULL APART) US /ter/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:listening:p3-g47-d/text/0",
+                    "en:listening:p3-g47/turns/4/0"
+                  ],
+                  "sourceText": "We should measure the full tare before comparing net weights.",
+                  "spoken": "We should measure the full tare before comparing net weights.",
+                  "voiceId": "af_bella",
+                  "phonemes": "wˌi ʃˌʊd mˈɛʒəɹ ðə fˈʊl tˈɛɹ bəfˈɔɹ kəmpˈɛɹɪŋ nˈɛt wˈAts.",
+                  "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729"
+                }
+              ]
+            },
+            "ruleSha256": "4e0dbcb2049479d07c541919e3d4828b2f7a99527c6c9384c1d8bf978c190777",
+            "input": {
+              "phonemes": "wˌi ʃˌʊd mˈɛʒəɹ ðə fˈʊl tˈɛɹ bəfˈɔɹ kəmpˈɛɹɪŋ nˈɛt wˈAts.",
+              "phonemeSha256": "7caf576aaa42e51e2a74d7550d7aa0693996972e7c18f59e9dd5ff7728b1b729",
+              "spoken": "We should measure the full tare before comparing net weights.",
+              "voiceId": "af_bella",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "we",
+                "should",
+                "measure",
+                "the",
+                "full",
+                "tare",
+                "before",
+                "comparing",
+                "net",
+                "weights"
+              ],
+              "recognizedTokens": [
+                "we",
+                "should",
+                "measure",
+                "the",
+                "full",
+                "tear",
+                "before",
+                "comparing",
+                "net",
+                "weights"
+              ],
+              "differenceIndex": 5,
+              "sourceWord": "tare",
+              "recognizedWord": "tear",
+              "phoneToken": "tˈɛɹ"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "hire-higher-aier",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-hire/meaning",
+        "text": "hire",
+        "voiceId": "af_bella",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_bella",
+        "required": true,
+        "text": "hire",
+        "spoken": "hire",
+        "phonemeSha256": "a0b491ef07b02f67304e0819a8130ea2accee42de65f3e9104143f0973603516",
+        "inputSha256": "b234f5f644d7c7c1d1670534678998aaa205b2c2434b88f6d0a0cdb7eb22593e",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-hire/meaning",
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_bella",
+        "expected": "hire",
+        "spoken": "hire",
+        "recognized": "higher",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "higher",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "hire",
+          "recognized": "higher",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "bf90ace460be66498a913aaca0b7868806603cf0fef114305fcf81396c30b5ba",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "4846edb44b15e3757b93f7da1033a7bdab398239de35d17aca7f6de1594ebf46",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-hire/meaning",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "hire",
+              "spoken": "hire",
+              "phonemeSha256": "a0b491ef07b02f67304e0819a8130ea2accee42de65f3e9104143f0973603516",
+              "inputSha256": "b234f5f644d7c7c1d1670534678998aaa205b2c2434b88f6d0a0cdb7eb22593e",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "hire",
+              "spoken": "hire",
+              "phonemeSha256": "a0b491ef07b02f67304e0819a8130ea2accee42de65f3e9104143f0973603516",
+              "inputSha256": "b234f5f644d7c7c1d1670534678998aaa205b2c2434b88f6d0a0cdb7eb22593e",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-hire/meaning",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "hire",
+              "spoken": "hire",
+              "recognized": "higher",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "higher",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "hire",
+                "recognized": "higher",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "bf90ace460be66498a913aaca0b7868806603cf0fef114305fcf81396c30b5ba",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "hire",
+            "phonemes": "hˈIəɹ.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "4846edb44b15e3757b93f7da1033a7bdab398239de35d17aca7f6de1594ebf46",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-hire/meaning",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "hire",
+              "spoken": "hire",
+              "language": "en",
+              "voiceId": "af_bella",
+              "inputSha256": "b234f5f644d7c7c1d1670534678998aaa205b2c2434b88f6d0a0cdb7eb22593e",
+              "phonemeSha256": "a0b491ef07b02f67304e0819a8130ea2accee42de65f3e9104143f0973603516",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-hire/meaning",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "hire",
+              "spoken": "hire",
+              "recognized": "higher",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "higher",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "hire",
+                "recognized": "higher",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "bf90ace460be66498a913aaca0b7868806603cf0fef114305fcf81396c30b5ba",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "hire-higher-aier",
+              "sourceWord": "hire",
+              "recognizedWord": "higher",
+              "phoneToken": "hˈIəɹ",
+              "category": "selected-pronunciation-homophone",
+              "sources": [
+                {
+                  "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/hire_1",
+                  "supports": "Homophones higher | hire, /ˈhaɪər/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-hire/meaning"
+                  ],
+                  "sourceText": "hire",
+                  "spoken": "hire",
+                  "voiceId": "af_bella",
+                  "phonemes": "hˈIəɹ.",
+                  "phonemeSha256": "a0b491ef07b02f67304e0819a8130ea2accee42de65f3e9104143f0973603516"
+                }
+              ]
+            },
+            "ruleSha256": "5f66020cdb0748b85fd0db310b137f74922932831538146993e1e20c0263d1cc",
+            "input": {
+              "phonemes": "hˈIəɹ.",
+              "phonemeSha256": "a0b491ef07b02f67304e0819a8130ea2accee42de65f3e9104143f0973603516",
+              "spoken": "hire",
+              "voiceId": "af_bella",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "hire"
+              ],
+              "recognizedTokens": [
+                "higher"
+              ],
+              "differenceIndex": 0,
+              "sourceWord": "hire",
+              "recognizedWord": "higher",
+              "phoneToken": "hˈIəɹ"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "route-root-oot",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-distinct/example/0",
+        "text": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+        "voiceId": "am_puck",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "am_puck",
+        "required": true,
+        "text": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+        "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+        "phonemeSha256": "a325fbbf1b5bd48a982eb4eb8b02b6e34882c0dec8d1e09a9fb84c980cb5c903",
+        "inputSha256": "de23366d5e95e7dac1c7cd7a60f598421f2afa146f9e6e64f28ef10ad9eff326",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-distinct/example/0",
+        "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "am_puck",
+        "expected": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+        "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+        "recognized": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+          "recognized": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "7c29d6ca02d26409726a957ec7ad6211b68b3aaea160e83fe5f4f800d3049b95",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "98265678a6fd7398f7f60fa512e77a5754361b6b3bbc5cb7575c242fca278a85",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-distinct/example/0",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "am_puck",
+              "required": true,
+              "text": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "phonemeSha256": "a325fbbf1b5bd48a982eb4eb8b02b6e34882c0dec8d1e09a9fb84c980cb5c903",
+              "inputSha256": "de23366d5e95e7dac1c7cd7a60f598421f2afa146f9e6e64f28ef10ad9eff326",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "am_puck",
+              "required": true,
+              "text": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "phonemeSha256": "a325fbbf1b5bd48a982eb4eb8b02b6e34882c0dec8d1e09a9fb84c980cb5c903",
+              "inputSha256": "de23366d5e95e7dac1c7cd7a60f598421f2afa146f9e6e64f28ef10ad9eff326",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-distinct/example/0",
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "am_puck",
+              "expected": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "recognized": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+                "recognized": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "7c29d6ca02d26409726a957ec7ad6211b68b3aaea160e83fe5f4f800d3049b95",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+            "phonemes": "jˈuz tˈu dəstˈɪŋkt ɹˈut sˈɪmbᵊlz, ɐ stˈɑɹ ænd ɐ skwˈɛɹ, sˌO vˈɪzəTəɹz kæn tˈɛl ðə pˈæðz əpˈɑɹt.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "98265678a6fd7398f7f60fa512e77a5754361b6b3bbc5cb7575c242fca278a85",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-distinct/example/0",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "language": "en",
+              "voiceId": "am_puck",
+              "inputSha256": "de23366d5e95e7dac1c7cd7a60f598421f2afa146f9e6e64f28ef10ad9eff326",
+              "phonemeSha256": "a325fbbf1b5bd48a982eb4eb8b02b6e34882c0dec8d1e09a9fb84c980cb5c903",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-distinct/example/0",
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "am_puck",
+              "expected": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "recognized": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+                "recognized": "Use two distinct root symbols, a star and a square, so visitors can tell the paths apart.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "7c29d6ca02d26409726a957ec7ad6211b68b3aaea160e83fe5f4f800d3049b95",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "route-root-oot",
+              "sourceWord": "route",
+              "recognizedWord": "root",
+              "phoneToken": "ɹˈut",
+              "category": "selected-pronunciation-homophone",
+              "sources": [
+                {
+                  "url": "https://dictionary.cambridge.org/dictionary/english/route",
+                  "supports": "US /ruːt/ and /raʊt/"
+                },
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/root",
+                  "supports": "US /ruːt/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-distinct/example/0"
+                  ],
+                  "sourceText": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+                  "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+                  "voiceId": "am_puck",
+                  "phonemes": "jˈuz tˈu dəstˈɪŋkt ɹˈut sˈɪmbᵊlz, ɐ stˈɑɹ ænd ɐ skwˈɛɹ, sˌO vˈɪzəTəɹz kæn tˈɛl ðə pˈæðz əpˈɑɹt.",
+                  "phonemeSha256": "a325fbbf1b5bd48a982eb4eb8b02b6e34882c0dec8d1e09a9fb84c980cb5c903"
+                },
+                {
+                  "tokens": [
+                    "en:vocab:v-route/meaning"
+                  ],
+                  "sourceText": "route",
+                  "spoken": "route",
+                  "voiceId": "af_bella",
+                  "phonemes": "ɹˈut.",
+                  "phonemeSha256": "4ace3d1804b7ea96b46eff3ffd34eaf90a59450deb2f5151935321f2a57db9ae"
+                }
+              ]
+            },
+            "ruleSha256": "64e193a5b5c422d4bb7f6ced3cbe46369bb15d585b3dd4423ac9a30dfd57be60",
+            "input": {
+              "phonemes": "jˈuz tˈu dəstˈɪŋkt ɹˈut sˈɪmbᵊlz, ɐ stˈɑɹ ænd ɐ skwˈɛɹ, sˌO vˈɪzəTəɹz kæn tˈɛl ðə pˈæðz əpˈɑɹt.",
+              "phonemeSha256": "a325fbbf1b5bd48a982eb4eb8b02b6e34882c0dec8d1e09a9fb84c980cb5c903",
+              "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+              "voiceId": "am_puck",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "use",
+                "two",
+                "distinct",
+                "route",
+                "symbols",
+                "a",
+                "star",
+                "and",
+                "a",
+                "square",
+                "so",
+                "visitors",
+                "can",
+                "tell",
+                "the",
+                "paths",
+                "apart"
+              ],
+              "recognizedTokens": [
+                "use",
+                "two",
+                "distinct",
+                "root",
+                "symbols",
+                "a",
+                "star",
+                "and",
+                "a",
+                "square",
+                "so",
+                "visitors",
+                "can",
+                "tell",
+                "the",
+                "paths",
+                "apart"
+              ],
+              "differenceIndex": 3,
+              "sourceWord": "route",
+              "recognizedWord": "root",
+              "phoneToken": "ɹˈut"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "route-root-oot",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-route/meaning",
+        "text": "route",
+        "voiceId": "af_bella",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_bella",
+        "required": true,
+        "text": "route",
+        "spoken": "route",
+        "phonemeSha256": "4ace3d1804b7ea96b46eff3ffd34eaf90a59450deb2f5151935321f2a57db9ae",
+        "inputSha256": "f147d55225ee62d08ef6e08850583da614bde66e0cf1c9371bd31dd1187391f5",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-route/meaning",
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_bella",
+        "expected": "route",
+        "spoken": "route",
+        "recognized": "root",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "root",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "route",
+          "recognized": "root",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "8a84e406c08ac9594f47222406598f7598e15c55f8044b04813e28c9dee70976",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "3bb3696c473dee8dffbf0ad33194a10a4c486d01a459f7b5114e7a23e6998e5b",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-route/meaning",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "route",
+              "spoken": "route",
+              "phonemeSha256": "4ace3d1804b7ea96b46eff3ffd34eaf90a59450deb2f5151935321f2a57db9ae",
+              "inputSha256": "f147d55225ee62d08ef6e08850583da614bde66e0cf1c9371bd31dd1187391f5",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "route",
+              "spoken": "route",
+              "phonemeSha256": "4ace3d1804b7ea96b46eff3ffd34eaf90a59450deb2f5151935321f2a57db9ae",
+              "inputSha256": "f147d55225ee62d08ef6e08850583da614bde66e0cf1c9371bd31dd1187391f5",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-route/meaning",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "route",
+              "spoken": "route",
+              "recognized": "root",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "root",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "route",
+                "recognized": "root",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "8a84e406c08ac9594f47222406598f7598e15c55f8044b04813e28c9dee70976",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "route",
+            "phonemes": "ɹˈut.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "3bb3696c473dee8dffbf0ad33194a10a4c486d01a459f7b5114e7a23e6998e5b",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-route/meaning",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "route",
+              "spoken": "route",
+              "language": "en",
+              "voiceId": "af_bella",
+              "inputSha256": "f147d55225ee62d08ef6e08850583da614bde66e0cf1c9371bd31dd1187391f5",
+              "phonemeSha256": "4ace3d1804b7ea96b46eff3ffd34eaf90a59450deb2f5151935321f2a57db9ae",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-route/meaning",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "route",
+              "spoken": "route",
+              "recognized": "root",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "root",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "route",
+                "recognized": "root",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "8a84e406c08ac9594f47222406598f7598e15c55f8044b04813e28c9dee70976",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "route-root-oot",
+              "sourceWord": "route",
+              "recognizedWord": "root",
+              "phoneToken": "ɹˈut",
+              "category": "selected-pronunciation-homophone",
+              "sources": [
+                {
+                  "url": "https://dictionary.cambridge.org/dictionary/english/route",
+                  "supports": "US /ruːt/ and /raʊt/"
+                },
+                {
+                  "url": "https://dictionary.cambridge.org/pronunciation/english/root",
+                  "supports": "US /ruːt/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-distinct/example/0"
+                  ],
+                  "sourceText": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+                  "spoken": "Use two distinct route symbols, a star and a square, so visitors can tell the paths apart.",
+                  "voiceId": "am_puck",
+                  "phonemes": "jˈuz tˈu dəstˈɪŋkt ɹˈut sˈɪmbᵊlz, ɐ stˈɑɹ ænd ɐ skwˈɛɹ, sˌO vˈɪzəTəɹz kæn tˈɛl ðə pˈæðz əpˈɑɹt.",
+                  "phonemeSha256": "a325fbbf1b5bd48a982eb4eb8b02b6e34882c0dec8d1e09a9fb84c980cb5c903"
+                },
+                {
+                  "tokens": [
+                    "en:vocab:v-route/meaning"
+                  ],
+                  "sourceText": "route",
+                  "spoken": "route",
+                  "voiceId": "af_bella",
+                  "phonemes": "ɹˈut.",
+                  "phonemeSha256": "4ace3d1804b7ea96b46eff3ffd34eaf90a59450deb2f5151935321f2a57db9ae"
+                }
+              ]
+            },
+            "ruleSha256": "64e193a5b5c422d4bb7f6ced3cbe46369bb15d585b3dd4423ac9a30dfd57be60",
+            "input": {
+              "phonemes": "ɹˈut.",
+              "phonemeSha256": "4ace3d1804b7ea96b46eff3ffd34eaf90a59450deb2f5151935321f2a57db9ae",
+              "spoken": "route",
+              "voiceId": "af_bella",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "route"
+              ],
+              "recognizedTokens": [
+                "root"
+              ],
+              "differenceIndex": 0,
+              "sourceWord": "route",
+              "recognizedWord": "root",
+              "phoneToken": "ɹˈut"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "reroute-hyphen",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-reroute/meaning",
+        "text": "reroute",
+        "voiceId": "af_bella",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_bella",
+        "required": true,
+        "text": "reroute",
+        "spoken": "reroute",
+        "phonemeSha256": "0d0295f5fb5c07501e58ddddc103f845b6c5c630d615defa90f2a692fe236e89",
+        "inputSha256": "6eabb02bd9148b947d18d81212b0c1216bcd978b6f7ebc6fe4f9d706cfd80ed2",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-reroute/meaning",
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_bella",
+        "expected": "reroute",
+        "spoken": "reroute",
+        "recognized": "re-route",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "re-route",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "reroute",
+          "recognized": "re-route",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "9860668a545fb4a614c76d4d8c08b5879061efce89a3fea20d5987bdbb7aeb84",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "b4f922480df317acf484b3182d128bb86fa11fc0297f7316d54ecbd36e803e1a",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-reroute/meaning",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "reroute",
+              "spoken": "reroute",
+              "phonemeSha256": "0d0295f5fb5c07501e58ddddc103f845b6c5c630d615defa90f2a692fe236e89",
+              "inputSha256": "6eabb02bd9148b947d18d81212b0c1216bcd978b6f7ebc6fe4f9d706cfd80ed2",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "reroute",
+              "spoken": "reroute",
+              "phonemeSha256": "0d0295f5fb5c07501e58ddddc103f845b6c5c630d615defa90f2a692fe236e89",
+              "inputSha256": "6eabb02bd9148b947d18d81212b0c1216bcd978b6f7ebc6fe4f9d706cfd80ed2",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-reroute/meaning",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "reroute",
+              "spoken": "reroute",
+              "recognized": "re-route",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "re-route",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "reroute",
+                "recognized": "re-route",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "9860668a545fb4a614c76d4d8c08b5879061efce89a3fea20d5987bdbb7aeb84",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "reroute",
+            "phonemes": "ɹiɹˈut.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "b4f922480df317acf484b3182d128bb86fa11fc0297f7316d54ecbd36e803e1a",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-reroute/meaning",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "reroute",
+              "spoken": "reroute",
+              "language": "en",
+              "voiceId": "af_bella",
+              "inputSha256": "6eabb02bd9148b947d18d81212b0c1216bcd978b6f7ebc6fe4f9d706cfd80ed2",
+              "phonemeSha256": "0d0295f5fb5c07501e58ddddc103f845b6c5c630d615defa90f2a692fe236e89",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-reroute/meaning",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "reroute",
+              "spoken": "reroute",
+              "recognized": "re-route",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "re-route",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "reroute",
+                "recognized": "re-route",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "9860668a545fb4a614c76d4d8c08b5879061efce89a3fea20d5987bdbb7aeb84",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "reroute-hyphen",
+              "sourceWord": "reroute",
+              "recognizedWord": "re-route",
+              "phoneToken": "ɹiɹˈut",
+              "category": "finite-spelling-format",
+              "sources": [
+                {
+                  "url": "https://www.collinsdictionary.com/dictionary/english/re-route",
+                  "supports": "re-route; also reroute"
+                },
+                {
+                  "url": "https://www.collinsdictionary.com/english-language-learning/reroute",
+                  "supports": "American rirut / riraʊt"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-reroute/meaning"
+                  ],
+                  "sourceText": "reroute",
+                  "spoken": "reroute",
+                  "voiceId": "af_bella",
+                  "phonemes": "ɹiɹˈut.",
+                  "phonemeSha256": "0d0295f5fb5c07501e58ddddc103f845b6c5c630d615defa90f2a692fe236e89"
+                }
+              ]
+            },
+            "ruleSha256": "8ee391a519293a5b85d49b92b89cf137d997de24073dc29939081a6c08d8f8e7",
+            "input": {
+              "phonemes": "ɹiɹˈut.",
+              "phonemeSha256": "0d0295f5fb5c07501e58ddddc103f845b6c5c630d615defa90f2a692fe236e89",
+              "spoken": "reroute",
+              "voiceId": "af_bella",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "reroute"
+              ],
+              "recognizedTokens": [
+                "re-route"
+              ],
+              "differenceIndex": 0,
+              "sourceWord": "reroute",
+              "recognizedWord": "re-route",
+              "phoneToken": "ɹiɹˈut"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "complement-compliment-verb",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-complement/meaning",
+        "text": "complement",
+        "voiceId": "am_puck",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "am_puck",
+        "required": true,
+        "text": "complement",
+        "spoken": "complement",
+        "phonemeSha256": "da37d4fc722484efbc118e1817593789b207bc6304546d305e19a7d47a6b1cf3",
+        "inputSha256": "01b12adfcd0637dd082e6f04bc7e7b65c3353eb4e942f327c55d543687dd657a",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-complement/meaning",
+        "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "am_puck",
+        "expected": "complement",
+        "spoken": "complement",
+        "recognized": "compliment",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "compliment",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "complement",
+          "recognized": "compliment",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "724f43823fc243f1c77c5b2ed1e879d1c480020c0fc53ab33b314deb9d60be90",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "0f48ad046cb55c1eea03c6c1a323e778759929e0e412444a9227f885643070b5",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-complement/meaning",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "am_puck",
+              "required": true,
+              "text": "complement",
+              "spoken": "complement",
+              "phonemeSha256": "da37d4fc722484efbc118e1817593789b207bc6304546d305e19a7d47a6b1cf3",
+              "inputSha256": "01b12adfcd0637dd082e6f04bc7e7b65c3353eb4e942f327c55d543687dd657a",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "am_puck",
+              "required": true,
+              "text": "complement",
+              "spoken": "complement",
+              "phonemeSha256": "da37d4fc722484efbc118e1817593789b207bc6304546d305e19a7d47a6b1cf3",
+              "inputSha256": "01b12adfcd0637dd082e6f04bc7e7b65c3353eb4e942f327c55d543687dd657a",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-complement/meaning",
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "am_puck",
+              "expected": "complement",
+              "spoken": "complement",
+              "recognized": "compliment",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "compliment",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "complement",
+                "recognized": "compliment",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "724f43823fc243f1c77c5b2ed1e879d1c480020c0fc53ab33b314deb9d60be90",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "complement",
+            "phonemes": "kˈɑmpləmˌɛnt",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "0f48ad046cb55c1eea03c6c1a323e778759929e0e412444a9227f885643070b5",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-complement/meaning",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "complement",
+              "spoken": "complement",
+              "language": "en",
+              "voiceId": "am_puck",
+              "inputSha256": "01b12adfcd0637dd082e6f04bc7e7b65c3353eb4e942f327c55d543687dd657a",
+              "phonemeSha256": "da37d4fc722484efbc118e1817593789b207bc6304546d305e19a7d47a6b1cf3",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-complement/meaning",
+              "src": "./audio/generated/en/am_puck/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "am_puck",
+              "expected": "complement",
+              "spoken": "complement",
+              "recognized": "compliment",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "compliment",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "complement",
+                "recognized": "compliment",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "724f43823fc243f1c77c5b2ed1e879d1c480020c0fc53ab33b314deb9d60be90",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "complement-compliment-verb",
+              "sourceWord": "complement",
+              "recognizedWord": "compliment",
+              "phoneToken": "kˈɑmpləmˌɛnt",
+              "category": "selected-pronunciation-homophone",
+              "sources": [
+                {
+                  "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/complement_1",
+                  "supports": "verb /ˈkɑːmplɪment/"
+                },
+                {
+                  "url": "https://www.oxfordlearnersdictionaries.com/us/definition/english/compliment_2",
+                  "supports": "verb /ˈkɑːmplɪment/"
+                },
+                {
+                  "url": "https://dictionary.cambridge.org/dictionary/english/complement",
+                  "supports": "verb US /ˈkɑːm.plə.ment/"
+                },
+                {
+                  "url": "https://github.com/cmusphinx/cmudict/blob/master/cmudict.dict",
+                  "supports": "CMUdict packaged 1.1.3: compliment K AA1 M P L AH0 M EH0 N T",
+                  "localDictionarySha256": "81917843c7f44ce2b094ac63873c2c7a4cf802040792c455ba3ca406891c3d22"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-complement/meaning"
+                  ],
+                  "sourceText": "complement",
+                  "spoken": "complement",
+                  "voiceId": "am_puck",
+                  "phonemes": "kˈɑmpləmˌɛnt",
+                  "phonemeSha256": "da37d4fc722484efbc118e1817593789b207bc6304546d305e19a7d47a6b1cf3"
+                }
+              ]
+            },
+            "ruleSha256": "f9f66f24cea4feac4182116530f6d8661f220f30c4563eab6f0466414f3ad317",
+            "input": {
+              "phonemes": "kˈɑmpləmˌɛnt",
+              "phonemeSha256": "da37d4fc722484efbc118e1817593789b207bc6304546d305e19a7d47a6b1cf3",
+              "spoken": "complement",
+              "voiceId": "am_puck",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "complement"
+              ],
+              "recognizedTokens": [
+                "compliment"
+              ],
+              "differenceIndex": 0,
+              "sourceWord": "complement",
+              "recognizedWord": "compliment",
+              "phoneToken": "kˈɑmpləmˌɛnt"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "resume-noun-diacritics",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-application/example/0",
+        "text": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+        "voiceId": "af_bella",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_bella",
+        "required": true,
+        "text": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+        "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+        "phonemeSha256": "96aa9c2318aacf780bcc5596c1dec3b862d0253054703180b7c0e8fd0fd06cae",
+        "inputSha256": "751260685610a96edc7534da465bb09dc165563504121367e16deace003d07d2",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-application/example/0",
+        "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_bella",
+        "expected": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+        "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+        "recognized": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+          "recognized": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "622725504374ddaf951fc3596c684a4b28cf8c4354040a418ae81db981e6e0d0",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "66a0fc125eea675d32c730554056f967145810423417225f7bf037329616a276",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-application/example/0",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "phonemeSha256": "96aa9c2318aacf780bcc5596c1dec3b862d0253054703180b7c0e8fd0fd06cae",
+              "inputSha256": "751260685610a96edc7534da465bb09dc165563504121367e16deace003d07d2",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_bella",
+              "required": true,
+              "text": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "phonemeSha256": "96aa9c2318aacf780bcc5596c1dec3b862d0253054703180b7c0e8fd0fd06cae",
+              "inputSha256": "751260685610a96edc7534da465bb09dc165563504121367e16deace003d07d2",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-application/example/0",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "recognized": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+                "recognized": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "622725504374ddaf951fc3596c684a4b28cf8c4354040a418ae81db981e6e0d0",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+            "phonemes": "hˌɜɹ ˌæpləkˈAʃən fɔɹ ðə vˈAkənsi ɪnklˈudᵻd ɐ kˈʌvəɹ lˈɛTəɹ ænd ɐ ɹˈɛzumˌA ˌʌdɹˈɛst tə ðə hˈIəɹɪŋ pˈænᵊl.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "66a0fc125eea675d32c730554056f967145810423417225f7bf037329616a276",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-application/example/0",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "language": "en",
+              "voiceId": "af_bella",
+              "inputSha256": "751260685610a96edc7534da465bb09dc165563504121367e16deace003d07d2",
+              "phonemeSha256": "96aa9c2318aacf780bcc5596c1dec3b862d0253054703180b7c0e8fd0fd06cae",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-application/example/0",
+              "src": "./audio/generated/en/af_bella/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_bella",
+              "expected": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "recognized": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+                "recognized": "Her application for the vacancy included a cover letter and a resume addressed to the hiring panel.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "622725504374ddaf951fc3596c684a4b28cf8c4354040a418ae81db981e6e0d0",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "resume-noun-diacritics",
+              "sourceWord": "résumé",
+              "recognizedWord": "resume",
+              "phoneToken": "ɹˈɛzumˌA",
+              "category": "source-anchored-diacritic-spelling",
+              "sources": [
+                {
+                  "url": "https://dictionary.cambridge.org/us/dictionary/english/resume?topic=returning-to-a-place",
+                  "supports": "résumé noun; also resume; verb has a different reading"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-application/example/0"
+                  ],
+                  "sourceText": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+                  "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+                  "voiceId": "af_bella",
+                  "phonemes": "hˌɜɹ ˌæpləkˈAʃən fɔɹ ðə vˈAkənsi ɪnklˈudᵻd ɐ kˈʌvəɹ lˈɛTəɹ ænd ɐ ɹˈɛzumˌA ˌʌdɹˈɛst tə ðə hˈIəɹɪŋ pˈænᵊl.",
+                  "phonemeSha256": "96aa9c2318aacf780bcc5596c1dec3b862d0253054703180b7c0e8fd0fd06cae"
+                },
+                {
+                  "tokens": [
+                    "en:vocab:v-cover-letter/example/0"
+                  ],
+                  "sourceText": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+                  "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+                  "voiceId": "af_heart",
+                  "phonemes": "hˌɜɹ kˈʌvəɹ lˈɛTəɹ ɪksplˈAnz wˌI hɜɹ ɪkspˈɪɹiəns sˈuts ðə ɹˈOl ænd əkˈʌmpᵊniz ði ətˈæʧt ɹˈɛzumˌA.",
+                  "phonemeSha256": "2539e047dd6163e71b620bb9a3836e51ee4596021b8b015b656a22eaadec10bc"
+                }
+              ]
+            },
+            "ruleSha256": "b6450101356d3d35fc4603c09515f24b58f3f95a6594f91a05dc9f79dc881498",
+            "input": {
+              "phonemes": "hˌɜɹ ˌæpləkˈAʃən fɔɹ ðə vˈAkənsi ɪnklˈudᵻd ɐ kˈʌvəɹ lˈɛTəɹ ænd ɐ ɹˈɛzumˌA ˌʌdɹˈɛst tə ðə hˈIəɹɪŋ pˈænᵊl.",
+              "phonemeSha256": "96aa9c2318aacf780bcc5596c1dec3b862d0253054703180b7c0e8fd0fd06cae",
+              "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+              "voiceId": "af_bella",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "her",
+                "application",
+                "for",
+                "the",
+                "vacancy",
+                "included",
+                "a",
+                "cover",
+                "letter",
+                "and",
+                "a",
+                "résumé",
+                "addressed",
+                "to",
+                "the",
+                "hiring",
+                "panel"
+              ],
+              "recognizedTokens": [
+                "her",
+                "application",
+                "for",
+                "the",
+                "vacancy",
+                "included",
+                "a",
+                "cover",
+                "letter",
+                "and",
+                "a",
+                "resume",
+                "addressed",
+                "to",
+                "the",
+                "hiring",
+                "panel"
+              ],
+              "differenceIndex": 11,
+              "sourceWord": "résumé",
+              "recognizedWord": "resume",
+              "phoneToken": "ɹˈɛzumˌA"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "resume-noun-diacritics",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-cover-letter/example/0",
+        "text": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+        "voiceId": "af_heart",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_heart",
+        "required": true,
+        "text": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+        "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+        "phonemeSha256": "2539e047dd6163e71b620bb9a3836e51ee4596021b8b015b656a22eaadec10bc",
+        "inputSha256": "5dc8b189c9f9dc6c263936b07c1680a56dc0d84463d39dabfbce4152882ee5d1",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-cover-letter/example/0",
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_heart",
+        "expected": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+        "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+        "recognized": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+          "recognized": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "2872b0696a733e28397e728aa7dbd404a47b5d6c5aee418d13ea670ad00e0096",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "a31e3537ac41a03e2f23807a099cb55010a4a8ea9d3c5f322bc319a05c871417",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-cover-letter/example/0",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "phonemeSha256": "2539e047dd6163e71b620bb9a3836e51ee4596021b8b015b656a22eaadec10bc",
+              "inputSha256": "5dc8b189c9f9dc6c263936b07c1680a56dc0d84463d39dabfbce4152882ee5d1",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "phonemeSha256": "2539e047dd6163e71b620bb9a3836e51ee4596021b8b015b656a22eaadec10bc",
+              "inputSha256": "5dc8b189c9f9dc6c263936b07c1680a56dc0d84463d39dabfbce4152882ee5d1",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-cover-letter/example/0",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "recognized": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+                "recognized": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "2872b0696a733e28397e728aa7dbd404a47b5d6c5aee418d13ea670ad00e0096",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+            "phonemes": "hˌɜɹ kˈʌvəɹ lˈɛTəɹ ɪksplˈAnz wˌI hɜɹ ɪkspˈɪɹiəns sˈuts ðə ɹˈOl ænd əkˈʌmpᵊniz ði ətˈæʧt ɹˈɛzumˌA.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "a31e3537ac41a03e2f23807a099cb55010a4a8ea9d3c5f322bc319a05c871417",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-cover-letter/example/0",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "language": "en",
+              "voiceId": "af_heart",
+              "inputSha256": "5dc8b189c9f9dc6c263936b07c1680a56dc0d84463d39dabfbce4152882ee5d1",
+              "phonemeSha256": "2539e047dd6163e71b620bb9a3836e51ee4596021b8b015b656a22eaadec10bc",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-cover-letter/example/0",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "recognized": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+                "recognized": "Her cover letter explains why her experience suits the role and accompanies the attached resume.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "2872b0696a733e28397e728aa7dbd404a47b5d6c5aee418d13ea670ad00e0096",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "resume-noun-diacritics",
+              "sourceWord": "résumé",
+              "recognizedWord": "resume",
+              "phoneToken": "ɹˈɛzumˌA",
+              "category": "source-anchored-diacritic-spelling",
+              "sources": [
+                {
+                  "url": "https://dictionary.cambridge.org/us/dictionary/english/resume?topic=returning-to-a-place",
+                  "supports": "résumé noun; also resume; verb has a different reading"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not arbitrary dictionary variant intersection.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-application/example/0"
+                  ],
+                  "sourceText": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+                  "spoken": "Her application for the vacancy included a cover letter and a résumé addressed to the hiring panel.",
+                  "voiceId": "af_bella",
+                  "phonemes": "hˌɜɹ ˌæpləkˈAʃən fɔɹ ðə vˈAkənsi ɪnklˈudᵻd ɐ kˈʌvəɹ lˈɛTəɹ ænd ɐ ɹˈɛzumˌA ˌʌdɹˈɛst tə ðə hˈIəɹɪŋ pˈænᵊl.",
+                  "phonemeSha256": "96aa9c2318aacf780bcc5596c1dec3b862d0253054703180b7c0e8fd0fd06cae"
+                },
+                {
+                  "tokens": [
+                    "en:vocab:v-cover-letter/example/0"
+                  ],
+                  "sourceText": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+                  "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+                  "voiceId": "af_heart",
+                  "phonemes": "hˌɜɹ kˈʌvəɹ lˈɛTəɹ ɪksplˈAnz wˌI hɜɹ ɪkspˈɪɹiəns sˈuts ðə ɹˈOl ænd əkˈʌmpᵊniz ði ətˈæʧt ɹˈɛzumˌA.",
+                  "phonemeSha256": "2539e047dd6163e71b620bb9a3836e51ee4596021b8b015b656a22eaadec10bc"
+                }
+              ]
+            },
+            "ruleSha256": "b6450101356d3d35fc4603c09515f24b58f3f95a6594f91a05dc9f79dc881498",
+            "input": {
+              "phonemes": "hˌɜɹ kˈʌvəɹ lˈɛTəɹ ɪksplˈAnz wˌI hɜɹ ɪkspˈɪɹiəns sˈuts ðə ɹˈOl ænd əkˈʌmpᵊniz ði ətˈæʧt ɹˈɛzumˌA.",
+              "phonemeSha256": "2539e047dd6163e71b620bb9a3836e51ee4596021b8b015b656a22eaadec10bc",
+              "spoken": "Her cover letter explains why her experience suits the role and accompanies the attached résumé.",
+              "voiceId": "af_heart",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "her",
+                "cover",
+                "letter",
+                "explains",
+                "why",
+                "her",
+                "experience",
+                "suits",
+                "the",
+                "role",
+                "and",
+                "accompanies",
+                "the",
+                "attached",
+                "résumé"
+              ],
+              "recognizedTokens": [
+                "her",
+                "cover",
+                "letter",
+                "explains",
+                "why",
+                "her",
+                "experience",
+                "suits",
+                "the",
+                "role",
+                "and",
+                "accompanies",
+                "the",
+                "attached",
+                "resume"
+              ],
+              "differenceIndex": 14,
+              "sourceWord": "résumé",
+              "recognizedWord": "resume",
+              "phoneToken": "ɹˈɛzumˌA"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "consignor-consigner-spelling",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-consignor/example/0",
+        "text": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+        "voiceId": "af_heart",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_heart",
+        "required": true,
+        "text": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+        "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+        "phonemeSha256": "aa8ef534805c024973c820c5ea6332aa9921c0d8f73aa5d6b093317f2626c4d5",
+        "inputSha256": "6b0f61d2c34e0b6b80df8caf14373f6586d2e85efdb4f73258529c8068b7dd59",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-consignor/example/0",
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_heart",
+        "expected": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+        "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+        "recognized": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+          "recognized": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "576ef19d2dc0b7beeca8fec23fb529b1938d48b49fc0835e6d65c35ea355ea27",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "b9686f02c6e5242edbb3d8a1eef472e97a9cb743a187442e5360fa4673515700",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-consignor/example/0",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "phonemeSha256": "aa8ef534805c024973c820c5ea6332aa9921c0d8f73aa5d6b093317f2626c4d5",
+              "inputSha256": "6b0f61d2c34e0b6b80df8caf14373f6586d2e85efdb4f73258529c8068b7dd59",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "phonemeSha256": "aa8ef534805c024973c820c5ea6332aa9921c0d8f73aa5d6b093317f2626c4d5",
+              "inputSha256": "6b0f61d2c34e0b6b80df8caf14373f6586d2e85efdb4f73258529c8068b7dd59",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-consignor/example/0",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "recognized": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                "recognized": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "576ef19d2dc0b7beeca8fec23fb529b1938d48b49fc0835e6d65c35ea355ea27",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+            "phonemes": "ˌWəɹ mˈɪl sˈInd æz kənsˈInəɹ ˌɔn ðə wˈAbˌɪl, hˈændɪŋ ðə ɡˈʊdz tə ðə kˈɛɹiəɹ fɔɹ dəlˈɪvəɹi tə ðə bˈIəɹ.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "b9686f02c6e5242edbb3d8a1eef472e97a9cb743a187442e5360fa4673515700",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-consignor/example/0",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "language": "en",
+              "voiceId": "af_heart",
+              "inputSha256": "6b0f61d2c34e0b6b80df8caf14373f6586d2e85efdb4f73258529c8068b7dd59",
+              "phonemeSha256": "aa8ef534805c024973c820c5ea6332aa9921c0d8f73aa5d6b093317f2626c4d5",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-consignor/example/0",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "recognized": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                "recognized": "Our mill signed as consigner on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "576ef19d2dc0b7beeca8fec23fb529b1938d48b49fc0835e6d65c35ea355ea27",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "consignor-consigner-spelling",
+              "sourceWord": "consignor",
+              "recognizedWord": "consigner",
+              "phoneToken": "kənsˈInəɹ",
+              "category": "finite-spelling-format",
+              "sources": [
+                {
+                  "url": "https://www.collinsdictionary.com/dictionary/english/consignor",
+                  "supports": "consignor /kənˈsaɪnər/; also consigner /kənˈsaɪnər/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not the alternative final-stressed consignor pronunciation.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-consignor/example/0"
+                  ],
+                  "sourceText": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                  "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                  "voiceId": "af_heart",
+                  "phonemes": "ˌWəɹ mˈɪl sˈInd æz kənsˈInəɹ ˌɔn ðə wˈAbˌɪl, hˈændɪŋ ðə ɡˈʊdz tə ðə kˈɛɹiəɹ fɔɹ dəlˈɪvəɹi tə ðə bˈIəɹ.",
+                  "phonemeSha256": "aa8ef534805c024973c820c5ea6332aa9921c0d8f73aa5d6b093317f2626c4d5"
+                },
+                {
+                  "tokens": [
+                    "en:vocab:v-consignor/meaning"
+                  ],
+                  "sourceText": "consignor",
+                  "spoken": "consignor",
+                  "voiceId": "af_heart",
+                  "phonemes": "kənsˈInəɹ.",
+                  "phonemeSha256": "3fdd7918b28d64886caf33c3921cce147d4eb41b1724f1b892564df439ac3819"
+                }
+              ]
+            },
+            "ruleSha256": "419cff4fdc5518dfe7b7543acb4e027ac6993a2ac28420d94cb24c67b411dda9",
+            "input": {
+              "phonemes": "ˌWəɹ mˈɪl sˈInd æz kənsˈInəɹ ˌɔn ðə wˈAbˌɪl, hˈændɪŋ ðə ɡˈʊdz tə ðə kˈɛɹiəɹ fɔɹ dəlˈɪvəɹi tə ðə bˈIəɹ.",
+              "phonemeSha256": "aa8ef534805c024973c820c5ea6332aa9921c0d8f73aa5d6b093317f2626c4d5",
+              "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+              "voiceId": "af_heart",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "our",
+                "mill",
+                "signed",
+                "as",
+                "consignor",
+                "on",
+                "the",
+                "waybill",
+                "handing",
+                "the",
+                "goods",
+                "to",
+                "the",
+                "carrier",
+                "for",
+                "delivery",
+                "to",
+                "the",
+                "buyer"
+              ],
+              "recognizedTokens": [
+                "our",
+                "mill",
+                "signed",
+                "as",
+                "consigner",
+                "on",
+                "the",
+                "waybill",
+                "handing",
+                "the",
+                "goods",
+                "to",
+                "the",
+                "carrier",
+                "for",
+                "delivery",
+                "to",
+                "the",
+                "buyer"
+              ],
+              "differenceIndex": 4,
+              "sourceWord": "consignor",
+              "recognizedWord": "consigner",
+              "phoneToken": "kənsˈInəɹ"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    },
+    {
+      "ruleId": "consignor-consigner-spelling",
+      "unit": {
+        "language": "en",
+        "bank": "vocab",
+        "key": "v-consignor/meaning",
+        "text": "consignor",
+        "voiceId": "af_heart",
+        "required": true
+      },
+      "clip": {
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "bytes": 28,
+        "duration": 0.6,
+        "language": "en",
+        "voiceId": "af_heart",
+        "required": true,
+        "text": "consignor",
+        "spoken": "consignor",
+        "phonemeSha256": "3fdd7918b28d64886caf33c3921cce147d4eb41b1724f1b892564df439ac3819",
+        "inputSha256": "c8113d54238a6cabac388da7ea15103eee3105919e4cbbf93db2a003da0bf626",
+        "synthesisSpeed": 0.88,
+        "asrStatus": "review"
+      },
+      "record": {
+        "key": "v-consignor/meaning",
+        "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+        "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+        "voiceId": "af_heart",
+        "expected": "consignor",
+        "spoken": "consignor",
+        "recognized": "consigner",
+        "status": "accepted",
+        "recognitionMethod": "individual-beam5",
+        "singleFileVerification": true,
+        "recognitionGeneration": {
+          "model": "whisper-large-v3-turbo",
+          "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+          "device": "cpu",
+          "computeType": "int8",
+          "beamSize": 5,
+          "prompt": null,
+          "conditionOnPreviousText": false,
+          "vadFilter": false
+        },
+        "segments": [
+          {
+            "start": 0.0,
+            "end": 0.5,
+            "text": "consigner",
+            "avgLogprob": -0.1,
+            "noSpeechProb": 1e-10
+          }
+        ],
+        "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+        "comparison": {
+          "ruleVersion": "strict-audio-equivalence-1",
+          "equivalent": false,
+          "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "expectedSpoken": "consignor",
+          "recognized": "consigner",
+          "language": "en",
+          "reasons": [
+            "non-equivalent-segments-remain"
+          ],
+          "provenance": {
+            "sourceTextSha256": "958f88c01ae8f30d8944ecaac102b4d4da0940cbf8391ca056ef6f9ce942ca38",
+            "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+            "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+          }
+        },
+        "acceptance": {
+          "method": "selected-recipe-lexical-equivalence-v1",
+          "proofId": "06e04ea5f90927bfe963edf105ba0c9bfb635ecf39586f922a968f856438766e",
+          "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+          "originalIndividualStatus": "review"
+        }
+      },
+      "row": {
+        "token": "en:vocab:v-consignor/meaning",
+        "baseline": {
+          "immutable": true
+        },
+        "comparison": {
+          "immutable": true
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "recorded-review",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "5555555555555555555555555555555555555555555555555555555555555555",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "consignor",
+              "spoken": "consignor",
+              "phonemeSha256": "3fdd7918b28d64886caf33c3921cce147d4eb41b1724f1b892564df439ac3819",
+              "inputSha256": "c8113d54238a6cabac388da7ea15103eee3105919e4cbbf93db2a003da0bf626",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "untouched": "original evidence"
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "language": "en",
+              "voiceId": "af_heart",
+              "required": true,
+              "text": "consignor",
+              "spoken": "consignor",
+              "phonemeSha256": "3fdd7918b28d64886caf33c3921cce147d4eb41b1724f1b892564df439ac3819",
+              "inputSha256": "c8113d54238a6cabac388da7ea15103eee3105919e4cbbf93db2a003da0bf626",
+              "synthesisSpeed": 0.88,
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "v-consignor/meaning",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "consignor",
+              "spoken": "consignor",
+              "recognized": "consigner",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "consigner",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "consignor",
+                "recognized": "consigner",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "958f88c01ae8f30d8944ecaac102b4d4da0940cbf8391ca056ef6f9ce942ca38",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            }
+          },
+          "appliedOverride": {
+            "spoken": "consignor",
+            "phonemes": "kənsˈInəɹ.",
+            "speed": 0.88
+          }
+        },
+        "lexicalEquivalences": [
+          {
+            "version": 1,
+            "id": "06e04ea5f90927bfe963edf105ba0c9bfb635ecf39586f922a968f856438766e",
+            "method": "selected-recipe-lexical-equivalence-v1",
+            "token": "en:vocab:v-consignor/meaning",
+            "sourceAudioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+            "sourceClip": {
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "bytes": 28,
+              "duration": 0.6,
+              "text": "consignor",
+              "spoken": "consignor",
+              "language": "en",
+              "voiceId": "af_heart",
+              "inputSha256": "c8113d54238a6cabac388da7ea15103eee3105919e4cbbf93db2a003da0bf626",
+              "phonemeSha256": "3fdd7918b28d64886caf33c3921cce147d4eb41b1724f1b892564df439ac3819",
+              "required": true,
+              "synthesisSpeed": 0.88
+            },
+            "originalASR": {
+              "key": "v-consignor/meaning",
+              "src": "./audio/generated/en/af_heart/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa.m4a",
+              "sha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+              "voiceId": "af_heart",
+              "expected": "consignor",
+              "spoken": "consignor",
+              "recognized": "consigner",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "prompt": null,
+                "conditionOnPreviousText": false,
+                "vadFilter": false
+              },
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.5,
+                  "text": "consigner",
+                  "avgLogprob": -0.1,
+                  "noSpeechProb": 1e-10
+                }
+              ],
+              "fingerprint": "9d19922ded7485a6275b8767ab85f9704d0bd05fd1148307505714eede438a2b",
+              "comparison": {
+                "ruleVersion": "strict-audio-equivalence-1",
+                "equivalent": false,
+                "audioSha256": "521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a",
+                "expectedSpoken": "consignor",
+                "recognized": "consigner",
+                "language": "en",
+                "reasons": [
+                  "non-equivalent-segments-remain"
+                ],
+                "provenance": {
+                  "sourceTextSha256": "958f88c01ae8f30d8944ecaac102b4d4da0940cbf8391ca056ef6f9ce942ca38",
+                  "ruleFileSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+                  "normalizerFileSha256": "4444444444444444444444444444444444444444444444444444444444444444"
+                }
+              }
+            },
+            "actualAsrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3-turbo\", \"modelSha256\": \"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\", \"prompt\": null, \"vadFilter\": false}, \"521f706e0aa23dffc42c903f6f734bdc3fd07e1e23e14499025b2c5c6526c98a\", \"en\"]",
+            "rule": {
+              "id": "consignor-consigner-spelling",
+              "sourceWord": "consignor",
+              "recognizedWord": "consigner",
+              "phoneToken": "kənsˈInəɹ",
+              "category": "finite-spelling-format",
+              "sources": [
+                {
+                  "url": "https://www.collinsdictionary.com/dictionary/english/consignor",
+                  "supports": "consignor /kənˈsaɪnər/; also consigner /kənˈsaɪnər/"
+                }
+              ],
+              "scope": "Only this selected recipe reading, not the alternative final-stressed consignor pronunciation.",
+              "approvedInputs": [
+                {
+                  "tokens": [
+                    "en:vocab:v-consignor/example/0"
+                  ],
+                  "sourceText": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                  "spoken": "Our mill signed as consignor on the waybill, handing the goods to the carrier for delivery to the buyer.",
+                  "voiceId": "af_heart",
+                  "phonemes": "ˌWəɹ mˈɪl sˈInd æz kənsˈInəɹ ˌɔn ðə wˈAbˌɪl, hˈændɪŋ ðə ɡˈʊdz tə ðə kˈɛɹiəɹ fɔɹ dəlˈɪvəɹi tə ðə bˈIəɹ.",
+                  "phonemeSha256": "aa8ef534805c024973c820c5ea6332aa9921c0d8f73aa5d6b093317f2626c4d5"
+                },
+                {
+                  "tokens": [
+                    "en:vocab:v-consignor/meaning"
+                  ],
+                  "sourceText": "consignor",
+                  "spoken": "consignor",
+                  "voiceId": "af_heart",
+                  "phonemes": "kənsˈInəɹ.",
+                  "phonemeSha256": "3fdd7918b28d64886caf33c3921cce147d4eb41b1724f1b892564df439ac3819"
+                }
+              ]
+            },
+            "ruleSha256": "419cff4fdc5518dfe7b7543acb4e027ac6993a2ac28420d94cb24c67b411dda9",
+            "input": {
+              "phonemes": "kənsˈInəɹ.",
+              "phonemeSha256": "3fdd7918b28d64886caf33c3921cce147d4eb41b1724f1b892564df439ac3819",
+              "spoken": "consignor",
+              "voiceId": "af_heart",
+              "synthesisSpeed": 0.88
+            },
+            "decision": {
+              "expectedTokens": [
+                "consignor"
+              ],
+              "recognizedTokens": [
+                "consigner"
+              ],
+              "differenceIndex": 0,
+              "sourceWord": "consignor",
+              "recognizedWord": "consigner",
+              "phoneToken": "kənsˈInəɹ"
+            },
+            "status": "accepted",
+            "originalAudioResynthesized": false,
+            "newRecognitionCalls": 0,
+            "originalIndividualASRMatched": false
+          }
+        ]
+      }
+    }
+  ]
+}

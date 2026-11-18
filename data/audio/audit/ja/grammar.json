@@ -21787,20 +21787,20 @@
     },
     "gram-passive-14/sentence/0": {
       "key": "gram-passive-14/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/3552d765e7cad1ef53621876ef80313b.m4a",
-      "sha256": "ae8068d91b0461540624d90456dadd2701fcfcf85a5f8701fe420d81a7d5f35f",
+      "src": "./audio/generated/ja/jf_alpha/956c3f27d3156b2504c13fc4a375c31e.m4a",
+      "sha256": "82c740958281b6ee0bc206286845ff5626648dc4abcf4a4d8b8f9020b95f3bc6",
       "voiceId": "jf_alpha",
-      "fingerprint": "172aeae43ba7d9a14889cba2439415a5e967e254c63f23456e2ddb68bc37c7e6",
+      "fingerprint": "1cece0cf9339089ea78ee3731c4b8dc7a4f8417dcb0c727423f1e49815dbfb0b",
       "expected": "品物を数え終えたら、段ボール箱に緑色の丸印を付けてください。",
       "spoken": "品物を数え終えたら、段ボール箱に緑色の丸印を付けてください。",
       "recognized": "品物を数え終えたらダンボール箱に緑色の丸印をつけてください。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.14,
+          "end": 5.32,
           "text": "品物を数え終えたらダンボール箱に緑色の丸印をつけてください。",
-          "avgLogprob": -0.0882860489429966,
-          "noSpeechProb": 4.92668449439404e-12
+          "avgLogprob": -0.10292708152724851,
+          "noSpeechProb": 5.08910188296019e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -21859,8 +21859,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "f06a1cd014e1bf693607f3cb749b31739dad779a45c2f5eb6402c7e51bff949d"
         },
         "readingTrace": {
@@ -22061,7 +22062,7 @@
             }
           ]
         },
-        "audioSha256": "ae8068d91b0461540624d90456dadd2701fcfcf85a5f8701fe420d81a7d5f35f"
+        "audioSha256": "82c740958281b6ee0bc206286845ff5626648dc4abcf4a4d8b8f9020b95f3bc6"
       }
     },
     "gram-modifiers-07/sentence/0": {
@@ -22675,20 +22676,20 @@
     },
     "gram-time-04/sentence/0": {
       "key": "gram-time-04/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/a2ea8181cf80f1d95e763315477aae92.m4a",
-      "sha256": "d860fd9520d5da8368a10fcc42fc042580d2d95ba58fa87b1a3285ad3058b95f",
+      "src": "./audio/generated/ja/jf_alpha/0484173f92f9fec7a215d7542dad59ef.m4a",
+      "sha256": "8cb047e0a7a84ce9f9e4321163d08c0c49b87dfc40a6f718fed20236a54b1aa3",
       "voiceId": "jf_alpha",
-      "fingerprint": "a3385a554aa01564a5da313ea68c41a08ed02cc7c22510b2629229b97b2214d6",
+      "fingerprint": "dbc60709a090a88d4c3189ec2d3cfdeb7bea3310c6546e5884f08bec5ed9e756",
       "expected": "Nora は今も出荷部門で働いています。",
-      "spoken": "Nora は今も出荷部門で働いています。",
-      "recognized": "ノールは今も主化部門で働いています。",
+      "spoken": "ノラ は今も出荷部門で働いています。",
+      "recognized": "野良は今も主化部門で働いています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.6,
-          "text": "ノールは今も主化部門で働いています。",
-          "avgLogprob": -0.16039588136805427,
-          "noSpeechProb": 4.513628186486596e-12
+          "end": 2.68,
+          "text": "野良は今も主化部門で働いています。",
+          "avgLogprob": -0.1697823488050037,
+          "noSpeechProb": 4.8205241881538186e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -22711,13 +22712,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.3333,
-      "phonemeErrorRate": 0.2162,
+      "errorRate": 0.25,
+      "phonemeErrorRate": 0.1081,
       "differences": [
         {
           "operation": "replace",
-          "expected": "n o r a",
-          "recognized": "ノ ー ル"
+          "expected": "ノ ラ",
+          "recognized": "野 良"
         },
         {
           "operation": "replace",
@@ -22729,13 +22730,13 @@
         "equivalent": false,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "Nora は今も出荷部門で働いています。",
-        "recognized": "ノールは今も主化部門で働いています。",
+        "expectedSpoken": "ノラ は今も出荷部門で働いています。",
+        "recognized": "野良は今も主化部門で働いています。",
         "reasons": [
           "non-equivalent-morae-remain"
         ],
-        "normalizedExpected": "<nora>ワイマモシュッカブモンデハタライテイマス",
-        "normalizedRecognized": "ノオルワイマモヌシカブモンデハタライテイマス",
+        "normalizedExpected": "ノラワイマモシュッカブモンデハタライテイマス",
+        "normalizedRecognized": "ノラワイマモヌシカブモンデハタライテイマス",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -22746,17 +22747,18 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "555c5bb61807bbaf781a302bdf3f5741fa6565ad348964a686495b5e1f6c429b"
         },
         "readingTrace": {
           "expected": [
             {
-              "surface": "Nora",
-              "reading": "<nora>",
-              "normalized": "<nora>",
-              "method": "literal-english-source"
+              "surface": "ノラ",
+              "reading": "ノラ",
+              "normalized": "ノラ",
+              "method": "unidic-pron"
             },
             {
               "surface": "は",
@@ -22821,9 +22823,9 @@
           ],
           "recognized": [
             {
-              "surface": "ノール",
-              "reading": "ノール",
-              "normalized": "ノオル",
+              "surface": "野良",
+              "reading": "ノラ",
+              "normalized": "ノラ",
               "method": "unidic-pron"
             },
             {
@@ -22894,7 +22896,7 @@
             }
           ]
         },
-        "audioSha256": "d860fd9520d5da8368a10fcc42fc042580d2d95ba58fa87b1a3285ad3058b95f"
+        "audioSha256": "8cb047e0a7a84ce9f9e4321163d08c0c49b87dfc40a6f718fed20236a54b1aa3"
       }
     },
     "gram-time-07/sentence/0": {
@@ -23927,20 +23929,20 @@
     },
     "gram-conditional-01/sentence/0": {
       "key": "gram-conditional-01/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/81f1335110f76d08892639630e2ea312.m4a",
-      "sha256": "b9f7179ba351bc4b600830b6bb537d650b0595f4c70bdac3c19c22e3d8d85693",
+      "src": "./audio/generated/ja/jf_alpha/0cf4524d1fd11023a45c429fd6c85b76.m4a",
+      "sha256": "bde81e4a796dad0c6d027498a2765286e71077874830d4dfa713ecbd3d756837",
       "voiceId": "jf_alpha",
-      "fingerprint": "f1fceb21783e2d14c65acc29c997be7297d9dd9d9508ede5c7acf47fce5663fd",
+      "fingerprint": "65589a1ba4dd10bf47a7223be7a7c4decd70dc0131d43da9570a1518c8b16047",
       "expected": "もっと幅の広い机があれば、2台目のモニターを置くのですが。",
       "spoken": "もっと幅の広い机があれば、二台目のモニターを置くのですが。",
       "recognized": "モッド幅の広い机があれば2台目のモニターを置くのですが",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.98,
+          "end": 4.08,
           "text": "モッド幅の広い机があれば2台目のモニターを置くのですが",
-          "avgLogprob": -0.08927572287362197,
-          "noSpeechProb": 4.626000971175159e-12
+          "avgLogprob": -0.09965419460987222,
+          "noSpeechProb": 4.761857574919759e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -23994,8 +23996,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "174ffaf95f18cec6867bdb5ae7ce799a3439a2038eb2a642083959e22e561d26"
         },
         "readingTrace": {
@@ -24220,7 +24223,7 @@
             }
           ]
         },
-        "audioSha256": "b9f7179ba351bc4b600830b6bb537d650b0595f4c70bdac3c19c22e3d8d85693"
+        "audioSha256": "bde81e4a796dad0c6d027498a2765286e71077874830d4dfa713ecbd3d756837"
       }
     },
     "gram-conditional-03/sentence/0": {
@@ -26295,20 +26298,20 @@
     },
     "gram-preposition-08/sentence/0": {
       "key": "gram-preposition-08/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/7ce780d96a9e4dfde0a3fcc170b5a52b.m4a",
-      "sha256": "763d9f008f7dcb249b17fb68e4c5302f5ed52ac38d98bbaaa471ed9abbd923cb",
+      "src": "./audio/generated/ja/jf_alpha/115631a1ab29308d7c3c5cdc863a2188.m4a",
+      "sha256": "0e9004bb1b5b1a63b12d728b25b7b9308e5ec92d0b59e5df5ed10ea639373bde",
       "voiceId": "jf_alpha",
-      "fingerprint": "6d9517a51c58b14ed9e6477376265c77c448b321b76e91cf55b171231b10b275",
+      "fingerprint": "dcc4b9daec2b122009e5aa88445d56dd2cb6e50f9a6fc5f3aa2d0272337df0d1",
       "expected": "交換用のちょうつがいは、元のものと厚さが異なります。",
       "spoken": "交換用のちょうつがいは、元のものと厚さが異なります。",
       "recognized": "交換用の蝶津貝は元のものと厚さが異なります。",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.58,
+          "end": 3.68,
           "text": "交換用の蝶津貝は元のものと厚さが異なります。",
-          "avgLogprob": -0.0780037295605455,
-          "noSpeechProb": 4.129474973774139e-12
+          "avgLogprob": -0.0907444427055972,
+          "noSpeechProb": 4.4554590052092724e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -26361,8 +26364,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "ee5514c89887631508353c0db94438f4f255ff54cc9b7952899b79bb95ac508c"
         },
         "readingTrace": {
@@ -26551,7 +26555,7 @@
             }
           ]
         },
-        "audioSha256": "763d9f008f7dcb249b17fb68e4c5302f5ed52ac38d98bbaaa471ed9abbd923cb"
+        "audioSha256": "0e9004bb1b5b1a63b12d728b25b7b9308e5ec92d0b59e5df5ed10ea639373bde"
       }
     },
     "gram-preposition-11/sentence/0": {
@@ -26610,20 +26614,20 @@
     },
     "gram-preposition-15/sentence/0": {
       "key": "gram-preposition-15/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/270b6b10d16184b122473b9cb6b04899.m4a",
-      "sha256": "395a5bf639018aedfb4914fde45e50e81717bb35be6adc4d5c86091e519e3510",
+      "src": "./audio/generated/ja/jf_alpha/f9f2403cedfd03cfc349318827024234.m4a",
+      "sha256": "2f44d9a1239c0288c0a11aa314a1eaeb828256d254ea1cb10b44d5c28980a215",
       "voiceId": "jf_alpha",
-      "fingerprint": "86fe2c58d05d7d53b4bd88797d68526c5591a599f01f717394a6ac67c9a3d189",
+      "fingerprint": "9b59743a907a098df9a35a8fe615c25100a4a2d2fd1c9881d207beb187819c89",
       "expected": "運転手2人が病欠の連絡をしたため、配車表が変更されました。",
       "spoken": "運転手ふたりが病欠の連絡をしたため、配車表が変更されました。",
-      "recognized": "運転手2人が病欠の連絡をし、畳め排車票が変更されました。",
+      "recognized": "運転手2人が病欠の連絡をし、畳配車票が変更されました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.0,
-          "text": "運転手2人が病欠の連絡をし、畳め排車票が変更されました。",
-          "avgLogprob": -0.15410166075735382,
-          "noSpeechProb": 5.630830003655607e-12
+          "end": 5.14,
+          "text": "運転手2人が病欠の連絡をし、畳配車票が変更されました。",
+          "avgLogprob": -0.14515459584072232,
+          "noSpeechProb": 5.4209809384475616e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -26647,17 +26651,12 @@
       "status": "review",
       "metric": "CER",
       "errorRate": 0.1429,
-      "phonemeErrorRate": 0.0735,
+      "phonemeErrorRate": 0.0294,
       "differences": [
         {
           "operation": "replace",
-          "expected": "た た",
+          "expected": "た た め",
           "recognized": "畳"
-        },
-        {
-          "operation": "replace",
-          "expected": "配",
-          "recognized": "排"
         },
         {
           "operation": "replace",
@@ -26670,14 +26669,14 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "運転手ふたりが病欠の連絡をしたため、配車表が変更されました。",
-        "recognized": "運転手2人が病欠の連絡をし、畳め排車票が変更されました。",
+        "recognized": "運転手2人が病欠の連絡をし、畳配車票が変更されました。",
         "reasons": [
           "author-number-and-input-normalization",
           "non-equivalent-morae-remain",
           "ambiguous-contextual-kanji:表"
         ],
         "normalizedExpected": "ウンテンテフタリガビョオケツノレンラクオシタタメハイシャヒョオガヘンコオサレマシタ",
-        "normalizedRecognized": "ウンテンテフタリガビョオケツノレンラクオシタタメハイクルマヒョオガヘンコオサレマシタ",
+        "normalizedRecognized": "ウンテンテフタリガビョオケツノレンラクオシタタミハイシャヒョオガヘンコオサレマシタ",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -26688,8 +26687,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "03680026945c88ff63b83348877d462621fa265f5aeb6752b4fe8034dbdd5f0a"
         },
         "readingTrace": {
@@ -26865,21 +26865,15 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "畳め",
-              "reading": "タタメ",
-              "normalized": "タタメ",
+              "surface": "畳",
+              "reading": "タタミ",
+              "normalized": "タタミ",
               "method": "unidic-pron"
             },
             {
-              "surface": "排",
-              "reading": "ハイ",
-              "normalized": "ハイ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "車",
-              "reading": "クルマ",
-              "normalized": "クルマ",
+              "surface": "配車",
+              "reading": "ハイシャ",
+              "normalized": "ハイシャ",
               "method": "unidic-pron"
             },
             {
@@ -26926,7 +26920,7 @@
             }
           ]
         },
-        "audioSha256": "395a5bf639018aedfb4914fde45e50e81717bb35be6adc4d5c86091e519e3510"
+        "audioSha256": "2f44d9a1239c0288c0a11aa314a1eaeb828256d254ea1cb10b44d5c28980a215"
       }
     },
     "gram-conjunction-02/sentence/0": {
@@ -27502,20 +27496,20 @@
     },
     "gram-conjunction-10/sentence/0": {
       "key": "gram-conjunction-10/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/5ddda4a192fdca347cef3388bfda5a60.m4a",
-      "sha256": "355fb4ec2e84f288999c7f93de725a64eb9abd850f188f8e1ce49f62b59a0163",
+      "src": "./audio/generated/ja/jf_alpha/4ce25b3f48c5a2f40fff28d73cdb3fa7.m4a",
+      "sha256": "3d1bb6f119b43fdacbfc4d37f154682f727dfa153b3e62dcacc1661de2ccba74",
       "voiceId": "jf_alpha",
-      "fingerprint": "f86f84285014150fb2d1d7ca05a7d4732b35a9e81409be7e85eb9714c7ad6955",
+      "fingerprint": "a33ea741117b1e7ac2aea3be68283302ee34e46fe2b187ab585b83a6db5fa921",
       "expected": "月曜日に間に合うよう荷物を準備できるよう、今日中にラベルを送ってください。",
       "spoken": "月曜日に間に合うよう荷物を準備できるよう、今日中にラベルを送ってください。",
       "recognized": "月曜日に間に合うよう荷物を準備できる要求中にラベルを送ってください",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.16,
+          "end": 5.28,
           "text": "月曜日に間に合うよう荷物を準備できる要求中にラベルを送ってください",
-          "avgLogprob": -0.0827241713000882,
-          "noSpeechProb": 7.011847266008564e-12
+          "avgLogprob": -0.09292353064783158,
+          "noSpeechProb": 5.804661872693684e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -27569,8 +27563,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "45469dfe6adfb654ebf524f00e026b58d998a9a237301ad17e9f36ef5b85554d"
         },
         "readingTrace": {
@@ -27789,7 +27784,7 @@
             }
           ]
         },
-        "audioSha256": "355fb4ec2e84f288999c7f93de725a64eb9abd850f188f8e1ce49f62b59a0163"
+        "audioSha256": "3d1bb6f119b43fdacbfc4d37f154682f727dfa153b3e62dcacc1661de2ccba74"
       }
     },
     "gram-conjunction-11/sentence/0": {
@@ -28637,20 +28632,20 @@
     },
     "gram-comparison-02/sentence/0": {
       "key": "gram-comparison-02/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/9019878010d8177d099a796f130281de.m4a",
-      "sha256": "9f0169226fd4a7fb609b2b297afbd3c0e518bdbbf76fff0b061fb1fca02f37ea",
+      "src": "./audio/generated/ja/jf_alpha/ed0ac8a7f3075ecdb6a6558234e5955a.m4a",
+      "sha256": "9d6e2ac5748fd2fcc78f9e9d40bae7eda4262915a8a43d9d2fa94847611b1642",
       "voiceId": "jf_alpha",
-      "fingerprint": "b1d0cae2cf29b5da545ee555b8ff4916c7f74fed1b48ab85068c84e3e96c7843",
+      "fingerprint": "b61eed3a599963dbb02c9d2f3408000514c21d8195479aff8d66e77858bcf377",
       "expected": "5つの会議室の中で、Oak が最も小さいです。",
-      "spoken": "五つの会議室の中で、Oak が最も小さいです。",
+      "spoken": "五つの会議室の中で、オーク が最も小さいです。",
       "recognized": "5つの会議室の中で多くが最も小さいです。",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.2800000000000002,
+          "end": 3.56,
           "text": "5つの会議室の中で多くが最も小さいです。",
-          "avgLogprob": -0.08926786109805107,
-          "noSpeechProb": 6.465915910330855e-12
+          "avgLogprob": -0.09162748875943097,
+          "noSpeechProb": 4.859480439572961e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -28671,31 +28666,31 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
       "errorRate": 0.15,
-      "phonemeErrorRate": 0.0638,
+      "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
-          "expected": "o a k",
+          "expected": "オ ー ク",
           "recognized": "多 く"
         }
       ],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "五つの会議室の中で、Oak が最も小さいです。",
+        "expectedSpoken": "五つの会議室の中で、オーク が最も小さいです。",
         "recognized": "5つの会議室の中で多くが最も小さいです。",
         "reasons": [
           "author-number-and-input-normalization",
-          "non-equivalent-morae-remain"
+          "exact-japanese-reading"
         ],
-        "normalizedExpected": "イツツノカイギシツノナカデ<oak>ガモットモチイサイデス",
+        "normalizedExpected": "イツツノカイギシツノナカデオオクガモットモチイサイデス",
         "normalizedRecognized": "イツツノカイギシツノナカデオオクガモットモチイサイデス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "イツツノカイギシツノナカデオオクガモットモチイサイデス",
+        "proofRecognized": "イツツノカイギシツノナカデオオクガモットモチイサイデス",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -28704,8 +28699,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "c87ac20bc958d40735904a9b2d8b3d3054f90e5d8aa57234f625826939dea257"
         },
         "readingTrace": {
@@ -28759,10 +28755,10 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "Oak",
-              "reading": "<oak>",
-              "normalized": "<oak>",
-              "method": "literal-english-source"
+              "surface": "オーク",
+              "reading": "オーク",
+              "normalized": "オオク",
+              "method": "unidic-pron"
             },
             {
               "surface": "が",
@@ -28870,7 +28866,7 @@
             }
           ]
         },
-        "audioSha256": "9f0169226fd4a7fb609b2b297afbd3c0e518bdbbf76fff0b061fb1fca02f37ea"
+        "audioSha256": "9d6e2ac5748fd2fcc78f9e9d40bae7eda4262915a8a43d9d2fa94847611b1642"
       }
     },
     "gram-comparison-11/sentence/0": {
@@ -29234,20 +29230,20 @@
     },
     "gram-comparison-15/sentence/0": {
       "key": "gram-comparison-15/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/cb69bb37a32e94c31689eda4f4269bca.m4a",
-      "sha256": "2d2bb97d3bcf4e3f5dbc657fe4b0dcb4a628492651140d8897a7ba8a2abfbf1a",
+      "src": "./audio/generated/ja/jf_alpha/cf1dd6436c571a3602eb90632f14ed7a.m4a",
+      "sha256": "9a6e2a94b6792f136400fdd2f66ab67217d8ec5b03d8598747bbab8e67911e1a",
       "voiceId": "jf_alpha",
-      "fingerprint": "0736f08c456d4a17fc10fd591c4147f504524fcdb4781fd4c458ebdc8b18ef9c",
+      "fingerprint": "4792a6e560ce0949d9cc1da2b621e1ba680e3c64212ba96a2fdf86bc421ec63d",
       "expected": "2回目の塗装では予定よりはるかに少ない塗料で済んだため、未開封の1缶を返品しました。",
       "spoken": "にかい目の塗装では予定よりはるかに少ない塗料で済んだため、未開封の一缶を返品しました。",
       "recognized": "2回目の塗装では、予定よりはるかに少ない塗料で済んだために、開封の一巻を返品しました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.76,
+          "end": 6.96,
           "text": "2回目の塗装では、予定よりはるかに少ない塗料で済んだために、開封の一巻を返品しました。",
-          "avgLogprob": -0.1285476437274446,
-          "noSpeechProb": 5.0607755833209644e-12
+          "avgLogprob": -0.1294955237114683,
+          "noSpeechProb": 4.969610226807086e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -29306,8 +29302,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "c74f71e3db3b637a940aa936ffa3f97fb66505413503c73003f9f5da5b4842e5"
         },
         "readingTrace": {
@@ -29640,7 +29637,7 @@
             }
           ]
         },
-        "audioSha256": "2d2bb97d3bcf4e3f5dbc657fe4b0dcb4a628492651140d8897a7ba8a2abfbf1a"
+        "audioSha256": "9a6e2a94b6792f136400fdd2f66ab67217d8ec5b03d8598747bbab8e67911e1a"
       }
     },
     "gram-passive-01/sentence/0": {
@@ -30668,20 +30665,20 @@
     },
     "gram-passive-13/sentence/0": {
       "key": "gram-passive-13/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/0e35f3978d5cb97fe569eeaae0f19412.m4a",
-      "sha256": "a57a79bdcb83b00d62ab859a28b063d9278735976e43496da7312217c62d5152",
+      "src": "./audio/generated/ja/jf_alpha/299e3850770dcd425ce2733e02553bf4.m4a",
+      "sha256": "ee84f892074a5080a41a1cee4014fd20c19e161eb961aa71e1bb77c09fdafbf1",
       "voiceId": "jf_alpha",
-      "fingerprint": "3f3b27416ff487efc0b48b1bc0be9accbc6a2055af2493f96ffd5accd145dd84",
+      "fingerprint": "4f94bcd3b4c0e610aaea38ae675a18ff8d577e823c7f567cd998aa4d5cdba318",
       "expected": "口座の移管には、所有者2名が署名した書面が必要です。",
       "spoken": "口座の移管には、所有者二名が署名した書面が必要です。",
       "recognized": "口座の遺憾には所有者に名が署名した書面が必要です",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.14,
+          "end": 4.22,
           "text": "口座の遺憾には所有者に名が署名した書面が必要です",
-          "avgLogprob": -0.08933807302404333,
-          "noSpeechProb": 5.311751906378337e-12
+          "avgLogprob": -0.06747395959165362,
+          "noSpeechProb": 5.533263951196243e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -30739,8 +30736,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "bcc73a3410f91547504c1a50949cd43e6a19a3d71da50c2f195bc1269987e5bb"
         },
         "readingTrace": {
@@ -30953,25 +30951,25 @@
             }
           ]
         },
-        "audioSha256": "a57a79bdcb83b00d62ab859a28b063d9278735976e43496da7312217c62d5152"
+        "audioSha256": "ee84f892074a5080a41a1cee4014fd20c19e161eb961aa71e1bb77c09fdafbf1"
       }
     },
     "gram-passive-15/sentence/0": {
       "key": "gram-passive-15/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/d0de1dd548f9235e2fa3b6ec264bfb91.m4a",
-      "sha256": "c718d65676e2fb9019b7abfd479d7e1189818a4d9bd9f1479bb3dc0c3ee69720",
+      "src": "./audio/generated/ja/jf_alpha/8dd4736092557287a1178792b39b57f9.m4a",
+      "sha256": "3470587d149b131a77cd0a2959bfdc7fe593ce0d16e0c5c7b14518720eb06794",
       "voiceId": "jf_alpha",
-      "fingerprint": "86d4048180bbdf823b695a08b9df395077886716a8f87225a1af63e15fc6a9b9",
+      "fingerprint": "a17def527c8a46fa70e278ca90339c829c33418c5ef4864a17af9436399b2d76",
       "expected": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
       "spoken": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
       "recognized": "先週の金曜日仮設協が初めて、自転車利用者に開放されました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.92,
+          "end": 5.0600000000000005,
           "text": "先週の金曜日仮設協が初めて、自転車利用者に開放されました。",
-          "avgLogprob": -0.12069804740674568,
-          "noSpeechProb": 3.727036908263148e-12
+          "avgLogprob": -0.09633627804842862,
+          "noSpeechProb": 5.11097110814096e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -31025,8 +31023,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "ff369a3bc8c8524b18de2ab0d0daf6bb1ab17c3ae1ce6cb636333330ca74b2d0"
         },
         "readingTrace": {
@@ -31251,7 +31250,7 @@
             }
           ]
         },
-        "audioSha256": "c718d65676e2fb9019b7abfd479d7e1189818a4d9bd9f1479bb3dc0c3ee69720"
+        "audioSha256": "3470587d149b131a77cd0a2959bfdc7fe593ce0d16e0c5c7b14518720eb06794"
       }
     },
     "gram-inversion-04/sentence/0": {
@@ -31880,20 +31879,20 @@
     },
     "gram-inversion-10/sentence/0": {
       "key": "gram-inversion-10/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/463f13c78729c2e8b44f441d734dd4dc.m4a",
-      "sha256": "7f5854f307d7960485fd6e69aa09c10c1dcdd42340c783525bf2e7027e2a52c6",
+      "src": "./audio/generated/ja/jf_alpha/ad715e16be66fc1d4271fb187a74b6de.m4a",
+      "sha256": "0cfa5781f5e4308d6ee9e4688907c7a300c6ef3f1e1750b1f2fd5a8165734c01",
       "voiceId": "jf_alpha",
-      "fingerprint": "39782867ee9d6cfe9de992d57cb52da2837ed36f70ca51e179e1689188cba058",
+      "fingerprint": "24e23c23c6321c72ba22d28080967aa12969b741a2606889d25b7c1dc3bdf3a5",
       "expected": "2本の鍵が両方返却されて初めて、警備員は保証金を返しました。",
       "spoken": "にほんの鍵が両方返却されて初めて、警備員は保証金を返しました。",
       "recognized": "日本の鍵が両方返却されて初めて、警備員は保証金を返しました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.5600000000000005,
+          "end": 5.76,
           "text": "日本の鍵が両方返却されて初めて、警備員は保証金を返しました。",
-          "avgLogprob": -0.06152923179395271,
-          "noSpeechProb": 6.41496534711794e-12
+          "avgLogprob": -0.06514466892589223,
+          "noSpeechProb": 5.424607377874091e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -31946,8 +31945,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "a6bc26bd226cbfaa7ff492af74c968a3df255b96e88a98f6440d824b82aa8b61"
         },
         "readingTrace": {
@@ -32184,7 +32184,7 @@
             }
           ]
         },
-        "audioSha256": "7f5854f307d7960485fd6e69aa09c10c1dcdd42340c783525bf2e7027e2a52c6"
+        "audioSha256": "0cfa5781f5e4308d6ee9e4688907c7a300c6ef3f1e1750b1f2fd5a8165734c01"
       }
     },
     "gram-inversion-15/sentence/0": {
@@ -32784,20 +32784,20 @@
     },
     "gram-pronouns-09/sentence/0": {
       "key": "gram-pronouns-09/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/9a402d71dfcf9874083780d0d2b7bb3f.m4a",
-      "sha256": "3b9b6f5e16b3eef5132ff18eb638daf1f2045746c682e96d5c73289194927299",
+      "src": "./audio/generated/ja/jf_alpha/a071bacbc3db6f1d102845213a66b479.m4a",
+      "sha256": "f73eeb21d4dad4adeb8028e62c1bedcc16d93850641f55280fb869b0404f3b26",
       "voiceId": "jf_alpha",
-      "fingerprint": "80a84d7fc2289763f28934c4dfdf59a35cfccc9a6a41489a93fc730f91a53e03",
+      "fingerprint": "625ad7c6d8b6acfa7779a6b054fd89e117a8642a7405e675340edc26a2d01a17",
       "expected": "その機関は来訪者一人ひとりにバッジを渡し、上階では着用するよう求めました。",
       "spoken": "その機関は来訪者一人ひとりにバッジを渡し、上階では着用するよう求めました。",
       "recognized": "その期間は来訪者一人一人に罰を渡し、上海では着用するよう求めました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.08,
+          "end": 6.24,
           "text": "その期間は来訪者一人一人に罰を渡し、上海では着用するよう求めました。",
-          "avgLogprob": -0.11156491738031893,
-          "noSpeechProb": 6.5200288744404755e-12
+          "avgLogprob": -0.10256179619361372,
+          "noSpeechProb": 7.094394516293789e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -32865,8 +32865,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "3474a3ee0ab930143bf2c96a3269e09b693709e0d810016e8f5b36b10732b8cf"
         },
         "readingTrace": {
@@ -33103,7 +33104,7 @@
             }
           ]
         },
-        "audioSha256": "3b9b6f5e16b3eef5132ff18eb638daf1f2045746c682e96d5c73289194927299"
+        "audioSha256": "f73eeb21d4dad4adeb8028e62c1bedcc16d93850641f55280fb869b0404f3b26"
       }
     },
     "gram-pronouns-10/sentence/0": {
@@ -33502,20 +33503,20 @@
     },
     "gram-pronouns-13/sentence/0": {
       "key": "gram-pronouns-13/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/f603aef8ffee338dfa84f9898f512698.m4a",
-      "sha256": "3ea833b61cf64af56985e5b5d80c704d0da16415b997c3ed6c2ce6a3ad1793ca",
+      "src": "./audio/generated/ja/jf_alpha/1647b4fefc00775241ea20154bb26369.m4a",
+      "sha256": "3eae59dc6dd8ddc7d6eb057dd465021ed45669bac11382c68488c94f29d5a281",
       "voiceId": "jf_alpha",
-      "fingerprint": "cdd446c8f069bf3adb7491b58755f6b816dfa0ed1f16abc3191227dde7c71e2c",
+      "fingerprint": "57fec5e636971e4c6fa2905f6ed22003bbd086a46995962bc4a169a919c45a84",
       "expected": "取締役会は Mara を議長に任命し、会議日を決める権限を与えました。",
       "spoken": "取締役会は Mara を議長に任命し、会議日を決める権限を与えました。",
-      "recognized": "取締役会はマウルオ議長に任命し会議費を決める権限を与えました",
+      "recognized": "取締役会はマールを議長に任命し会議費を決める権限を与えました",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.48,
-          "text": "取締役会はマウルオ議長に任命し会議費を決める権限を与えました",
-          "avgLogprob": -0.11001339043889727,
-          "noSpeechProb": 7.765240707391374e-12
+          "end": 5.66,
+          "text": "取締役会はマールを議長に任命し会議費を決める権限を与えました",
+          "avgLogprob": -0.09116122652502621,
+          "noSpeechProb": 6.293140054208779e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -33538,13 +33539,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.1935,
+      "errorRate": 0.1613,
       "phonemeErrorRate": 0.0533,
       "differences": [
         {
           "operation": "replace",
-          "expected": "m a r a を",
-          "recognized": "マ ウ ル オ"
+          "expected": "m a r a",
+          "recognized": "マ ー ル"
         },
         {
           "operation": "replace",
@@ -33557,13 +33558,13 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "取締役会は Mara を議長に任命し、会議日を決める権限を与えました。",
-        "recognized": "取締役会はマウルオ議長に任命し会議費を決める権限を与えました",
+        "recognized": "取締役会はマールを議長に任命し会議費を決める権限を与えました",
         "reasons": [
           "non-equivalent-morae-remain",
           "ambiguous-contextual-kanji:日"
         ],
         "normalizedExpected": "トリシマリヤクカイワ<mara>オギチョオニニンメエシカイギヒオキメルケンゲンオアタエマシタ",
-        "normalizedRecognized": "トリシマリヤクカイワマウルオギチョオニニンメエシカイギヒオキメルケンゲンオアタエマシタ",
+        "normalizedRecognized": "トリシマリヤクカイワマアルオギチョオニニンメエシカイギヒオキメルケンゲンオアタエマシタ",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -33574,8 +33575,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "7e4c8748eb80fd76e467066efa47fe56bf29efe69fe105d21fc197c64422d6df"
         },
         "readingTrace": {
@@ -33721,15 +33723,15 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "マウ",
-              "reading": "マウ",
-              "normalized": "マウ",
+              "surface": "マール",
+              "reading": "マール",
+              "normalized": "マアル",
               "method": "unidic-pron"
             },
             {
-              "surface": "ルオ",
-              "reading": "ルオ",
-              "normalized": "ルオ",
+              "surface": "を",
+              "reading": "オ",
+              "normalized": "オ",
               "method": "unidic-pron"
             },
             {
@@ -33812,25 +33814,25 @@
             }
           ]
         },
-        "audioSha256": "3ea833b61cf64af56985e5b5d80c704d0da16415b997c3ed6c2ce6a3ad1793ca"
+        "audioSha256": "3eae59dc6dd8ddc7d6eb057dd465021ed45669bac11382c68488c94f29d5a281"
       }
     },
     "gram-nonfinite-05/sentence/0": {
       "key": "gram-nonfinite-05/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/80f1818e2c8a7b7c43ff86baa3932244.m4a",
-      "sha256": "fadd3fa58d251602ae539534b97795407d797ab5a493cacadaf43dc23bc36978",
+      "src": "./audio/generated/ja/jf_alpha/0bd49949f5ba93f3bc750bd7a14c880a.m4a",
+      "sha256": "e87808752ddb9d420e3cee34f44c86ee331998a07b9c62eb8a64a7f267e21363",
       "voiceId": "jf_alpha",
-      "fingerprint": "5f4f621cac11fd869d9f214e1fb9f5aefb78d737241d0039b3cc158e997f4b33",
+      "fingerprint": "4b88862e343b45a51de86ad39e7b687a1891d0f683789c6f37d8a59fe0b7ea87",
       "expected": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
       "spoken": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
       "recognized": "クレーンが停止するまで職員は門に近づか内容を求められています",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.94,
+          "end": 5.12,
           "text": "クレーンが停止するまで職員は門に近づか内容を求められています",
-          "avgLogprob": -0.06837042446794181,
-          "noSpeechProb": 5.177473900996876e-12
+          "avgLogprob": -0.07399810696470327,
+          "noSpeechProb": 4.3805870389435064e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -33883,8 +33885,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "82277a03551f2fbcac6a8b90268c7717733289b1b5fa587f547d20654945c64e"
         },
         "readingTrace": {
@@ -34097,7 +34100,7 @@
             }
           ]
         },
-        "audioSha256": "fadd3fa58d251602ae539534b97795407d797ab5a493cacadaf43dc23bc36978"
+        "audioSha256": "e87808752ddb9d420e3cee34f44c86ee331998a07b9c62eb8a64a7f267e21363"
       }
     },
     "gram-nonfinite-07/sentence/0": {
@@ -36752,20 +36755,20 @@
     },
     "gram-agreement-01/sentence/0": {
       "key": "gram-agreement-01/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/783a578993810e78173f163b9352b9c9.m4a",
-      "sha256": "81fcb46979b63c618ef1d01af1e63ca2c855832e2e8d06ab876d424ad82c83f2",
+      "src": "./audio/generated/ja/jf_alpha/b10f8941fa724c2b193345fddfa3c22a.m4a",
+      "sha256": "b40ec6d13f7502bf9bea4cb17697d8627704732e21c26df5e2471e6579f2dc30",
       "voiceId": "jf_alpha",
-      "fingerprint": "f7ae6c3308ecbf5648617047ced4e0950459ebee113d7de453914a8d11fd61ce",
+      "fingerprint": "8b3f52b129291ce5958f3885226e85a4d6819b15574fba7e1ed420ed78a0033f",
       "expected": "各ロッカーには、ヘルメット用の専用フックがあります。",
       "spoken": "各ロッカーには、ヘルメット用の専用フックがあります。",
-      "recognized": "角ロッカーにはヘルメット用の専用服があります。",
+      "recognized": "各ロッカーにはヘルメット用の専用服があります。",
       "segments": [
         {
           "start": 0.0,
-          "end": 3.2600000000000002,
-          "text": "角ロッカーにはヘルメット用の専用服があります。",
-          "avgLogprob": -0.1423142293225164,
-          "noSpeechProb": 5.087639077389072e-12
+          "end": 3.38,
+          "text": "各ロッカーにはヘルメット用の専用服があります。",
+          "avgLogprob": -0.1262286849643873,
+          "noSpeechProb": 3.701026898145221e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -36788,14 +36791,9 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "CER",
-      "errorRate": 0.1667,
-      "phonemeErrorRate": 0.0612,
+      "errorRate": 0.125,
+      "phonemeErrorRate": 0.0204,
       "differences": [
-        {
-          "operation": "replace",
-          "expected": "各",
-          "recognized": "角"
-        },
         {
           "operation": "replace",
           "expected": "フ ッ ク",
@@ -36807,12 +36805,12 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "各ロッカーには、ヘルメット用の専用フックがあります。",
-        "recognized": "角ロッカーにはヘルメット用の専用服があります。",
+        "recognized": "各ロッカーにはヘルメット用の専用服があります。",
         "reasons": [
           "non-equivalent-morae-remain"
         ],
         "normalizedExpected": "カクロッカアニワヘルメットヨオノセンヨオフックガアリマス",
-        "normalizedRecognized": "カドロッカアニワヘルメットヨオノセンヨオフクガアリマス",
+        "normalizedRecognized": "カクロッカアニワヘルメットヨオノセンヨオフクガアリマス",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -36823,8 +36821,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "3c4e9b9491eed2d7a230d040d7bb87ee0adeeb023d5da255d6eed2f1f80b7eba"
         },
         "readingTrace": {
@@ -36904,9 +36903,9 @@
           ],
           "recognized": [
             {
-              "surface": "角",
-              "reading": "カド",
-              "normalized": "カド",
+              "surface": "各",
+              "reading": "カク",
+              "normalized": "カク",
               "method": "unidic-pron"
             },
             {
@@ -36977,7 +36976,7 @@
             }
           ]
         },
-        "audioSha256": "81fcb46979b63c618ef1d01af1e63ca2c855832e2e8d06ab876d424ad82c83f2"
+        "audioSha256": "b40ec6d13f7502bf9bea4cb17697d8627704732e21c26df5e2471e6579f2dc30"
       }
     },
     "gram-agreement-07/sentence/0": {
@@ -39273,20 +39272,20 @@
     },
     "gram-quantity-12/sentence/0": {
       "key": "gram-quantity-12/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/9a91a5ab48813c73be379a4eee35fb6f.m4a",
-      "sha256": "2c9099b0b623e07237f66f138359a4f7eaf7b3e41d9c04be6b54c6be33e4e2ab",
+      "src": "./audio/generated/ja/jf_alpha/d90faf8159691a883658c58525fc6ae5.m4a",
+      "sha256": "1f31e0a451c4f65425b1e402ec937776c6bf1628518b8326af14b6bd07cfabff",
       "voiceId": "jf_alpha",
-      "fingerprint": "5889f6d5359d23ee6427797a6fab43519457e1e5da9387e03ae4a192d4a1f807",
+      "fingerprint": "45017304134ccb07a2ef392273ef87698152d3556a03fd4566dec14a1965b034",
       "expected": "積み込み担当者は、額装された版画の角を守るため、少量の緩衝材を使いました。",
       "spoken": "積み込み担当者は、額装された版画の角を守るため、少量の緩衝材を使いました。",
       "recognized": "積み込み担当者は、学装された版画の稼働を守るため、少量の干渉剤を使いました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.46,
+          "end": 6.68,
           "text": "積み込み担当者は、学装された版画の稼働を守るため、少量の干渉剤を使いました。",
-          "avgLogprob": -0.10566408339549195,
-          "noSpeechProb": 6.414835242857242e-12
+          "avgLogprob": -0.11611487496305596,
+          "noSpeechProb": 5.5242754815054695e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -39350,8 +39349,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "e5268402bb4f91ad29ebf7db7cb7e69e1501e68db521e2a7d990357ee884e190"
         },
         "readingTrace": {
@@ -39630,7 +39630,7 @@
             }
           ]
         },
-        "audioSha256": "2c9099b0b623e07237f66f138359a4f7eaf7b3e41d9c04be6b54c6be33e4e2ab"
+        "audioSha256": "1f31e0a451c4f65425b1e402ec937776c6bf1628518b8326af14b6bd07cfabff"
       }
     },
     "gram-quantity-13/sentence/0": {
@@ -40532,20 +40532,20 @@
     },
     "gram-sequence-09/sentence/0": {
       "key": "gram-sequence-09/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/c6f74800b69149d38b7d002e83c2cb8a.m4a",
-      "sha256": "7c03d2cf76219f275c6e00f740678d4f472e503aa698d9199eb53b8547202984",
+      "src": "./audio/generated/ja/jf_alpha/27a750780e8c2713b512c0979bdbf9af.m4a",
+      "sha256": "1120264e0ce4a30e5af6df4b8e95185654eda3cb92b633f977ff0f8126f4472f",
       "voiceId": "jf_alpha",
-      "fingerprint": "bba56d4ceb32d65dbb0fb8508dab11fabefcf750d809d6ad5c84172898c0dee9",
+      "fingerprint": "f8013fa29a36054933f32a894d134a8dd23f12135914ec7e05c55730c2589dff",
       "expected": "金曜日にお戻りになるころには、審査委員会は最終候補者3人を選び終えています。",
       "spoken": "金曜日にお戻りになるころには、審査委員会は最終候補者さんにんを選び終えています。",
       "recognized": "金曜日にお戻りになる頃には、審査委員会は最終候補者3人を選び終えています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.46,
+          "end": 6.62,
           "text": "金曜日にお戻りになる頃には、審査委員会は最終候補者3人を選び終えています。",
-          "avgLogprob": -0.04044895491948942,
-          "noSpeechProb": 4.909513767747953e-12
+          "avgLogprob": -0.04055128955259556,
+          "noSpeechProb": 4.535135721822625e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -40600,8 +40600,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "6bf2746f011604edce592cc5c57cc3827cf7668f67d26e55b4dac7044cea3fd2"
         },
         "readingTrace": {
@@ -40922,7 +40923,7 @@
             }
           ]
         },
-        "audioSha256": "7c03d2cf76219f275c6e00f740678d4f472e503aa698d9199eb53b8547202984"
+        "audioSha256": "1120264e0ce4a30e5af6df4b8e95185654eda3cb92b633f977ff0f8126f4472f"
       }
     },
     "gram-sequence-10/sentence/0": {
@@ -41291,20 +41292,20 @@
     },
     "gram-linkers-01/sentence/0": {
       "key": "gram-linkers-01/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/4c2d47ab865068a40237d5475ba2ee8e.m4a",
-      "sha256": "b9de5b5896f568a73b61b8189235c61bb9ea69ec1bb81420ca612f5d7741a499",
+      "src": "./audio/generated/ja/jf_alpha/bb98e9f38712a81e67a3a736678ad5b3.m4a",
+      "sha256": "b15baebefc4eb02269bb04d5f5d796c645bb7df75792d01927d8d88c5d8ce4bb",
       "voiceId": "jf_alpha",
-      "fingerprint": "ad3cb10d7993058b722b735a2e176977e7925fb15b3e98792839d60d7db68ac3",
+      "fingerprint": "bef52963263429f2506e8baac5e8e55c5af0f9719e9b4dd692fb3d8ac75fc624",
       "expected": "西棟の照明が消えても、エレベーターは通常どおり動いていました。",
       "spoken": "西棟の照明が消えても、エレベーターは通常どおり動いていました。",
       "recognized": "西東の照明が消えてもエレベーターは通常通り動いていました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.38,
+          "end": 4.6000000000000005,
           "text": "西東の照明が消えてもエレベーターは通常通り動いていました。",
-          "avgLogprob": -0.0636132863851694,
-          "noSpeechProb": 5.9426812429319575e-12
+          "avgLogprob": -0.0572770547408324,
+          "noSpeechProb": 4.884657782422419e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -41362,8 +41363,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "ad7358503ff5c93de38b8f9dca8a7a54f73984eec6461f99c7ff84ac9c4be0af"
         },
         "readingTrace": {
@@ -41564,7 +41566,7 @@
             }
           ]
         },
-        "audioSha256": "b9de5b5896f568a73b61b8189235c61bb9ea69ec1bb81420ca612f5d7741a499"
+        "audioSha256": "b15baebefc4eb02269bb04d5f5d796c645bb7df75792d01927d8d88c5d8ce4bb"
       }
     },
     "gram-linkers-04/sentence/0": {
@@ -44805,20 +44807,20 @@
     },
     "gram-lexis-09/sentence/0": {
       "key": "gram-lexis-09/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/3c15e39553e0e530bc56d66b89e57857.m4a",
-      "sha256": "d4173b8bde20d49499ad6ead12f5dae2dc91ac9640e69d2a8f704feee873c703",
+      "src": "./audio/generated/ja/jf_alpha/46d6f950a1199de13c18cc7b9d142fe3.m4a",
+      "sha256": "a6a64eb74a7a0290674458395456bcfbbc73169c9895917c3f610a2cb216044c",
       "voiceId": "jf_alpha",
-      "fingerprint": "bad12b3995e09472e8638f86c6029b145375d720bba698e80061c8f36068ac12",
+      "fingerprint": "2f88d912a77688f61c83ceb71207e0fd134920037331c219b2f3d84229cce971",
       "expected": "エアコンは重さが半トンあるため、屋上に上げるにはクレーンが必要です。",
       "spoken": "エアコンは重さが半トンあるため、屋上に上げるにはクレーンが必要です。",
       "recognized": "イヤコンは重さが半トンあるため、屋上にあげるにはクレーンが必要です。",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.86,
+          "end": 5.04,
           "text": "イヤコンは重さが半トンあるため、屋上にあげるにはクレーンが必要です。",
-          "avgLogprob": -0.08496296044551965,
-          "noSpeechProb": 5.029710588994041e-12
+          "avgLogprob": -0.08444163293549509,
+          "noSpeechProb": 4.7814048727279346e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -44876,8 +44878,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "ccc08b2a2b13bc7552292f535c83f73dc3f54e0cb6aac670e8f13749962a0c54"
         },
         "readingTrace": {
@@ -45102,7 +45105,7 @@
             }
           ]
         },
-        "audioSha256": "d4173b8bde20d49499ad6ead12f5dae2dc91ac9640e69d2a8f704feee873c703"
+        "audioSha256": "a6a64eb74a7a0290674458395456bcfbbc73169c9895917c3f610a2cb216044c"
       }
     },
     "gram-lexis-13/sentence/0": {
@@ -45423,20 +45426,20 @@
     },
     "gram-lexis-14/sentence/0": {
       "key": "gram-lexis-14/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/389d8f990b1a6685bb1a4a419757b404.m4a",
-      "sha256": "542d431d5abfa0bedd9175d455438fbbc90a45ea14eca41ccf22caf46b48d6a7",
+      "src": "./audio/generated/ja/jf_alpha/48b0f549e006794ff40ddae0df8f88f1.m4a",
+      "sha256": "fc2a49541d0452d013ef298b9dd61bbe340541dc65b605a59c1ba8343cb0c044",
       "voiceId": "jf_alpha",
-      "fingerprint": "da404fda29fb578b54d64953fe6a36dc1efbaff9ab3fb058975951af3c3740b9",
+      "fingerprint": "2578101dc6570158f18cddca444019199de41944844c3f6c03f7c1b998db5207",
       "expected": "引換券をご提示のうえ、横の窓口で再発行のチケットをお受け取りください。",
       "spoken": "引換券をご提示のうえ、横の窓口で再発行のチケットをお受け取りください。",
       "recognized": "引換券をご提示の上横の窓口で再発行のチケットを受け取りください。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.18,
+          "end": 5.34,
           "text": "引換券をご提示の上横の窓口で再発行のチケットを受け取りください。",
-          "avgLogprob": -0.07141078110126887,
-          "noSpeechProb": 4.75460903287539e-12
+          "avgLogprob": -0.07419074414407506,
+          "noSpeechProb": 5.840254061612038e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -45494,8 +45497,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "33a5b872d83084a6c881b8f1a5e7678005609fb29497639d9bbf0c14b59040f3"
         },
         "readingTrace": {
@@ -45726,7 +45730,7 @@
             }
           ]
         },
-        "audioSha256": "542d431d5abfa0bedd9175d455438fbbc90a45ea14eca41ccf22caf46b48d6a7"
+        "audioSha256": "fc2a49541d0452d013ef298b9dd61bbe340541dc65b605a59c1ba8343cb0c044"
       }
     },
     "gram-lexis-16/sentence/0": {
@@ -48867,20 +48871,20 @@
     },
     "gram-lexis-36/sentence/0": {
       "key": "gram-lexis-36/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/a2b3e63a10c4458b131b47f734ddf2e6.m4a",
-      "sha256": "357ea6313485ad32d3845c7006adc7458894330b2c3705789525a27796ecc604",
+      "src": "./audio/generated/ja/jf_alpha/90c281d6682797a58e8e84dfde6aa20a.m4a",
+      "sha256": "fe3497963d9e38a8ddf234b39784374c25f68fb6cf903d09cf91d5cd1fb14281",
       "voiceId": "jf_alpha",
-      "fingerprint": "5d5122f7c558c79eb726ca6f2bfc39c3b6ca58538bd9c09d94f74256cad893dd",
+      "fingerprint": "2a3360a16aff0cac9acbd7fe0420a5a23dfbd45c2089e388e2a7009623124239",
       "expected": "保証の申請では、受取人が署名した受領書が、荷物が実際に届いたことの証明になります。",
       "spoken": "保証の申請では、受取人が署名した受領書が、荷物が実際に届いたことの証明になります。",
-      "recognized": "保証の申請では、受取人が署名した受領所が荷物が実際に届いたことの証明になります。",
+      "recognized": "保証の申請では、受取人が署名した受領書が荷物が実際に届いたことの証明になります。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.94,
-          "text": "保証の申請では、受取人が署名した受領所が荷物が実際に届いたことの証明になります。",
-          "avgLogprob": -0.06156707225843917,
-          "noSpeechProb": 4.861575985531941e-12
+          "end": 7.16,
+          "text": "保証の申請では、受取人が署名した受領書が荷物が実際に届いたことの証明になります。",
+          "avgLogprob": -0.052231111498766164,
+          "noSpeechProb": 5.290292509618766e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -48901,31 +48905,24 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.0263,
+      "errorRate": 0.0,
       "phonemeErrorRate": 0.0,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "書",
-          "recognized": "所"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "保証の申請では、受取人が署名した受領書が、荷物が実際に届いたことの証明になります。",
-        "recognized": "保証の申請では、受取人が署名した受領所が荷物が実際に届いたことの証明になります。",
+        "recognized": "保証の申請では、受取人が署名した受領書が荷物が実際に届いたことの証明になります。",
         "reasons": [
-          "non-equivalent-morae-remain",
-          "phoneme-override-not-proven-by-dictionary-reading"
+          "exact-normalized-japanese-text"
         ],
         "normalizedExpected": "ホショオノシンセエデワウケトリヒトガショメエシタジュリョオショガニモツガジッサイニトドイタコトノショオメエニナリマス",
         "normalizedRecognized": "ホショオノシンセエデワウケトリヒトガショメエシタジュリョオショガニモツガジッサイニトドイタコトノショオメエニナリマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "written:保証の申請では受取人が署名した受領書が荷物が実際に届いたことの証明になります",
+        "proofRecognized": "written:保証の申請では受取人が署名した受領書が荷物が実際に届いたことの証明になります",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -48934,8 +48931,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "c33745e82b6baa8aa47970588d71e53a44d0ed265d6a611ed91ca17c75b17864"
         },
         "readingTrace": {
@@ -49171,7 +49169,7 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "所",
+              "surface": "書",
               "reading": "ショ",
               "normalized": "ショ",
               "method": "unidic-pron"
@@ -49256,7 +49254,7 @@
             }
           ]
         },
-        "audioSha256": "357ea6313485ad32d3845c7006adc7458894330b2c3705789525a27796ecc604"
+        "audioSha256": "fe3497963d9e38a8ddf234b39784374c25f68fb6cf903d09cf91d5cd1fb14281"
       }
     },
     "gram-lexis-37/sentence/0": {
@@ -51017,20 +51015,20 @@
     },
     "gram-lexis-49/sentence/0": {
       "key": "gram-lexis-49/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/35d1930f046947f7dd6999fbcf30abb3.m4a",
-      "sha256": "22d79abc082996d4ab762599a1d2e7a68bb9b81fce8a6aff459468cd07a70bd8",
+      "src": "./audio/generated/ja/jf_alpha/1da2cea51f0d7aedf4895b457dc8e93d.m4a",
+      "sha256": "3471cece714753532d55897352ba6c36b9b55aa9b6794352c495b03c07fbf8ab",
       "voiceId": "jf_alpha",
-      "fingerprint": "ec00fa650f669cbd6167743c8d01398b3788d39c26646e38bd8a2d5bca5fa779",
+      "fingerprint": "d0c593d6d9a75802104b71f0b188bf29ca88d9f2a10eb1a342a92df89a088311",
       "expected": "土曜日の研修への参加は任意です。",
       "spoken": "土曜日の研修への参加は任意です。",
-      "recognized": "土曜日の研修への参加は2位です。",
+      "recognized": "土曜日の研修への参加は2,2です。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.42,
-          "text": "土曜日の研修への参加は2位です。",
-          "avgLogprob": -0.09297383881428024,
-          "noSpeechProb": 3.431737749873265e-12
+          "end": 2.5,
+          "text": "土曜日の研修への参加は2,2です。",
+          "avgLogprob": -0.12807197674461032,
+          "noSpeechProb": 3.948350760923924e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -51059,7 +51057,7 @@
         {
           "operation": "replace",
           "expected": "任 意",
-          "recognized": "二 位"
+          "recognized": "二 二"
         }
       ],
       "comparison": {
@@ -51067,14 +51065,14 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "土曜日の研修への参加は任意です。",
-        "recognized": "土曜日の研修への参加は2位です。",
+        "recognized": "土曜日の研修への参加は2,2です。",
         "reasons": [
           "author-number-and-input-normalization",
           "non-equivalent-morae-remain",
           "phoneme-override-not-proven-by-dictionary-reading"
         ],
         "normalizedExpected": "ドヨオヒノケンシュウエノサンカワニンイデス",
-        "normalizedRecognized": "ドヨオヒノケンシュウエノサンカワニイデス",
+        "normalizedRecognized": "ドヨオヒノケンシュウエノサンカワニニデス",
         "proofExpected": null,
         "proofRecognized": null,
         "provenance": {
@@ -51085,8 +51083,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "81d8bc763dc56a298bd87b66f095e0b6d29e8160a9f6255b81c8318fd0ded61c"
         },
         "readingTrace": {
@@ -51208,9 +51207,9 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "位",
-              "reading": "イ",
-              "normalized": "イ",
+              "surface": "二",
+              "reading": "ニ",
+              "normalized": "ニ",
               "method": "unidic-pron"
             },
             {
@@ -51221,7 +51220,7 @@
             }
           ]
         },
-        "audioSha256": "22d79abc082996d4ab762599a1d2e7a68bb9b81fce8a6aff459468cd07a70bd8"
+        "audioSha256": "3471cece714753532d55897352ba6c36b9b55aa9b6794352c495b03c07fbf8ab"
       }
     },
     "gram-lexis-50/sentence/0": {
@@ -51590,20 +51589,20 @@
     },
     "gram-lexis-52/sentence/0": {
       "key": "gram-lexis-52/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/7e464b0ae9b6acb57be62c08c846a42c.m4a",
-      "sha256": "cb87f8b2c9f312d0eda65bd641c74d2445fa9b86e7b592a7395d2bd9f047e32f",
+      "src": "./audio/generated/ja/jf_alpha/572804d5cd2f9637eae351af62d4b481.m4a",
+      "sha256": "1dbfa70da899d23e105e52a444a35bb249f5869015df6e6db8fd3ad83f2443aa",
       "voiceId": "jf_alpha",
-      "fingerprint": "e07d67c9c482194c9aa4111e36370597ad9132d3e76d5adf18d4830f51e46d01",
+      "fingerprint": "8bea805f7e59c1e962e1c730c13de2841733b49955530f6ad0aabb2319f8c62d",
       "expected": "旧図面の経路は頑丈な壁で塞がれていたため、技師はそれを避ける迂回路を描きました。",
       "spoken": "旧図面の経路は頑丈な壁で塞がれていたため、技師はそれを避ける迂回路を描きました。",
       "recognized": "旧図面の経路は、頑丈な壁で塞がれていたため岸はそれを避ける迂回路を描きました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.32,
+          "end": 6.58,
           "text": "旧図面の経路は、頑丈な壁で塞がれていたため岸はそれを避ける迂回路を描きました。",
-          "avgLogprob": -0.0716689732339647,
-          "noSpeechProb": 6.5049146624751586e-12
+          "avgLogprob": -0.06961993972460429,
+          "noSpeechProb": 5.8857727719408e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -51656,8 +51655,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "c73df2bba053bf39084d85a4dc6ae8c791bc41ada3e6ea4fe8dd2d6551dff98c"
         },
         "readingTrace": {
@@ -51978,7 +51978,7 @@
             }
           ]
         },
-        "audioSha256": "cb87f8b2c9f312d0eda65bd641c74d2445fa9b86e7b592a7395d2bd9f047e32f"
+        "audioSha256": "1dbfa70da899d23e105e52a444a35bb249f5869015df6e6db8fd3ad83f2443aa"
       }
     },
     "gram-lexis-54/sentence/0": {
@@ -53110,20 +53110,20 @@
     },
     "gram-lexis-66/sentence/0": {
       "key": "gram-lexis-66/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/89a91a2a777a08932cec30aedf7bf95c.m4a",
-      "sha256": "aa2943414352b3c04e3ba1e7812b1f3cda062182504f4e2adc2c72d8c9e38bbc",
+      "src": "./audio/generated/ja/jf_alpha/c0b2ef5faffa27322aa225917fdb8dcd.m4a",
+      "sha256": "b7cc1d0678c03987ca75e6b4860c61a49f69ac54e02d369d69158ba371e0c4f0",
       "voiceId": "jf_alpha",
-      "fingerprint": "7f13b59751e01b3359100982bda901bd606da16c927d7a2090d5f5833255e5da",
+      "fingerprint": "ddcfe41ddee9daf958e7ccfcbad69d3c22449d6a5cb261afdd8780327b72e351",
       "expected": "そのコテージは8月中空いており、予約カレンダーでは月全体が予約可能となっています。",
       "spoken": "そのコテージははちがつ中空いており、予約カレンダーでは月全体が予約可能となっています。",
-      "recognized": "その固定時は8月10空いており、予約カレンダーでは月全体が予約可能となっています。",
+      "recognized": "その固定時は8月中空いており、予約カレンダーでは月全体が予約可能となっています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.54,
-          "text": "その固定時は8月10空いており、予約カレンダーでは月全体が予約可能となっています。",
-          "avgLogprob": -0.0576027930763207,
-          "noSpeechProb": 4.212004876824604e-12
+          "end": 6.68,
+          "text": "その固定時は8月中空いており、予約カレンダーでは月全体が予約可能となっています。",
+          "avgLogprob": -0.05152790042522706,
+          "noSpeechProb": 4.4829816941982514e-12
         }
       ],
       "recognitionMethod": "individual-beam5",
@@ -53144,37 +53144,31 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "CER",
-      "errorRate": 0.122,
+      "errorRate": 0.0976,
       "phonemeErrorRate": 0.0,
       "differences": [
         {
           "operation": "replace",
           "expected": "コ テ ー ジ",
           "recognized": "固 定 時"
-        },
-        {
-          "operation": "replace",
-          "expected": "中",
-          "recognized": "十"
         }
       ],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
         "expectedSpoken": "そのコテージははちがつ中空いており、予約カレンダーでは月全体が予約可能となっています。",
-        "recognized": "その固定時は8月10空いており、予約カレンダーでは月全体が予約可能となっています。",
+        "recognized": "その固定時は8月中空いており、予約カレンダーでは月全体が予約可能となっています。",
         "reasons": [
           "author-number-and-input-normalization",
-          "non-equivalent-morae-remain",
-          "ambiguous-contextual-kanji:中"
+          "exact-japanese-reading"
         ],
         "normalizedExpected": "ソノコテエジワハチガツジュウアイテオリヨヤクカレンダアデワガツゼンタイガヨヤクカノオトナッテイマス",
         "normalizedRecognized": "ソノコテエジワハチガツジュウアイテオリヨヤクカレンダアデワガツゼンタイガヨヤクカノオトナッテイマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "ソノコテエジワハチガツジュウアイテオリヨヤクカレンダアデワガツゼンタイガヨヤクカノオトナッテイマス",
+        "proofRecognized": "ソノコテエジワハチガツジュウアイテオリヨヤクカレンダアデワガツゼンタイガヨヤクカノオトナッテイマス",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -53183,8 +53177,9 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": false,
-          "ruleFileSha256": "bc19657c385d81e87fa03b1ade0fcc2d0e053ed8e85b0e3d80ac48136a84e54e",
-          "normalizerFileSha256": "972cdd07cc5151a3816ba86ddfc4bffc7900f1da978ea472a28adc7f64e2f66b",
+          "articlePolicyEnabled": true,
+          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
+          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
           "sourceTextSha256": "ee50f97e6c172e01a1577108f60f67399666a2268cd4774d68bd39a67343d90b"
         },
         "readingTrace": {
@@ -53366,7 +53361,7 @@
               "method": "unidic-pron"
             },
             {
-              "surface": "十",
+              "surface": "中",
               "reading": "ジュー",
               "normalized": "ジュウ",
               "method": "unidic-pron"
@@ -53475,7 +53470,7 @@
             }
           ]
         },
-        "audioSha256": "aa2943414352b3c04e3ba1e7812b1f3cda062182504f4e2adc2c72d8c9e38bbc"
+        "audioSha256": "b7cc1d0678c03987ca75e6b4860c61a49f69ac54e02d369d69158ba371e0c4f0"
       }
     },
     "gram-lexis-69/sentence/0": {
@@ -57068,8 +57063,8 @@
   },
   "generation": {
     "individual": {
-      "model": "whisper-large-v3-turbo",
-      "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+      "model": "whisper-large-v3",
+      "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
       "device": "cpu",
       "computeType": "int8",
       "packages": {

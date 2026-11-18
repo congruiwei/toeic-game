@@ -62,3 +62,51 @@ node scripts/validate-bank-audio.mjs
 ```
 
 `--strict-quality` 会把仍待复核的条目视为失败；常规音频校验保留其状态和警告，并检查既有真实重试证据。两种模式均不把这些条目假称为人工确认无误。
+
+## 第 3 步 · 原录音核验、重录与设备语音
+
+孤立英语词的复核保留原录音的解码 PCM，只在测试中把固定引导语和已知静音接在前面。同一强模型逐段转写；目标词必须与原音时间段绑定并通过独立读音检查。公开证据保存原始单词转写和带语境的转写，播放器仍使用独立单词。
+
+必要时对重录结果再核对。`lexicalEquivalences` 将词典等价限定到该条原文、实际音素和媒体 SHA；`crossModelChecks` 若存在，会另存完整模型的转写。各方法保留原始 Turbo 转写。
+
+日语重录沿用 Alpha，已确认的显式音素继续使用，部分专名和商务词在合成输入中写明读音。英语重录沿用各题的配声，调整语速，并对少数易混片段明确音素或展开缩写。每次重录使用新的媒体地址，并用强模型对实际新文件重新识别。对仍有分歧的独立英语词头，在已选音色中换声，再用完整 large-v3 无提示复核。
+
+| 语言 | 原录音语境核验通过 | 实际重录（来源键） | 最终重录转写吻合 | 重录后凭附加证据通过 | 重录后采用设备语音 | 仍需人工复听 |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| 英语 | 3 | 140 | 65 | 25 | 0 | 50 |
+| 日语 | 0 | 956 | 164 | 0 | 792 | 0 |
+
+日语清单中的 `fallbacks` 明确把二次识别仍有分歧的条目交给设备日语语音。下载包跳过这些录音，已经缓存过的旧文件也不会被该条目选用。设备语音由本机实时生成，音质和可用声音需在设备上确认。
+
+### 重点原句的结果
+
+| 来源键 | 结果 | 发布版本的原始转写 | 同一媒体的完整模型交叉转写（如有） |
+| --- | --- | --- | --- |
+| `p1-050/options/2/0` | 原录音通过 | The glass has fallen beneath the table. | — |
+| `p2-031/options/2/0` | 重录通过 | Most of the staff like the invitation design. | Most of the staff liked the invitation design. |
+| `p2-050/options/1/0` | 原录音通过 | We sponsored the concert in May. | — |
+| `p2-083/options/1/0` | 重录通过 | The guests arrived 10 minutes early. | — |
+| `p2-099/options/2/0` | 重录待复听 | I tighten the handle screws. | — |
+| `p2-199/options/0/0` | 重录通过 | The bidders use the same online submission portal. | The bidders used the same online submission portal. |
+| `p4-g04/turns/0/2` | 重录待复听 | That is encouraging, but two return trays had loose corners. | — |
+| `p3-g05/turns/2/0` | 原录音通过 | I assumed the store crew would install them. | — |
+| `p4-g05/turns/0/2` | 重录通过 | You ask to pause it while our large kiln is being replaced. | You asked to pause it while our large kiln is being replaced. |
+| `p3-g23-q1/options/3/0` | 重录待复听 | Fewer credits appear than expected. | — |
+| `p3-g40-q3/options/1/0` | 重录待复听 | to remove the pattern section. | — |
+| `p4-g40-q1/options/0/0` | 重录待复听 | Packaging complaints move to a separate list. | — |
+| `v-copy/example/0` | 原录音通过 | We've kept a certified copy of the signed permit and sent the sole original to the council. | — |
+| `v-lease/example/0` | 原录音通过 | The signed lease grants temporary possession of the courtyard in exchange for monthly rent. | — |
+| `v-restoration/example/0` | 重录待复听 | Experts return the original painted ceiling to its former appearance through careful restoration. | — |
+| `v-joint/example/0` | 重录待复听 | Both owners sign the joint agreement, which binds them together rather than individually. | — |
+| `v-detour/example/0` | 原录音通过 | The signed detour provides an alternative route around the entire road closure before rejoining our original road. | — |
+| `gram-passive-15/sentence/0` | 重录待复听 | Last Friday, the temporary bridge was open to cyclists for the first time. | — |
+| `gram-modifiers-12/sentence/0` | 原录音通过 | The forms misplaced during the move had to be printed again. | — |
+| `p2-020/audio/0` | 原录音通过 | Has the courier arrived yet? | — |
+| `p2-071/audio/0` | 原录音通过 | Aren't the children's tickets free? | — |
+| `p2-037/audio/0` | 重录通过 | Who will take minutes if Dana is presenting? | — |
+| `p1-004/options/1/0` | 重录通过 | Water is flowing from a can toward a plant. | — |
+| `p4-g05-q2/options/2/0` | 重录通过 | Sent the member a new wheel. | — |
+
+`data/audio/quality-review.json` 中每个 `repair` 包含实际的前后两版音频、原文和转写、所用方法、音素或语速变动及最终播放决定。 `contextProbes` 记录孤立词的附加证据。 `validation.json` 的人工复听条目仅包含游戏仍在使用的录音。
+
+英语最终复听清单含 50 条，其中 11 条为字母或代码。18 条重点过去式词尾中有 10 条通过，8 条保留复听。常规音频校验通过；启用 `--strict-quality` 时，50 条待复听是唯一失败原因。
