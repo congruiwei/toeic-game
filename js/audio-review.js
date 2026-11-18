@@ -5,7 +5,7 @@ const queueURL=new URL(QUEUE,location.href).href;
 let loadGeneration=0,queueWrites=Promise.resolve();
 const modelLabel=model=>model==='whisper-large-v3'?'完整 large-v3 识别':model==='whisper-large-v3-turbo'?'Turbo 识别':'当前自动转写';
 const labels={ok:'没问题',problem:'有问题',unsure:'听不出来'};
-const bankNames={part1:'Part 1',part2:'Part 2',listening:'Part 3 / 4',dictation:'听写',grammar:'语法',vocab:'单词',reading:'阅读',methods:'学习方法',terms:'术语'};
+const bankNames={part1:'Part 1',part2:'Part 2',listening:'Part 3 / 4',dictation:'听写',grammar:'语法',vocab:'单词',reading:'阅读',methods:'学习方法',terms:'术语',labels:'选项字母'};
 const order={part1:0,part2:1,listening:2,dictation:2,grammar:3,vocab:4,reading:5};
 const $=id=>document.getElementById(id),esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const record=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
