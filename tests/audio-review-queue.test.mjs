@@ -68,3 +68,7 @@ test('current primary full ASR is labeled accurately and does not inherit old Tu
  assert.equal(entry.recognitionModel,'whisper-large-v3');assert.equal(entry.fullRecognition,undefined);assert.equal(entry.recognized,a.recognized);
  a.sha256='f'.repeat(64);assert.throws(()=>makeReviewQueue(f),/Current ASR binding/);
 });
+test('a newly recorded matched item stays in the exact-SHA human listening queue',()=>{
+ const f=fixture(),row=f.result.unresolvedItems[0];row.humanReview={status:'required',reason:'新录音尚未复听'};row.asrStatus='matched';f.audits.get('ja:reading').records['j/text/0'].status='matched';
+ const out=makeReviewQueue(f).entries.find(x=>x.token===row.token);assert.equal(out.reviewStatus,'pending-human-review');assert.equal(out.asrStatus,'matched');assert.equal(out.reason,'新录音尚未复听');assert.equal(out.sha256,f.packs.get('ja:reading').clips['j/text/0'].sha256);
+});

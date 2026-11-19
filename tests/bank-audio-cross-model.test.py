@@ -57,4 +57,11 @@ class Cross(unittest.TestCase):
   for segments in [[],[{'text':'other text','start':0,'end':1}],[{'text':'The staff signed the report.','start':float('nan'),'end':2}]]:
    u,c,o,row,f=fixture();f['segments']=segments
    with self.assertRaises(ValueError):m.assess(u,c,o,row,f,cmp,normalize,ev)
+ def test_node_integral_float_serialization_keeps_exact_historical_payloads(self):
+  u,c,o,row,f=fixture();f['recognitionGeneration']['temperature']=0.0;f['fingerprint']=m.fingerprint(f['recognitionGeneration'],c);f['segments'][0].update(start=0.0,end=2.0);o['segments'][0].update(start=0.0,end=2.0);row['repair']['candidate']['asr']=copy.deepcopy(o)
+  p=m.assess(u,c,o,row,f,cmp,normalize,ev);row['crossModelChecks']=[p];a=m.accepted_record(p)
+  after=m.json_semantics({'unit':u,'clip':c,'row':row,'record':a})
+  self.assertTrue(m.valid_record(after['unit'],after['clip'],after['record'],after['row'],cmp,normalize,ev))
+  after['row']['crossModelChecks'][0]['fullASR']['recognized']='Different transcript.'
+  self.assertFalse(m.valid_record(after['unit'],after['clip'],after['record'],after['row'],cmp,normalize,ev))
 if __name__=='__main__':unittest.main(verbosity=2)

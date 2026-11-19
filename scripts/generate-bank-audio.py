@@ -27,6 +27,8 @@ evidence=importlib.util.module_from_spec(evidence_spec)
 evidence_spec.loader.exec_module(evidence)
 voice_spec=importlib.util.spec_from_file_location('audio_voice_override',Path(__file__).with_name('audio-voice-override.py'))
 voice_rules=importlib.util.module_from_spec(voice_spec);voice_spec.loader.exec_module(voice_rules)
+human_spec=importlib.util.spec_from_file_location('audio_human_review',Path(__file__).with_name('audio-human-review.py'))
+human_review=importlib.util.module_from_spec(human_spec);human_spec.loader.exec_module(human_review)
 spec = importlib.util.spec_from_file_location('audition_encoder', ROOT / 'scripts/generate-audition.py')
 codec = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(codec)
@@ -376,6 +378,10 @@ def flush(source, source_hash, generation, packs):
     validate_fallback_packs(source,packs)
     source_units={(u['language'],u['bank'],u['key']):u for u in source['units']}
     quality_rows=read(OUT/'quality-review.json',{}).get('records',{})
+    human_doc=read(OUT/'human-review.json',None)
+    human_errors=human_review.validate_human_review(human_doc)
+    if human_errors:raise ValueError('; '.join(human_errors))
+    human_approved=human_required=0
     first_ids={q['id'] for q in read(ROOT/'data/part2.json',[]) if q.get('type')=='first'}
     rows = []
     expected = {}
@@ -398,6 +404,9 @@ def flush(source, source_hash, generation, packs):
         pack_audited=0
         checks = audit_records(language, bank)
         for key, clip in clips.items():
+            human=human_review.human_review_state(human_doc,source_units.get((*pair,key)),clip)
+            human_approved+=bool(human and human['status']=='approved')
+            human_required+=bool(human and human['status']=='required')
             review = checks.get(key, {})
             clip['asrStatus'] = review['status'] if valid_published_asr(source_units.get((*pair,key)),clip,review,quality_rows,first_ids) else 'pending'
             if clip['asrStatus'] in ('matched', 'review', 'accepted'):
@@ -429,6 +438,7 @@ def flush(source, source_hash, generation, packs):
         total['requiredFallbackCount'] += required_fallback_count
     total.update(files=len(all_files), audioBytes=sum(c['bytes'] for c in all_files.values()),
                  duration=round(sum(c['duration'] for c in all_files.values()), 3), asrReviewed=audited)
+    if human_doc is not None:total.update(humanApprovedCount=human_approved,forcedHumanReviewCount=human_required)
     atomic(OUT / 'manifest.json', {'version': 1, 'model': source['model'], 'voices': source['voices'],
            'sourceSha256': source_hash, 'generation': generation, 'complete': total['count'] == total['expected'],
            'requiredComplete':total['requiredCount']==total['requiredExpected'],

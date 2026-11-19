@@ -7,6 +7,7 @@ import {sourceUnits} from '../js/translation-source.js';
 import {validateContextAcceptance} from './audio-context-proof.mjs';
 import {sourceVoice,validEntryVoices,validateVoiceSelection,validateVoiceRecognition} from './audio-voice-override.mjs';
 import {validateLexicalAcceptance} from './audio-lexical-proof.mjs';
+import {validateHumanReview,humanReviewState} from './audio-human-review.mjs';
 import {validateCrossModelAcceptance} from './audio-cross-model-proof.mjs';
 
 const ROOT=fileURLToPath(new URL('../',import.meta.url));
@@ -19,7 +20,7 @@ const expect=(ok,message,errors)=>{if(!ok)errors.push(message);};
 // Only named publication reports, current manifest packs/audits and content-
 // addressed ASR batch evidence belong in the public audio metadata directory.
 export const AUDIO_METADATA_REPORTS=Object.freeze([
-  'source.json','manifest.json','overrides.json','generation-errors.json',
+  'source.json','manifest.json','overrides.json','generation-errors.json','human-review.json',
   'regenerations.json','retries.json','audit-summary.json','generation-run.json',
   'benchmark.json','benchmark-asr.json','benchmark-asr-batch.json',
   'normalization-review.json','pronunciation-review.json','archive.json',
@@ -240,7 +241,7 @@ export function reviewTriage(language,spoken,recognized,key=''){
   return {category:'meaning-tense-or-omission',priority:'normal',note:'Check words, tense, numbers and omissions against the audio; the transcript alone cannot identify the cause.'};
 }
 
-export function validateClip(unit,clip,record,{allowIncomplete=false,strictQuality=false,retry,override={},generation,repair}={}){
+export function validateClip(unit,clip,record,{allowIncomplete=false,strictQuality=false,retry,override={},generation,repair,human}={}){
   const errors=[],id=token(unit);
   if(unit.nonSpoken){expect(!clip,`Nonspoken marker has audio ${id}`,errors);return errors;}
   if(!clip){if(unit.required&&!allowIncomplete)errors.push(`Missing required clip ${id}`);return errors;}
@@ -259,7 +260,7 @@ export function validateClip(unit,clip,record,{allowIncomplete=false,strictQuali
   if(unit.required&&!allowIncomplete){
     expect(actual,`Missing current actual ASR ${id}`,errors);
     const retried=record?.status==='review'&&validateRetry(retry,clip);
-    expect(['matched','accepted'].includes(record?.status)||(!strictQuality&&retried),`Unresolved or untried ASR ${id}: ${record?.status||'pending'}`,errors);
+    expect(human?.status==='approved'||human?.status!=='required'&&['matched','accepted'].includes(record?.status)||(!strictQuality&&(retried||['matched','accepted'].includes(record?.status))),human?.status==='required'&&strictQuality?`Pending human listening review ${id} (actual ASR: ${record?.status||'pending'})`:`Unresolved or untried ASR ${id}: ${record?.status||'pending'}`,errors);
     expect(clip.asrStatus===record?.status,`ASR status not synchronized ${id}`,errors);
   }
   if(actual){
@@ -292,6 +293,10 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
   let retries={records:{}};try{retries=JSON.parse(await fs.readFile(path.join(root,'data/audio/retries.json')));}catch(e){if(e.code!=='ENOENT')throw e;}
   let qualityReview={records:{}};try{qualityReview=JSON.parse(await fs.readFile(path.join(root,'data/audio/quality-review.json')));}catch(e){if(e.code!=='ENOENT')throw e;}
   let voiceOverrides={entries:{}};try{voiceOverrides=JSON.parse(await fs.readFile(path.join(root,'data/audio/overrides.json')));}catch(e){if(e.code!=='ENOENT')throw e;}
+  let humanDoc=null;try{humanDoc=JSON.parse(await fs.readFile(path.join(root,'data/audio/human-review.json')));}catch(e){if(e.code!=='ENOENT')throw e;}
+  errors.push(...validateHumanReview(humanDoc));
+  if(validateHumanReview(humanDoc).length)humanDoc=null;
+  for(const entry of [...(humanDoc?.feedback??[]),...(humanDoc?.requests??[])])expect(units.get(entry.token)?.text===entry.text,`Human-review source changed ${entry.token}`,errors);
   let inputReview={};try{inputReview=JSON.parse(await fs.readFile(path.join(root,'data/audio/normalization-review.json')));}catch(e){if(e.code!=='ENOENT')throw e;}
   // Bank and translation files remain the authority: full key/text coverage is
   // checked independently of the generated source's required flags.
@@ -330,7 +335,7 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
     }
     for(const [key,clip] of Object.entries(pack.clips)){
       const u=units.get(`${id}:${key}`);expect(u,`Unknown audio source ${id}:${key}`,errors);
-      if(u)errors.push(...validateClip(u,clip,audit.records[key],{allowIncomplete,strictQuality,retry:retries.records[token(u)],override:voiceOverrides.entries?.[token(u)],generation:index.generation,repair:qualityReview.records?.[token(u)]?.repair}));
+      if(u)errors.push(...validateClip(u,clip,audit.records[key],{allowIncomplete,strictQuality,retry:retries.records[token(u)],override:voiceOverrides.entries?.[token(u)],generation:index.generation,repair:qualityReview.records?.[token(u)]?.repair,human:humanReviewState(humanDoc,u,clip)}));
       if(audit.records[key]?.status==='accepted'||audit.records[key]?.acceptance!==undefined)expect(validPublishedASREvidence(u,clip,audit.records[key],qualityReview.records?.[`${id}:${key}`],firstWordIds),`Invalid independent audio acceptance ${id}:${key}`,errors);
       if(!audio.has(clip.src)&&/^\.\/audio\/generated\/(en|ja)\/[a-z_]+\/[a-f0-9]{32}\.m4a$/.test(clip.src||'')){
         const bytes=await fs.readFile(path.join(root,clip.src));
@@ -340,19 +345,22 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
       }
     }
   }
-  let required=0,generated=0,audited=0,unresolved=0,publishedCount=0,publishedAudited=0;const unresolvedItems=[],systemFallbackItems=[],contextAcceptedItems=[],lexicalAcceptedItems=[],crossModelAcceptedItems=[];
+  let required=0,generated=0,audited=0,unresolved=0,publishedCount=0,publishedAudited=0;const unresolvedItems=[],systemFallbackItems=[],contextAcceptedItems=[],lexicalAcceptedItems=[],crossModelAcceptedItems=[],humanAcceptedItems=[],forcedReviewItems=[];
   for(const u of source.units){
     const p=packs.get(`${u.language}:${u.bank}`),clip=p?.pack.clips[u.key],record=p?.audit.records[u.key],fallback=p?.pack.fallbacks?.[u.key];
+    const human=humanReviewState(humanDoc,u,clip);
     const publishedActual=validPublishedASREvidence(u,clip,record,qualityReview.records?.[token(u)],firstWordIds);
     if(clip){publishedCount++;if(publishedActual)publishedAudited++;}
+    if(publishedActual&&human?.status==='approved')humanAcceptedItems.push({token:token(u),text:clip.text,sha256:clip.sha256,batchId:human.batchId,actualASRStatus:record.status,actualASRUnchanged:true});
+    if(publishedActual&&human?.status==='required')forcedReviewItems.push({token:token(u),text:clip.text,...human});
     if(publishedActual&&record.acceptance?.method==='unchanged-original-pcm-context-v1')contextAcceptedItems.push({token:token(u),text:clip.text,sourceAudioSha256:clip.sha256,proofId:record.acceptance.proofId,originalIndividualASRMatched:false});
     if(publishedActual&&record.acceptance?.method==='selected-recipe-lexical-equivalence-v1')lexicalAcceptedItems.push({token:token(u),text:clip.text,sourceAudioSha256:clip.sha256,proofId:record.acceptance.proofId,originalIndividualASRMatched:false});
     if(publishedActual&&record.acceptance?.method==='same-media-full-model-crosscheck-v1')crossModelAcceptedItems.push({token:token(u),text:clip.text,sourceAudioSha256:clip.sha256,proofId:record.acceptance.proofId,originalIndividualASRMatched:false});
     const validFallback=fallback&&!clip&&validateSystemFallback(u,fallback,qualityReview.records?.[token(u)],record).length===0;
     if(validFallback)systemFallbackItems.push({token:token(u),text:fallback.text,playback:'system',language:'ja',voiceId:fallback.voiceId,reason:fallback.reason,auditedSha256:fallback.auditedSha256,required:u.required,systemVoiceAudited:false});
     if(!clip&&!validFallback)errors.push(...validateClip(u,clip,record,{allowIncomplete}));
-    if(u.required){required++;if(clip)generated++;if(publishedActual){audited++;if(record.status==='review'){
-      unresolved++;const retry=retries.records[token(u)];unresolvedItems.push({token:token(u),text:clip.text,spoken:clip.spoken,recognized:record.recognized,src:clip.src,
+    if(u.required){required++;if(clip)generated++;if(publishedActual){audited++;if(human?.status==='required'||record.status==='review'&&human?.status!=='approved'){
+      unresolved++;const retry=retries.records[token(u)];unresolvedItems.push({token:token(u),humanReview:human??undefined,asrStatus:record.status,text:clip.text,spoken:clip.spoken,recognized:record.recognized,src:clip.src,
         triage:reviewTriage(u.language,clip.spoken,record.recognized,u.key),
         retried:validateRetry(retry,clip),synthesisAttemptCount:retry?.synthesisAttemptCount||1,asrAttemptCount:retry?.asrAttemptCount||1,
         retryRecognized:retry?.retry?.asr?.recognized,retrySha256:retry?.retry?.clip?.sha256,
@@ -396,6 +404,7 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
   expect(index.requiredComplete===(required===generated),'requiredComplete flag mismatch',errors);
   expect(totals.files===audio.size,'Unique audio count mismatch',errors);
   expect(totals.audioBytes===[...audio.values()].reduce((n,c)=>n+c.bytes,0),'Audio byte total mismatch',errors);
+  if(humanDoc){expect(index.totals.humanApprovedCount===humanAcceptedItems.length,'Human approval total mismatch',errors);expect(index.totals.forcedHumanReviewCount===forcedReviewItems.length,'Human-review total mismatch',errors);}
   const systemFallbackCount=systemFallbackItems.length,requiredFallbackCount=systemFallbackItems.filter(item=>item.required).length;
   const playbackComplete=generated+requiredFallbackCount===required,recordedAuditComplete=publishedAudited===publishedCount;
   for(const [field,expected] of [['systemFallbackCount',systemFallbackCount],['requiredFallbackCount',requiredFallbackCount]])
@@ -410,6 +419,7 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
     expect(totals.requiredAudited===audited,'Required ASR count not synchronized',errors);
   }
   return {ok:!errors.length,errors,required,generated,audited,systemFallbackCount,requiredFallbackCount,systemFallbackItems,contextAcceptedCount:contextAcceptedItems.length,contextAcceptedItems,lexicalAcceptedCount:lexicalAcceptedItems.length,lexicalAcceptedItems,crossModelAcceptedCount:crossModelAcceptedItems.length,crossModelAcceptedItems,unresolved,unresolvedItems,
+    humanAcceptedCount:humanAcceptedItems.length,humanAcceptedItems,forcedHumanReviewCount:forcedReviewItems.length,forcedReviewItems,
     warnings:unresolvedItems.filter(r=>r.retried).map(r=>`WARN: remaining review after ${r.asrAttemptCount} actual ASR attempts ${r.token}`),
     uniqueFiles:audio.size,historicalFiles:historical.size,orphanFiles,unexpectedMetadataFiles,pendingInputCorrections:pendingCorrections,audioBytes:totals.audioBytes,allowIncomplete,strictQuality};
 }

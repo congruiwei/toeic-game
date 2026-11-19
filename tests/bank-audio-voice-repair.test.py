@@ -38,7 +38,7 @@ class VoiceRepair(unittest.TestCase):
  def setUp(self):
   self.temp=tempfile.TemporaryDirectory(prefix='voice-repair-',dir='/private/tmp');self.addCleanup(self.temp.cleanup)
   self.root=Path(self.temp.name)/'repo';self.work=Path(self.temp.name)/'external-work';self.work.mkdir();self.out=self.root/'data/audio';self.out.mkdir(parents=True);(self.root/'scripts').mkdir()
-  for name in ['audio-voice-override.py','retry-bank-audio.py','correct-bank-audio.py','generate-bank-audio.py','generate-audition.py','audio-evidence.py']:
+  for name in ['audio-voice-override.py','audio-human-review.py','retry-bank-audio.py','correct-bank-audio.py','generate-bank-audio.py','generate-audition.py','audio-evidence.py']:
    shutil.copyfile(ROOT/'scripts'/name,self.root/'scripts'/name)
   self.bank=load('fixture_voice_bank',self.root/'scripts/generate-bank-audio.py');self.unit=copy.deepcopy(UNIT);self.token='en:vocab:'+self.unit['key'];self.key=self.unit['key']
   self.gen={'recipe':'synthetic-fixture','modelSha256':'1'*64,'voicesSha256':'2'*64,'packages':{},'encoding':{}}

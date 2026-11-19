@@ -2,7 +2,7 @@
 """One real synthesis + strong ASR retry, with immutable before/after evidence.
 
 Run after finalize-audio-reaudit.py. Public text and default source casting stay fixed.
-Only independent English vocabulary heads may select a reviewed alternate voice.
+Independent English heads and exact user-reviewed sources may select an alternate voice.
 Japanese candidates still failing comparison are explicitly unpublished and
 delegated to device speech, never described as successfully recognized audio.
 """
@@ -26,6 +26,20 @@ STRONG_MODELS={STRONG_MODEL:STRONG_SHA,'whisper-large-v3':'69f74147e3334731bc3a7
 def repair_snapshot_sha(value):
     return hashlib.sha256(json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':')).encode()).hexdigest()
 
+def snapshot_matches(row,value,digest):
+    if repair_snapshot_sha(value)==digest:return True
+    # JSON writers may serialize integral floats as integers. Preserve and
+    # verify the original hashed payload, then compare complete JSON semantics.
+    payload=row.get('repairSnapshotPayloads',{}).get(digest)
+    if not isinstance(payload,str) or hashlib.sha256(payload.encode()).hexdigest()!=digest:return False
+    def canonical(v):
+        if isinstance(v,list):return [canonical(x) for x in v]
+        if isinstance(v,dict):return {k:canonical(x) for k,x in v.items()}
+        if isinstance(v,float) and v.is_integer():return int(v)
+        return v
+    try:return json.dumps(canonical(json.loads(payload)),sort_keys=True,ensure_ascii=False,allow_nan=False)==json.dumps(canonical(value),sort_keys=True,ensure_ascii=False,allow_nan=False)
+    except (TypeError,ValueError):return False
+
 def validate_repair_history(row,repair,unit,evidence):
     previous=repair.get('previousRepair')
     if not previous:return
@@ -33,7 +47,7 @@ def validate_repair_history(row,repair,unit,evidence):
     if not isinstance(index,int) or isinstance(index,bool) or not 0<=index<len(history):raise ValueError('Missing prior repair snapshot')
     prior=history[index]
     if (not prior.get('complete') or prior.get('disposition')!='recorded-review' or
-            repair_snapshot_sha(prior)!=previous.get('sha256') or
+            not snapshot_matches(row,prior,previous.get('sha256')) or
             prior.get('candidate')!=repair.get('original') or
             prior.get('proposal',{}).get('token')!=repair.get('proposal',{}).get('token')):
         raise ValueError('Prior repair snapshot binding changed')
@@ -53,6 +67,19 @@ def validate_repair_versions(repair,unit,evidence):
         digests.append(c['sha256'])
     if len(set(digests))!=len(digests):raise ValueError('Completed repair versions must be distinct')
 
+def same_archived_versions(left,right):
+    def clean(value):
+        if isinstance(value,list):return [clean(x) for x in value]
+        if not isinstance(value,dict):return value
+        result=dict(value)
+        if 'archive' in result:
+            archive=result.pop('archive');clip=result.get('clip',{})
+            expected={'published':False,'sha256':clip.get('sha256'),'bytes':clip.get('bytes'),'copyVerified':True}
+            if archive!=expected:raise ValueError('Invalid archived version binding')
+        return result
+    try:return clean(left)==clean(right)
+    except (ValueError,TypeError):return False
+
 def archive_next_round(row,proposal,unit,clip,record,override,evidence,override_audio,previous_retry):
     old=row.get('repair') or {}
     if (unit['language']!='en' or not old.get('complete') or old.get('disposition')!='recorded-review' or
@@ -64,14 +91,17 @@ def archive_next_round(row,proposal,unit,clip,record,override,evidence,override_
             override_audio(override)!=override_audio(old.get('appliedOverride'))):
         raise ValueError('Next-round original differs from the selected prior repair')
     if (not previous_retry or not previous_retry.get('complete') or
-            previous_retry.get('initial')!=old.get('original') or
+            not same_archived_versions(previous_retry.get('initial'),old.get('original')) or
             {k:previous_retry.get('retry',{}).get(k) for k in ['clip','asr']}!=old.get('candidate') or
-            previous_retry.get('priorRetries',[])!=old.get('priorCandidates',[]) or
+            not same_archived_versions(previous_retry.get('priorRetries',[]),old.get('priorCandidates',[])) or
             previous_retry.get('selectedSha256')!=clip['sha256']):
         raise ValueError('Next-round quality and retry histories differ')
     history=row.setdefault('priorRepairs',[])
     if any(repair_snapshot_sha(p)==repair_snapshot_sha(old) for p in history):raise ValueError('Duplicate prior repair snapshot')
-    previous={'archiveIndex':len(history),'sha256':repair_snapshot_sha(old)}
+    payload=json.dumps(old,sort_keys=True,ensure_ascii=False,separators=(',',':'))
+    digest=hashlib.sha256(payload.encode()).hexdigest()
+    row.setdefault('repairSnapshotPayloads',{})[digest]=payload
+    previous={'archiveIndex':len(history),'sha256':digest}
     history.append(copy.deepcopy(old));return previous
 
 

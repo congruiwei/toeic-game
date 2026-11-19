@@ -53,6 +53,22 @@ class CompletionTest(unittest.TestCase):
             bank.flush(self.source, 'b' * 64, {}, packs)
         return bank.read(self.out / 'manifest.json', {}), bank.read(self.out / 'en/vocab.json', {})
 
+    def test_human_counts_never_rewrite_or_replace_actual_asr(self):
+        token='en:vocab:'+self.unit['key']
+        doc={'version':1,'batches':[{'id':'user','source':'User verdict','queueSha256':'c'*64,'count':1}],
+             'feedback':[{'token':token,'sha256':self.clip['sha256'],'text':self.unit['text'],'batchId':'user','label':'ok'}],'requests':[]}
+        bank.atomic(self.out/'human-review.json',doc)
+        index,pack=self.flush({**self.asr,'status':'review'})
+        self.assertEqual(index['totals']['humanApprovedCount'],1)
+        self.assertEqual(pack['clips'][self.unit['key']]['asrStatus'],'review')
+        index,pack=self.flush({**self.asr,'recognized':''})
+        self.assertFalse(index['recordedAuditComplete'])
+        doc['feedback'][0]['sha256']='d'*64;bank.atomic(self.out/'human-review.json',doc)
+        index,pack=self.flush(self.asr)
+        self.assertEqual(index['totals']['humanApprovedCount'],0)
+        self.assertEqual(index['totals']['forcedHumanReviewCount'],1)
+        self.assertEqual(pack['clips'][self.unit['key']]['asrStatus'],'matched')
+
     def test_real_flush_rejects_empty_missing_or_stale_asr(self):
         variants = [('empty', {**self.asr, 'recognized': ''}),
                     ('whitespace', {**self.asr, 'recognized': ' \n '}),

@@ -13,7 +13,7 @@ class Publish(unittest.TestCase):
   # Preserve strict whole-tree snapshots without interpreter cache writes.
   bytecode=patch.object(sys,'dont_write_bytecode',True);bytecode.start();self.addCleanup(bytecode.stop)
   self.temp=tempfile.TemporaryDirectory();self.addCleanup(self.temp.cleanup);base=Path(self.temp.name).resolve();self.root=base/'repo';self.work=base/'work';self.work.mkdir();self.out=self.root/'data/audio';self.out.mkdir(parents=True);scripts=self.root/'scripts';scripts.mkdir();self.interrupt=False;self.flushes=0
-  for name in ['audio-compare.py','audio-evidence.py','audio-voice-override.py','generate-audition.py']:
+  for name in ['audio-compare.py','audio-evidence.py','audio-voice-override.py','audio-human-review.py','generate-audition.py']:
    shutil.copy(ROOT/'scripts'/name,scripts/name)
   for name in ['audio-cross-model.py']:
    shutil.copy(HERE.parent/'scripts'/name,scripts/name)

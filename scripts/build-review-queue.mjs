@@ -54,14 +54,14 @@ export function makeReviewQueue({result,ledger,packs,audits,sourceSha256}){
     expect(Object.hasOwn(models,g?.model)&&g.modelSha256===models[g.model],`Current ASR model changed: ${row.token}`);
     const additional=g.model==='whisper-large-v3-turbo'?fullRecognition(row,clip,ledger.records?.[row.token]?.crossModelChecks):undefined;
     return {token:row.token,language,bank,key,text:row.text,recognized:row.recognized,recognitionModel:g.model,...(additional?{fullRecognition:additional}:{}),
-      src:clip.src,sha256:clip.sha256,priority:focus.has(row.token)?0:1,
-      reason:focus.has(row.token)?'重点复听：注意动作、词尾与关键单词。':notes[row.triage?.category]??'对照原文听清关键内容；自动转写只作为线索。'};
+      src:clip.src,sha256:clip.sha256,asrStatus:row.asrStatus??actual.status,reviewStatus:row.humanReview?.status==='required'?'pending-human-review':'asr-review',priority:row.humanReview?.status==='required'?0:focus.has(row.token)?0:1,
+      reason:row.humanReview?.reason??(focus.has(row.token)?'重点复听：注意动作、词尾与关键单词。':notes[row.triage?.category]??'对照原文听清关键内容；自动转写只作为线索。')};
   });
   const group=row=>row.language==='ja'?10:rank[row.bank]??6;
   entries.sort((a,b)=>group(a)-group(b)||a.priority-b.priority||a.token.localeCompare(b.token,'en'));
   // Completed JA system fallbacks are a separate count, never unplayable rows
   // that would ask the user to judge an inaccessible archived recording.
-  return {version:1,sourceSha256,systemFallbackCount,entries};
+  return {version:1,sourceSha256,systemFallbackCount,humanApprovedCount:result.humanAcceptedCount??0,forcedHumanReviewCount:result.forcedHumanReviewCount??0,entries};
 }
 
 export async function buildReviewQueue({root=ROOT,check=false,output,validate}={}){

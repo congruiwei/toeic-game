@@ -1,10 +1,12 @@
 import {createHash} from 'node:crypto';
 const VOICES=new Set(['af_heart','am_puck','af_bella']);
+const REVIEWED_SOURCES={"listening:p4-g01-q3/options/0/0": ["An order number", "am_puck"], "listening:p4-g26-q1/options/2/0": ["A8", "af_bella"], "reading:read-sound-bag/documents/2/text/6": ["Ina: Thanks.", "af_bella"], "reading:read-sound-check/documents/0/text/0": ["Nell: I tested guide 14.", "af_bella"], "labels:labels/af_bella/A": ["A.", "af_bella"], "labels:labels/am_puck/A": ["A.", "am_puck"], "labels:labels/am_puck/B": ["B.", "am_puck"]};
+export const eligibleReviewedSource=u=>Boolean(u?.language==='en'&&!u.speaker&&REVIEWED_SOURCES[u.bank+':'+u.key]?.[0]===u.text&&REVIEWED_SOURCES[u.bank+':'+u.key]?.[1]===u.voiceId);
 const hash=x=>createHash('sha256').update(x).digest('hex');
 const canon=x=>Array.isArray(x)?`[${x.map(canon).join(',')}]`:x&&typeof x==='object'?`{${Object.keys(x).sort().map(k=>`${JSON.stringify(k)}:${canon(x[k])}`).join(',')}}`:JSON.stringify(x);
 const same=(a,b)=>canon(a)===canon(b);
 export const sourceVoice=c=>c&&Object.hasOwn(c,'sourceVoiceId')?c.sourceVoiceId:c?.voiceId;
-export const eligibleVoiceOverride=u=>Boolean(u?.language==='en'&&u.bank==='vocab'&&u.key?.endsWith('/meaning')&&(u.kind??'meaning')==='meaning'&&(Object.hasOwn(u,'required')?u.required:true)&&!u.speaker&&/^[A-Za-z]+(?:[-'][A-Za-z]+)*$/.test(u.text??'')&&VOICES.has(u.voiceId));
+export const eligibleVoiceOverride=u=>eligibleReviewedSource(u)||Boolean(u?.language==='en'&&u.bank==='vocab'&&u.key?.endsWith('/meaning')&&(u.kind??'meaning')==='meaning'&&(Object.hasOwn(u,'required')?u.required:true)&&!u.speaker&&/^[A-Za-z]+(?:[-'][A-Za-z]+)*$/.test(u.text??'')&&VOICES.has(u.voiceId));
 export function selectedVoice(u,o={}){
  o??={};const v=Object.hasOwn(o,'voiceId')?o.voiceId:u.voiceId;
  if(Object.hasOwn(o,'voiceId')&&(!eligibleVoiceOverride(u)||!VOICES.has(v)||typeof o.phonemes!=='string'||!o.phonemes.trim()))throw Error('Unapproved voice override');

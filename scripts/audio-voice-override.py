@@ -1,9 +1,15 @@
-"""Bounded alternate casting for independent English vocabulary heads only."""
+"""Bounded alternate casting for heads and exact user-reviewed English sources."""
 import re
 VOICES={'af_heart','am_puck','af_bella'}
+# Exact user-reviewed sources; no general dialogue/sentence recasting.
+REVIEWED_SOURCES={('listening', 'p4-g01-q3/options/0/0'): ('An order number', 'am_puck'), ('listening', 'p4-g26-q1/options/2/0'): ('A8', 'af_bella'), ('reading', 'read-sound-bag/documents/2/text/6'): ('Ina: Thanks.', 'af_bella'), ('reading', 'read-sound-check/documents/0/text/0'): ('Nell: I tested guide 14.', 'af_bella'), ('labels', 'labels/af_bella/A'): ('A.', 'af_bella'), ('labels', 'labels/am_puck/A'): ('A.', 'am_puck'), ('labels', 'labels/am_puck/B'): ('B.', 'am_puck')}
+
+def reviewed_source(unit):
+    return bool(unit and unit.get("language")=="en" and not unit.get("speaker") and
+        REVIEWED_SOURCES.get((unit.get("bank"),unit.get("key")))==(unit.get("text"),unit.get("voiceId")))
 
 def eligible(unit):
-    return bool(unit and unit.get('language')=='en' and unit.get('bank')=='vocab' and
+    return reviewed_source(unit) or bool(unit and unit.get('language')=='en' and unit.get('bank')=='vocab' and
         unit.get('key','').endswith('/meaning') and unit.get('kind','meaning')=='meaning' and
         unit.get('required',True) and not unit.get('speaker') and
         re.fullmatch(r"[A-Za-z]+(?:[-'][A-Za-z]+)*",unit.get('text','')) and unit.get('voiceId') in VOICES)

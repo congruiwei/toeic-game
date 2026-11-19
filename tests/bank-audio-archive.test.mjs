@@ -41,7 +41,7 @@ async function fixture(t){
  const base=await fs.mkdtemp('/private/tmp/toeic-archive-test-'),f={base,repo:path.join(base,'repo'),work:path.join(base,'work')};
  t.after(()=>fs.rm(base,{recursive:true,force:true}));
  await fs.mkdir(path.join(f.repo,'scripts'),{recursive:true});
- for(const name of ['archive-bank-audio-history.mjs','validate-bank-audio.mjs','audio-context-proof.mjs','audio-lexical-proof.mjs','audio-cross-model-proof.mjs','audio-lexical-rules.json','generate-bank-audio.py','generate-audition.py','audio-evidence.py','audio-voice-override.py','audio-voice-override.mjs'])await fs.copyFile(path.join(ROOT,'scripts',name),path.join(f.repo,'scripts',name));
+ for(const name of ['archive-bank-audio-history.mjs','validate-bank-audio.mjs','audio-context-proof.mjs','audio-lexical-proof.mjs','audio-cross-model-proof.mjs','audio-lexical-rules.json','generate-bank-audio.py','generate-audition.py','audio-evidence.py','audio-voice-override.py','audio-human-review.py','audio-voice-override.mjs','audio-human-review.mjs'])await fs.copyFile(path.join(ROOT,'scripts',name),path.join(f.repo,'scripts',name));
  await fs.cp(path.join(ROOT,'js'),path.join(f.repo,'js'),{recursive:true});
  for(const bank of ['part1','part2','listening','vocab','reading','grammar','methods']){await write(path.join(f.repo,'data',bank+'.json'),[]);await write(path.join(f.repo,'data/i18n/ja',bank+'.json'),{version:1,entries:{}});}
  await write(path.join(f.repo,'data/i18n/ja/terms.json'),{version:1,entries:{}});
@@ -101,6 +101,8 @@ test('metadata whitelist keeps only manifest packs, matching audits, exact repor
  await write(path.join(f.repo,'data/audio/audit/en/vocab.json'),{records:{}});
  await write(path.join(f.repo,'data/audio/audit-batches','a'.repeat(64)+'.json'),{fixture:'preserved ASR batch evidence'});
  for(const name of AUDIO_METADATA_REPORTS)if(!['source.json','manifest.json','retries.json'].includes(name))await write(path.join(f.repo,'data/audio',name),{fixture:'known publication report'});
+ await write(path.join(f.repo,'data/audio/human-review.json'),{version:1,batches:[],feedback:[],requests:[]});
+ manifest.totals.humanApprovedCount=0;manifest.totals.forcedHumanReviewCount=0;await write(path.join(f.repo,'data/audio/manifest.json'),manifest);
  assert.deepEqual(await unexpectedAudioMetadata(f.repo,manifest),[]);
  assert.equal((await validateAudio({root:f.repo})).ok,true);
  const unexpected=await extraMetadata(f);

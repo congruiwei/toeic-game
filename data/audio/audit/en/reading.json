@@ -47654,26 +47654,26 @@
     },
     "read-sound-check/documents/0/text/0": {
       "key": "read-sound-check/documents/0/text/0",
-      "src": "./audio/generated/en/af_bella/205f82e2f4975a8208e3086263fe31c5.m4a",
-      "sha256": "0d7e92ac95de76e5afbb4fa4bb3ec42bd45373b255598a08f60df58caaa24d06",
-      "voiceId": "af_bella",
-      "fingerprint": "bdf33b38cc24769b4d0059a40603617da4ae6868f898012e4554db08f1e1ef5b",
+      "src": "./audio/generated/en/af_heart/048809deb176e173ca1d8ce0aefc90bd.m4a",
+      "sha256": "97c1238b5101f77310cb2040fd44c91b3963d9d3ef33eca78b81d5a814897352",
+      "voiceId": "af_heart",
+      "fingerprint": "e6644b20b71e1927a035d760a37e38a1d8f5204d3f47ff22e4510aa18091c34e",
       "expected": "Nell: I tested guide 14.",
       "spoken": "Nell: I tested guide fourteen.",
-      "recognized": "Now, I tested guide 14.",
+      "recognized": "Now, I tested Guide 14.",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.08,
-          "text": " Now, I tested guide 14.",
-          "avgLogprob": -0.2944329231977463,
-          "noSpeechProb": 1.0682713394438714e-12
+          "end": 1.68,
+          "text": " Now, I tested Guide 14.",
+          "avgLogprob": -0.33212769627571104,
+          "noSpeechProb": 0.009670145809650421
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -47704,7 +47704,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Nell: I tested guide fourteen.",
-        "recognized": "Now, I tested guide 14.",
+        "recognized": "Now, I tested Guide 14.",
         "reasons": [
           "author-number-and-input-normalization",
           "non-equivalent-segments-remain"
@@ -47733,12 +47733,12 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
+          "articlePolicyEnabled": false,
           "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
+          "normalizerFileSha256": "5fe89c179cabbe6f704f51fae5f3888f8d403facbb2a2e9b858aaf85d95f669f",
           "sourceTextSha256": "1299e95ac3450bfa8f41d05ef4837e9f270ab578f637c61d5721cc296aaf24cf"
         },
-        "audioSha256": "0d7e92ac95de76e5afbb4fa4bb3ec42bd45373b255598a08f60df58caaa24d06"
+        "audioSha256": "97c1238b5101f77310cb2040fd44c91b3963d9d3ef33eca78b81d5a814897352"
       }
     },
     "read-coupon/documents/0/text/2": {
@@ -52303,26 +52303,26 @@
     },
     "read-sound-bag/documents/2/text/6": {
       "key": "read-sound-bag/documents/2/text/6",
-      "src": "./audio/generated/en/af_bella/d7ba1d9eae0322f8abc767b0aac75ffd.m4a",
-      "sha256": "9d31ed95b3783251748f709d36283a6f9fa554a047c23d85463ef4b325f2ea61",
-      "voiceId": "af_bella",
-      "fingerprint": "3bda6faf62baefc3ad9a48f02aef86ca1d604f89e2e3e96f897c866d6031df9a",
+      "src": "./audio/generated/en/af_heart/ea5963d82fcdac5dabe2a1f4c0073c02.m4a",
+      "sha256": "61ad52b78ecfaa08973036544e28c97ac9a5bdad08439758ed637b627ec935a7",
+      "voiceId": "af_heart",
+      "fingerprint": "a9225ab99ff8baeec2151cd8c95f333b83b4c38d3b584004a4455f2f9b2b685c",
       "expected": "Ina: Thanks.",
       "spoken": "Ina: Thanks.",
-      "recognized": "N.A., thanks.",
+      "recognized": "Ina, thanks.",
       "segments": [
         {
           "start": 0.0,
-          "end": 1.16,
-          "text": " N.A., thanks.",
-          "avgLogprob": -0.634087085723877,
-          "noSpeechProb": 2.4697969364106953e-11
+          "end": 0.98,
+          "text": " Ina, thanks.",
+          "avgLogprob": -0.3587123937904835,
+          "noSpeechProb": 0.010269233025610447
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -52337,37 +52337,30 @@
       },
       "singleFileVerification": true,
       "recognitionAttempts": 1,
-      "status": "review",
+      "status": "matched",
       "metric": "WER",
-      "errorRate": 1.0,
+      "errorRate": 0.0,
       "phonemeErrorRate": null,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "ina",
-          "recognized": "n a"
-        }
-      ],
+      "differences": [],
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "Ina: Thanks.",
-        "recognized": "N.A., thanks.",
+        "recognized": "Ina, thanks.",
         "reasons": [
-          "non-equivalent-segments-remain"
+          "exact-normalized-text"
         ],
         "normalizedExpected": [
           "ina",
           "thanks"
         ],
         "normalizedRecognized": [
-          "n",
-          "a",
+          "ina",
           "thanks"
         ],
-        "proofExpected": null,
-        "proofRecognized": null,
+        "proofExpected": "t:ina | t:thanks",
+        "proofRecognized": "t:ina | t:thanks",
         "provenance": {
           "comparison": "exact transforms only; no edit-distance acceptance",
           "cmudict": "1.1.3",
@@ -52376,12 +52369,12 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
+          "articlePolicyEnabled": false,
           "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
+          "normalizerFileSha256": "5fe89c179cabbe6f704f51fae5f3888f8d403facbb2a2e9b858aaf85d95f669f",
           "sourceTextSha256": "472f0be3164aa438aa808b8cadd46b799a3d3e917a03fe6a73884d65f66fe630"
         },
-        "audioSha256": "9d31ed95b3783251748f709d36283a6f9fa554a047c23d85463ef4b325f2ea61"
+        "audioSha256": "61ad52b78ecfaa08973036544e28c97ac9a5bdad08439758ed637b627ec935a7"
       }
     },
     "read-film-vote/documents/1/text/1": {

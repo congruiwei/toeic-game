@@ -23,7 +23,7 @@ class FlowTests(unittest.TestCase):
  def setUp(self):
   self.temp=tempfile.TemporaryDirectory();parent=Path(self.temp.name);self.root=parent/'repo';self.work=parent/'work';self.work.mkdir();self.out=self.root/'data/audio';self.out.mkdir(parents=True)
   (self.root/'scripts').mkdir()
-  for name in ['retry-bank-audio.py','correct-bank-audio.py','generate-bank-audio.py','generate-audition.py','audio-evidence.py','audio-voice-override.py']:
+  for name in ['retry-bank-audio.py','correct-bank-audio.py','generate-bank-audio.py','generate-audition.py','audio-evidence.py','audio-voice-override.py','audio-human-review.py']:
    src=REPO/'scripts'/name
    if name=='generate-bank-audio.py':src=Path(os.environ.get('TOEIC_GENERATOR_SCRIPT',src))
    shutil.copyfile(src,self.root/'scripts'/name)

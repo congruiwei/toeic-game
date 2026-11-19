@@ -20,6 +20,7 @@ for(let i=0;i<126;i++){
  const bank=i<70?'part1':banks[1+Math.floor((i-70)/10)%6],key=`fixture-${String(i).padStart(3,'0')}/text/0`;
  base.push({token:`en:${bank}:${key}`,language:'en',bank,key,text:i===0?'The signed permit was placed beside the invoice. <img src=x onerror=alert(1)>':`The team checked the delivery schedule for order ${i} before confirming the arrangements.`,recognized:`The team checked order ${i}.`,src:`./audio/generated/en/af_heart/${hash(key).slice(0,32)}.m4a`,sha256:hash(key),priority:i===0?'high':'normal',reason:'请比较动作、时态和句尾，自动转写不等于实际听感。'});
 }
+base[0].reviewStatus='pending-human-review';base[0].asrStatus='matched';
 base[0].recognitionModel='whisper-large-v3-turbo';base[2].recognitionModel='whisper-large-v3';
 base[0].fullRecognition={model:'whisper-large-v3',recognized:'Full-model-only transcript: the signed permit remained beside the invoice. <img src=x onerror=alert(2)>'};
 base[1].fullRecognition={model:'whisper-large-v3',recognized:base[1].recognized};
@@ -47,7 +48,7 @@ async function run(){
    if(queueError){res.writeHead(503).end('temporarily unavailable');return;}
    if(queueInvalid){res.writeHead(200,{'Content-Type':'text/html'}).end('<html>not a valid review queue</html>');return;}
    const entries=structuredClone(base);if(changed){entries[0].sha256=hash('changed audio');entries[0].src='./audio/generated/en/af_heart/'+hash('changed audio').slice(0,32)+'.m4a';}
-   res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}).end(JSON.stringify({version:1,systemFallbackCount:42,entries:entries.reverse()}));return;
+   res.writeHead(200,{'Content-Type':'application/json','Cache-Control':'no-store'}).end(JSON.stringify({version:1,systemFallbackCount:42,humanApprovedCount:7,entries:entries.reverse()}));return;
   }
   if(name.endsWith('.m4a')){mediaRequests++;res.writeHead(404).end();return;}
   const file=path.resolve(root,name);if(!file.startsWith(root+path.sep)){res.writeHead(403).end();return;}
@@ -63,7 +64,7 @@ async function run(){
    await context.addInitScript(mock);const page=await context.newPage();page.setDefaultTimeout(8000);const errors=[];page.on('pageerror',e=>errors.push(e.message));
    try{
     await page.goto(url);await page.locator('.review-row').first().waitFor();
-    assert.equal(await page.locator('.review-row').count(),50);assert.equal(mediaRequests,0);assert((await page.locator('#review-processed').textContent()).includes('42'));assert.equal(await page.locator('audio').count(),1);assert.equal(await page.locator('#review-audio').getAttribute('preload'),'none');
+    assert.equal(await page.locator('.review-row').count(),50);assert.equal(mediaRequests,0);assert((await page.locator('#review-processed').textContent()).includes('42'));assert((await page.locator('#review-processed').textContent()).includes('已有 7 条原录音经人工确认'));assert.equal(await page.locator('.review-row').first().locator('.review-badge').textContent(),'新版待复听');assert.equal(await page.locator('audio').count(),1);assert.equal(await page.locator('#review-audio').getAttribute('preload'),'none');
     assert.equal(await page.locator('.review-row').first().getAttribute('data-token'),base[0].token,'Part 1 and high priority come first despite reversed input');
     assert.equal(await page.locator('.review-source img').count(),0,'source markup must remain inert text');
     assert.equal(await page.locator('.review-asr-full').count(),1,'identical full-model text is not duplicated');

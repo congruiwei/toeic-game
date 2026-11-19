@@ -10111,23 +10111,6 @@
       "required": true,
       "synthesisSpeed": 0.88
     },
-    "read-sound-check/documents/0/text/0": {
-      "src": "./audio/generated/en/af_bella/205f82e2f4975a8208e3086263fe31c5.m4a",
-      "duration": 2.33,
-      "bytes": 15523,
-      "sha256": "0d7e92ac95de76e5afbb4fa4bb3ec42bd45373b255598a08f60df58caaa24d06",
-      "decodedPeak": 0.701555,
-      "headroomDb": 0.0,
-      "phonemeSha256": "f4dee4f90ea3088499355a87e7c2565d51af671515456278e84c2a64124b7dbb",
-      "voiceId": "af_bella",
-      "language": "en",
-      "text": "Nell: I tested guide 14.",
-      "spoken": "Nell: I tested guide fourteen.",
-      "inputSha256": "7d90328e675274f6ccd95a81013bc3fd13490c864f5a4785ff9ad40ea1bd1c5c",
-      "asrStatus": "review",
-      "required": true,
-      "synthesisSpeed": 0.88
-    },
     "read-keyrings/documents/1/text/4": {
       "src": "./audio/generated/en/am_puck/2ce2b9ba0ab4bf6164e369325835e4f1.m4a",
       "duration": 0.78,
@@ -10196,23 +10179,6 @@
       "required": true,
       "synthesisSpeed": 0.88
     },
-    "read-sound-bag/documents/2/text/6": {
-      "src": "./audio/generated/en/af_bella/d7ba1d9eae0322f8abc767b0aac75ffd.m4a",
-      "duration": 1.39,
-      "bytes": 9861,
-      "sha256": "9d31ed95b3783251748f709d36283a6f9fa554a047c23d85463ef4b325f2ea61",
-      "decodedPeak": 0.685691,
-      "headroomDb": 0.0,
-      "phonemeSha256": "2b9827e2ca162cd251ea347678e80bced982d23abac23fe5c08cdd12f40468b1",
-      "voiceId": "af_bella",
-      "language": "en",
-      "text": "Ina: Thanks.",
-      "spoken": "Ina: Thanks.",
-      "inputSha256": "dca51e44aac1a501cb3e56cc304abf2ba3e55ed3840e51f1a7b6351d5c2cbc61",
-      "asrStatus": "review",
-      "required": true,
-      "synthesisSpeed": 0.88
-    },
     "read-crate-hire/documents/1/text/1": {
       "src": "./audio/generated/en/af_bella/6482f704a5b10f294aeaeff9835de4ad.m4a",
       "duration": 3.7,
@@ -10229,6 +10195,44 @@
       "asrStatus": "matched",
       "required": true,
       "synthesisSpeed": 0.88
+    },
+    "read-sound-check/documents/0/text/0": {
+      "src": "./audio/generated/en/af_heart/048809deb176e173ca1d8ce0aefc90bd.m4a",
+      "duration": 2.04,
+      "bytes": 13772,
+      "sha256": "97c1238b5101f77310cb2040fd44c91b3963d9d3ef33eca78b81d5a814897352",
+      "decodedPeak": 0.873311,
+      "headroomDb": 0.0,
+      "phonemeSha256": "f4dee4f90ea3088499355a87e7c2565d51af671515456278e84c2a64124b7dbb",
+      "voiceId": "af_heart",
+      "language": "en",
+      "text": "Nell: I tested guide 14.",
+      "spoken": "Nell: I tested guide fourteen.",
+      "inputSha256": "374d5556bf6f2146f2bac5c5d1f62664730861fc0144b903b1ec4a81f21b2f5e",
+      "asrStatus": "review",
+      "required": true,
+      "synthesisSpeed": 0.98,
+      "sourceVoiceId": "af_bella",
+      "voiceOverrideInput": "[{\"modelSha256\": \"beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a\", \"packages\": {\"kokoro-onnx\": \"0.6.1\", \"misaki\": \"0.9.4\", \"numpy\": \"2.5.5\", \"onnxruntime\": \"1.23.2\", \"soundfile\": \"0.14.0\"}, \"recipe\": \"audition-v1-misaki-094-trim55-pad80-120-lufs16-aac48\", \"voicesSha256\": \"bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d\"}, \"lufs16-tp3-aac48-decoded-4x-peak095\", \"af_heart\", \"Nell: I tested guide fourteen.\", \"n\\u02c8\\u025bl: \\u02ccI t\\u02c8\\u025bst\\u1d7bd \\u0261\\u02c8Id f\\u02cc\\u0254\\u0279t\\u02c8in.\", {\"speed\": 0.98}]"
+    },
+    "read-sound-bag/documents/2/text/6": {
+      "src": "./audio/generated/en/af_heart/ea5963d82fcdac5dabe2a1f4c0073c02.m4a",
+      "duration": 1.23,
+      "bytes": 8784,
+      "sha256": "61ad52b78ecfaa08973036544e28c97ac9a5bdad08439758ed637b627ec935a7",
+      "decodedPeak": 0.704964,
+      "headroomDb": 0.0,
+      "phonemeSha256": "5202305675db93f6e149b7d9944c782bf0ecbdaee0d62ea8f357c59f83b42caa",
+      "voiceId": "af_heart",
+      "language": "en",
+      "text": "Ina: Thanks.",
+      "spoken": "Ina: Thanks.",
+      "inputSha256": "7e7507d63eb1a8e91d4944ae78e433a7fe2e1c69002d9f16d54ace37523b5771",
+      "asrStatus": "matched",
+      "required": true,
+      "synthesisSpeed": 0.98,
+      "sourceVoiceId": "af_bella",
+      "voiceOverrideInput": "[{\"modelSha256\": \"beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a\", \"packages\": {\"kokoro-onnx\": \"0.6.1\", \"misaki\": \"0.9.4\", \"numpy\": \"2.5.5\", \"onnxruntime\": \"1.23.2\", \"soundfile\": \"0.14.0\"}, \"recipe\": \"audition-v1-misaki-094-trim55-pad80-120-lufs16-aac48\", \"voicesSha256\": \"bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d\"}, \"lufs16-tp3-aac48-decoded-4x-peak095\", \"af_heart\", \"Ina: Thanks.\", \"\\u02c8in\\u0259: \\u03b8\\u02c8\\u00e6\\u014bks.\", {\"speed\": 0.98}]"
     }
   },
   "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2",
@@ -10246,7 +10250,7 @@
     "encoding": "lufs16-tp3-aac48-decoded-4x-peak095",
     "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2",
     "normalization": "bank-v3-japanese-contextual-numbers",
-    "overridesSha256": "988777ac558df6f9207f91cebca8707b9b170e41199dbc36a3dfe6ecf3bf5032"
+    "overridesSha256": "8d6e0e5ae0fbbb471e574ab9864a365f53b9725b0e5f7723d8ae7ac89b3bcc88"
   },
   "complete": false,
   "requiredComplete": true,

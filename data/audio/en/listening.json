@@ -34882,23 +34882,6 @@
       "required": true,
       "synthesisSpeed": 0.88
     },
-    "p4-g26-q1/options/2/0": {
-      "src": "./audio/generated/en/af_bella/ed2ce777a265259e2edbec83e6339e3b.m4a",
-      "duration": 0.8,
-      "bytes": 6170,
-      "sha256": "40bd6d5c86a5881df1e908d091a0d884a310fa1d1f8e32caed418cdc02a38cce",
-      "decodedPeak": 0.689168,
-      "headroomDb": 0.0,
-      "phonemeSha256": "2b092005c17fb80cbba3fc304c1a1cf5097fdeda553b63e95583d030837f5035",
-      "voiceId": "af_bella",
-      "language": "en",
-      "text": "A8",
-      "spoken": "A. eight",
-      "inputSha256": "2560d54f3b4351e6c0e4e7e18fb03b33d7f676d682b5948ba70bba673449676b",
-      "asrStatus": "review",
-      "required": true,
-      "synthesisSpeed": 0.88
-    },
     "p4-g27-q1/options/1/0": {
       "src": "./audio/generated/en/af_heart/aeeb49782342100fff6a4e3b0db53714.m4a",
       "duration": 2.62,
@@ -35071,23 +35054,6 @@
       "asrStatus": "matched",
       "required": true,
       "synthesisSpeed": 0.88
-    },
-    "p4-g01-q3/options/0/0": {
-      "src": "./audio/generated/en/am_puck/e25e1fe2dd9b5ffce47fa1e72d69b964.m4a",
-      "duration": 1.06,
-      "bytes": 8444,
-      "sha256": "d275036f0d6a6cf99b308770e5e2169afbfe3100e192f3bbf719c1bfb5b2d353",
-      "decodedPeak": 0.69965,
-      "headroomDb": 0.0,
-      "phonemeSha256": "cdbe82e5b562ca1bfefe5311b093c5e8e6f1be9fbc2bd3f60a3be981f5c3e5f9",
-      "voiceId": "am_puck",
-      "language": "en",
-      "text": "An order number",
-      "spoken": "An order number",
-      "inputSha256": "90832c831f90e37df11203ed661542780ccb985a8cfeda8a0b6ff7d521c39c22",
-      "asrStatus": "review",
-      "required": true,
-      "synthesisSpeed": 0.98
     },
     "p4-g01-q3/options/1/0": {
       "src": "./audio/generated/en/am_puck/56b4d52d73c6a4946eb95564ec5f5116.m4a",
@@ -35329,6 +35295,44 @@
       "asrStatus": "review",
       "required": true,
       "synthesisSpeed": 0.92
+    },
+    "p4-g01-q3/options/0/0": {
+      "src": "./audio/generated/en/af_heart/ebeaf2504d78e1ee9be8d30d7ee77366.m4a",
+      "duration": 1.1,
+      "bytes": 7975,
+      "sha256": "ec91a703ef30d762140b241eecb4f6f78f793d74a121e7869325a0d9babed5cc",
+      "decodedPeak": 0.689453,
+      "headroomDb": 0.0,
+      "phonemeSha256": "8e2a2e2c4facf95934482e96f88537cc71bf4ac8766ca91c70a5a0ad85fa24a2",
+      "voiceId": "af_heart",
+      "language": "en",
+      "text": "An order number",
+      "spoken": "An order number",
+      "inputSha256": "cccc4177350c60e604bf0daeb39c65c0791b8b72210903b32e049bb0fcc834e7",
+      "asrStatus": "review",
+      "required": true,
+      "synthesisSpeed": 0.98,
+      "sourceVoiceId": "am_puck",
+      "voiceOverrideInput": "[{\"modelSha256\": \"beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a\", \"packages\": {\"kokoro-onnx\": \"0.6.1\", \"misaki\": \"0.9.4\", \"numpy\": \"2.5.5\", \"onnxruntime\": \"1.23.2\", \"soundfile\": \"0.14.0\"}, \"recipe\": \"audition-v1-misaki-094-trim55-pad80-120-lufs16-aac48\", \"voicesSha256\": \"bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d\"}, \"lufs16-tp3-aac48-decoded-4x-peak095\", \"af_heart\", \"An order number\", \"\\u02c8\\u00e6n \\u02c8\\u0254\\u0279d\\u0259\\u0279 n\\u02c8\\u028cmb\\u0259\\u0279.\", {\"speed\": 0.98}]"
+    },
+    "p4-g26-q1/options/2/0": {
+      "src": "./audio/generated/en/af_heart/ce3ff18655320769b8a6f18837cf8a8c.m4a",
+      "duration": 0.78,
+      "bytes": 6179,
+      "sha256": "f17e3ed06d3ff60191cb82b8132f3635519ba0440541aabd8d6444930a333227",
+      "decodedPeak": 0.655614,
+      "headroomDb": 0.0,
+      "phonemeSha256": "189a4e082dd600ec6cb8407f327232894ced55a56b81ad8d257ca2a797bc90e9",
+      "voiceId": "af_heart",
+      "language": "en",
+      "text": "A8",
+      "spoken": "A. eight",
+      "inputSha256": "d1c6d9a87730060e41ec9cd84b304ebb3a42836e53304292a6b06ff6dd8e83a5",
+      "asrStatus": "review",
+      "required": true,
+      "synthesisSpeed": 0.98,
+      "sourceVoiceId": "af_bella",
+      "voiceOverrideInput": "[{\"modelSha256\": \"beb0d1848dee9a49da392cc3df26958d46cfa35d321edf434f52949153f0df3a\", \"packages\": {\"kokoro-onnx\": \"0.6.1\", \"misaki\": \"0.9.4\", \"numpy\": \"2.5.5\", \"onnxruntime\": \"1.23.2\", \"soundfile\": \"0.14.0\"}, \"recipe\": \"audition-v1-misaki-094-trim55-pad80-120-lufs16-aac48\", \"voicesSha256\": \"bca610b8308e8d99f32e6fe4197e7ec01679264efed0cac9140fe9c29f1fbf7d\"}, \"lufs16-tp3-aac48-decoded-4x-peak095\", \"af_heart\", \"A. eight\", \"\\u02c8A \\u02c8At.\", {\"speed\": 0.98}]"
     }
   },
   "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2",
@@ -35346,7 +35350,7 @@
     "encoding": "lufs16-tp3-aac48-decoded-4x-peak095",
     "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2",
     "normalization": "bank-v3-japanese-contextual-numbers",
-    "overridesSha256": "988777ac558df6f9207f91cebca8707b9b170e41199dbc36a3dfe6ecf3bf5032"
+    "overridesSha256": "8d6e0e5ae0fbbb471e574ab9864a365f53b9725b0e5f7723d8ae7ac89b3bcc88"
   },
   "complete": false,
   "requiredComplete": true,

@@ -11,7 +11,7 @@ const $=id=>document.getElementById(id),esc=value=>String(value??'').replace(/[&
 const record=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
 const sha=value=>typeof value==='string'&&/^[a-f0-9]{64}$/.test(value);
 const identity=row=>JSON.stringify([row.token,row.sha256]);
-let rows=[],systemFallbackCount=0,visible=50,search='',filter='unresolved',decisions={},storageLocked=false,playing=null,generation=0;
+let rows=[],systemFallbackCount=0,humanApprovedCount=0,visible=50,search='',filter='unresolved',decisions={},storageLocked=false,playing=null,generation=0;
 const audio=$('review-audio');
 function notice(text){$('review-notice').textContent=text;}
 function safeSource(src){
@@ -25,6 +25,8 @@ function parseQueue(value){
   const list=Array.isArray(value)?value:value?.version===1?value.entries:null;
   if(!Array.isArray(list))throw Error('复核清单格式错误');
   const fallbackCount=Array.isArray(value)?0:value.systemFallbackCount??0;
+  const approvedCount=Array.isArray(value)?0:value.humanApprovedCount??0;
+  if(!Number.isSafeInteger(approvedCount)||approvedCount<0)throw Error('人工确认统计格式错误');
   if(!Number.isSafeInteger(fallbackCount)||fallbackCount<0)throw Error('系统声音统计格式错误');
   const tokens=new Set();
   const entries=list.map(item=>{
@@ -40,7 +42,7 @@ function parseQueue(value){
     const urgency=x=>typeof x.priority==='number'?x.priority:x.priority==='high'?0:1;
     return group(a)-group(b)||urgency(a)-urgency(b)||a.token.localeCompare(b.token,'en');
   });
-  return {entries,systemFallbackCount:fallbackCount};
+  return {entries,systemFallbackCount:fallbackCount,humanApprovedCount:approvedCount};
 }
 function readSaved(){
   try{
@@ -71,7 +73,7 @@ function matches(row){
   return (filter==='all'||filter==='mine'&&hasRecord||filter==='unresolved'&&!item?.label)&&(!search||[row.text,row.recognized,row.fullRecognition?.recognized??'',row.token,row.reason,bankNames[row.bank]||row.bank].some(s=>s.toLocaleLowerCase().includes(search)));
 }
 function updateCounts(){
-  $('review-processed').textContent=systemFallbackCount?`另有 ${systemFallbackCount} 条日语已改用设备声音，无需在此复听原录音。`:'';
+  $('review-processed').textContent=[humanApprovedCount?`已有 ${humanApprovedCount} 条原录音经人工确认；新版音频需要重新复听。`:'',systemFallbackCount?`另有 ${systemFallbackCount} 条日语已改用设备声音，无需在此复听原录音。`:''].filter(Boolean).join(' ');
   const judged=rows.filter(row=>current(row)?.label).length,problem=rows.filter(row=>current(row)?.label==='problem').length;
   $('review-counts').innerHTML=`<span><strong>${rows.length}</strong>全部条目</span><span><strong>${rows.length-judged}</strong>尚未判断</span><span><strong>${problem}</strong>标记有问题</span>`;
   $('review-export').disabled=!Object.values(decisions).some(item=>item.label||item.note);
@@ -80,7 +82,7 @@ function rowHTML(row){
   const index=rows.indexOf(row),saved=current(row),lang=row.language==='ja'?'ja':'en';
   const full=row.fullRecognition&&row.fullRecognition.recognized!==row.recognized;
   const transcripts=`<div class="review-copy-block"><strong>${modelLabel(row.recognitionModel)} · 可能识别有误</strong><p class="review-asr" lang="${lang}">${esc(row.recognized||'（转写为空）')}</p></div>${full?`<div class="review-copy-block"><strong>完整 large-v3 识别 · 同一段录音</strong><p class="review-asr-full" lang="${lang}">${esc(row.fullRecognition.recognized)}</p></div>`:''}`;
-  return `<article class="review-row" data-row="${index}" data-token="${esc(row.token)}" data-sha256="${row.sha256}"><header class="review-row-head"><h2>${esc(bankNames[row.bank]||row.bank)} · ${row.language==='ja'?'日语':'英语'}<small class="review-key">${esc(row.key)}</small></h2><span class="review-badge">${row.systemFallback?'系统语音回退':'录音复核'}</span></header><div class="review-copy-block"><strong>原文</strong><p class="review-source" lang="${lang}">${esc(row.text)}</p></div>${transcripts}${row.reason?`<p class="review-reason">关注点：${esc(row.reason)}</p>`:''}${row.systemFallback?`<p class="review-fallback">${row.src?'游戏当前使用系统语音；下面播放的是保留供复核的录音。':'没有可访问的原录音，暂不能判断其质量。可试听设备语音并留下备注；设备声音不代表原录音。'}</p>`:''}<div class="review-play-buttons"><button class="secondary" data-act="review-play" data-rate="0.75" ${row.src?'':'disabled'}>↻ 播放 0.75×</button><button class="secondary" data-act="review-play" data-rate="1" ${row.src?'':'disabled'}>↻ 播放 1×</button>${!row.src?'<button class="secondary" data-act="review-system">听设备语音</button>':''}</div><fieldset class="review-verdicts" ${row.src?'':'disabled'}><legend>这段录音听起来怎样？</legend><div class="review-labels">${Object.entries(labels).map(([value,label])=>`<button data-act="review-label" data-label="${value}" aria-pressed="${saved?.label===value}">${label}</button>`).join('')}</div></fieldset><label>备注（选填）<textarea data-note maxlength="2000" placeholder="例如：句末听不清、数字和原文不同">${esc(saved?.note||'')}</textarea></label><p class="review-saved" role="status">${saved?.label?'当前判断：'+labels[saved.label]:saved?.note?'备注已记录':'尚未判断'}</p></article>`;
+  return `<article class="review-row" data-row="${index}" data-token="${esc(row.token)}" data-sha256="${row.sha256}"><header class="review-row-head"><h2>${esc(bankNames[row.bank]||row.bank)} · ${row.language==='ja'?'日语':'英语'}<small class="review-key">${esc(row.key)}</small></h2><span class="review-badge">${row.systemFallback?'系统语音回退':row.reviewStatus==='pending-human-review'?'新版待复听':'录音复核'}</span></header><div class="review-copy-block"><strong>原文</strong><p class="review-source" lang="${lang}">${esc(row.text)}</p></div>${transcripts}${row.reason?`<p class="review-reason">关注点：${esc(row.reason)}</p>`:''}${row.systemFallback?`<p class="review-fallback">${row.src?'游戏当前使用系统语音；下面播放的是保留供复核的录音。':'没有可访问的原录音，暂不能判断其质量。可试听设备语音并留下备注；设备声音不代表原录音。'}</p>`:''}<div class="review-play-buttons"><button class="secondary" data-act="review-play" data-rate="0.75" ${row.src?'':'disabled'}>↻ 播放 0.75×</button><button class="secondary" data-act="review-play" data-rate="1" ${row.src?'':'disabled'}>↻ 播放 1×</button>${!row.src?'<button class="secondary" data-act="review-system">听设备语音</button>':''}</div><fieldset class="review-verdicts" ${row.src?'':'disabled'}><legend>这段录音听起来怎样？</legend><div class="review-labels">${Object.entries(labels).map(([value,label])=>`<button data-act="review-label" data-label="${value}" aria-pressed="${saved?.label===value}">${label}</button>`).join('')}</div></fieldset><label>备注（选填）<textarea data-note maxlength="2000" placeholder="例如：句末听不清、数字和原文不同">${esc(saved?.note||'')}</textarea></label><p class="review-saved" role="status">${saved?.label?'当前判断：'+labels[saved.label]:saved?.note?'备注已记录':'尚未判断'}</p></article>`;
 }
 function render(){
   const matching=rows.filter(matches),shown=matching.slice(0,visible);
@@ -186,13 +188,13 @@ async function load(){
     const value=await response.json(),parsed=parseQueue(value);
     const saved=await cacheQueue(value,ticket);
     if(ticket!==loadGeneration)return;
-    rows=parsed.entries;systemFallbackCount=parsed.systemFallbackCount;render();
+    rows=parsed.entries;systemFallbackCount=parsed.systemFallbackCount;humanApprovedCount=parsed.humanApprovedCount;render();
     queueStatus(saved?'清单已更新并保存在本机。录音需已缓存或联网播放。':'清单已读取；此浏览器暂未保存离线副本。','network');
   }catch{
     const fallback=await cachedQueue();
     if(ticket!==loadGeneration)return;
     if(fallback){
-      rows=fallback.entries;systemFallbackCount=fallback.systemFallbackCount;render();queueStatus('当前使用本机保存的复核清单。录音需已缓存或恢复网络后播放。','cache');
+      rows=fallback.entries;systemFallbackCount=fallback.systemFallbackCount;humanApprovedCount=fallback.humanApprovedCount;render();queueStatus('当前使用本机保存的复核清单。录音需已缓存或恢复网络后播放。','cache');
     }else{
       $('review-list').innerHTML='<div class="empty"><p>复核清单暂时无法读取。请联网后重试，已有本机记录会保留。</p><button class="secondary" data-act="review-retry">重新读取</button></div>';updateCounts();
       queueStatus('还没有可用的离线清单。','error');

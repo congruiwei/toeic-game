@@ -36,7 +36,7 @@ class FinalizeTest(unittest.TestCase):
         self.out.mkdir(parents=True)
         (self.root / 'scripts').mkdir()
         (self.work / 'tmp/bank-asr').mkdir(parents=True)
-        for name in ('audio-evidence.py', 'audio-compare.py', 'audio-voice-override.py', 'generate-bank-audio.py'):
+        for name in ('audio-evidence.py', 'audio-compare.py', 'audio-voice-override.py','audio-human-review.py', 'generate-bank-audio.py'):
             shutil.copyfile(REPO / 'scripts' / name, self.root / 'scripts' / name)
         self.code = {'ruleFileSha256': review.sha((self.root / 'scripts/audio-compare.py').read_bytes()),
                      'normalizerFileSha256': review.sha((self.root / 'scripts/generate-bank-audio.py').read_bytes())}
@@ -146,7 +146,8 @@ class FinalizeTest(unittest.TestCase):
         namespace = dict(ROOT=root, OUT=root / 'data/audio', Path=Path, json=json, os=os, tempfile=tempfile,
                          time=time, re=re, sha=review.sha,
                          evidence=review.module(root, 'fixture_evidence', 'audio-evidence.py'),
-                         voice_rules=review.module(root, 'fixture_voice_rules', 'audio-voice-override.py'))
+                         voice_rules=review.module(root, 'fixture_voice_rules', 'audio-voice-override.py'),
+                         human_review=review.module(root, 'fixture_human_review', 'audio-human-review.py'))
         exec(compile(ast.Module(body=body, type_ignores=[]), str(root / 'scripts/generate-bank-audio.py'), 'exec'), namespace)
         original = namespace['flush']
         def flush(*args):

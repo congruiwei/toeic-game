@@ -139313,26 +139313,26 @@
     },
     "p4-g01-q3/options/0/0": {
       "key": "p4-g01-q3/options/0/0",
-      "src": "./audio/generated/en/am_puck/e25e1fe2dd9b5ffce47fa1e72d69b964.m4a",
-      "sha256": "d275036f0d6a6cf99b308770e5e2169afbfe3100e192f3bbf719c1bfb5b2d353",
-      "voiceId": "am_puck",
-      "fingerprint": "63c961c07076df0a6c330b0054d4182bde83ba579f3c63174138c70d02237825",
+      "src": "./audio/generated/en/af_heart/ebeaf2504d78e1ee9be8d30d7ee77366.m4a",
+      "sha256": "ec91a703ef30d762140b241eecb4f6f78f793d74a121e7869325a0d9babed5cc",
+      "voiceId": "af_heart",
+      "fingerprint": "9838909dd604c965dec72fa26a151d533a9c49e856f90b4f19093f564a4f9cb6",
       "expected": "An order number",
       "spoken": "An order number",
-      "recognized": "In order number.",
+      "recognized": "and order number.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.6,
-          "text": " In order number.",
-          "avgLogprob": -0.35784047842025757,
-          "noSpeechProb": 5.875169708374761e-12
+          "end": 0.84,
+          "text": " and order number.",
+          "avgLogprob": -0.3292358177048819,
+          "noSpeechProb": 0.02565881796181202
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -139355,7 +139355,7 @@
         {
           "operation": "replace",
           "expected": "an",
-          "recognized": "in"
+          "recognized": "and"
         }
       ],
       "comparison": {
@@ -139363,7 +139363,7 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "An order number",
-        "recognized": "In order number.",
+        "recognized": "and order number.",
         "reasons": [
           "non-equivalent-segments-remain"
         ],
@@ -139373,7 +139373,7 @@
           "number"
         ],
         "normalizedRecognized": [
-          "in",
+          "and",
           "order",
           "number"
         ],
@@ -139387,12 +139387,12 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
+          "articlePolicyEnabled": false,
           "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "normalizerFileSha256": "5fe89c179cabbe6f704f51fae5f3888f8d403facbb2a2e9b858aaf85d95f669f",
           "sourceTextSha256": "0aad0feed5fdc3fd6f69171b94b59d1ec3cfcbf5a93825bdf9e3ebdee5afbf07"
         },
-        "audioSha256": "d275036f0d6a6cf99b308770e5e2169afbfe3100e192f3bbf719c1bfb5b2d353"
+        "audioSha256": "ec91a703ef30d762140b241eecb4f6f78f793d74a121e7869325a0d9babed5cc"
       }
     },
     "p4-g01-q3/options/1/0": {
@@ -144441,26 +144441,26 @@
     },
     "p4-g26-q1/options/2/0": {
       "key": "p4-g26-q1/options/2/0",
-      "src": "./audio/generated/en/af_bella/ed2ce777a265259e2edbec83e6339e3b.m4a",
-      "sha256": "40bd6d5c86a5881df1e908d091a0d884a310fa1d1f8e32caed418cdc02a38cce",
-      "voiceId": "af_bella",
-      "fingerprint": "3154267debd33b91c4eb99685c53a8111564bdc3856b140bfb1040c305255b3a",
+      "src": "./audio/generated/en/af_heart/ce3ff18655320769b8a6f18837cf8a8c.m4a",
+      "sha256": "f17e3ed06d3ff60191cb82b8132f3635519ba0440541aabd8d6444930a333227",
+      "voiceId": "af_heart",
+      "fingerprint": "def311e1ff30c17913bb95f17d2bf329b30336d5803559075003a5ee90483938",
       "expected": "A8",
       "spoken": "A. eight",
-      "recognized": "Lay 8",
+      "recognized": "I ate.",
       "segments": [
         {
           "start": 0.0,
-          "end": 0.8,
-          "text": " Lay 8",
-          "avgLogprob": -0.6607876300811768,
-          "noSpeechProb": 7.74502424000234e-12
+          "end": 0.56,
+          "text": " I ate.",
+          "avgLogprob": -0.6152380506197611,
+          "noSpeechProb": 0.20450624823570251
         }
       ],
       "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
         "packages": {
@@ -144477,13 +144477,13 @@
       "recognitionAttempts": 1,
       "status": "review",
       "metric": "WER",
-      "errorRate": 0.5,
+      "errorRate": 1.0,
       "phonemeErrorRate": null,
       "differences": [
         {
           "operation": "replace",
-          "expected": "a",
-          "recognized": "lay"
+          "expected": "a eight",
+          "recognized": "i ate"
         }
       ],
       "comparison": {
@@ -144491,9 +144491,8 @@
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "en",
         "expectedSpoken": "A. eight",
-        "recognized": "Lay 8",
+        "recognized": "I ate.",
         "reasons": [
-          "author-number-and-input-normalization",
           "non-equivalent-segments-remain"
         ],
         "normalizedExpected": [
@@ -144501,8 +144500,8 @@
           "eight"
         ],
         "normalizedRecognized": [
-          "lay",
-          "eight"
+          "i",
+          "ate"
         ],
         "proofExpected": null,
         "proofRecognized": null,
@@ -144514,12 +144513,12 @@
           "pykakasi": "2.3.0",
           "normalizer": "normalize",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
+          "articlePolicyEnabled": false,
           "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "21d8085d8412849ee967e14c5cf4bcfb42c6139843ec037dc9cca5c397c4d865",
+          "normalizerFileSha256": "5fe89c179cabbe6f704f51fae5f3888f8d403facbb2a2e9b858aaf85d95f669f",
           "sourceTextSha256": "553a0fddbb387723578263570e63a83955482ae44f45bac9a90c65ddc058329f"
         },
-        "audioSha256": "40bd6d5c86a5881df1e908d091a0d884a310fa1d1f8e32caed418cdc02a38cce"
+        "audioSha256": "f17e3ed06d3ff60191cb82b8132f3635519ba0440541aabd8d6444930a333227"
       }
     },
     "p4-g27/turns/0/3": {
