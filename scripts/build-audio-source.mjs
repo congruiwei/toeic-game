@@ -11,7 +11,7 @@ if(outputIndex>=0&&(!process.argv[outputIndex+1]||process.argv[outputIndex+1].st
 const output=outputIndex>=0?path.resolve(process.argv[outputIndex+1]):path.join(root,'data/audio/source.json');
 const voices={en:['af_heart','am_puck','af_bella'],ja:['jf_alpha']};
 const banks=['part1','part2','listening','vocab','reading','grammar','methods'];
-const units=[], seen=new Set(), castSpeakers=new Map(), expandedVocab=new Set();
+const units=[], seen=new Set(), castSpeakers=new Map(), expandedVocab=new Set(), addedRequired=new Set();
 const hash=s=>[...s].reduce((n,c)=>(Math.imul(n,31)+c.charCodeAt(0))>>>0,0);
 function actor(bank,group,key,speaker) {
   const n=hash(group),female=n%2?'af_bella':'af_heart';
@@ -86,12 +86,25 @@ catch(error) {if(error.code!=='ENOENT')throw error;}
     add('vocab','ja',`${lexeme.id}/meaning`,lexeme.ja,{kind:'meaning'});
   }
 }
+// Morphology forms are spelling audio; complete example words keep their old keys.
+let morphology;
+try {morphology=JSON.parse(await fs.readFile(path.join(root,'data/morphemes.json'),'utf8'));}
+catch(error) {if(error.code!=='ENOENT')throw error;}
+if(morphology) {
+  const {morphologyAudioUnits}=await import('../js/word-enrichment.js');
+  const vocab=JSON.parse(await fs.readFile(path.join(root,'data/vocab.json'),'utf8'));
+  for(const {language,key,text,...extra} of morphologyAudioUnits(morphology,vocab)) {
+    const token=`${language}:vocab:${key}`;
+    if(seen.has(token))throw new Error(`Duplicate morphology audio key: ${token}`);
+    add('vocab',language,key,text,extra);addedRequired.add(token);
+  }
+}
 const terms=JSON.parse(await fs.readFile(path.join(root,'data/i18n/ja/terms.json'),'utf8')).entries;
 for(const [key,text] of Object.entries(terms))add('terms','ja',key,text,{kind:'term'});
 for(const voiceId of voices.en)for(const letter of 'ABCD')
   add('labels','en',`labels/${voiceId}/${letter}`,`${letter}.`,{kind:'label',voiceId});
 for(const u of units) {
-  u.required=u.language==='ja'||u.bank==='labels'||
+  u.required=addedRequired.has(`${u.language}:${u.bank}:${u.key}`)||u.language==='ja'||u.bank==='labels'||
     (['part1','part2'].includes(u.bank)&&!u.key.includes('/explanation/'))||
     (u.bank==='listening'&&!u.key.includes('/explanation/')&&!u.key.includes('/graphic/'))||
     (u.bank==='vocab'&&(expandedVocab.has(u.group)||(/\/meaning$|\/example\//).test(u.key)))||

@@ -88,12 +88,12 @@ export function speak(turns, prefs={}, fail=()=>{}, options={}) {
   const {seed='',preview='',onEnd,onStart,onCancel,onSegment,onSegmentEnd,castTurns=turns,bank,loop=false,noFallbackAfterStart=false}=options;
   hush();
   if(!turns?.length)return false;
-  if(!turns.some(piece=>systemSpeechText(piece.text))){onEnd?.();return true;}
+  if(!turns.some(piece=>systemSpeechText(piece.systemText ?? piece.text))){onEnd?.();return true;}
   const raw=window.speechSynthesis?.getVoices()||[],list=englishVoices(raw);
   const cast=castVoices(castTurns,prefs,seed,list),token=generation;
   const available=()=>Boolean(window.speechSynthesis&&window.SpeechSynthesisUtterance&&(!raw.length||list.length));
   function utter(piece,callbacks) {
-    const text=systemSpeechText(piece.text);
+    const text=systemSpeechText(piece.systemText ?? piece.text);
     if(!text){callbacks.onEnd?.();return true;}
     if(!available())return false;
     const u=new window.SpeechSynthesisUtterance(text),speaker=piece.speaker||'A';

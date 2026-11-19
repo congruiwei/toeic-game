@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-50';
+const CACHE = 'toeic-island-shell-51';
 const files = [
   './',
   './index.html',
@@ -7,6 +7,7 @@ const files = [
   './style.css',
   './practice.css',
   './library.css',
+  './morphemes.css','./js/morphemes.js','./js/word-enrichment.js','./data/morphemes.json','./data/i18n/zh/morphemes.json','./data/i18n/ja/morphemes.json',
   './assets/mark.svg',
   './assets/icon-180.png',
   './assets/icon-192.png',
@@ -40,6 +41,8 @@ self.addEventListener('install', (event) => {
   );
   event.waitUntil((async()=>{
     const cache=await caches.open(CACHE);await cache.addAll(requests);
+    const morphemes=await (await cache.match(new URL('data/morphemes.json',self.registration.scope))).json();
+    if(!validMorphemePack(morphemes))throw Error('Invalid morpheme packet');
     const part1=await (await cache.match(new URL('data/part1.json',self.registration.scope))).json();
     await cache.addAll(part1.map(q=>new URL(q.image,self.registration.scope).href));
   })());
@@ -64,7 +67,18 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-async function updateBank(request, cache, translation=false) {
+// Morphemes are an object-shaped packet, not a question-bank array. Keep
+// the same structure gate as loadMorphemes before replacing a working copy.
+function validMorphemePack(data) {
+  const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+  const nonempty=x=>typeof x==='string'&&Boolean(x.trim());
+  const types={prefix:true,root:true,suffix:true},posNames={'n.':true,'v.':true,'adj.':true,'adv.':true};
+  if(!object(data)||data.version!==1||!object(data.sources)||!Array.isArray(data.entries)||!data.entries.length)return false;
+  const ids=new Set();
+  return data.entries.every(m=>object(m)&&/^(pre|root|suf)-[a-z-]+$/.test(m.id)&&!ids.has(m.id)&&Boolean(ids.add(m.id))&&Object.hasOwn(types,m.type)&&Array.isArray(m.forms)&&m.forms.length>0&&m.forms.every(nonempty)&&nonempty(m.zh)&&nonempty(m.ja)&&Array.isArray(m.examples)&&m.examples.length>=2&&m.examples.length<=6&&new Set(m.examples).size===m.examples.length&&m.examples.every(nonempty)&&Array.isArray(m.sources)&&m.sources.length>0&&m.sources.every(id=>object(data.sources[id])&&/^https:\/\//.test(data.sources[id].url))&&(m.type!=='suffix'||Array.isArray(m.pos)&&m.pos.length>0&&m.pos.every(p=>Object.hasOwn(posNames,p))));
+}
+
+async function updateBank(request, cache, translation=false, validate=null) {
   // Adding records to an existing file requires no service-worker edit.
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), translation?15000:2500);
@@ -72,7 +86,7 @@ async function updateBank(request, cache, translation=false) {
     const response = await fetch(request, { cache: 'no-cache', signal: controller.signal });
     if (response.ok) {
       const rows = await response.clone().json();
-      if (translation ? rows?.version===1 && rows.entries && !Array.isArray(rows.entries) && typeof rows.entries==='object' : Array.isArray(rows) && rows.length) {
+      if (validate ? validate(rows) : translation ? rows?.version===1 && rows.entries && !Array.isArray(rows.entries) && typeof rows.entries==='object' : Array.isArray(rows) && rows.length) {
         await cache.put(request, response.clone());
         return response;
       }
@@ -153,6 +167,8 @@ self.addEventListener('fetch', (event) => {
       if (request.url.startsWith(new URL('data/i18n/',self.registration.scope).href)) {
         return updateBank(request,await caches.open('toeic-island-translations-v1'),true);
       }
+      if(new URL(request.url).pathname===new URL('data/morphemes.json',self.registration.scope).pathname)
+        return updateBank(request,cache,false,validMorphemePack);
       if (request.url.startsWith(new URL('data/', self.registration.scope).href)) {
         return updateBank(request, cache);
       }

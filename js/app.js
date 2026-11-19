@@ -8,7 +8,7 @@ import {predictionView,predictAnswer,predictionSummary,snapshotOnVisit} from './
 import {startDiagnosis,skipDiagnosis,answerDiagnosis} from './diagnosis.js';
 import {diagnosisHome,diagnosisView,diagnosisHistory,unknownDiagnosisView} from './diagnosis-ui.js';
 import {replayView,playLine,stopReplay,stopClosedReplay} from './replay.js';
-import {reviewTools,reviewAnswer,answerText,claudeText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
+import {reviewTools,reviewAnswer,answerText,claudeText,wordIssueText,issueForm,issueSettings,issuesText,reasons,copyText} from './question-tools.js';
 import {screenController,screenView} from './screen-view.js';
 import {UNKNOWN} from './answers.js';
 import {recordStudy,reportView} from './report.js';
@@ -213,6 +213,25 @@ function hydrateOptions(scope){
     });
   }
 }
+let morphologyModule, morphologyFilter='all', wordIssue=null;
+function morphologyUI(){
+  if(!document.querySelector('link[data-morpheme-style]')){const link=document.createElement('link');link.rel='stylesheet';link.href='./morphemes.css';link.dataset.morphemeStyle='';link.onerror=()=>link.remove();document.head.append(link);}
+  return morphologyModule??=import('./morphemes.js').catch(error=>{morphologyModule=null;throw error;});
+}
+function allowedWordStudy(node){return Boolean((page==='library'&&node.closest('.lib-card'))||(dialog.open&&node.closest('[data-option-word-study]')));}
+function morphologyAllowed(el){
+  if(page==='exam'&&s.exam?.phase!=='done')return false;
+  const answer=el.closest('[data-answer-details-id]');if(answer)return Boolean(reviewedAnswer(answer.dataset.answerDetailsId));
+  const word=el.closest('[data-word-details-id]');if(word)return allowedWordStudy(word);
+  return Boolean(page==='library'&&el.closest('[data-morpheme-index]')||dialog.open&&el.closest('[data-morpheme-family]'));
+}
+function hydrateWordEnrichment(scope){
+  if(!scope.querySelector('[data-word-details-id],[data-answer-details-id],[data-morpheme-index]'))return;
+  morphologyUI().then(ui=>ui.mountWordEnrichment(scope,{vocab:bank.vocab||[],state:s,filter:morphologyFilter,jaMeaning:japaneseMeaning,allowedStudy:allowedWordStudy,resolveAnswer:id=>reviewedAnswer(id,(ref,q,selected,correct)=>({ref,q,selected,correct}))})).catch(error=>{
+    if(!scope.isConnected)return;
+    for(const node of scope.querySelectorAll('[data-word-details-id],[data-answer-details-id],[data-morpheme-index]'))if(!node.closest('details:not([open])'))node.innerHTML='<p class="fine muted">'+esc(error.message)+'</p><button type="button" class="secondary" data-act="morpheme-retry">重试词根内容</button>';
+  });
+}
 let audioSettingsModule;
 function hydrateAudioSettings(){
   const host=document.querySelector('#audio-settings-host');if(!host)return;
@@ -315,6 +334,7 @@ function render() {
   hydrateWordMeanings(root);
   hydrateTerms(root);
   hydrateOptions(root);
+  hydrateWordEnrichment(root);
   prepareVisibleAudio();
   root.setAttribute('aria-busy', 'false');
   if(page==='practice')showFirstMethod();
@@ -374,6 +394,7 @@ function startClock() {
   tick = setInterval(update, 500);
 }
 function modal(content, cls = '') {
+  wordIssue=null;
   stopReadAloud();
   stopReplay();
   pauseClock();
@@ -384,12 +405,13 @@ function modal(content, cls = '') {
   hydrateTranslations(dialog);
   hydrateWordMeanings(dialog);
   hydrateTerms(dialog);
-  hydrateOptions(dialog);
+  hydrateOptions(dialog);hydrateWordEnrichment(dialog);
 }
 function close() {
-  dialog.close();
+  wordIssue=null;dialog.close();
 }
 dialog.addEventListener('close', () => {
+  wordIssue=null;
   if (page === 'practice' || page==='diagnosis') startClock();
 });
 dialog.addEventListener('click', (e) => {
@@ -650,6 +672,23 @@ document.addEventListener('click', async (e) => {
   const el = e.target.closest('[data-act]');
   if (!el || el.disabled) return;
   const { act: a, mode, page: p, i, filter, id } = el.dataset;
+  if(a==='morpheme-retry'){hydrateWordEnrichment(el.parentElement.parentElement);return;}
+  if(a==='morpheme-filter'&&page==='library'&&el.closest('[data-morpheme-index]')){morphologyFilter=el.dataset.filter;hydrateWordEnrichment(root);return;}
+  if(['morpheme-family','morpheme-word','morpheme-ja','morpheme-en','morpheme-example','report-morpheme'].includes(a)){
+    if(!morphologyAllowed(el))return;
+    if(a==='morpheme-example'){const word=bank.vocab.find(w=>w.id===el.dataset.wordId);if(word)speak([{speaker:'A',text:word.word,bank:'vocab',key:word.id+'/meaning'}],s.settings,toast,{seed:word.id});return;}
+    if(a==='morpheme-en'){speak([{speaker:'A',text:el.dataset.text,systemText:[...el.dataset.text.replace(/[^A-Za-z]/g,'')].map(c=>c.toUpperCase()+'.').join(' '),bank:'vocab',key:el.dataset.morphemeKey}],s.settings,toast);return;}
+    if(a==='morpheme-ja'){speakJapanese(el.dataset.text,s.settings,toast,{bank:'vocab',key:el.dataset.morphemeKey});return;}
+    try{const ui=await morphologyUI(),data=await ui.loadMorphemes();if(!el.isConnected||!morphologyAllowed(el))return;
+      if(a==='report-morpheme'){
+        const morphId=el.dataset.morphemeId;if(el.closest('[data-morpheme-family]')?.dataset.morphemeFamily!==morphId)return;
+        const text=ui.morphemeIssueText(morphId,data,bank.vocab);if(!text)return;
+        const reportId='morph-'+morphId;modal(issueForm(reportId,{word:true,title:'报告词根词缀'}));wordIssue={id:reportId,text};return;
+      }
+      if(a==='morpheme-family')modal(ui.morphemeFamilyView(el.dataset.morphemeId,data,bank.vocab,s),'word-detail');
+      else{const word=bank.vocab.find(w=>w.id===el.dataset.wordId);if(word)modal(wordDetailView(word),'word-detail');}
+    }catch(error){toast(error.message);}return;
+  }
   if(['audio-download','audio-cancel','audio-delete'].includes(a)){
     if(!el.closest('#audio-downloads')||!dialog.open)return;
     if(a==='audio-delete')hush();
@@ -825,6 +864,18 @@ document.addEventListener('click', async (e) => {
   if(a==='copy-claude') {
     const text=reviewedAnswer(id,claudeText);
     if(text)await copyText(text,modal,toast,'已复制，可粘贴给 Claude');
+  }
+  if(a==='report-word') {
+    const host=el.closest('[data-word-study-id]'),word=bank.vocab?.find(w=>w.id===id);
+    if(!word||host?.dataset.wordStudyId!==id||!allowedWordStudy(host)||page==='exam'&&s.exam?.phase!=='done')return;
+    const snapshot=wordIssueText(word,japaneseMeaning(id));
+    modal(issueForm(id,{word:true}));wordIssue={id,text:snapshot};return;
+  }
+  if(a==='save-word-issue') {
+    const reason=$('#issue-reason')?.value,note=$('#issue-note')?.value.trim();
+    if(!dialog.open||!wordIssue||wordIssue.id!==id||!reasons.includes(reason)||typeof note!=='string'||page==='exam'&&s.exam?.phase!=='done')return;
+    (s.issues??=[]).push({id,reason,note,text:wordIssue.text});
+    if(save()){close();toast('已保存词卡问题报告');}return;
   }
   if(a==='report-issue' && reviewedAnswer(id)) modal(issueForm(id));
   if(a==='save-issue') {
@@ -1007,7 +1058,7 @@ window.addEventListener('storage', async (e) => {
     render();
   } catch {}
 });
-document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open){hydrateTranslations(e.target);hydrateOptions(e.target);}}, true);
+document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open){hydrateTranslations(e.target);hydrateOptions(e.target);hydrateWordEnrichment(e.target);}}, true);
 window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};

@@ -72,3 +72,15 @@ test('a newly recorded matched item stays in the exact-SHA human listening queue
  const f=fixture(),row=f.result.unresolvedItems[0];row.humanReview={status:'required',reason:'新录音尚未复听'};row.asrStatus='matched';f.audits.get('ja:reading').records['j/text/0'].status='matched';
  const out=makeReviewQueue(f).entries.find(x=>x.token===row.token);assert.equal(out.reviewStatus,'pending-human-review');assert.equal(out.asrStatus,'matched');assert.equal(out.reason,'新录音尚未复听');assert.equal(out.sha256,f.packs.get('ja:reading').clips['j/text/0'].sha256);
 });
+test('morpheme review explains the bound letter spelling without changing its ASR verdict',()=>{
+ const f=fixture(),before=makeReviewQueue(f),row=f.result.unresolvedItems.find(r=>r.token==='en:vocab:v/example/0');
+ const key='morph-pre-re/forms/0',pack=f.packs.get('en:vocab'),audit=f.audits.get('en:vocab');
+ const clip=pack.clips['v/example/0'],actual=audit.records['v/example/0'];delete pack.clips['v/example/0'];delete audit.records['v/example/0'];
+ Object.assign(row,{token:`en:vocab:${key}`,text:'re-',spoken:'R. E.',recognized:'RE',asrStatus:'review'});
+ Object.assign(clip,{text:row.text,spoken:row.spoken});Object.assign(actual,{key,expected:row.text,spoken:row.spoken,recognized:row.recognized,status:'review'});
+ pack.clips[key]=clip;audit.records[key]=actual;
+ const output=makeReviewQueue(f),entry=output.entries.find(r=>r.token===row.token);
+ assert.match(entry.reason,/字母拼写「R\. E\.」/);assert.match(entry.reason,/不是词缀在单词中的读音/);
+ assert.equal(entry.text,'re-');assert.equal(entry.recognized,'RE');assert.equal(entry.asrStatus,'review');assert.equal(entry.sha256,clip.sha256);
+ assert.deepEqual(output.entries.filter(r=>r.token!==row.token),before.entries.filter(r=>r.token!=='en:vocab:v/example/0'));
+});

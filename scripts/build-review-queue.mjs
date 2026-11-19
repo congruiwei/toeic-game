@@ -53,9 +53,12 @@ export function makeReviewQueue({result,ledger,packs,audits,sourceSha256}){
     const models={'whisper-large-v3-turbo':'e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da',[FULL_MODEL]:FULL_MODEL_SHA};
     expect(Object.hasOwn(models,g?.model)&&g.modelSha256===models[g.model],`Current ASR model changed: ${row.token}`);
     const additional=g.model==='whisper-large-v3-turbo'?fullRecognition(row,clip,ledger.records?.[row.token]?.crossModelChecks):undefined;
+    const spelling=language==='en'&&bank==='vocab'&&/^morph-[a-z0-9-]+\/forms\/\d+$/.test(key)
+      ?`此处读字母拼写「${clip.spoken}」，不是词缀在单词中的读音；请逐字母核对。`:'';
+    const reason=row.humanReview?.reason??(focus.has(row.token)?'重点复听：注意动作、词尾与关键单词。':notes[row.triage?.category]??'对照原文听清关键内容；自动转写只作为线索。');
     return {token:row.token,language,bank,key,text:row.text,recognized:row.recognized,recognitionModel:g.model,...(additional?{fullRecognition:additional}:{}),
       src:clip.src,sha256:clip.sha256,asrStatus:row.asrStatus??actual.status,reviewStatus:row.humanReview?.status==='required'?'pending-human-review':'asr-review',priority:row.humanReview?.status==='required'?0:focus.has(row.token)?0:1,
-      reason:row.humanReview?.reason??(focus.has(row.token)?'重点复听：注意动作、词尾与关键单词。':notes[row.triage?.category]??'对照原文听清关键内容；自动转写只作为线索。')};
+      reason:[spelling,reason].filter(Boolean).join(' ')};
   });
   const group=row=>row.language==='ja'?10:rank[row.bank]??6;
   entries.sort((a,b)=>group(a)-group(b)||a.priority-b.priority||a.token.localeCompare(b.token,'en'));

@@ -1,8 +1,9 @@
+import {answerDetailsSlot} from './word-enrichment.js';
 import {UNKNOWN} from './answers.js';
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c =>
   ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'})[c]);
-export const reasons = ['答案可能错了','有两个答案都对','解析不对','声音或显示有问题','翻译不自然','其他'];
+export const reasons = ['答案可能错了','有两个答案都对','解析不对','声音或显示有问题','翻译不自然','词根拆分有误','其他'];
 const kindNames = {sentence:'句子插入',insertion:'句子插入位置',vocab:'词义',vocabulary:'词义',detail:'细节',inference:'推断',purpose:'主旨',negative:'排除题',intent:'意图',graphic:'图表',first:'听清首词',response:'选择回应'};
 const letter = i => String.fromCharCode(65+i);
 // An explicit answer-key correction supersedes only the known erroneous snapshot.
@@ -32,6 +33,9 @@ export function answerText(ref,q,selected,correct=q.answer) {
   const explanation = ref.mode==='vocab' ? [q.word+' · '+q.pos+' · '+q.zh,q.example,'搭配　'+q.collocation,'同义替换　'+q.paraphrase] :
     [q.en,q.zh,q.evidence && '原文依据　'+q.evidence,q.paraphrase && '同义替换　'+q.paraphrase];
   sections.push('现有解析\n'+explanation.filter(Boolean).join('\n'));
+  if(q.parts?.length)sections.push('词根拆分\n'+q.parts.map(p=>p.text+(p.morpheme?' ['+p.morpheme+']':'')).join(' + '));
+  if(q.partsNote)sections.push('拆分说明\n'+q.partsNote.zh+'\n'+q.partsNote.ja);
+  if(q.partsTrap)sections.push('拆词陷阱\n'+q.partsTrap.zh+'\n'+q.partsTrap.ja);
   return sections.join('\n\n');
 }
 export function claudeText(ref, q, selected, correct = q.answer) {
@@ -44,16 +48,23 @@ export function claudeText(ref, q, selected, correct = q.answer) {
   return answerText(ref, q, selected, correct) + '\n\n' + request;
 }
 export function reviewTools(id) {
-  return '<section class="translations" data-translation-id="'+esc(id)+'"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section><section data-options-id="'+esc(id)+'"><p class="fine muted" role="status">正在载入选项释义…</p></section><div class="review-tools"><button type="button" class="secondary" data-act="report-issue" data-id="'+esc(id)+'">这题有问题</button><button type="button" class="secondary" data-act="copy-claude" data-id="'+esc(id)+'">复制问 Claude</button></div>';
+  return answerDetailsSlot(id)+'<section class="translations" data-translation-id="'+esc(id)+'"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section><section data-options-id="'+esc(id)+'"><p class="fine muted" role="status">正在载入选项释义…</p></section><div class="review-tools"><button type="button" class="secondary" data-act="report-issue" data-id="'+esc(id)+'">这题有问题</button><button type="button" class="secondary" data-act="copy-claude" data-id="'+esc(id)+'">复制问 Claude</button></div>';
 }
 export function validIssues(rows) {
   return rows===undefined || (Array.isArray(rows) && rows.every(r=>r && typeof r.id==='string' && /^[\w-]{1,100}$/.test(r.id) && reasons.includes(r.reason) && typeof r.note==='string' && r.note.length<=1000 && typeof r.text==='string' && r.text.length>0));
 }
-export function issueForm(id) {
-  return '<h2>报告这道题</h2><p>'+esc(id)+'</p><label class="setting">原因<select id="issue-reason">'+reasons.map(r=>'<option>'+r+'</option>').join('')+'</select></label><label class="issue-field">备注（选填）<textarea id="issue-note" rows="3" maxlength="1000" placeholder="翻译问题可写明哪一句、中文或日语，以及你的建议。"></textarea></label><button class="primary" data-act="save-issue" data-id="'+esc(id)+'">保存在本机</button>';
+export function wordIssueText(word, ja = '') {
+  const lines=['词卡 ID　'+word.id,'单词　'+word.word,'音标　'+word.ipa,'词性　'+word.pos,'中文义项　'+word.zh,ja&&'日语义项　'+ja,'例句\n'+word.example,'搭配　'+word.collocation,'同义替换　'+word.paraphrase];
+  if(word.parts?.length)lines.push('词根拆分\n'+word.parts.map(p=>p.text+(p.morpheme?' ['+p.morpheme+']':'')).join(' + '));
+  for(const [key,label] of [['partsNote','拆分说明'],['partsTrap','拆词陷阱']])if(word[key])lines.push(label+'\n'+word[key].zh+'\n'+word[key].ja);
+  return lines.filter(Boolean).join('\n\n');
+}
+export function issueForm(id, {word = false, title} = {}) {
+  return '<h2>'+esc(title||(word?'报告词卡':'报告这道题'))+'</h2><p>'+esc(id)+'</p><label class="setting">原因<select id="issue-reason">'+reasons.map(r=>'<option>'+r+'</option>').join('')+'</select></label><label class="issue-field">备注（选填）<textarea id="issue-note" rows="3" maxlength="1000" placeholder="翻译问题可写明哪一句、中文或日语，以及你的建议。"></textarea></label><button class="primary" data-act="'+(word?'save-word-issue':'save-issue')+'" data-id="'+esc(id)+'">保存在本机</button>';
 }
 export function issueSettings(rows=[]) {
   return '<section class="backup"><h3>问题报告（'+rows.length+'）</h3><p class="fine muted">保存在本机，导出进度时一并备份。</p>'+
+    rows.map(r=>'<details data-saved-issue="'+esc(r.id)+'"><summary>'+esc(r.id)+' · '+esc(r.reason)+'</summary><label class="issue-field">已保存的内容<textarea readonly rows="6">'+esc((r.note?'备注：'+r.note+'\n\n':'')+r.text)+'</textarea></label></details>').join('')+
     (rows.length?'<button class="secondary" data-act="copy-issues">复制全部报告</button> <button class="secondary" data-act="clear-issues">清空报告</button>':'')+'</section>';
 }
 export function issuesText(rows) {

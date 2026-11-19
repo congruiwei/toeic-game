@@ -44,3 +44,17 @@ test('source preflight can target an external file without changing published me
   assert.deepEqual(await fs.readFile(path.join(f.temp,'data/audio/source.json')),before);
  }finally{await fs.rm(f.temp,{recursive:true,force:true});}
 });
+test('morphology adds explicit spelling and Japanese notes without widening old optional coverage',async()=>{
+ const f=await fixture();try{
+  await f.save('data/morphemes.json',{version:1,entries:[{id:'pre-re',forms:['re-'],zh:'再次',ja:'再び',noteJa:'動詞に付けます。'}]});
+  const words=JSON.parse(await fs.readFile(path.join(f.temp,'data/vocab.json'),'utf8'));
+  words[0].partsNote={zh:'词形说明',ja:'元の語を確認します。'};
+  await f.save('data/vocab.json',words);
+  const r=f.run();assert.equal(r.status,0,r.stderr);const units=(await f.load()).units;
+  const added=units.filter(u=>u.key.startsWith('morph-pre-re/')||u.key==='v-original/parts-note');
+  assert.equal(added.length,5);assert.ok(added.every(u=>u.required&&u.bank==='vocab'));
+  const en=added.find(u=>u.language==='en');assert.equal(en.text,'re-');assert.equal(en.spoken,'R. E.');assert.equal(en.kind,'morpheme-spelling');
+  assert.equal(units.find(u=>u.language==='en'&&u.key==='v-original/collocation/0').required,false);
+  assert.equal(units.find(u=>u.language==='en'&&u.key==='v-original/clozeDistractors/0/0').required,false);
+ }finally{await fs.rm(f.temp,{recursive:true,force:true});}
+});

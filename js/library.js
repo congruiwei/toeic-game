@@ -1,3 +1,4 @@
+import {wordDetailsSlot} from './word-enrichment.js';
 import {errorDue} from './review-scheduler.js';
 import { bank, catalog, question } from './bank.js';
 import { icon } from './icons.js';
@@ -21,13 +22,13 @@ function herbarium() {
 }
 
 function cardBody(word) {
-  return `<div class="lib-card-body">
+  return `<div class="lib-card-body" data-word-study-id="${escape(word.id)}">
     <p class="lib-phonetic" lang="en">${escape(word.ipa)} · ${escape(word.pos)}</p>
     <p lang="zh-CN">${escape(word.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${escape(word.id)}">正在载入日语释义…</p>
     <p>${readButton(word.word,{study:true,id:word.id,bank:'vocab',key:word.id+'/meaning'})}</p>
     <blockquote lang="en">${readable(word.example,{study:true,id:word.id,bank:'vocab',key:word.id+'/example/0'})}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
-    <dl><dt>常见搭配</dt><dd lang="en">${readable(word.collocation,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd>
-      <dt>同义替换</dt><dd lang="en">${readable(word.paraphrase,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd></dl>
+    ${wordDetailsSlot(word,{study:true})}<dl><dt>常见搭配</dt><dd lang="en">${readable(word.collocation,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd>
+      <dt>同义替换</dt><dd lang="en">${readable(word.paraphrase,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd></dl><button type="button" class="secondary" data-act="report-word" data-id="${escape(word.id)}">报告词卡问题</button>
   </div>`;
 }
 
@@ -93,11 +94,11 @@ function errorsView(errors,state) {
 export function libraryView(s, tab = 'words', filter = '') {
   const errors = Object.values(s.errors).filter(error => catalog.has(error.ref.id))
     .sort((a,b)=>errorDue(s,a)-errorDue(s,b)||b.misses-a.misses);
-  const tabs = [['words','单词图鉴','cards'], ['errors','错题本','note']];
+  const tabs = [['words','单词图鉴','cards'], ['errors','错题本','note'], ['morphemes','词根图鉴','leaf']];
   return `<div class="lib-page"><h1>学习图鉴</h1>
     <div class="lib-tabs" aria-label="图鉴分类">${tabs.map(([key,label,symbol]) =>
       `<button type="button" data-act="library-tab" data-tab="${key}" aria-pressed="${tab === key}">
         ${icon(symbol,18)}${label}${key === 'errors' && errors.length ? `<small>${errors.length}</small>` : ''}
       </button>`).join('')}</div>
-    ${tab === 'errors' ? errorsView(errors,s) : wordsView(s,filter)}</div>`;
+    ${tab === 'morphemes' ? '<section data-morpheme-index><p role="status">正在打开词根图鉴…</p></section>' : tab === 'errors' ? errorsView(errors,s) : wordsView(s,filter)}</div>`;
 }

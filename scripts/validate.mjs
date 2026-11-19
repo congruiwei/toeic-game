@@ -1,3 +1,4 @@
+import {validateMorphemeFiles} from './validate-morphemes.mjs';
 // Run from any directory: node scripts/validate.mjs
 import { readFile } from 'node:fs/promises';
 import { methodParts } from '../js/methods.js';
@@ -458,6 +459,8 @@ issues.push(...translations.errors.map(error => 'i18n: ' + JSON.stringify(error)
 const options = validateOptionsFiles(fileURLToPath(new URL('../',import.meta.url)));
 for(const summary of options.summaries)console.log(summary);
 issues.push(...options.errors.map(error=>'options: '+JSON.stringify(error)));
+const morphology=validateMorphemeFiles(fileURLToPath(new URL('../',import.meta.url)));
+console.log(morphology.summary);issues.push(...morphology.errors.map(error=>'morphemes: '+error));
 if (issues.length) {
   console.error(issues.join('\n'));
   process.exitCode = 1;

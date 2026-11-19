@@ -144,7 +144,7 @@ export function resolveAudioPieces(turns,{language='en',bank,seed=''}={}) {
     const forced=keys?.map(key=>getAudioFallback(key,context)).filter(Boolean)||[];
     let clips=keys?.map(key=>getAudioEntry(key,context));
     if(clips?.some(clip=>!clip)||clips&&normalized(clips.map(clip=>clip.text).join(' '))!==normalized(turn.text))clips=null;
-    if(!clips&&forced.length)return [{...forced[0],text:turn.text,keys,speaker:turn.speaker,language:lang,turnIndex}];
+    if(!clips&&forced.length)return [{...forced[0],text:turn.text,systemText:turn.systemText,keys,speaker:turn.speaker,language:lang,turnIndex}];
     if(!clips&&!exactHead)clips=exactClips(turn.text,context);
     // Only untyped choices may reuse a word head. Explicit vocabulary or external
     // lexeme senses must keep their own pronunciation; missing clips use speech.
@@ -157,7 +157,7 @@ export function resolveAudioPieces(turns,{language='en',bank,seed=''}={}) {
       const body=exactClips(prefix[2],context);
       if(body){const label=getAudioClip(`labels/${body[0].voiceId}/${prefix[1]}`,{language:'en',bank:'labels'});if(label)clips=[label,...body];}
     }
-    return clips?clips.map(clip=>({...clip,speaker:turn.speaker,turnIndex})): [{text:turn.text,speaker:turn.speaker,language:lang,turnIndex,key:turn.key||turn.audioKey||''}];
+    return clips?clips.map(clip=>({...clip,...(clips.length===1&&typeof turn.systemText==='string'?{systemText:turn.systemText}:{}),speaker:turn.speaker,turnIndex})): [{text:turn.text,systemText:turn.systemText,speaker:turn.speaker,language:lang,turnIndex,key:turn.key||turn.audioKey||''}];
   });
 }
 

@@ -1,7 +1,9 @@
+import {morphemeSourceUnits} from './word-enrichment.js';
 import { splitSentences } from './replay.js';
 
 // Keys describe immutable source fields, rather than depending on translated text.
 export function sourceUnits(bank, records) {
+  if(bank==='morphemes')return morphemeSourceUnits(records);
   const units = [];
   function add(id, field, text, kind = 'sentence', extra = {}) {
     if (text?.trim()) units.push({ key:`${id}/${field}`, id, bank, text, kind, ...extra });
