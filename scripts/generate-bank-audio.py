@@ -420,7 +420,11 @@ def flush(source, source_hash, generation, packs):
             human_approved+=bool(human and human['status']=='approved')
             human_required+=bool(human and human['status']=='required')
             review = checks.get(key, {})
-            clip['asrStatus'] = review['status'] if valid_published_asr(source_units.get((*pair,key)),clip,review,quality_rows,first_ids) else 'pending'
+            # Status is derived metadata. Revalidate the complete signed manual
+            # proof even after an earlier sync marked an otherwise valid clip
+            # pending; every media/recipe/transcript field remains bound.
+            candidate={**clip,'asrStatus':review.get('status')} if clip.get('manualKanaId') else clip
+            clip['asrStatus'] = review['status'] if valid_published_asr(source_units.get((*pair,key)),candidate,review,quality_rows,first_ids) else 'pending'
             if clip['asrStatus'] in ('matched', 'review', 'accepted'):
                 audited += 1
                 pack_audited += 1

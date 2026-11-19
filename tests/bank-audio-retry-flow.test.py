@@ -82,5 +82,28 @@ class RecoveryFlowTest(unittest.TestCase):
         self.assertEqual(len(report['archivedCases']),1);self.assertFalse(report['records'])
         self.assertEqual(r.read(self.pack_path,{})['clips'][self.unit['key']]['text'],self.unit['text'])
         self.assertNotIn(f.token(self.unit),r.read(self.out/'overrides.json',{})['entries'])
+    def test_token_scope_preserves_unselected_complete_and_interrupted_history(self):
+        selected=dict(self.unit,key='new/meaning',text='new')
+        selected_clip=f.clip_for(selected,'d'*64)
+        tokens=self.base/'selected.json';r.atomic(tokens,[f.token(selected)])
+        for complete in [True,False]:
+            with self.subTest(complete=complete):
+                old=f.case_for(self.unit);old['complete']=complete
+                # A stale unselected case used to be archived before the late
+                # token filter, then removed from records during pruning.
+                changed=dict(self.unit,text='Changed in an unrelated release')
+                changed_clip=f.clip_for(changed,'c'*64)
+                r.atomic(self.out/'source.json',{'units':[changed,selected]})
+                r.atomic(self.out/'retries.json',{'version':1,'records':{f.token(self.unit):old},'archivedCases':[]})
+                overrides={'entries':{f.token(self.unit):old['retryOverride']}}
+                r.atomic(self.out/'overrides.json',overrides)
+                r.atomic(self.pack_path,{'clips':{changed['key']:changed_clip,selected['key']:selected_clip}})
+                records={changed['key']:f.actual_for(changed_clip,'review'),selected['key']:f.actual_for(selected_clip,'matched')}
+                r.atomic(self.audit_path,{'records':records})
+                self.run_flow(['--allow-incomplete','--tokens-file',str(tokens)])
+                report=r.read(self.out/'retries.json',{})
+                self.assertEqual(report['records'],{f.token(self.unit):old});self.assertEqual(report['archivedCases'],[])
+                self.assertEqual(r.read(self.out/'overrides.json',{}),overrides)
+                self.assertEqual(r.read(self.audit_path,{})['records'],records)
 
 if __name__=='__main__':unittest.main()

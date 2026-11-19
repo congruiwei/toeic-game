@@ -345,7 +345,7 @@ node tests/v6.cjs
 | --- | --- |
 | `js/translation-source.js` | 从原 JSON 生成稳定源单位；填入 Part 5／6 正确答案，按原句分切，保留表格单元格边界 |
 | `data/i18n/{zh,ja}/{bank}.json` | 七个 bank 的译文 `{version:1, entries:{key:text}}`；每语言 7699 条 |
-| `data/i18n/ja/vocab-meanings.json` | 1087 个日语释义的轻量派生包，单词题与详情不必下载例句全集 |
+| `data/i18n/ja/vocab-meanings.json` | 按义项生成的轻量日语释义包，单词题与详情不必下载例句全集 |
 | `scripts/build-vocab-meanings.mjs` | 从日语 vocab 包生成释义小包；`--check` 只校验是否同步 |
 | `data/i18n/ja/terms.json`、`js/japanese-terms.js` | 17 个语法主题、22 个方法标题的日语标签；遇到带标记的标题才加载 |
 | `data/i18n/glossary.json`、`scripts/validate-glossary.mjs` | 50 条上下文术语规则；表格按单元格检测，例外必须精确记录源句、译句及理由 |

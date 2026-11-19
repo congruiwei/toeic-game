@@ -55,7 +55,7 @@ test('all actual static questions and all seven dynamic vocabulary formats resol
    if(ref.mode==='vocab')vocabCount++;else staticCount++;
   }
  }
- assert.equal(staticCount,1162);assert.equal(vocabCount,1087*7);
+ assert.equal(staticCount,1162);assert.equal(vocabCount,bank.vocab.length*vocabularyFormats.length);
  const receiving=await loadOptionDetails({id:'read-receiving-01',mode:'reading'},question({id:'read-receiving-01',mode:'reading'}));
  const moving=receiving.options.find(x=>x.text==='moving');assert(moving.pos.includes('动名词'));assert(moving.reasonZh.includes('不是形容词'));
  const phrasals=await loadOptionDetails({id:'read-print-03',mode:'reading'},question({id:'read-print-03',mode:'reading'}));assert(phrasals.options.every(x=>x.pos==='动词短语'));

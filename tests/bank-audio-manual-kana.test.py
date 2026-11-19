@@ -40,7 +40,7 @@ class Publication(unittest.TestCase):
     self.quality['records'][t]=dict(token=t,language='ja',bank='grammar',key=u['key'],baseline={'immutable':t},repair=dict(complete=True,disposition='system-fallback',method='fixture original repair',original=initial,candidate=old))
     self.make_render(u,self.readings[t],self.readings[t] if i==0 else '')
    self.audits[pair]['records'][u['key']]=old['asr']
-  source=dict(version=1,model='fixture',voices={},units=self.units);self.write(self.out/'source.json',source);sourcehash=p.sha((self.out/'source.json').read_bytes());metas=[]
+  source=dict(version=1,model='fixture',voices={},units=self.units);self.write(self.out/'source.json',source);sourcehash=p.sha((self.out/'source.json').read_bytes());self.gen['sourceSha256']=sourcehash;metas=[]
   for pair,pack in self.packs.items():
    pack['sourceSha256']=sourcehash
    relative=f'data/audio/{pair[0]}/{pair[1]}.json';self.write(self.root/relative,pack);self.write(self.out/'audit'/pair[0]/(pair[1]+'.json'),self.audits[pair]);raw=(self.root/relative).read_bytes();metas.append(dict(language=pair[0],bank=pair[1],src='./'+relative,count=len(pack['clips']),sha256=p.sha(raw),bytes=len(raw)))

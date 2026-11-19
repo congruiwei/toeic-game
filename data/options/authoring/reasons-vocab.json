@@ -1,25 +1,353 @@
 {
- "v-available":{"available":"vacant 说明车位空着，any driver 和先到先得说明届时任何司机都可使用。","occupied":"occupied 表示已被占用，与前面的 vacant（空着）矛盾。","reserved":"reserved 表示已为特定对象预留，与任何司机均可先到先用的规则矛盾。","inaccessible":"inaccessible 表示无法进入或使用，与任何司机均可使用的后文矛盾。"},
- "v-benefit":{"benefit":"免费年度公交乘车证是雇主给员工的额外福利，因此用 benefit。","deduction":"deduction 是从工资或总额中扣除的款项，免费赠送的乘车证不是扣款。","obligation":"obligation 是必须履行的义务，免费获得乘车证是待遇而不是职责。","requirement":"requirement 是必须满足的要求，句中的免费乘车证是雇主提供的待遇。"},
- "v-depreciation":{"depreciation":"book value 是账面价值，仍在使用中的车辆每年计提折旧，使账面价值降低。","mileage":"mileage 表示行驶里程，不是此处使账面价值按年减少的会计折旧项目。","maintenance":"maintenance 是保养维护，不能表达车辆账面价值按年计提的折旧。","disposal":"disposal 是出售或报废等处置，与车辆全年仍在使用的条件不符。"},
- "v-merchandise":{"merchandise":"offered for sale 和前排展示桌共同说明这里指商店出售的商品。","acreage":"acreage 是土地面积，不能指摆在店内桌上出售的一批物品。","loyalty":"loyalty 是忠诚度，不是能摆在展示桌上标价出售的商品。","training":"training 是培训，不能指摆在前排桌上出售的实物商品。"},
- "v-topic":{"topic":"议程上列的是要讨论的事项，noise control 是本次研讨班的第一个议题。","requisite":"requisite 指必备条件或必需品；议程将噪声控制列为讨论事项，并非参会条件。","consequence":"consequence 是某事导致的结果；句中说的是预先列在议程上的讨论内容。","expense":"expense 是一项支出；这里列的是噪声控制这个议题，没有在列费用项目。"},
- "v-requisition":{"requisition":"signed internal 和 authorizing the requested supplies 表明这是授权领取物资的内部申领单。","quotation":"quotation 是报价单，说明价格，不是授权仓库发放所申请物资的内部单据。","guarantee":"guarantee 是保证或担保，不能表示此处签署后授权领取铆钉的内部申领单。","complaint":"complaint 是投诉，不是正式批准申领物资的内部授权单。"},
- "v-affect":{"affect":"多数访客需要乘渡轮，渡轮晚点可能影响他们到场，所以用 affect attendance。","announce":"announce attendance 表示宣布出席情况；晚点的渡轮不是发布出席信息的主体。","centralize":"centralize 是集中管理，不能表达渡轮晚点对出席人数造成的影响。","itemize":"itemize 是逐项列出；渡轮晚点并不会把出席情况逐项列明。"},
- "v-fixed-cost":{"fixed cost":"无论订单数量是一份还是一千份，租金额都不变，符合固定成本的含义。","sales target":"sales target 是销售目标；租金是不随订单数量变化的费用，不是销售指标。","trade discount":"trade discount 是商业折扣；句中租金额保持不变，没有对价格作折减。","performance bonus":"performance bonus 是绩效奖金；租金是经营费用，不是按绩效发放的奖励。"},
- "v-compulsory":{"compulsory":"完成培训是每次续办证件的必要条件，因此培训属于强制要求。","discretionary":"discretionary 表示可以自行酌定，与必须完成培训才能续证的条件矛盾。","elective":"elective 表示可选或选修，与公司规定的续证必要条件矛盾。","voluntary":"voluntary 表示自愿参加，但本句规定所有续证者都必须完成培训。"},
- "v-lodging":{"lodging":"后半句明确可以报销两晚房费，说明补助涵盖住宿。","catering":"catering 是餐饮服务，不能说明为什么代表可以申报房费。","commuting":"commuting 是往返通勤，不包括本句所指的两晚住宿房费。","subscriptions":"subscriptions 是订阅服务，不能指两晚房间住宿的费用。"},
- "v-consignment-sale":{"consignment sale":"画廊等买家购买后才向供画者付款，这是寄售交易。","cash advance":"cash advance 是预先支付现金，与售出画作后才付款的安排相反。","lease renewal":"lease renewal 是延长租约，句中谈的是画作售出后的货款结算。","tax refund":"tax refund 是退还税款，买家买画后画廊支付的是货款。"},
- "v-trainee":{"trainee":"参加培训项目、通过考核后进入正式岗位的人是受训人员。","trainer":"trainer 指负责培训别人的人，而本句的人需要通过培训考核后转为正式岗位。","mentor":"mentor 指指导他人的导师，句中描述的是受训并接受考核的人员。","referee":"referee 是裁判、审稿人或推荐人，不是培训后转入正式岗位的受训人员。"},
- "v-shortlist":{"shortlist":"八十人中仅五人获邀面试，shortlist 指筛选后的入围候选名单。","payroll":"payroll 是工资名册；这些申请人只是获邀面试，还未成为领取薪酬的员工。","scoreboard":"scoreboard 是记分牌，不是获邀面试的最终候选名单。","survey":"survey 是调查，made the survey 不能表示进入最终面试候选名单。"},
- "v-unit-price":{"unit price":"总价六十美元除以二十箱得每箱三美元，这是单价。","monthly payroll":"monthly payroll 是月度工资总额，不能用箱数除货款来计算。","annual turnover":"annual turnover 是年营业额；此处是这批货每箱的售价。","closing balance":"closing balance 是期末余额，不能表示六十美元除以二十箱得到的单价。"},
- "v-basement":{"basement":"below street level 明确指出房间在地面以下，因此是地下室。","mezzanine":"mezzanine 指两层之间的夹层，不是本句位于街道地面以下的房间。","rooftop":"rooftop 指屋顶，与 below street level 的地下位置相反。","attic":"attic 指屋顶下的阁楼，与房间在街道地面以下的条件不符。"},
- "v-anticipate":{"anticipate":"预测票将在中午前售罄，且已开放候补名单，说明他们预计会售罄。","deny":"deny a sellout 是否认售罄，与前文的售罄预测和候补安排不一致。","prohibit":"prohibit 是禁止；这里是根据预测准备应对售罄，不是禁止卖完门票。","avert":"avert a sellout 是设法避免售罄，但开放候补名单是在准备应对售罄。"},
- "v-decline":{"decline":"选择 cannot attend 明确表示不能参加，因此要婉拒邀请。","endorse":"endorse 是正式支持，不是通过选择 cannot attend 来谢绝邀请。","forward":"forward an invitation 是把邀请转发给别人，而句中操作是在回复自己无法参加。","extend":"extend an invitation 可表示发出邀请；这里已经收到邀请，要选择 cannot attend 表示拒绝。"},
- "v-coworker":{"coworker":"shared employment 和同在包装线工作表明 Kim 是同事。","landlord":"landlord 是房东，题干明确两人除了共同受雇外没有其他业务关系。","patron":"patron 指顾客或资助人，不能表达题干所限定的共同受雇关系。","franchisee":"franchisee 是加盟经营者，而 Kim 与说话人是在同一包装线受雇工作的同事。"},
- "v-appreciate-value":{"appreciate":"thank you 和对方临时无偿代班的背景表明这里是在感谢帮助。","depreciate":"depreciate 是贬值或计提折旧，不能表示对方无偿帮忙后的感激。","subdivide":"subdivide 是进一步分割或细分，与后文向代班者道谢的目的不符。","sublet":"sublet 是转租房屋等，不能把对方提供的帮助当成转租对象。"},
- "v-term-condition":{"term":"租约中规定租期为三年的一项约定是合同条款，故用 term。","courtyard":"courtyard 是庭院，是地点，不能作为印在合同中的条款规定租期。","occupant":"occupant 是居住者或使用者，不是印在 Duration 栏中的合同条款。","photographer":"photographer 是摄影师，不能指合同中规定三年租期的文字条款。"},
- "v-redeem":{"transfer":"transfer 作动词表示转移或转接，例如把积分转给其他账户；本句强调用积分兑换电缆，应使用 redeem points for ...，不能用 transfer 表达兑换。"},
- "v-landscape":{"survey":"survey 作动词表示勘测或调查场地，是了解地形或现状；本句铺草皮、设置种植区是在实际改造院子，应使用 landscape，不能用 survey 表达这项美化施工。"},
- "v-renovation":{"survey":"survey 是n.，表示“面向一群对象的调查”。本句的情境是“翻新工程更换了扶手并增设照明，让老旧楼梯焕然一新。”；这里句中所指的人、物或概念要表达“翻新；整修”，并非 survey 所指的“面向一群对象的调查”。"}
+  "v-available": {
+    "available": "vacant 说明车位空着，any driver 和先到先得说明届时任何司机都可使用。",
+    "occupied": "occupied 表示已被占用，与前面的 vacant（空着）矛盾。",
+    "reserved": "reserved 表示已为特定对象预留，与任何司机均可先到先用的规则矛盾。",
+    "inaccessible": "inaccessible 表示无法进入或使用，与任何司机均可使用的后文矛盾。"
+  },
+  "v-benefit": {
+    "benefit": "免费年度公交乘车证是雇主给员工的额外福利，因此用 benefit。",
+    "deduction": "deduction 是从工资或总额中扣除的款项，免费赠送的乘车证不是扣款。",
+    "obligation": "obligation 是必须履行的义务，免费获得乘车证是待遇而不是职责。",
+    "requirement": "requirement 是必须满足的要求，句中的免费乘车证是雇主提供的待遇。"
+  },
+  "v-depreciation": {
+    "depreciation": "book value 是账面价值，仍在使用中的车辆每年计提折旧，使账面价值降低。",
+    "mileage": "mileage 表示行驶里程，不是此处使账面价值按年减少的会计折旧项目。",
+    "maintenance": "maintenance 是保养维护，不能表达车辆账面价值按年计提的折旧。",
+    "disposal": "disposal 是出售或报废等处置，与车辆全年仍在使用的条件不符。"
+  },
+  "v-merchandise": {
+    "merchandise": "offered for sale 和前排展示桌共同说明这里指商店出售的商品。",
+    "acreage": "acreage 是土地面积，不能指摆在店内桌上出售的一批物品。",
+    "loyalty": "loyalty 是忠诚度，不是能摆在展示桌上标价出售的商品。",
+    "training": "training 是培训，不能指摆在前排桌上出售的实物商品。"
+  },
+  "v-topic": {
+    "topic": "议程上列的是要讨论的事项，noise control 是本次研讨班的第一个议题。",
+    "requisite": "requisite 指必备条件或必需品；议程将噪声控制列为讨论事项，并非参会条件。",
+    "consequence": "consequence 是某事导致的结果；句中说的是预先列在议程上的讨论内容。",
+    "expense": "expense 是一项支出；这里列的是噪声控制这个议题，没有在列费用项目。"
+  },
+  "v-requisition": {
+    "requisition": "signed internal 和 authorizing the requested supplies 表明这是授权领取物资的内部申领单。",
+    "quotation": "quotation 是报价单，说明价格，不是授权仓库发放所申请物资的内部单据。",
+    "guarantee": "guarantee 是保证或担保，不能表示此处签署后授权领取铆钉的内部申领单。",
+    "complaint": "complaint 是投诉，不是正式批准申领物资的内部授权单。"
+  },
+  "v-affect": {
+    "affect": "多数访客需要乘渡轮，渡轮晚点可能影响他们到场，所以用 affect attendance。",
+    "announce": "announce attendance 表示宣布出席情况；晚点的渡轮不是发布出席信息的主体。",
+    "centralize": "centralize 是集中管理，不能表达渡轮晚点对出席人数造成的影响。",
+    "itemize": "itemize 是逐项列出；渡轮晚点并不会把出席情况逐项列明。"
+  },
+  "v-fixed-cost": {
+    "fixed cost": "无论订单数量是一份还是一千份，租金额都不变，符合固定成本的含义。",
+    "sales target": "sales target 是销售目标；租金是不随订单数量变化的费用，不是销售指标。",
+    "trade discount": "trade discount 是商业折扣；句中租金额保持不变，没有对价格作折减。",
+    "performance bonus": "performance bonus 是绩效奖金；租金是经营费用，不是按绩效发放的奖励。"
+  },
+  "v-compulsory": {
+    "compulsory": "完成培训是每次续办证件的必要条件，因此培训属于强制要求。",
+    "discretionary": "discretionary 表示可以自行酌定，与必须完成培训才能续证的条件矛盾。",
+    "elective": "elective 表示可选或选修，与公司规定的续证必要条件矛盾。",
+    "voluntary": "voluntary 表示自愿参加，但本句规定所有续证者都必须完成培训。"
+  },
+  "v-lodging": {
+    "lodging": "后半句明确可以报销两晚房费，说明补助涵盖住宿。",
+    "catering": "catering 是餐饮服务，不能说明为什么代表可以申报房费。",
+    "commuting": "commuting 是往返通勤，不包括本句所指的两晚住宿房费。",
+    "subscriptions": "subscriptions 是订阅服务，不能指两晚房间住宿的费用。"
+  },
+  "v-consignment-sale": {
+    "consignment sale": "画廊等买家购买后才向供画者付款，这是寄售交易。",
+    "cash advance": "cash advance 是预先支付现金，与售出画作后才付款的安排相反。",
+    "lease renewal": "lease renewal 是延长租约，句中谈的是画作售出后的货款结算。",
+    "tax refund": "tax refund 是退还税款，买家买画后画廊支付的是货款。"
+  },
+  "v-trainee": {
+    "trainee": "参加培训项目、通过考核后进入正式岗位的人是受训人员。",
+    "trainer": "trainer 指负责培训别人的人，而本句的人需要通过培训考核后转为正式岗位。",
+    "mentor": "mentor 指指导他人的导师，句中描述的是受训并接受考核的人员。",
+    "referee": "referee 是裁判、审稿人或推荐人，不是培训后转入正式岗位的受训人员。"
+  },
+  "v-shortlist": {
+    "shortlist": "八十人中仅五人获邀面试，shortlist 指筛选后的入围候选名单。",
+    "payroll": "payroll 是工资名册；这些申请人只是获邀面试，还未成为领取薪酬的员工。",
+    "scoreboard": "scoreboard 是记分牌，不是获邀面试的最终候选名单。",
+    "survey": "survey 是调查，made the survey 不能表示进入最终面试候选名单。"
+  },
+  "v-unit-price": {
+    "unit price": "总价六十美元除以二十箱得每箱三美元，这是单价。",
+    "monthly payroll": "monthly payroll 是月度工资总额，不能用箱数除货款来计算。",
+    "annual turnover": "annual turnover 是年营业额；此处是这批货每箱的售价。",
+    "closing balance": "closing balance 是期末余额，不能表示六十美元除以二十箱得到的单价。"
+  },
+  "v-basement": {
+    "basement": "below street level 明确指出房间在地面以下，因此是地下室。",
+    "mezzanine": "mezzanine 指两层之间的夹层，不是本句位于街道地面以下的房间。",
+    "rooftop": "rooftop 指屋顶，与 below street level 的地下位置相反。",
+    "attic": "attic 指屋顶下的阁楼，与房间在街道地面以下的条件不符。"
+  },
+  "v-anticipate": {
+    "anticipate": "预测票将在中午前售罄，且已开放候补名单，说明他们预计会售罄。",
+    "deny": "deny a sellout 是否认售罄，与前文的售罄预测和候补安排不一致。",
+    "prohibit": "prohibit 是禁止；这里是根据预测准备应对售罄，不是禁止卖完门票。",
+    "avert": "avert a sellout 是设法避免售罄，但开放候补名单是在准备应对售罄。"
+  },
+  "v-decline": {
+    "decline": "选择 cannot attend 明确表示不能参加，因此要婉拒邀请。",
+    "endorse": "endorse 是正式支持，不是通过选择 cannot attend 来谢绝邀请。",
+    "forward": "forward an invitation 是把邀请转发给别人，而句中操作是在回复自己无法参加。",
+    "extend": "extend an invitation 可表示发出邀请；这里已经收到邀请，要选择 cannot attend 表示拒绝。"
+  },
+  "v-coworker": {
+    "coworker": "shared employment 和同在包装线工作表明 Kim 是同事。",
+    "landlord": "landlord 是房东，题干明确两人除了共同受雇外没有其他业务关系。",
+    "patron": "patron 指顾客或资助人，不能表达题干所限定的共同受雇关系。",
+    "franchisee": "franchisee 是加盟经营者，而 Kim 与说话人是在同一包装线受雇工作的同事。"
+  },
+  "v-appreciate-value": {
+    "appreciate": "thank you 和对方临时无偿代班的背景表明这里是在感谢帮助。",
+    "depreciate": "depreciate 是贬值或计提折旧，不能表示对方无偿帮忙后的感激。",
+    "subdivide": "subdivide 是进一步分割或细分，与后文向代班者道谢的目的不符。",
+    "sublet": "sublet 是转租房屋等，不能把对方提供的帮助当成转租对象。"
+  },
+  "v-term-condition": {
+    "term": "租约中规定租期为三年的一项约定是合同条款，故用 term。",
+    "courtyard": "courtyard 是庭院，是地点，不能作为印在合同中的条款规定租期。",
+    "occupant": "occupant 是居住者或使用者，不是印在 Duration 栏中的合同条款。",
+    "photographer": "photographer 是摄影师，不能指合同中规定三年租期的文字条款。"
+  },
+  "v-redeem": {
+    "transfer": "transfer 作动词表示转移或转接，例如把积分转给其他账户；本句强调用积分兑换电缆，应使用 redeem points for ...，不能用 transfer 表达兑换。"
+  },
+  "v-landscape": {
+    "survey": "survey 作动词表示勘测或调查场地，是了解地形或现状；本句铺草皮、设置种植区是在实际改造院子，应使用 landscape，不能用 survey 表达这项美化施工。"
+  },
+  "v-renovation": {
+    "survey": "survey 是n.，表示“面向一群对象的调查”。本句的情境是“翻新工程更换了扶手并增设照明，让老旧楼梯焕然一新。”；这里句中所指的人、物或概念要表达“翻新；整修”，并非 survey 所指的“面向一群对象的调查”。"
+  },
+  "v-access": {
+    "access": "有效员工证决定能否查看工资档案，have access to 表示有权进入或使用。",
+    "solvency": "偿付能力描述能否还债，不表示查看工资档案的权限。",
+    "remuneration": "报酬是支付给工作人员的钱，不能表示凭证访问档案的资格。",
+    "depreciation": "折旧是资产价值减少，不是员工证授予的访问权限。"
+  },
+  "v-access-use": {
+    "access": "员工密码用于进入数据库并读写记录，access 在这里是动词“访问”。",
+    "reimburse": "报销对象通常是人或费用，不能用员工密码“报销数据库”。",
+    "interview": "interview 表示面试或采访；数据库不是此处接受访谈的人。",
+    "ventilate": "ventilate 表示使空气流通，不是使用密码进入数据库。"
+  },
+  "v-assess": {
+    "assess": "赔付金额尚未决定，必须先査定洪水损失的程度，故用 assess。",
+    "recruit": "recruit 表示招募人员，洪水损失不是可招募的对象。",
+    "ventilate": "ventilate 表示通风，不能用于估算已经造成的洪水损失。",
+    "restock": "restock 表示补充货物库存，不表示估定损失或赔付金额。"
+  },
+  "v-excess": {
+    "excess": "各罐已装到刻度，退回大容器的是超出所需的剩余部分。",
+    "reminder": "reminder 是提醒事项或提醒物，不是装罐后剩下的原料。",
+    "payroll": "payroll 是工资总额或工资名单，不能作为多余物倒回原料容器。",
+    "departure": "departure 指离开或出发，不是可退回容器中的剩余量。"
+  },
+  "v-excess-extra": {
+    "excess": "行李超过重量额度，因此产生的是 excess baggage fee，即超额行李费。",
+    "impartial": "impartial 表示公正无偏，不能描述行李超过重量限额。",
+    "punctual": "punctual 表示准时，不说明行李超重产生的费用类别。",
+    "considerate": "considerate 表示体贴他人，不能表示行李超过许可重量。"
+  },
+  "v-import": {
+    "import": "从 Peru 把当地不能种植的咖啡豆运进来，是从国外进口。",
+    "recruit": "recruit 表示招募员工；这里购买运入的是咖啡豆，不能招募咖啡豆。",
+    "summon": "summon 表示召集或传唤人，不表示把海外货物运进本国。",
+    "notify": "notify 表示通知某人；咖啡豆不是接受通知的人。"
+  },
+  "v-import-goods": {
+    "import": "机器来自 Sweden，替换零件也要清关，说明它是进口商品。",
+    "amendment": "amendment 指文件或规则的修订，不是从国外购入的机器。",
+    "injunction": "injunction 是禁令或强制命令，不能用来称呼一台机器。",
+    "orientation": "orientation 指入职介绍或方向定位，不是需要清关的机器商品。"
+  },
+  "v-export": {
+    "export": "自行车在本地制造，再销往海外市场，是出口而非进口。",
+    "compliment": "compliment 表示赞美人或事物，不能表示把自行车销售到海外。",
+    "reconcile": "reconcile 表示核对一致或调和分歧，不是向海外市场运送自行车。",
+    "replenish": "replenish 表示补充库存；此处讲本国产品向三个海外市场输出，并非补库存的结构。"
+  },
+  "v-export-goods": {
+    "export": "后文比较各种本地作物带来的海外收入，所以空格指出口商品。",
+    "directory": "directory 是名录，咖啡不能成为岛上最大的名录。",
+    "cancellation": "cancellation 指取消，不能指产生海外销售收入的作物商品。",
+    "thermometer": "thermometer 是温度计，与咖啡作物及出口收入无关。"
+  },
+  "v-principal": {
+    "principal": "所有其他目标的优先级都较低，因此缩短交货时间是首要目标。",
+    "subordinate": "subordinate 表示从属、次要，与其他目标优先级更低的说明相反。",
+    "incidental": "incidental 表示附带、次要，不能表达这项被排在最前的目标。",
+    "minor": "minor 表示次要的，与 every other target has a lower priority 矛盾。"
+  },
+  "v-principal-capital": {
+    "principal": "还款除了当月利息还减少原始借款额，principal 在此为本金。",
+    "equipment": "equipment 是设备，贷款还款不会直接减少设备的数量。",
+    "reception": "reception 指接待或接收，不是需要分期偿还的贷款余额。",
+    "traffic": "traffic 是交通流量，不是每笔贷款还款所削减的金额。"
+  },
+  "v-principle": {
+    "principle": "冒号后的平等对待规定招聘时如何判断和行动，是基本原则。",
+    "forklift": "forklift 是叉车，不可能由“平等对待每位申请人”定义。",
+    "mattress": "mattress 是床垫，不是招聘中的行为准则。",
+    "compressor": "compressor 是压缩机，不是规定招聘如何公平进行的原则。"
+  },
+  "v-insure": {
+    "insure": "against theft 与 pays for replacement vehicles 明确描述承保盗窃损失，故为投保。",
+    "ventilate": "ventilate 是给车辆通风，不能通过保单赔付车辆被盗损失。",
+    "embroider": "embroider 是刺绣，不表示办理车辆盗窃保险。",
+    "summon": "summon 是召集或传唤，不表示安排车辆损失赔偿保障。"
+  },
+  "v-assure": {
+    "assure": "向对方保证退款已获批，并附银行确认书，assure someone that 是此处结构。",
+    "recycle": "recycle 是回收再利用，不能接“你＋that从句”表达向你保证。",
+    "allocate": "allocate 是分配资金或资源，不表示用确认书让顾客放心。",
+    "roast": "roast 是烘烤，不表示向对方保证退款已批准。"
+  },
+  "v-invaluable": {
+    "invaluable": "人脉帮助抢先找到唯一可用仓库，显示其极其宝贵；invaluable 不是“没有价值”。",
+    "worthless": "worthless 表示毫无价值，与成功取得稀缺仓库的贡献相反。",
+    "irrelevant": "irrelevant 表示不相关，不能准确说明直接帮助解决仓库问题的人脉。",
+    "ineffective": "ineffective 表示不起作用，与已经成功 获得仓库的结果矛盾。"
+  },
+  "v-inflammable": {
+    "inflammable": "室温下蒸气即可着火，所以必须远离火花；inflammable 和 flammable 都表示易燃。",
+    "fireproof": "fireproof 表示防火、耐火，与蒸气在室温下能着火的说明相反。",
+    "noncombustible": "noncombustible 表示不可燃，与 can catch fire 矛盾。",
+    "nonflammable": "nonflammable 表示不易燃，是此处描述的相反性质。"
+  },
+  "v-copyright": {
+    "copyright": "复制照片需取得权利人的书面同意，所涉及的是著作权而非实物照片的所有权。",
+    "solvency": "solvency 表示偿债能力，没有决定照片可否复制的权利含义。",
+    "humidity": "humidity 表示空气湿度，不存在决定复制授权的“湿度所有者”。",
+    "remuneration": "remuneration 是报酬，不能指对照片复制享有控制权的著作权。"
+  },
+  "v-exporter": {
+    "exporter": "把本地产椅子销往国外并办理出口文件的经营者是出口商。",
+    "reservoir": "reservoir 是蓄水池，不能办理海外销售的海关文件。",
+    "thermometer": "thermometer 是温度计，不是安排商品外销的商家。",
+    "allergen": "allergen 是过敏原，不能作为办理出口手续的主体。"
+  },
+  "v-importer": {
+    "importer": "该商家从海外购货，并在货物进入本国时缴纳关税，属于进口商。",
+    "humidity": "humidity 指湿度，不是购买海外灯具和缴税的经营者。",
+    "remuneration": "remuneration 是劳动报酬，不能担任购买商品并缴关税的主体。",
+    "precision": "precision 表示精确性，不是从海外进货的公司或个人。"
+  },
+  "v-accept": {
+    "accept": "签署同意全部条款的协议，表示接受该书面提议。",
+    "refuse": "refuse 表示拒绝，与同意所有条款并签署接受的动作相反。",
+    "deny": "deny 表示否认或拒绝给予，不能表达签署协议以接受报价。",
+    "decline": "decline 在此作动词表示谢绝提议，与同意并签约的要求相反。"
+  },
+  "v-except": {
+    "except": "财务部单独关闭，其余办公室都开放，except 将财务部排除在开放范围外。",
+    "including": "including 会把财务部也纳入开放办公室，与 finance alone is closed 矛盾。",
+    "throughout": "throughout 表示遍及整个范围，不表示从所有办公室中排除财务部。",
+    "within": "within 表示在某范围内部，不表达“除财务部外”的排除关系。"
+  },
+  "v-advice": {
+    "advice": "后文说按照她的意见保留收据后成功报销，advice 指关于该怎么做的建议。",
+    "proficiency": "proficiency 是熟练程度，不能表示后文跟从的“保留收据”这条意见。",
+    "depreciation": "depreciation 是折旧，不能引出应该保留收据的建议。",
+    "conformity": "conformity 是符合或一致，不能代替可被 following it 指代的具体建议。"
+  },
+  "v-advise": {
+    "advise": "根据会计经验告诉我们该选哪张税表，是提供建议，advise someone on 为常见结构。",
+    "roast": "roast 是烘烤人或物，不能表示就税表选择提供专业意见。",
+    "weld": "weld 是焊接，不能表示向我们建议使用哪张税表。",
+    "insulate": "insulate 是隔热、绝缘或保护隔离，不是提供会计建议。"
+  },
+  "v-complementary": {
+    "complementary": "财务和设计技能不同，组合后能覆盖各自单独做不到的领域，因此是互补。",
+    "identical": "identical 表示完全相同，无法说明财务与设计这两种不同技能互相补足。",
+    "duplicated": "duplicated 表示重复或复制，不能表达不同专长弥补对方不足。",
+    "indistinguishable": "indistinguishable 表示无法区分，与不同领域的技能组合相反。"
+  },
+  "v-later": {
+    "later": "快递员延误，因此到达时间比原先承诺的更晚。",
+    "earlier": "earlier 表示更早，与 is delayed 导致晚于承诺时间的结果相反。",
+    "sooner": "sooner 表示更早或更快，与本句由延误造成的晚到相反。",
+    "faster": "faster 表示速度更快；这里比较到达时点，而且延误不会推出更快到达。"
+  },
+  "v-latter": {
+    "latter": "第一份报价已被拒绝，接受的是两份中的后一份，latter 与 former 相对。",
+    "former": "former 表示两者中前者，正是已被拒绝的第一份报价。",
+    "initial": "initial 表示最初的，不能指在第一份被拒后接受的后一份。",
+    "original": "original 表示原先的；本句先明确拒绝第一份，接受的是后一份提案。"
+  },
+  "v-lay": {
+    "lay": "将面板平放在桌上需要及物动词 lay，后面直接接被放置的面板。",
+    "notify": "notify 表示通知人，不能表示把面板平放到桌上。",
+    "reconcile": "reconcile 表示核对或调和，不表示改变面板的物理摆放姿势。",
+    "summon": "summon 表示召集，不是把易碎面板平放在软垫上的动作。"
+  },
+  "v-lie": {
+    "lie": "感到晕眩的人应自己平躺在沙发上，lie 在这里不带直接宾语。",
+    "negotiate": "negotiate 表示谈判，不能与 flat on the couch 表达躺下的姿势。",
+    "compile": "compile 表示汇编材料，不是患者在沙发上休息的动作。",
+    "disembark": "disembark 表示下船或下飞机，不表示在休息室沙发上平躺。"
+  },
+  "v-lie-deceive": {
+    "lie": "每张收据都须对应真实购买，所以员工不得谎报费用；这里不是“躺下”义。",
+    "disembark": "disembark 表示离开交通工具，与不得虚报费用的要求无关。",
+    "carpool": "carpool 表示拼车，不表示对费用作虚假陈述。",
+    "roast": "roast 是烘烤，不表示谎称某笔费用真实发生。"
+  },
+  "v-loose": {
+    "loose": "螺丝退出数圈且把手晃动，说明连接松动，loose 与 lose 的读音词性均不同。",
+    "secure": "secure 在此作形容词表示固定牢靠，与螺丝松脱后晃动的状态相反。",
+    "immovable": "immovable 表示不能移动，与 wobbles 描述的晃动矛盾。",
+    "stationary": "stationary 表示保持静止，与把手正在晃动的状态不符。"
+  },
+  "v-lose": {
+    "lose": "扫描保存副本，是为了避免遗失唯一的付款凭据。",
+    "calibrate": "calibrate 表示校准仪器或尺度，收据不是这里需要校准的对象。",
+    "weld": "weld 是焊接，不能表示扫描文件所防止的遗失风险。",
+    "reconcile": "reconcile 是核对账目是否一致，扫描收据不会以避免核对为目的。"
+  },
+  "v-rise": {
+    "rise": "预计订单比普通一周更多，说明节日期间需求上涨。",
+    "decrease": "decrease 表示减少，与预计更多订单的方向相反。",
+    "diminish": "diminish 表示减弱或减少，与需求增加带来更多订单不符。",
+    "fall": "fall 在此表示下降，与更多订单的预期相反。"
+  },
+  "v-perspective": {
+    "perspective": "比较顾客重视什么，是从顾客的观点和角度看问题。",
+    "compressor": "compressor 是压缩机，不能在这里表达顾客看待服务的观点。",
+    "forklift": "forklift 是叉车，不是比较服务重要性时采用的观察立场。",
+    "reservoir": "reservoir 是蓄水池，不能表示顾客的看法或考虑角度。"
+  },
+  "v-awareness": {
+    "awareness": "员工了解滑倒风险后立即报告洒漏，说明简报提高了风险意识。",
+    "solvency": "solvency 是偿债能力，不是安全简报提高的滑倒风险认知。",
+    "retention": "retention 是保留或留存，raise retention of slippery floors 不能表达认识湿滑风险。",
+    "precision": "precision 是精确程度，不是意识到地面湿滑并报告洒漏的认知。"
+  },
+  "v-useful": {
+    "useful": "清单能在寄合同前找出漏签，完成了实际任务，因此有用。",
+    "useless": "useless 表示没有用处，与成功发现漏签的实际作用相反。",
+    "pointless": "pointless 表示没有意义，但此清单有明确的查漏用途。",
+    "ineffective": "ineffective 表示不起效果，与 catches missing signatures 的实际效果矛盾。"
+  },
+  "v-careless": {
+    "careless": "职员没有意识到输入错误，却把十改成一百，说明疏忽而非有意改动。",
+    "meticulous": "meticulous 表示细致周到，不能描述这种没有察觉数量错误的输入失误。",
+    "deliberate": "deliberate 表示有意为之，与 without realizing it 明确冲突。",
+    "intentional": "intentional 表示故意的，与当事人未意识到这一改动相反。"
+  },
+  "v-wireless": {
+    "wireless": "通过无线电连接，且没有连到电脑的线缆，明确是无线耳麦。",
+    "corded": "corded 表示带连接线，与 without a cable to the computer 相反。",
+    "wired": "wired 表示有线连接，而句子明确说由无线电连接。",
+    "cabled": "cabled 表示通过线缆连接，与不需要电脑连接线的说明矛盾。"
+  }
 }

@@ -16,6 +16,18 @@ FIELDS=('src','sha256','bytes','duration','decodedPeak','headroomDb','language',
 
 def sha(data):return hashlib.sha256(data if isinstance(data,bytes) else data.encode()).hexdigest()
 def canonical(value):return json.dumps(value,sort_keys=True,ensure_ascii=False,separators=(',',':'))
+def same_json(a,b):
+    """JSON numbers survive a JS round trip; booleans are never numbers."""
+    if type(a) in (int,float) and type(b) in (int,float):return math.isfinite(a) and math.isfinite(b) and a==b
+    if type(a) is not type(b):return False
+    if isinstance(a,dict):return a.keys()==b.keys() and all(same_json(a[k],b[k]) for k in a)
+    if isinstance(a,list):return len(a)==len(b) and all(same_json(x,y) for x,y in zip(a,b))
+    return a==b
+def signed_snapshot(raw,value,digest_):
+    # Hash the original signed serialization, not a later JSON writer's 0/0.0
+    # spelling. Compare its parsed payload strictly, as the Node gate does.
+    try:return isinstance(raw,str) and sha(raw)==digest_ and same_json(json.loads(raw),value)
+    except (ValueError,TypeError,OverflowError):return False
 def token(u):return ':'.join((u['language'],u['bank'],u['key']))
 def need(ok,message):
     if not ok:raise ValueError(message)
@@ -36,11 +48,11 @@ def valid_reading(value):
 def validate_attempt(unit,a,row,validate_original):
     need(isinstance(unit,dict) and unit.get('language')=='ja' and unit.get('voiceId')=='jf_alpha' and unit.get('required') is True and not unit.get('nonSpoken'),'Invalid manual-kana source')
     need(isinstance(a,dict) and a.get('version')==1 and a.get('method')==METHOD and a.get('token')==token(unit),'Manual-kana identity changed')
-    need(a.get('proofCanonical')==canonical({k:v for k,v in a.items() if k not in ('id','archive','proofCanonical')}) and a.get('id')==attempt_id(a),'Manual-kana proof digest changed')
+    need(signed_snapshot(a.get('proofCanonical'),{k:v for k,v in a.items() if k not in ('id','archive','proofCanonical')},a.get('id')),'Manual-kana proof digest changed')
     expected={k:unit[k] for k in ('language','bank','key','text','voiceId','required','speaker') if k in unit}
     need(a.get('source')==expected and valid_reading(a.get('reading')),'Manual reading/source binding changed')
     old=a.get('before',{});repair=row.get('repair',{})
-    need(repair.get('complete') is True and repair.get('disposition')=='system-fallback' and old.get('repairCanonical')==canonical(history(repair)) and old.get('repairSha256')==historical_sha(repair),'Original fallback repair changed')
+    need(repair.get('complete') is True and repair.get('disposition')=='system-fallback' and signed_snapshot(old.get('repairCanonical'),history(repair),old.get('repairSha256')),'Original fallback repair changed')
     f=old.get('fallback',{});previous=repair.get('candidate',{})
     need(f.get('playback')=='system' and f.get('language')=='ja' and f.get('text')==unit['text'] and f.get('voiceId')==unit['voiceId'] and f.get('reason')=='unresolved-after-strong-asr-retry' and f.get('auditedSha256')==previous.get('clip',{}).get('sha256'),'Original fallback binding changed')
     for version in (repair.get('original',{}),previous):
@@ -93,5 +105,5 @@ def valid_record(unit,clip,record,row,validate_original):
 def valid_supersession(unit,clip,record,row,delivery,validate_original):
     try:
         s=delivery.get('manualKanaSupersession',{})
-        return bool(s.get('method')==METHOD and s.get('attemptId')==clip.get('manualKanaId') and s.get('priorDeliveryCanonical')==canonical({k:v for k,v in delivery.items() if k!='manualKanaSupersession'}) and s.get('priorDeliverySha256')==delivery_sha(delivery) and valid_record(unit,clip,record,row,validate_original))
+        return bool(s.get('method')==METHOD and s.get('attemptId')==clip.get('manualKanaId') and signed_snapshot(s.get('priorDeliveryCanonical'),{k:v for k,v in delivery.items() if k!='manualKanaSupersession'},s.get('priorDeliverySha256')) and valid_record(unit,clip,record,row,validate_original))
     except (ValueError,KeyError,TypeError,AttributeError):return False

@@ -6,9 +6,12 @@ import {sourceUnits} from '../js/translation-source.js';
 import {splitSentences} from '../js/replay.js';
 
 const root=fileURLToPath(new URL('../',import.meta.url));
+const outputIndex=process.argv.indexOf('--output');
+if(outputIndex>=0&&(!process.argv[outputIndex+1]||process.argv[outputIndex+1].startsWith('--')))throw new Error('Missing --output JSON path');
+const output=outputIndex>=0?path.resolve(process.argv[outputIndex+1]):path.join(root,'data/audio/source.json');
 const voices={en:['af_heart','am_puck','af_bella'],ja:['jf_alpha']};
 const banks=['part1','part2','listening','vocab','reading','grammar','methods'];
-const units=[], seen=new Set(), castSpeakers=new Map();
+const units=[], seen=new Set(), castSpeakers=new Map(), expandedVocab=new Set();
 const hash=s=>[...s].reduce((n,c)=>(Math.imul(n,31)+c.charCodeAt(0))>>>0,0);
 function actor(bank,group,key,speaker) {
   const n=hash(group),female=n%2?'af_bella':'af_heart';
@@ -36,6 +39,7 @@ for(const bank of banks) {
   const japanese=JSON.parse(await fs.readFile(path.join(root,`data/i18n/ja/${bank}.json`),'utf8')).entries;
   const groupOf=new Map(),dictationSpeaker=new Map();
   const byID=new Map(records.map(row=>[row.id,row]));
+  if(bank==='vocab')for(const row of records)if(row.i18nDetails===true)expandedVocab.add(row.id);
   for(const row of records) {
     if(row.turns)castSpeakers.set(row.id,[...new Set(row.turns.map(t=>t.speaker))].sort());
     groupOf.set(row.id,row.id);
@@ -67,6 +71,21 @@ for(const bank of banks) {
     }
   }
 }
+// Lightweight new distractor senses share the established vocab lookup keys.
+const addedLexemesPath=path.join(root,'data/options/authoring/lexemes-word-upgrade.json');
+let addedLexemes=[];
+try {addedLexemes=JSON.parse(await fs.readFile(addedLexemesPath,'utf8'));}
+catch(error) {if(error.code!=='ENOENT')throw error;}
+{
+  for(const item of addedLexemes) {
+    const shard=JSON.parse(await fs.readFile(path.join(root,`data/options/lexicon/${item.word[0].toLowerCase()}.json`),'utf8'));
+    const lexeme=shard.entries[item.word]?.lexemes?.find(row=>row.word===item.word&&row.pos===item.pos&&row.zh===item.zh&&row.ja===item.ja);
+    if(!lexeme)throw new Error(`Missing frozen lightweight lexeme: ${item.word}`);
+    expandedVocab.add(lexeme.id);
+    add('vocab','en',`${lexeme.id}/meaning`,lexeme.word,{kind:'word',pos:lexeme.pos});
+    add('vocab','ja',`${lexeme.id}/meaning`,lexeme.ja,{kind:'meaning'});
+  }
+}
 const terms=JSON.parse(await fs.readFile(path.join(root,'data/i18n/ja/terms.json'),'utf8')).entries;
 for(const [key,text] of Object.entries(terms))add('terms','ja',key,text,{kind:'term'});
 for(const voiceId of voices.en)for(const letter of 'ABCD')
@@ -75,7 +94,7 @@ for(const u of units) {
   u.required=u.language==='ja'||u.bank==='labels'||
     (['part1','part2'].includes(u.bank)&&!u.key.includes('/explanation/'))||
     (u.bank==='listening'&&!u.key.includes('/explanation/')&&!u.key.includes('/graphic/'))||
-    (u.bank==='vocab'&&(/\/meaning$|\/example\//).test(u.key))||
+    (u.bank==='vocab'&&(expandedVocab.has(u.group)||(/\/meaning$|\/example\//).test(u.key)))||
     (u.bank==='grammar'&&u.key.includes('/sentence/'))||
     (u.bank==='reading'&&/\/documents\/\d+\/text\//.test(u.key));
   u.priority=u.required?(['part1','part2','listening','labels'].includes(u.bank)?1:u.bank==='vocab'?2:3):9;
@@ -84,6 +103,6 @@ for(const u of units) {
   }
 }
 const source={version:1,model:'Kokoro-82M v1.0',voices,units};
-await fs.mkdir(path.join(root,'data/audio'),{recursive:true});
-await fs.writeFile(path.join(root,'data/audio/source.json'),JSON.stringify(source,null,2)+'\n');
+await fs.mkdir(path.dirname(output),{recursive:true});
+await fs.writeFile(output,JSON.stringify(source,null,2)+'\n');
 console.log(JSON.stringify({units:units.length,required:units.filter(u=>u.required).length,counts:units.reduce((n,u)=>(n[`${u.language}/${u.bank}`]=(n[`${u.language}/${u.bank}`]||0)+1,n),{}),requiredCounts:units.filter(u=>u.required).reduce((n,u)=>(n[`${u.language}/${u.bank}`]=(n[`${u.language}/${u.bank}`]||0)+1,n),{})},null,2));

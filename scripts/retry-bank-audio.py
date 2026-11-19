@@ -252,12 +252,17 @@ def main():
     path=OUT/'retries.json';report=read(path,{'version':1,'policy':'At most one completed automatic re-synthesis per discrepancy; failed recognition remains resumable','records':{}})
     source=read(OUT/'source.json',{})
     source_by_token={f"{u['language']}:{u['bank']}:{u['key']}":u for u in source['units']}
-    if any(e.get('kind')=='confirmed-input-correction' and not e.get('complete') for e in report['records'].values()):
+    requested=set(read(args.tokens_file,[])) if args.tokens_file else None
+    if requested is not None and not requested<=source_by_token.keys():
+        controller_lock.close()
+        raise ValueError('Retry scope contains unknown source tokens')
+    if any((requested is None or token in requested) and e.get('kind')=='confirmed-input-correction' and not e.get('complete') for token,e in report['records'].items()):
         controller_lock.close()
         raise RuntimeError('Resume correct-bank-audio.py with its reviewed plan before automatic pace retries')
     override_path=OUT/'overrides.json';overrides=read(override_path,{'version':1,'entries':{}})
     candidates=[]
     for token,entry in list(report['records'].items()):
+        if requested is not None and token not in requested:continue
         if entry.get('complete'):continue
         unit=source_by_token.get(token)
         if unit and case_matches(entry,unit,overrides['entries'].get(token)):
@@ -305,6 +310,9 @@ def main():
         audit=loaded_audits[(meta['language'],meta['bank'])]
         for key,clip in pack['clips'].items():
             token=f"{meta['language']}:{meta['bank']}:{key}";record=audit['records'].get(key,{})
+            # Restrict the authoring scope before archiving/replacing cases,
+            # not after those mutations. Earlier releases retain their proof.
+            if requested is not None and token not in requested:continue
             if token in resuming:continue
             previous=report['records'].get(token)
             if not source_by_token.get(token,{}).get('required') or record.get('status')!='review' or not has_actual_asr(clip,record):continue
@@ -327,12 +335,10 @@ def main():
             else:entry=previous
             candidates.append(entry)
     candidates.sort(key=lambda e:e['initial']['asr'].get('errorRate',0),reverse=True)
-    if args.tokens_file:
-        selected=set(read(args.tokens_file,[]));candidates=[e for e in candidates if e['token'] in selected]
     if args.limit:candidates=candidates[:args.limit]
     # Nonselected cases are not unfinished work from this attempt.
     selected={e['token'] for e in candidates}
-    report['records']={k:e for k,e in report['records'].items() if e.get('complete') or k in selected or k in resuming}
+    report['records']={k:e for k,e in report['records'].items() if (requested is not None and k not in requested) or e.get('complete') or k in selected or k in resuming}
     atomic(path,report)
     if not candidates:
         update_summaries(report)

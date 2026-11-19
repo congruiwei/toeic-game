@@ -97,7 +97,7 @@ test('real Japanese aliases and the hidden first sense of a spelling cannot beco
   assert.ok(!options.includes(meaning('v-account-report')),'other sense of the same headword is never a distractor');
 });
 
-test('all 2174 Japanese questions have unique stable answers, safe distractors, and balanced lengths and positions', t => {
+test('all Japanese questions have unique stable answers, safe distractors, and balanced lengths and positions', t => {
   const formats = ['meaning-ja','english-ja'];
   const distributions = Object.fromEntries(formats.map(format => [format, {
     total:0, longest:0, varied:0, shortestOnly:0, positions:[0,0,0,0],
@@ -149,7 +149,11 @@ test('all 2174 Japanese questions have unique stable answers, safe distractors, 
 });
 
 test('the original 5435 option lists retain their exact pre-change deterministic ordering', () => {
-  const bytes=JSON.stringify(words.flatMap(w=>formats.map(f=>vocabularyOptions(w,f,words))));
+  // Freeze the original candidate pool for this algorithm compatibility check;
+  // newly authored cards intentionally enlarge the live pool.
+  const original=words.filter(w=>w.i18nDetails!==true);
+  assert.equal(original.length,1087);
+  const bytes=JSON.stringify(original.flatMap(w=>formats.map(f=>vocabularyOptions(w,f,original))));
   assert.equal(createHash('sha256').update(bytes).digest('hex'),'0b0384276a46ae50c215c445d5c79f3a7846278c26118d3388b1251886c88ff4');
 });
 

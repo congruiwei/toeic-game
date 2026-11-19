@@ -393,7 +393,17 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
   }
   const totals=index.totals;
   errors.push(...validateManualKanaReport(source,manualKanaReport,qualityReview,packs,voiceOverrides,inputReview,humanDoc,{validateOriginal:validASREvidence}));
-  if(manualKanaReport)expect(manualKanaReport.sourceSha256===index.sourceSha256,'Manual kana report source fingerprint mismatch',errors);
+  if(manualKanaReport){
+    // The report describes its original authoring snapshot. Appending unrelated
+    // sources must not rewrite that evidence. Each signed attempt retains the
+    // historical source SHA; the report validator above still binds every old
+    // source key/text/voice and its current route, media and actual transcript.
+    const entries=Object.entries(manualKanaReport.entries??{});
+    const historicalBound=entries.length>0&&/^[a-f0-9]{64}$/.test(manualKanaReport.sourceSha256??'')&&
+      (!Object.hasOwn(qualityReview,'baselineSourceSha256')||qualityReview.baselineSourceSha256===manualKanaReport.sourceSha256)&&entries.every(([token,id])=>
+      qualityReview.records?.[token]?.manualKanaAttempts?.find(a=>a.id===id)?.synthesisGeneration?.sourceSha256===manualKanaReport.sourceSha256);
+    expect(manualKanaReport.sourceSha256===index.sourceSha256||historicalBound,'Manual kana report source fingerprint mismatch',errors);
+  }
   const pendingCorrections=pendingInputCorrections(inputReview,packs,retries,qualityReview,units);
   if(!allowIncomplete)expect(!pendingCorrections.length,`Reviewed audio input corrections still pending: ${pendingCorrections.map(row=>row.token).join(', ')}`,errors);
   async function mediaFiles(directory){

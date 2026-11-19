@@ -37,6 +37,26 @@ class Integration(unittest.TestCase):
   before=self.data('audit/ja/grammar.json')['records'];fake=MagicMock()
   with patch.object(self.audit,'WhisperModel',return_value=fake),patch.object(sys,'argv',['audit','--workdir',str(work),'--language','ja','--individual-only']),contextlib.redirect_stdout(io.StringIO()):self.audit.main()
   fake.transcribe.assert_not_called();self.assertEqual(self.data('audit/ja/grammar.json')['records'],before);self.assertEqual(self.data('audit-summary.json')['singleCallsThisRun'],0)
+ def test_node_round_trip_preserves_signed_numeric_evidence_and_pending_recovers(self):
+  # Archive/queue tooling writes JSON in Node: 0.0 becomes 0 while the signed
+  # canonical strings remain byte-for-byte unchanged. Use actual Node here.
+  for name in ['quality-review.json','normalization-review.json','ja/grammar.json','audit/ja/grammar.json']:
+   path=self.out/name
+   subprocess.run(['node','-e',"const fs=require('fs'),p=process.argv[1];fs.writeFileSync(p,JSON.stringify(JSON.parse(fs.readFileSync(p,'utf8'))));",str(path)],check=True)
+  u,row,c,r=self.selected();self.assertTrue(self.bank.valid_published_asr(u,c,r,{pure.p.token(u):row},set()))
+  delivery=self.data('normalization-review.json')['confirmedInputCorrections'][0]
+  self.assertTrue(self.bank._manual_kana_checks.valid_supersession(u,c,r,row,delivery,pure.evidence.valid_asr))
+  packs={(lang,'grammar'):self.data(f'{lang}/grammar.json') for lang in ['en','ja']};packs[('ja','grammar')]['clips'][u['key']]['asrStatus']='pending'
+  self.bank.flush(self.data('source.json'),self.data('manifest.json')['sourceSha256'],self.f.gen,packs)
+  self.assertEqual(self.data('ja/grammar.json')['clips'][u['key']]['asrStatus'],'matched')
+  self.assertEqual(self.data('manifest.json')['totals']['requiredAudited'],2)
+  for mutation in ['number','boolean','hash','history']:
+   bad=copy.deepcopy(row);a=bad['manualKanaAttempts'][0]
+   if mutation=='number':a['rawASR']['segments'][0]['start']=.01
+   elif mutation=='boolean':a['rawASR']['segments'][0]['start']=False
+   elif mutation=='hash':a['proofCanonical']+=' '
+   else:bad['repair']['candidate']['asr']['recognized']='changed historical transcript'
+   self.assertFalse(self.bank.valid_published_asr(u,c,r,{pure.p.token(u):bad},set()),mutation)
  def test_full_node_validator_accepts_bound_delivery_and_refuses_lost_report(self):
   script="const m=await import(process.argv[1]);const r=await m.validateAudio({root:process.argv[2]});console.log(JSON.stringify(r));process.exitCode=r.ok?0:1"
   def run():
@@ -44,6 +64,25 @@ class Integration(unittest.TestCase):
    return r,json.loads(r.stdout) if r.stdout.strip() else {}
   r,report=run();self.assertEqual(r.returncode,0,r.stderr+'\n'+r.stdout);self.assertEqual(report['systemFallbackCount'],1);self.assertEqual(report['forcedHumanReviewCount'],0);self.assertEqual(report['pendingInputCorrections'],[])
   (self.out/'manual-kana-review.json').unlink();r,report=run();self.assertNotEqual(r.returncode,0);self.assertIn('Missing manual kana report',report['errors'])
+ def test_new_source_preserves_historical_report_fingerprint_but_not_changed_old_source(self):
+  old_report=(self.out/'manual-kana-review.json').read_bytes();old_quality=(self.out/'quality-review.json').read_bytes()
+  source=self.data('source.json');source['units'].append(dict(language='en',bank='grammar',key='new/optional',text='New optional sentence.',voiceId='af_heart',kind='sentence',required=False))
+  self.f.write(self.out/'source.json',source);digest=pure.p.sha((self.out/'source.json').read_bytes())
+  packs={(lang,'grammar'):self.data(f'{lang}/grammar.json') for lang in ['en','ja']}
+  self.bank.flush(source,digest,{**self.f.gen,'sourceSha256':digest},packs)
+  script="const {validateAudio}=await import(process.argv[1]);const r=await validateAudio({root:process.argv[2]});console.log(JSON.stringify(r));process.exitCode=r.ok?0:1"
+  def run():
+   p=subprocess.run(['node','--input-type=module','-e',script,(self.root/'scripts/validate-bank-audio.mjs').as_uri(),str(self.root)],capture_output=True,text=True);return p,json.loads(p.stdout)
+  result,report=run();self.assertEqual(result.returncode,0,result.stderr+'\n'+result.stdout)
+  self.assertEqual((self.out/'manual-kana-review.json').read_bytes(),old_report);self.assertEqual((self.out/'quality-review.json').read_bytes(),old_quality)
+  broken=self.data('manual-kana-review.json');broken['sourceSha256']='f'*64;self.f.write(self.out/'manual-kana-review.json',broken)
+  result,report=run();self.assertNotEqual(result.returncode,0);self.assertIn('Manual kana report source fingerprint mismatch',report['errors'])
+  (self.out/'manual-kana-review.json').write_bytes(old_report)
+  broken_quality=self.data('quality-review.json');broken_quality['baselineSourceSha256']='e'*64;self.f.write(self.out/'quality-review.json',broken_quality)
+  result,report=run();self.assertNotEqual(result.returncode,0);self.assertIn('Manual kana report source fingerprint mismatch',report['errors'])
+  (self.out/'quality-review.json').write_bytes(old_quality)
+  source['units'][0]['text']='Changed old Japanese source.';self.f.write(self.out/'source.json',source)
+  result,report=run();self.assertNotEqual(result.returncode,0);self.assertTrue(any('manual' in error.lower() for error in report['errors']))
  def test_verified_archive_and_public_clone_need_no_external_manual_history(self):
   fresh=pure.Publication();fresh.setUp();self.addCleanup(fresh.doCleanups)
   shutil.copytree(self.root/'scripts',fresh.root/'scripts',dirs_exist_ok=True,ignore=shutil.ignore_patterns('__pycache__'))

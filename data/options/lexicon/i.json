@@ -296,6 +296,20 @@
         }
       ]
     },
+    "immovable": {
+      "pos": "adj.",
+      "zh": "不能移动的；稳固不动的",
+      "ja": "動かせない；動かない",
+      "lexemes": [
+        {
+          "id": "lex-b719f5d6",
+          "word": "immovable",
+          "pos": "adj.",
+          "zh": "不能移动的；稳固不动的",
+          "ja": "動かせない；動かない"
+        }
+      ]
+    },
     "immune": {
       "pos": "adj.",
       "zh": "免疫的；不受影响的",
@@ -443,10 +457,32 @@
       ]
     },
     "import": {
-      "pos": "v.; n.",
-      "zh": "进口；导入；进口品",
-      "ja": "輸入する；取り込む；輸入品",
+      "pos": "v.；n.；v.; n.",
+      "zh": "进口；输入货物；进口商品；进口；导入；进口品",
+      "ja": "輸入する；輸入品；輸入する；取り込む；輸入品",
       "lexemes": [
+        {
+          "id": "v-import",
+          "wordId": "v-import",
+          "word": "import",
+          "pos": "v.",
+          "zh": "进口；输入货物",
+          "ja": "輸入する",
+          "sense": "进口货物",
+          "ipa": "/ɪmˈpɔːrt/",
+          "example": "We import these coffee beans from Peru because they cannot be grown locally."
+        },
+        {
+          "id": "v-import-goods",
+          "wordId": "v-import-goods",
+          "word": "import",
+          "pos": "n.",
+          "zh": "进口商品",
+          "ja": "輸入品",
+          "sense": "进口商品",
+          "ipa": "/ˈɪmpɔːrt/",
+          "example": "This machine is an import from Sweden, so replacement parts must clear customs before delivery."
+        },
         {
           "id": "lex-f23708bc",
           "word": "import",
@@ -461,6 +497,16 @@
       "zh": "进口商",
       "ja": "輸入業者",
       "lexemes": [
+        {
+          "id": "v-importer",
+          "wordId": "v-importer",
+          "word": "importer",
+          "pos": "n.",
+          "zh": "进口商",
+          "ja": "輸入業者",
+          "ipa": "/ɪmˈpɔːrtər/",
+          "example": "The importer bought these lamps overseas and paid customs duty when they entered this country."
+        },
         {
           "id": "lex-61334512",
           "word": "importer",
@@ -1210,6 +1256,20 @@
         }
       ]
     },
+    "ineffective": {
+      "pos": "adj.",
+      "zh": "无效的；不起作用的",
+      "ja": "効果のない；役に立たない",
+      "lexemes": [
+        {
+          "id": "lex-55ace0dd",
+          "word": "ineffective",
+          "pos": "adj.",
+          "zh": "无效的；不起作用的",
+          "ja": "効果のない；役に立たない"
+        }
+      ]
+    },
     "inefficient": {
       "pos": "adj.",
       "zh": "效率低的",
@@ -1308,6 +1368,23 @@
           "pos": "adj.; n.",
           "zh": "较差的；低等级的；下级",
           "ja": "劣った；下位の；下位の人"
+        }
+      ]
+    },
+    "inflammable": {
+      "pos": "adj.",
+      "zh": "易燃的",
+      "ja": "引火しやすい",
+      "lexemes": [
+        {
+          "id": "v-inflammable",
+          "wordId": "v-inflammable",
+          "word": "inflammable",
+          "pos": "adj.",
+          "zh": "易燃的",
+          "ja": "引火しやすい",
+          "ipa": "/ɪnˈflæməbəl/",
+          "example": "Keep this inflammable solvent away from sparks; its vapor can catch fire at room temperature."
         }
       ]
     },
@@ -2064,9 +2141,19 @@
     },
     "insure": {
       "pos": "v.",
-      "zh": "为……投保；承保",
-      "ja": "保険をかける；保険を引き受ける",
+      "zh": "为……投保；为……投保；承保",
+      "ja": "保険をかける；保険をかける；保険を引き受ける",
       "lexemes": [
+        {
+          "id": "v-insure",
+          "wordId": "v-insure",
+          "word": "insure",
+          "pos": "v.",
+          "zh": "为……投保",
+          "ja": "保険をかける",
+          "ipa": "/ɪnˈʃʊr/",
+          "example": "We insure every delivery van against theft through a policy that pays for replacement vehicles."
+        },
         {
           "id": "lex-35e30219",
           "word": "insure",
@@ -2129,6 +2216,20 @@
           "pos": "adj.",
           "zh": "不可或缺的；构成整体的",
           "ja": "不可欠な；一体を成す"
+        }
+      ]
+    },
+    "intentional": {
+      "pos": "adj.",
+      "zh": "有意的；故意的",
+      "ja": "意図的な；故意の",
+      "lexemes": [
+        {
+          "id": "lex-630ef381",
+          "word": "intentional",
+          "pos": "adj.",
+          "zh": "有意的；故意的",
+          "ja": "意図的な；故意の"
         }
       ]
     },
@@ -2605,9 +2706,19 @@
     },
     "invaluable": {
       "pos": "adj.",
-      "zh": "极其宝贵的",
-      "ja": "非常に貴重な",
+      "zh": "极其宝贵的；非常有用的；极其宝贵的",
+      "ja": "非常に貴重な；大いに役立つ；非常に貴重な",
       "lexemes": [
+        {
+          "id": "v-invaluable",
+          "wordId": "v-invaluable",
+          "word": "invaluable",
+          "pos": "adj.",
+          "zh": "极其宝贵的；非常有用的",
+          "ja": "非常に貴重な；大いに役立つ",
+          "ipa": "/ɪnˈvæljuəbəl/",
+          "example": "Her local contacts proved invaluable, securing the only available warehouse before our goods arrived."
+        },
         {
           "id": "lex-08118324",
           "word": "invaluable",
@@ -2906,9 +3017,19 @@
     },
     "is accepting": {
       "pos": "动词短语（现在进行时）",
-      "zh": "接受；认可（现在进行时）",
+      "zh": "接受；同意接收；接受；认可（现在进行时）",
       "ja": "受け入れる；承諾する（現在進行形）",
       "lexemes": [
+        {
+          "id": "v-accept",
+          "wordId": "v-accept",
+          "word": "accept",
+          "pos": "v.",
+          "zh": "接受；同意接收",
+          "ja": "受け入れる；承諾する",
+          "ipa": "/əkˈsept/",
+          "example": "Please accept our written offer by signing this agreement if you agree to all its terms."
+        },
         {
           "id": "lex-e8d1be47",
           "word": "accept",

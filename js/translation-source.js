@@ -23,6 +23,10 @@ export function sourceUnits(bank, records) {
     if (bank === 'vocab') {
       add(item.id, 'meaning', item.word, 'meaning', { zh:item.zh, pos:item.pos });
       sentences(item.id, 'example', item.example);
+      if (item.i18nDetails === true) {
+        sentences(item.id, 'collocation', item.collocation);
+        sentences(item.id, 'paraphrase', item.paraphrase);
+      }
     } else if (bank === 'part1') {
       item.options.forEach((option,i) => sentences(item.id, `options/${i}`, option, { option:i }));
     } else if (bank === 'part2') {
