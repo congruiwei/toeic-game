@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "id": "4d8a2fa8b480383281b3b7dd53eaa7a9838a6d816204c3cfd7466feeda9639cb",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.309375,
+  "elapsedSeconds": 2.116,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 4.7093750000000005,
+      "sha256": "4bad9dafccb91b184a04c71371512a44ad2ceec24823bbd8790e62371b79246b",
+      "src": "./audio/generated/en/am_puck/eef7c54ddd9c358ccbd99c41734775af.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " We",
+      "start": 0.0,
+      "end": 0.54,
+      "probability": 0.94041907787323
+    },
+    {
+      "word": " hired",
+      "start": 0.54,
+      "end": 0.8,
+      "probability": 0.9938511848449707
+    },
+    {
+      "word": " six",
+      "start": 0.8,
+      "end": 1.08,
+      "probability": 0.7166842222213745
+    },
+    {
+      "word": " people",
+      "start": 1.08,
+      "end": 1.46,
+      "probability": 0.9991219639778137
+    },
+    {
+      "word": " to",
+      "start": 1.46,
+      "end": 1.66,
+      "probability": 0.9986081719398499
+    },
+    {
+      "word": " offload",
+      "start": 1.66,
+      "end": 2.1,
+      "probability": 0.9152069687843323
+    },
+    {
+      "word": " one",
+      "start": 2.1,
+      "end": 2.34,
+      "probability": 0.8001460433006287
+    },
+    {
+      "word": " box",
+      "start": 2.34,
+      "end": 2.68,
+      "probability": 0.9937582015991211
+    },
+    {
+      "word": " containing",
+      "start": 2.68,
+      "end": 3.06,
+      "probability": 0.9943152070045471
+    },
+    {
+      "word": " six",
+      "start": 3.06,
+      "end": 3.44,
+      "probability": 0.9513943791389465
+    },
+    {
+      "word": " folding",
+      "start": 3.44,
+      "end": 3.8,
+      "probability": 0.9804444313049316
+    },
+    {
+      "word": " chairs.",
+      "start": 3.8,
+      "end": 4.2,
+      "probability": 0.9977534413337708
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.2,
+      "text": " We hired six people to offload one box containing six folding chairs.",
+      "avgLogprob": -0.25293563393985524,
+      "noSpeechProb": 0.0013694192748516798
+    }
+  ]
+}

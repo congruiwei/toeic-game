@@ -1,0 +1,54 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs/promises'),path=require('node:path');
+module.exports=async({page,state,store,act,nav})=>{
+  const key='v-available/humor/0',expected={};
+  for(const [lang,file] of Object.entries({en:'data/vocab-humor.json',zh:'data/i18n/zh/vocab-humor.json',ja:'data/i18n/ja/vocab-humor.json'})){
+    expected[lang]=JSON.parse(await fs.readFile(path.resolve(__dirname,'../..',file),'utf8')).entries[key];
+  }
+  const progress=await state();
+  progress.settings.methodHints=false;
+  progress.session={mode:'vocab',title:'词卡练习',items:[{id:'v-available',mode:'vocab',format:'cloze'}],index:0,right:0,gain:0,selected:null,elapsed:0,timed:false,intro:false};
+  const requests=[];
+  page.on('request',r=>requests.push(r.url()));
+  await store(progress);
+  await act('resume');
+  assert.equal(await page.locator('[data-humor-id]').count(),0);
+  assert(!requests.some(r=>r.endsWith('/vocab-humor.json')));
+  await act('unknown');
+  const host=page.locator('.lesson-word-note [data-humor-id]');
+  await host.locator('blockquote').waitFor();
+  const quote=await host.locator('[lang=en]').first().innerText();
+  assert(quote.trim().length>15);
+  assert.equal(await host.locator('blockquote .readable-line > [lang=en]').innerText(),expected.en);
+  await host.locator('[data-act=read-aloud]').click();
+  await page.waitForFunction(text=>window.spoken.some(i=>i.text===text&&i.lang.startsWith('en')),expected.en);
+  const business=page.getByRole('heading',{name:'商务例句'});
+  assert(await business.isVisible());
+  assert((await host.boundingBox()).y<(await business.boundingBox()).y);
+  await host.locator('summary').click();
+  await host.locator('[data-act=humor-ja]').click();
+  await page.waitForFunction(()=>window.spoken.some(i=>i.lang==='ja-JP'||i.lang==='ja'));
+  await host.locator('[data-act=humor-collect]').click();
+  const saved=(await state()).expressions.items.find(row=>row.key===key);
+  assert(saved);assert.deepEqual({en:saved.en,zh:saved.zh,ja:saved.ja},expected);
+  assert(await host.locator('[data-act=humor-collect]').isDisabled());
+  await nav('library');
+  const card=page.locator('details.lib-card[open] .word-humor').first();
+  await card.locator('blockquote').waitFor();assert(await card.getByRole('heading',{name:'职场趣句'}).isVisible());
+  const libraryEntry=page.locator('details.lib-card').filter({has:page.locator('[data-word-study-id="v-available"]')}).first();
+  await libraryEntry.locator(':scope > summary').click();
+  await libraryEntry.locator(':scope > summary').click();
+  assert.equal(await libraryEntry.locator('.word-humor blockquote .readable-line > [lang=en]').innerText(),expected.en);
+  // The real saved humor snapshot is usable in the expression book and review.
+  await nav('learn');await act('expression-open');
+  await page.getByRole('heading',{name:'职场三语表达本',exact:true}).waitFor();
+  const entry=page.locator('.expression-entry').first();
+  for(const [lang,selector] of Object.entries({en:'[lang=en]',zh:'[lang=zh-CN]',ja:'[lang=ja]'}))assert.equal(await entry.locator(selector).innerText(),expected[lang]);
+  await page.locator('[data-act=expression-start][data-direction=ja-en]').click();
+  assert.equal(await page.locator('.expression-prompt[lang=ja]').innerText(),expected.ja);
+  assert.equal(await page.locator('.expression-entry [lang=en]').count(),0,'review does not expose the English answer before flipping');
+  await act('expression-flip');
+  for(const [lang,selector] of Object.entries({en:'[lang=en]',zh:'[lang=zh-CN]',ja:'[lang=ja]'}))assert.equal(await page.locator('.expression-entry').locator(selector).innerText(),expected[lang]);
+  await page.locator('[data-act=expression-rate][data-grade="3"]').click();
+  assert.equal((await state()).expressions.items.find(row=>row.key===key).fsrs.lastRating,3);
+};

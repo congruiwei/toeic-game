@@ -97,7 +97,7 @@ function vocabNote(q) {
     <div class="lesson-meta"><span>${icon('cards', 16)} 词卡</span><span>${esc(q.theme)}</span></div>
     <div class="lesson-word-line"><h3 lang="en">${esc(q.word)}</h3><button type="button" data-act="play" class="lesson-speaker" aria-label="播放单词发音">${icon('sound',20)}</button></div>
     <p class="lesson-ipa" lang="en">${esc(q.ipa)} · ${esc(q.pos)}</p><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p>
-    <blockquote lang="en">${readable(q.example,{id:q.id,bank:'vocab',key:`${q.id}/example/0`,html:mark(q.example,q.word)})}</blockquote>
+    <section class="word-humor" data-humor-id="${esc(q.id)}"></section><h3 class="word-business-label">商务例句</h3><blockquote lang="en">${readable(q.example,{id:q.id,bank:'vocab',key:`${q.id}/example/0`,html:mark(q.example,q.word)})}</blockquote>
     <dl class="lesson-terms"><dt>常见搭配</dt><dd lang="en">${readable(q.collocation,{id:q.id,bank:'vocab',seed:q.id})}</dd><dt>同义替换</dt><dd lang="en">${readable(q.paraphrase,{id:q.id,bank:'vocab',seed:q.id})}</dd></dl>
   </section>`;
 }
@@ -109,6 +109,7 @@ function feedback(q, ref, run) {
   return `<section class="lesson-feedback ${correct ? 'is-right' : 'is-miss'}" aria-label="答题反馈">
     <h2>${icon(correct ? 'check' : 'note',19)} ${correct ? '答对了' : run.selected === UNKNOWN ? '不知道 · 已加入复习' : '再记一次'}</h2>
     <p><b>正确答案</b> <span>${esc(q.answer)}</span></p>
+    ${ref.mode === 'vocab' ? vocabNote(q) : ''}
     ${ref.mode==='grammar'?`<div class="lesson-complete-sentence">${readable(q.prompt.replace(/_{3,}/g,q.answer),{id:q.id,bank:'grammar',seed:q.id,key:`${q.id}/sentence/0`})}</div>`:''}
     ${ref.mode==='confusable'?`<div class="lesson-complete-sentence">${readable(q.sentence,{id:q.id,bank:'vocab',seed:q.id,key:`${q.id}/sentence/0`})}</div>`:''}
     ${ref.mode==='part1'?`<p><b>画面说明</b> ${esc(q.description)}</p>`:''}
@@ -116,7 +117,7 @@ function feedback(q, ref, run) {
     ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${readable(q.paraphrase,{id:q.id,seed:q.id})}</dd></dl>` : ''}
     ${replayView(q,ref)}
     ${reviewTools(ref.id)}
-  </section>${ref.mode === 'vocab' ? vocabNote(q) : ''}
+  </section>
     <button type="button" data-act="next" class="lesson-primary">${run.index === run.items.length - 1 ? '查看本轮成果' : '下一题'} ${icon('arrow',18)}</button>`;
 }
 

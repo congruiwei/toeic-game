@@ -417,3 +417,11 @@ node tests/v6.cjs
 ## 易混词与个人复习
 
 `data/confusables.json` 按义项关联组内单词、对比解释、对决题与 Part 2 音近陷阱。常规选择题只读派生的小索引 `data/confusable-candidates.json`。答后与词卡使用实际义项 ID 加载完整对比，对决答错的目标词接入个人单词本及已有 FSRS 调度。两种声音相似的词可以在对比面板连续试听。数据字段、录音键、存档兼容及离线回归见[易混词开发说明](CONFUSABLES.md)。
+
+## 词卡的第二个例句
+
+原有商务例句继续用于例句填空、题目解析及存档签名。每个义项的职场趣句以 `<word-id>/humor/0` 为键，英语保存在 `data/vocab-humor.json`，中日文分别保存在 `data/i18n/zh/vocab-humor.json` 和 `data/i18n/ja/vocab-humor.json`。每个文件的结构为 `{version: 1, entries: {key: text}}`。新增词卡时同步补齐这三个文件，并运行题库与录音校验。
+
+`js/vocab-humor.js` 在词卡详情或答后面板第一次打开时下载英语；展开译文时取得对应的中日文。用户设置“翻译默认展开”时直接加载译文。三语表达本复用原有收藏结构，用键区分同一义项的商务句和趣句。两个音频语言都映射到 `vocab` bank；按词头和例句的完整键播放。
+
+三个趣句包在 Service Worker 中分别保存。在线更新须覆盖当前词库及此前已缓存的全部键，支持追加义项。离线冷重开的回归在 `tests/humor-offline.cjs`，也覆盖空包、丢键或错误响应不会替换完整副本。

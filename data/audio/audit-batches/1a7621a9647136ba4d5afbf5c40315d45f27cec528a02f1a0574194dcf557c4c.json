@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "id": "1a7621a9647136ba4d5afbf5c40315d45f27cec528a02f1a0574194dcf557c4c",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 5.736,
+  "elapsedSeconds": 2.122,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.136,
+      "sha256": "95ed55a272d8a3fb593f613f7a252ae6f93120017da9d0d10ad28483d240ff48",
+      "src": "./audio/generated/en/af_heart/55832dc9830736b6017dff888718ce9c.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " May",
+      "start": 0.0,
+      "end": 0.58,
+      "probability": 0.9027401208877563
+    },
+    {
+      "word": " I",
+      "start": 0.58,
+      "end": 0.72,
+      "probability": 0.9881559610366821
+    },
+    {
+      "word": " suggest",
+      "start": 0.72,
+      "end": 1.08,
+      "probability": 0.9968799352645874
+    },
+    {
+      "word": " naming",
+      "start": 1.08,
+      "end": 1.52,
+      "probability": 0.9959200620651245
+    },
+    {
+      "word": " our",
+      "start": 1.52,
+      "end": 1.74,
+      "probability": 0.9921939373016357
+    },
+    {
+      "word": " next",
+      "start": 1.74,
+      "end": 1.94,
+      "probability": 0.9277377128601074
+    },
+    {
+      "word": " shared",
+      "start": 1.94,
+      "end": 2.2,
+      "probability": 0.9406715631484985
+    },
+    {
+      "word": " file",
+      "start": 2.2,
+      "end": 2.58,
+      "probability": 0.9974628686904907
+    },
+    {
+      "word": " something",
+      "start": 2.58,
+      "end": 3.18,
+      "probability": 0.829910159111023
+    },
+    {
+      "word": " other",
+      "start": 3.18,
+      "end": 3.52,
+      "probability": 0.9922356009483337
+    },
+    {
+      "word": " than",
+      "start": 3.52,
+      "end": 3.78,
+      "probability": 0.9946974515914917
+    },
+    {
+      "word": " final,",
+      "start": 3.78,
+      "end": 4.12,
+      "probability": 0.30228421092033386
+    },
+    {
+      "word": " final,",
+      "start": 4.32,
+      "end": 4.52,
+      "probability": 0.9867885112762451
+    },
+    {
+      "word": " final?",
+      "start": 4.52,
+      "end": 4.86,
+      "probability": 0.9962596893310547
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 4.86,
+      "text": " May I suggest naming our next shared file something other than final, final, final?",
+      "avgLogprob": -0.2286559037864208,
+      "noSpeechProb": 0.005350598134100437
+    }
+  ]
+}

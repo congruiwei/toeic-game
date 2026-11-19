@@ -11,8 +11,10 @@ module.exports=async({page,act,nav,state,store,quiz})=>{
   await quiz('vocab','','cloze');
   assert.equal(await page.locator('[data-act=read-aloud]').count(),0,'no reading aids before an answer');
   await act('unknown');
-  const example=await clickAndCheck('.lesson-word-note blockquote [data-act=read-aloud]');
+  const example=await clickAndCheck('.lesson-word-note > blockquote [data-act=read-aloud][data-key$="/example/0"]');
   assert(!example.includes('_____'));
+  const humor=await clickAndCheck('.lesson-word-note .word-humor [data-act=read-aloud][data-key$="/humor/0"]');
+  assert.notEqual(humor,example,'humor and the business example have separate speech targets');
   await clickAndCheck('.lesson-terms [data-act=read-aloud]');
   await act('leave');
   await quiz('grammar');await act('unknown');

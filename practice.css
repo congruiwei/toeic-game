@@ -113,6 +113,8 @@
 .lesson-shell mark {color: var(--lp-ink); background: color-mix(in srgb, #efb348 35%, var(--lp-paper)); border-radius: 3px; box-decoration-break: clone; -webkit-box-decoration-break: clone;}
 .lesson-word-line {display: flex; align-items: center; justify-content: space-between; gap: 5px; margin-top: 10px;}
 .lesson-word-note {line-height: 1.6;}
+/* Keep the answered word ahead of asynchronously expanded review tools. */
+.lesson-feedback > .lesson-word-note {margin: 18px 0; padding: 0; border: 0; border-radius: 0; background: transparent;}
 .lesson-word-note blockquote {padding: 9px 13px; margin: 12px 0; background: var(--lp-wash); border-left: 3px solid var(--lp-accent);}
 .lesson-transcript {margin-top: 12px; border-top: 1px solid var(--lp-line);}
 .lesson-transcript summary {display: flex; align-items: center; gap: 7px; min-height: 44px; cursor: pointer; font-size: 14px; font-weight: 650; list-style: none;}

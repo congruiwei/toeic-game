@@ -15,7 +15,7 @@ export function screenView(s) {
   if(r.feedback){
     const {id,selected}=r.feedback, ref={id,mode:'vocab',format:'meaning'}, q=question(ref);
     return `<section class="lesson-shell"><h1>抽查反馈</h1><div class="lesson-panel" data-screen-feedback data-id="${esc(id)}">
-      <h2>${selected===q.answer?'答对了':'已加入待学词'}</h2><strong lang="en">${esc(q.word)}</strong><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p><blockquote lang="en">${esc(q.example)}</blockquote>${reviewTools(id)}
+      <h2>${selected===q.answer?'答对了':'已加入待学词'}</h2><strong lang="en">${esc(q.word)}</strong><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p><section class="word-humor" data-humor-id="${esc(q.id)}"></section><h3 class="word-business-label">商务例句</h3><blockquote lang="en">${esc(q.example)}</blockquote>${reviewTools(id)}
       </div><button class="lesson-primary" data-act="screen-next">继续快筛</button></section>`;
   }
   if(!w){

@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "id": "dbe6c67cfc833fce1d54252a42247874b492ad3fb3a13be5cae0cdeed49fe086",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 7.4426875,
+  "elapsedSeconds": 1.703,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.8426875,
+      "sha256": "7b513033fc424cf2670746486766838125b8e7b62df2c8712821a20674249339",
+      "src": "./audio/generated/ja/jf_alpha/1d6a5211056ae4c40961738da38002eb.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "新",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.9037937521934509
+    },
+    {
+      "word": "しい",
+      "start": 0.66,
+      "end": 1.12,
+      "probability": 0.9955281615257263
+    },
+    {
+      "word": "監",
+      "start": 1.12,
+      "end": 1.34,
+      "probability": 0.6047361493110657
+    },
+    {
+      "word": "促",
+      "start": 1.34,
+      "end": 1.54,
+      "probability": 0.7082729041576385
+    },
+    {
+      "word": "化",
+      "start": 1.54,
+      "end": 1.68,
+      "probability": 0.3868696987628937
+    },
+    {
+      "word": "方",
+      "start": 1.68,
+      "end": 1.88,
+      "probability": 0.7081114649772644
+    },
+    {
+      "word": "針",
+      "start": 1.88,
+      "end": 2.16,
+      "probability": 0.9941014349460602
+    },
+    {
+      "word": "を",
+      "start": 2.16,
+      "end": 2.3,
+      "probability": 0.9921294450759888
+    },
+    {
+      "word": "守",
+      "start": 2.3,
+      "end": 2.48,
+      "probability": 0.9396286606788635
+    },
+    {
+      "word": "る",
+      "start": 2.48,
+      "end": 2.7,
+      "probability": 0.998847246170044
+    },
+    {
+      "word": "ため、",
+      "start": 2.7,
+      "end": 2.88,
+      "probability": 0.9847995042800903
+    },
+    {
+      "word": "こちら",
+      "start": 3.34,
+      "end": 3.68,
+      "probability": 0.8864244818687439
+    },
+    {
+      "word": "の",
+      "start": 3.68,
+      "end": 3.92,
+      "probability": 0.9944120049476624
+    },
+    {
+      "word": "テ",
+      "start": 3.92,
+      "end": 4.1,
+      "probability": 0.2655916213989258
+    },
+    {
+      "word": "ンプ",
+      "start": 4.1,
+      "end": 4.32,
+      "probability": 0.9947079420089722
+    },
+    {
+      "word": "処",
+      "start": 4.32,
+      "end": 4.48,
+      "probability": 0.825102299451828
+    },
+    {
+      "word": "理",
+      "start": 4.48,
+      "end": 4.66,
+      "probability": 0.7148404717445374
+    },
+    {
+      "word": "17",
+      "start": 4.66,
+      "end": 5.06,
+      "probability": 0.7937170267105103
+    },
+    {
+      "word": "枚",
+      "start": 5.06,
+      "end": 5.42,
+      "probability": 0.9946208000183105
+    },
+    {
+      "word": "に",
+      "start": 5.42,
+      "end": 5.58,
+      "probability": 0.9733079075813293
+    },
+    {
+      "word": "ご",
+      "start": 5.58,
+      "end": 5.72,
+      "probability": 0.8900632262229919
+    },
+    {
+      "word": "記",
+      "start": 5.72,
+      "end": 5.94,
+      "probability": 0.8509151935577393
+    },
+    {
+      "word": "入",
+      "start": 5.94,
+      "end": 6.12,
+      "probability": 0.9954143762588501
+    },
+    {
+      "word": "ください。",
+      "start": 6.12,
+      "end": 6.46,
+      "probability": 0.877988874912262
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.46,
+      "text": "新しい監促化方針を守るため、こちらのテンプ処理17枚にご記入ください。",
+      "avgLogprob": -0.30151884385517663,
+      "noSpeechProb": 0.006878929678350687
+    }
+  ]
+}

@@ -1,0 +1,553 @@
+{
+  "version": 1,
+  "id": "6039081e3bd71e41fcdf1218b38cb045dd492ec73d4d54df5fff21f4c6a3f31d",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 18.24275,
+  "elapsedSeconds": 3.275,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 5.477375,
+      "sha256": "62efa7cce9370e8a4f409466f269b8958367c04766774aec4b7a6423e1804265",
+      "src": "./audio/generated/ja/jf_alpha/5f04ace19acf4c89ce2827432889cc6f.m4a"
+    },
+    {
+      "offset": 6.077375,
+      "end": 11.197375000000001,
+      "sha256": "235ba164ccf483942cacfc2965f1e39431dc1f468188fa89f5e9e1a2c255a7d6",
+      "src": "./audio/generated/ja/jf_alpha/e40b5e5be4def58a6ced18155b071512.m4a"
+    },
+    {
+      "offset": 11.797375,
+      "end": 17.64275,
+      "sha256": "040e544b22ad8f652f89ed3cc89e47fd66a943996e6ddf2c421ed8611c35e9dd",
+      "src": "./audio/generated/ja/jf_alpha/f174a6dd8e004189cd92cef67067b296.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "中",
+      "start": 0.0,
+      "end": 0.68,
+      "probability": 0.8614845871925354
+    },
+    {
+      "word": "庭",
+      "start": 0.68,
+      "end": 0.96,
+      "probability": 0.9572882354259491
+    },
+    {
+      "word": "の",
+      "start": 0.96,
+      "end": 1.16,
+      "probability": 0.941605269908905
+    },
+    {
+      "word": "排",
+      "start": 1.16,
+      "end": 1.4,
+      "probability": 0.251468300819397
+    },
+    {
+      "word": "水",
+      "start": 1.4,
+      "end": 1.62,
+      "probability": 0.9913598895072937
+    },
+    {
+      "word": "は、",
+      "start": 1.62,
+      "end": 1.82,
+      "probability": 0.9824640154838562
+    },
+    {
+      "word": "溶",
+      "start": 2.12,
+      "end": 2.26,
+      "probability": 0.6683701574802399
+    },
+    {
+      "word": "解",
+      "start": 2.26,
+      "end": 2.52,
+      "probability": 0.43440791964530945
+    },
+    {
+      "word": "前",
+      "start": 2.52,
+      "end": 2.74,
+      "probability": 0.846052348613739
+    },
+    {
+      "word": "だ",
+      "start": 2.74,
+      "end": 2.88,
+      "probability": 0.4152132570743561
+    },
+    {
+      "word": "注",
+      "start": 2.88,
+      "end": 3.12,
+      "probability": 0.3984435796737671
+    },
+    {
+      "word": "射",
+      "start": 3.12,
+      "end": 3.3,
+      "probability": 0.9951640367507935
+    },
+    {
+      "word": "を",
+      "start": 3.3,
+      "end": 3.44,
+      "probability": 0.9699933528900146
+    },
+    {
+      "word": "や",
+      "start": 3.44,
+      "end": 3.56,
+      "probability": 0.4216797351837158
+    },
+    {
+      "word": "めて",
+      "start": 3.56,
+      "end": 3.78,
+      "probability": 0.9906726479530334
+    },
+    {
+      "word": "釣",
+      "start": 3.78,
+      "end": 3.98,
+      "probability": 0.8780992329120636
+    },
+    {
+      "word": "り",
+      "start": 3.98,
+      "end": 4.12,
+      "probability": 0.9455384612083435
+    },
+    {
+      "word": "場",
+      "start": 4.12,
+      "end": 4.2,
+      "probability": 0.9493407011032104
+    },
+    {
+      "word": "に",
+      "start": 4.2,
+      "end": 4.32,
+      "probability": 0.9877430200576782
+    },
+    {
+      "word": "する",
+      "start": 4.32,
+      "end": 4.52,
+      "probability": 0.9883764386177063
+    },
+    {
+      "word": "なら",
+      "start": 4.52,
+      "end": 4.74,
+      "probability": 0.9903249740600586
+    },
+    {
+      "word": "別",
+      "start": 4.74,
+      "end": 4.96,
+      "probability": 0.9701565504074097
+    },
+    {
+      "word": "だ",
+      "start": 4.96,
+      "end": 5.16,
+      "probability": 0.9716520309448242
+    },
+    {
+      "word": "が、",
+      "start": 5.16,
+      "end": 5.36,
+      "probability": 0.9819169640541077
+    },
+    {
+      "word": "潮",
+      "start": 6.06,
+      "end": 6.3,
+      "probability": 0.5002335663884878
+    },
+    {
+      "word": "水",
+      "start": 6.3,
+      "end": 6.48,
+      "probability": 0.991195797920227
+    },
+    {
+      "word": "地",
+      "start": 6.48,
+      "end": 6.62,
+      "probability": 0.6441465020179749
+    },
+    {
+      "word": "は",
+      "start": 6.62,
+      "end": 6.8,
+      "probability": 0.9816910624504089
+    },
+    {
+      "word": "広",
+      "start": 6.8,
+      "end": 7.08,
+      "probability": 0.9928284287452698
+    },
+    {
+      "word": "く",
+      "start": 7.08,
+      "end": 7.26,
+      "probability": 0.9997689127922058
+    },
+    {
+      "word": "見",
+      "start": 7.26,
+      "end": 7.38,
+      "probability": 0.9897127151489258
+    },
+    {
+      "word": "える",
+      "start": 7.38,
+      "end": 7.6,
+      "probability": 0.9804100394248962
+    },
+    {
+      "word": "施",
+      "start": 7.6,
+      "end": 7.78,
+      "probability": 0.9731522798538208
+    },
+    {
+      "word": "設",
+      "start": 7.78,
+      "end": 7.96,
+      "probability": 0.9893883466720581
+    },
+    {
+      "word": "範",
+      "start": 7.96,
+      "end": 8.18,
+      "probability": 0.6607031673192978
+    },
+    {
+      "word": "が",
+      "start": 8.18,
+      "end": 8.4,
+      "probability": 0.9964057207107544
+    },
+    {
+      "word": "全部",
+      "start": 8.4,
+      "end": 8.72,
+      "probability": 0.8276064991950989
+    },
+    {
+      "word": "の",
+      "start": 8.72,
+      "end": 9.0,
+      "probability": 0.995412290096283
+    },
+    {
+      "word": "縛",
+      "start": 9.0,
+      "end": 9.16,
+      "probability": 0.5367451533675194
+    },
+    {
+      "word": "風",
+      "start": 9.16,
+      "end": 9.34,
+      "probability": 0.08803603798151016
+    },
+    {
+      "word": "に",
+      "start": 9.34,
+      "end": 9.5,
+      "probability": 0.9968364238739014
+    },
+    {
+      "word": "水",
+      "start": 9.5,
+      "end": 9.76,
+      "probability": 0.9642900824546814
+    },
+    {
+      "word": "を",
+      "start": 9.76,
+      "end": 9.96,
+      "probability": 0.9960044026374817
+    },
+    {
+      "word": "巻",
+      "start": 9.96,
+      "end": 10.08,
+      "probability": 0.9391965270042419
+    },
+    {
+      "word": "き",
+      "start": 10.08,
+      "end": 10.24,
+      "probability": 0.9985389709472656
+    },
+    {
+      "word": "始",
+      "start": 10.24,
+      "end": 10.34,
+      "probability": 0.9676398038864136
+    },
+    {
+      "word": "め",
+      "start": 10.34,
+      "end": 10.56,
+      "probability": 0.9992867112159729
+    },
+    {
+      "word": "る",
+      "start": 10.56,
+      "end": 10.66,
+      "probability": 0.999627947807312
+    },
+    {
+      "word": "ま",
+      "start": 10.66,
+      "end": 10.82,
+      "probability": 0.9873639941215515
+    },
+    {
+      "word": "では、",
+      "start": 10.82,
+      "end": 10.94,
+      "probability": 0.9992068409919739
+    },
+    {
+      "word": "バ",
+      "start": 11.8,
+      "end": 12.0,
+      "probability": 0.7573924660682678
+    },
+    {
+      "word": "ル",
+      "start": 12.0,
+      "end": 12.08,
+      "probability": 0.9984764456748962
+    },
+    {
+      "word": "ブ",
+      "start": 12.08,
+      "end": 12.24,
+      "probability": 0.9418843984603882
+    },
+    {
+      "word": "を",
+      "start": 12.24,
+      "end": 12.38,
+      "probability": 0.9775726795196533
+    },
+    {
+      "word": "閉",
+      "start": 12.38,
+      "end": 12.5,
+      "probability": 0.6459580212831497
+    },
+    {
+      "word": "めて",
+      "start": 12.5,
+      "end": 12.78,
+      "probability": 0.9863615036010742
+    },
+    {
+      "word": "水",
+      "start": 12.78,
+      "end": 13.06,
+      "probability": 0.974479615688324
+    },
+    {
+      "word": "が",
+      "start": 13.06,
+      "end": 13.3,
+      "probability": 0.9981903433799744
+    },
+    {
+      "word": "止",
+      "start": 13.3,
+      "end": 13.42,
+      "probability": 0.8939350843429565
+    },
+    {
+      "word": "ま",
+      "start": 13.42,
+      "end": 13.58,
+      "probability": 0.9976373910903931
+    },
+    {
+      "word": "った",
+      "start": 13.58,
+      "end": 13.78,
+      "probability": 0.9973320960998535
+    },
+    {
+      "word": "私",
+      "start": 13.78,
+      "end": 14.04,
+      "probability": 0.7746955752372742
+    },
+    {
+      "word": "の",
+      "start": 14.04,
+      "end": 14.48,
+      "probability": 0.9983914494514465
+    },
+    {
+      "word": "新",
+      "start": 14.48,
+      "end": 14.7,
+      "probability": 0.7922882437705994
+    },
+    {
+      "word": "品",
+      "start": 14.7,
+      "end": 14.92,
+      "probability": 0.8972784876823425
+    },
+    {
+      "word": "の",
+      "start": 14.92,
+      "end": 15.14,
+      "probability": 0.99614417552948
+    },
+    {
+      "word": "靴",
+      "start": 15.14,
+      "end": 15.34,
+      "probability": 0.8352749645709991
+    },
+    {
+      "word": "が",
+      "start": 15.34,
+      "end": 15.5,
+      "probability": 0.9990164041519165
+    },
+    {
+      "word": "ちょ",
+      "start": 15.5,
+      "end": 15.72,
+      "probability": 0.7164276242256165
+    },
+    {
+      "word": "う",
+      "start": 15.72,
+      "end": 15.88,
+      "probability": 0.9986586570739746
+    },
+    {
+      "word": "ど",
+      "start": 15.88,
+      "end": 15.98,
+      "probability": 0.968579113483429
+    },
+    {
+      "word": "お",
+      "start": 15.98,
+      "end": 16.08,
+      "probability": 0.7158270478248596
+    },
+    {
+      "word": "よ",
+      "start": 16.08,
+      "end": 16.18,
+      "probability": 0.36293303966522217
+    },
+    {
+      "word": "ぎ",
+      "start": 16.18,
+      "end": 16.32,
+      "probability": 0.9928978681564331
+    },
+    {
+      "word": "始",
+      "start": 16.32,
+      "end": 16.48,
+      "probability": 0.9288567900657654
+    },
+    {
+      "word": "め",
+      "start": 16.48,
+      "end": 16.68,
+      "probability": 0.9990656971931458
+    },
+    {
+      "word": "た",
+      "start": 16.68,
+      "end": 16.82,
+      "probability": 0.9964284300804138
+    },
+    {
+      "word": "ところ",
+      "start": 16.82,
+      "end": 17.04,
+      "probability": 0.8524662256240845
+    },
+    {
+      "word": "だ",
+      "start": 17.04,
+      "end": 17.26,
+      "probability": 0.9977537989616394
+    },
+    {
+      "word": "った。",
+      "start": 17.26,
+      "end": 17.46,
+      "probability": 0.995257556438446
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 5.36,
+      "text": "中庭の排水は、溶解前だ注射をやめて釣り場にするなら別だが、",
+      "avgLogprob": -0.24936900497640221,
+      "noSpeechProb": 0.023174544796347618
+    },
+    {
+      "start": 6.06,
+      "end": 10.94,
+      "text": "潮水地は広く見える施設範が全部の縛風に水を巻き始めるまでは、",
+      "avgLogprob": -0.24936900497640221,
+      "noSpeechProb": 0.023174544796347618
+    },
+    {
+      "start": 11.8,
+      "end": 17.46,
+      "text": "バルブを閉めて水が止まった私の新品の靴がちょうどおよぎ始めたところだった。",
+      "avgLogprob": -0.24936900497640221,
+      "noSpeechProb": 0.023174544796347618
+    }
+  ]
+}

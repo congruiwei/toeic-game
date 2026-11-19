@@ -80,3 +80,22 @@ test('confusable source refuses missing Japanese text or a collision with an exi
   const duplicate=f.run();assert.notEqual(duplicate.status,0);assert.match(duplicate.stderr,/Duplicate confusable audio key/);
  }finally{await fs.rm(f.temp,{recursive:true,force:true});}
 });
+
+test('humor audio uses the authored bilingual key without making older optional fields required',async()=>{
+ const f=await fixture();try{
+  await f.save('data/vocab-humor.json',{version:1,entries:{'v-original/humor/0':'The desk has more visitors than our manager.'}});
+  await f.save('data/i18n/ja/vocab-humor.json',{version:1,entries:{'v-original/humor/0':'机のほうが上司より来客が多い。'}});
+  const r=f.run();assert.equal(r.status,0,r.stderr);const units=(await f.load()).units,humor=units.filter(u=>u.key==='v-original/humor/0');
+  assert.equal(humor.length,2);assert.ok(humor.every(u=>u.required&&u.bank==='vocab'&&u.group==='v-original'));
+  assert.equal(humor.find(u=>u.language==='en').text,'The desk has more visitors than our manager.');
+  assert.equal(units.find(u=>u.language==='en'&&u.key==='v-original/collocation/0').required,false);
+ }finally{await fs.rm(f.temp,{recursive:true,force:true});}
+});
+test('humor audio rejects missing or extra Japanese keys instead of silently losing content',async()=>{
+ const f=await fixture();try{
+  await f.save('data/vocab-humor.json',{version:1,entries:{'v-original/humor/0':'The desk has more visitors than our manager.'}});
+  for(const entries of [{},{'v-original/humor/0':'机のほうが上司より来客が多い。','v-other/humor/0':'別の文。'}]){
+   await f.save('data/i18n/ja/vocab-humor.json',{version:1,entries});const r=f.run();assert.notEqual(r.status,0);assert.match(r.stderr,/Humor translation keys differ/);
+  }
+ }finally{await fs.rm(f.temp,{recursive:true,force:true});}
+});

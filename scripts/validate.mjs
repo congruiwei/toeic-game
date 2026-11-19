@@ -474,3 +474,5 @@ if (issues.length) {
   console.log(Object.entries(counts).map(([name, n]) => `${name} ${n}`).join(' · '));
   console.log(`题库与方法卡通过校验，含 ${seenIds.size} 个唯一 ID。`);
 }
+
+await import('./validate-humor.mjs');

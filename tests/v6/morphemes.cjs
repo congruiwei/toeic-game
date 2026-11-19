@@ -8,7 +8,6 @@ module.exports=async({page,context,width,act,nav,state,store})=>{
  const after=await state();assert.equal(after.seen['v-portable'],1);
  await page.locator('[data-morpheme-id="root-port"]').first().click();
  const family=page.locator('#modal [data-morpheme-family="root-port"]');await family.waitFor();
- await page.screenshot({path:'/private/tmp/island-morphemes/screenshots/family-'+width+'.png',fullPage:true});
  assert((await family.innerText()).includes('搬运'));assert(!await family.locator('[data-word-id="v-portion"]').count());
  for(const b of await family.locator('button:visible').all())assert(await b.evaluate(el=>el.getBoundingClientRect().height)>=44);
  await family.locator('[data-act=morpheme-en]').first().click();await page.waitForFunction(()=>window.spoken.at(-1)?.text==='P. O. R. T.');

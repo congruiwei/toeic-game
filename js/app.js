@@ -338,7 +338,57 @@ function wordLanguagePending() {
   }
   return true;
 }
+let humorModule;
+// Track presses before the lazy humor module arrives; only its own card waits.
+const humorCardSelector='.lesson-word-note,.lib-card-body,[data-screen-feedback]';
+const humorPresses=new Map(),humorWaiters=new Set();
+function settleHumorPresses(){
+  for(const [id,press] of humorPresses)if(!press.control.isConnected||!press.card.contains(press.control))humorPresses.delete(id);
+  for(const waiter of humorWaiters)if(![...humorPresses.values()].some(press=>press.card===waiter.card)){
+    humorWaiters.delete(waiter);waiter.resolve();
+  }
+  if(!humorPresses.size)humorPressObserver.disconnect();
+}
+const humorPressObserver=new MutationObserver(settleHumorPresses);
+document.addEventListener('pointerdown',event=>{
+  const control=event.target.closest?.('button,summary,a,input,select,textarea,[role="button"]');
+  const card=control?.closest(humorCardSelector);
+  if(!card?.querySelector('[data-humor-id]')||control.disabled)return;
+  humorPresses.set(event.pointerId,{card,control});
+  humorPressObserver.observe(document.body,{childList:true,subtree:true});
+},true);
+function releaseHumorPress(event){
+  const press=humorPresses.get(event.pointerId);if(!press)return;
+  // Keep the target still through the native click dispatched after pointerup.
+  setTimeout(()=>{if(humorPresses.get(event.pointerId)===press)humorPresses.delete(event.pointerId);settleHumorPresses();},0);
+}
+for(const type of ['pointerup','pointercancel'])document.addEventListener(type,releaseHumorPress,true);
+for(const type of ['blur','pagehide'])window.addEventListener(type,()=>{humorPresses.clear();settleHumorPresses();});
+function waitForHumorPointer(host){
+  const card=host.closest(humorCardSelector);
+  if(![...humorPresses.values()].some(press=>press.card===card))return Promise.resolve();
+  return new Promise(resolve=>humorWaiters.add({card,resolve}));
+}
+function humorUI() {
+  return humorModule ??= import('./vocab-humor.js').catch(error=>{humorModule=null;throw error;});
+}
+function humorAllowed(host) {
+  return host?.isConnected && !host.closest('details:not([open]),[hidden]') &&
+    ((page==='library'&&host.closest('.lib-card'))||(dialog.open&&host.closest('[data-option-word-study]'))||
+    reviewedAnswer(host.dataset.humorId,()=>true));
+}
+function hydrateHumor(scope) {
+  const hosts=[...scope.querySelectorAll('[data-humor-id]')].filter(host=>!host.dataset.loaded&&humorAllowed(host));
+  if(!hosts.length)return;
+  humorUI().then(ui=>Promise.all(hosts.filter(humorAllowed).map(host=>ui.mountHumor(host,s,()=>waitForHumorPointer(host))))).catch(async()=>{
+    for(const host of hosts.filter(humorAllowed)){
+      await waitForHumorPointer(host);
+      if(humorAllowed(host))host.innerHTML='<button class="secondary" data-act="humor-retry">重新载入职场趣句</button>';
+    }
+  });
+}
 function hydrateWordMeanings(scope) {
+  hydrateHumor(scope);
   const nodes=[...scope.querySelectorAll('[data-vocab-ja]')];if(!nodes.length)return;
   const fill=()=>{for(const node of nodes)if(node.isConnected)node.textContent=japaneseMeaning(node.dataset.vocabJa);};
   try{fill();}catch{
@@ -741,7 +791,7 @@ document.addEventListener('click', async (e) => {
   }
   if(a==='confusable-answer-retry'){hydrateAnswerComparison(el.closest('[data-answer-comparison]'));return;}
   if(a==='confusable-retry'){hydrateComparisons(el.parentElement.parentElement);return;}
-  if(['confusable-speak','confusable-pair'].includes(a)){
+  if(['confusable-speak','confusable-pair','confusable-difference'].includes(a)){
     const host=el.closest('[data-confusable-group]');
     const study=host?.dataset.confusableStudy;
     const allowed=host&&!host.closest('details:not([open]),[hidden]')&&(study?
@@ -749,6 +799,13 @@ document.addEventListener('click', async (e) => {
       reviewedAnswer(host.dataset.confusableReview,()=>true));
     const group=confusableData()?.groups.find(g=>g.id===host?.dataset.confusableGroup);
     if(!allowed||!group)return;
+    if(a==='confusable-difference'){
+      const language=el.dataset.language;if(!['en','ja'].includes(language))return;
+      const text=group.difference[language],key=group.id+'/difference/0';stopReplay();
+      if(language==='ja')speakJapanese(text,s.settings,toast,{bank:'vocab',key});
+      else speak([{speaker:'A',text,bank:'vocab',key}],s.settings,toast);
+      return;
+    }
     const ids=a==='confusable-pair'?[el.dataset.first,el.dataset.second]:[el.dataset.word];
     if(ids.some(id=>!group.members.includes(id)))return;
     const words=ids.map(id=>confusableData().words[id]);stopReplay();
@@ -761,6 +818,18 @@ document.addEventListener('click', async (e) => {
     if(!el.closest('#audio-downloads')||!dialog.open)return;
     if(a==='audio-delete')hush();
     try{await (await (audioSettingsModule??=import('./audio-settings.js'))).audioSettingsAction(a,el,toast);}catch{toast('音频操作暂时无法完成，请重试。');}
+    return;
+  }
+  if(['humor-ja','humor-collect','humor-retry'].includes(a)) {
+    const host=el.closest('[data-humor-id]'); if(!humorAllowed(host))return;
+    if(a==='humor-retry'){delete host.dataset.loaded;hydrateHumor(host.parentElement);return;}
+    // The displayed row is already loaded. Keep speech within the click gesture on iPhone.
+    const row=host.humorRow; if(!row)return;
+    if(a==='humor-ja'){stopReplay();speakJapanese(row.ja,s.settings,toast,{key:row.key,bank:'vocab'});return;}
+    try {
+      if(collectExpression(s,{id:row.id,key:row.key,text:row.en,bank:'vocab'},row.zh,row.ja)&&save())toast('已收藏到表达本');
+      el.disabled=true;el.textContent='已收藏';
+    } catch(error){toast(error.message);}
     return;
   }
   if(a==='read-aloud'){
@@ -1132,7 +1201,7 @@ window.addEventListener('storage', async (e) => {
     render();
   } catch {}
 });
-document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open){hydrateTranslations(e.target);hydrateOptions(e.target);hydrateWordEnrichment(e.target);hydrateComparisons(e.target);}}, true);
+document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open){hydrateHumor(e.target);hydrateTranslations(e.target);hydrateOptions(e.target);hydrateWordEnrichment(e.target);hydrateComparisons(e.target);}}, true);
 window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
 const backupHasConfusable=raw=>/"mode"\s*:\s*"confusable"/.test(raw||'');

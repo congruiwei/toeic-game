@@ -104,6 +104,19 @@ if(confusableData) {
     }
   }
 }
+// One frozen humorous example per sense; the displayed text is the audio source.
+let humor;
+try {humor=JSON.parse(await fs.readFile(path.join(root,'data/vocab-humor.json'),'utf8'));}
+catch(error) {if(error.code!=='ENOENT')throw error;}
+if(humor) {
+  const japanese=JSON.parse(await fs.readFile(path.join(root,'data/i18n/ja/vocab-humor.json'),'utf8')).entries;
+  if(JSON.stringify(Object.keys(humor.entries).sort())!==JSON.stringify(Object.keys(japanese).sort()))throw new Error('Humor translation keys differ');
+  for(const [key,text] of Object.entries(humor.entries))for(const language of ['en','ja']) {
+    const token=`${language}:vocab:${key}`,line=language==='en'?text:japanese[key];
+    if(seen.has(token)||typeof line!=='string'||!line.trim())throw new Error(`Invalid humor audio key: ${token}`);
+    add('vocab',language,key,line,{group:key.split('/')[0],kind:'sentence'});addedRequired.add(token);
+  }
+}
 // Morphology forms are spelling audio; complete example words keep their old keys.
 let morphology;
 try {morphology=JSON.parse(await fs.readFile(path.join(root,'data/morphemes.json'),'utf8'));}

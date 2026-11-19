@@ -25,7 +25,7 @@ export function unitsForPanel(panel) {
   return panel.dataset.translationKey ? units.filter(u=>u.key===panel.dataset.translationKey) : units.filter(u=>u.kind!=='meaning'&&(!panel.hasAttribute('data-defer-passage')||u.id===id));
 }
 export function applyTranslationLanguage(scope, language) {
-  scope.querySelectorAll('.translations').forEach(panel=>panel.dataset.language=language);
+  scope.querySelectorAll('.translations,.humor-translation').forEach(panel=>panel.dataset.language=language);
   scope.querySelectorAll('[data-act=translation-language]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.language===language)));
 }
 export async function expandTranslation(panel, settings, notify, collected=[]) {

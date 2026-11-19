@@ -28,10 +28,17 @@ module.exports=async({page,context,width,act,nav,state,store,reset,quiz})=>{
  assert(lazyRequests.some(u=>u.endsWith('/confusables.css'))&&lazyRequests.some(u=>u.endsWith('/js/confusable-ui.js')));
  await freshScenario();let s=await state();s.session=session('cf-access');await store(s);await act('resume');
  assert.equal(await page.locator('.confusable-card').count(),0,'no comparison before answering');
+ assert.equal(await page.locator('[data-act=confusable-difference]').count(),0,'group explanations cannot play before answering');
  assert.equal(await page.locator('[data-options-id]').count(),0);
  assert((await page.locator('.lesson-question').innerText()).includes('_____'));
  const before=await state();await page.locator('.lesson-option').filter({hasText:'assess'}).click();
  const card=page.locator('[data-confusable-group="cg-access-assess-excess"]');await card.waitFor();
+ const distinction=await page.evaluate(async()=>(await import('./js/confusables.js')).confusableData().groups.find(g=>g.id==='cg-access-assess-excess').difference);
+ for(const language of ['en','ja']){
+  assert.equal(await card.locator(`.confusable-difference > p[lang=${language}]`).textContent(),distinction[language]);
+  await card.locator(`[data-act=confusable-difference][data-language=${language}]`).click();
+  await page.waitForFunction(text=>window.played.at(-1)===text,distinction[language]);
+ }
  assert((await card.innerText()).includes('你选了'));assert((await card.innerText()).includes('重音在前'));assert((await card.innerText()).includes('重音在后'));
  assert.equal(await card.locator('[data-confusable-word="v-access-use"]').count(),0);
  s=await state();assert.equal(s.xp,before.xp+4);assert.equal(s.personalVocab.items[0].wordId,'v-access');assert(!s.words['cf-access']);assert(!s.words['v-access-use']);assert(s.errors['cf-access']);
@@ -41,7 +48,6 @@ module.exports=async({page,context,width,act,nav,state,store,reset,quiz})=>{
  await card.locator('[data-confusable-word="v-access"] [data-language=ja][data-field=example]').click();await page.waitForFunction(()=>window.spoken.at(-1)?.lang==='ja-JP'&&window.spoken.at(-1)?.text.length>15);
  assert(await card.locator('button').first().evaluate(el=>el.getBoundingClientRect().height)>=44);
  assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
- await page.screenshot({path:`/private/tmp/word-upgrade/stage3/confusables-${width}.png`,fullPage:true});
  await act('report-issue');await page.locator('#issue-reason').selectOption('易混词解释有误');await act('save-issue');
  assert.equal((await state()).issues.at(-1).reason,'易混词解释有误');
  await page.reload();await page.locator('.habitat').waitFor();await act('resume');await card.waitFor();assert.equal((await state()).xp,before.xp+4,'resume does not regrade');
@@ -71,6 +77,12 @@ module.exports=async({page,context,width,act,nav,state,store,reset,quiz})=>{
  await act('leave');await nav('library');await page.locator('[data-act=library-tab][data-tab=words]').click();
  const entry=page.locator('.lib-card').filter({has:page.locator('[data-word-study-id="v-import"]')});
  await entry.locator('summary').click();await entry.locator('[data-morph-word="v-import"]').waitFor();await entry.locator('[data-confusable-group="cg-import-export"]').waitFor();
+ const studyDifference=entry.locator('[data-confusable-group="cg-import-export"] .confusable-difference');
+ for(const language of ['en','ja']){
+  const text=await studyDifference.locator(`p[lang=${language}]`).textContent();
+  await studyDifference.locator(`[data-act=confusable-difference][data-language=${language}]`).click();
+  await page.waitForFunction(text=>window.played.at(-1)===text,text);
+ }
  // Normal vocabulary uses only the small English projection until answer review.
  const calls=[];page.on('request',r=>{if(r.url().includes('/data/confusables.json'))calls.push(r.url());});
  await freshScenario();await quiz('vocab','','english');assert.equal(calls.length,0,'normal questions download only the candidate projection before an answer');

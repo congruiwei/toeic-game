@@ -1,0 +1,595 @@
+{
+  "version": 1,
+  "id": "dc9c6a7a67091825211502b1545af72d0bbcf7731bd4a73c5394739c2b5be620",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 19.778687500000004,
+  "elapsedSeconds": 3.41,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.800000000000001,
+      "sha256": "ce1bcafe2b6732be88ab00b86624887366966505021a24fd1352f076b7957d56",
+      "src": "./audio/generated/ja/jf_alpha/e51743cebcf1ea5bcbbe67f75845b1bd.m4a"
+    },
+    {
+      "offset": 7.4,
+      "end": 11.88,
+      "sha256": "0e20d6572eaa5c133360fc6683392047eafbfeb0248663327e71c90f65ec417c",
+      "src": "./audio/generated/ja/jf_alpha/0023ed06f7c7a47e17639060a6c6e2d4.m4a"
+    },
+    {
+      "offset": 12.48,
+      "end": 19.178687500000002,
+      "sha256": "3bf0f51acf9b340c0f66f039fec68b838f91ef44208afe75fb5c0513c6557baf",
+      "src": "./audio/generated/ja/jf_alpha/29b8d6294f16708d57571707a05fd9e5.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "田",
+      "start": 0.0,
+      "end": 0.66,
+      "probability": 0.49718526005744934
+    },
+    {
+      "word": "舎",
+      "start": 0.66,
+      "end": 0.88,
+      "probability": 0.9492640793323517
+    },
+    {
+      "word": "の",
+      "start": 0.88,
+      "end": 1.0,
+      "probability": 0.9784185290336609
+    },
+    {
+      "word": "視",
+      "start": 1.0,
+      "end": 1.16,
+      "probability": 0.8645711541175842
+    },
+    {
+      "word": "点",
+      "start": 1.16,
+      "end": 1.3,
+      "probability": 0.977836012840271
+    },
+    {
+      "word": "の",
+      "start": 1.3,
+      "end": 1.5,
+      "probability": 0.996095597743988
+    },
+    {
+      "word": "朝",
+      "start": 1.5,
+      "end": 1.72,
+      "probability": 0.950459897518158
+    },
+    {
+      "word": "は",
+      "start": 1.72,
+      "end": 1.94,
+      "probability": 0.9977374076843262
+    },
+    {
+      "word": "静",
+      "start": 1.94,
+      "end": 2.28,
+      "probability": 0.9840212762355804
+    },
+    {
+      "word": "か",
+      "start": 2.28,
+      "end": 2.44,
+      "probability": 0.988902747631073
+    },
+    {
+      "word": "です",
+      "start": 2.44,
+      "end": 2.6,
+      "probability": 0.9940489530563354
+    },
+    {
+      "word": "が、",
+      "start": 2.6,
+      "end": 2.8,
+      "probability": 0.994647204875946
+    },
+    {
+      "word": "隣",
+      "start": 3.12,
+      "end": 3.36,
+      "probability": 0.9214835464954376
+    },
+    {
+      "word": "の",
+      "start": 3.36,
+      "end": 3.6,
+      "probability": 0.9922512173652649
+    },
+    {
+      "word": "温",
+      "start": 3.6,
+      "end": 3.78,
+      "probability": 0.916745662689209
+    },
+    {
+      "word": "泥",
+      "start": 3.78,
+      "end": 3.94,
+      "probability": 0.6644943505525589
+    },
+    {
+      "word": "が",
+      "start": 3.94,
+      "end": 4.14,
+      "probability": 0.9973896145820618
+    },
+    {
+      "word": "回",
+      "start": 4.14,
+      "end": 4.36,
+      "probability": 0.8526424169540405
+    },
+    {
+      "word": "転",
+      "start": 4.36,
+      "end": 4.56,
+      "probability": 0.9969469904899597
+    },
+    {
+      "word": "時",
+      "start": 4.56,
+      "end": 4.74,
+      "probability": 0.8964458703994751
+    },
+    {
+      "word": "刻",
+      "start": 4.74,
+      "end": 4.94,
+      "probability": 0.9908795356750488
+    },
+    {
+      "word": "を",
+      "start": 4.94,
+      "end": 5.1,
+      "probability": 0.9956318140029907
+    },
+    {
+      "word": "知",
+      "start": 5.1,
+      "end": 5.26,
+      "probability": 0.9864363074302673
+    },
+    {
+      "word": "ら",
+      "start": 5.26,
+      "end": 5.38,
+      "probability": 0.9990087747573853
+    },
+    {
+      "word": "せ",
+      "start": 5.38,
+      "end": 5.5,
+      "probability": 0.9971445202827454
+    },
+    {
+      "word": "る",
+      "start": 5.5,
+      "end": 5.62,
+      "probability": 0.9988638162612915
+    },
+    {
+      "word": "時",
+      "start": 5.62,
+      "end": 5.76,
+      "probability": 0.6633020043373108
+    },
+    {
+      "word": "だけ",
+      "start": 5.76,
+      "end": 6.0,
+      "probability": 0.9920984506607056
+    },
+    {
+      "word": "は",
+      "start": 6.0,
+      "end": 6.16,
+      "probability": 0.9921030402183533
+    },
+    {
+      "word": "別",
+      "start": 6.16,
+      "end": 6.32,
+      "probability": 0.9783512949943542
+    },
+    {
+      "word": "です。",
+      "start": 6.32,
+      "end": 6.74,
+      "probability": 0.996096670627594
+    },
+    {
+      "word": "都",
+      "start": 7.32,
+      "end": 7.6,
+      "probability": 0.9438217282295227
+    },
+    {
+      "word": "会",
+      "start": 7.6,
+      "end": 7.78,
+      "probability": 0.8200585842132568
+    },
+    {
+      "word": "の",
+      "start": 7.78,
+      "end": 7.96,
+      "probability": 0.9966804385185242
+    },
+    {
+      "word": "ホ",
+      "start": 7.96,
+      "end": 8.14,
+      "probability": 0.977482795715332
+    },
+    {
+      "word": "テ",
+      "start": 8.14,
+      "end": 8.24,
+      "probability": 0.9914374947547913
+    },
+    {
+      "word": "ル",
+      "start": 8.24,
+      "end": 8.36,
+      "probability": 0.9984616041183472
+    },
+    {
+      "word": "の",
+      "start": 8.36,
+      "end": 8.48,
+      "probability": 0.9985578656196594
+    },
+    {
+      "word": "長",
+      "start": 8.48,
+      "end": 8.74,
+      "probability": 0.3767823278903961
+    },
+    {
+      "word": "房",
+      "start": 8.74,
+      "end": 8.98,
+      "probability": 0.2488943338394165
+    },
+    {
+      "word": "は",
+      "start": 8.98,
+      "end": 9.2,
+      "probability": 0.994662880897522
+    },
+    {
+      "word": "主",
+      "start": 9.2,
+      "end": 9.42,
+      "probability": 0.9257967472076416
+    },
+    {
+      "word": "に",
+      "start": 9.42,
+      "end": 9.64,
+      "probability": 0.9714207649230957
+    },
+    {
+      "word": "向",
+      "start": 9.64,
+      "end": 9.74,
+      "probability": 0.5325973629951477
+    },
+    {
+      "word": "か",
+      "start": 9.74,
+      "end": 9.9,
+      "probability": 0.9123635292053223
+    },
+    {
+      "word": "い",
+      "start": 9.9,
+      "end": 9.98,
+      "probability": 0.9907767176628113
+    },
+    {
+      "word": "の",
+      "start": 9.98,
+      "end": 10.1,
+      "probability": 0.992154061794281
+    },
+    {
+      "word": "ホ",
+      "start": 10.1,
+      "end": 10.28,
+      "probability": 0.9747193455696106
+    },
+    {
+      "word": "テ",
+      "start": 10.28,
+      "end": 10.38,
+      "probability": 0.9952620267868042
+    },
+    {
+      "word": "ル",
+      "start": 10.38,
+      "end": 10.48,
+      "probability": 0.9992247819900513
+    },
+    {
+      "word": "の",
+      "start": 10.48,
+      "end": 10.6,
+      "probability": 0.9993447661399841
+    },
+    {
+      "word": "立",
+      "start": 10.6,
+      "end": 10.78,
+      "probability": 0.9692769050598145
+    },
+    {
+      "word": "派",
+      "start": 10.78,
+      "end": 10.92,
+      "probability": 0.9837033450603485
+    },
+    {
+      "word": "な",
+      "start": 10.92,
+      "end": 11.06,
+      "probability": 0.9994096755981445
+    },
+    {
+      "word": "カ",
+      "start": 11.06,
+      "end": 11.22,
+      "probability": 0.7678759098052979
+    },
+    {
+      "word": "ーテ",
+      "start": 11.22,
+      "end": 11.38,
+      "probability": 0.9650194644927979
+    },
+    {
+      "word": "ン",
+      "start": 11.38,
+      "end": 11.46,
+      "probability": 0.9539297223091125
+    },
+    {
+      "word": "です。",
+      "start": 11.46,
+      "end": 11.68,
+      "probability": 0.9925546050071716
+    },
+    {
+      "word": "国",
+      "start": 12.56,
+      "end": 12.7,
+      "probability": 0.9659352898597717
+    },
+    {
+      "word": "際",
+      "start": 12.7,
+      "end": 12.98,
+      "probability": 0.996772825717926
+    },
+    {
+      "word": "チ",
+      "start": 12.98,
+      "end": 13.22,
+      "probability": 0.9868237972259521
+    },
+    {
+      "word": "ーム",
+      "start": 13.22,
+      "end": 13.4,
+      "probability": 0.9830108880996704
+    },
+    {
+      "word": "は",
+      "start": 13.4,
+      "end": 13.62,
+      "probability": 0.9881778359413147
+    },
+    {
+      "word": "あ",
+      "start": 13.62,
+      "end": 13.8,
+      "probability": 0.8829078078269958
+    },
+    {
+      "word": "ら",
+      "start": 13.8,
+      "end": 13.9,
+      "probability": 0.9790424704551697
+    },
+    {
+      "word": "ゆ",
+      "start": 13.9,
+      "end": 14.04,
+      "probability": 0.9956549406051636
+    },
+    {
+      "word": "る",
+      "start": 14.04,
+      "end": 14.14,
+      "probability": 0.9997050166130066
+    },
+    {
+      "word": "点",
+      "start": 14.14,
+      "end": 14.3,
+      "probability": 0.8119034171104431
+    },
+    {
+      "word": "で",
+      "start": 14.3,
+      "end": 14.52,
+      "probability": 0.9992443323135376
+    },
+    {
+      "word": "合",
+      "start": 14.52,
+      "end": 14.7,
+      "probability": 0.9337821006774902
+    },
+    {
+      "word": "意",
+      "start": 14.7,
+      "end": 14.86,
+      "probability": 0.9653255939483643
+    },
+    {
+      "word": "しました",
+      "start": 14.86,
+      "end": 15.06,
+      "probability": 0.9940710663795471
+    },
+    {
+      "word": "が、",
+      "start": 15.06,
+      "end": 15.46,
+      "probability": 0.9989656209945679
+    },
+    {
+      "word": "中",
+      "start": 16.02,
+      "end": 16.18,
+      "probability": 0.4416329562664032
+    },
+    {
+      "word": "職",
+      "start": 16.18,
+      "end": 16.44,
+      "probability": 0.7656978070735931
+    },
+    {
+      "word": "の",
+      "start": 16.44,
+      "end": 16.58,
+      "probability": 0.9962970614433289
+    },
+    {
+      "word": "適",
+      "start": 16.58,
+      "end": 16.78,
+      "probability": 0.9444714784622192
+    },
+    {
+      "word": "切",
+      "start": 16.78,
+      "end": 17.0,
+      "probability": 0.9926527738571167
+    },
+    {
+      "word": "な",
+      "start": 17.0,
+      "end": 17.18,
+      "probability": 0.9997918009757996
+    },
+    {
+      "word": "時",
+      "start": 17.18,
+      "end": 17.32,
+      "probability": 0.9930174350738525
+    },
+    {
+      "word": "刻",
+      "start": 17.32,
+      "end": 17.52,
+      "probability": 0.9970914125442505
+    },
+    {
+      "word": "だけ",
+      "start": 17.52,
+      "end": 17.7,
+      "probability": 0.9954773783683777
+    },
+    {
+      "word": "は",
+      "start": 17.7,
+      "end": 17.92,
+      "probability": 0.9965655207633972
+    },
+    {
+      "word": "決",
+      "start": 17.92,
+      "end": 18.06,
+      "probability": 0.992911159992218
+    },
+    {
+      "word": "まり",
+      "start": 18.06,
+      "end": 18.26,
+      "probability": 0.9074750542640686
+    },
+    {
+      "word": "ません",
+      "start": 18.26,
+      "end": 18.54,
+      "probability": 0.9896814227104187
+    },
+    {
+      "word": "でした。",
+      "start": 18.54,
+      "end": 18.86,
+      "probability": 0.9995999932289124
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.74,
+      "text": "田舎の視点の朝は静かですが、隣の温泥が回転時刻を知らせる時だけは別です。",
+      "avgLogprob": -0.12047317733458422,
+      "noSpeechProb": 0.015746913850307465
+    },
+    {
+      "start": 7.32,
+      "end": 11.68,
+      "text": "都会のホテルの長房は主に向かいのホテルの立派なカーテンです。",
+      "avgLogprob": -0.12047317733458422,
+      "noSpeechProb": 0.015746913850307465
+    },
+    {
+      "start": 12.56,
+      "end": 18.86,
+      "text": "国際チームはあらゆる点で合意しましたが、中職の適切な時刻だけは決まりませんでした。",
+      "avgLogprob": -0.12047317733458422,
+      "noSpeechProb": 0.015746913850307465
+    }
+  ]
+}

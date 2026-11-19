@@ -26,7 +26,7 @@ function cardBody(word) {
     <p class="lib-phonetic" lang="en">${escape(word.ipa)} · ${escape(word.pos)}</p>
     <p lang="zh-CN">${escape(word.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${escape(word.id)}">正在载入日语释义…</p>
     <p>${readButton(word.word,{study:true,id:word.id,bank:'vocab',key:word.id+'/meaning'})}</p>
-    <blockquote lang="en">${readable(word.example,{study:true,id:word.id,bank:'vocab',key:word.id+'/example/0'})}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
+    <section class="word-humor" data-humor-id="${escape(word.id)}"></section><h3 class="word-business-label">商务例句</h3><blockquote lang="en">${readable(word.example,{study:true,id:word.id,bank:'vocab',key:word.id+'/example/0'})}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
     ${wordDetailsSlot(word,{study:true})}<dl><dt>常见搭配</dt><dd lang="en">${readable(word.collocation,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd>
       <dt>同义替换</dt><dd lang="en">${readable(word.paraphrase,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd></dl><button type="button" class="secondary" data-act="report-word" data-id="${escape(word.id)}">报告词卡问题</button>
     <div data-confusable-word-host="${escape(word.id)}"></div>

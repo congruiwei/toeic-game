@@ -4,6 +4,7 @@ import path from 'node:path';
 import crypto from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {sourceUnits} from '../js/translation-source.js';
+import {splitSentences} from '../js/replay.js';
 import {validateContextAcceptance} from './audio-context-proof.mjs';
 import {sourceVoice,validEntryVoices,validateVoiceSelection,validateVoiceRecognition} from './audio-voice-override.mjs';
 import {validateLexicalAcceptance} from './audio-lexical-proof.mjs';
@@ -17,6 +18,115 @@ const token=u=>`${u.language}:${u.bank}:${u.key}`;
 const marker=t=>/^\s*\[[1-4]\]\s*$/.test(t);
 const allowed={en:new Set(['af_heart','am_puck','af_bella']),ja:new Set(['jf_alpha'])};
 const expect=(ok,message,errors)=>{if(!ok)errors.push(message);};
+
+// Derive these expectations from authored fields, not build-audio-source or its
+// morphology helper. A source rebuild must not silently drop a new category or
+// downgrade its required audio while still passing the publication validator.
+export async function validateVocabularyAudioCoverage(root,source){
+  const errors=[],expected=new Map();
+  async function readOptional(relative){
+    try{
+      const value=JSON.parse(await fs.readFile(path.join(root,relative),'utf8'));
+      if(!value||typeof value!=='object')throw new Error(`Invalid authored audio document ${relative}`);
+      return value;
+    }
+    catch(error){if(error.code==='ENOENT')return null;throw error;}
+  }
+  async function rejectOrphanTranslation(bank){
+    const translated=await readOptional(`data/i18n/ja/${bank}.json`);
+    expect(!translated||Object.keys(translated.entries??{}).length===0,`Orphan Japanese audio translation ${bank}`,errors);
+  }
+  function add(language,key,text,extra={}){
+    const id=`${language}:vocab:${key}`;
+    expect(typeof text==='string'&&text.trim(),`Invalid authored audio text ${id}`,errors);
+    expect(!expected.has(id),`Duplicate authored audio key ${id}`,errors);
+    expected.set(id,{text,...extra});
+  }
+  function sentences(id,field,text,entries){
+    expect(typeof text==='string'&&text.trim(),`Invalid authored audio field ${id}/${field}`,errors);
+    if(typeof text!=='string')return;
+    for(const [i,line] of splitSentences(text).entries())entries.push([`${id}/${field}/${i}`,line]);
+  }
+  async function pairedEntries(bank,english,japaneseFields=[]){
+    const japanese=(await readOptional(`data/i18n/ja/${bank}.json`))?.entries;
+    const translated=japanese&&typeof japanese==='object'&&!Array.isArray(japanese)?japanese:{};
+    const keys=english.map(([key])=>key).sort();
+    expect(JSON.stringify(Object.keys(translated).sort())===JSON.stringify(keys),`${bank} Japanese audio key set differs`,errors);
+    for(const [key,text] of english){add('en',key,text);add('ja',key,translated[key]);}
+    for(const {label,keys,text,exact=false} of japaneseFields){
+      const parts=keys.map(key=>translated[key]);
+      // Translation segments follow English sentence boundaries. Only spacing
+      // between those segments may vary; spaces inside a segment stay literal.
+      const escape=value=>value.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+      const matches=typeof text==='string'&&text.trim()&&parts.every(part=>typeof part==='string'&&part.trim())&&
+        (exact?parts.length===1&&parts[0]===text:new RegExp('^'+parts.map(part=>escape(part.trim())).join('\\s*')+'$').test(text.trim()));
+      expect(matches,`Authored Japanese audio text differs ${bank}:${label}`,errors);
+    }
+  }
+
+  const morphology=await readOptional('data/morphemes.json');
+  if(morphology){
+    expect(Array.isArray(morphology.entries)&&morphology.entries.length>0,'Empty or invalid authored morphemes',errors);
+    const formTranslations={};
+    for(const m of morphology.entries){
+      const id=`morph-${m.id}`;
+      for(const [i,form] of m.forms.entries()){
+        const key=`${id}/forms/${i}`;
+        const spelling=[...form.replace(/[^A-Za-z]/g,'')].map(letter=>letter.toUpperCase()+'.').join(' ');
+        add('en',key,form,{spoken:spelling});add('ja',key,m.ja);formTranslations[key]=m.ja;
+      }
+      add('ja',`${id}/meaning`,m.ja);
+      if(m.noteJa)add('ja',`${id}/note`,m.noteJa);
+    }
+    const translated=(await readOptional('data/i18n/ja/morphemes.json'))?.entries??{};
+    expect(JSON.stringify(Object.keys(translated).sort())===JSON.stringify(Object.keys(formTranslations).sort()),'morphemes Japanese audio key set differs',errors);
+    for(const [key,text] of Object.entries(formTranslations))
+      expect(translated[key]===text,`Morpheme Japanese meaning differs ${key}`,errors);
+  }else await rejectOrphanTranslation('morphemes');
+  const vocabulary=await readOptional('data/vocab.json')??[];
+  for(const word of vocabulary){
+    for(const [field,suffix] of [['partsNote','parts-note'],['partsTrap','parts-trap']])
+      if(word[field]?.ja)add('ja',`${word.id}/${suffix}`,word[field].ja);
+  }
+
+  const confusables=await readOptional('data/confusables.json');
+  if(confusables){
+    const english=[],japaneseFields=[];
+    function bilingualSentences(id,field,en,ja){
+      const start=english.length;sentences(id,field,en,english);
+      japaneseFields.push({label:`${id}/${field}`,keys:english.slice(start).map(([key])=>key),text:ja});
+    }
+    for(const group of confusables.groups)bilingualSentences(group.id,'difference',group.difference.en,group.difference.ja);
+    for(const word of Object.values(confusables.words))if(!word.wordId){
+      const key=`${word.id}/meaning`;english.push([key,word.word]);
+      japaneseFields.push({label:key,keys:[key],text:word.ja,exact:true});
+      bilingualSentences(word.id,'example',word.example,word.exampleJa);
+    }
+    for(const question of confusables.questions)bilingualSentences(question.id,'sentence',question.sentence,question.sentenceJa);
+    expect(english.length>0,'Empty authored confusables audio',errors);
+    await pairedEntries('confusables',english,japaneseFields);
+  }else await rejectOrphanTranslation('confusables');
+  const humor=await readOptional('data/vocab-humor.json');
+  if(humor){
+    const authored=Object.entries(humor.entries),keys=vocabulary.map(word=>`${word.id}/humor/0`).sort();
+    expect(authored.length>0&&JSON.stringify(authored.map(([key])=>key).sort())===JSON.stringify(keys),'Humor audio must cover every vocabulary sense exactly',errors);
+    await pairedEntries('vocab-humor',authored);
+  }else await rejectOrphanTranslation('vocab-humor');
+
+  const actual=new Map((source.units??[]).map(unit=>[token(unit),unit]));
+  for(const [id,wanted] of expected){
+    const unit=actual.get(id);
+    expect(unit?.text===wanted.text&&typeof wanted.text==='string',`Added source text/key changed ${id}`,errors);
+    expect(unit?.required===true&&unit?.nonSpoken!==true,`Added audio must be required ${id}`,errors);
+    if(wanted.spoken!==undefined)expect(unit?.spoken===wanted.spoken,`Morpheme spelling changed ${id}`,errors);
+  }
+  // Reserved keys identify stale additions even if their authored row was
+  // removed. Existing word/audio keys fall outside these reserved namespaces.
+  const addedKey=key=>/^(?:morph-|cg-|cf-|lex-conf-)/.test(key)||/\/(?:parts-note|parts-trap|humor)(?:\/|$)/.test(key);
+  for(const unit of source.units??[])if(addedKey(unit.key)&&!expected.has(token(unit)))
+    errors.push(`Unexpected added audio source ${token(unit)}`);
+  return errors;
+}
 
 // Only named publication reports, current manifest packs/audits and content-
 // addressed ASR batch evidence belong in the public audio metadata directory.
@@ -313,6 +423,7 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
   }
   const terms=JSON.parse(await fs.readFile(path.join(root,'data/i18n/ja/terms.json'))).entries;
   for(const [key,text] of Object.entries(terms))expect(units.get(`ja:terms:${key}`)?.text===text,`Japanese term changed ${key}`,errors);
+  errors.push(...await validateVocabularyAudioCoverage(root,source));
   const seen=new Set();
   for(const meta of index.packs){
     const id=`${meta.language}:${meta.bank}`;expect(!seen.has(id),`Duplicate audio pack ${id}`,errors);seen.add(id);

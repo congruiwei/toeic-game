@@ -1,5 +1,7 @@
 # 芽语岛 · TOEIC 学习养成
 
+词卡的新增词、构词家族、易混词分组、退役配对及 20 组三语趣句见[词卡内容清单](docs/VOCAB-CARDS.md)。
+
 [打开游戏](https://congruiwei.github.io/toeic-game/) · [音频复听](https://congruiwei.github.io/toeic-game/audio-review.html)
 
 英语预生成音频使用 Kokoro Heart、Puck、Bella，日语使用 Alpha，均由本地开源模型合成。保留[声音试听](https://congruiwei.github.io/toeic-game/audition.html)和[本地生成说明](docs/AUDIO-GENERATION.md)。
@@ -138,6 +140,7 @@ NODE_PATH=/tmp/island-browser-test/node_modules node tests/v6.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/shell-update.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/i18n-offline.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/options-offline.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/humor-offline.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/performance.cjs
 ~~~
 

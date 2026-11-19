@@ -1,0 +1,607 @@
+{
+  "version": 1,
+  "id": "78b799143d558ac823e30bc9461df57e85c49744560d19ca9656b6234c2f1ecd",
+  "language": "ja",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 21.0160625,
+  "elapsedSeconds": 3.506,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.4586875,
+      "sha256": "eb361a509c45134cb261b2632cafcc4b17670c4530eea9b7a941c125795bc454",
+      "src": "./audio/generated/ja/jf_alpha/63fcb3e2a246efebc78d384d1aa59855.m4a"
+    },
+    {
+      "offset": 7.0586875,
+      "end": 13.373375,
+      "sha256": "ea45241fe54f9422e4b7ace1b0eb3670d805aeeec7df3499684cb0a5b7b85619",
+      "src": "./audio/generated/ja/jf_alpha/14c49e8d6cdcc890d542a5b340353e8c.m4a"
+    },
+    {
+      "offset": 13.973374999999999,
+      "end": 20.4160625,
+      "sha256": "992997e479b28e15a23438fd0cbc99f880234f49eb83ed80ea63ba157d2c5ee7",
+      "src": "./audio/generated/ja/jf_alpha/d7313e0236584851d94d2d547b4c7f1c.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": "前",
+      "start": 0.0,
+      "end": 0.7,
+      "probability": 0.5369176268577576
+    },
+    {
+      "word": "任",
+      "start": 0.7,
+      "end": 0.9,
+      "probability": 0.7022973299026489
+    },
+    {
+      "word": "者",
+      "start": 0.9,
+      "end": 1.1,
+      "probability": 0.9932073950767517
+    },
+    {
+      "word": "は",
+      "start": 1.1,
+      "end": 1.28,
+      "probability": 0.9938470721244812
+    },
+    {
+      "word": "説",
+      "start": 1.28,
+      "end": 1.64,
+      "probability": 0.9092914760112762
+    },
+    {
+      "word": "明",
+      "start": 1.64,
+      "end": 1.92,
+      "probability": 0.9996652603149414
+    },
+    {
+      "word": "書",
+      "start": 1.92,
+      "end": 2.12,
+      "probability": 0.988010585308075
+    },
+    {
+      "word": "を",
+      "start": 2.12,
+      "end": 2.3,
+      "probability": 0.9950554370880127
+    },
+    {
+      "word": "残",
+      "start": 2.3,
+      "end": 2.44,
+      "probability": 0.9893065094947815
+    },
+    {
+      "word": "ら",
+      "start": 2.44,
+      "end": 2.62,
+      "probability": 0.9143035411834717
+    },
+    {
+      "word": "ず",
+      "start": 2.62,
+      "end": 2.76,
+      "probability": 0.9951034784317017
+    },
+    {
+      "word": "まず",
+      "start": 2.76,
+      "end": 2.98,
+      "probability": 0.8460916876792908
+    },
+    {
+      "word": "を",
+      "start": 2.98,
+      "end": 3.22,
+      "probability": 0.5089512467384338
+    },
+    {
+      "word": "読",
+      "start": 3.22,
+      "end": 3.36,
+      "probability": 0.9779059588909149
+    },
+    {
+      "word": "み",
+      "start": 3.36,
+      "end": 3.48,
+      "probability": 0.9976896047592163
+    },
+    {
+      "word": "ください",
+      "start": 3.48,
+      "end": 3.82,
+      "probability": 0.8024992346763611
+    },
+    {
+      "word": "と",
+      "start": 3.82,
+      "end": 4.1,
+      "probability": 0.879677951335907
+    },
+    {
+      "word": "書",
+      "start": 4.1,
+      "end": 4.3,
+      "probability": 0.875302791595459
+    },
+    {
+      "word": "いた",
+      "start": 4.3,
+      "end": 4.48,
+      "probability": 0.9808512926101685
+    },
+    {
+      "word": "引",
+      "start": 4.48,
+      "end": 4.62,
+      "probability": 0.9164214730262756
+    },
+    {
+      "word": "き",
+      "start": 4.62,
+      "end": 4.74,
+      "probability": 0.9283671975135803
+    },
+    {
+      "word": "出",
+      "start": 4.74,
+      "end": 4.82,
+      "probability": 0.993506908416748
+    },
+    {
+      "word": "し",
+      "start": 4.82,
+      "end": 4.96,
+      "probability": 0.9980954527854919
+    },
+    {
+      "word": "に",
+      "start": 4.96,
+      "end": 5.08,
+      "probability": 0.988871157169342
+    },
+    {
+      "word": "入",
+      "start": 5.08,
+      "end": 5.22,
+      "probability": 0.9620850086212158
+    },
+    {
+      "word": "れ",
+      "start": 5.22,
+      "end": 5.34,
+      "probability": 0.9909055233001709
+    },
+    {
+      "word": "鍵",
+      "start": 5.34,
+      "end": 5.54,
+      "probability": 0.9714776575565338
+    },
+    {
+      "word": "を",
+      "start": 5.54,
+      "end": 5.7,
+      "probability": 0.9000105857849121
+    },
+    {
+      "word": "か",
+      "start": 5.7,
+      "end": 5.82,
+      "probability": 0.5004330277442932
+    },
+    {
+      "word": "け",
+      "start": 5.82,
+      "end": 5.94,
+      "probability": 0.998559296131134
+    },
+    {
+      "word": "ました。",
+      "start": 5.94,
+      "end": 6.24,
+      "probability": 0.8462550640106201
+    },
+    {
+      "word": "採",
+      "start": 7.06,
+      "end": 7.38,
+      "probability": 0.6317960619926453
+    },
+    {
+      "word": "用",
+      "start": 7.38,
+      "end": 7.66,
+      "probability": 0.9911921620368958
+    },
+    {
+      "word": "担",
+      "start": 7.66,
+      "end": 7.94,
+      "probability": 0.9939435422420502
+    },
+    {
+      "word": "当",
+      "start": 7.94,
+      "end": 8.14,
+      "probability": 0.9962047934532166
+    },
+    {
+      "word": "に",
+      "start": 8.14,
+      "end": 8.34,
+      "probability": 0.9879117012023926
+    },
+    {
+      "word": "5",
+      "start": 8.34,
+      "end": 8.58,
+      "probability": 0.854254961013794
+    },
+    {
+      "word": "分",
+      "start": 8.58,
+      "end": 8.78,
+      "probability": 0.9939263463020325
+    },
+    {
+      "word": "後",
+      "start": 8.78,
+      "end": 8.94,
+      "probability": 0.9887921214103699
+    },
+    {
+      "word": "は",
+      "start": 8.94,
+      "end": 9.12,
+      "probability": 0.9978062510490417
+    },
+    {
+      "word": "ど",
+      "start": 9.12,
+      "end": 9.24,
+      "probability": 0.9054139852523804
+    },
+    {
+      "word": "こ",
+      "start": 9.24,
+      "end": 9.38,
+      "probability": 0.9954278469085693
+    },
+    {
+      "word": "に、",
+      "start": 9.38,
+      "end": 9.58,
+      "probability": 0.9939697980880737
+    },
+    {
+      "word": "と",
+      "start": 10.1,
+      "end": 10.24,
+      "probability": 0.4593384563922882
+    },
+    {
+      "word": "聞",
+      "start": 10.24,
+      "end": 10.38,
+      "probability": 0.9841575026512146
+    },
+    {
+      "word": "か",
+      "start": 10.38,
+      "end": 10.54,
+      "probability": 0.9980212450027466
+    },
+    {
+      "word": "れ",
+      "start": 10.54,
+      "end": 10.62,
+      "probability": 0.9971080422401428
+    },
+    {
+      "word": "次",
+      "start": 10.62,
+      "end": 10.8,
+      "probability": 0.9306992292404175
+    },
+    {
+      "word": "の",
+      "start": 10.8,
+      "end": 11.0,
+      "probability": 0.9997727274894714
+    },
+    {
+      "word": "面",
+      "start": 11.0,
+      "end": 11.16,
+      "probability": 0.8348695635795593
+    },
+    {
+      "word": "接",
+      "start": 11.16,
+      "end": 11.36,
+      "probability": 0.8616390824317932
+    },
+    {
+      "word": "です",
+      "start": 11.36,
+      "end": 11.62,
+      "probability": 0.8845393657684326
+    },
+    {
+      "word": "と",
+      "start": 11.62,
+      "end": 11.78,
+      "probability": 0.9826945662498474
+    },
+    {
+      "word": "は",
+      "start": 11.78,
+      "end": 11.94,
+      "probability": 0.9942662119865417
+    },
+    {
+      "word": "流",
+      "start": 11.94,
+      "end": 12.1,
+      "probability": 0.43072667717933655
+    },
+    {
+      "word": "石",
+      "start": 12.1,
+      "end": 12.36,
+      "probability": 0.8950097560882568
+    },
+    {
+      "word": "に",
+      "start": 12.36,
+      "end": 12.5,
+      "probability": 0.9847651720046997
+    },
+    {
+      "word": "言",
+      "start": 12.5,
+      "end": 12.62,
+      "probability": 0.9584690928459167
+    },
+    {
+      "word": "え",
+      "start": 12.62,
+      "end": 12.7,
+      "probability": 0.9989029169082642
+    },
+    {
+      "word": "な",
+      "start": 12.7,
+      "end": 12.82,
+      "probability": 0.9521259069442749
+    },
+    {
+      "word": "かった。",
+      "start": 12.82,
+      "end": 13.12,
+      "probability": 0.9930810332298279
+    },
+    {
+      "word": "面",
+      "start": 13.96,
+      "end": 14.24,
+      "probability": 0.31652718782424927
+    },
+    {
+      "word": "接",
+      "start": 14.24,
+      "end": 14.48,
+      "probability": 0.999053418636322
+    },
+    {
+      "word": "官",
+      "start": 14.48,
+      "end": 14.72,
+      "probability": 0.6420263648033142
+    },
+    {
+      "word": "に",
+      "start": 14.72,
+      "end": 14.92,
+      "probability": 0.9966354966163635
+    },
+    {
+      "word": "正",
+      "start": 14.92,
+      "end": 15.14,
+      "probability": 0.8191295862197876
+    },
+    {
+      "word": "直",
+      "start": 15.14,
+      "end": 15.38,
+      "probability": 0.971813976764679
+    },
+    {
+      "word": "に",
+      "start": 15.38,
+      "end": 15.56,
+      "probability": 0.9984240531921387
+    },
+    {
+      "word": "お願い",
+      "start": 15.56,
+      "end": 15.88,
+      "probability": 0.38938605785369873
+    },
+    {
+      "word": "します、",
+      "start": 15.88,
+      "end": 16.36,
+      "probability": 0.9366012215614319
+    },
+    {
+      "word": "と",
+      "start": 16.88,
+      "end": 17.0,
+      "probability": 0.9877697825431824
+    },
+    {
+      "word": "言",
+      "start": 17.0,
+      "end": 17.1,
+      "probability": 0.849465012550354
+    },
+    {
+      "word": "わ",
+      "start": 17.1,
+      "end": 17.24,
+      "probability": 0.9986842274665833
+    },
+    {
+      "word": "れた、",
+      "start": 17.24,
+      "end": 17.48,
+      "probability": 0.9928545355796814
+    },
+    {
+      "word": "直",
+      "start": 17.78,
+      "end": 17.88,
+      "probability": 0.8933098912239075
+    },
+    {
+      "word": "後",
+      "start": 17.88,
+      "end": 18.12,
+      "probability": 0.850795328617096
+    },
+    {
+      "word": "子",
+      "start": 18.12,
+      "end": 18.26,
+      "probability": 0.16358883678913116
+    },
+    {
+      "word": "子",
+      "start": 18.26,
+      "end": 18.38,
+      "probability": 0.22965171933174133
+    },
+    {
+      "word": "の",
+      "start": 18.38,
+      "end": 18.5,
+      "probability": 0.9969466328620911
+    },
+    {
+      "word": "コ",
+      "start": 18.5,
+      "end": 18.68,
+      "probability": 0.9472528696060181
+    },
+    {
+      "word": "ーヒ",
+      "start": 18.68,
+      "end": 18.9,
+      "probability": 0.9718948602676392
+    },
+    {
+      "word": "ー",
+      "start": 18.9,
+      "end": 19.0,
+      "probability": 0.9951139688491821
+    },
+    {
+      "word": "の",
+      "start": 19.0,
+      "end": 19.12,
+      "probability": 0.9976633787155151
+    },
+    {
+      "word": "感",
+      "start": 19.12,
+      "end": 19.3,
+      "probability": 0.8663721084594727
+    },
+    {
+      "word": "想",
+      "start": 19.3,
+      "end": 19.54,
+      "probability": 0.9922027587890625
+    },
+    {
+      "word": "を",
+      "start": 19.54,
+      "end": 19.68,
+      "probability": 0.9973914623260498
+    },
+    {
+      "word": "聞",
+      "start": 19.68,
+      "end": 19.8,
+      "probability": 0.9395468831062317
+    },
+    {
+      "word": "か",
+      "start": 19.8,
+      "end": 19.94,
+      "probability": 0.9974306225776672
+    },
+    {
+      "word": "れた。",
+      "start": 19.94,
+      "end": 20.12,
+      "probability": 0.9906750321388245
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.24,
+      "text": "前任者は説明書を残らずまずを読みくださいと書いた引き出しに入れ鍵をかけました。",
+      "avgLogprob": -0.17476699603806942,
+      "noSpeechProb": 0.01925797574222088
+    },
+    {
+      "start": 7.06,
+      "end": 13.12,
+      "text": "採用担当に5分後はどこに、と聞かれ次の面接ですとは流石に言えなかった。",
+      "avgLogprob": -0.17476699603806942,
+      "noSpeechProb": 0.01925797574222088
+    },
+    {
+      "start": 13.96,
+      "end": 20.12,
+      "text": "面接官に正直にお願いします、と言われた、直後子子のコーヒーの感想を聞かれた。",
+      "avgLogprob": -0.17476699603806942,
+      "noSpeechProb": 0.01925797574222088
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-52';
+const CACHE = 'toeic-island-shell-53';
 const files = [
   './',
   './index.html',
@@ -25,7 +25,7 @@ const files = [
   './js/state.js','./js/review-scheduler.js','./vendor/ts-fsrs/index.js',
   './js/tiles.js',
   './js/training.js',
-  './js/library.js','./js/confusables.js','./js/confusable-memory.js',
+  './js/library.js','./js/vocab-humor.js','./js/confusables.js','./js/confusable-memory.js',
   './js/practice.js',
   './data/vocab.json','./data/confusable-candidates.json',
   './data/part1.json',
@@ -119,6 +119,36 @@ function validConfusablePack(value,candidates=false) {
   return value.part2Traps.every(trap=>object(trap)&&id(trap.id)&&text(trap.option)&&text(trap.reasonZh)&&
     (!trap.groupId||(groups.has(trap.groupId)&&groups.get(trap.groupId).members.includes(trap.sourceWordId)&&
       groups.get(trap.groupId).members.includes(trap.distractorWordId))));
+}
+
+// Humor has three complete, appendable packs. Generic translations deliberately
+// retain their existing validation and cache policy.
+const humorPackPaths=new Set(['data/vocab-humor.json','data/i18n/zh/vocab-humor.json','data/i18n/ja/vocab-humor.json']
+  .map(path=>new URL(path,self.registration.scope).pathname));
+function validHumorPack(value,requiredKeys=[]) {
+  const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+  if(!object(value)||value.version!==1||!object(value.entries)||!Object.keys(value.entries).length)return false;
+  return Object.entries(value.entries).every(([key,text])=>/^[a-zA-Z0-9_-]+\/humor\/0$/.test(key)&&
+    typeof text==='string'&&text.trim().length>0)&&requiredKeys.every(key=>Object.hasOwn(value.entries,key));
+}
+async function updateHumorPack(request,shellCache) {
+  const cache=await caches.open('toeic-island-translations-v1'),required=new Set();
+  // Never replace a complete downloaded pack with a truncated successful response.
+  // New keys may be appended without changing the worker or a hard-coded count.
+  try {
+    const previous=await cache.match(request),value=previous&&await previous.json();
+    if(validHumorPack(value))Object.keys(value.entries).forEach(key=>required.add(key));
+  } catch {/* An unusable previous entry cannot authorize a new malformed pack. */}
+  try {
+    const bank=await shellCache.match(new URL('data/vocab.json',self.registration.scope));
+    const words=bank&&await bank.json();
+    if(Array.isArray(words))for(const word of words)if(typeof word?.id==='string')required.add(word.id+'/humor/0');
+  } catch {/* A downloaded humor pack still supplies its own coverage baseline. */}
+  const response=await updateBank(request,cache,true,value=>validHumorPack(value,[...required]));
+  // WebKit reports Response.error from a worker as a page error even when the
+  // optional loader catches fetch(). A regular failure keeps its retry UI usable.
+  return response.type==='error'?new Response('{"error":"humor-pack-unavailable"}',
+    {status:503,headers:{'Content-Type':'application/json'}}):response;
 }
 
 async function updateBank(request, cache, translation=false, validate=null) {
@@ -227,6 +257,7 @@ self.addEventListener('fetch', (event) => {
       if(request.url.startsWith(new URL('data/options/',self.registration.scope).href))return auditionResource(request,await caches.open('toeic-island-option-details-v1'),false);
       if(comparisonFiles.has(new URL(request.url).pathname))return comparisonResource(request,cache);
       if(auditionFiles.has(new URL(request.url).pathname))return auditionResource(request,cache);
+      if(humorPackPaths.has(new URL(request.url).pathname))return updateHumorPack(request,cache);
       if (request.url.startsWith(new URL('data/i18n/',self.registration.scope).href)) {
         return updateBank(request,await caches.open('toeic-island-translations-v1'),true);
       }
