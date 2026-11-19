@@ -1,0 +1,905 @@
+{
+  "source": {
+    "version": 1,
+    "model": "fixture",
+    "voices": {},
+    "units": [
+      {
+        "language": "ja",
+        "bank": "grammar",
+        "key": "j-one/sentence/0",
+        "text": "荷物を受け取ります。",
+        "voiceId": "jf_alpha",
+        "required": true
+      },
+      {
+        "language": "ja",
+        "bank": "grammar",
+        "key": "j-two/sentence/0",
+        "text": "箱が空です。",
+        "voiceId": "jf_alpha",
+        "required": true
+      },
+      {
+        "language": "en",
+        "bank": "grammar",
+        "key": "g/sentence/0",
+        "text": "She signed it.",
+        "voiceId": "af_heart",
+        "required": true
+      }
+    ]
+  },
+  "quality": {
+    "version": 1,
+    "records": {
+      "ja:grammar:j-one/sentence/0": {
+        "token": "ja:grammar:j-one/sentence/0",
+        "language": "ja",
+        "bank": "grammar",
+        "key": "j-one/sentence/0",
+        "baseline": {
+          "immutable": "ja:grammar:j-one/sentence/0"
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "system-fallback",
+          "method": "fixture original repair",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/ja/jf_alpha/e836278a3ed1a41ed905903c15700f7b.m4a",
+              "sha256": "e836278a3ed1a41ed905903c15700f7bd32146ccc1a21d10f486646cf46598aa",
+              "bytes": 117,
+              "duration": 1.0,
+              "decodedPeak": 0.5,
+              "language": "ja",
+              "voiceId": "jf_alpha",
+              "required": true,
+              "text": "荷物を受け取ります。",
+              "spoken": "荷物を受け取ります。",
+              "inputSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "phonemeSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "j-one/sentence/0",
+              "src": "./audio/generated/ja/jf_alpha/e836278a3ed1a41ed905903c15700f7b.m4a",
+              "sha256": "e836278a3ed1a41ed905903c15700f7bd32146ccc1a21d10f486646cf46598aa",
+              "voiceId": "jf_alpha",
+              "expected": "荷物を受け取ります。",
+              "spoken": "荷物を受け取ります。",
+              "recognized": "actual old fixture transcript",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "conditionOnPreviousText": false,
+                "prompt": null,
+                "vadFilter": false,
+                "packages": {
+                  "fixture": "1"
+                }
+              }
+            },
+            "archive": {
+              "published": false,
+              "sha256": "e836278a3ed1a41ed905903c15700f7bd32146ccc1a21d10f486646cf46598aa",
+              "bytes": 117,
+              "copyVerified": true
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a",
+              "sha256": "04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15",
+              "bytes": 113,
+              "duration": 1.0,
+              "decodedPeak": 0.5,
+              "language": "ja",
+              "voiceId": "jf_alpha",
+              "required": true,
+              "text": "荷物を受け取ります。",
+              "spoken": "荷物を受け取ります。",
+              "inputSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "phonemeSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "j-one/sentence/0",
+              "src": "./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a",
+              "sha256": "04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15",
+              "voiceId": "jf_alpha",
+              "expected": "荷物を受け取ります。",
+              "spoken": "荷物を受け取ります。",
+              "recognized": "actual old fixture transcript",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "conditionOnPreviousText": false,
+                "prompt": null,
+                "vadFilter": false,
+                "packages": {
+                  "fixture": "1"
+                }
+              }
+            },
+            "archive": {
+              "published": false,
+              "sha256": "04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15",
+              "bytes": 113,
+              "copyVerified": true
+            }
+          }
+        },
+        "manualKanaAttempts": [
+          {
+            "version": 1,
+            "method": "manually-authored-japanese-kana-v1",
+            "token": "ja:grammar:j-one/sentence/0",
+            "source": {
+              "language": "ja",
+              "bank": "grammar",
+              "key": "j-one/sentence/0",
+              "text": "荷物を受け取ります。",
+              "voiceId": "jf_alpha",
+              "required": true
+            },
+            "reading": "にもつを — うけとります。",
+            "readingsSha256": "43cc4789f1fcec41f61e15dd922138f213b3096e941d1878eb1b2bdad8ca79df",
+            "rendererSha256": "14112ad2bfb3f91af2265eabfec955fc74f903653c5928b207bdba75d7afa3ee",
+            "synthesisGeneration": {
+              "recipe": "fixture",
+              "modelSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+              "voicesSha256": "4444444444444444444444444444444444444444444444444444444444444444",
+              "packages": {
+                "test": "only"
+              },
+              "encoding": {
+                "codec": "aac"
+              }
+            },
+            "override": {
+              "spoken": "にもつを — うけとります。",
+              "phonemes": "fixture phones にもつを — うけとります。",
+              "reason": "Manually authored kana reading"
+            },
+            "inputFingerprintInput": "[{\"modelSha256\": \"3333333333333333333333333333333333333333333333333333333333333333\", \"packages\": {\"test\": \"only\"}, \"recipe\": \"fixture\", \"voicesSha256\": \"4444444444444444444444444444444444444444444444444444444444444444\"}, {\"codec\": \"aac\"}, \"jf_alpha\", \"\\u306b\\u3082\\u3064\\u3092 \\u2014 \\u3046\\u3051\\u3068\\u308a\\u307e\\u3059\\u3002\", \"fixture phones \\u306b\\u3082\\u3064\\u3092 \\u2014 \\u3046\\u3051\\u3068\\u308a\\u307e\\u3059\\u3002\"]",
+            "asrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3\", \"modelSha256\": \"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\", \"packages\": {\"fixture\": \"1\"}, \"prompt\": null, \"vadFilter\": false}, \"ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560\", \"ja\"]",
+            "rawASR": {
+              "generation": {
+                "model": "whisper-large-v3",
+                "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "conditionOnPreviousText": false,
+                "prompt": null,
+                "vadFilter": false,
+                "packages": {
+                  "fixture": "1"
+                }
+              },
+              "sha256": "ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560",
+              "fingerprint": "db33a045ebe5258d17270ca8b45681644329b4016fb61ff957ec27b31d99eaf2",
+              "recognized": "にもつを — うけとります。",
+              "segments": [
+                {
+                  "start": 0.0,
+                  "end": 0.8,
+                  "text": "にもつを — うけとります。"
+                }
+              ],
+              "elapsedSeconds": 0.1
+            },
+            "candidate": {
+              "clip": {
+                "src": "./audio/generated/ja/jf_alpha/ddc55ec18f53f132ff4a3eb2472c15d5.m4a",
+                "sha256": "ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560",
+                "bytes": 135,
+                "duration": 1.0,
+                "decodedPeak": 0.5,
+                "language": "ja",
+                "voiceId": "jf_alpha",
+                "required": true,
+                "text": "荷物を受け取ります。",
+                "spoken": "にもつを — うけとります。",
+                "inputSha256": "500e6cdaa281167fb7ea2e26c0d88277a10a1ab4f78d9dea80c29534e5a6c9be",
+                "phonemeSha256": "12d1438a990e92525462b3c33dbe1a4daa8ad9a732355ed18813c2bcc137f5f0",
+                "synthesisSpeed": 1.0,
+                "asrStatus": "matched"
+              },
+              "asr": {
+                "key": "j-one/sentence/0",
+                "src": "./audio/generated/ja/jf_alpha/ddc55ec18f53f132ff4a3eb2472c15d5.m4a",
+                "sha256": "ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560",
+                "voiceId": "jf_alpha",
+                "expected": "荷物を受け取ります。",
+                "spoken": "にもつを — うけとります。",
+                "recognized": "にもつを — うけとります。",
+                "segments": [
+                  {
+                    "start": 0.0,
+                    "end": 0.8,
+                    "text": "にもつを — うけとります。"
+                  }
+                ],
+                "recognitionGeneration": {
+                  "model": "whisper-large-v3",
+                  "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+                  "device": "cpu",
+                  "computeType": "int8",
+                  "beamSize": 5,
+                  "conditionOnPreviousText": false,
+                  "prompt": null,
+                  "vadFilter": false,
+                  "packages": {
+                    "fixture": "1"
+                  }
+                },
+                "fingerprint": "db33a045ebe5258d17270ca8b45681644329b4016fb61ff957ec27b31d99eaf2",
+                "recognitionMethod": "individual-beam5",
+                "singleFileVerification": true,
+                "status": "matched",
+                "comparison": {
+                  "ruleVersion": "strict-audio-equivalence-1",
+                  "equivalent": true,
+                  "expectedSpoken": "にもつを — うけとります。",
+                  "recognized": "にもつを — うけとります。",
+                  "language": "ja",
+                  "reasons": [
+                    "fixture-exact"
+                  ],
+                  "proofExpected": "にもつを — うけとります。",
+                  "proofRecognized": "にもつを — うけとります。",
+                  "provenance": {
+                    "sourceTextSha256": "576f8902a4112dcf10f0ecf51ecf64f288b8958e937da2b7955caee0f34603ec",
+                    "ruleFileSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "normalizerFileSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "comparison": "manual-kana-asr-only-1",
+                    "normalizer": "manual-kana-asr-only-1",
+                    "phonemeOverride": true,
+                    "articlePolicyEnabled": false
+                  },
+                  "readingTrace": {
+                    "expected": [],
+                    "recognized": []
+                  },
+                  "audioSha256": "ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560"
+                },
+                "recognitionAttempts": 1
+              }
+            },
+            "before": {
+              "fallback": {
+                "playback": "system",
+                "language": "ja",
+                "text": "荷物を受け取ります。",
+                "voiceId": "jf_alpha",
+                "reason": "unresolved-after-strong-asr-retry",
+                "auditedSha256": "04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15"
+              },
+              "audit": {
+                "key": "j-one/sentence/0",
+                "src": "./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a",
+                "sha256": "04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15",
+                "voiceId": "jf_alpha",
+                "expected": "荷物を受け取ります。",
+                "spoken": "荷物を受け取ります。",
+                "recognized": "actual old fixture transcript",
+                "status": "review",
+                "recognitionMethod": "individual-beam5",
+                "singleFileVerification": true,
+                "recognitionGeneration": {
+                  "model": "whisper-large-v3-turbo",
+                  "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                  "device": "cpu",
+                  "computeType": "int8",
+                  "beamSize": 5,
+                  "conditionOnPreviousText": false,
+                  "prompt": null,
+                  "vadFilter": false,
+                  "packages": {
+                    "fixture": "1"
+                  }
+                }
+              },
+              "repairCanonical": "{\"candidate\":{\"asr\":{\"expected\":\"荷物を受け取ります。\",\"key\":\"j-one/sentence/0\",\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3-turbo\",\"modelSha256\":\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"actual old fixture transcript\",\"sha256\":\"04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15\",\"singleFileVerification\":true,\"spoken\":\"荷物を受け取ります。\",\"src\":\"./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a\",\"status\":\"review\",\"voiceId\":\"jf_alpha\"},\"clip\":{\"asrStatus\":\"review\",\"bytes\":113,\"decodedPeak\":0.5,\"duration\":1.0,\"inputSha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"language\":\"ja\",\"phonemeSha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"required\":true,\"sha256\":\"04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15\",\"spoken\":\"荷物を受け取ります。\",\"src\":\"./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a\",\"text\":\"荷物を受け取ります。\",\"voiceId\":\"jf_alpha\"}},\"complete\":true,\"disposition\":\"system-fallback\",\"method\":\"fixture original repair\",\"original\":{\"asr\":{\"expected\":\"荷物を受け取ります。\",\"key\":\"j-one/sentence/0\",\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3-turbo\",\"modelSha256\":\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"actual old fixture transcript\",\"sha256\":\"e836278a3ed1a41ed905903c15700f7bd32146ccc1a21d10f486646cf46598aa\",\"singleFileVerification\":true,\"spoken\":\"荷物を受け取ります。\",\"src\":\"./audio/generated/ja/jf_alpha/e836278a3ed1a41ed905903c15700f7b.m4a\",\"status\":\"review\",\"voiceId\":\"jf_alpha\"},\"clip\":{\"asrStatus\":\"review\",\"bytes\":117,\"decodedPeak\":0.5,\"duration\":1.0,\"inputSha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"language\":\"ja\",\"phonemeSha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"required\":true,\"sha256\":\"e836278a3ed1a41ed905903c15700f7bd32146ccc1a21d10f486646cf46598aa\",\"spoken\":\"荷物を受け取ります。\",\"src\":\"./audio/generated/ja/jf_alpha/e836278a3ed1a41ed905903c15700f7b.m4a\",\"text\":\"荷物を受け取ります。\",\"voiceId\":\"jf_alpha\"}}}",
+              "repairSha256": "d424c986181561a9e18a2ebcd04d9772b51d9a9017f947cd97684dfe9e386946"
+            },
+            "disposition": "recorded-matched",
+            "recognitionAttempted": true,
+            "originalAudioReplaced": true,
+            "proofCanonical": "{\"asrFingerprintInput\":\"[{\\\"beamSize\\\": 5, \\\"computeType\\\": \\\"int8\\\", \\\"conditionOnPreviousText\\\": false, \\\"device\\\": \\\"cpu\\\", \\\"model\\\": \\\"whisper-large-v3\\\", \\\"modelSha256\\\": \\\"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\\\", \\\"packages\\\": {\\\"fixture\\\": \\\"1\\\"}, \\\"prompt\\\": null, \\\"vadFilter\\\": false}, \\\"ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560\\\", \\\"ja\\\"]\",\"before\":{\"audit\":{\"expected\":\"荷物を受け取ります。\",\"key\":\"j-one/sentence/0\",\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3-turbo\",\"modelSha256\":\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"actual old fixture transcript\",\"sha256\":\"04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15\",\"singleFileVerification\":true,\"spoken\":\"荷物を受け取ります。\",\"src\":\"./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a\",\"status\":\"review\",\"voiceId\":\"jf_alpha\"},\"fallback\":{\"auditedSha256\":\"04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15\",\"language\":\"ja\",\"playback\":\"system\",\"reason\":\"unresolved-after-strong-asr-retry\",\"text\":\"荷物を受け取ります。\",\"voiceId\":\"jf_alpha\"},\"repairCanonical\":\"{\\\"candidate\\\":{\\\"asr\\\":{\\\"expected\\\":\\\"荷物を受け取ります。\\\",\\\"key\\\":\\\"j-one/sentence/0\\\",\\\"recognitionGeneration\\\":{\\\"beamSize\\\":5,\\\"computeType\\\":\\\"int8\\\",\\\"conditionOnPreviousText\\\":false,\\\"device\\\":\\\"cpu\\\",\\\"model\\\":\\\"whisper-large-v3-turbo\\\",\\\"modelSha256\\\":\\\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\\\",\\\"packages\\\":{\\\"fixture\\\":\\\"1\\\"},\\\"prompt\\\":null,\\\"vadFilter\\\":false},\\\"recognitionMethod\\\":\\\"individual-beam5\\\",\\\"recognized\\\":\\\"actual old fixture transcript\\\",\\\"sha256\\\":\\\"04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15\\\",\\\"singleFileVerification\\\":true,\\\"spoken\\\":\\\"荷物を受け取ります。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a\\\",\\\"status\\\":\\\"review\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"},\\\"clip\\\":{\\\"asrStatus\\\":\\\"review\\\",\\\"bytes\\\":113,\\\"decodedPeak\\\":0.5,\\\"duration\\\":1.0,\\\"inputSha256\\\":\\\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\\",\\\"language\\\":\\\"ja\\\",\\\"phonemeSha256\\\":\\\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\\\",\\\"required\\\":true,\\\"sha256\\\":\\\"04da53b1541574888d084ff146f4d887114869e4ad4af2f927d2c9189d0fbd15\\\",\\\"spoken\\\":\\\"荷物を受け取ります。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/04da53b1541574888d084ff146f4d887.m4a\\\",\\\"text\\\":\\\"荷物を受け取ります。\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"}},\\\"complete\\\":true,\\\"disposition\\\":\\\"system-fallback\\\",\\\"method\\\":\\\"fixture original repair\\\",\\\"original\\\":{\\\"asr\\\":{\\\"expected\\\":\\\"荷物を受け取ります。\\\",\\\"key\\\":\\\"j-one/sentence/0\\\",\\\"recognitionGeneration\\\":{\\\"beamSize\\\":5,\\\"computeType\\\":\\\"int8\\\",\\\"conditionOnPreviousText\\\":false,\\\"device\\\":\\\"cpu\\\",\\\"model\\\":\\\"whisper-large-v3-turbo\\\",\\\"modelSha256\\\":\\\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\\\",\\\"packages\\\":{\\\"fixture\\\":\\\"1\\\"},\\\"prompt\\\":null,\\\"vadFilter\\\":false},\\\"recognitionMethod\\\":\\\"individual-beam5\\\",\\\"recognized\\\":\\\"actual old fixture transcript\\\",\\\"sha256\\\":\\\"e836278a3ed1a41ed905903c15700f7bd32146ccc1a21d10f486646cf46598aa\\\",\\\"singleFileVerification\\\":true,\\\"spoken\\\":\\\"荷物を受け取ります。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/e836278a3ed1a41ed905903c15700f7b.m4a\\\",\\\"status\\\":\\\"review\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"},\\\"clip\\\":{\\\"asrStatus\\\":\\\"review\\\",\\\"bytes\\\":117,\\\"decodedPeak\\\":0.5,\\\"duration\\\":1.0,\\\"inputSha256\\\":\\\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\\",\\\"language\\\":\\\"ja\\\",\\\"phonemeSha256\\\":\\\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\\\",\\\"required\\\":true,\\\"sha256\\\":\\\"e836278a3ed1a41ed905903c15700f7bd32146ccc1a21d10f486646cf46598aa\\\",\\\"spoken\\\":\\\"荷物を受け取ります。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/e836278a3ed1a41ed905903c15700f7b.m4a\\\",\\\"text\\\":\\\"荷物を受け取ります。\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"}}}\",\"repairSha256\":\"d424c986181561a9e18a2ebcd04d9772b51d9a9017f947cd97684dfe9e386946\"},\"candidate\":{\"asr\":{\"comparison\":{\"audioSha256\":\"ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560\",\"equivalent\":true,\"expectedSpoken\":\"にもつを — うけとります。\",\"language\":\"ja\",\"proofExpected\":\"にもつを — うけとります。\",\"proofRecognized\":\"にもつを — うけとります。\",\"provenance\":{\"articlePolicyEnabled\":false,\"comparison\":\"manual-kana-asr-only-1\",\"normalizer\":\"manual-kana-asr-only-1\",\"normalizerFileSha256\":\"1111111111111111111111111111111111111111111111111111111111111111\",\"phonemeOverride\":true,\"ruleFileSha256\":\"1111111111111111111111111111111111111111111111111111111111111111\",\"sourceTextSha256\":\"576f8902a4112dcf10f0ecf51ecf64f288b8958e937da2b7955caee0f34603ec\"},\"readingTrace\":{\"expected\":[],\"recognized\":[]},\"reasons\":[\"fixture-exact\"],\"recognized\":\"にもつを — うけとります。\",\"ruleVersion\":\"strict-audio-equivalence-1\"},\"expected\":\"荷物を受け取ります。\",\"fingerprint\":\"db33a045ebe5258d17270ca8b45681644329b4016fb61ff957ec27b31d99eaf2\",\"key\":\"j-one/sentence/0\",\"recognitionAttempts\":1,\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3\",\"modelSha256\":\"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"にもつを — うけとります。\",\"segments\":[{\"end\":0.8,\"start\":0.0,\"text\":\"にもつを — うけとります。\"}],\"sha256\":\"ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560\",\"singleFileVerification\":true,\"spoken\":\"にもつを — うけとります。\",\"src\":\"./audio/generated/ja/jf_alpha/ddc55ec18f53f132ff4a3eb2472c15d5.m4a\",\"status\":\"matched\",\"voiceId\":\"jf_alpha\"},\"clip\":{\"asrStatus\":\"matched\",\"bytes\":135,\"decodedPeak\":0.5,\"duration\":1.0,\"inputSha256\":\"500e6cdaa281167fb7ea2e26c0d88277a10a1ab4f78d9dea80c29534e5a6c9be\",\"language\":\"ja\",\"phonemeSha256\":\"12d1438a990e92525462b3c33dbe1a4daa8ad9a732355ed18813c2bcc137f5f0\",\"required\":true,\"sha256\":\"ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560\",\"spoken\":\"にもつを — うけとります。\",\"src\":\"./audio/generated/ja/jf_alpha/ddc55ec18f53f132ff4a3eb2472c15d5.m4a\",\"synthesisSpeed\":1.0,\"text\":\"荷物を受け取ります。\",\"voiceId\":\"jf_alpha\"}},\"disposition\":\"recorded-matched\",\"inputFingerprintInput\":\"[{\\\"modelSha256\\\": \\\"3333333333333333333333333333333333333333333333333333333333333333\\\", \\\"packages\\\": {\\\"test\\\": \\\"only\\\"}, \\\"recipe\\\": \\\"fixture\\\", \\\"voicesSha256\\\": \\\"4444444444444444444444444444444444444444444444444444444444444444\\\"}, {\\\"codec\\\": \\\"aac\\\"}, \\\"jf_alpha\\\", \\\"\\\\u306b\\\\u3082\\\\u3064\\\\u3092 \\\\u2014 \\\\u3046\\\\u3051\\\\u3068\\\\u308a\\\\u307e\\\\u3059\\\\u3002\\\", \\\"fixture phones \\\\u306b\\\\u3082\\\\u3064\\\\u3092 \\\\u2014 \\\\u3046\\\\u3051\\\\u3068\\\\u308a\\\\u307e\\\\u3059\\\\u3002\\\"]\",\"method\":\"manually-authored-japanese-kana-v1\",\"originalAudioReplaced\":true,\"override\":{\"phonemes\":\"fixture phones にもつを — うけとります。\",\"reason\":\"Manually authored kana reading\",\"spoken\":\"にもつを — うけとります。\"},\"rawASR\":{\"elapsedSeconds\":0.1,\"fingerprint\":\"db33a045ebe5258d17270ca8b45681644329b4016fb61ff957ec27b31d99eaf2\",\"generation\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3\",\"modelSha256\":\"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognized\":\"にもつを — うけとります。\",\"segments\":[{\"end\":0.8,\"start\":0.0,\"text\":\"にもつを — うけとります。\"}],\"sha256\":\"ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560\"},\"reading\":\"にもつを — うけとります。\",\"readingsSha256\":\"43cc4789f1fcec41f61e15dd922138f213b3096e941d1878eb1b2bdad8ca79df\",\"recognitionAttempted\":true,\"rendererSha256\":\"14112ad2bfb3f91af2265eabfec955fc74f903653c5928b207bdba75d7afa3ee\",\"source\":{\"bank\":\"grammar\",\"key\":\"j-one/sentence/0\",\"language\":\"ja\",\"required\":true,\"text\":\"荷物を受け取ります。\",\"voiceId\":\"jf_alpha\"},\"synthesisGeneration\":{\"encoding\":{\"codec\":\"aac\"},\"modelSha256\":\"3333333333333333333333333333333333333333333333333333333333333333\",\"packages\":{\"test\":\"only\"},\"recipe\":\"fixture\",\"voicesSha256\":\"4444444444444444444444444444444444444444444444444444444444444444\"},\"token\":\"ja:grammar:j-one/sentence/0\",\"version\":1}",
+            "id": "95fec0f87693093484df7d7e6cbce1063607513c91b5db055566716c9126d7a0"
+          }
+        ]
+      },
+      "ja:grammar:j-two/sentence/0": {
+        "token": "ja:grammar:j-two/sentence/0",
+        "language": "ja",
+        "bank": "grammar",
+        "key": "j-two/sentence/0",
+        "baseline": {
+          "immutable": "ja:grammar:j-two/sentence/0"
+        },
+        "repair": {
+          "complete": true,
+          "disposition": "system-fallback",
+          "method": "fixture original repair",
+          "original": {
+            "clip": {
+              "src": "./audio/generated/ja/jf_alpha/7a42d3ae8db51e954b377f304873517c.m4a",
+              "sha256": "7a42d3ae8db51e954b377f304873517c60cf646c8b147b63bf644dbb88d3c6eb",
+              "bytes": 117,
+              "duration": 1.0,
+              "decodedPeak": 0.5,
+              "language": "ja",
+              "voiceId": "jf_alpha",
+              "required": true,
+              "text": "箱が空です。",
+              "spoken": "箱が空です。",
+              "inputSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "phonemeSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "j-two/sentence/0",
+              "src": "./audio/generated/ja/jf_alpha/7a42d3ae8db51e954b377f304873517c.m4a",
+              "sha256": "7a42d3ae8db51e954b377f304873517c60cf646c8b147b63bf644dbb88d3c6eb",
+              "voiceId": "jf_alpha",
+              "expected": "箱が空です。",
+              "spoken": "箱が空です。",
+              "recognized": "actual old fixture transcript",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "conditionOnPreviousText": false,
+                "prompt": null,
+                "vadFilter": false,
+                "packages": {
+                  "fixture": "1"
+                }
+              }
+            },
+            "archive": {
+              "published": false,
+              "sha256": "7a42d3ae8db51e954b377f304873517c60cf646c8b147b63bf644dbb88d3c6eb",
+              "bytes": 117,
+              "copyVerified": true
+            }
+          },
+          "candidate": {
+            "clip": {
+              "src": "./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a",
+              "sha256": "c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb",
+              "bytes": 113,
+              "duration": 1.0,
+              "decodedPeak": 0.5,
+              "language": "ja",
+              "voiceId": "jf_alpha",
+              "required": true,
+              "text": "箱が空です。",
+              "spoken": "箱が空です。",
+              "inputSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "phonemeSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+              "asrStatus": "review"
+            },
+            "asr": {
+              "key": "j-two/sentence/0",
+              "src": "./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a",
+              "sha256": "c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb",
+              "voiceId": "jf_alpha",
+              "expected": "箱が空です。",
+              "spoken": "箱が空です。",
+              "recognized": "actual old fixture transcript",
+              "status": "review",
+              "recognitionMethod": "individual-beam5",
+              "singleFileVerification": true,
+              "recognitionGeneration": {
+                "model": "whisper-large-v3-turbo",
+                "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "conditionOnPreviousText": false,
+                "prompt": null,
+                "vadFilter": false,
+                "packages": {
+                  "fixture": "1"
+                }
+              }
+            },
+            "archive": {
+              "published": false,
+              "sha256": "c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb",
+              "bytes": 113,
+              "copyVerified": true
+            }
+          }
+        },
+        "manualKanaAttempts": [
+          {
+            "version": 1,
+            "method": "manually-authored-japanese-kana-v1",
+            "token": "ja:grammar:j-two/sentence/0",
+            "source": {
+              "language": "ja",
+              "bank": "grammar",
+              "key": "j-two/sentence/0",
+              "text": "箱が空です。",
+              "voiceId": "jf_alpha",
+              "required": true
+            },
+            "reading": "はこが からです。",
+            "readingsSha256": "43cc4789f1fcec41f61e15dd922138f213b3096e941d1878eb1b2bdad8ca79df",
+            "rendererSha256": "14112ad2bfb3f91af2265eabfec955fc74f903653c5928b207bdba75d7afa3ee",
+            "synthesisGeneration": {
+              "recipe": "fixture",
+              "modelSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+              "voicesSha256": "4444444444444444444444444444444444444444444444444444444444444444",
+              "packages": {
+                "test": "only"
+              },
+              "encoding": {
+                "codec": "aac"
+              }
+            },
+            "override": {
+              "spoken": "はこが からです。",
+              "phonemes": "fixture phones はこが からです。",
+              "reason": "Manually authored kana reading"
+            },
+            "inputFingerprintInput": "[{\"modelSha256\": \"3333333333333333333333333333333333333333333333333333333333333333\", \"packages\": {\"test\": \"only\"}, \"recipe\": \"fixture\", \"voicesSha256\": \"4444444444444444444444444444444444444444444444444444444444444444\"}, {\"codec\": \"aac\"}, \"jf_alpha\", \"\\u306f\\u3053\\u304c \\u304b\\u3089\\u3067\\u3059\\u3002\", \"fixture phones \\u306f\\u3053\\u304c \\u304b\\u3089\\u3067\\u3059\\u3002\"]",
+            "asrFingerprintInput": "[{\"beamSize\": 5, \"computeType\": \"int8\", \"conditionOnPreviousText\": false, \"device\": \"cpu\", \"model\": \"whisper-large-v3\", \"modelSha256\": \"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\", \"packages\": {\"fixture\": \"1\"}, \"prompt\": null, \"vadFilter\": false}, \"c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b\", \"ja\"]",
+            "rawASR": {
+              "generation": {
+                "model": "whisper-large-v3",
+                "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+                "device": "cpu",
+                "computeType": "int8",
+                "beamSize": 5,
+                "conditionOnPreviousText": false,
+                "prompt": null,
+                "vadFilter": false,
+                "packages": {
+                  "fixture": "1"
+                }
+              },
+              "sha256": "c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b",
+              "fingerprint": "cab0c306155bfbeb8d0ac67a5133890f73395cfbcfba5e2ad15fb33d98164ff3",
+              "recognized": "",
+              "segments": [],
+              "elapsedSeconds": 0.1
+            },
+            "candidate": {
+              "clip": {
+                "src": "./audio/generated/ja/jf_alpha/c39d2435f2ee8a46a8052f2915d1075d.m4a",
+                "sha256": "c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b",
+                "bytes": 135,
+                "duration": 1.0,
+                "decodedPeak": 0.5,
+                "language": "ja",
+                "voiceId": "jf_alpha",
+                "required": true,
+                "text": "箱が空です。",
+                "spoken": "はこが からです。",
+                "inputSha256": "16d3930c5a7065a69620adabd2358c2487c1c0d703dd3e131602be9dbb732334",
+                "phonemeSha256": "6ebae9ef6cccd564a145b60b62566f8a501f73d8ba38ad15e5d31e617b2ab478",
+                "synthesisSpeed": 1.0,
+                "asrStatus": "error"
+              },
+              "asr": {
+                "key": "j-two/sentence/0",
+                "src": "./audio/generated/ja/jf_alpha/c39d2435f2ee8a46a8052f2915d1075d.m4a",
+                "sha256": "c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b",
+                "voiceId": "jf_alpha",
+                "expected": "箱が空です。",
+                "spoken": "はこが からです。",
+                "recognized": "",
+                "segments": [],
+                "recognitionGeneration": {
+                  "model": "whisper-large-v3",
+                  "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+                  "device": "cpu",
+                  "computeType": "int8",
+                  "beamSize": 5,
+                  "conditionOnPreviousText": false,
+                  "prompt": null,
+                  "vadFilter": false,
+                  "packages": {
+                    "fixture": "1"
+                  }
+                },
+                "fingerprint": "cab0c306155bfbeb8d0ac67a5133890f73395cfbcfba5e2ad15fb33d98164ff3",
+                "recognitionMethod": "individual-beam5",
+                "singleFileVerification": true,
+                "status": "error",
+                "comparison": {
+                  "ruleVersion": "strict-audio-equivalence-1",
+                  "equivalent": false,
+                  "expectedSpoken": "はこが からです。",
+                  "recognized": "",
+                  "language": "ja",
+                  "reasons": [
+                    "fixture-mismatch"
+                  ],
+                  "proofExpected": null,
+                  "proofRecognized": null,
+                  "provenance": {
+                    "sourceTextSha256": "7eab6b0be6f6a88cd74da6cfbf28d77f1b1a51d69a0b8b0d6a5d9ea9025a1fa9",
+                    "ruleFileSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "normalizerFileSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                    "comparison": "manual-kana-asr-only-1",
+                    "normalizer": "manual-kana-asr-only-1",
+                    "phonemeOverride": true,
+                    "articlePolicyEnabled": false
+                  },
+                  "readingTrace": {
+                    "expected": [],
+                    "recognized": []
+                  },
+                  "audioSha256": "c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b"
+                },
+                "recognitionAttempts": 1
+              }
+            },
+            "before": {
+              "fallback": {
+                "playback": "system",
+                "language": "ja",
+                "text": "箱が空です。",
+                "voiceId": "jf_alpha",
+                "reason": "unresolved-after-strong-asr-retry",
+                "auditedSha256": "c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb"
+              },
+              "audit": {
+                "key": "j-two/sentence/0",
+                "src": "./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a",
+                "sha256": "c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb",
+                "voiceId": "jf_alpha",
+                "expected": "箱が空です。",
+                "spoken": "箱が空です。",
+                "recognized": "actual old fixture transcript",
+                "status": "review",
+                "recognitionMethod": "individual-beam5",
+                "singleFileVerification": true,
+                "recognitionGeneration": {
+                  "model": "whisper-large-v3-turbo",
+                  "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+                  "device": "cpu",
+                  "computeType": "int8",
+                  "beamSize": 5,
+                  "conditionOnPreviousText": false,
+                  "prompt": null,
+                  "vadFilter": false,
+                  "packages": {
+                    "fixture": "1"
+                  }
+                }
+              },
+              "repairCanonical": "{\"candidate\":{\"asr\":{\"expected\":\"箱が空です。\",\"key\":\"j-two/sentence/0\",\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3-turbo\",\"modelSha256\":\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"actual old fixture transcript\",\"sha256\":\"c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb\",\"singleFileVerification\":true,\"spoken\":\"箱が空です。\",\"src\":\"./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a\",\"status\":\"review\",\"voiceId\":\"jf_alpha\"},\"clip\":{\"asrStatus\":\"review\",\"bytes\":113,\"decodedPeak\":0.5,\"duration\":1.0,\"inputSha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"language\":\"ja\",\"phonemeSha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"required\":true,\"sha256\":\"c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb\",\"spoken\":\"箱が空です。\",\"src\":\"./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a\",\"text\":\"箱が空です。\",\"voiceId\":\"jf_alpha\"}},\"complete\":true,\"disposition\":\"system-fallback\",\"method\":\"fixture original repair\",\"original\":{\"asr\":{\"expected\":\"箱が空です。\",\"key\":\"j-two/sentence/0\",\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3-turbo\",\"modelSha256\":\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"actual old fixture transcript\",\"sha256\":\"7a42d3ae8db51e954b377f304873517c60cf646c8b147b63bf644dbb88d3c6eb\",\"singleFileVerification\":true,\"spoken\":\"箱が空です。\",\"src\":\"./audio/generated/ja/jf_alpha/7a42d3ae8db51e954b377f304873517c.m4a\",\"status\":\"review\",\"voiceId\":\"jf_alpha\"},\"clip\":{\"asrStatus\":\"review\",\"bytes\":117,\"decodedPeak\":0.5,\"duration\":1.0,\"inputSha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"language\":\"ja\",\"phonemeSha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"required\":true,\"sha256\":\"7a42d3ae8db51e954b377f304873517c60cf646c8b147b63bf644dbb88d3c6eb\",\"spoken\":\"箱が空です。\",\"src\":\"./audio/generated/ja/jf_alpha/7a42d3ae8db51e954b377f304873517c.m4a\",\"text\":\"箱が空です。\",\"voiceId\":\"jf_alpha\"}}}",
+              "repairSha256": "08a30eb35b2476be5880148f5917aebb97daeff18a45a5d1f64250a49c474a04"
+            },
+            "disposition": "system-fallback",
+            "recognitionAttempted": true,
+            "originalAudioReplaced": false,
+            "proofCanonical": "{\"asrFingerprintInput\":\"[{\\\"beamSize\\\": 5, \\\"computeType\\\": \\\"int8\\\", \\\"conditionOnPreviousText\\\": false, \\\"device\\\": \\\"cpu\\\", \\\"model\\\": \\\"whisper-large-v3\\\", \\\"modelSha256\\\": \\\"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\\\", \\\"packages\\\": {\\\"fixture\\\": \\\"1\\\"}, \\\"prompt\\\": null, \\\"vadFilter\\\": false}, \\\"c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b\\\", \\\"ja\\\"]\",\"before\":{\"audit\":{\"expected\":\"箱が空です。\",\"key\":\"j-two/sentence/0\",\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3-turbo\",\"modelSha256\":\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"actual old fixture transcript\",\"sha256\":\"c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb\",\"singleFileVerification\":true,\"spoken\":\"箱が空です。\",\"src\":\"./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a\",\"status\":\"review\",\"voiceId\":\"jf_alpha\"},\"fallback\":{\"auditedSha256\":\"c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb\",\"language\":\"ja\",\"playback\":\"system\",\"reason\":\"unresolved-after-strong-asr-retry\",\"text\":\"箱が空です。\",\"voiceId\":\"jf_alpha\"},\"repairCanonical\":\"{\\\"candidate\\\":{\\\"asr\\\":{\\\"expected\\\":\\\"箱が空です。\\\",\\\"key\\\":\\\"j-two/sentence/0\\\",\\\"recognitionGeneration\\\":{\\\"beamSize\\\":5,\\\"computeType\\\":\\\"int8\\\",\\\"conditionOnPreviousText\\\":false,\\\"device\\\":\\\"cpu\\\",\\\"model\\\":\\\"whisper-large-v3-turbo\\\",\\\"modelSha256\\\":\\\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\\\",\\\"packages\\\":{\\\"fixture\\\":\\\"1\\\"},\\\"prompt\\\":null,\\\"vadFilter\\\":false},\\\"recognitionMethod\\\":\\\"individual-beam5\\\",\\\"recognized\\\":\\\"actual old fixture transcript\\\",\\\"sha256\\\":\\\"c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb\\\",\\\"singleFileVerification\\\":true,\\\"spoken\\\":\\\"箱が空です。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a\\\",\\\"status\\\":\\\"review\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"},\\\"clip\\\":{\\\"asrStatus\\\":\\\"review\\\",\\\"bytes\\\":113,\\\"decodedPeak\\\":0.5,\\\"duration\\\":1.0,\\\"inputSha256\\\":\\\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\\",\\\"language\\\":\\\"ja\\\",\\\"phonemeSha256\\\":\\\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\\\",\\\"required\\\":true,\\\"sha256\\\":\\\"c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb\\\",\\\"spoken\\\":\\\"箱が空です。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a\\\",\\\"text\\\":\\\"箱が空です。\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"}},\\\"complete\\\":true,\\\"disposition\\\":\\\"system-fallback\\\",\\\"method\\\":\\\"fixture original repair\\\",\\\"original\\\":{\\\"asr\\\":{\\\"expected\\\":\\\"箱が空です。\\\",\\\"key\\\":\\\"j-two/sentence/0\\\",\\\"recognitionGeneration\\\":{\\\"beamSize\\\":5,\\\"computeType\\\":\\\"int8\\\",\\\"conditionOnPreviousText\\\":false,\\\"device\\\":\\\"cpu\\\",\\\"model\\\":\\\"whisper-large-v3-turbo\\\",\\\"modelSha256\\\":\\\"e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da\\\",\\\"packages\\\":{\\\"fixture\\\":\\\"1\\\"},\\\"prompt\\\":null,\\\"vadFilter\\\":false},\\\"recognitionMethod\\\":\\\"individual-beam5\\\",\\\"recognized\\\":\\\"actual old fixture transcript\\\",\\\"sha256\\\":\\\"7a42d3ae8db51e954b377f304873517c60cf646c8b147b63bf644dbb88d3c6eb\\\",\\\"singleFileVerification\\\":true,\\\"spoken\\\":\\\"箱が空です。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/7a42d3ae8db51e954b377f304873517c.m4a\\\",\\\"status\\\":\\\"review\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"},\\\"clip\\\":{\\\"asrStatus\\\":\\\"review\\\",\\\"bytes\\\":117,\\\"decodedPeak\\\":0.5,\\\"duration\\\":1.0,\\\"inputSha256\\\":\\\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\\\",\\\"language\\\":\\\"ja\\\",\\\"phonemeSha256\\\":\\\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\\\",\\\"required\\\":true,\\\"sha256\\\":\\\"7a42d3ae8db51e954b377f304873517c60cf646c8b147b63bf644dbb88d3c6eb\\\",\\\"spoken\\\":\\\"箱が空です。\\\",\\\"src\\\":\\\"./audio/generated/ja/jf_alpha/7a42d3ae8db51e954b377f304873517c.m4a\\\",\\\"text\\\":\\\"箱が空です。\\\",\\\"voiceId\\\":\\\"jf_alpha\\\"}}}\",\"repairSha256\":\"08a30eb35b2476be5880148f5917aebb97daeff18a45a5d1f64250a49c474a04\"},\"candidate\":{\"asr\":{\"comparison\":{\"audioSha256\":\"c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b\",\"equivalent\":false,\"expectedSpoken\":\"はこが からです。\",\"language\":\"ja\",\"proofExpected\":null,\"proofRecognized\":null,\"provenance\":{\"articlePolicyEnabled\":false,\"comparison\":\"manual-kana-asr-only-1\",\"normalizer\":\"manual-kana-asr-only-1\",\"normalizerFileSha256\":\"1111111111111111111111111111111111111111111111111111111111111111\",\"phonemeOverride\":true,\"ruleFileSha256\":\"1111111111111111111111111111111111111111111111111111111111111111\",\"sourceTextSha256\":\"7eab6b0be6f6a88cd74da6cfbf28d77f1b1a51d69a0b8b0d6a5d9ea9025a1fa9\"},\"readingTrace\":{\"expected\":[],\"recognized\":[]},\"reasons\":[\"fixture-mismatch\"],\"recognized\":\"\",\"ruleVersion\":\"strict-audio-equivalence-1\"},\"expected\":\"箱が空です。\",\"fingerprint\":\"cab0c306155bfbeb8d0ac67a5133890f73395cfbcfba5e2ad15fb33d98164ff3\",\"key\":\"j-two/sentence/0\",\"recognitionAttempts\":1,\"recognitionGeneration\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3\",\"modelSha256\":\"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognitionMethod\":\"individual-beam5\",\"recognized\":\"\",\"segments\":[],\"sha256\":\"c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b\",\"singleFileVerification\":true,\"spoken\":\"はこが からです。\",\"src\":\"./audio/generated/ja/jf_alpha/c39d2435f2ee8a46a8052f2915d1075d.m4a\",\"status\":\"error\",\"voiceId\":\"jf_alpha\"},\"clip\":{\"asrStatus\":\"error\",\"bytes\":135,\"decodedPeak\":0.5,\"duration\":1.0,\"inputSha256\":\"16d3930c5a7065a69620adabd2358c2487c1c0d703dd3e131602be9dbb732334\",\"language\":\"ja\",\"phonemeSha256\":\"6ebae9ef6cccd564a145b60b62566f8a501f73d8ba38ad15e5d31e617b2ab478\",\"required\":true,\"sha256\":\"c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b\",\"spoken\":\"はこが からです。\",\"src\":\"./audio/generated/ja/jf_alpha/c39d2435f2ee8a46a8052f2915d1075d.m4a\",\"synthesisSpeed\":1.0,\"text\":\"箱が空です。\",\"voiceId\":\"jf_alpha\"}},\"disposition\":\"system-fallback\",\"inputFingerprintInput\":\"[{\\\"modelSha256\\\": \\\"3333333333333333333333333333333333333333333333333333333333333333\\\", \\\"packages\\\": {\\\"test\\\": \\\"only\\\"}, \\\"recipe\\\": \\\"fixture\\\", \\\"voicesSha256\\\": \\\"4444444444444444444444444444444444444444444444444444444444444444\\\"}, {\\\"codec\\\": \\\"aac\\\"}, \\\"jf_alpha\\\", \\\"\\\\u306f\\\\u3053\\\\u304c \\\\u304b\\\\u3089\\\\u3067\\\\u3059\\\\u3002\\\", \\\"fixture phones \\\\u306f\\\\u3053\\\\u304c \\\\u304b\\\\u3089\\\\u3067\\\\u3059\\\\u3002\\\"]\",\"method\":\"manually-authored-japanese-kana-v1\",\"originalAudioReplaced\":false,\"override\":{\"phonemes\":\"fixture phones はこが からです。\",\"reason\":\"Manually authored kana reading\",\"spoken\":\"はこが からです。\"},\"rawASR\":{\"elapsedSeconds\":0.1,\"fingerprint\":\"cab0c306155bfbeb8d0ac67a5133890f73395cfbcfba5e2ad15fb33d98164ff3\",\"generation\":{\"beamSize\":5,\"computeType\":\"int8\",\"conditionOnPreviousText\":false,\"device\":\"cpu\",\"model\":\"whisper-large-v3\",\"modelSha256\":\"69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1\",\"packages\":{\"fixture\":\"1\"},\"prompt\":null,\"vadFilter\":false},\"recognized\":\"\",\"segments\":[],\"sha256\":\"c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b\"},\"reading\":\"はこが からです。\",\"readingsSha256\":\"43cc4789f1fcec41f61e15dd922138f213b3096e941d1878eb1b2bdad8ca79df\",\"recognitionAttempted\":true,\"rendererSha256\":\"14112ad2bfb3f91af2265eabfec955fc74f903653c5928b207bdba75d7afa3ee\",\"source\":{\"bank\":\"grammar\",\"key\":\"j-two/sentence/0\",\"language\":\"ja\",\"required\":true,\"text\":\"箱が空です。\",\"voiceId\":\"jf_alpha\"},\"synthesisGeneration\":{\"encoding\":{\"codec\":\"aac\"},\"modelSha256\":\"3333333333333333333333333333333333333333333333333333333333333333\",\"packages\":{\"test\":\"only\"},\"recipe\":\"fixture\",\"voicesSha256\":\"4444444444444444444444444444444444444444444444444444444444444444\"},\"token\":\"ja:grammar:j-two/sentence/0\",\"version\":1}",
+            "id": "a4000236d19934eb1969e1c908a186cc1827d51459a75347ec0c1880817284f9",
+            "archive": {
+              "published": false,
+              "sha256": "c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b",
+              "bytes": 135,
+              "copyVerified": true
+            }
+          }
+        ]
+      }
+    },
+    "stages": {
+      "earlier": {
+        "immutable": true
+      },
+      "manualKana": {
+        "method": "manually-authored-japanese-kana-v1",
+        "total": 2,
+        "matched": 1,
+        "failed": 1,
+        "empty": 1,
+        "readingsSha256": "43cc4789f1fcec41f61e15dd922138f213b3096e941d1878eb1b2bdad8ca79df",
+        "recognitionModel": "whisper-large-v3",
+        "recognitionModelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+        "originalHistoryPreserved": true
+      }
+    }
+  },
+  "report": {
+    "version": 1,
+    "method": "manually-authored-japanese-kana-v1",
+    "complete": true,
+    "sourceSha256": "edac272e5865f1965c2e5c09eaa3b7c8461577aac200f0f4a5df2ac0b7d7a8a4",
+    "readingsSha256": "43cc4789f1fcec41f61e15dd922138f213b3096e941d1878eb1b2bdad8ca79df",
+    "total": 2,
+    "matched": 1,
+    "failed": 1,
+    "empty": 1,
+    "entries": {
+      "ja:grammar:j-one/sentence/0": "95fec0f87693093484df7d7e6cbce1063607513c91b5db055566716c9126d7a0",
+      "ja:grammar:j-two/sentence/0": "a4000236d19934eb1969e1c908a186cc1827d51459a75347ec0c1880817284f9"
+    },
+    "failures": [
+      {
+        "token": "ja:grammar:j-two/sentence/0",
+        "attemptId": "a4000236d19934eb1969e1c908a186cc1827d51459a75347ec0c1880817284f9",
+        "text": "箱が空です。",
+        "spoken": "はこが からです。",
+        "recognized": "",
+        "sha256": "c39d2435f2ee8a46a8052f2915d1075d61932f82daee41cc41049b1f8910f47b",
+        "status": "error",
+        "reason": "no-speech-recognized"
+      }
+    ]
+  },
+  "overrides": {
+    "version": 1,
+    "entries": {
+      "ja:grammar:j-one/sentence/0": {
+        "spoken": "にもつを — うけとります。",
+        "phonemes": "fixture phones にもつを — うけとります。",
+        "reason": "Manually authored kana reading"
+      },
+      "ja:grammar:j-two/sentence/0": {
+        "spoken": "old reading",
+        "phonemes": "old phones"
+      }
+    }
+  },
+  "normalization": {
+    "version": 1,
+    "confirmedInputCorrections": [
+      {
+        "token": "ja:grammar:j-one/sentence/0",
+        "appliedOverride": {
+          "spoken": "old reading",
+          "phonemes": "old phones"
+        },
+        "sourceBinding": {
+          "text": "荷物を受け取ります。",
+          "language": "ja",
+          "voiceId": "jf_alpha"
+        },
+        "delivery": "regenerated-with-both-ASR-versions",
+        "selectedSha256": "9999999999999999999999999999999999999999999999999999999999999999",
+        "manualKanaSupersession": {
+          "method": "manually-authored-japanese-kana-v1",
+          "attemptId": "95fec0f87693093484df7d7e6cbce1063607513c91b5db055566716c9126d7a0",
+          "priorDeliveryCanonical": "{\"appliedOverride\":{\"phonemes\":\"old phones\",\"spoken\":\"old reading\"},\"delivery\":\"regenerated-with-both-ASR-versions\",\"selectedSha256\":\"9999999999999999999999999999999999999999999999999999999999999999\",\"sourceBinding\":{\"language\":\"ja\",\"text\":\"荷物を受け取ります。\",\"voiceId\":\"jf_alpha\"},\"token\":\"ja:grammar:j-one/sentence/0\"}",
+          "priorDeliverySha256": "a769dd643d5bbbc2f0d9ae679b888004a538b3c8e88caa37c3b8703a2a2ecc06"
+        }
+      }
+    ]
+  },
+  "human": {
+    "version": 1,
+    "feedback": [],
+    "requests": [],
+    "batches": []
+  },
+  "packs": {
+    "en:grammar": {
+      "pack": {
+        "version": 1,
+        "language": "en",
+        "bank": "grammar",
+        "clips": {
+          "g/sentence/0": {
+            "src": "./audio/generated/en/af_heart/4b32bfe36d2855d39e92090deef3cfb4.m4a",
+            "sha256": "4b32bfe36d2855d39e92090deef3cfb4246245c0efe3bc454183302732dda2d3",
+            "bytes": 113,
+            "duration": 1.0,
+            "decodedPeak": 0.5,
+            "language": "en",
+            "voiceId": "af_heart",
+            "required": true,
+            "text": "She signed it.",
+            "spoken": "She signed it.",
+            "inputSha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+            "phonemeSha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+            "asrStatus": "matched"
+          }
+        },
+        "sourceSha256": "edac272e5865f1965c2e5c09eaa3b7c8461577aac200f0f4a5df2ac0b7d7a8a4"
+      },
+      "audit": {
+        "records": {
+          "g/sentence/0": {
+            "key": "g/sentence/0",
+            "src": "./audio/generated/en/af_heart/4b32bfe36d2855d39e92090deef3cfb4.m4a",
+            "sha256": "4b32bfe36d2855d39e92090deef3cfb4246245c0efe3bc454183302732dda2d3",
+            "voiceId": "af_heart",
+            "expected": "She signed it.",
+            "spoken": "She signed it.",
+            "recognized": "actual old fixture transcript",
+            "status": "matched",
+            "recognitionMethod": "individual-beam5",
+            "singleFileVerification": true,
+            "recognitionGeneration": {
+              "model": "whisper-large-v3-turbo",
+              "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+              "device": "cpu",
+              "computeType": "int8",
+              "beamSize": 5,
+              "conditionOnPreviousText": false,
+              "prompt": null,
+              "vadFilter": false,
+              "packages": {
+                "fixture": "1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "ja:grammar": {
+      "pack": {
+        "version": 1,
+        "language": "ja",
+        "bank": "grammar",
+        "clips": {
+          "j-one/sentence/0": {
+            "src": "./audio/generated/ja/jf_alpha/ddc55ec18f53f132ff4a3eb2472c15d5.m4a",
+            "sha256": "ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560",
+            "bytes": 135,
+            "duration": 1.0,
+            "decodedPeak": 0.5,
+            "language": "ja",
+            "voiceId": "jf_alpha",
+            "required": true,
+            "text": "荷物を受け取ります。",
+            "spoken": "にもつを — うけとります。",
+            "inputSha256": "500e6cdaa281167fb7ea2e26c0d88277a10a1ab4f78d9dea80c29534e5a6c9be",
+            "phonemeSha256": "12d1438a990e92525462b3c33dbe1a4daa8ad9a732355ed18813c2bcc137f5f0",
+            "synthesisSpeed": 1.0,
+            "asrStatus": "matched",
+            "manualKanaId": "95fec0f87693093484df7d7e6cbce1063607513c91b5db055566716c9126d7a0"
+          }
+        },
+        "fallbacks": {
+          "j-two/sentence/0": {
+            "playback": "system",
+            "language": "ja",
+            "text": "箱が空です。",
+            "voiceId": "jf_alpha",
+            "reason": "unresolved-after-strong-asr-retry",
+            "auditedSha256": "c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb"
+          }
+        },
+        "sourceSha256": "edac272e5865f1965c2e5c09eaa3b7c8461577aac200f0f4a5df2ac0b7d7a8a4",
+        "generation": {
+          "recipe": "fixture",
+          "modelSha256": "3333333333333333333333333333333333333333333333333333333333333333",
+          "voicesSha256": "4444444444444444444444444444444444444444444444444444444444444444",
+          "packages": {
+            "test": "only"
+          },
+          "encoding": {
+            "codec": "aac"
+          },
+          "overridesSha256": "f6d2653479c265271b9f545767652cf1c4d1a8d009995192192f83983ff06e55"
+        },
+        "complete": false,
+        "requiredComplete": false,
+        "fallbackCount": 1,
+        "requiredFallbackCount": 1,
+        "requiredPlaybackComplete": true,
+        "recordedAuditComplete": true
+      },
+      "audit": {
+        "records": {
+          "j-one/sentence/0": {
+            "key": "j-one/sentence/0",
+            "src": "./audio/generated/ja/jf_alpha/ddc55ec18f53f132ff4a3eb2472c15d5.m4a",
+            "sha256": "ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560",
+            "voiceId": "jf_alpha",
+            "expected": "荷物を受け取ります。",
+            "spoken": "にもつを — うけとります。",
+            "recognized": "にもつを — うけとります。",
+            "segments": [
+              {
+                "start": 0.0,
+                "end": 0.8,
+                "text": "にもつを — うけとります。"
+              }
+            ],
+            "recognitionGeneration": {
+              "model": "whisper-large-v3",
+              "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
+              "device": "cpu",
+              "computeType": "int8",
+              "beamSize": 5,
+              "conditionOnPreviousText": false,
+              "prompt": null,
+              "vadFilter": false,
+              "packages": {
+                "fixture": "1"
+              }
+            },
+            "fingerprint": "db33a045ebe5258d17270ca8b45681644329b4016fb61ff957ec27b31d99eaf2",
+            "recognitionMethod": "individual-beam5",
+            "singleFileVerification": true,
+            "status": "matched",
+            "comparison": {
+              "ruleVersion": "strict-audio-equivalence-1",
+              "equivalent": true,
+              "expectedSpoken": "にもつを — うけとります。",
+              "recognized": "にもつを — うけとります。",
+              "language": "ja",
+              "reasons": [
+                "fixture-exact"
+              ],
+              "proofExpected": "にもつを — うけとります。",
+              "proofRecognized": "にもつを — うけとります。",
+              "provenance": {
+                "sourceTextSha256": "576f8902a4112dcf10f0ecf51ecf64f288b8958e937da2b7955caee0f34603ec",
+                "ruleFileSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                "normalizerFileSha256": "1111111111111111111111111111111111111111111111111111111111111111",
+                "comparison": "manual-kana-asr-only-1",
+                "normalizer": "manual-kana-asr-only-1",
+                "phonemeOverride": true,
+                "articlePolicyEnabled": false
+              },
+              "readingTrace": {
+                "expected": [],
+                "recognized": []
+              },
+              "audioSha256": "ddc55ec18f53f132ff4a3eb2472c15d5a9fa148431217e18e3f5dded07876560"
+            },
+            "recognitionAttempts": 1,
+            "manualKanaId": "95fec0f87693093484df7d7e6cbce1063607513c91b5db055566716c9126d7a0"
+          },
+          "j-two/sentence/0": {
+            "key": "j-two/sentence/0",
+            "src": "./audio/generated/ja/jf_alpha/c1a8b57bfb0f5ea56209ca1177946f37.m4a",
+            "sha256": "c1a8b57bfb0f5ea56209ca1177946f375ca3bb2a97aefa8f8bbbb39c388590fb",
+            "voiceId": "jf_alpha",
+            "expected": "箱が空です。",
+            "spoken": "箱が空です。",
+            "recognized": "actual old fixture transcript",
+            "status": "review",
+            "recognitionMethod": "individual-beam5",
+            "singleFileVerification": true,
+            "recognitionGeneration": {
+              "model": "whisper-large-v3-turbo",
+              "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+              "device": "cpu",
+              "computeType": "int8",
+              "beamSize": 5,
+              "conditionOnPreviousText": false,
+              "prompt": null,
+              "vadFilter": false,
+              "packages": {
+                "fixture": "1"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -716,17 +716,27 @@
       "asrStatus": "matched",
       "required": true,
       "synthesisSpeed": 0.94
+    },
+    "intent/steps/1/0": {
+      "src": "./audio/generated/ja/jf_alpha/9824dcb0131f920412d59e8e64daba30.m4a",
+      "duration": 2.48,
+      "bytes": 16456,
+      "sha256": "8504d34a34758ba96140af9c85075f282997425385e0869363bd2a42135fee91",
+      "decodedPeak": 0.700752,
+      "headroomDb": 0.0,
+      "language": "ja",
+      "voiceId": "jf_alpha",
+      "text": "校正刷りはまだ法務部にあります。",
+      "spoken": "こーせーずりわ まだ ほーむぶに あります。",
+      "inputSha256": "74378da99cf2b233f4e30036cf0dbf2dedd8dc605667c595bd15b6991f857096",
+      "required": true,
+      "synthesisSpeed": 1.0,
+      "phonemeSha256": "b58d84a38dc965344e0c6c28ef94db226837150f923e5acd3d9d328e62a06728",
+      "asrStatus": "matched",
+      "manualKanaId": "8308e4c608345ea83368766eb754b94a65a5f4dcfc9d629a5e98ebbac00d413b"
     }
   },
   "fallbacks": {
-    "intent/steps/1/0": {
-      "playback": "system",
-      "language": "ja",
-      "text": "校正刷りはまだ法務部にあります。",
-      "voiceId": "jf_alpha",
-      "reason": "unresolved-after-strong-asr-retry",
-      "auditedSha256": "6011c58a9a2f68b4b9c2d26f41a6a3bf0cce09bb9dd575a32724f31f22c82cff"
-    },
     "p7-syn/steps/0/0": {
       "playback": "system",
       "language": "ja",
@@ -751,12 +761,12 @@
     "encoding": "lufs16-tp3-aac48-decoded-4x-peak095",
     "sourceSha256": "e7b0d77969d8992c62e1d5cbde565b913c55be641f412ab3fb530593abdb6fb2",
     "normalization": "bank-v3-japanese-contextual-numbers",
-    "overridesSha256": "8d6e0e5ae0fbbb471e574ab9864a365f53b9725b0e5f7723d8ae7ac89b3bcc88"
+    "overridesSha256": "710795e9867fa91a6d62a4f6892c65d8bf161cb05100c0b4e57302c6088eff70"
   },
   "complete": false,
   "requiredComplete": false,
-  "fallbackCount": 2,
-  "requiredFallbackCount": 2,
+  "fallbackCount": 1,
+  "requiredFallbackCount": 1,
   "requiredPlaybackComplete": true,
   "recordedAuditComplete": true
 }

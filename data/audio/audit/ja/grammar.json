@@ -21787,283 +21787,199 @@
     },
     "gram-passive-14/sentence/0": {
       "key": "gram-passive-14/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/956c3f27d3156b2504c13fc4a375c31e.m4a",
-      "sha256": "82c740958281b6ee0bc206286845ff5626648dc4abcf4a4d8b8f9020b95f3bc6",
+      "src": "./audio/generated/ja/jf_alpha/d415af30fafbdee4fac7771e30e3e651.m4a",
+      "sha256": "bdc7a5df01c13245072ef4c144769bbfb90b4c8b6acab1605a759027cf87ff6c",
       "voiceId": "jf_alpha",
-      "fingerprint": "1cece0cf9339089ea78ee3731c4b8dc7a4f8417dcb0c727423f1e49815dbfb0b",
       "expected": "品物を数え終えたら、段ボール箱に緑色の丸印を付けてください。",
-      "spoken": "品物を数え終えたら、段ボール箱に緑色の丸印を付けてください。",
-      "recognized": "品物を数え終えたらダンボール箱に緑色の丸印をつけてください。",
+      "spoken": "しなものを かぞえおえたら、だんぼーるばこに みどりいろの まるじるしを つけてください。",
+      "recognized": "品物を数え終えたら、ダンボール箱に緑色の丸印をつけてください。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.32,
-          "text": "品物を数え終えたらダンボール箱に緑色の丸印をつけてください。",
-          "avgLogprob": -0.10292708152724851,
-          "noSpeechProb": 5.08910188296019e-12
+          "end": 5.42,
+          "text": "品物を数え終えたら、ダンボール箱に緑色の丸印をつけてください。",
+          "avgLogprob": -0.06471996870823205,
+          "noSpeechProb": 0.02353799343109131
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.1071,
-      "phonemeErrorRate": 0.0,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "段",
-          "recognized": "ダ ン"
-        },
-        {
-          "operation": "replace",
-          "expected": "付",
-          "recognized": "つ"
         }
-      ],
+      },
+      "fingerprint": "bc069e66dfd853d5430ab6567305ae2d97d9357635811fe9b9b77c2804f8a447",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "品物を数え終えたら、段ボール箱に緑色の丸印を付けてください。",
-        "recognized": "品物を数え終えたらダンボール箱に緑色の丸印をつけてください。",
+        "expectedSpoken": "しなものを かぞえおえたら、だんぼーるばこに みどりいろの まるじるしを つけてください。",
+        "recognized": "品物を数え終えたら、ダンボール箱に緑色の丸印をつけてください。",
         "reasons": [
-          "non-equivalent-morae-remain",
-          "phoneme-override-not-proven-by-dictionary-reading"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "シナモノオカゾエオエタラダンボオルハコニミドリイロノマルジルシオツケテクダサイ",
-        "normalizedRecognized": "シナモノオカゾエオエタラダンボオルハコニミドリイロノマルジルシオツケテクダサイ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "しなものをかぞえおえたらだんぼーるばこにみどりいろのまるじるしをつけてください",
+        "normalizedRecognized": "しなものをかぞえおえたらだんぼーるばこにみどりいろのまるじるしをつけてください",
+        "proofExpected": "しなものをかぞえおえたらだんぼおるばこにみどりいろのまるじるしをつけてください",
+        "proofRecognized": "しなものをかぞえおえたらだんぼおるばこにみどりいろのまるじるしをつけてください",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
+          "normalizer": "manual-kana-asr-only-1",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "f06a1cd014e1bf693607f3cb749b31739dad779a45c2f5eb6402c7e51bff949d"
         },
         "readingTrace": {
-          "expected": [
-            {
-              "surface": "品物",
-              "reading": "シナモノ",
-              "normalized": "シナモノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "数え",
-              "reading": "カゾエ",
-              "normalized": "カゾエ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "終え",
-              "reading": "オエ",
-              "normalized": "オエ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "たら",
-              "reading": "タラ",
-              "normalized": "タラ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "段",
-              "reading": "ダン",
-              "normalized": "ダン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ボール",
-              "reading": "ボール",
-              "normalized": "ボオル",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "箱",
-              "reading": "ハコ",
-              "normalized": "ハコ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "緑色",
-              "reading": "ミドリイロ",
-              "normalized": "ミドリイロ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "丸印",
-              "reading": "マルジルシ",
-              "normalized": "マルジルシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "付け",
-              "reading": "ツケ",
-              "normalized": "ツケ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ください",
-              "reading": "クダサイ",
-              "normalized": "クダサイ",
-              "method": "unidic-pron"
-            }
-          ],
+          "expected": [],
           "recognized": [
             {
               "surface": "品物",
-              "reading": "シナモノ",
-              "normalized": "シナモノ",
-              "method": "unidic-pron"
+              "variants": [
+                "しなもの"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "しなもの"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "数え",
-              "reading": "カゾエ",
-              "normalized": "カゾエ",
-              "method": "unidic-pron"
+              "variants": [
+                "かぞえ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連用形-一般",
+              "selected": "かぞえ"
             },
             {
               "surface": "終え",
-              "reading": "オエ",
-              "normalized": "オエ",
-              "method": "unidic-pron"
+              "variants": [
+                "おえ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連用形-一般",
+              "selected": "おえ"
             },
             {
               "surface": "たら",
-              "reading": "タラ",
-              "normalized": "タラ",
-              "method": "unidic-pron"
+              "variants": [
+                "たら"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "たら"
             },
             {
-              "surface": "ダン",
-              "reading": "ダン",
-              "normalized": "ダン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ボール",
-              "reading": "ボール",
-              "normalized": "ボオル",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "箱",
-              "reading": "ハコ",
-              "normalized": "ハコ",
-              "method": "unidic-pron"
+              "surface": "ダンボール箱",
+              "variants": [
+                "だんぼーるばこ"
+              ],
+              "method": "reviewed-fixed-compound",
+              "selected": "だんぼーるばこ"
             },
             {
               "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
+              "variants": [
+                "に"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "に"
             },
             {
               "surface": "緑色",
-              "reading": "ミドリイロ",
-              "normalized": "ミドリイロ",
-              "method": "unidic-pron"
+              "variants": [
+                "みどりいろ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "みどりいろ"
             },
             {
               "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
+              "variants": [
+                "の"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "の"
             },
             {
               "surface": "丸印",
-              "reading": "マルジルシ",
-              "normalized": "マルジルシ",
-              "method": "unidic-pron"
+              "variants": [
+                "まるじるし"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "まるじるし"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "つけ",
-              "reading": "ツケ",
-              "normalized": "ツケ",
-              "method": "unidic-pron"
+              "variants": [
+                "つけ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "つけ"
             },
             {
               "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
+              "variants": [
+                "て"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "て"
             },
             {
               "surface": "ください",
-              "reading": "クダサイ",
-              "normalized": "クダサイ",
-              "method": "unidic-pron"
+              "variants": [
+                "ください"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ください"
             }
           ]
         },
-        "audioSha256": "82c740958281b6ee0bc206286845ff5626648dc4abcf4a4d8b8f9020b95f3bc6"
-      }
+        "audioSha256": "bdc7a5df01c13245072ef4c144769bbfb90b4c8b6acab1605a759027cf87ff6c"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "11bced1319ee30449dcb6efeaf0009ed4100762aec9bdc7d761e59b29ee007ab"
     },
     "gram-modifiers-07/sentence/0": {
       "key": "gram-modifiers-07/sentence/0",
@@ -22676,228 +22592,171 @@
     },
     "gram-time-04/sentence/0": {
       "key": "gram-time-04/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/0484173f92f9fec7a215d7542dad59ef.m4a",
-      "sha256": "8cb047e0a7a84ce9f9e4321163d08c0c49b87dfc40a6f718fed20236a54b1aa3",
+      "src": "./audio/generated/ja/jf_alpha/7abb2aeb718ae4de12e3c4aefbd7f476.m4a",
+      "sha256": "1873d876be25c65e40a90be6c7b4ae2a1609841265ed34054ffeec0b034c206d",
       "voiceId": "jf_alpha",
-      "fingerprint": "dbc60709a090a88d4c3189ec2d3cfdeb7bea3310c6546e5884f08bec5ed9e756",
       "expected": "Nora は今も出荷部門で働いています。",
-      "spoken": "ノラ は今も出荷部門で働いています。",
-      "recognized": "野良は今も主化部門で働いています。",
+      "spoken": "のーらわ いまも しゅっかぶもんで はたらいています。",
+      "recognized": "ノーラは今も出荷部門で働いています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.68,
-          "text": "野良は今も主化部門で働いています。",
-          "avgLogprob": -0.1697823488050037,
-          "noSpeechProb": 4.8205241881538186e-12
+          "end": 2.62,
+          "text": "ノーラは今も出荷部門で働いています。",
+          "avgLogprob": -0.11453334279358388,
+          "noSpeechProb": 0.02857890911400318
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.25,
-      "phonemeErrorRate": 0.1081,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "ノ ラ",
-          "recognized": "野 良"
-        },
-        {
-          "operation": "replace",
-          "expected": "出 荷",
-          "recognized": "主 化"
         }
-      ],
+      },
+      "fingerprint": "785603d780bc74ebdb32e8ce787ad57f10b1bad7d2245a21cbacb285c8182377",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "ノラ は今も出荷部門で働いています。",
-        "recognized": "野良は今も主化部門で働いています。",
+        "expectedSpoken": "のーらわ いまも しゅっかぶもんで はたらいています。",
+        "recognized": "ノーラは今も出荷部門で働いています。",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "ノラワイマモシュッカブモンデハタライテイマス",
-        "normalizedRecognized": "ノラワイマモヌシカブモンデハタライテイマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "のーらわいまもしゅっかぶもんではたらいています",
+        "normalizedRecognized": "のーらわいまもしゅっかぶもんではたらいています",
+        "proofExpected": "のおらわいまもしゅっかぶもんではたらいています",
+        "proofRecognized": "のおらわいまもしゅっかぶもんではたらいています",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
-          "phonemeOverride": false,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "normalizer": "manual-kana-asr-only-1",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "555c5bb61807bbaf781a302bdf3f5741fa6565ad348964a686495b5e1f6c429b"
         },
         "readingTrace": {
-          "expected": [
+          "expected": [],
+          "recognized": [
             {
-              "surface": "ノラ",
-              "reading": "ノラ",
-              "normalized": "ノラ",
-              "method": "unidic-pron"
+              "surface": "ノーラ",
+              "variants": [
+                "のーら"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "のーら"
             },
             {
               "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
+              "variants": [
+                "わ"
+              ],
+              "method": "grammatical-particle",
+              "selected": "わ"
             },
             {
               "surface": "今",
-              "reading": "イマ",
-              "normalized": "イマ",
-              "method": "unidic-pron"
+              "variants": [
+                "いま"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "いま"
             },
             {
               "surface": "も",
-              "reading": "モ",
-              "normalized": "モ",
-              "method": "unidic-pron"
+              "variants": [
+                "も"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "も"
             },
             {
               "surface": "出荷",
-              "reading": "シュッカ",
-              "normalized": "シュッカ",
-              "method": "unidic-pron"
+              "variants": [
+                "しゅっか"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "しゅっか"
             },
             {
               "surface": "部門",
-              "reading": "ブモン",
-              "normalized": "ブモン",
-              "method": "unidic-pron"
+              "variants": [
+                "ぶもん"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "ぶもん"
             },
             {
               "surface": "で",
-              "reading": "デ",
-              "normalized": "デ",
-              "method": "unidic-pron"
+              "variants": [
+                "で"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "で"
             },
             {
               "surface": "働い",
-              "reading": "ハタライ",
-              "normalized": "ハタライ",
-              "method": "unidic-pron"
+              "variants": [
+                "はたらい"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連用形-イ音便",
+              "selected": "はたらい"
             },
             {
               "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
+              "variants": [
+                "て"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "て"
             },
             {
               "surface": "い",
-              "reading": "イ",
-              "normalized": "イ",
-              "method": "unidic-pron"
+              "variants": [
+                "い"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "い"
             },
             {
               "surface": "ます",
-              "reading": "マス",
-              "normalized": "マス",
-              "method": "unidic-pron"
-            }
-          ],
-          "recognized": [
-            {
-              "surface": "野良",
-              "reading": "ノラ",
-              "normalized": "ノラ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "今",
-              "reading": "イマ",
-              "normalized": "イマ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "も",
-              "reading": "モ",
-              "normalized": "モ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "主",
-              "reading": "ヌシ",
-              "normalized": "ヌシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "化",
-              "reading": "カ",
-              "normalized": "カ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "部門",
-              "reading": "ブモン",
-              "normalized": "ブモン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "で",
-              "reading": "デ",
-              "normalized": "デ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "働い",
-              "reading": "ハタライ",
-              "normalized": "ハタライ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "い",
-              "reading": "イ",
-              "normalized": "イ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ます",
-              "reading": "マス",
-              "normalized": "マス",
-              "method": "unidic-pron"
+              "variants": [
+                "ます"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ます"
             }
           ]
         },
-        "audioSha256": "8cb047e0a7a84ce9f9e4321163d08c0c49b87dfc40a6f718fed20236a54b1aa3"
-      }
+        "audioSha256": "1873d876be25c65e40a90be6c7b4ae2a1609841265ed34054ffeec0b034c206d"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "03df222af0c37e1f41e717bfe3c4346749f2e836b356367bcf87ef180ead975f"
     },
     "gram-time-07/sentence/0": {
       "key": "gram-time-07/sentence/0",
@@ -23929,302 +23788,222 @@
     },
     "gram-conditional-01/sentence/0": {
       "key": "gram-conditional-01/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/0cf4524d1fd11023a45c429fd6c85b76.m4a",
-      "sha256": "bde81e4a796dad0c6d027498a2765286e71077874830d4dfa713ecbd3d756837",
+      "src": "./audio/generated/ja/jf_alpha/80ee015ca57bf6ac702c2442d16adf4d.m4a",
+      "sha256": "65712fd3c0f0709fb4b21d827b06a3c0de85bf83bd77f0b74aa2ffd0180cafdd",
       "voiceId": "jf_alpha",
-      "fingerprint": "65589a1ba4dd10bf47a7223be7a7c4decd70dc0131d43da9570a1518c8b16047",
       "expected": "もっと幅の広い机があれば、2台目のモニターを置くのですが。",
-      "spoken": "もっと幅の広い机があれば、二台目のモニターを置くのですが。",
-      "recognized": "モッド幅の広い机があれば2台目のモニターを置くのですが",
+      "spoken": "もっと はばの ひろい つくえが あれば、にだいめの もにたーを おくのですが。",
+      "recognized": "もっと幅の広い机があれば、2台目のモニターを置くのですが。",
       "segments": [
         {
           "start": 0.0,
-          "end": 4.08,
-          "text": "モッド幅の広い机があれば2台目のモニターを置くのですが",
-          "avgLogprob": -0.09965419460987222,
-          "noSpeechProb": 4.761857574919759e-12
+          "end": 4.3,
+          "text": "もっと幅の広い机があれば、2台目のモニターを置くのですが。",
+          "avgLogprob": -0.07741328353683154,
+          "noSpeechProb": 0.01897571049630642
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.1111,
-      "phonemeErrorRate": 0.0179,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "も っ と",
-          "recognized": "モ ッ ド"
         }
-      ],
+      },
+      "fingerprint": "9d135149413fb9e142c044f1557912578b3bbf08cdc1ee796589e12198135574",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "もっと幅の広い机があれば、二台目のモニターを置くのですが。",
-        "recognized": "モッド幅の広い机があれば2台目のモニターを置くのですが",
+        "expectedSpoken": "もっと はばの ひろい つくえが あれば、にだいめの もにたーを おくのですが。",
+        "recognized": "もっと幅の広い机があれば、2台目のモニターを置くのですが。",
         "reasons": [
-          "author-number-and-input-normalization",
-          "non-equivalent-morae-remain"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "モットハバノヒロイツクエガアレバニダイメノモニタアオオクノデスガ",
-        "normalizedRecognized": "モッドハバノヒロイツクエガアレバニダイメノモニタアオオクノデスガ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "もっとはばのひろいつくえがあればにだいめのもにたーをおくのですが",
+        "normalizedRecognized": "もっとはばのひろいつくえがあればにだいめのもにたーをおくのですが",
+        "proofExpected": "もっとはばのひろいつくえがあればにだいめのもにたあをおくのですが",
+        "proofRecognized": "もっとはばのひろいつくえがあればにだいめのもにたあをおくのですが",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
-          "phonemeOverride": false,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "normalizer": "manual-kana-asr-only-1",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "174ffaf95f18cec6867bdb5ae7ce799a3439a2038eb2a642083959e22e561d26"
         },
         "readingTrace": {
-          "expected": [
-            {
-              "surface": "もっと",
-              "reading": "モット",
-              "normalized": "モット",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "幅",
-              "reading": "ハバ",
-              "normalized": "ハバ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "広い",
-              "reading": "ヒロイ",
-              "normalized": "ヒロイ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "机",
-              "reading": "ツクエ",
-              "normalized": "ツクエ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "あれ",
-              "reading": "アレ",
-              "normalized": "アレ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ば",
-              "reading": "バ",
-              "normalized": "バ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "二",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "台",
-              "reading": "ダイ",
-              "normalized": "ダイ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "目",
-              "reading": "メ",
-              "normalized": "メ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "モニター",
-              "reading": "モニター",
-              "normalized": "モニタア",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "置く",
-              "reading": "オク",
-              "normalized": "オク",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "です",
-              "reading": "デス",
-              "normalized": "デス",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
-            }
-          ],
+          "expected": [],
           "recognized": [
             {
-              "surface": "モッド",
-              "reading": "モッド",
-              "normalized": "モッド",
-              "method": "literal-kana"
+              "surface": "もっと",
+              "variants": [
+                "もっと"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "もっと"
             },
             {
               "surface": "幅",
-              "reading": "ハバ",
-              "normalized": "ハバ",
-              "method": "unidic-pron"
+              "variants": [
+                "はば"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "はば"
             },
             {
               "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
+              "variants": [
+                "の"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "の"
             },
             {
               "surface": "広い",
-              "reading": "ヒロイ",
-              "normalized": "ヒロイ",
-              "method": "unidic-pron"
+              "variants": [
+                "ひろい"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "形容詞",
+              "inflection": "連体形-一般",
+              "selected": "ひろい"
             },
             {
               "surface": "机",
-              "reading": "ツクエ",
-              "normalized": "ツクエ",
-              "method": "unidic-pron"
+              "variants": [
+                "つくえ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "つくえ"
             },
             {
               "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
+              "variants": [
+                "が"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "が"
             },
             {
               "surface": "あれ",
-              "reading": "アレ",
-              "normalized": "アレ",
-              "method": "unidic-pron"
+              "variants": [
+                "あれ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "あれ"
             },
             {
               "surface": "ば",
-              "reading": "バ",
-              "normalized": "バ",
-              "method": "unidic-pron"
+              "variants": [
+                "ば"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ば"
             },
             {
-              "surface": "二",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "台",
-              "reading": "ダイ",
-              "normalized": "ダイ",
-              "method": "unidic-pron"
+              "surface": "2台",
+              "variants": [
+                "にだい"
+              ],
+              "method": "counter:台",
+              "selected": "にだい"
             },
             {
               "surface": "目",
-              "reading": "メ",
-              "normalized": "メ",
-              "method": "unidic-pron"
+              "variants": [
+                "め"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "め"
             },
             {
               "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
+              "variants": [
+                "の"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "の"
             },
             {
               "surface": "モニター",
-              "reading": "モニター",
-              "normalized": "モニタア",
-              "method": "unidic-pron"
+              "variants": [
+                "もにたー"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "もにたー"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "置く",
-              "reading": "オク",
-              "normalized": "オク",
-              "method": "unidic-pron"
+              "variants": [
+                "おく"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連体形-一般",
+              "selected": "おく"
             },
             {
               "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
+              "variants": [
+                "の"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "の"
             },
             {
               "surface": "です",
-              "reading": "デス",
-              "normalized": "デス",
-              "method": "unidic-pron"
+              "variants": [
+                "です"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "です"
             },
             {
               "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
+              "variants": [
+                "が"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "が"
             }
           ]
         },
-        "audioSha256": "bde81e4a796dad0c6d027498a2765286e71077874830d4dfa713ecbd3d756837"
-      }
+        "audioSha256": "65712fd3c0f0709fb4b21d827b06a3c0de85bf83bd77f0b74aa2ffd0180cafdd"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "a6daf17e35c4a955620c2fcb8d2433a73331d1bfc778026b4cd9d3186d7cf902"
     },
     "gram-conditional-03/sentence/0": {
       "key": "gram-conditional-03/sentence/0",
@@ -27496,296 +27275,232 @@
     },
     "gram-conjunction-10/sentence/0": {
       "key": "gram-conjunction-10/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/4ce25b3f48c5a2f40fff28d73cdb3fa7.m4a",
-      "sha256": "3d1bb6f119b43fdacbfc4d37f154682f727dfa153b3e62dcacc1661de2ccba74",
+      "src": "./audio/generated/ja/jf_alpha/6404fdd6f2eead55ad2cd26221397f4d.m4a",
+      "sha256": "d1bb03fd11d1fb5a0257e1be77c8810904bfda359ff554c7a55a99e4e98d57b7",
       "voiceId": "jf_alpha",
-      "fingerprint": "a33ea741117b1e7ac2aea3be68283302ee34e46fe2b187ab585b83a6db5fa921",
       "expected": "月曜日に間に合うよう荷物を準備できるよう、今日中にラベルを送ってください。",
-      "spoken": "月曜日に間に合うよう荷物を準備できるよう、今日中にラベルを送ってください。",
-      "recognized": "月曜日に間に合うよう荷物を準備できる要求中にラベルを送ってください",
+      "spoken": "げつよーびに まにあうよー にもつを じゅんびできるよー、きょーじゅーに らべるを おくってください。",
+      "recognized": "月曜日に間に合う用荷物を準備できるよう、今日中にラベルを送ってください。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.28,
-          "text": "月曜日に間に合うよう荷物を準備できる要求中にラベルを送ってください",
-          "avgLogprob": -0.09292353064783158,
-          "noSpeechProb": 5.804661872693684e-12
+          "end": 5.26,
+          "text": "月曜日に間に合う用荷物を準備できるよう、今日中にラベルを送ってください。",
+          "avgLogprob": -0.08144231998559201,
+          "noSpeechProb": 0.03737543523311615
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.1143,
-      "phonemeErrorRate": 0.0278,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "よ う 今 日",
-          "recognized": "要 求"
         }
-      ],
+      },
+      "fingerprint": "60bb52f59d84f7a2ec407f1375f18e92e1f2da26266ed7df2aec3c305a3c46c3",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "月曜日に間に合うよう荷物を準備できるよう、今日中にラベルを送ってください。",
-        "recognized": "月曜日に間に合うよう荷物を準備できる要求中にラベルを送ってください",
+        "expectedSpoken": "げつよーびに まにあうよー にもつを じゅんびできるよー、きょーじゅーに らべるを おくってください。",
+        "recognized": "月曜日に間に合う用荷物を準備できるよう、今日中にラベルを送ってください。",
         "reasons": [
-          "non-equivalent-morae-remain",
-          "phoneme-override-not-proven-by-dictionary-reading"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "ゲツヨオヒニマニアウヨオニモツオジュンビデキルヨオキョオジュウニラベルオオクッテクダサイ",
-        "normalizedRecognized": "ゲツヨオヒニマニアウヨオニモツオジュンビデキルヨオキュウチュウニラベルオオクッテクダサイ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "げつよーびにまにあうよーにもつをじゅんびできるよーきょーじゅーにらべるをおくってください",
+        "normalizedRecognized": "げつようびにまにあうようにもつをじゅんびできるようきょうじゅうにらべるをおくってください",
+        "proofExpected": "げつよおびにまにあうよおにもつをじゅんびできるよおきょおじゅうにらべるをおくってください",
+        "proofRecognized": "げつよおびにまにあうよおにもつをじゅんびできるよおきょおじゅうにらべるをおくってください",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
+          "normalizer": "manual-kana-asr-only-1",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "45469dfe6adfb654ebf524f00e026b58d998a9a237301ad17e9f36ef5b85554d"
         },
         "readingTrace": {
-          "expected": [
+          "expected": [],
+          "recognized": [
             {
-              "surface": "月曜",
-              "reading": "ゲツヨー",
-              "normalized": "ゲツヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "日",
-              "reading": "ヒ",
-              "normalized": "ヒ",
-              "method": "unidic-pron"
+              "surface": "月曜日",
+              "variants": [
+                "げつようび",
+                "げつよーび"
+              ],
+              "method": "reviewed-fixed-compound",
+              "selected": "げつよーび"
             },
             {
               "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
+              "variants": [
+                "に"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "に"
             },
             {
               "surface": "間に合う",
-              "reading": "マニアウ",
-              "normalized": "マニアウ",
-              "method": "unidic-pron"
+              "variants": [
+                "まにあう"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連体形-一般",
+              "selected": "まにあう"
             },
             {
-              "surface": "よう",
-              "reading": "ヨー",
-              "normalized": "ヨオ",
-              "method": "unidic-pron"
+              "surface": "用",
+              "variants": [
+                "よう",
+                "よー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "接尾辞",
+              "inflection": "*",
+              "selected": "よー"
             },
             {
               "surface": "荷物",
-              "reading": "ニモツ",
-              "normalized": "ニモツ",
-              "method": "unidic-pron"
+              "variants": [
+                "にもつ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "にもつ"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "準備",
-              "reading": "ジュンビ",
-              "normalized": "ジュンビ",
-              "method": "unidic-pron"
+              "variants": [
+                "じゅんび"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "じゅんび"
             },
             {
               "surface": "できる",
-              "reading": "デキル",
-              "normalized": "デキル",
-              "method": "unidic-pron"
+              "variants": [
+                "できる"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "できる"
             },
             {
               "surface": "よう",
-              "reading": "ヨー",
-              "normalized": "ヨオ",
-              "method": "unidic-pron"
+              "variants": [
+                "よう",
+                "よー"
+              ],
+              "method": "reviewed-kana-word-pron",
+              "selected": "よー"
             },
             {
               "surface": "今日",
-              "reading": "キョー",
-              "normalized": "キョオ",
-              "method": "unidic-pron"
+              "variants": [
+                "きょう",
+                "きょー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "きょー"
             },
             {
               "surface": "中",
-              "reading": "ジュー",
-              "normalized": "ジュウ",
-              "method": "unidic-pron"
+              "variants": [
+                "じゅう",
+                "じゅー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "接尾辞",
+              "inflection": "*",
+              "selected": "じゅう"
             },
             {
               "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
+              "variants": [
+                "に"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "に"
             },
             {
               "surface": "ラベル",
-              "reading": "ラベル",
-              "normalized": "ラベル",
-              "method": "unidic-pron"
+              "variants": [
+                "らべる"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "らべる"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "送っ",
-              "reading": "オクッ",
-              "normalized": "オクッ",
-              "method": "unidic-pron"
+              "variants": [
+                "おくっ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連用形-促音便",
+              "selected": "おくっ"
             },
             {
               "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
+              "variants": [
+                "て"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "て"
             },
             {
               "surface": "ください",
-              "reading": "クダサイ",
-              "normalized": "クダサイ",
-              "method": "unidic-pron"
-            }
-          ],
-          "recognized": [
-            {
-              "surface": "月曜",
-              "reading": "ゲツヨー",
-              "normalized": "ゲツヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "日",
-              "reading": "ヒ",
-              "normalized": "ヒ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "間に合う",
-              "reading": "マニアウ",
-              "normalized": "マニアウ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "よう",
-              "reading": "ヨー",
-              "normalized": "ヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "荷物",
-              "reading": "ニモツ",
-              "normalized": "ニモツ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "準備",
-              "reading": "ジュンビ",
-              "normalized": "ジュンビ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "できる",
-              "reading": "デキル",
-              "normalized": "デキル",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "要求",
-              "reading": "ヨーキュー",
-              "normalized": "ヨオキュウ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "中",
-              "reading": "チュー",
-              "normalized": "チュウ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ラベル",
-              "reading": "ラベル",
-              "normalized": "ラベル",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "送っ",
-              "reading": "オクッ",
-              "normalized": "オクッ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ください",
-              "reading": "クダサイ",
-              "normalized": "クダサイ",
-              "method": "unidic-pron"
+              "variants": [
+                "ください"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ください"
             }
           ]
         },
-        "audioSha256": "3d1bb6f119b43fdacbfc4d37f154682f727dfa153b3e62dcacc1661de2ccba74"
-      }
+        "audioSha256": "d1bb03fd11d1fb5a0257e1be77c8810904bfda359ff554c7a55a99e4e98d57b7"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "cee7103e7cf091f98f87c5f24f6b70755759084cfeecdc00b3dbbec336853086"
     },
     "gram-conjunction-11/sentence/0": {
       "key": "gram-conjunction-11/sentence/0",
@@ -30956,302 +30671,234 @@
     },
     "gram-passive-15/sentence/0": {
       "key": "gram-passive-15/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/8dd4736092557287a1178792b39b57f9.m4a",
-      "sha256": "3470587d149b131a77cd0a2959bfdc7fe593ce0d16e0c5c7b14518720eb06794",
+      "src": "./audio/generated/ja/jf_alpha/b274b5339583a130f705a8eba381b48a.m4a",
+      "sha256": "69059ddfb567c3f5c2f2f57b0d15e1fb766923fc52028c6ad034344045c5bd6a",
       "voiceId": "jf_alpha",
-      "fingerprint": "a17def527c8a46fa70e278ca90339c829c33418c5ef4864a17af9436399b2d76",
       "expected": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
-      "spoken": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
-      "recognized": "先週の金曜日仮設協が初めて、自転車利用者に開放されました。",
+      "spoken": "せんしゅーの きんよーび、かせつきょーが はじめて じてんしゃりよーしゃに かいほーされました。",
+      "recognized": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.0600000000000005,
-          "text": "先週の金曜日仮設協が初めて、自転車利用者に開放されました。",
-          "avgLogprob": -0.09633627804842862,
-          "noSpeechProb": 5.11097110814096e-12
+          "end": 5.28,
+          "text": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
+          "avgLogprob": -0.04992699529975653,
+          "noSpeechProb": 0.040132783353328705
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.037,
-      "phonemeErrorRate": 0.0,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "橋",
-          "recognized": "協"
         }
-      ],
+      },
+      "fingerprint": "ea2c1389739e46a1d75cd4bd5081727ceb4b7c6f4ecbf0c1a6c4f21ef755c4ba",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
-        "recognized": "先週の金曜日仮設協が初めて、自転車利用者に開放されました。",
+        "expectedSpoken": "せんしゅーの きんよーび、かせつきょーが はじめて じてんしゃりよーしゃに かいほーされました。",
+        "recognized": "先週の金曜日、仮設橋が初めて自転車利用者に開放されました。",
         "reasons": [
-          "non-equivalent-morae-remain",
-          "phoneme-override-not-proven-by-dictionary-reading"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "センシュウノキンヨオヒカセツキョオガハジメテジテンシャリヨオシャニカイホオサレマシタ",
-        "normalizedRecognized": "センシュウノキンヨオヒカセツキョオガハジメテジテンシャリヨオシャニカイホオサレマシタ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "せんしゅーのきんよーびかせつきょーがはじめてじてんしゃりよーしゃにかいほーされました",
+        "normalizedRecognized": "せんしゅうのきんようびかせつきょうがはじめてじてんしゃりようしゃにかいほうされました",
+        "proofExpected": "せんしゅうのきんよおびかせつきょおがはじめてじてんしゃりよおしゃにかいほおされました",
+        "proofRecognized": "せんしゅうのきんよおびかせつきょおがはじめてじてんしゃりよおしゃにかいほおされました",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
+          "normalizer": "manual-kana-asr-only-1",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "ff369a3bc8c8524b18de2ab0d0daf6bb1ab17c3ae1ce6cb636333330ca74b2d0"
         },
         "readingTrace": {
-          "expected": [
-            {
-              "surface": "先週",
-              "reading": "センシュー",
-              "normalized": "センシュウ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "金曜",
-              "reading": "キンヨー",
-              "normalized": "キンヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "日",
-              "reading": "ヒ",
-              "normalized": "ヒ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "仮設",
-              "reading": "カセツ",
-              "normalized": "カセツ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "橋",
-              "reading": "キョー",
-              "normalized": "キョオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "初めて",
-              "reading": "ハジメテ",
-              "normalized": "ハジメテ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "自転",
-              "reading": "ジテン",
-              "normalized": "ジテン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "車",
-              "reading": "シャ",
-              "normalized": "シャ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "利用",
-              "reading": "リヨー",
-              "normalized": "リヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "者",
-              "reading": "シャ",
-              "normalized": "シャ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "開放",
-              "reading": "カイホー",
-              "normalized": "カイホオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "さ",
-              "reading": "サ",
-              "normalized": "サ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "れ",
-              "reading": "レ",
-              "normalized": "レ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "まし",
-              "reading": "マシ",
-              "normalized": "マシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
-            }
-          ],
+          "expected": [],
           "recognized": [
             {
               "surface": "先週",
-              "reading": "センシュー",
-              "normalized": "センシュウ",
-              "method": "unidic-pron"
+              "variants": [
+                "せんしゅう",
+                "せんしゅー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "せんしゅう"
             },
             {
               "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
+              "variants": [
+                "の"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "の"
             },
             {
-              "surface": "金曜",
-              "reading": "キンヨー",
-              "normalized": "キンヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "日",
-              "reading": "ヒ",
-              "normalized": "ヒ",
-              "method": "unidic-pron"
+              "surface": "金曜日",
+              "variants": [
+                "きんようび",
+                "きんよーび"
+              ],
+              "method": "reviewed-fixed-compound",
+              "selected": "きんよーび"
             },
             {
               "surface": "仮設",
-              "reading": "カセツ",
-              "normalized": "カセツ",
-              "method": "unidic-pron"
+              "variants": [
+                "かせつ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "かせつ"
             },
             {
-              "surface": "協",
-              "reading": "キョー",
-              "normalized": "キョオ",
-              "method": "unidic-pron"
+              "surface": "橋",
+              "variants": [
+                "きょう",
+                "きょー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "接尾辞",
+              "inflection": "*",
+              "selected": "きょー"
             },
             {
               "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
+              "variants": [
+                "が"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "が"
             },
             {
               "surface": "初めて",
-              "reading": "ハジメテ",
-              "normalized": "ハジメテ",
-              "method": "unidic-pron"
+              "variants": [
+                "はじめて"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "副詞",
+              "inflection": "*",
+              "selected": "はじめて"
             },
             {
               "surface": "自転",
-              "reading": "ジテン",
-              "normalized": "ジテン",
-              "method": "unidic-pron"
+              "variants": [
+                "じてん"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "じてん"
             },
             {
               "surface": "車",
-              "reading": "シャ",
-              "normalized": "シャ",
-              "method": "unidic-pron"
+              "variants": [
+                "しゃ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "接尾辞",
+              "inflection": "*",
+              "selected": "しゃ"
             },
             {
               "surface": "利用",
-              "reading": "リヨー",
-              "normalized": "リヨオ",
-              "method": "unidic-pron"
+              "variants": [
+                "りよう",
+                "りよー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "りよー"
             },
             {
               "surface": "者",
-              "reading": "シャ",
-              "normalized": "シャ",
-              "method": "unidic-pron"
+              "variants": [
+                "しゃ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "接尾辞",
+              "inflection": "*",
+              "selected": "しゃ"
             },
             {
               "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
+              "variants": [
+                "に"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "に"
             },
             {
               "surface": "開放",
-              "reading": "カイホー",
-              "normalized": "カイホオ",
-              "method": "unidic-pron"
+              "variants": [
+                "かいほう",
+                "かいほー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "かいほー"
             },
             {
               "surface": "さ",
-              "reading": "サ",
-              "normalized": "サ",
-              "method": "unidic-pron"
+              "variants": [
+                "さ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "さ"
             },
             {
               "surface": "れ",
-              "reading": "レ",
-              "normalized": "レ",
-              "method": "unidic-pron"
+              "variants": [
+                "れ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "れ"
             },
             {
               "surface": "まし",
-              "reading": "マシ",
-              "normalized": "マシ",
-              "method": "unidic-pron"
+              "variants": [
+                "まし"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "まし"
             },
             {
               "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
+              "variants": [
+                "た"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "た"
             }
           ]
         },
-        "audioSha256": "3470587d149b131a77cd0a2959bfdc7fe593ce0d16e0c5c7b14518720eb06794"
-      }
+        "audioSha256": "69059ddfb567c3f5c2f2f57b0d15e1fb766923fc52028c6ad034344045c5bd6a"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "1692f49a0a21b1ed2a81ad4473b0b8c57072c3008803dd88fcc6fb928431d7ac"
     },
     "gram-inversion-04/sentence/0": {
       "key": "gram-inversion-04/sentence/0",
@@ -32784,328 +32431,254 @@
     },
     "gram-pronouns-09/sentence/0": {
       "key": "gram-pronouns-09/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/a071bacbc3db6f1d102845213a66b479.m4a",
-      "sha256": "f73eeb21d4dad4adeb8028e62c1bedcc16d93850641f55280fb869b0404f3b26",
+      "src": "./audio/generated/ja/jf_alpha/a66cc02e73cb3edcd9696b69d9d7a50a.m4a",
+      "sha256": "7ce0e6ba7051f1e26c17a51ee7674e922116f1d133dc0a8c0fb50e9eb870dcff",
       "voiceId": "jf_alpha",
-      "fingerprint": "625ad7c6d8b6acfa7779a6b054fd89e117a8642a7405e675340edc26a2d01a17",
       "expected": "その機関は来訪者一人ひとりにバッジを渡し、上階では着用するよう求めました。",
-      "spoken": "その機関は来訪者一人ひとりにバッジを渡し、上階では着用するよう求めました。",
-      "recognized": "その期間は来訪者一人一人に罰を渡し、上海では着用するよう求めました。",
+      "spoken": "そのきかんわ らいほーしゃ ひとりひとりに ばっじを わたし、じょーかいでわ ちゃくよーするよー もとめました。",
+      "recognized": "その期間は来訪者一人一人にバッジを渡し、上界では着用するよう求めました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.24,
-          "text": "その期間は来訪者一人一人に罰を渡し、上海では着用するよう求めました。",
-          "avgLogprob": -0.10256179619361372,
-          "noSpeechProb": 7.094394516293789e-12
+          "end": 6.26,
+          "text": "その期間は来訪者一人一人にバッジを渡し、上界では着用するよう求めました。",
+          "avgLogprob": -0.11712630476270403,
+          "noSpeechProb": 0.044225551187992096
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.2571,
-      "phonemeErrorRate": 0.0833,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "機 関",
-          "recognized": "期 間"
-        },
-        {
-          "operation": "replace",
-          "expected": "ひ と り",
-          "recognized": "一 人"
-        },
-        {
-          "operation": "replace",
-          "expected": "バ ッ ジ",
-          "recognized": "罰"
-        },
-        {
-          "operation": "replace",
-          "expected": "階",
-          "recognized": "海"
         }
-      ],
+      },
+      "fingerprint": "39bf6e1ef3da6f2b538abc1ed7f1c0c8e151b265b102b5ea900a5daf1f3348dc",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "その機関は来訪者一人ひとりにバッジを渡し、上階では着用するよう求めました。",
-        "recognized": "その期間は来訪者一人一人に罰を渡し、上海では着用するよう求めました。",
+        "expectedSpoken": "そのきかんわ らいほーしゃ ひとりひとりに ばっじを わたし、じょーかいでわ ちゃくよーするよー もとめました。",
+        "recognized": "その期間は来訪者一人一人にバッジを渡し、上界では着用するよう求めました。",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "ソノキカンワライホオシャヒトリヒトリニバッジオワタシジョオカイデワチャクヨオスルヨオモトメマシタ",
-        "normalizedRecognized": "ソノキカンワライホオシャヒトリヒトリニバツオワタシシャンハイデワチャクヨオスルヨオモトメマシタ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "そのきかんわらいほーしゃひとりひとりにばっじをわたしじょーかいでわちゃくよーするよーもとめました",
+        "normalizedRecognized": "そのきかんわらいほうしゃひとりひとりにばっじをわたしじょうかいでわちゃくようするようもとめました",
+        "proofExpected": "そのきかんわらいほおしゃひとりひとりにばっじをわたしじょおかいでわちゃくよおするよおもとめました",
+        "proofRecognized": "そのきかんわらいほおしゃひとりひとりにばっじをわたしじょおかいでわちゃくよおするよおもとめました",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
-          "phonemeOverride": false,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "normalizer": "manual-kana-asr-only-1",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "3474a3ee0ab930143bf2c96a3269e09b693709e0d810016e8f5b36b10732b8cf"
         },
         "readingTrace": {
-          "expected": [
-            {
-              "surface": "その",
-              "reading": "ソノ",
-              "normalized": "ソノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "機関",
-              "reading": "キカン",
-              "normalized": "キカン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "来訪",
-              "reading": "ライホー",
-              "normalized": "ライホオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "者",
-              "reading": "シャ",
-              "normalized": "シャ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "一人ひとり",
-              "reading": "ヒトリヒトリ",
-              "normalized": "ヒトリヒトリ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "バッジ",
-              "reading": "バッジ",
-              "normalized": "バッジ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "渡し",
-              "reading": "ワタシ",
-              "normalized": "ワタシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "上階",
-              "reading": "ジョーカイ",
-              "normalized": "ジョオカイ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "で",
-              "reading": "デ",
-              "normalized": "デ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "着用",
-              "reading": "チャクヨー",
-              "normalized": "チャクヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "する",
-              "reading": "スル",
-              "normalized": "スル",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "よう",
-              "reading": "ヨー",
-              "normalized": "ヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "求め",
-              "reading": "モトメ",
-              "normalized": "モトメ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "まし",
-              "reading": "マシ",
-              "normalized": "マシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
-            }
-          ],
+          "expected": [],
           "recognized": [
             {
               "surface": "その",
-              "reading": "ソノ",
-              "normalized": "ソノ",
-              "method": "unidic-pron"
+              "variants": [
+                "その"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "その"
             },
             {
               "surface": "期間",
-              "reading": "キカン",
-              "normalized": "キカン",
-              "method": "unidic-pron"
+              "variants": [
+                "きかん"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "きかん"
             },
             {
               "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
+              "variants": [
+                "わ"
+              ],
+              "method": "grammatical-particle",
+              "selected": "わ"
             },
             {
               "surface": "来訪",
-              "reading": "ライホー",
-              "normalized": "ライホオ",
-              "method": "unidic-pron"
+              "variants": [
+                "らいほう",
+                "らいほー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "らいほー"
             },
             {
               "surface": "者",
-              "reading": "シャ",
-              "normalized": "シャ",
-              "method": "unidic-pron"
+              "variants": [
+                "しゃ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "接尾辞",
+              "inflection": "*",
+              "selected": "しゃ"
             },
             {
-              "surface": "一人一人",
-              "reading": "ヒトリヒトリ",
-              "normalized": "ヒトリヒトリ",
-              "method": "unidic-pron"
+              "surface": "一人",
+              "variants": [
+                "ひとり"
+              ],
+              "method": "counter:人",
+              "selected": "ひとり"
+            },
+            {
+              "surface": "一人",
+              "variants": [
+                "ひとり"
+              ],
+              "method": "counter:人",
+              "selected": "ひとり"
             },
             {
               "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
+              "variants": [
+                "に"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "に"
             },
             {
-              "surface": "罰",
-              "reading": "バツ",
-              "normalized": "バツ",
-              "method": "unidic-pron"
+              "surface": "バッジ",
+              "variants": [
+                "ばっじ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ばっじ"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "渡し",
-              "reading": "ワタシ",
-              "normalized": "ワタシ",
-              "method": "unidic-pron"
+              "variants": [
+                "わたし"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連用形-一般",
+              "selected": "わたし"
             },
             {
-              "surface": "上海",
-              "reading": "シャンハイ",
-              "normalized": "シャンハイ",
-              "method": "unidic-pron"
+              "surface": "上界",
+              "variants": [
+                "じょうかい",
+                "じょーかい"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "じょーかい"
             },
             {
               "surface": "で",
-              "reading": "デ",
-              "normalized": "デ",
-              "method": "unidic-pron"
+              "variants": [
+                "で"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "で"
             },
             {
               "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
+              "variants": [
+                "わ"
+              ],
+              "method": "grammatical-particle",
+              "selected": "わ"
             },
             {
               "surface": "着用",
-              "reading": "チャクヨー",
-              "normalized": "チャクヨオ",
-              "method": "unidic-pron"
+              "variants": [
+                "ちゃくよう",
+                "ちゃくよー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "ちゃくよー"
             },
             {
               "surface": "する",
-              "reading": "スル",
-              "normalized": "スル",
-              "method": "unidic-pron"
+              "variants": [
+                "する"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "する"
             },
             {
               "surface": "よう",
-              "reading": "ヨー",
-              "normalized": "ヨオ",
-              "method": "unidic-pron"
+              "variants": [
+                "よう",
+                "よー"
+              ],
+              "method": "reviewed-kana-word-pron",
+              "selected": "よー"
             },
             {
               "surface": "求め",
-              "reading": "モトメ",
-              "normalized": "モトメ",
-              "method": "unidic-pron"
+              "variants": [
+                "もとめ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連用形-一般",
+              "selected": "もとめ"
             },
             {
               "surface": "まし",
-              "reading": "マシ",
-              "normalized": "マシ",
-              "method": "unidic-pron"
+              "variants": [
+                "まし"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "まし"
             },
             {
               "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
+              "variants": [
+                "た"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "た"
             }
           ]
         },
-        "audioSha256": "f73eeb21d4dad4adeb8028e62c1bedcc16d93850641f55280fb869b0404f3b26"
-      }
+        "audioSha256": "7ce0e6ba7051f1e26c17a51ee7674e922116f1d133dc0a8c0fb50e9eb870dcff"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "98b2da1c9b05317f61abd6918ca8be2c295f0122d24d9c9226b5adcba9e32824"
     },
     "gram-pronouns-10/sentence/0": {
       "key": "gram-pronouns-10/sentence/0",
@@ -33819,289 +33392,224 @@
     },
     "gram-nonfinite-05/sentence/0": {
       "key": "gram-nonfinite-05/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/0bd49949f5ba93f3bc750bd7a14c880a.m4a",
-      "sha256": "e87808752ddb9d420e3cee34f44c86ee331998a07b9c62eb8a64a7f267e21363",
+      "src": "./audio/generated/ja/jf_alpha/ccf858a75a20accf2039b29056788232.m4a",
+      "sha256": "187a2d71f8fe7f0037066c47a9e2b0eb2e61b7320d2916e9cfb3a394767954e3",
       "voiceId": "jf_alpha",
-      "fingerprint": "4b88862e343b45a51de86ad39e7b687a1891d0f683789c6f37d8a59fe0b7ea87",
       "expected": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
-      "spoken": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
-      "recognized": "クレーンが停止するまで職員は門に近づか内容を求められています",
+      "spoken": "くれーんが てーしするまで、しょくいんわ もんに ちかづかないよー もとめられています。",
+      "recognized": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
       "segments": [
         {
           "start": 0.0,
-          "end": 5.12,
-          "text": "クレーンが停止するまで職員は門に近づか内容を求められています",
-          "avgLogprob": -0.07399810696470327,
-          "noSpeechProb": 4.3805870389435064e-12
+          "end": 5.08,
+          "text": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
+          "avgLogprob": -0.031037583450476327,
+          "noSpeechProb": 0.03852977231144905
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.129,
-      "phonemeErrorRate": 0.0154,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "な い よ う",
-          "recognized": "内 容 を"
         }
-      ],
+      },
+      "fingerprint": "8c574b972011c5d93a33d59b86f43ad00eea0942e71ffbe45ef6e62917491ab0",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
-        "recognized": "クレーンが停止するまで職員は門に近づか内容を求められています",
+        "expectedSpoken": "くれーんが てーしするまで、しょくいんわ もんに ちかづかないよー もとめられています。",
+        "recognized": "クレーンが停止するまで、職員は門に近づかないよう求められています。",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "クレエンガテエシスルマデショクインワモンニチカズカナイヨオモトメラレテイマス",
-        "normalizedRecognized": "クレエンガテエシスルマデショクインワモンニチカズカナイヨオオモトメラレテイマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "くれーんがてーしするまでしょくいんわもんにちかづかないよーもとめられています",
+        "normalizedRecognized": "くれーんがていしするまでしょくいんわもんにちかづかないようもとめられています",
+        "proofExpected": "くれえんがてえしするまでしょくいんわもんにちかずかないよおもとめられています",
+        "proofRecognized": "くれえんがてえしするまでしょくいんわもんにちかずかないよおもとめられています",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
-          "phonemeOverride": false,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "normalizer": "manual-kana-asr-only-1",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "82277a03551f2fbcac6a8b90268c7717733289b1b5fa587f547d20654945c64e"
         },
         "readingTrace": {
-          "expected": [
-            {
-              "surface": "クレーン",
-              "reading": "クレーン",
-              "normalized": "クレエン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "停止",
-              "reading": "テーシ",
-              "normalized": "テエシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "する",
-              "reading": "スル",
-              "normalized": "スル",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "まで",
-              "reading": "マデ",
-              "normalized": "マデ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "職員",
-              "reading": "ショクイン",
-              "normalized": "ショクイン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "門",
-              "reading": "モン",
-              "normalized": "モン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "近づか",
-              "reading": "チカズカ",
-              "normalized": "チカズカ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ない",
-              "reading": "ナイ",
-              "normalized": "ナイ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "よう",
-              "reading": "ヨー",
-              "normalized": "ヨオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "求め",
-              "reading": "モトメ",
-              "normalized": "モトメ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "られ",
-              "reading": "ラレ",
-              "normalized": "ラレ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "い",
-              "reading": "イ",
-              "normalized": "イ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ます",
-              "reading": "マス",
-              "normalized": "マス",
-              "method": "unidic-pron"
-            }
-          ],
+          "expected": [],
           "recognized": [
             {
               "surface": "クレーン",
-              "reading": "クレーン",
-              "normalized": "クレエン",
-              "method": "unidic-pron"
+              "variants": [
+                "くれーん"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "くれーん"
             },
             {
               "surface": "が",
-              "reading": "ガ",
-              "normalized": "ガ",
-              "method": "unidic-pron"
+              "variants": [
+                "が"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "が"
             },
             {
               "surface": "停止",
-              "reading": "テーシ",
-              "normalized": "テエシ",
-              "method": "unidic-pron"
+              "variants": [
+                "ていし",
+                "てーし"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "てーし"
             },
             {
               "surface": "する",
-              "reading": "スル",
-              "normalized": "スル",
-              "method": "unidic-pron"
+              "variants": [
+                "する"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "する"
             },
             {
               "surface": "まで",
-              "reading": "マデ",
-              "normalized": "マデ",
-              "method": "unidic-pron"
+              "variants": [
+                "まで"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "まで"
             },
             {
               "surface": "職員",
-              "reading": "ショクイン",
-              "normalized": "ショクイン",
-              "method": "unidic-pron"
+              "variants": [
+                "しょくいん"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "しょくいん"
             },
             {
               "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
+              "variants": [
+                "わ"
+              ],
+              "method": "grammatical-particle",
+              "selected": "わ"
             },
             {
               "surface": "門",
-              "reading": "モン",
-              "normalized": "モン",
-              "method": "unidic-pron"
+              "variants": [
+                "もん"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "もん"
             },
             {
               "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
+              "variants": [
+                "に"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "に"
             },
             {
               "surface": "近づか",
-              "reading": "チカズカ",
-              "normalized": "チカズカ",
-              "method": "unidic-pron"
+              "variants": [
+                "ちかづか",
+                "ちかずか"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "未然形-一般",
+              "selected": "ちかづか"
             },
             {
-              "surface": "内容",
-              "reading": "ナイヨー",
-              "normalized": "ナイヨオ",
-              "method": "unidic-pron"
+              "surface": "ない",
+              "variants": [
+                "ない"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ない"
             },
             {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "surface": "よう",
+              "variants": [
+                "よう",
+                "よー"
+              ],
+              "method": "reviewed-kana-word-pron",
+              "selected": "よー"
             },
             {
               "surface": "求め",
-              "reading": "モトメ",
-              "normalized": "モトメ",
-              "method": "unidic-pron"
+              "variants": [
+                "もとめ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "未然形-一般",
+              "selected": "もとめ"
             },
             {
               "surface": "られ",
-              "reading": "ラレ",
-              "normalized": "ラレ",
-              "method": "unidic-pron"
+              "variants": [
+                "られ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "られ"
             },
             {
               "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
+              "variants": [
+                "て"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "て"
             },
             {
               "surface": "い",
-              "reading": "イ",
-              "normalized": "イ",
-              "method": "unidic-pron"
+              "variants": [
+                "い"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "い"
             },
             {
               "surface": "ます",
-              "reading": "マス",
-              "normalized": "マス",
-              "method": "unidic-pron"
+              "variants": [
+                "ます"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ます"
             }
           ]
         },
-        "audioSha256": "e87808752ddb9d420e3cee34f44c86ee331998a07b9c62eb8a64a7f267e21363"
-      }
+        "audioSha256": "187a2d71f8fe7f0037066c47a9e2b0eb2e61b7320d2916e9cfb3a394767954e3"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "685af12d884b7733b949127db9ee0d11e4f8af294002a1811e94261f76627b16"
     },
     "gram-nonfinite-07/sentence/0": {
       "key": "gram-nonfinite-07/sentence/0",
@@ -51589,397 +51097,310 @@
     },
     "gram-lexis-52/sentence/0": {
       "key": "gram-lexis-52/sentence/0",
-      "src": "./audio/generated/ja/jf_alpha/572804d5cd2f9637eae351af62d4b481.m4a",
-      "sha256": "1dbfa70da899d23e105e52a444a35bb249f5869015df6e6db8fd3ad83f2443aa",
+      "src": "./audio/generated/ja/jf_alpha/39844e4f307558b70c071711dc77c462.m4a",
+      "sha256": "d07da6a190360e71128d8265fbc9b3a007a045ba527c11476165cd4956205e4a",
       "voiceId": "jf_alpha",
-      "fingerprint": "8bea805f7e59c1e962e1c730c13de2841733b49955530f6ad0aabb2319f8c62d",
       "expected": "旧図面の経路は頑丈な壁で塞がれていたため、技師はそれを避ける迂回路を描きました。",
-      "spoken": "旧図面の経路は頑丈な壁で塞がれていたため、技師はそれを避ける迂回路を描きました。",
-      "recognized": "旧図面の経路は、頑丈な壁で塞がれていたため岸はそれを避ける迂回路を描きました。",
+      "spoken": "きゅーずめんの けーろわ がんじょーな かべで ふさがれていたため、ぎしわ それを さける うかいろを えがきました。",
+      "recognized": "急図面の経路は頑丈な壁で塞がれていたため、義士はそれを避ける迂回路を描きました。",
       "segments": [
         {
           "start": 0.0,
-          "end": 6.58,
-          "text": "旧図面の経路は、頑丈な壁で塞がれていたため岸はそれを避ける迂回路を描きました。",
-          "avgLogprob": -0.06961993972460429,
-          "noSpeechProb": 5.8857727719408e-12
+          "end": 6.6000000000000005,
+          "text": "急図面の経路は頑丈な壁で塞がれていたため、義士はそれを避ける迂回路を描きました。",
+          "avgLogprob": -0.11203923211856322,
+          "noSpeechProb": 0.03907955065369606
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.0526,
-      "phonemeErrorRate": 0.0465,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "技 師",
-          "recognized": "岸"
         }
-      ],
+      },
+      "fingerprint": "570593597894b2974a65544566a4e1819fc01b7f729eb1f15cd6ba40d46e8475",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "旧図面の経路は頑丈な壁で塞がれていたため、技師はそれを避ける迂回路を描きました。",
-        "recognized": "旧図面の経路は、頑丈な壁で塞がれていたため岸はそれを避ける迂回路を描きました。",
+        "expectedSpoken": "きゅーずめんの けーろわ がんじょーな かべで ふさがれていたため、ぎしわ それを さける うかいろを えがきました。",
+        "recognized": "急図面の経路は頑丈な壁で塞がれていたため、義士はそれを避ける迂回路を描きました。",
         "reasons": [
-          "non-equivalent-morae-remain"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "キュウズメンノケエロワガンジョオナカベデフサガレテイタタメギシワソレオサケルウカイロオエガキマシタ",
-        "normalizedRecognized": "キュウズメンノケエロワガンジョオナカベデフサガレテイタタメガンワソレオサケルウカイロオエガキマシタ",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "きゅーずめんのけーろわがんじょーなかべでふさがれていたためぎしわそれをさけるうかいろをえがきました",
+        "normalizedRecognized": "きゅうずめんのけいろわがんじょうなかべでふさがれていたためぎしわそれをさけるうかいろをえがきました",
+        "proofExpected": "きゅうずめんのけえろわがんじょおなかべでふさがれていたためぎしわそれをさけるうかいろをえがきました",
+        "proofRecognized": "きゅうずめんのけえろわがんじょおなかべでふさがれていたためぎしわそれをさけるうかいろをえがきました",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
-          "phonemeOverride": false,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "normalizer": "manual-kana-asr-only-1",
+          "phonemeOverride": true,
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "c73df2bba053bf39084d85a4dc6ae8c791bc41ada3e6ea4fe8dd2d6551dff98c"
         },
         "readingTrace": {
-          "expected": [
-            {
-              "surface": "旧",
-              "reading": "キュー",
-              "normalized": "キュウ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "図面",
-              "reading": "ズメン",
-              "normalized": "ズメン",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "経路",
-              "reading": "ケーロ",
-              "normalized": "ケエロ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "頑丈",
-              "reading": "ガンジョー",
-              "normalized": "ガンジョオ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "な",
-              "reading": "ナ",
-              "normalized": "ナ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "壁",
-              "reading": "カベ",
-              "normalized": "カベ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "で",
-              "reading": "デ",
-              "normalized": "デ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "塞が",
-              "reading": "フサガ",
-              "normalized": "フサガ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "れ",
-              "reading": "レ",
-              "normalized": "レ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "い",
-              "reading": "イ",
-              "normalized": "イ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ため",
-              "reading": "タメ",
-              "normalized": "タメ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "技師",
-              "reading": "ギシ",
-              "normalized": "ギシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "それ",
-              "reading": "ソレ",
-              "normalized": "ソレ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "避ける",
-              "reading": "サケル",
-              "normalized": "サケル",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "迂回",
-              "reading": "ウカイ",
-              "normalized": "ウカイ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "路",
-              "reading": "ロ",
-              "normalized": "ロ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "描き",
-              "reading": "エガキ",
-              "normalized": "エガキ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "まし",
-              "reading": "マシ",
-              "normalized": "マシ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
-            }
-          ],
+          "expected": [],
           "recognized": [
             {
-              "surface": "旧",
-              "reading": "キュー",
-              "normalized": "キュウ",
-              "method": "unidic-pron"
+              "surface": "急",
+              "variants": [
+                "きゅう",
+                "きゅー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "きゅう"
             },
             {
               "surface": "図面",
-              "reading": "ズメン",
-              "normalized": "ズメン",
-              "method": "unidic-pron"
+              "variants": [
+                "ずめん"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "ずめん"
             },
             {
               "surface": "の",
-              "reading": "ノ",
-              "normalized": "ノ",
-              "method": "unidic-pron"
+              "variants": [
+                "の"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "の"
             },
             {
               "surface": "経路",
-              "reading": "ケーロ",
-              "normalized": "ケエロ",
-              "method": "unidic-pron"
+              "variants": [
+                "けいろ",
+                "けーろ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "けーろ"
             },
             {
               "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
+              "variants": [
+                "わ"
+              ],
+              "method": "grammatical-particle",
+              "selected": "わ"
             },
             {
               "surface": "頑丈",
-              "reading": "ガンジョー",
-              "normalized": "ガンジョオ",
-              "method": "unidic-pron"
+              "variants": [
+                "がんじょう",
+                "がんじょー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "形状詞",
+              "inflection": "*",
+              "selected": "がんじょー"
             },
             {
               "surface": "な",
-              "reading": "ナ",
-              "normalized": "ナ",
-              "method": "unidic-pron"
+              "variants": [
+                "な"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "な"
             },
             {
               "surface": "壁",
-              "reading": "カベ",
-              "normalized": "カベ",
-              "method": "unidic-pron"
+              "variants": [
+                "かべ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "かべ"
             },
             {
               "surface": "で",
-              "reading": "デ",
-              "normalized": "デ",
-              "method": "unidic-pron"
+              "variants": [
+                "で"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "で"
             },
             {
               "surface": "塞が",
-              "reading": "フサガ",
-              "normalized": "フサガ",
-              "method": "unidic-pron"
+              "variants": [
+                "ふさが"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "未然形-一般",
+              "selected": "ふさが"
             },
             {
               "surface": "れ",
-              "reading": "レ",
-              "normalized": "レ",
-              "method": "unidic-pron"
+              "variants": [
+                "れ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "れ"
             },
             {
               "surface": "て",
-              "reading": "テ",
-              "normalized": "テ",
-              "method": "unidic-pron"
+              "variants": [
+                "て"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "て"
             },
             {
               "surface": "い",
-              "reading": "イ",
-              "normalized": "イ",
-              "method": "unidic-pron"
+              "variants": [
+                "い"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "い"
             },
             {
               "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
+              "variants": [
+                "た"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "た"
             },
             {
               "surface": "ため",
-              "reading": "タメ",
-              "normalized": "タメ",
-              "method": "unidic-pron"
+              "variants": [
+                "ため"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ため"
             },
             {
-              "surface": "岸",
-              "reading": "ガン",
-              "normalized": "ガン",
-              "method": "unidic-pron"
+              "surface": "義士",
+              "variants": [
+                "ぎし"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "ぎし"
             },
             {
               "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
+              "variants": [
+                "わ"
+              ],
+              "method": "grammatical-particle",
+              "selected": "わ"
             },
             {
               "surface": "それ",
-              "reading": "ソレ",
-              "normalized": "ソレ",
-              "method": "unidic-pron"
+              "variants": [
+                "それ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "それ"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "避ける",
-              "reading": "サケル",
-              "normalized": "サケル",
-              "method": "unidic-pron"
+              "variants": [
+                "さける"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連体形-一般",
+              "selected": "さける"
             },
             {
               "surface": "迂回",
-              "reading": "ウカイ",
-              "normalized": "ウカイ",
-              "method": "unidic-pron"
+              "variants": [
+                "うかい"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "うかい"
             },
             {
               "surface": "路",
-              "reading": "ロ",
-              "normalized": "ロ",
-              "method": "unidic-pron"
+              "variants": [
+                "ろ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "接尾辞",
+              "inflection": "*",
+              "selected": "ろ"
             },
             {
               "surface": "を",
-              "reading": "オ",
-              "normalized": "オ",
-              "method": "unidic-pron"
+              "variants": [
+                "を",
+                "お"
+              ],
+              "method": "grammatical-particle",
+              "selected": "を"
             },
             {
               "surface": "描き",
-              "reading": "エガキ",
-              "normalized": "エガキ",
-              "method": "unidic-pron"
+              "variants": [
+                "えがき"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "動詞",
+              "inflection": "連用形-一般",
+              "selected": "えがき"
             },
             {
               "surface": "まし",
-              "reading": "マシ",
-              "normalized": "マシ",
-              "method": "unidic-pron"
+              "variants": [
+                "まし"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "まし"
             },
             {
               "surface": "た",
-              "reading": "タ",
-              "normalized": "タ",
-              "method": "unidic-pron"
+              "variants": [
+                "た"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "た"
             }
           ]
         },
-        "audioSha256": "1dbfa70da899d23e105e52a444a35bb249f5869015df6e6db8fd3ad83f2443aa"
-      }
+        "audioSha256": "d07da6a190360e71128d8265fbc9b3a007a045ba527c11476165cd4956205e4a"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "02daf03184ad01c3c9e32d5aae6ee0a0b0a97d38f5925b4b45c6835adf83666f"
     },
     "gram-lexis-54/sentence/0": {
       "key": "gram-lexis-54/sentence/0",

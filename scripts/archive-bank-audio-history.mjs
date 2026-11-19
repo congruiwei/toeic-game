@@ -12,7 +12,7 @@ const work=process.env.TOEIC_TTS_DIR||path.join(os.homedir(),'.local/share/toeic
 const apply=process.argv.includes('--apply');
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const read=async(file,fallback)=>{try{return JSON.parse(await fs.readFile(file,'utf8'));}catch(e){if(e.code==='ENOENT')return fallback;throw e;}};
-const write=async(file,value)=>{await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file+'.tmp',JSON.stringify(value,null,2)+'\n');await fs.rename(file+'.tmp',file);};
+const write=async(file,value,compact=false)=>{await fs.mkdir(path.dirname(file),{recursive:true});await fs.writeFile(file+'.tmp',JSON.stringify(value,null,compact?undefined:2)+'\n');await fs.rename(file+'.tmp',file);};
 const source=await read(path.join(root,'data/audio/source.json'),{});
 let manifest=await read(path.join(root,'data/audio/manifest.json'),{});
 const units=new Map(source.units.map(u=>[`${u.language}:${u.bank}:${u.key}`,u]));
@@ -110,7 +110,7 @@ if(quality){
       version.archive={published:false,sha256:record.sha256,bytes:record.bytes,copyVerified:true};
     }
   }
-  await write(path.join(root,'data/audio/quality-review.json'),quality);
+  await write(path.join(root,'data/audio/quality-review.json'),quality,true);
 }
 // This is the only destructive step, after every backup and its provenance was
 // written and verified. A partial interruption is safe to run again.

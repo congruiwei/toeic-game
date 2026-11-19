@@ -281,10 +281,22 @@ STRONG_FALLBACK_SHA256 = 'e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e
 _context_checks = None
 _lexical_checks = None
 _cross_model_checks = None
+_manual_kana_checks = None
 
 
 def valid_published_asr(unit, clip, record, quality_rows=None, first_ids=None):
     """Independent acceptance counts only with its method-specific bound proof."""
+    if 'manualKanaId' in (clip or {}) or 'manualKanaId' in (record or {}) or (record or {}).get('comparison',{}).get('provenance',{}).get('comparison')=='manual-kana-asr-only-1':
+        if not unit:return False
+        global _manual_kana_checks
+        if _manual_kana_checks is None:
+            path=ROOT/'scripts/audio-manual-kana.py'
+            if not path.is_file():return False
+            spec=importlib.util.spec_from_file_location('published_manual_kana',path)
+            _manual_kana_checks=importlib.util.module_from_spec(spec);spec.loader.exec_module(_manual_kana_checks)
+        if quality_rows is None:quality_rows=read(OUT/'quality-review.json',{}).get('records',{})
+        token=f"{unit['language']}:{unit['bank']}:{unit['key']}"
+        return _manual_kana_checks.valid_record(unit,clip,record,quality_rows.get(token,{}),evidence.valid_asr)
     if unit and not voice_rules.clip_recipe_proof(unit,clip):return False
     if clip and not voice_rules.strict_comparison_evidence(clip,record):return False
     if not evidence.valid_asr(clip,record):return False
@@ -526,7 +538,7 @@ def main():
     for pack in packs.values():
         for clip in pack['clips'].values():
             if (ROOT/clip['src']).exists():
-                emitted[Path(clip['src']).stem] = {k:v for k,v in clip.items() if k not in ('voiceId','sourceVoiceId','voiceOverrideInput','language','text','spoken','inputSha256','asrStatus','required','speaker')}
+                emitted[Path(clip['src']).stem] = {k:v for k,v in clip.items() if k not in ('voiceId','sourceVoiceId','voiceOverrideInput','language','text','spoken','inputSha256','asrStatus','required','speaker','manualKanaId')}
     selected_tokens=set(read(args.tokens_file,[])) if args.tokens_file else None
     chosen = [u for u in source['units'] if (not args.language or u['language'] == args.language)
               and (not args.banks or u['bank'] in args.banks) and (not args.keys or u['key'] in args.keys)
@@ -602,7 +614,7 @@ def main():
                 atomic(temp/(fingerprint+'.json'), {**u,'voiceId':vid,**({'sourceVoiceId':u['voiceId']} if vid!=u['voiceId'] else {}),'spoken':spoken,'phonemes':phonemes,'generation':generation})
             record.update(voiceId=vid,language=language,text=u['text'],spoken=spoken,inputSha256=input_sha,
                           asrStatus='pending',required=u.get('required',True),synthesisSpeed=speed)
-            record.pop('sourceVoiceId',None);record.pop('voiceOverrideInput',None)
+            record.pop('sourceVoiceId',None);record.pop('voiceOverrideInput',None);record.pop('manualKanaId',None)
             if vid!=u['voiceId']:
                 record['sourceVoiceId']=u['voiceId']
                 record['voiceOverrideInput']=json.dumps(input_payload(generation,u,override)[1],sort_keys=True)

@@ -9,6 +9,7 @@ import {sourceVoice,validEntryVoices,validateVoiceSelection,validateVoiceRecogni
 import {validateLexicalAcceptance} from './audio-lexical-proof.mjs';
 import {validateHumanReview,humanReviewState} from './audio-human-review.mjs';
 import {validateCrossModelAcceptance} from './audio-cross-model-proof.mjs';
+import {validateManualKanaRecord,validateManualKanaReport,validManualKanaSupersession} from './audio-manual-kana.mjs';
 
 const ROOT=fileURLToPath(new URL('../',import.meta.url));
 const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
@@ -21,7 +22,7 @@ const expect=(ok,message,errors)=>{if(!ok)errors.push(message);};
 // addressed ASR batch evidence belong in the public audio metadata directory.
 export const AUDIO_METADATA_REPORTS=Object.freeze([
   'source.json','manifest.json','overrides.json','generation-errors.json','human-review.json',
-  'regenerations.json','retries.json','audit-summary.json','generation-run.json',
+  'manual-kana-review.json','regenerations.json','retries.json','audit-summary.json','generation-run.json',
   'benchmark.json','benchmark-asr.json','benchmark-asr-batch.json',
   'normalization-review.json','pronunciation-review.json','archive.json',
   'unpublished-optional.json','validation.json','retry-coverage-error.json','quality-review.json','comparison-revision.json','review-queue.json',
@@ -212,6 +213,7 @@ export function pendingInputCorrections(review,packs,retries={records:{}},qualit
     const target=delivery?.appliedOverride,binding=delivery?.sourceBinding;
     if(knownNotes.get(id)?.disposition==='pending-reviewed-input-correction')reason='Newly observed confirmed input error still awaits reviewed delivery';
     else if(!delivery)reason='Confirmed input error has no reviewed correction delivery';
+    else if(played&&validManualKanaSupersession(fallbackUnit,played,record,quality,delivery,{validateOriginal:validASREvidence}))continue;
     else if(!clip)reason='Reviewed target has not been generated';
     else if(!target?.phonemes||clip.phonemeSha256!==sha(target.phonemes)||
       !binding||clip.text!==binding.text||sourceVoice(clip)!==binding.voiceId||clip.language!==binding.language||
@@ -275,6 +277,7 @@ export function validateClip(unit,clip,record,{allowIncomplete=false,strictQuali
 }
 
 export function validPublishedASREvidence(unit,clip,record,row,firstWordIds=new Set()){
+  if(Object.hasOwn(clip??{},'manualKanaId')||Object.hasOwn(record??{},'manualKanaId')||record?.comparison?.provenance?.comparison==='manual-kana-asr-only-1')return validateManualKanaRecord(unit,clip,record,row,{validateOriginal:validASREvidence});
   if(!validASREvidence(clip,record))return false;
   if(!Object.hasOwn(record,'acceptance'))return record.status!=='accepted';
   if(record.status==='accepted'&&record.acceptance?.method==='same-media-full-model-crosscheck-v1')
@@ -297,6 +300,7 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
   errors.push(...validateHumanReview(humanDoc));
   if(validateHumanReview(humanDoc).length)humanDoc=null;
   for(const entry of [...(humanDoc?.feedback??[]),...(humanDoc?.requests??[])])expect(units.get(entry.token)?.text===entry.text,`Human-review source changed ${entry.token}`,errors);
+  let manualKanaReport=null;try{manualKanaReport=JSON.parse(await fs.readFile(path.join(root,'data/audio/manual-kana-review.json')));}catch(e){if(e.code!=='ENOENT')throw e;}
   let inputReview={};try{inputReview=JSON.parse(await fs.readFile(path.join(root,'data/audio/normalization-review.json')));}catch(e){if(e.code!=='ENOENT')throw e;}
   // Bank and translation files remain the authority: full key/text coverage is
   // checked independently of the generated source's required flags.
@@ -336,7 +340,7 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
     for(const [key,clip] of Object.entries(pack.clips)){
       const u=units.get(`${id}:${key}`);expect(u,`Unknown audio source ${id}:${key}`,errors);
       if(u)errors.push(...validateClip(u,clip,audit.records[key],{allowIncomplete,strictQuality,retry:retries.records[token(u)],override:voiceOverrides.entries?.[token(u)],generation:index.generation,repair:qualityReview.records?.[token(u)]?.repair,human:humanReviewState(humanDoc,u,clip)}));
-      if(audit.records[key]?.status==='accepted'||audit.records[key]?.acceptance!==undefined)expect(validPublishedASREvidence(u,clip,audit.records[key],qualityReview.records?.[`${id}:${key}`],firstWordIds),`Invalid independent audio acceptance ${id}:${key}`,errors);
+      if(clip.manualKanaId!==undefined||audit.records[key]?.manualKanaId!==undefined||audit.records[key]?.status==='accepted'||audit.records[key]?.acceptance!==undefined)expect(validPublishedASREvidence(u,clip,audit.records[key],qualityReview.records?.[`${id}:${key}`],firstWordIds),`Invalid independent audio acceptance ${id}:${key}`,errors);
       if(!audio.has(clip.src)&&/^\.\/audio\/generated\/(en|ja)\/[a-z_]+\/[a-f0-9]{32}\.m4a$/.test(clip.src||'')){
         const bytes=await fs.readFile(path.join(root,clip.src));
         expect(bytes.length===clip.bytes&&sha(bytes)===clip.sha256,`M4A hash/bytes mismatch ${clip.src}`,errors);
@@ -388,6 +392,8 @@ export async function validateAudio({root=ROOT,allowIncomplete=false,strictQuali
     }catch(e){errors.push(`Retry file missing/invalid ${entry.token}: ${e.message}`);}
   }
   const totals=index.totals;
+  errors.push(...validateManualKanaReport(source,manualKanaReport,qualityReview,packs,voiceOverrides,inputReview,humanDoc,{validateOriginal:validASREvidence}));
+  if(manualKanaReport)expect(manualKanaReport.sourceSha256===index.sourceSha256,'Manual kana report source fingerprint mismatch',errors);
   const pendingCorrections=pendingInputCorrections(inputReview,packs,retries,qualityReview,units);
   if(!allowIncomplete)expect(!pendingCorrections.length,`Reviewed audio input corrections still pending: ${pendingCorrections.map(row=>row.token).join(', ')}`,errors);
   async function mediaFiles(directory){

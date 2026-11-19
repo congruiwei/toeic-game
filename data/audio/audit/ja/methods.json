@@ -3499,199 +3499,154 @@
     },
     "intent/steps/1/0": {
       "key": "intent/steps/1/0",
-      "src": "./audio/generated/ja/jf_alpha/e9814c970db4a1b0dd958c2514408616.m4a",
-      "sha256": "6011c58a9a2f68b4b9c2d26f41a6a3bf0cce09bb9dd575a32724f31f22c82cff",
+      "src": "./audio/generated/ja/jf_alpha/9824dcb0131f920412d59e8e64daba30.m4a",
+      "sha256": "8504d34a34758ba96140af9c85075f282997425385e0869363bd2a42135fee91",
       "voiceId": "jf_alpha",
-      "fingerprint": "5b6232153995fd45072f04c5f491f3e64a4caaacd9ca45317029138b9d4fb9c6",
       "expected": "校正刷りはまだ法務部にあります。",
-      "spoken": "校正刷りはまだ法務部にあります。",
-      "recognized": "構成ずりはまだホーム部にあります。",
+      "spoken": "こーせーずりわ まだ ほーむぶに あります。",
+      "recognized": "構成ズリはまだホーム部にあります",
       "segments": [
         {
           "start": 0.0,
-          "end": 2.32,
-          "text": "構成ずりはまだホーム部にあります。",
-          "avgLogprob": -0.22358907659848531,
-          "noSpeechProb": 4.03277368096755e-12
+          "end": 2.2800000000000002,
+          "text": "構成ズリはまだホーム部にあります",
+          "avgLogprob": -0.22666402693305696,
+          "noSpeechProb": 0.05528656393289566
         }
       ],
-      "recognitionMethod": "individual-beam5",
       "recognitionGeneration": {
-        "model": "whisper-large-v3-turbo",
-        "modelSha256": "e76620f83d5f5b69efd3d87e3dc180c1bd21df9fbebacfd4335e5e1efcc018da",
+        "model": "whisper-large-v3",
+        "modelSha256": "69f74147e3334731bc3a76048724833325d2ec74642fb52620eda87352e3d4f1",
         "device": "cpu",
         "computeType": "int8",
+        "beamSize": 5,
+        "conditionOnPreviousText": false,
+        "prompt": null,
+        "vadFilter": false,
         "packages": {
           "faster-whisper": "1.2.1",
           "ctranslate2": "4.9.0",
           "av": "16.0.1"
-        },
-        "beamSize": 5,
-        "conditionOnPreviousText": false,
-        "prompt": null,
-        "vadFilter": false
-      },
-      "singleFileVerification": true,
-      "recognitionAttempts": 1,
-      "status": "review",
-      "metric": "CER",
-      "errorRate": 0.4,
-      "phonemeErrorRate": 0.0294,
-      "differences": [
-        {
-          "operation": "replace",
-          "expected": "校 正 刷",
-          "recognized": "構 成 ず"
-        },
-        {
-          "operation": "replace",
-          "expected": "法 務",
-          "recognized": "ホ ー ム"
         }
-      ],
+      },
+      "fingerprint": "2a7007b9d29baf45c69541df0fdd953331815b000236dc6ffe435123231464bd",
+      "recognitionMethod": "individual-beam5",
+      "singleFileVerification": true,
+      "status": "matched",
       "comparison": {
-        "equivalent": false,
+        "equivalent": true,
         "ruleVersion": "strict-audio-equivalence-1",
         "language": "ja",
-        "expectedSpoken": "校正刷りはまだ法務部にあります。",
-        "recognized": "構成ずりはまだホーム部にあります。",
+        "expectedSpoken": "こーせーずりわ まだ ほーむぶに あります。",
+        "recognized": "構成ズリはまだホーム部にあります",
         "reasons": [
-          "non-equivalent-morae-remain",
-          "phoneme-override-not-proven-by-dictionary-reading"
+          "exact-manual-kana-vs-asr-surface-reading"
         ],
-        "normalizedExpected": "コオセエスリワマダホオムブニアリマス",
-        "normalizedRecognized": "コオセエズリワマダホオムブニアリマス",
-        "proofExpected": null,
-        "proofRecognized": null,
+        "normalizedExpected": "こーせーずりわまだほーむぶにあります",
+        "normalizedRecognized": "こうせいずりわまだほーむぶにあります",
+        "proofExpected": "こおせえずりわまだほおむぶにあります",
+        "proofRecognized": "こおせえずりわまだほおむぶにあります",
         "provenance": {
-          "comparison": "exact transforms only; no edit-distance acceptance",
-          "cmudict": "1.1.3",
+          "comparison": "manual-kana-asr-only-1",
+          "referencePolicy": "literal-handwritten-kana; never tokenized or re-read",
+          "asrPolicy": "ASR-only current-surface kana/pron; no lemma or fuzzy matching",
           "fugashi": "1.5.2",
           "unidic": "1.1.0",
-          "pykakasi": "2.3.0",
-          "normalizer": "normalize",
+          "normalizer": "manual-kana-asr-only-1",
           "phonemeOverride": true,
-          "articlePolicyEnabled": true,
-          "ruleFileSha256": "6ac8fe0766f5011bb9b6c38070e567530873afbc9e5fb0f5a180611ac7b71d11",
-          "normalizerFileSha256": "a0516df949de8fba57e4e4e22617ceab3ae772ff234b47c39040a9c7ac61795a",
+          "articlePolicyEnabled": false,
+          "ruleFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
+          "normalizerFileSha256": "2980305d9a1be87dd7d07cb580042bbd01c58be41548304113426163026f5c44",
           "sourceTextSha256": "711294d13e61760293e4fc9cc6b2eac58faf7140eced80284d7b2bbdbc91252f"
         },
         "readingTrace": {
-          "expected": [
-            {
-              "surface": "校正",
-              "reading": "コーセー",
-              "normalized": "コオセエ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "刷り",
-              "reading": "スリ",
-              "normalized": "スリ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "まだ",
-              "reading": "マダ",
-              "normalized": "マダ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "法務",
-              "reading": "ホーム",
-              "normalized": "ホオム",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "部",
-              "reading": "ブ",
-              "normalized": "ブ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "あり",
-              "reading": "アリ",
-              "normalized": "アリ",
-              "method": "unidic-pron"
-            },
-            {
-              "surface": "ます",
-              "reading": "マス",
-              "normalized": "マス",
-              "method": "unidic-pron"
-            }
-          ],
+          "expected": [],
           "recognized": [
             {
               "surface": "構成",
-              "reading": "コーセー",
-              "normalized": "コオセエ",
-              "method": "unidic-pron"
+              "variants": [
+                "こうせい",
+                "こーせい",
+                "こうせー",
+                "こーせー"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "こーせー"
             },
             {
-              "surface": "ずり",
-              "reading": "ズリ",
-              "normalized": "ズリ",
-              "method": "unidic-pron"
+              "surface": "ズリ",
+              "variants": [
+                "ずり"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ずり"
             },
             {
               "surface": "は",
-              "reading": "ワ",
-              "normalized": "ワ",
-              "method": "unidic-pron"
+              "variants": [
+                "わ"
+              ],
+              "method": "grammatical-particle",
+              "selected": "わ"
             },
             {
               "surface": "まだ",
-              "reading": "マダ",
-              "normalized": "マダ",
-              "method": "unidic-pron"
+              "variants": [
+                "まだ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "まだ"
             },
             {
               "surface": "ホーム",
-              "reading": "ホーム",
-              "normalized": "ホオム",
-              "method": "unidic-pron"
+              "variants": [
+                "ほーむ"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ほーむ"
             },
             {
               "surface": "部",
-              "reading": "ブ",
-              "normalized": "ブ",
-              "method": "unidic-pron"
+              "variants": [
+                "ぶ"
+              ],
+              "method": "unidic-current-surface",
+              "pos": "名詞",
+              "inflection": "*",
+              "selected": "ぶ"
             },
             {
               "surface": "に",
-              "reading": "ニ",
-              "normalized": "ニ",
-              "method": "unidic-pron"
+              "variants": [
+                "に"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "に"
             },
             {
               "surface": "あり",
-              "reading": "アリ",
-              "normalized": "アリ",
-              "method": "unidic-pron"
+              "variants": [
+                "あり"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "あり"
             },
             {
               "surface": "ます",
-              "reading": "マス",
-              "normalized": "マス",
-              "method": "unidic-pron"
+              "variants": [
+                "ます"
+              ],
+              "method": "literal-asr-kana",
+              "selected": "ます"
             }
           ]
         },
-        "audioSha256": "6011c58a9a2f68b4b9c2d26f41a6a3bf0cce09bb9dd575a32724f31f22c82cff"
-      }
+        "audioSha256": "8504d34a34758ba96140af9c85075f282997425385e0869363bd2a42135fee91"
+      },
+      "recognitionAttempts": 1,
+      "manualKanaId": "8308e4c608345ea83368766eb754b94a65a5f4dcfc9d629a5e98ebbac00d413b"
     },
     "p6-context/steps/1/0": {
       "key": "p6-context/steps/1/0",

@@ -387,7 +387,7 @@ def main():
                 existing=report['records'].get(key,{})
                 identity=existing.get('recognitionGeneration',individual)
                 published_actual=bank.valid_published_asr(source_units.get(f'{language}:{name}:{key}'),clip,existing,quality_rows,first_ids)
-                context_accepted='acceptance' in existing and published_actual
+                context_accepted=('acceptance' in existing or 'manualKanaId' in existing) and published_actual
                 done=context_accepted or (identity in [individual,screening] and existing.get('fingerprint')==fingerprint(identity,clip,language) and published_actual)
                 if done:
                     continue
