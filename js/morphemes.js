@@ -35,10 +35,12 @@ export function wordPartsView(word,data,{heading='词根词缀'}={}){
  return `<section class="morph-word" data-morph-word="${esc(word.id)}"><h4>${esc(heading)} · <span lang="en">${esc(word.word)}</span></h4>${parts}${word.partsNote?`<p>${esc(word.partsNote.zh)}</p><p lang="ja">${esc(word.partsNote.ja)}</p>${jaAudio(word.id+'/parts-note',word.partsNote.ja)}`:''}${word.partsTrap?`<div class="morph-trap"><strong>拆词陷阱</strong><p>${esc(word.partsTrap.zh)}</p><p lang="ja">${esc(word.partsTrap.ja)}</p>${jaAudio(word.id+'/parts-trap',word.partsTrap.ja)}</div>`:''}${sourceLinks([...(word.partsSources||[]),...refs.flatMap(m=>m.sources),...(word.partsTrap?.sources||[])],data)}</section>`;
 }
 function selectedWords(ref,q,selected,correct,vocab,jaMeaning){
- const target=ref.mode==='vocab'?vocab.find(w=>w.id===ref.id):null;
+ const targetId=ref.mode==='vocab'?ref.id:ref.mode==='confusable'?q.wordId:null;
+ const target=targetId?vocab.find(w=>w.id===targetId):null;
  const found=[];if(target)found.push({word:target,label:'正确答案'});
  function matches(value){
   if(!nonempty(value)||value==='__isle_unknown__')return[];
+  if(ref.mode==='confusable')return vocab.filter(w=>w.id===q.optionWordIds?.[q.options.indexOf(value)]);
   if(ref.mode!=='vocab')return vocab.filter(w=>w.word.toLowerCase()===value.toLowerCase());
   const f=ref.format||'meaning';return vocab.filter(w=>f==='meaning'?w.zh===value:f==='meaning-ja'?jaMeaning?.(w.id)===value:f==='match'?w.paraphrase===value:w.word.toLowerCase()===value.toLowerCase());
  }

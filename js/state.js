@@ -1,5 +1,6 @@
 import {migrateExpressions} from './expressions.js';
 import {migratePersonalVocab} from './personal-vocab.js';
+import {reviewConfusableWord} from './confusable-memory.js';
 import {migratePrediction} from './prediction-migration.js';
 import {validDiagnosis,restoreDiagnosisRanges,reconcileDiagnosis,diagnosedDifficulty,diagnosisPractice} from './diagnosis.js';
 import {migrateReview,advance,gradeError,responseRating,reviewBand} from './review-scheduler.js';
@@ -246,7 +247,8 @@ export function reward(s, q, ref, ok, now = Date.now(), {screenCheck=false,sourc
   s.seen[q.id] = (s.seen[q.id] || 0) + 1;
   const grade=responseRating(ok,activeMs,screenCheck);
   gradeError(s,ref,ok,grade,now);
-  if (q.skill === 'vocab') {
+  if (ref.mode === 'confusable')reviewConfusableWord(s,q,ref,ok,grade,now);
+  if (ref.mode === 'vocab') {
     if(!screenCheck && ok && s.screening?.marks[q.id]) s.screening.marks[q.id]='studied';
     const w = s.words[q.id] || { box: 0, due: 0, right: 0, tries: 0 };
     w.fsrs = advance(w.fsrs,grade,now,s.settings.retention);

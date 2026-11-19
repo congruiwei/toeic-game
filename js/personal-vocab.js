@@ -6,7 +6,7 @@ const record = value => value !== null && typeof value === 'object' && !Array.is
 const text = (value, max=20000) => typeof value === 'string' && value.trim().length > 0 && value.length <= max;
 const keyOK = value => text(value,180) && /^[a-zA-Z0-9_-]+$/.test(value) && !['__proto__','constructor','prototype'].includes(value);
 const timeOK = value => Number.isSafeInteger(value) && value >= 0 && value <= 8640000000000000;
-const modes = ['vocab','part1','part2','grammar','dialogue','reading','dictation'];
+const modes = ['vocab','confusable','part1','part2','grammar','dialogue','reading','dictation'];
 const sourceOK = source => record(source) && keyOK(source.id) && modes.includes(source.mode)
   && typeof source.context === 'string' && source.context.length <= 20000
   && typeof source.option === 'string' && source.option.length <= 20000;

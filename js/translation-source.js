@@ -21,6 +21,14 @@ export function sourceUnits(bank, records) {
     sentences(q.id, 'prompt', q.prompt);
     q.options?.forEach((option,i) => sentences(q.id, `options/${i}`, option, { option:i }));
   }
+  if(bank==='confusables'){
+    for(const group of records.groups)sentences(group.id,'difference',group.difference.en);
+    for(const word of Object.values(records.words))if(!word.wordId){
+      add(word.id,'meaning',word.word,'meaning',{zh:word.zh,pos:word.pos});sentences(word.id,'example',word.example);
+    }
+    for(const q of records.questions)sentences(q.id,'sentence',q.sentence);
+    return units;
+  }
   for (const item of records) {
     if (bank === 'vocab') {
       add(item.id, 'meaning', item.word, 'meaning', { zh:item.zh, pos:item.pos });

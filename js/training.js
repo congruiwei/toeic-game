@@ -9,6 +9,7 @@ const esc = (s) =>
     (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c],
   );
 const routes = [
+  ['confusable','vocab','易混词对决','形近、音近与义近 · 答错词自动进入我的单词本'],
   ['vocab', 'vocab', '单词采集', '商务词卡 · 间隔复习'],
   ['part1','reading','看图听句','Part 1 · 看原创插画，听四句描述'],
   ['part2', 'part2', '听音寻迹', 'Part 2 · 首词与情景回应'],
@@ -27,8 +28,9 @@ export function configureView(mode, state) {
   const route = routes.find((x) => x[0] === mode);
   if (!route) return '';
   const all = ['', '自动选择'],
-    skill = { vocab: 'vocab', grammar: 'grammar', reading: 'reading' }[mode] || 'listening';
+    skill = { vocab: 'vocab', confusable:'vocab', grammar: 'grammar', reading: 'reading' }[mode] || 'listening';
   let fields = '';
+  if(mode==='confusable')fields=field('mode-filter','练习词组',[['','混合对决'],...bank.confusables.groups.map(g=>[g.id,g.members.map(id=>bank.confusables.words[id].word).join(' / ')])]);
   if (mode === 'vocab')
     fields =
       field('mode-filter', '词汇主题', [

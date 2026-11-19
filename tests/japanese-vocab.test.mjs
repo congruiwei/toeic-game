@@ -17,6 +17,7 @@ const realFetch = globalThis.fetch;
 globalThis.fetch = async url => {
   calls.push(String(url));
   if (url === './data/vocab.json') return Response.json(words);
+  if (url === './data/confusable-candidates.json')return Response.json(JSON.parse(await fs.readFile(new URL('data/confusable-candidates.json',root),'utf8')));
   if (url === './data/i18n/ja/vocab-meanings.json') return Response.json(small);
   throw Error(`Unexpected fetch: ${url}`);
 };
@@ -34,7 +35,7 @@ test('Chinese questions need no translation; Japanese synchronous questions fail
   const before = question(oldRef);
   assert.equal(before.answer,words[0].zh);
   await ensureVocabLanguage(oldRef);
-  assert.deepEqual(calls,['./data/vocab.json']);
+  assert.deepEqual(calls,['./data/vocab.json','./data/confusable-candidates.json']);
   assert.throws(() => question({...oldRef,format:'meaning-ja'}), {code:'VOCAB_JA_NOT_READY'});
   assert.throws(() => question({...oldRef,format:'english-ja'}), {code:'VOCAB_JA_NOT_READY'});
   await Promise.all([
@@ -42,7 +43,7 @@ test('Chinese questions need no translation; Japanese synchronous questions fail
     ensureVocabLanguage({...oldRef,format:'english-ja'}),
     ensureVocabMeanings(),
   ]);
-  assert.deepEqual(calls,['./data/vocab.json','./data/i18n/ja/vocab-meanings.json']);
+  assert.deepEqual(calls,['./data/vocab.json','./data/confusable-candidates.json','./data/i18n/ja/vocab-meanings.json']);
   assert.deepEqual(question(oldRef),before);
   assert.equal(japaneseMeaning(words[0].id),meaning(words[0].id));
   assert.throws(() => japaneseMeaning('missing-id'), {code:'VOCAB_JA_NOT_READY'});
@@ -148,13 +149,13 @@ test('all Japanese questions have unique stable answers, safe distractors, and b
   assert.ok(!calls.some(url=>url.endsWith('/ja/vocab.json')),'large example pack is never requested');
 });
 
-test('the original 5435 option lists retain their exact pre-change deterministic ordering', () => {
-  // Freeze the original candidate pool for this algorithm compatibility check;
-  // newly authored cards intentionally enlarge the live pool.
+test('the original candidate pool keeps deterministic ordering under the explicitly curated distractor revision', () => {
+  // The curated revision intentionally replaces old external-pair priorities.
+  // Freeze its projection and the original pool independently of newly added cards.
   const original=words.filter(w=>w.i18nDetails!==true);
   assert.equal(original.length,1087);
   const bytes=JSON.stringify(original.flatMap(w=>formats.map(f=>vocabularyOptions(w,f,original))));
-  assert.equal(createHash('sha256').update(bytes).digest('hex'),'0b0384276a46ae50c215c445d5c79f3a7846278c26118d3388b1251886c88ff4');
+  assert.equal(createHash('sha256').update(bytes).digest('hex'),'74f1922868eed8db0684cdf4141e3e396ba1a31e16622ab417616654da74bac0');
 });
 
 test('offline without a downloaded meaning pack rejects instead of falling back to Chinese', () => {

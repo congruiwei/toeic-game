@@ -86,6 +86,24 @@ catch(error) {if(error.code!=='ENOENT')throw error;}
     add('vocab','ja',`${lexeme.id}/meaning`,lexeme.ja,{kind:'meaning'});
   }
 }
+// Completed duel sentences and authored distinctions share the vocab audio bank.
+let confusableData;
+try {confusableData=JSON.parse(await fs.readFile(path.join(root,'data/confusables.json'),'utf8'));}
+catch(error) {if(error.code!=='ENOENT')throw error;}
+if(confusableData) {
+  const japanese=JSON.parse(await fs.readFile(path.join(root,'data/i18n/ja/confusables.json'),'utf8')).entries;
+  for(const u of sourceUnits('confusables',confusableData)) {
+    if(typeof japanese[u.key]!=='string'||!japanese[u.key].trim())throw new Error(`Missing confusable Japanese source: ${u.key}`);
+    for(const language of ['en','ja']) {
+      const token=`${language}:vocab:${u.key}`;
+      if(seen.has(token))throw new Error(`Duplicate confusable audio key: ${token}`);
+      const extra={group:u.id,kind:u.kind};
+      if(language==='en'&&u.kind==='meaning'&&u.pos)extra.pos=u.pos;
+      add('vocab',language,u.key,language==='en'?u.text:japanese[u.key],extra);
+      addedRequired.add(token);
+    }
+  }
+}
 // Morphology forms are spelling audio; complete example words keep their old keys.
 let morphology;
 try {morphology=JSON.parse(await fs.readFile(path.join(root,'data/morphemes.json'),'utf8'));}

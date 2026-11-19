@@ -40,9 +40,21 @@ test('the validator rejects missing whole packs, a missing distractor, changed s
  ];for(const[mutate,code]of checks){const data=structuredClone(complete);mutate(data);assert(validateOptions(data).errors.some(e=>e.code===code),code);}
 });
 
+test('unavailable optional curated data does not discard cached external option definitions',async()=>{
+ const originalFetch=globalThis.fetch;
+ globalThis.fetch=async url=>String(url).endsWith('/confusables.json')?new Response('offline',{status:503}):originalFetch(url);
+ try{
+  const ref={id:'v-aisle',mode:'vocab',format:'english'},q=question(ref);assert(q.options.includes('isle'));
+  const details=await loadOptionDetails(ref,q,{vocab:bank.vocab});
+  assert.equal(details.options.length,4);const option=details.options.find(o=>o.text==='isle');
+  assert(option.zh&&option.ja&&option.lexemes.length);assert(option.lexemes.some(l=>l.word==='isle'));
+  assert(details.options.find(o=>o.correct).lexemes.some(l=>l.wordId==='v-aisle'));
+ }finally{globalThis.fetch=originalFetch;}
+});
+
 test('all actual static questions and all seven dynamic vocabulary formats resolve every selectable option',async()=>{
  let staticCount=0,vocabCount=0;for(const {ref}of catalog.values()){
-  if(ref.mode==='dictation')continue;
+  if(['dictation','confusable'].includes(ref.mode))continue; // Authored duel senses have their own complete suite.
   for(const format of ref.mode==='vocab'?vocabularyFormats:[null]){
    const r=format?{...ref,format}:ref,q=question(r),details=await loadOptionDetails(r,q,{vocab:bank.vocab});
    assert.equal(details.options.length,q.options.length,r.id+':'+format);assert.equal(details.options.filter(o=>o.correct).length,1);

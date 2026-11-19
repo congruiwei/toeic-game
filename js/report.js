@@ -47,6 +47,7 @@ export function validReport(report) {
     && topics.reduce((sum, c) => sum + c.right, 0) <= grammar.right;
 }
 function category(ref, data) {
+  if(ref.mode==='confusable')return 'vocab';
   if (ref.mode === 'vocab' || ref.mode === 'dictation') return ref.mode;
   const fixed = {part1: 1, photo: 1, part2: 2, grammar: 5};
   const part = Number(fixed[ref.mode] ?? data.set?.part ?? data.part ?? ref.part);
@@ -80,6 +81,7 @@ export function recordStudy(state, ref, data, ok, now = Date.now(), outcome) {
 function groupIds(bank) {
   const ids = new Map();
   for (const w of bank.vocab || []) ids.set(w.id, {part:'vocab'});
+  for (const q of bank.confusables?.questions || []) ids.set(q.id, {part:'vocab'});
   for (const q of bank.part1 || []) ids.set(q.id, {part:'1'});
   for (const q of bank.part2 || []) ids.set(q.id, {part:'2'});
   for (const t of bank.grammar || [])

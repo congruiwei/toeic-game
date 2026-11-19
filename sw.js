@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-51';
+const CACHE = 'toeic-island-shell-52';
 const files = [
   './',
   './index.html',
@@ -25,9 +25,9 @@ const files = [
   './js/state.js','./js/review-scheduler.js','./vendor/ts-fsrs/index.js',
   './js/tiles.js',
   './js/training.js',
-  './js/library.js',
+  './js/library.js','./js/confusables.js','./js/confusable-memory.js',
   './js/practice.js',
-  './data/vocab.json',
+  './data/vocab.json','./data/confusable-candidates.json',
   './data/part1.json',
   './data/part2.json',
   './data/grammar.json',
@@ -43,6 +43,8 @@ self.addEventListener('install', (event) => {
     const cache=await caches.open(CACHE);await cache.addAll(requests);
     const morphemes=await (await cache.match(new URL('data/morphemes.json',self.registration.scope))).json();
     if(!validMorphemePack(morphemes))throw Error('Invalid morpheme packet');
+    const candidates=await (await cache.match(new URL('data/confusable-candidates.json',self.registration.scope))).json();
+    if(!validConfusablePack(candidates,true))throw Error('Invalid confusable candidate index');
     const part1=await (await cache.match(new URL('data/part1.json',self.registration.scope))).json();
     await cache.addAll(part1.map(q=>new URL(q.image,self.registration.scope).href));
   })());
@@ -78,6 +80,47 @@ function validMorphemePack(data) {
   return data.entries.every(m=>object(m)&&/^(pre|root|suf)-[a-z-]+$/.test(m.id)&&!ids.has(m.id)&&Boolean(ids.add(m.id))&&Object.hasOwn(types,m.type)&&Array.isArray(m.forms)&&m.forms.length>0&&m.forms.every(nonempty)&&nonempty(m.zh)&&nonempty(m.ja)&&Array.isArray(m.examples)&&m.examples.length>=2&&m.examples.length<=6&&new Set(m.examples).size===m.examples.length&&m.examples.every(nonempty)&&Array.isArray(m.sources)&&m.sources.length>0&&m.sources.every(id=>object(data.sources[id])&&/^https:\/\//.test(data.sources[id].url))&&(m.type!=='suffix'||Array.isArray(m.pos)&&m.pos.length>0&&m.pos.every(p=>Object.hasOwn(posNames,p))));
 }
 
+// The small projection may be installed with the shell. Full explanations and
+// translations load on demand, then remain usable for offline answer review.
+function validConfusablePack(value,candidates=false) {
+  const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+  const text=x=>typeof x==='string'&&x.trim().length>0;
+  const id=x=>text(x)&&/^[a-zA-Z0-9_-]+$/.test(x)&&!['__proto__','constructor','prototype'].includes(x);
+  if(!object(value)||value.version!==1)return false;
+  if(candidates)return object(value.entries)&&Object.keys(value.entries).length>0&&
+    Object.entries(value.entries).every(([key,words])=>id(key)&&Array.isArray(words)&&words.length>0&&
+      words.every(text)&&new Set(words).size===words.length)&&
+    (value.part2TrapIds===undefined||Array.isArray(value.part2TrapIds)&&new Set(value.part2TrapIds).size===value.part2TrapIds.length&&value.part2TrapIds.every(key=>/^p2-[a-zA-Z0-9_-]+$/.test(key)))&&
+    (value.semanticAvoid===undefined||Array.isArray(value.semanticAvoid)&&value.semanticAvoid.every(pair=>
+      Array.isArray(pair)&&pair.length===2&&pair.every(text)&&pair[0]!==pair[1]));
+  if(!Array.isArray(value.groups)||!value.groups.length||!object(value.words)||
+    !Array.isArray(value.questions)||!value.questions.length||!Array.isArray(value.part2Traps))return false;
+  if(!Object.entries(value.words).every(([key,word])=>id(key)&&object(word)&&word.id===key&&
+    ['word','pos','zh','ja','example'].every(field=>text(word[field]))&&
+    (word.wordId===null||word.wordId===key)))return false;
+  const groups=new Map();
+  for(const group of value.groups){
+    if(!object(group)||!id(group.id)||groups.has(group.id)||!text(group.type)||!Array.isArray(group.members)||
+      group.members.length<2||group.members.length>4||new Set(group.members).size!==group.members.length||
+      !group.members.every(member=>id(member)&&Object.hasOwn(value.words,member))||
+      !object(group.difference)||!['en','zh','ja'].every(lang=>text(group.difference[lang])))return false;
+    groups.set(group.id,group);
+  }
+  const questions=new Set();
+  for(const q of value.questions){
+    const group=object(q)&&groups.get(q.groupId);
+    if(!group||!id(q.id)||questions.has(q.id)||!group.members.includes(q.wordId)||
+      !['sentence','sentenceZh','sentenceJa','prompt','answer','en','zh'].every(field=>text(q[field]))||
+      ![400,500,600,700,800,900].includes(q.level)||!Array.isArray(q.options)||q.options.length<2||q.options.length>4||
+      new Set(q.options).size!==q.options.length||!q.options.includes(q.answer)||
+      q.answer!==value.words[q.wordId].word||!q.options.every(option=>group.members.some(member=>value.words[member].word===option)))return false;
+    questions.add(q.id);
+  }
+  return value.part2Traps.every(trap=>object(trap)&&id(trap.id)&&text(trap.option)&&text(trap.reasonZh)&&
+    (!trap.groupId||(groups.has(trap.groupId)&&groups.get(trap.groupId).members.includes(trap.sourceWordId)&&
+      groups.get(trap.groupId).members.includes(trap.distractorWordId))));
+}
+
 async function updateBank(request, cache, translation=false, validate=null) {
   // Adding records to an existing file requires no service-worker edit.
   const controller = new AbortController();
@@ -99,6 +142,13 @@ async function updateBank(request, cache, translation=false, validate=null) {
   return (await cache.match(request)) || Response.error();
 }
 
+// An absent optional comparison pack is an ordinary unavailable response.
+// WebKit also reports Response.error() as a page error even when fetch is caught.
+async function updateConfusableBank(request,cache,candidates=false){
+  const response=await updateBank(request,cache,false,rows=>validConfusablePack(rows,candidates));
+  return response.type==='error'?new Response('{"error":"confusable-pack-unavailable"}',{status:503,headers:{'Content-Type':'application/json'}}):response;
+}
+
 // The optional audition is fetched only when visited. Its object-shaped JSON
 // is neither a question-bank array nor a translation pack; audio is not prefetched.
 const auditionFiles = new Set(['audition.html','audition.css','js/audition.js',
@@ -113,6 +163,18 @@ async function auditionResource(request,cache,write=true) {
   } catch { /* A previously opened audition can still display its controls offline. */ }
   finally { clearTimeout(timer); }
   return (await cache.match(request)) || Response.error();
+}
+
+// Load answer-only UI on first use, then keep it in this shell revision for offline review.
+const comparisonFiles=new Map(['confusables.css','js/confusable-ui.js'].map(p=>[new URL(p,self.registration.scope).pathname,p.endsWith('.css')?'text/css':'javascript']));
+async function comparisonResource(request,cache){
+  const cached=await cache.match(request);if(cached)return cached;
+  try{
+    const response=await fetch(request),type=response.headers.get('Content-Type')||'';
+    if(!response.ok||!type.includes(comparisonFiles.get(new URL(request.url).pathname)))return Response.error();
+    try{await cache.put(request,response.clone());}catch{/* Online rendering remains usable if storage is full. */}
+    return response;
+  }catch{return Response.error();}
 }
 
 let audioCacheGeneration=0;
@@ -163,12 +225,17 @@ self.addEventListener('fetch', (event) => {
       if(request.url.startsWith(new URL('data/audio/',self.registration.scope).href))return auditionResource(request,await caches.open('toeic-island-audio-meta-v1'),false);
       // The page owns validated, generation-ordered option-pack writes too.
       if(request.url.startsWith(new URL('data/options/',self.registration.scope).href))return auditionResource(request,await caches.open('toeic-island-option-details-v1'),false);
+      if(comparisonFiles.has(new URL(request.url).pathname))return comparisonResource(request,cache);
       if(auditionFiles.has(new URL(request.url).pathname))return auditionResource(request,cache);
       if (request.url.startsWith(new URL('data/i18n/',self.registration.scope).href)) {
         return updateBank(request,await caches.open('toeic-island-translations-v1'),true);
       }
       if(new URL(request.url).pathname===new URL('data/morphemes.json',self.registration.scope).pathname)
         return updateBank(request,cache,false,validMorphemePack);
+      if(new URL(request.url).pathname===new URL('data/confusables.json',self.registration.scope).pathname)
+        return updateConfusableBank(request,cache);
+      if(new URL(request.url).pathname===new URL('data/confusable-candidates.json',self.registration.scope).pathname)
+        return updateConfusableBank(request,cache,true);
       if (request.url.startsWith(new URL('data/', self.registration.scope).href)) {
         return updateBank(request, cache);
       }

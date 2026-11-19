@@ -1,6 +1,6 @@
 import {advance,validCard} from './review-scheduler.js';
 const directions=['ja-en','en-ja'];
-const banks=['vocab','part1','part2','listening','grammar','reading','methods'];
+const banks=['vocab','confusables','part1','part2','listening','grammar','reading','methods'];
 const record=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
 const keyOK=x=>typeof x==='string'&&/^[\w/-]{1,180}$/.test(x)&&!x.split('/').some(s=>['__proto__','constructor','prototype'].includes(s));
 const textOK=x=>typeof x==='string'&&x.trim().length>0&&x.length<20000;

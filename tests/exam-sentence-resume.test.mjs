@@ -12,7 +12,7 @@ import {fresh,decode} from '../js/state.js';
 // deterministic fixtures. Each distinct sentence retains its own URL and text.
 const sha=value=>createHash('sha256').update(value).digest('hex');
 const rows={},packs=[],audio=new Map(),byURL=new Map(),sourceSha256='1'.repeat(64);
-for(const name of ['vocab','part1','part2','listening','grammar','reading'])
+for(const name of ['vocab','confusable-candidates','part1','part2','listening','grammar','reading'])
  rows[name]=JSON.parse(await readFile(new URL('../data/'+name+'.json',import.meta.url)));
 function clip(text,key,voiceId='af_heart',speaker){
  const bytes=Buffer.concat([Buffer.from('00000018667479704d3441200000000069736f6d6d703432','hex'),Buffer.from(text)]),digest=sha(bytes);

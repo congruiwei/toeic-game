@@ -88,7 +88,7 @@ function choices(q, ref, run) {
     const status = correct ? '正确答案' : wrong ? '你的选择' : '';
     return `<button type="button" class="lesson-option ${correct ? 'is-correct' : wrong ? 'is-wrong' : ''}" data-act="answer" data-i="${i}" ${answered ? 'disabled' : ''} aria-label="${esc([letter(i),(!audioOnly ? option : ''),status].filter(Boolean).join(' '))}">
       <span class="lesson-letter">${letter(i)}</span><span lang="${ref.format==='meaning-ja'?'ja':ref.format==='meaning'?'zh-CN':'en'}">${audioOnly ? '选择 ' + letter(i) : esc(option)}</span>
-      ${status ? '<span class="lesson-option-mark">' + icon(correct ? 'check' : 'close',18) + '</span>' : ''}</button>${answered&&!['meaning','meaning-ja'].includes(ref.format)?`<div class="option-read">${readButton(option,{id:q.id,bank:({dialogue:'listening',dictation:'listening'})[ref.mode]||ref.mode,seed:q.set?.id||q.id,key:ref.mode==='vocab'?'':`${q.id}/options/${i}/0`})}</div>`:''}`;
+      ${status ? '<span class="lesson-option-mark">' + icon(correct ? 'check' : 'close',18) + '</span>' : ''}</button>${answered&&!['meaning','meaning-ja'].includes(ref.format)?`<div class="option-read">${readButton(option,{id:q.id,bank:({dialogue:'listening',dictation:'listening',confusable:'vocab'})[ref.mode]||ref.mode,seed:q.set?.id||q.id,key:ref.mode==='vocab'?'':ref.mode==='confusable'?q.optionWordIds[i]+'/meaning':`${q.id}/options/${i}/0`})}</div>`:''}`;
   }).join('')}</div>${answered ? '' : '<button type="button" class="secondary lesson-unknown" data-act="unknown">不知道</button>'}`;
 }
 
@@ -110,8 +110,9 @@ function feedback(q, ref, run) {
     <h2>${icon(correct ? 'check' : 'note',19)} ${correct ? '答对了' : run.selected === UNKNOWN ? '不知道 · 已加入复习' : '再记一次'}</h2>
     <p><b>正确答案</b> <span>${esc(q.answer)}</span></p>
     ${ref.mode==='grammar'?`<div class="lesson-complete-sentence">${readable(q.prompt.replace(/_{3,}/g,q.answer),{id:q.id,bank:'grammar',seed:q.id,key:`${q.id}/sentence/0`})}</div>`:''}
+    ${ref.mode==='confusable'?`<div class="lesson-complete-sentence">${readable(q.sentence,{id:q.id,bank:'vocab',seed:q.id,key:`${q.id}/sentence/0`})}</div>`:''}
     ${ref.mode==='part1'?`<p><b>画面说明</b> ${esc(q.description)}</p>`:''}
-    ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${readable(q.en,{id:q.id,seed:q.id})}</p><p lang="zh-CN">${esc(q.zh)}</p></div>`}
+    ${ref.mode === 'vocab' ? '' : `<div class="lesson-reason"><p lang="en">${readable(q.en,{id:q.id,seed:q.id,...(ref.mode==='confusable'?{bank:'vocab',key:q.groupId+'/difference/0'}:{})})}</p><p lang="zh-CN">${esc(q.zh)}</p></div>`}
     ${q.paraphrase && ref.mode !== 'vocab' ? `<dl class="lesson-terms"><dt>同义替换</dt><dd lang="en">${readable(q.paraphrase,{id:q.id,seed:q.id})}</dd></dl>` : ''}
     ${replayView(q,ref)}
     ${reviewTools(ref.id)}

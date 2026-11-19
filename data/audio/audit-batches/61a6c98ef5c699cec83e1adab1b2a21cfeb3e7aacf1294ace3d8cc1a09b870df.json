@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "id": "61a6c98ef5c699cec83e1adab1b2a21cfeb3e7aacf1294ace3d8cc1a09b870df",
+  "language": "en",
+  "generation": {
+    "model": "whisper-small",
+    "modelSha256": "3e305921506d8872816023e4c273e75d2419fb89b24da97b4fe7bce14170d671",
+    "device": "cpu",
+    "computeType": "int8",
+    "packages": {
+      "faster-whisper": "1.2.1",
+      "ctranslate2": "4.9.0",
+      "av": "16.0.1"
+    },
+    "beamSize": 1,
+    "conditionOnPreviousText": false,
+    "prompt": null,
+    "vadFilter": false,
+    "wordTimestamps": true,
+    "batchSeconds": 24,
+    "leadingPadSeconds": 0.4,
+    "gapSeconds": 0.6,
+    "boundaryToleranceSeconds": 0.12,
+    "assignment": "word-midpoint-in-actual-file-offset; strict-exact-v1"
+  },
+  "duration": 6.888,
+  "elapsedSeconds": 1.672,
+  "inputs": [
+    {
+      "offset": 0.4,
+      "end": 6.288,
+      "sha256": "e4ea7935a3196fce748b3cb814d85d941f33333857fdbc435b5788c2ef0331d4",
+      "src": "./audio/generated/en/af_heart/4fbe54e2c38b83192fa786bf25752d52.m4a"
+    }
+  ],
+  "words": [
+    {
+      "word": " Although",
+      "start": 0.0,
+      "end": 0.64,
+      "probability": 0.9552450776100159
+    },
+    {
+      "word": " the",
+      "start": 0.64,
+      "end": 0.82,
+      "probability": 0.9931702613830566
+    },
+    {
+      "word": " tenant",
+      "start": 0.82,
+      "end": 1.08,
+      "probability": 0.9472947716712952
+    },
+    {
+      "word": " owns",
+      "start": 1.08,
+      "end": 1.48,
+      "probability": 0.9887996315956116
+    },
+    {
+      "word": " no",
+      "start": 1.48,
+      "end": 1.78,
+      "probability": 0.9925904273986816
+    },
+    {
+      "word": " shares,",
+      "start": 1.78,
+      "end": 2.12,
+      "probability": 0.9943704009056091
+    },
+    {
+      "word": " she",
+      "start": 2.72,
+      "end": 2.84,
+      "probability": 0.9937276840209961
+    },
+    {
+      "word": " is",
+      "start": 2.84,
+      "end": 2.98,
+      "probability": 0.9893157482147217
+    },
+    {
+      "word": " a",
+      "start": 2.98,
+      "end": 3.08,
+      "probability": 0.9873721599578857
+    },
+    {
+      "word": " stakeholder",
+      "start": 3.08,
+      "end": 3.56,
+      "probability": 0.9532483220100403
+    },
+    {
+      "word": " because",
+      "start": 3.56,
+      "end": 4.12,
+      "probability": 0.893040657043457
+    },
+    {
+      "word": " the",
+      "start": 4.12,
+      "end": 4.34,
+      "probability": 0.9861996173858643
+    },
+    {
+      "word": " factory",
+      "start": 4.34,
+      "end": 4.68,
+      "probability": 0.9867463707923889
+    },
+    {
+      "word": " closure",
+      "start": 4.68,
+      "end": 5.12,
+      "probability": 0.9989655017852783
+    },
+    {
+      "word": " affects",
+      "start": 5.12,
+      "end": 5.48,
+      "probability": 0.9492409229278564
+    },
+    {
+      "word": " her",
+      "start": 5.48,
+      "end": 5.78,
+      "probability": 0.9886156916618347
+    },
+    {
+      "word": " lease.",
+      "start": 5.78,
+      "end": 6.0,
+      "probability": 0.9989711046218872
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 6.0,
+      "text": " Although the tenant owns no shares, she is a stakeholder because the factory closure affects her lease.",
+      "avgLogprob": -0.18628634715622122,
+      "noSpeechProb": 0.001194253796711564
+    }
+  ]
+}

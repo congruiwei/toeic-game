@@ -4,17 +4,25 @@ import {errorDue} from './review-scheduler.js';
 import {screenedQueue} from './screening.js';
 import { difficulty } from './state.js';
 import { splitSentences } from './replay.js';
+import {installConfusables,installConfusableCandidates,confusableCandidates,confusableQuestion,overlapsCuratedMeaning} from './confusables.js';
 const bank = {},
   catalog = new Map(),
   entry = (ref, data) => catalog.set(ref.id, { ref, data });
 const pending = new Map();
 export async function loadBank(files) {
+  if(files.includes('vocab')&&!files.includes('confusable-candidates'))files=[...files,'confusable-candidates'];
   await Promise.all(files.map(file => {
     if(bank[file])return;
     if(!pending.has(file)){
       const job=fetch('./data/'+file+'.json').then(async response=>{
         if(!response.ok)throw Error('无法读取题库 '+file);
         const rows=await response.json();
+        if(file==='confusable-candidates'){installConfusableCandidates(rows);bank[file]=rows;return;}
+        if(file==='confusables'){
+          installConfusables(rows);
+          for(const q of rows.questions)entry({id:q.id,mode:'confusable'},q);
+          bank[file]=rows;return;
+        }
         for(const row of rows){
           if(file==='vocab'||file==='part1'||file==='part2')entry({id:row.id,mode:file},row);
           else if(file==='grammar')for(const q of row.questions)entry({id:q.id,mode:'grammar'},{...q,topic:row});
@@ -33,7 +41,7 @@ export async function loadBank(files) {
 }
 export { bank, catalog };
 export const skillFor = (mode) =>
-  ({ vocab: 'vocab', grammar: 'grammar', reading: 'reading' })[mode] || 'listening';
+  ({ vocab: 'vocab', confusable:'vocab', grammar: 'grammar', reading: 'reading' })[mode] || 'listening';
 export const formats = ['meaning', 'english', 'sound', 'cloze', 'match'];
 export const vocabularyFormats = [...formats, 'meaning-ja', 'english-ja'];
 function hash(str) {
@@ -86,6 +94,7 @@ export function vocabularyOptions(word, format, words) {
   }
   function add(text, other) {
     if (options.size >= 4 || options.has(normalize(text)) || (other && normalize(other.word) === spelling)) return;
+    if(format!=='sound'&&overlapsCuratedMeaning(spelling,normalize(other?.word||text)))return;
     if (word.avoidWith?.some(w => normalize(w) === normalize(other?.word || text)) || other?.avoidWith?.some(w => normalize(w) === spelling)) return;
     if (other && (senses(other.zh).some(s => known.has(s)) || normalize(other.paraphrase) === normalize(word.paraphrase))) return;
     if (japanese) {
@@ -99,7 +108,7 @@ export function vocabularyOptions(word, format, words) {
     options.set(normalize(text),text);
   }
   if (format === 'sound' || baseFormat === 'english') {
-    for (const text of seedSort(word.confusables || [], seed)) add(text, byWord.get(normalize(text)));
+    for (const text of seedSort(confusableCandidates(word.id), seed)) add(text, byWord.get(normalize(text)));
   }
   if (options.size < 4) {
     const candidates = words.filter(w => normalize(w.word) !== spelling).map(w => ({
@@ -121,6 +130,7 @@ export const blank = (text, word) =>
     '_____',
   );
 export function question(ref) {
+  if(ref.mode==='confusable')return confusableQuestion(ref);
   const d = catalog.get(ref.id)?.data;
   if (!d) return null;
   if (ref.mode === 'vocab') {
@@ -212,7 +222,7 @@ export function select(s, mode, count = 5, filter = '') {
     (o) =>
       o.ref.mode === mode &&
       (!filter ||
-        [o.data.theme, o.data.topic?.id, String(o.data.set?.part), o.data.type].includes(filter)),
+        [o.data.theme, o.data.topic?.id, String(o.data.set?.part), o.data.type,o.data.groupId].includes(filter)),
   );
   const rank = (o) => {
     const { data: d, ref: r } = o,

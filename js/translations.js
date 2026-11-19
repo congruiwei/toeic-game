@@ -1,7 +1,7 @@
 import { sourceUnits } from './translation-source.js';
 
 const packs = new Map(), pending = new Map();
-export const bankFor = mode => ({dialogue:'listening',dictation:'listening'})[mode] || mode;
+export const bankFor = mode => ({dialogue:'listening',dictation:'listening',confusable:'confusables'})[mode] || mode;
 export function translated(bank, key, language) { return packs.get(`${language}/${bank}`)?.[key]; }
 export async function loadTranslations(bank) {
   await Promise.all(['zh','ja'].map(language => loadLanguage(bank,language)));
@@ -32,6 +32,7 @@ export async function loadLanguage(bank, language) {
 export function questionUnits(ref, q) {
   const bank = bankFor(ref.mode);
   let records = [q];
+  if(bank==='confusables')records={groups:[],words:{},questions:[q]};
   if (bank === 'grammar') records = [{questions:[q]}];
   if (bank === 'listening' || bank === 'reading') records = [q.set];
   return sourceUnits(bank,records).filter(u => u.id === ref.id || (ref.mode !== 'dictation' && u.id === q.set?.id));

@@ -16,6 +16,7 @@ import {examController} from './exam-controller.js';
 import {examView,examLobby,examPreparationView} from './exam-ui.js';
 import { practiceView } from './practice.js';
 import { libraryView,wordDetailView } from './library.js';
+import {confusableData,comparisonsForAnswer,mayHaveWordComparison,mayHaveAnswerComparison} from './confusables.js';
 import { learnView, configureView } from './training.js';
 import { icon } from './icons.js';
 import { creature, landscape } from './art.js';
@@ -54,6 +55,7 @@ const navs = [
   ['report','chart','报告'],
 ];
 const names = {
+  confusable:'易混词对决',
   vocab: '单词采集',
   part2: '听音寻迹',
   part1: '看图听句',
@@ -111,7 +113,7 @@ function save() {
       lastRaw=current;
     }
     if (current !== lastRaw && current) {
-      const newer = decode(current, allBanks.every(k=>bank[k])?catalog:undefined);
+      const newer = decode(current, allBanks.every(k=>bank[k])&&(!backupHasConfusable(current)||bank.confusables)?catalog:undefined);
       exam.stop();
       s = newer;
       lastRaw = current;
@@ -200,13 +202,15 @@ function optionUI(){
 function hydrateOptions(scope){
   for(const panel of scope.querySelectorAll('[data-options-id]')){
     if(panel.closest('details:not([open])')||optionPanels.has(panel))continue;
-    const context=reviewedAnswer(panel.dataset.optionsId,(ref,q)=>({ref,q}));
+    const context=reviewedAnswer(panel.dataset.optionsId,(ref,q,selected)=>({ref,q,selected}));
     if(!context?.q.options?.length){panel.hidden=true;continue;}
     optionPanels.set(panel,{pending:true});
     optionUI().then(async ui=>{
       const details=await ui.loadOptionDetails(context.ref,context.q,{vocab:bank.vocab});
       if(!panel.isConnected||!reviewedAnswer(panel.dataset.optionsId,()=>true))return;
       optionPanels.set(panel,{ui,details});panel.innerHTML=ui.renderOptionDetails(details,s);
+      const host=document.createElement('div');host.dataset.answerComparison=context.ref.id;panel.append(host);
+      comparisonPanels.set(host,{context,details});hydrateAnswerComparison(host);
     }).catch(error=>{
       if(!panel.isConnected)return;optionPanels.delete(panel);
       panel.innerHTML=`<p class="fine muted">${esc(error.message||'选项释义暂时无法载入。')}</p>${act('option-retry','重试选项释义','secondary')}`;
@@ -232,6 +236,48 @@ function hydrateWordEnrichment(scope){
     for(const node of scope.querySelectorAll('[data-word-details-id],[data-answer-details-id],[data-morpheme-index]'))if(!node.closest('details:not([open])'))node.innerHTML='<p class="fine muted">'+esc(error.message)+'</p><button type="button" class="secondary" data-act="morpheme-retry">重试词根内容</button>';
   });
 }
+let comparisonModule;
+const comparisonPanels=new WeakMap();
+function confusableUI(){
+  if(!document.querySelector('link[data-confusable-style]')){const link=document.createElement('link');link.rel='stylesheet';link.href='./confusables.css';link.dataset.confusableStyle='';link.onerror=()=>link.remove();document.head.append(link);}
+  return comparisonModule??=import('./confusable-ui.js').catch(error=>{comparisonModule=null;throw error;});
+}
+async function hydrateAnswerComparison(host){
+  const state=comparisonPanels.get(host);if(!state||state.pending)return;
+  const {context,details}=state,allowed=()=>host.isConnected&&reviewedAnswer(context.ref.id,()=>true);
+  if(!allowed())return;state.pending=true;
+  try{
+    await loadBank(['confusable-candidates']);if(!allowed())return;
+    if(!mayHaveAnswerComparison(context.ref,context.q,context.selected,details)){host.remove();return;}
+    await loadBank(['confusables']);if(!allowed())return;
+    const items=comparisonsForAnswer(context.ref,context.q,context.selected,details);
+    const trap=confusableData().part2Traps.find(t=>t.id===context.ref.id);
+    if(!items.length&&!trap){host.remove();return;}
+    const ui=await confusableUI();if(!allowed())return;
+    if(trap){
+      const index=details.options.findIndex(option=>!option.correct && option.text===trap.option);
+      const label=host.parentElement.querySelector(`.option-detail[data-option-index="${index}"] .option-result`);
+      if(label)label.textContent='音近陷阱';
+    }
+    host.innerHTML=items.map(item=>ui.comparisonCard(item,{id:context.ref.id})).join('')+ui.standaloneTrap(context.ref.id,context.selected);
+  }catch{
+    // Optional comparisons cannot replace usable option definitions or collection controls.
+    if(allowed())host.innerHTML='<p class="fine muted">易混词对比暂时无法载入，以上选项释义仍可使用。</p><button class="secondary" data-act="confusable-answer-retry">重试易混词对比</button>';
+  }finally{state.pending=false;}
+}
+function hydrateComparisons(scope){
+  for(const host of scope.querySelectorAll('[data-confusable-word-host]')){
+    if(host.closest('details:not([open])')||host.dataset.loaded)continue;
+    host.dataset.loaded='pending';
+    (async()=>{
+      await loadBank(['confusable-candidates']);if(!host.isConnected)return;
+      if(!mayHaveWordComparison(host.dataset.confusableWordHost)){host.dataset.loaded='yes';return;}
+      await loadBank(['confusables']);if(!host.isConnected)return;
+      const ui=await confusableUI();if(!host.isConnected)return;
+      host.innerHTML=ui.wordComparisons(host.dataset.confusableWordHost);host.dataset.loaded='yes';
+    })().catch(()=>{delete host.dataset.loaded;if(host.isConnected)host.innerHTML='<button class="secondary" data-act="confusable-retry">重新加载易混词对比</button>';});
+  }
+}
 let audioSettingsModule;
 function hydrateAudioSettings(){
   const host=document.querySelector('#audio-settings-host');if(!host)return;
@@ -242,7 +288,7 @@ function hydrateAudioSettings(){
 function prepareVisibleAudio(){
   if(s.settings.audioMode==='system')return;
   const ref=page==='practice'?s.session?.items[s.session.index]:page==='diagnosis'?s.diagnosis?.active?.current:null;
-  const name=ref?({dialogue:'listening',dictation:'listening'})[ref.mode]||ref.mode:page==='library'?'vocab':page==='methods'?'methods':null;
+  const name=ref?({dialogue:'listening',dictation:'listening',confusable:'vocab'})[ref.mode]||ref.mode:page==='library'?'vocab':page==='methods'?'methods':null;
   if(name)import('./recorded-audio.js').then(ui=>ui.prepareRecordedAudio({banks:[name]})).catch(()=>{});
 }
 function translationUI() {
@@ -335,6 +381,7 @@ function render() {
   hydrateTerms(root);
   hydrateOptions(root);
   hydrateWordEnrichment(root);
+  hydrateComparisons(root);
   prepareVisibleAudio();
   root.setAttribute('aria-busy', 'false');
   if(page==='practice')showFirstMethod();
@@ -406,6 +453,7 @@ function modal(content, cls = '') {
   hydrateWordMeanings(dialog);
   hydrateTerms(dialog);
   hydrateOptions(dialog);hydrateWordEnrichment(dialog);
+  hydrateComparisons(dialog);
 }
 function close() {
   wordIssue=null;dialog.close();
@@ -639,7 +687,9 @@ document.addEventListener('change', async (e) => {
   if (el.id === 'import-file' && el.files[0]) {
     try {
       if (el.files[0].size > 25e6) throw Error('文件过大（最多 25 MB）');
-      const candidate = decode(await el.files[0].text(), catalog);
+      const raw=await el.files[0].text();
+      if(backupHasConfusable(raw))await loadBank(['confusables']);
+      const candidate = decode(raw, catalog);
       incoming = candidate;
       modal(
         `<h2>恢复这份进度？</h2><p>备份中的伙伴是「${forms[incoming.stage]}」，共有 ${incoming.xp} XP。恢复后会替换当前设备的进度。</p>${act('restore', '恢复备份', 'primary')}`,
@@ -689,6 +739,24 @@ document.addEventListener('click', async (e) => {
       else{const word=bank.vocab.find(w=>w.id===el.dataset.wordId);if(word)modal(wordDetailView(word),'word-detail');}
     }catch(error){toast(error.message);}return;
   }
+  if(a==='confusable-answer-retry'){hydrateAnswerComparison(el.closest('[data-answer-comparison]'));return;}
+  if(a==='confusable-retry'){hydrateComparisons(el.parentElement.parentElement);return;}
+  if(['confusable-speak','confusable-pair'].includes(a)){
+    const host=el.closest('[data-confusable-group]');
+    const study=host?.dataset.confusableStudy;
+    const allowed=host&&!host.closest('details:not([open]),[hidden]')&&(study?
+      (page==='library'&&host.closest('.lib-card')||dialog.open&&host.closest('[data-option-word-study]')):
+      reviewedAnswer(host.dataset.confusableReview,()=>true));
+    const group=confusableData()?.groups.find(g=>g.id===host?.dataset.confusableGroup);
+    if(!allowed||!group)return;
+    const ids=a==='confusable-pair'?[el.dataset.first,el.dataset.second]:[el.dataset.word];
+    if(ids.some(id=>!group.members.includes(id)))return;
+    const words=ids.map(id=>confusableData().words[id]);stopReplay();
+    const field=el.dataset.field;if(field&&field!=='example')return;
+    if(a==='confusable-speak'&&el.dataset.language==='ja')speakJapanese(field?words[0].exampleJa:words[0].ja,s.settings,toast,{bank:'vocab',key:words[0].id+(field?'/example/0':'/meaning')});
+    else speak(words.map(word=>({speaker:'A',text:field?word.example:word.word,bank:'vocab',key:word.id+(field?'/example/0':'/meaning')})),s.settings,toast);
+    return;
+  }
   if(['audio-download','audio-cancel','audio-delete'].includes(a)){
     if(!el.closest('#audio-downloads')||!dialog.open)return;
     if(a==='audio-delete')hush();
@@ -725,7 +793,12 @@ document.addEventListener('click', async (e) => {
       try{await loadBank(['vocab']);const word=catalog.get(lexeme.wordId);if(word?.ref.mode==='vocab'&&host.isConnected)modal(wordDetailView(word.data),'word-detail');}catch{toast('词卡暂未下载，联网后请重试。');}
     }else try{
       const result=collectPersonalWord(s,lexeme,{ref:current.details.ref,context:current.details.context,option:option.text});
-      if(save()){host.innerHTML=current.ui.renderOptionDetails(current.details,s);toast(result.added?'已加入我的单词本，复习时间已安排':'这个词已经收藏过了');}
+      if(save()){
+        for(const button of host.querySelectorAll('[data-act="option-collect"]')){
+          const item=current.details.options[Number(button.dataset.optionIndex)]?.lexemes[Number(button.dataset.lexemeIndex)];
+          if(item&&(item.wordId||'personal-'+item.id)===result.item.key){button.disabled=true;button.textContent='已收藏 · '+item.word+(item.sense?'（'+item.sense+'）':'（'+item.pos+'）');}
+        }
+        toast(result.added?'已加入我的单词本，复习时间已安排':'这个词已经收藏过了');}
     }catch(error){toast(error.message);}
     return;
   }
@@ -770,7 +843,7 @@ document.addEventListener('click', async (e) => {
   if(a==='translation-ja'){
     const panel=el.closest('.translations');if(!translationAllowed(panel)||!translationRuntime)return;
     const unit=translationRuntime.unitsForPanel(panel).find(unit=>unit.key===el.dataset.key&&unit.bank===el.dataset.bank);
-    if(unit&&!/^\s*\[\d+\]\s*$/.test(unit.text)){const text=translationRuntime.translated(unit.bank,unit.key,'ja');if(text){stopReplay();speakJapanese(text,s.settings,toast,{key:unit.key,bank:unit.bank});}}
+    if(unit&&!/^\s*\[\d+\]\s*$/.test(unit.text)){const text=translationRuntime.translated(unit.bank,unit.key,'ja');if(text){stopReplay();speakJapanese(text,s.settings,toast,{key:unit.key,bank:unit.bank==='confusables'?'vocab':unit.bank});}}
     return;
   }
   if(a==='meaning-ja-speak'){
@@ -1044,6 +1117,7 @@ window.addEventListener('storage', async (e) => {
   }
   try {
     await loadBank(allBanks);
+    if(backupHasConfusable(e.newValue))await loadBank(['confusables']);
     if(localStorage.getItem(KEY)!==e.newValue)return;
     const updated = decode(e.newValue, catalog);
     lastRaw = e.newValue;
@@ -1058,10 +1132,11 @@ window.addEventListener('storage', async (e) => {
     render();
   } catch {}
 });
-document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open){hydrateTranslations(e.target);hydrateOptions(e.target);hydrateWordEnrichment(e.target);}}, true);
+document.addEventListener('toggle', e=>{stopClosedReplay(e.target);if(e.target.open){hydrateTranslations(e.target);hydrateOptions(e.target);hydrateWordEnrichment(e.target);hydrateComparisons(e.target);}}, true);
 window.addEventListener('pagehide',()=>{stopReplay();if(exam.live){exam.suspend();page='examLobby';render();}pauseClock();});
 const allBanks=['vocab','part1','part2','grammar','listening','reading'];
-const routeFiles={vocab:'vocab',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};
+const backupHasConfusable=raw=>/"mode"\s*:\s*"confusable"/.test(raw||'');
+const routeFiles={vocab:'vocab',confusable:'confusables',part1:'part1',part2:'part2',grammar:'grammar',dictation:'listening',dialogue:'listening',reading:'reading'};
 function requiredBanks(action,el){
   if(action==='method-try')return [methodBank(el.dataset.method)];
   if(action==='diag-open')return allBanks;
@@ -1077,6 +1152,7 @@ async function boot() {
       // Restoring retired IDs needs a complete catalog; a new island can render immediately.
       await loadBank(allBanks);
       lastRaw=localStorage.getItem(KEY);
+      if(backupHasConfusable(lastRaw))await loadBank(['confusables']);
       if(lastRaw)s=decode(lastRaw,catalog);
     }
   } catch(error) {

@@ -58,3 +58,25 @@ test('morphology adds explicit spelling and Japanese notes without widening old 
   assert.equal(units.find(u=>u.language==='en'&&u.key==='v-original/clozeDistractors/0/0').required,false);
  }finally{await fs.rm(f.temp,{recursive:true,force:true});}
 });
+
+test('confusable audio covers completed examples and distinctions while reusing existing member audio',async()=>{
+ const f=await fixture();try{
+  await f.save('data/confusables.json',{groups:[{id:'cg-pair',difference:{en:'The two words have different uses.'}}],words:{old:{id:'v-original',wordId:'v-original',word:'desk',example:'Old example.'},fresh:{id:'lex-conf-new',word:'wave',pos:'v.',zh:'挥手',example:'Please wave to the driver.'}},questions:[{id:'cf-new',sentence:'Please wave to the visitor.'}]});
+  await f.save('data/i18n/ja/confusables.json',{entries:{'cg-pair/difference/0':'二つの語は使い方が異なります。','lex-conf-new/meaning':'手を振る','lex-conf-new/example/0':'運転手に手を振ってください。','cf-new/sentence/0':'来客に手を振ってください。'}});
+  const r=f.run();assert.equal(r.status,0,r.stderr);const units=(await f.load()).units;
+  const fresh=units.filter(u=>/^(?:cg-pair|lex-conf-new|cf-new)\//.test(u.key));assert.equal(fresh.length,8);assert.ok(fresh.every(u=>u.bank==='vocab'&&u.required));
+  assert.equal(units.filter(u=>u.language==='en'&&u.key==='v-original/meaning').length,1);
+  assert.equal(units.find(u=>u.language==='en'&&u.key==='v-original/collocation/0').required,false);
+  assert.equal(fresh.find(u=>u.language==='en'&&u.key==='lex-conf-new/meaning').pos,'v.');
+  assert.equal(fresh.find(u=>u.key==='cf-new/sentence/0'&&u.language==='en').text,'Please wave to the visitor.');
+ }finally{await fs.rm(f.temp,{recursive:true,force:true});}
+});
+test('confusable source refuses missing Japanese text or a collision with an existing audio key',async()=>{
+ const f=await fixture();try{
+  const data={groups:[],words:{fresh:{id:'lex-conf-new',word:'wave',pos:'v.',zh:'挥手',example:'Please wave.'}},questions:[]};
+  await f.save('data/confusables.json',data);await f.save('data/i18n/ja/confusables.json',{entries:{}});
+  const missing=f.run();assert.notEqual(missing.status,0);assert.match(missing.stderr,/Missing confusable Japanese source/);
+  data.words.fresh.id='v-original';await f.save('data/confusables.json',data);await f.save('data/i18n/ja/confusables.json',{entries:{'v-original/meaning':'机','v-original/example/0':'手を振ってください。'}});
+  const duplicate=f.run();assert.notEqual(duplicate.status,0);assert.match(duplicate.stderr,/Duplicate confusable audio key/);
+ }finally{await fs.rm(f.temp,{recursive:true,force:true});}
+});

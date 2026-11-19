@@ -109,6 +109,10 @@ async function vocabularyDetails(ref,q,{vocab,jaMeanings}={}){
     else if(format==='match')candidates=vocab.filter(word=>word.paraphrase===option);
     else candidates=vocab.filter(word=>normalize(word.word)===normalize(option));
     const lexemes=candidates.map(word=>wordLexeme(word,meanings));
+    if(!lexemes.length&&['english','sound'].includes(format)){
+      const curated=await (await import('./confusables.js')).curatedOptionLexeme(target.id,option).catch(()=>null);
+      if(curated)lexemes.push({...curated});
+    }
     const definition=format==='cloze'&&!correct?await clozeDefinition(option,target,lexemes):lexemes.length?lexemeDefinition(lexemes):await lexical(option);
     let reasonZh;
     if(format==='cloze'){
@@ -137,6 +141,7 @@ export async function loadOptionDetails(ref,q,settings={}){
   if(settings.refresh)invalidateOptionDetails();
   if(!ref||!q||!Array.isArray(q.options)||!q.options.length)return null;
   if(ref.mode==='vocab')return vocabularyDetails(ref,q,settings);
+  if(ref.mode==='confusable')return (await import('./confusables.js')).confusableOptionDetails(ref,q);
   const bank=bankFor(ref.mode);if(!staticBanks.has(bank))throw Error('这类练习没有可查看的选项释义');
   const entries=await loadPack(bank),entry=entries[ref.id];
   if(!entry||entry.signature!==optionSourceSignature(ref,q)||!Array.isArray(entry.options))throw Error('本题选项解析与当前题目不同，请联网更新后重试。');

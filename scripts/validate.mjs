@@ -3,11 +3,14 @@ import {validateMorphemeFiles} from './validate-morphemes.mjs';
 import { readFile } from 'node:fs/promises';
 import { methodParts } from '../js/methods.js';
 import { vocabularyOptions, formats } from '../js/bank.js';
+import {installConfusableCandidates} from '../js/confusables.js';
+import {validateConfusableFiles} from './validate-confusables.mjs';
 import { validateI18nFiles } from './validate-i18n.mjs';
 import { validateOptionsFiles } from './validate-options.mjs';
 import { fileURLToPath } from 'node:url';
 
 const dataDirectory = new URL('../data/', import.meta.url);
+installConfusableCandidates(JSON.parse(await readFile(new URL('confusable-candidates.json',dataDirectory),'utf8')));
 const picturePaths=[];
 const levels = [400, 500, 600, 700, 800, 900];
 const seenIds = new Map();
@@ -454,6 +457,9 @@ for(const path of picturePaths){
 for (const target of levels) expect(presentLevels.has(target), '题库', `未包含 ${target} 级练习`);
 reportDistributions();
 const translations = validateI18nFiles(dataDirectory);
+const confusables=validateConfusableFiles();
+console.log('Curated confusables:',JSON.stringify(confusables.summary));
+issues.push(...confusables.errors.map(error=>'confusables: '+JSON.stringify(error)));
 for (const summary of translations.summaries) console.log(summary);
 issues.push(...translations.errors.map(error => 'i18n: ' + JSON.stringify(error)));
 const options = validateOptionsFiles(fileURLToPath(new URL('../',import.meta.url)));

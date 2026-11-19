@@ -22,7 +22,7 @@ export function validPrediction(p){
 }
 function source(ref,data){
   const mode=ref.mode,part=({part1:1,part2:2,grammar:5})[mode]??data.set?.part??data.part??ref.part;
-  if(mode==='vocab')return null;
+  if(mode==='vocab'||mode==='confusable')return null;
   if(mode==='dictation')return {key:'L',weight:.35};
   if(mode==='part2'&&data.type==='first')return {key:'L',weight:.4};
   if(part>=1&&part<=4)return {key:'L',weight:1};
