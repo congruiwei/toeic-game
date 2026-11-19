@@ -1,3 +1,4 @@
+import {vocabArtSlot} from './word-enrichment.js';
 import {replayView} from './replay.js';
 import {reviewTools} from './question-tools.js';
 import {UNKNOWN} from './answers.js';
@@ -98,7 +99,7 @@ function vocabNote(q) {
     <div class="lesson-word-line"><h3 lang="en">${esc(q.word)}</h3><button type="button" data-act="play" class="lesson-speaker" aria-label="播放单词发音">${icon('sound',20)}</button></div>
     <p class="lesson-ipa" lang="en">${esc(q.ipa)} · ${esc(q.pos)}</p><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p>
     <section class="word-humor" data-humor-id="${esc(q.id)}"></section><h3 class="word-business-label">商务例句</h3><blockquote lang="en">${readable(q.example,{id:q.id,bank:'vocab',key:`${q.id}/example/0`,html:mark(q.example,q.word)})}</blockquote>
-    <dl class="lesson-terms"><dt>常见搭配</dt><dd lang="en">${readable(q.collocation,{id:q.id,bank:'vocab',seed:q.id})}</dd><dt>同义替换</dt><dd lang="en">${readable(q.paraphrase,{id:q.id,bank:'vocab',seed:q.id})}</dd></dl>
+    <dl class="lesson-terms"><dt>常见搭配</dt><dd lang="en">${readable(q.collocation,{id:q.id,bank:'vocab',seed:q.id})}</dd><dt>同义替换</dt><dd lang="en">${readable(q.paraphrase,{id:q.id,bank:'vocab',seed:q.id})}</dd></dl>${vocabArtSlot(q.id)}
   </section>`;
 }
 

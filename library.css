@@ -58,3 +58,9 @@
 .humor-ja{display:block;text-align:left;background:transparent;color:inherit;padding:.35rem 0;border:0;min-height:44px}
 .humor-ja:lang(ja){font-family:"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif}
 .humor-translation[data-language="zh"] [lang="ja"],.humor-translation[data-language="ja"] [lang="zh-CN"]{display:none}
+
+.vocab-art:empty{display:none}
+.vocab-art:not(:empty){display:block;margin:.75rem 0}
+.vocab-art img{display:block;width:min(240px,100%);height:auto;border-radius:.65rem}
+.vocab-art-small:not(:empty){margin:.3rem 0;flex-basis:100%}
+.vocab-art-small img{width:6.75rem}

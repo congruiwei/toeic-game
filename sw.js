@@ -1,5 +1,5 @@
 // Bump for changes to the application shell or a breaking data format change.
-const CACHE = 'toeic-island-shell-53';
+const CACHE = 'toeic-island-shell-54';
 const files = [
   './',
   './index.html',
@@ -7,7 +7,7 @@ const files = [
   './style.css',
   './practice.css',
   './library.css',
-  './morphemes.css','./js/morphemes.js','./js/word-enrichment.js','./data/morphemes.json','./data/i18n/zh/morphemes.json','./data/i18n/ja/morphemes.json',
+  './morphemes.css','./js/morphemes.js','./js/word-enrichment.js','./data/morphemes.json',
   './assets/mark.svg',
   './assets/icon-180.png',
   './assets/icon-192.png',
@@ -25,7 +25,7 @@ const files = [
   './js/state.js','./js/review-scheduler.js','./vendor/ts-fsrs/index.js',
   './js/tiles.js',
   './js/training.js',
-  './js/library.js','./js/vocab-humor.js','./js/confusables.js','./js/confusable-memory.js',
+  './js/library.js','./js/vocab-humor.js','./js/vocab-art.js','./js/confusables.js','./js/confusable-memory.js',
   './js/practice.js',
   './data/vocab.json','./data/confusable-candidates.json',
   './data/part1.json',
@@ -151,6 +151,45 @@ async function updateHumorPack(request,shellCache) {
     {status:503,headers:{'Content-Type':'application/json'}}):response;
 }
 
+// Image metadata is a separate object pack, not a translation dictionary.
+function validVocabArtIndex(value) {
+  const object=x=>x!==null&&typeof x==='object'&&!Array.isArray(x);
+  const id=x=>typeof x==='string'&&/^[a-zA-Z0-9_-]+$/.test(x)&&!['__proto__','constructor','prototype'].includes(x);
+  if(!object(value)||value.version!==1||!object(value.entries)||!Object.keys(value.entries).length)return false;
+  if(!Object.entries(value.entries).every(([key,entry])=>id(key)&&object(entry)&&
+    (entry.class==='C'?Object.keys(entry).length===1:
+      ['A','B'].includes(entry.class)&&typeof entry.alt==='string'&&entry.alt.trim().length>0&&/^[a-f0-9]{12}$/.test(entry.rev))))return false;
+  return value.aliases===undefined||object(value.aliases)&&Object.entries(value.aliases).every(([alias,target])=>
+    id(alias)&&!Object.hasOwn(value.entries,alias)&&id(target)&&Object.hasOwn(value.entries,target)&&value.entries[target].class!=='C');
+}
+async function validVocabArtImage(response,rev) {
+  if(!response||response.status!==200||!response.headers.get('Content-Type')?.toLowerCase().includes('image/svg+xml'))return false;
+  const bytes=await response.clone().arrayBuffer();
+  const hash=Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',bytes)),b=>b.toString(16).padStart(2,'0')).join('');
+  return hash.startsWith(rev);
+}
+async function vocabArtResource(request) {
+  // A versioned image may only fill its own digest URL, including after an older
+  // worker left a bad entry. Never download the whole illustration collection.
+  const rev=new URL(request.url).searchParams.get('v');
+  const missing=()=>new Response('',{status:404,headers:{'Content-Type':'image/svg+xml'}});
+  if(!/^[a-f0-9]{12}$/.test(rev||''))return missing();
+  const cache=await caches.open('toeic-island-vocab-art-v1');
+  try {
+    const hit=await cache.match(request);
+    if(hit){
+      if(await validVocabArtImage(hit,rev))return hit;
+      await cache.delete(request);
+    }
+    const response=await fetch(request,{cache:'no-cache'});
+    if(await validVocabArtImage(response,rev)){
+      try{await cache.put(request,response.clone());}catch{/* Storage may be full. */}
+      return response;
+    }
+  } catch {/* A missing optional picture must not reject the worker event. */}
+  return missing();
+}
+
 async function updateBank(request, cache, translation=false, validate=null) {
   // Adding records to an existing file requires no service-worker edit.
   const controller = new AbortController();
@@ -250,6 +289,9 @@ self.addEventListener('fetch', (event) => {
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE);
+      if(request.url.startsWith(new URL('assets/vocab/',self.registration.scope).href))return vocabArtResource(request);
+      if(new URL(request.url).pathname===new URL('data/vocab-art.json',self.registration.scope).pathname)
+        return updateBank(request,await caches.open('toeic-island-vocab-art-v1'),true,validVocabArtIndex);
       if(request.url.startsWith(new URL('audio/generated/',self.registration.scope).href))return audioResource(request);
       // The page validates metadata before caching it; a bad download must not replace a good pack.
       if(request.url.startsWith(new URL('data/audio/',self.registration.scope).href))return auditionResource(request,await caches.open('toeic-island-audio-meta-v1'),false);

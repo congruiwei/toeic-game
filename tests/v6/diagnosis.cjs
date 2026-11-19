@@ -2,9 +2,10 @@ const assert=require('node:assert/strict');
 module.exports=async({page,act,nav,state,reset,store})=>{
   await reset();
   await act('diag-skip');assert.equal((await state()).diagnosis.skipped,true);
-  await page.reload();await act('diag-open');
+  const open=async()=>{await act('diag-open');await page.locator('#diagnosis-question').waitFor();};
+  await page.reload();await open();
   const original=(await state()).diagnosis.active.current.id;
-  await act('diag-leave');await act('diag-open');
+  await act('diag-leave');await open();
   assert.equal((await state()).diagnosis.active.current.id,original);
   const parts=new Set();
   for(let index=0;index<30;index++){
@@ -19,6 +20,6 @@ module.exports=async({page,act,nav,state,reset,store})=>{
   assert.equal(s.diagnosis.results[0].items[0].unknown,true);
   await page.getByText(/本次诊断的参考区间/).waitFor();
   await nav('report');await page.getByRole('heading',{name:'水平诊断记录'}).waitFor();
-  await nav('home');await act('diag-open');assert.equal((await state()).diagnosis.active.items.length,0);
+  await nav('home');await open();assert.equal((await state()).diagnosis.active.items.length,0);
   await act('diag-leave');await reset();
 };

@@ -425,3 +425,22 @@ node tests/v6.cjs
 `js/vocab-humor.js` 在词卡详情或答后面板第一次打开时下载英语；展开译文时取得对应的中日文。用户设置“翻译默认展开”时直接加载译文。三语表达本复用原有收藏结构，用键区分同一义项的商务句和趣句。两个音频语言都映射到 `vocab` bank；按词头和例句的完整键播放。
 
 三个趣句包在 Service Worker 中分别保存。在线更新须覆盖当前词库及此前已缓存的全部键，支持追加义项。离线冷重开的回归在 `tests/humor-offline.cjs`，也覆盖空包、丢键或错误响应不会替换完整副本。
+
+## 依义项加载词义插画
+
+`data/vocab-art.json` 的 `entries` 按词卡 ID 索引。A 类表示具体对象或动作，B 类表示可以画清楚的关系或过程。A/B 记录含 `class`、中文 `alt` 和 SVG 的 SHA-256 前 12 位 `rev`。C 类记录只有 `class`。同名词不同义项分别维护一条记录。`aliases` 把有图的易混词对决 ID 关联到该题正确义项，供收藏后的表达本使用。
+
+新增图片放在 `assets/vocab/<word-id>.svg`，提供深色样式，每张上限 8 KB。更换图时同时刷新 `rev`。`js/vocab-art.js` 仅在可见词卡及答后视图加载索引，使用 `?v=<rev>` 请求图片。Service Worker 将索引和实际请求过的 SVG 存入独立词图缓存；iPhone 上可从“设置 → 显示单词配图”控制显示。个人单词本和表达本按已知义项取图，翻卡时等揭晓后显示。
+
+个人单词本每次追加 50 张卡片，保留之前渲染的卡片和图片节点。图片在解码前就有固定显示比例，使用 `object-fit: contain` 保留完整画面。分页、图片迟到以及搜索时使用中日输入法的回归测试见 `tests/v6/option-details.cjs`。
+
+恢复存档时先加载原有题库来核对题目 ID。旧版 Service Worker 可继续读取这些题库，易混词的干扰项索引在出新题时读取。存档若含易混词对决，还要核对完整的对决包。包暂时不可用时，界面保留原始进度并提供重试，Service Worker 仍可更新。相应回归在 `tests/bank-restore.test.mjs`、`tests/v6/restore-catalog.cjs` 和 `tests/audition.cjs`。
+
+在仓库根目录运行以下回归，Playwright 环境配置见 README。
+
+~~~sh
+node scripts/validate-vocab-art.mjs
+node tests/v6.cjs vocab-art vocab-humor confusables morphemes
+node tests/vocab-art-offline.cjs
+PW_ENGINE=webkit node tests/vocab-art-offline.cjs
+~~~

@@ -1,3 +1,4 @@
+import {vocabArtSlot} from './word-enrichment.js';
 import {wordDetailsSlot} from './word-enrichment.js';
 import {errorDue} from './review-scheduler.js';
 import { bank, catalog, question } from './bank.js';
@@ -29,7 +30,7 @@ function cardBody(word) {
     <section class="word-humor" data-humor-id="${escape(word.id)}"></section><h3 class="word-business-label">商务例句</h3><blockquote lang="en">${readable(word.example,{study:true,id:word.id,bank:'vocab',key:word.id+'/example/0'})}</blockquote><section class="translations" data-study-translation data-translation-id="${escape(word.id)}"><button type="button" class="secondary translation-toggle" data-act="translate" aria-expanded="false">显示翻译</button><div class="translation-content" hidden></div></section>
     ${wordDetailsSlot(word,{study:true})}<dl><dt>常见搭配</dt><dd lang="en">${readable(word.collocation,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd>
       <dt>同义替换</dt><dd lang="en">${readable(word.paraphrase,{study:true,id:word.id,bank:'vocab',seed:word.id})}</dd></dl><button type="button" class="secondary" data-act="report-word" data-id="${escape(word.id)}">报告词卡问题</button>
-    <div data-confusable-word-host="${escape(word.id)}"></div>
+    <div data-confusable-word-host="${escape(word.id)}"></div>${vocabArtSlot(word.id)}
   </div>`;
 }
 

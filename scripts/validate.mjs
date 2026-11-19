@@ -476,3 +476,5 @@ if (issues.length) {
 }
 
 await import('./validate-humor.mjs');
+
+await import('./validate-vocab-art.mjs');

@@ -1,6 +1,7 @@
 // Stable, lightweight slots shared by vocabulary detail and answered-question views.
 // Later optional word features can attach here without widening answer permissions.
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export const vocabArtSlot=(id,small=false)=>id?`<span class="vocab-art${small?' vocab-art-small':''}" data-vocab-art="${esc(id)}"></span>`:'';
 export const wordDetailsSlot=(word,{study=false}={})=>`<section data-word-details-id="${esc(word.id)}"${study?' data-word-details-study':''}></section>`;
 export const answerDetailsSlot=id=>`<section data-answer-details-id="${esc(id)}"></section>`;
 

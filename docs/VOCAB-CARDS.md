@@ -315,3 +315,94 @@ We owe the supplier more for emergency coffee than for the entire office printer
 我们欠供应商的救急咖啡钱，比整台办公打印机的钱还多。
 
 急ぎで注文したコーヒー代を仕入先にまだ払っていませんが、その額はオフィスのプリンター一台分を上回っています。
+
+## 词义插画
+
+具体物件、动作和场所使用 A 类场景图，共 390 张。可用过程、方向或数量关系表达的义项使用 B 类概念图，共 499 张。235 个义项归为 C 类，词卡直接显示文字。
+
+889 个 SVG 文件合计 1,544,842 字节，最大单图 3,986 字节。打开词卡时才取图，首次成功取图后可离线重开。可在「设置 → 显示单词配图」关闭。
+
+逐张按义项和替代文字检查，并渲染浅色与深色版本。检查中把 checkout 的挂绳胸牌换成酒店房卡，调整了深色模式下跑道与人行横道的白色标线，校正叉车托货与月台移动方向。原本图形相同、含义不同的义项重新设计，例如录用与解聘、应付工资与运输清单、本金与附加费。B 类概念图最多使用三个可见短标签，数字也计入。难以仅凭画面区分的 ownership、predecessor 等义项保留文字。
+
+### C 类义项
+
+- valuable、inadvertently、briefly、request、designate、benefit（雇员福利）、qualification、retirement、eligible、retention
+- appraisal、incentive、remuneration、cost、expense、fee、estimate、revenue、expenditure、liability
+- contingency、solvency、amenity、brand、affordable、warranty、clearance、durable、inquiry、exclusive
+- satisfaction、comparable、quality、rigorous、topic、clarify、consensus、facilitate、endorse、deliberation
+- facility、permission、contingent、stipulate、feasibility、undertake、comply、pertinent、proficiency、discretionary
+- incumbent、incidental、proprietary、define、sensible、appropriate、recommended、reliable、liable、responsible
+- exceptional、competitive、experienced、familiar、feasible、beneficial、occupant、property、lodging、caterer
+- vegetarian、vegan、allergen、consulate、transit、chauffeur、boutique、franchise、franchisee、browse
+- consumer、curator、installation、premiere、commissioned、patron、employer、employee、candidate、position（职位；职务）
+- occupation、profession、task、workforce、supervisor、director、executive、assistant、accountant、bookkeeper
+- consultant、contractor、intern、trainee、trainer、newcomer、volunteer、organizer、attendee、attendant
+- committee、chairperson、panel、association、department、division、enterprise、startup、venture、partnership
+- ownership、stakeholder、founder、owner、operator、administrator、coordinator、representative、predecessor、recruiter
+- job description、reference check、carrier、shipper、forwarder、bill of lading、bidder、sourcing、purchaser、vendor
+- buyer、list price、unit cost、manufacturer、in-house、turnover、promptly、approximately、previously、respectively
+- respectfully、immediately、automatically、initially、ultimately、currently、permanently、alternatively、intentionally、strictly
+- subcontractor、caretaker、custodian、regarding、upcoming、recently、anticipate、enhance、ensure、require
+- requirement、policy、regulation、advertisement、campaign、promote、feature、keynote、guideline、assistance
+- customer service、client、clientele、fiscal、technician、device、patent、innovation、research、analysis
+- findings、conclude、conclusion、recommend、recommendation、suggest、suggestion、propose、performance、evaluation
+- coworker、manager、president、chief、cuisine、located、situated、local、statement（正式作出的声明）、address（着手处理某个问题）
+- account（对事件的叙述或报告）、account（解释或说明原因（account for））、position（在议题上的立场）、appreciate（感激；感谢对方的帮助）、term（专业词语或术语）、run（管理或经营业务）、post（明确的职位或岗位）、note（留意；注意到某一点）、board（公司董事会）、notice（察觉到；注意到）
+- benefit（使人或工作受益）、service（向客户提供的服务）、interest（兴趣；关注）、sound（判断有根据且稳妥的）、cover（包含话题或范围）、principal（主要的；首要的）、principle、assure、invaluable、advice
+- advise、perspective、awareness、useful、careless
+
+## 音频与加载实测
+
+所有新增英文与日文在本机合成为 AAC，已与本地 Whisper 的识别结果逐条对照。额外复听的条目可在[音频复听页](../audio-review.html)试听和标记。
+
+| 阶段 | 新英语键 | 新日语键 | 新英语待复听 | 新日语待复听 |
+| --- | ---: | ---: | ---: | ---: |
+| 1 | 311 | 164 | 27 | 10 |
+| 2 | 66 | 145 | 19 | 34 |
+| 3 | 155 | 155 | 16 | 55 |
+| 4 | 1124 | 1124 | 13 | 134 |
+
+共新增 3,244 个录音键，增加 3,139 个独立媒体文件、97,098,071 字节。完全相同的录音可由多个键复用。
+
+新增的独立音频合计 4 小时 11 分 10 秒。本轮有 308 个键待人工复听（英语 75、日语 233），涉及 295 份不同的音频。复听页另保留以前的 8 条待确认记录。
+
+在同一台机器以相同设置进行了五次冷启动。网络下行 2 Mbps、上行 1 Mbps，延迟 80 ms，禁用 Service Worker 以测首次下载。首题用时从确认开始单词练习算起，表中为中位数。
+
+| 项目 | 升级前 | 升级后 |
+| --- | ---: | ---: |
+| 首页可操作 | 2,025 ms | 2,174 ms |
+| 首题选项出现 | 2,497 ms | 2,857 ms |
+
+GitHub Pages 对实际的词库 JSON 使用 gzip。另以 gzip 在本机复测相同操作，在点击事件和词题选项插入页面时记录浏览器时间。两套方法各自前后使用相同网络及相同脚本。
+
+| gzip、页面实际呈现 | 升级前 | 升级后 |
+| --- | ---: | ---: |
+| 首页 | 1,094 ms | 1,127 ms |
+| 确认开始到首题 | 109 ms | 14 ms |
+
+五次冷启动到首题为止，词义图及其索引、趣句包、完整易混词对比包和音频文件的网络请求均为零。首页提前请求本来就需要的应用入口和 FSRS 模块。单词练习没有对应的解题方法卡，直接显示题目，省去这次网络往返。
+
+## 校验与手机回归
+
+各阶段均在推送前完成题库、录音、复听队列和相关界面回归。以下是最终版本的实测输出。
+
+```text
+Curated confusables: {"groups":47,"types":{"spelling":30,"sound":10,"meaning":7},"questions":94,"light":7,"retired":340,"family":51}
+词根 41 · 人工拆分 208 · 拆词陷阱 5 · 词形注释 20题 · 音频文本 211
+词卡 1124 · 多义词头 50 · Part 1 60 · Part 2 200 · Part 5 340 · Part 3/4 组 92 · Part 6/7 组 76 · 解题方法卡 22
+题库与方法卡通过校验，含 2585 个唯一 ID。
+PASS 职场趣句 · 1124 个义项，英文均为 10–16 词，中日逐句齐全。
+PASS 单词配图 · A 390 / B 499 / C 235 · 889 张原创 SVG，合计 1544842 字节。
+录音覆盖校验通过：需要 17161 个键，16660 个键有实录和识别记录，501 个既有键使用设备语音。
+Review queue: 316 playable recordings; English 83, Japanese 233; 501 processed Japanese system fallbacks are counted separately.
+Node: 298/298 passed
+Python: 346/346 passed
+4 个词卡功能 × 3 种手机宽度：chromium 12, webkit 12 passed
+全部学习界面 Chrome 手机场景：81 passed
+```
+
+两种浏览器均覆盖 375、390、430 像素，390 像素使用深色模式。另以真正的 Service Worker 核对首装、在线更新、异常响应保留已下载内容、关闭窗口后的离线重开。审查还逐项比对了升级前的 1,087 张词卡、既有题库与翻译。
+
+完整回归的 21 条命令全部通过。词卡专项共 90 个浏览器场景通过，包含图片迟到时的 42 次单击、两种引擎上的离线重开、缓存更新和异常响应回退。另实播 8 次英日趣句，文件散列均与当前录音清单一致。
+
+在两个引擎上分别用 121 张收藏词卡检查分页、迟到的图片和搜索。也实际安装了旧版第 34 版 Service Worker，再升级至第 54 版，核对了经验、词卡和练习记录。另用含易混词对决的存档验证了缺包重试和恢复。

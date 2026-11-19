@@ -1,3 +1,4 @@
+import {vocabArtSlot} from './word-enrichment.js';
 import {createEmptyCard} from '../vendor/ts-fsrs/index.js';
 import {advance, validCard, migrateReview, reviewBand} from './review-scheduler.js';
 
@@ -128,7 +129,26 @@ export function removePersonalWord(s,key) {
 
 const esc=value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function cardHTML(item) {
-  return `<article class="personal-word" data-personal-key="${esc(item.key)}"><h2 lang="en">${esc(item.word)}</h2><p class="personal-meta">${esc(item.pos)} ${esc(item.ipa||'')} ${item.sense?'· '+esc(item.sense):''}</p><p lang="zh-CN">${esc(item.zh)}</p><p lang="ja">${esc(item.ja)}</p>${item.example?`<p class="personal-example" lang="en">${esc(item.example)}</p><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-field="example" data-language="en">朗读原例句</button>`:''}${item.source.context&&item.source.context!==item.example?`<div class="personal-source"><small class="muted">收藏时的来源题句</small><p lang="en">${esc(item.source.context)}</p><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-field="context" data-language="en">朗读来源题句</button></div>`:''}<div class="personal-actions"><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-language="en">朗读英文</button><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-language="ja">朗读日语</button></div><small class="muted">${item.wordId?'与原词卡共享复习进度':'个人简卡'} · 来源 ${esc(item.source.id)}</small></article>`;
+  return `<article class="personal-word" data-personal-key="${esc(item.key)}">${vocabArtSlot(item.wordId)}<h2 lang="en">${esc(item.word)}</h2><p class="personal-meta">${esc(item.pos)} ${esc(item.ipa||'')} ${item.sense?'· '+esc(item.sense):''}</p><p lang="zh-CN">${esc(item.zh)}</p><p lang="ja">${esc(item.ja)}</p>${item.example?`<p class="personal-example" lang="en">${esc(item.example)}</p><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-field="example" data-language="en">朗读原例句</button>`:''}${item.source.context&&item.source.context!==item.example?`<div class="personal-source"><small class="muted">收藏时的来源题句</small><p lang="en">${esc(item.source.context)}</p><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-field="context" data-language="en">朗读来源题句</button></div>`:''}<div class="personal-actions"><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-language="en">朗读英文</button><button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-language="ja">朗读日语</button></div><small class="muted">${item.wordId?'与原词卡共享复习进度':'个人简卡'} · 来源 ${esc(item.source.id)}</small></article>`;
+}
+function filteredPersonalWords(s,filter) {
+  const needle=filter.trim().toLowerCase();
+  return (s.personalVocab?.items||[]).filter(item=>[item.word,item.zh,item.ja,item.pos].some(value=>value.toLowerCase().includes(needle)));
+}
+function personalCardsHTML(items) {
+  return items.map(item=>cardHTML(item)+`<button class="personal-remove" data-act="personal-remove" data-key="${esc(item.key)}">取消收藏 ${esc(item.word)}</button>`).join('');
+}
+/** Grow the list without remounting existing cards or their loaded illustrations. */
+export function appendPersonalVocab(scope,s,{filter='',limit=50}={}) {
+  const list=scope.querySelector('.personal-word-list'),count=scope.querySelector('[data-personal-count]');
+  if(!list||!count)return false;
+  const items=filteredPersonalWords(s,filter),shown=list.querySelectorAll('.personal-word').length;
+  list.insertAdjacentHTML('beforeend',personalCardsHTML(items.slice(shown,limit)));
+  count.textContent=`已显示 ${Math.min(limit,items.length)} / ${items.length} 个词条`;
+  const more=scope.querySelector('[data-act=personal-more]');
+  if(items.length>limit){if(more)more.textContent=`再显示 ${Math.min(50,items.length-limit)} 条`;}
+  else more?.remove();
+  return true;
 }
 export function personalVocabView(s,{practice=false,filter='',limit=50}={}) {
   const book=s.personalVocab||{items:[],run:null},stats=personalVocabStats(s),run=book.run;
@@ -138,6 +158,6 @@ export function personalVocabView(s,{practice=false,filter='',limit=50}={}) {
     const language=run.direction.split('-')[0],front=language==='en'?item.word:item[language];
     return `<section class="lesson-shell"><header class="lesson-header personal-review-header"><h1>我的单词本复习</h1><button class="secondary" data-act="personal-open">保存离开</button></header><p>${run.index+1} / ${run.keys.length}</p>${run.flipped?cardHTML(item):`<article class="personal-word"><p class="personal-prompt" lang="${language}">${esc(front)}</p>${language==='zh'?'':`<button class="secondary" data-act="personal-speak" data-key="${esc(item.key)}" data-language="${language}">朗读</button>`}</article>`}${run.flipped?`<div class="personal-ratings">${['不会','模糊','会了','很熟'].map((label,i)=>`<button class="secondary" data-act="personal-rate" data-grade="${i+1}">${label}</button>`).join('')}</div>`:'<button class="lesson-primary" data-act="personal-flip">翻开释义</button>'}</section>`;
   }
-  const needle=filter.trim().toLowerCase(),items=book.items.filter(item=>[item.word,item.zh,item.ja,item.pos].some(value=>value.toLowerCase().includes(needle)));
-  return `<section class="lesson-shell"><h1>我的单词本</h1><p>收藏 ${stats.total} · 到期 ${stats.due} · 已掌握 ${stats.mastered}</p><p class="muted">答题后打开选项释义，收藏想学的词或短语。已有词共享原词卡的复习进度，简卡也按FSRS安排复习。</p>${run&&run.index<run.keys.length?'<button class="primary" data-act="personal-resume">继续单词复习</button>':''}${book.items.length?`<div class="personal-actions">${[['en-zh','看英文 → 中文'],['zh-en','看中文 → 英文'],['en-ja','看英文 → 日文'],['ja-en','看日文 → 英文']].map(([direction,label])=>`<button class="secondary" data-act="personal-start" data-direction="${direction}">${label}</button>`).join('')}</div><p class="fine muted">到期词优先；没有到期词时可自由温习。</p><label class="personal-search">查找词条<input id="personal-vocab-filter" type="search" value="${esc(filter)}" placeholder="英文、中文或日语"></label><div class="personal-word-list">${items.slice(0,limit).map(item=>cardHTML(item)+`<button class="personal-remove" data-act="personal-remove" data-key="${esc(item.key)}">取消收藏 ${esc(item.word)}</button>`).join('')}</div>${items.length?`<p class="fine muted">已显示 ${Math.min(limit,items.length)} / ${items.length} 个词条</p>${items.length>limit?`<button class="secondary personal-more" data-act="personal-more">再显示 ${Math.min(50,items.length-limit)} 条</button>`:''}`:'<p class="muted">没有匹配的词条。</p>'}`:'<article class="personal-word"><p>这里还没有词条。答题后，点选项旁的释义按钮，再选择「加入我的单词本」。</p></article>'}</section>`;
+  const items=filteredPersonalWords(s,filter);
+  return `<section class="lesson-shell"><h1>我的单词本</h1><p>收藏 ${stats.total} · 到期 ${stats.due} · 已掌握 ${stats.mastered}</p><p class="muted">答题后打开选项释义，收藏想学的词或短语。已有词共享原词卡的复习进度，简卡也按FSRS安排复习。</p>${run&&run.index<run.keys.length?'<button class="primary" data-act="personal-resume">继续单词复习</button>':''}${book.items.length?`<div class="personal-actions">${[['en-zh','看英文 → 中文'],['zh-en','看中文 → 英文'],['en-ja','看英文 → 日文'],['ja-en','看日文 → 英文']].map(([direction,label])=>`<button class="secondary" data-act="personal-start" data-direction="${direction}">${label}</button>`).join('')}</div><p class="fine muted">到期词优先；没有到期词时可自由温习。</p><label class="personal-search">查找词条<input id="personal-vocab-filter" type="search" value="${esc(filter)}" placeholder="英文、中文或日语"></label><div class="personal-word-list">${personalCardsHTML(items.slice(0,limit))}</div>${items.length?`<p class="fine muted" data-personal-count>已显示 ${Math.min(limit,items.length)} / ${items.length} 个词条</p>${items.length>limit?`<button class="secondary personal-more" data-act="personal-more">再显示 ${Math.min(50,items.length-limit)} 条</button>`:''}`:'<p class="muted">没有匹配的词条。</p>'}`:'<article class="personal-word"><p>这里还没有词条。答题后，点选项旁的释义按钮，再选择「加入我的单词本」。</p></article>'}</section>`;
 }

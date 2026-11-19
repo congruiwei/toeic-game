@@ -1,3 +1,4 @@
+import {vocabArtSlot} from './word-enrichment.js';
 import {reviewTools} from './question-tools.js';
 import {UNKNOWN} from './answers.js';
 import {bank,catalog,question} from './bank.js';
@@ -12,16 +13,18 @@ export function screenView(s) {
   const r=s.screening?.run;
   if(!r)return '<section class="lesson-shell"><h1>单词快筛</h1><p>目前的词卡都已筛选。</p><button class="lesson-primary" data-act="nav" data-page="learn">回到练习</button></section>';
   const w=catalog.get(r.ids[r.index])?.data;
+  const previous=r.index>0&&s.screening.marks[r.ids[r.index-1]]
+    ? '<button type="button" class="secondary" data-act="screen-last-word">查看上一张词卡</button>' : '';
   if(r.feedback){
     const {id,selected}=r.feedback, ref={id,mode:'vocab',format:'meaning'}, q=question(ref);
     return `<section class="lesson-shell"><h1>抽查反馈</h1><div class="lesson-panel" data-screen-feedback data-id="${esc(id)}">
-      <h2>${selected===q.answer?'答对了':'已加入待学词'}</h2><strong lang="en">${esc(q.word)}</strong><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p><section class="word-humor" data-humor-id="${esc(q.id)}"></section><h3 class="word-business-label">商务例句</h3><blockquote lang="en">${esc(q.example)}</blockquote>${reviewTools(id)}
+      <h2>${selected===q.answer?'答对了':'已加入待学词'}</h2><strong lang="en">${esc(q.word)}</strong><p lang="zh-CN">${esc(q.zh)}</p><p lang="ja" role="button" tabindex="0" data-act="meaning-ja-speak" data-vocab-ja="${esc(q.id)}">正在载入日语释义…</p><section class="word-humor" data-humor-id="${esc(q.id)}"></section><h3 class="word-business-label">商务例句</h3><blockquote lang="en">${esc(q.example)}</blockquote>${reviewTools(id)}${vocabArtSlot(q.id)}
       </div><button class="lesson-primary" data-act="screen-next">继续快筛</button></section>`;
   }
   if(!w){
     const pct=r.checks?Math.round(100*r.correct/r.checks)+'%':'—';
     return `<section class="lesson-shell"><h1>本轮快筛完成</h1><div class="lesson-panel"><p>认识 ${r.known} · 不认识 ${r.unknown}</p><p>抽查正确率 ${pct}（${r.correct} / ${r.checks}）</p></div>
-      ${screenedQueue(s).length?'<button class="lesson-primary" data-act="screen-learn">练习待学词</button>':''}<button class="secondary" data-act="screen-open">下一批</button><button class="secondary" data-act="nav" data-page="learn">回到练习</button></section>`;
+      ${screenedQueue(s).length?'<button class="lesson-primary" data-act="screen-learn">练习待学词</button>':''}<button class="secondary" data-act="screen-open">下一批</button>${previous}<button class="secondary" data-act="nav" data-page="learn">回到练习</button></section>`;
   }
   const q=question({id:w.id,mode:'vocab',format:'meaning'});
   return `<section class="lesson-shell screen-session"><header class="lesson-header"><h1>${r.pending?'快筛抽查':'单词快筛'}</h1><button class="plain" data-act="nav" data-page="learn">保存离开</button></header>
@@ -30,7 +33,7 @@ export function screenView(s) {
   ${w.sense?`<blockquote lang="en">${esc(w.example)}</blockquote>`:''}</div>
   ${r.pending?`<p>选出这个用法的中文意思</p><div class="lesson-choices">${q.options.map((text,i)=>`<button class="lesson-option" data-act="screen-check" data-i="${i}" data-id="${esc(w.id)}">${esc(text)}</button>`).join('')}</div><button class="secondary lesson-unknown" data-act="screen-unknown" data-id="${esc(w.id)}">不知道</button>`:
     `<p class="muted screen-hint">左滑不认识 · 右滑认识</p><div class="screen-actions"><button class="secondary" data-act="screen-no" data-id="${esc(w.id)}">← 不认识</button><button class="primary" data-act="screen-yes" data-id="${esc(w.id)}">认识 →</button></div>`}
-  </section>`;
+  ${r.pending?'':previous}</section>`;
 }
 export function screenController({state,go,render,save,toast,study}) {
   let pointer;

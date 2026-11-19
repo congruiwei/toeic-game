@@ -233,7 +233,7 @@ async function run() {
   try {
     browser = await browserType.launch({
       headless: true,
-      ...(engine === 'chromium' ? { channel: process.env.PW_CHANNEL || 'chrome' } : {})
+      ...(engine === 'chromium' && process.env.PW_CHANNEL ? { channel: process.env.PW_CHANNEL } : {})
     });
     for (const width of [375, 390]) await scenario(browser, url, width, clips);
     assert.deepEqual(serverErrors, []);

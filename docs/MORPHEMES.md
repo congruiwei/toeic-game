@@ -60,7 +60,7 @@
 
 ## 加载、离线与校验
 
-`js/morphemes.js` 按需加载 `data/morphemes.json`，先验证结构再写入专用 CacheStorage；网络失败时回读有效包。新 JS/CSS、数据和小翻译包须加入 SW 壳资源，并在实际发布时升级壳版本。词根数据不增加首屏同步载荷。
+`js/morphemes.js` 按需加载 `data/morphemes.json`，先验证结构再写入专用 CacheStorage；网络失败时回读有效包。新 JS/CSS 与包含中日释义的词根数据加入 SW 壳资源，并在实际发布时升级壳版本。`data/i18n/{zh,ja}/morphemes.json` 不在安装时预取，首次请求后按普通译文包规则缓存；词根卡离线显示直接使用词根数据内的释义。词根数据不增加首屏同步载荷。
 
 ```sh
 node scripts/build-morpheme-packs.mjs

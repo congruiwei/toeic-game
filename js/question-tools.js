@@ -3,7 +3,7 @@ import {UNKNOWN} from './answers.js';
 
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c =>
   ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'})[c]);
-export const reasons = ['答案可能错了','有两个答案都对','解析不对','声音或显示有问题','翻译不自然','词根拆分有误','易混词解释有误','例句不好懂','其他'];
+export const reasons = ['答案可能错了','有两个答案都对','解析不对','声音或显示有问题','翻译不自然','词根拆分有误','易混词解释有误','例句不好懂','配图不准确','其他'];
 const kindNames = {sentence:'句子插入',insertion:'句子插入位置',vocab:'词义',vocabulary:'词义',detail:'细节',inference:'推断',purpose:'主旨',negative:'排除题',intent:'意图',graphic:'图表',first:'听清首词',response:'选择回应'};
 const letter = i => String.fromCharCode(65+i);
 // An explicit answer-key correction supersedes only the known erroneous snapshot.

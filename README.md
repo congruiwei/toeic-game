@@ -1,6 +1,6 @@
 # 芽语岛 · TOEIC 学习养成
 
-词卡的新增词、构词家族、易混词分组、退役配对及 20 组三语趣句见[词卡内容清单](docs/VOCAB-CARDS.md)。
+词卡的新增词、构词家族、易混词分组、退役配对、20 组三语趣句、全部无图义项和实测数据见[词卡内容清单](docs/VOCAB-CARDS.md)。
 
 [打开游戏](https://congruiwei.github.io/toeic-game/) · [音频复听](https://congruiwei.github.io/toeic-game/audio-review.html)
 
@@ -17,6 +17,8 @@
 在「图鉴 → 词根图鉴」可以查看构词家族。在单词答后点构词片段，还能对照同族词；部分 Part 5 解析也会标出后缀与词性的关系。[词根与词缀说明](docs/MORPHEMES.md)
 
 在「练习 → 易混词对决」可以用一句话区分同组单词。答错的义项会进入「我的单词本」。查看词卡或答完普通练习后，也可以点两个词连续试听，比较重音和读音。[易混词内容与出题规则](docs/CONFUSABLES.md)
+
+词卡先显示职场趣句，可以展开中日翻译、点读或收藏。向下可看商务例句和对应义项的插画。单词练习答完才会显示图片，快筛作出选择后可点「查看上一张词卡」。在「设置 → 显示单词配图」可关闭图片。
 
 ## 在 iPhone 上安装
 
@@ -140,14 +142,23 @@ NODE_PATH=/tmp/island-browser-test/node_modules node tests/v6.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/shell-update.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/i18n-offline.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/options-offline.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/confusables-offline.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/morphemes-sw.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/vocab-art-offline.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/humor-offline.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules node tests/vocab-humor-audio.cjs
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=chromium node tests/vocab-art-stability.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules node tests/performance.cjs
+PW_GZIP=1 NODE_PATH=/tmp/island-browser-test/node_modules node tests/performance.cjs
 ~~~
+
+趣句音频测试会在词卡中实际播放英语和日语录音，并核对媒体文件。配图稳定性测试模拟手指按下后索引或图片才抵达，检查松手时原按钮仍能响应。可用 `PW_ENGINE=chromium` 或 `PW_ENGINE=webkit` 切换这两项测试的引擎。
 
 也可安装 Playwright WebKit，并用下面的命令显式选择它运行音频及离线回归；`PW_CHANNEL` 仅对 Chromium 生效：
 
 ~~~sh
 /tmp/island-browser-test/node_modules/.bin/playwright install webkit
+NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/vocab-art-stability.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-app.cjs
 NODE_PATH=/tmp/island-browser-test/node_modules PW_ENGINE=webkit node tests/audio-metadata.cjs

@@ -9,8 +9,10 @@ const bank = {},
   catalog = new Map(),
   entry = (ref, data) => catalog.set(ref.id, { ref, data });
 const pending = new Map();
-export async function loadBank(files) {
-  if(files.includes('vocab')&&!files.includes('confusable-candidates'))files=[...files,'confusable-candidates'];
+export async function loadBank(files,{candidates=true}={}) {
+  // Restoring saved IDs only needs the canonical catalog. An older worker may
+  // still reject the newer optional object packet until its shell is upgraded.
+  if(candidates&&files.includes('vocab')&&!files.includes('confusable-candidates'))files=[...files,'confusable-candidates'];
   await Promise.all(files.map(file => {
     if(bank[file])return;
     if(!pending.has(file)){

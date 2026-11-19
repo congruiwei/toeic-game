@@ -4,7 +4,7 @@ export const vocabLanguages = ['zh', 'ja', 'both'];
 const semanticFormats = new Set(['meaning', 'english']);
 export const isJapaneseVocabulary = ref => ref?.mode === 'vocab' && ['meaning-ja', 'english-ja'].includes(ref.format);
 
-// This separate pack contains only 1087 meanings, never the translated examples.
+// Word-choice questions only need the short Japanese definitions.
 export async function ensureVocabMeanings() {
   if (meanings) return meanings;
   if (!pendingMeanings) pendingMeanings = (async () => {

@@ -31,7 +31,7 @@ export function fresh() {
     session: null,
     lastVisit: 0,
     methodsSeen: [],
-    settings: { audioMode:'recorded', audioGapMs:200, japaneseVoice:"", vocabLanguage:"both", translationLanguage:"both", translationExpanded:false, methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
+    settings: { audioMode:'recorded', audioGapMs:200, japaneseVoice:"", vocabLanguage:"both", translationLanguage:"both", translationExpanded:false, vocabPictures:true, methodHints:true, theme: 'auto', motion: true, sound: true, rate: 1, accent: 'auto', timed: false, retention: .90 },
   };
 }
 const record = (x) => x !== null && typeof x === 'object' && !Array.isArray(x);
@@ -112,6 +112,8 @@ export function decode(raw, catalog) {
   x.settings.vocabLanguage ??= 'both';
   x.settings.translationLanguage ??= 'both';
   x.settings.translationExpanded ??= false;
+  if (x.settings.vocabPictures!==undefined && typeof x.settings.vocabPictures!=='boolean') throw Error('单词配图设置有误');
+  x.settings.vocabPictures ??= true;
   x.methodsSeen ??= [];
   x.settings.methodHints ??= true;
   if (x.session !== null) {

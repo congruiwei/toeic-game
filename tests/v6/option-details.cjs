@@ -73,13 +73,47 @@ module.exports=async({page,context,act,nav,state,store,quiz})=>{
       {ref:{id:word.id,mode:'vocab'},context:word.example,option:word.word});
     return s;
   });
+  // A late SVG must keep the reserved dimensions even when its intrinsic ratio differs.
+  let releaseArt;
+  const artGate=new Promise(resolve=>{releaseArt=resolve;});
+  const artPattern='**/assets/vocab/v-available.svg*';
+  await page.route(artPattern,async route=>{await artGate;await route.continue();});
   await store(large);const largeSaved=await state();await nav('learn');await act('personal-open');await page.locator('.personal-word-list').waitFor();
+  const firstArt=page.locator('.personal-word-list [data-vocab-art="v-available"] img');
+  let undecoded;
+  try {
+    await firstArt.waitFor();
+    await firstArt.evaluate(image=>image.scrollIntoView({block:'center'}));
+    undecoded=await firstArt.evaluate(image=>({width:image.getBoundingClientRect().width,height:image.getBoundingClientRect().height,naturalWidth:image.naturalWidth}));
+    assert.equal(undecoded.naturalWidth,0,'the real SVG response is still held');
+  } finally {releaseArt();}
+  await firstArt.evaluate(image=>image.decode());
+  const decoded=await firstArt.evaluate(image=>({width:image.getBoundingClientRect().width,height:image.getBoundingClientRect().height,naturalWidth:image.naturalWidth}));
+  assert(decoded.naturalWidth>0,'the actual SVG decodes');
+  assert.equal(decoded.width,undecoded.width);assert.equal(decoded.height,undecoded.height,'SVG decode must not shift the personal list');
+  await page.unroute(artPattern);
   const cards=page.locator('.personal-word-list .personal-word');
   assert.equal(await cards.count(),50);assert.match(await page.locator('#app').innerText(),/收藏 121/);
   const more=page.locator('[data-act=personal-more]');assert(await more.evaluate(el=>el.getBoundingClientRect().height)>=44);
   await more.evaluate(el=>el.scrollIntoView({block:'center'}));const scrollBefore=await page.evaluate(()=>scrollY);
+  const existingImages=await cards.evaluateAll(nodes=>{
+    window.personalPageNodes={cards:nodes,images:nodes.flatMap(card=>[...card.querySelectorAll('img')])};
+    return window.personalPageNodes.images.length;
+  });
+  assert(existingImages>0,'the pagination fixture includes mounted vocabulary illustrations');
   await more.click();assert.equal(await cards.count(),100);assert(Math.abs(await page.evaluate(()=>scrollY)-scrollBefore)<=1,'showing more keeps the current scroll position');
+  const retained=await page.evaluate(async()=>{
+    await new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve)));
+    const current=[...document.querySelectorAll('.personal-word-list .personal-word')];
+    return{cards:window.personalPageNodes.cards.every((card,index)=>card===current[index]),
+      images:window.personalPageNodes.images.every(image=>image.isConnected),y:scrollY};
+  });
+  assert(retained.cards,'showing more preserves the first 50 card nodes');
+  assert(retained.images,'showing more preserves already mounted images');
+  assert(Math.abs(retained.y-scrollBefore)<=1,'image hydration after pagination preserves the scroll position');
+  assert.match(await page.locator('[data-personal-count]').innerText(),/已显示 100 \/ 121/);
   await act('personal-more');assert.equal(await cards.count(),121);assert.equal(await more.count(),0);
+  assert.match(await page.locator('[data-personal-count]').innerText(),/已显示 121 \/ 121/);
   await nav('home');await nav('learn');await act('personal-open');await page.locator('.personal-word-list').waitFor();assert.equal(await cards.count(),50,'reopening resets the display limit');
   const distant=large.personalVocab.items[120];await page.locator('#personal-vocab-filter').fill(distant.word);
   assert.equal(await page.locator(`[data-personal-key="${distant.key}"]`).count(),1,'search includes entries beyond the first displayed batch');

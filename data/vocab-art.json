@@ -1,0 +1,5225 @@
+{
+  "version": 1,
+  "aliases": {
+    "cf-available": "v-available",
+    "cf-access": "v-access",
+    "cf-assess": "v-assess",
+    "cf-excess": "v-excess",
+    "cf-accept": "v-accept",
+    "cf-except": "v-except",
+    "cf-adapt": "v-adapt",
+    "cf-adopt": "v-adopt",
+    "cf-affect": "v-affect",
+    "cf-effect": "v-effect",
+    "cf-insure": "v-insure",
+    "cf-personal": "v-personal",
+    "cf-personnel": "v-personnel",
+    "cf-economic": "v-economic",
+    "cf-economical": "v-economical",
+    "cf-considerable": "v-considerable",
+    "cf-considerate": "v-considerate",
+    "cf-sensitive": "v-sensitive",
+    "cf-effective": "v-effective",
+    "cf-efficient": "v-efficient",
+    "cf-compatible": "v-compatible",
+    "cf-complaint": "v-complaint",
+    "cf-compliance": "v-compliance",
+    "cf-complimentary": "v-complimentary",
+    "cf-complementary": "v-complementary",
+    "cf-later": "v-later",
+    "cf-latter": "v-latter",
+    "cf-loose": "v-loose",
+    "cf-lose": "v-lose",
+    "cf-precede": "v-precede",
+    "cf-proceed": "v-proceed",
+    "cf-raise-lift": "v-raise-lift",
+    "cf-rise": "v-rise",
+    "cf-lay": "v-lay",
+    "cf-lie": "v-lie",
+    "cf-prospective": "v-prospective",
+    "cf-alternately": "v-alternately",
+    "cf-successful": "v-successful",
+    "cf-successive": "v-successive",
+    "cf-approval": "v-approval",
+    "cf-legible": "v-legible",
+    "cf-contact": "v-contact",
+    "cf-contract-agreement": "v-contract-agreement",
+    "cf-career": "v-career",
+    "cf-courier": "v-courier",
+    "cf-stationary": "v-stationary",
+    "cf-stationery": "v-stationery",
+    "cf-complement": "v-complement",
+    "cf-compliment": "v-compliment",
+    "cf-fair-exhibition": "v-fair-exhibition",
+    "cf-fare": "v-fare",
+    "cf-aisle": "v-aisle",
+    "cf-stairs": "v-stairs",
+    "cf-route": "v-route",
+    "cf-pallet": "v-pallet",
+    "cf-sensor": "v-sensor",
+    "cf-waive": "v-waive",
+    "cf-profit": "v-profit",
+    "cf-invoice": "v-invoice",
+    "cf-borrow": "v-borrow",
+    "cf-lend": "v-lend",
+    "cf-reservation": "v-reservation",
+    "cf-appointment": "v-appointment",
+    "cf-import": "v-import",
+    "cf-export": "v-export",
+    "cf-consignor": "v-consignor",
+    "cf-consignee": "v-consignee",
+    "cf-installment": "v-installment"
+  },
+  "entries": {
+    "v-available": {
+      "class": "A",
+      "alt": "一把空椅子旁有绿色勾，表示座位现在可以使用。",
+      "rev": "9337dcf21c5f"
+    },
+    "v-valuable": {
+      "class": "C"
+    },
+    "v-deadline": {
+      "class": "B",
+      "alt": "时间轴在15日的位置竖起红旗，表示最迟到这个日期要完成。",
+      "rev": "34b039d72dcb"
+    },
+    "v-inadvertently": {
+      "class": "C"
+    },
+    "v-postpone": {
+      "class": "B",
+      "alt": "原定日期12通过弧形箭头移到较晚的日期15。",
+      "rev": "1ef750d1c96e"
+    },
+    "v-tentative": {
+      "class": "B",
+      "alt": "日历上的一个日期用虚线圈住，旁边是问号，尚未最终确定。",
+      "rev": "06aae07a8eef"
+    },
+    "v-agenda": {
+      "class": "A",
+      "alt": "会议议程纸依次列着三个时间及讨论条目。",
+      "rev": "41fd6c3a4550"
+    },
+    "v-itinerary": {
+      "class": "B",
+      "alt": "行程按顺序连接飞机、旅馆和返回飞机。",
+      "rev": "8a418ca8898f"
+    },
+    "v-reservation": {
+      "class": "B",
+      "alt": "日历上的选择与房间床位相连，并打勾表示提前留好住宿。",
+      "rev": "edaad65812d2"
+    },
+    "v-reimburse": {
+      "class": "B",
+      "alt": "先由员工支付购物费用，保留收据后，公司把钱返还员工。",
+      "rev": "053cdccde27b"
+    },
+    "v-invoice": {
+      "class": "A",
+      "alt": "付款单列出两项金额和合计，底部写明请付款。",
+      "rev": "030b15df10d1"
+    },
+    "v-budget": {
+      "class": "B",
+      "alt": "计划开销被放入总额100的封闭预算框中。",
+      "rev": "882e77ac7e47"
+    },
+    "v-applicant": {
+      "class": "B",
+      "alt": "一名求职者把个人资料交给招聘方。",
+      "rev": "793a2ba06ba5"
+    },
+    "v-receipt": {
+      "class": "A",
+      "alt": "纸质收据上列明金额50，并有已付的勾号。",
+      "rev": "a5cb5fd45c69"
+    },
+    "v-inspect": {
+      "class": "A",
+      "alt": "放大镜查看箱内商品是否完好。",
+      "rev": "402c42d8db87"
+    },
+    "v-shipment": {
+      "class": "A",
+      "alt": "同一托盘上三只封好的纸箱准备一起运输。",
+      "rev": "1950c208b0fb"
+    },
+    "v-notice": {
+      "class": "A",
+      "alt": "公告板上钉着一张醒目的书面通知。",
+      "rev": "e936734d7fb2"
+    },
+    "v-folder": {
+      "class": "A",
+      "alt": "一个打开边沿、可放纸张的文件夹。",
+      "rev": "657a7ac66d32"
+    },
+    "v-copy": {
+      "class": "B",
+      "alt": "一份原文件旁边放着内容相同的复制件。",
+      "rev": "ca8660a1d544"
+    },
+    "v-message": {
+      "class": "A",
+      "alt": "电话屏幕上显示一个新消息气泡。",
+      "rev": "8231de41ebab"
+    },
+    "v-attach": {
+      "class": "B",
+      "alt": "文件通过箭头附加进一封邮件。",
+      "rev": "8b9a86281458"
+    },
+    "v-deliver": {
+      "class": "B",
+      "alt": "送货卡车把纸箱送至建筑门口。",
+      "rev": "9c279f4af1e4"
+    },
+    "v-equipment": {
+      "class": "A",
+      "alt": "办公室的电脑屏幕和打印机构成一组设备。",
+      "rev": "dbb330df077d"
+    },
+    "v-colleague": {
+      "class": "A",
+      "alt": "两名员工在同一办公桌旁工作，体现同事关系。",
+      "rev": "e483f68fc32c"
+    },
+    "v-supply": {
+      "class": "B",
+      "alt": "供应方把一箱物资送给正在工作的人员。",
+      "rev": "086bc4550e3e"
+    },
+    "v-forward": {
+      "class": "B",
+      "alt": "收到的信封继续转给另一个收件人。",
+      "rev": "ee0ce4fc38c1"
+    },
+    "v-update": {
+      "class": "B",
+      "alt": "旧目录的一行资料被划去，修订后的目录用高亮新资料替换了对应一行。",
+      "rev": "2658d791d4e5"
+    },
+    "v-extension": {
+      "class": "A",
+      "alt": "总机电话分出两条线，分别连接101与102分机。",
+      "rev": "e8410bad784a"
+    },
+    "v-directory": {
+      "class": "A",
+      "alt": "名录逐行列着人员符号和对应的电话图标。",
+      "rev": "ccedf8cc7e4c"
+    },
+    "v-revise": {
+      "class": "B",
+      "alt": "原稿的一行被删除，修订稿对应一行用新颜色标出。",
+      "rev": "09eee75ced62"
+    },
+    "v-briefly": {
+      "class": "C"
+    },
+    "v-request": {
+      "class": "C"
+    },
+    "v-procedure": {
+      "class": "B",
+      "alt": "操作按三个有编号的步骤依次进行。",
+      "rev": "60117c97a1e4"
+    },
+    "v-authorize": {
+      "class": "B",
+      "alt": "申请资料经过许可勾号后才可开始操作机器。",
+      "rev": "735db4ba079f"
+    },
+    "v-designate": {
+      "class": "C"
+    },
+    "v-confidential": {
+      "class": "B",
+      "alt": "文件装进上锁的柜子，只有授权者能打开。",
+      "rev": "6d69fb1c5160"
+    },
+    "v-retrieve": {
+      "class": "B",
+      "alt": "已归档的文件从文件夹中取回。",
+      "rev": "264b3ada63cf"
+    },
+    "v-legible": {
+      "class": "A",
+      "alt": "左边字迹混乱，右边同一号码123清楚易读。",
+      "rev": "3a6bbdfed08d"
+    },
+    "v-stationery": {
+      "class": "A",
+      "alt": "桌上有纸张、铅笔和尺子，组成办公文具。",
+      "rev": "5a56b856bc66"
+    },
+    "v-archive": {
+      "class": "B",
+      "alt": "零散文件被收进长期保存的文件夹。",
+      "rev": "e4c2d1dc0316"
+    },
+    "v-delegate": {
+      "class": "B",
+      "alt": "负责人把检查清单交给另一位工作人员，自己仍拿着总计划。",
+      "rev": "24f6e6f46664"
+    },
+    "v-discrepancy": {
+      "class": "B",
+      "alt": "两份本应一致的账单分别列着100和120，差异明确可见。",
+      "rev": "fa578dc07dce"
+    },
+    "v-redundant": {
+      "class": "B",
+      "alt": "三个相同的文件中有一个额外副本被划去。",
+      "rev": "60d6bea8a0d9"
+    },
+    "v-correspondence": {
+      "class": "B",
+      "alt": "两个办公人员之间各有一封方向相反的往来信件。",
+      "rev": "07f1ddf59d82"
+    },
+    "v-streamline": {
+      "class": "B",
+      "alt": "上方冗长的五节点流程简化为下方三个节点的直达流程。",
+      "rev": "04f4275e5804"
+    },
+    "v-consolidate": {
+      "class": "B",
+      "alt": "三个文件夹通过三条箭头合成一个统一文件夹。",
+      "rev": "67d0c037656e"
+    },
+    "v-supersede": {
+      "class": "B",
+      "alt": "旧版文件被划去，新版文件被勾选，表示正式取代。",
+      "rev": "cbeab204d949"
+    },
+    "v-disseminate": {
+      "class": "B",
+      "alt": "一份公告沿多条箭头传播给四名人员。",
+      "rev": "35a672c92384"
+    },
+    "v-hire": {
+      "class": "B",
+      "alt": "应聘者通过审批后进入公司岗位。",
+      "rev": "389201a39fe3"
+    },
+    "v-interview": {
+      "class": "A",
+      "alt": "求职者与面试官隔着桌子交谈，桌上有简历。",
+      "rev": "e81404dcab0c"
+    },
+    "v-salary": {
+      "class": "B",
+      "alt": "每月日历都对应一笔固定金额的薪水。",
+      "rev": "e7b1bc553bb0"
+    },
+    "v-staff": {
+      "class": "A",
+      "alt": "三位员工在同一办公场所组成职员群体。",
+      "rev": "066cef67cbe6"
+    },
+    "v-shift": {
+      "class": "B",
+      "alt": "两名员工在不同时间段轮换同一个岗位。",
+      "rev": "41f033a2e953"
+    },
+    "v-training": {
+      "class": "A",
+      "alt": "培训老师指向屏幕，前面有两名学习者。",
+      "rev": "59876eccb636"
+    },
+    "v-vacancy": {
+      "class": "A",
+      "alt": "三张工作桌中间那张为空位，岗位处有问号。",
+      "rev": "5ae0e252684e"
+    },
+    "v-resume": {
+      "class": "B",
+      "alt": "暂停的播放条经过箭头继续向前运行。",
+      "rev": "ea7505d5f2fb"
+    },
+    "v-recruit": {
+      "class": "B",
+      "alt": "招聘方展示空职位，多名申请者向该岗位聚集。",
+      "rev": "f33c5f102a83"
+    },
+    "v-benefit": {
+      "class": "C"
+    },
+    "v-promotion": {
+      "class": "B",
+      "alt": "员工从较低岗位沿上升箭头进入较高岗位。",
+      "rev": "cd89612dff64"
+    },
+    "v-qualification": {
+      "class": "C"
+    },
+    "v-orientation": {
+      "class": "B",
+      "alt": "新员工进入公司，接受工作人员与屏幕的入职介绍。",
+      "rev": "b079c3af5f5f"
+    },
+    "v-probation": {
+      "class": "B",
+      "alt": "新员工佩戴临时工牌接受工作考核，通过后换成带勾的正式工牌。",
+      "rev": "ab16dc0c2f9c"
+    },
+    "v-evaluate": {
+      "class": "B",
+      "alt": "工作结果交由检查表作出评估。",
+      "rev": "eb392bdded9c"
+    },
+    "v-transfer": {
+      "class": "B",
+      "alt": "同一员工从甲部门平移到乙部门，不表示升职。",
+      "rev": "955d96550399"
+    },
+    "v-resign": {
+      "class": "B",
+      "alt": "员工提交离职信后离开原公司。",
+      "rev": "0061992462e2"
+    },
+    "v-retirement": {
+      "class": "C"
+    },
+    "v-eligible": {
+      "class": "C"
+    },
+    "v-mentor": {
+      "class": "B",
+      "alt": "熟悉工作的导师在旁指导新员工操作电脑。",
+      "rev": "e11a9e40a2e4"
+    },
+    "v-reference": {
+      "class": "B",
+      "alt": "推荐人的信件随应聘资料送到招聘方。",
+      "rev": "0321880a26ca"
+    },
+    "v-overtime": {
+      "class": "B",
+      "alt": "正常班次结束后，时间轴仍向右延伸到额外工时，员工夜间继续在电脑前工作。",
+      "rev": "78fdd1e26d5c"
+    },
+    "v-allowance": {
+      "class": "B",
+      "alt": "公司向出差员工发放一笔津贴。",
+      "rev": "d7b759ede67d"
+    },
+    "v-mandatory": {
+      "class": "B",
+      "alt": "进入安全作业区前必须先戴上防护用品。",
+      "rev": "274a1281b788"
+    },
+    "v-retention": {
+      "class": "C"
+    },
+    "v-appraisal": {
+      "class": "C"
+    },
+    "v-apprentice": {
+      "class": "A",
+      "alt": "师傅在学徒身旁示意指导，学徒用螺丝刀拧电气面板上的螺钉，边做边学习。",
+      "rev": "ee0c10f0f9e7"
+    },
+    "v-credentials": {
+      "class": "A",
+      "alt": "带印章和绶带的资格证书。",
+      "rev": "12364f48b076"
+    },
+    "v-successor": {
+      "class": "B",
+      "alt": "上一任离开岗位后，由下一任接替同一个岗位。",
+      "rev": "252990cea8f1"
+    },
+    "v-incentive": {
+      "class": "C"
+    },
+    "v-remuneration": {
+      "class": "C"
+    },
+    "v-prerequisite": {
+      "class": "B",
+      "alt": "完成第一项要求并打勾，才能进入下一步。",
+      "rev": "93a412a2fc1f"
+    },
+    "v-impartial": {
+      "class": "B",
+      "alt": "天平两侧保持同样高度，没有偏向任何一方。",
+      "rev": "0912a53288e8"
+    },
+    "v-understaffed": {
+      "class": "A",
+      "alt": "有五张工作椅，只有两位工作人员，另外三位岗位空着。",
+      "rev": "6579b88c95cb"
+    },
+    "v-cash": {
+      "class": "A",
+      "alt": "几张纸币与硬币放在一起，表示可以直接使用的现金。",
+      "rev": "4d79414ffa69"
+    },
+    "v-price": {
+      "class": "A",
+      "alt": "商品上挂着标有20的价格标签。",
+      "rev": "a341eedf40ef"
+    },
+    "v-total": {
+      "class": "B",
+      "alt": "账单两笔金额20与30相加，底部合计为50。",
+      "rev": "ddff9eb2e638"
+    },
+    "v-cost": {
+      "class": "C"
+    },
+    "v-payment": {
+      "class": "B",
+      "alt": "付款者把现金交给商店，箭头表示付款方向。",
+      "rev": "a9e608619256"
+    },
+    "v-expense": {
+      "class": "C"
+    },
+    "v-profit": {
+      "class": "B",
+      "alt": "营业收入100减去成本70，留下利润30。",
+      "rev": "177b1062f2a0"
+    },
+    "v-refund": {
+      "class": "B",
+      "alt": "退回商品之后，商店将原付款退还顾客。",
+      "rev": "91b676414a0e"
+    },
+    "v-fee": {
+      "class": "C"
+    },
+    "v-account": {
+      "class": "B",
+      "alt": "一张个人身份卡与专属资金账户相连接。",
+      "rev": "5de5526ef8d6"
+    },
+    "v-balance": {
+      "class": "B",
+      "alt": "账户记录入100、出30后，剩余70被圈出。",
+      "rev": "ce79631fbd9b"
+    },
+    "v-deposit": {
+      "class": "B",
+      "alt": "预先支付的订金进入预订确认，结算单把这笔订金从总价中扣除。",
+      "rev": "108c2eb2c207"
+    },
+    "v-estimate": {
+      "class": "C"
+    },
+    "v-revenue": {
+      "class": "C"
+    },
+    "v-quarterly": {
+      "class": "B",
+      "alt": "十二个月被分为四组，每组三个月，四次报表日期分别位于各组末尾。",
+      "rev": "811fa307030a"
+    },
+    "v-forecast": {
+      "class": "B",
+      "alt": "现有数据是实线，延伸到未来的预测部分是虚线。",
+      "rev": "3c45a6862ca7"
+    },
+    "v-withdraw": {
+      "class": "B",
+      "alt": "存款账户中的钱沿箭头取出，变成手边现金。",
+      "rev": "88d10c5270c6"
+    },
+    "v-allocate": {
+      "class": "B",
+      "alt": "一笔资金分为三路，分别拨给三个工作项目。",
+      "rev": "9b9097d17731"
+    },
+    "v-deduct": {
+      "class": "B",
+      "alt": "原金额100扣掉30后变为70，减号清楚可见。",
+      "rev": "719bc738d09e"
+    },
+    "v-outstanding": {
+      "class": "A",
+      "alt": "尚未付款的账单列着金额50，旁边有等待时钟。",
+      "rev": "96d2e8f9a07e"
+    },
+    "v-audit": {
+      "class": "B",
+      "alt": "审计者用放大镜核对账簿与付款记录。",
+      "rev": "bb9b101851e2"
+    },
+    "v-deficit": {
+      "class": "B",
+      "alt": "支出柱高于收入柱，两者之间的缺口用红线标出。",
+      "rev": "a680c77ef78f"
+    },
+    "v-surplus": {
+      "class": "B",
+      "alt": "收入柱高于支出柱，上方多出的金额被绿色框突出。",
+      "rev": "713dc9917d6e"
+    },
+    "v-expenditure": {
+      "class": "C"
+    },
+    "v-transaction": {
+      "class": "B",
+      "alt": "现金和商品沿相反方向交换，形成一笔交易。",
+      "rev": "004c13e7254a"
+    },
+    "v-installment": {
+      "class": "B",
+      "alt": "整笔价款分成五份，五个付款时点各付一份，其中一期用颜色突出。",
+      "rev": "44b02d7457b4"
+    },
+    "v-overdue": {
+      "class": "B",
+      "alt": "付款期限已经过去，仍未付款的事件位于期限之后。",
+      "rev": "fa6d9871182d"
+    },
+    "v-waive": {
+      "class": "B",
+      "alt": "原费用20被划去，新的应付款变为0。",
+      "rev": "1f83545d9730"
+    },
+    "v-liability": {
+      "class": "C"
+    },
+    "v-reconcile": {
+      "class": "B",
+      "alt": "两份账目先核对差异，再整理成相同数字。",
+      "rev": "5d8c2c252683"
+    },
+    "v-accrue": {
+      "class": "B",
+      "alt": "硬币堆随三个时间点逐渐变高，表示累积。",
+      "rev": "b2eb6fd8b2ed"
+    },
+    "v-contingency": {
+      "class": "C"
+    },
+    "v-depreciation": {
+      "class": "B",
+      "alt": "同一设备随时间变旧，账面价值从100下降到60。",
+      "rev": "512f97fd687b"
+    },
+    "v-solvency": {
+      "class": "C"
+    },
+    "v-ticket": {
+      "class": "A",
+      "alt": "带车次图案和座位号12的纸质车票。",
+      "rev": "62fc4c73ae8b"
+    },
+    "v-flight": {
+      "class": "A",
+      "alt": "一架客机正在空中飞行。",
+      "rev": "7bdeec76ee1f"
+    },
+    "v-luggage": {
+      "class": "A",
+      "alt": "带拉杆与轮子的旅行箱。",
+      "rev": "65f8afbe11bd"
+    },
+    "v-arrival": {
+      "class": "B",
+      "alt": "飞机已停靠航站楼旁，廊桥连到机身，轮子落在停机坪上。",
+      "rev": "f3de7632fe9a"
+    },
+    "v-departure": {
+      "class": "B",
+      "alt": "飞机离开出发地航站楼，向外飞行。",
+      "rev": "3a4b68c87897"
+    },
+    "v-passenger": {
+      "class": "A",
+      "alt": "一位带行李的旅客站在列车旁，准备乘车。",
+      "rev": "81add24c4765"
+    },
+    "v-platform": {
+      "class": "A",
+      "alt": "列车轨道旁边有抬高的候车站台和乘客。",
+      "rev": "0483a116e589"
+    },
+    "v-delay": {
+      "class": "B",
+      "alt": "列车被红色信号灯挡在轨道上，原定时钟旁的等候时钟多走了半小时。",
+      "rev": "deafd77c7fc7"
+    },
+    "v-destination": {
+      "class": "B",
+      "alt": "弯曲路线的终点上竖着明显的位置标记。",
+      "rev": "e825f19c914d"
+    },
+    "v-confirm": {
+      "class": "B",
+      "alt": "原来带问号的预约经核实后变成勾号。",
+      "rev": "4fd23f34a43c"
+    },
+    "v-board": {
+      "class": "A",
+      "alt": "乘客带着行李沿台阶走入列车车门。",
+      "rev": "86a355bf88df"
+    },
+    "v-shuttle": {
+      "class": "B",
+      "alt": "有乘客窗的接驳巴士在两处站点之间往返运行。",
+      "rev": "c6f85cc7aa3f"
+    },
+    "v-fare": {
+      "class": "B",
+      "alt": "乘车票与需要支付的车费相连。",
+      "rev": "8dfdf2a96e2e"
+    },
+    "v-route": {
+      "class": "B",
+      "alt": "两处位置标记由清楚的弯曲路线连接。",
+      "rev": "0b6119f7ec49"
+    },
+    "v-accommodation": {
+      "class": "A",
+      "alt": "一张配有枕头的床，代表旅行中临时住宿的房间。",
+      "rev": "4e7b2e67231b"
+    },
+    "v-terminal": {
+      "class": "A",
+      "alt": "旅客带行李进入有飞机标志的航站楼。",
+      "rev": "0a418fb31cb3"
+    },
+    "v-overnight": {
+      "class": "B",
+      "alt": "床位上方是月亮与星星，表示过夜住宿。",
+      "rev": "561fde50618d"
+    },
+    "v-upgrade": {
+      "class": "B",
+      "alt": "原来较窄的普通座位升级为更宽敞的座位。",
+      "rev": "af8ff23f5797"
+    },
+    "v-round-trip": {
+      "class": "B",
+      "alt": "从甲地到乙地的去程和返回甲地的回程形成闭环。",
+      "rev": "14f3c866393b"
+    },
+    "v-connection": {
+      "class": "B",
+      "alt": "先乘一架飞机，在中间航站楼换乘另一架飞机。",
+      "rev": "a943a6f35f5c"
+    },
+    "v-layover": {
+      "class": "B",
+      "alt": "两段航班之间在机场停留一段时间。",
+      "rev": "024dc860c487"
+    },
+    "v-complimentary": {
+      "class": "B",
+      "alt": "一杯随服务免费赠送的饮料旁有标价0。",
+      "rev": "1b3cfa4e7b89"
+    },
+    "v-customs": {
+      "class": "A",
+      "alt": "入境旅客在检查台前打开行李，由工作人员检查。",
+      "rev": "2d34053a16ee"
+    },
+    "v-declare": {
+      "class": "B",
+      "alt": "旅客将携带物品的申报表交给海关人员。",
+      "rev": "40f32cd02271"
+    },
+    "v-rental": {
+      "class": "B",
+      "alt": "支付租用费用后获得钥匙，期限结束需要归还。",
+      "rev": "9ebae2337d44"
+    },
+    "v-cancellation": {
+      "class": "B",
+      "alt": "已预订的日历格被一个大叉划掉。",
+      "rev": "ad7d9e7bd714"
+    },
+    "v-accessible": {
+      "class": "B",
+      "alt": "入口旁修有连续斜坡，方便进入高于地面的房间。",
+      "rev": "afcca39542a7"
+    },
+    "v-divert": {
+      "class": "B",
+      "alt": "原来直达的路线有障碍，箭头绕过障碍抵达终点。",
+      "rev": "c180769e54f8"
+    },
+    "v-excursion": {
+      "class": "B",
+      "alt": "从旅馆出发短途游览景点后返回住宿地。",
+      "rev": "364c24a8bed6"
+    },
+    "v-amenity": {
+      "class": "C"
+    },
+    "v-voucher": {
+      "class": "A",
+      "alt": "服务兑换券上印着饮品图案，表示可凭券领取饮料。",
+      "rev": "ab1053bd8e16"
+    },
+    "v-adjacent": {
+      "class": "B",
+      "alt": "两栋建筑紧挨着，中间只有很小间隙。",
+      "rev": "f20d5da7c74f"
+    },
+    "v-inbound": {
+      "class": "B",
+      "alt": "飞机仍在空中朝机场和跑道下降，尚未落地。",
+      "rev": "22999e8ac6f3"
+    },
+    "v-nonrefundable": {
+      "class": "B",
+      "alt": "付款后的回流箭头被叉号截断，表示不能退款。",
+      "rev": "742d3f468897"
+    },
+    "v-customer": {
+      "class": "A",
+      "alt": "顾客在店内挑选购物车里的商品。",
+      "rev": "30cd4dc864e9"
+    },
+    "v-store": {
+      "class": "A",
+      "alt": "有遮阳棚、橱窗与入口的小商店。",
+      "rev": "9110f723df7e"
+    },
+    "v-item": {
+      "class": "A",
+      "alt": "货架上一件商品被单独圈出。",
+      "rev": "ebc5dc13b4a3"
+    },
+    "v-size": {
+      "class": "A",
+      "alt": "同款纸箱的宽与高由双向尺寸线标出。",
+      "rev": "a4c1e469c4e2"
+    },
+    "v-order": {
+      "class": "B",
+      "alt": "顾客提交商品清单，商店据此准备货物。",
+      "rev": "7333ab294b61"
+    },
+    "v-discount": {
+      "class": "B",
+      "alt": "商品价格标签由原价100改为折后80。",
+      "rev": "263136db6ca6"
+    },
+    "v-shelf": {
+      "class": "A",
+      "alt": "支架上的水平搁板摆放着几件商品。",
+      "rev": "03f928863769"
+    },
+    "v-brand": {
+      "class": "C"
+    },
+    "v-purchase": {
+      "class": "B",
+      "alt": "顾客支付钱款，换取商店的一件商品。",
+      "rev": "e0922099a7ad"
+    },
+    "v-exchange": {
+      "class": "B",
+      "alt": "一件商品通过方向相反的箭头换成另一件同类商品。",
+      "rev": "716f4399f8ee"
+    },
+    "v-cashier": {
+      "class": "A",
+      "alt": "收银员站在柜台后操作收银设备。",
+      "rev": "7b9c865eb0fa"
+    },
+    "v-counter": {
+      "class": "A",
+      "alt": "商店里一张宽大的服务柜台。",
+      "rev": "97ff58ea9712"
+    },
+    "v-display": {
+      "class": "A",
+      "alt": "三件商品整齐摆在展示台上供人观看。",
+      "rev": "b7fe22087985"
+    },
+    "v-catalog": {
+      "class": "A",
+      "alt": "商品目录的两页分别列有不同商品小图与说明线。",
+      "rev": "9c95a47324e3"
+    },
+    "v-selection": {
+      "class": "A",
+      "alt": "三种不同商品并列摆放，供顾客选择。",
+      "rev": "5309b21768e5"
+    },
+    "v-retail": {
+      "class": "B",
+      "alt": "商店向一名顾客售出单件商品。",
+      "rev": "d9157dfbf3b6"
+    },
+    "v-wholesale": {
+      "class": "B",
+      "alt": "仓库向商店大批供应多箱商品。",
+      "rev": "a4c6a64825b5"
+    },
+    "v-affordable": {
+      "class": "C"
+    },
+    "v-warranty": {
+      "class": "C"
+    },
+    "v-defective": {
+      "class": "A",
+      "alt": "有裂纹的设备旁标着叉号。",
+      "rev": "bb45de22f862"
+    },
+    "v-replacement": {
+      "class": "B",
+      "alt": "损坏的旧设备被一台完好的替换品换下。",
+      "rev": "42bf27595f37"
+    },
+    "v-merchandise": {
+      "class": "A",
+      "alt": "待售货架上整齐摆放包装箱和日用品。",
+      "rev": "91e5c02fb605"
+    },
+    "v-redeem": {
+      "class": "B",
+      "alt": "出示兑换券后换到一杯饮料。",
+      "rev": "ba3c70f38157"
+    },
+    "v-clearance": {
+      "class": "C"
+    },
+    "v-limited": {
+      "class": "A",
+      "alt": "一个小货架仅剩两件商品，空位明显多于有货位置。",
+      "rev": "137c41a806f4"
+    },
+    "v-durable": {
+      "class": "C"
+    },
+    "v-compatible": {
+      "class": "B",
+      "alt": "两件可配合使用的设备通过匹配接口连接，旁边出现勾。",
+      "rev": "4be052abea2f"
+    },
+    "v-loyalty": {
+      "class": "B",
+      "alt": "同一顾客多次返回同一家商店购物。",
+      "rev": "eaef9e861e56"
+    },
+    "v-inquiry": {
+      "class": "C"
+    },
+    "v-exclusive": {
+      "class": "C"
+    },
+    "v-discontinue": {
+      "class": "B",
+      "alt": "生产设备之后的商品流被叉号截断。",
+      "rev": "27dc848ad4da"
+    },
+    "v-satisfaction": {
+      "class": "C"
+    },
+    "v-ineligible": {
+      "class": "B",
+      "alt": "资格审核时，申请材料未通过勾选要求。",
+      "rev": "1e1feb5d465d"
+    },
+    "v-comparable": {
+      "class": "C"
+    },
+    "v-substitution": {
+      "class": "B",
+      "alt": "计划中的物品被另一件代用品换上。",
+      "rev": "1acfaf1f1534"
+    },
+    "v-factory": {
+      "class": "A",
+      "alt": "有生产车间、窗户和烟囱的工厂建筑。",
+      "rev": "cdc65d5b7cd2"
+    },
+    "v-machine": {
+      "class": "A",
+      "alt": "带按钮、显示窗与工作台的生产机器。",
+      "rev": "573dd3b3f571"
+    },
+    "v-worker": {
+      "class": "A",
+      "alt": "一名戴安全帽、穿工作服的工人。",
+      "rev": "e610b0bb8461"
+    },
+    "v-tool": {
+      "class": "A",
+      "alt": "用于紧固和拆卸零件的扳手。",
+      "rev": "24614144be62"
+    },
+    "v-material": {
+      "class": "A",
+      "alt": "生产前的原料以木板、金属卷和布卷排列。",
+      "rev": "a3c77e93e34b"
+    },
+    "v-part": {
+      "class": "A",
+      "alt": "完整机器旁有一枚脱开的齿轮，箭头指出它装入的位置。",
+      "rev": "40bc026e2422"
+    },
+    "v-repair": {
+      "class": "B",
+      "alt": "损坏的机器经过扳手修理后恢复完好。",
+      "rev": "c262845f87e5"
+    },
+    "v-safety": {
+      "class": "A",
+      "alt": "工人戴着安全帽，旁边盾牌上有保护勾号。",
+      "rev": "c09affa6ef07"
+    },
+    "v-assemble": {
+      "class": "B",
+      "alt": "分离的零件依次装配成一台完整机器。",
+      "rev": "c82f020a5ca1"
+    },
+    "v-operate": {
+      "class": "A",
+      "alt": "工人伸手按下机器的操作按钮。",
+      "rev": "8f6b905d7940"
+    },
+    "v-output": {
+      "class": "B",
+      "alt": "生产线末端排出三件成品，突出生产数量。",
+      "rev": "d9852ed82252"
+    },
+    "v-quality": {
+      "class": "C"
+    },
+    "v-measure": {
+      "class": "A",
+      "alt": "尺子沿纸箱底边测量长度，带有刻度。",
+      "rev": "3d33e69053a6"
+    },
+    "v-maintain": {
+      "class": "B",
+      "alt": "运行中的机器定期配合扳手进行维护。",
+      "rev": "03280591c7b9"
+    },
+    "v-batch": {
+      "class": "B",
+      "alt": "同一虚线框内放着一批同时生产的六个箱子。",
+      "rev": "3518b71eb670"
+    },
+    "v-capacity": {
+      "class": "B",
+      "alt": "容量为六格的容器恰好被六个相同物品填满。",
+      "rev": "13a1ebb7def4"
+    },
+    "v-assembly": {
+      "class": "B",
+      "alt": "多个零件通过装配步骤组合成一台成品。",
+      "rev": "15807e29fa06"
+    },
+    "v-component": {
+      "class": "A",
+      "alt": "机器的一枚组成齿轮被圈出，与整机相连。",
+      "rev": "f5601ce62e6b"
+    },
+    "v-specification": {
+      "class": "A",
+      "alt": "技术图纸上的纸箱被尺寸线标出宽40、高30。",
+      "rev": "024a605d4b20"
+    },
+    "v-efficient": {
+      "class": "B",
+      "alt": "相同数量的成品只需要较少时间完成。",
+      "rev": "8e6ff3739cf3"
+    },
+    "v-reduce": {
+      "class": "B",
+      "alt": "数量从五个方块减少到两个方块。",
+      "rev": "1f843c46a647"
+    },
+    "v-monitor": {
+      "class": "A",
+      "alt": "工作人员观察屏幕上持续变化的温度曲线。",
+      "rev": "bd6670408bea"
+    },
+    "v-prototype": {
+      "class": "B",
+      "alt": "尚在测试台上的产品样机带有虚线轮廓与测试问号。",
+      "rev": "d164a40e5ba8"
+    },
+    "v-calibrate": {
+      "class": "B",
+      "alt": "测量仪器的偏离指针被调到标准零点。",
+      "rev": "6564e6d1364b"
+    },
+    "v-malfunction": {
+      "class": "A",
+      "alt": "设备外壳裂开，显示机器发生故障。",
+      "rev": "2ee9401b183a"
+    },
+    "v-inventory": {
+      "class": "A",
+      "alt": "仓库货架上有多箱现存商品，旁边放着库存记录。",
+      "rev": "1a03c6ddbda4"
+    },
+    "v-storage": {
+      "class": "A",
+      "alt": "几个纸箱被放在有门的储物空间里。",
+      "rev": "3b1456270d6f"
+    },
+    "v-precision": {
+      "class": "B",
+      "alt": "三个测量点紧密集中在靶心，体现高度精确。",
+      "rev": "28d84592d704"
+    },
+    "v-fabricate": {
+      "class": "B",
+      "alt": "原材料进入加工机器，出来的是成型零件。",
+      "rev": "d6008592798a"
+    },
+    "v-withstand": {
+      "class": "B",
+      "alt": "坚固包装在侧面受力箭头下仍保持完整。",
+      "rev": "85dd36edb36c"
+    },
+    "v-rigorous": {
+      "class": "C"
+    },
+    "v-tolerance": {
+      "class": "B",
+      "alt": "部件宽度在标准线两侧的狭窄允许范围内。",
+      "rev": "4c1a4f6abd40"
+    },
+    "v-deteriorate": {
+      "class": "B",
+      "alt": "原本完整的设备随着时间推移变成有损坏的设备。",
+      "rev": "264506f23841"
+    },
+    "v-yield": {
+      "class": "B",
+      "alt": "生产出来的三件产品中，两件通过检验，一件被剔除。",
+      "rev": "d8eef72f8ebb"
+    },
+    "v-obsolete": {
+      "class": "B",
+      "alt": "旧式设备被停止使用，换成现代设备。",
+      "rev": "5339bc1361cd"
+    },
+    "v-meeting": {
+      "class": "A",
+      "alt": "三名同事围坐在桌边共同开会。",
+      "rev": "03092521c8eb"
+    },
+    "v-room": {
+      "class": "A",
+      "alt": "墙壁、窗户和门框围出一间独立房间。",
+      "rev": "abbae5b66b75"
+    },
+    "v-date": {
+      "class": "A",
+      "alt": "日历上某一日期格被圆圈明确标记。",
+      "rev": "5920a2c15d61"
+    },
+    "v-invite": {
+      "class": "B",
+      "alt": "邀请函由发出者送给另一位受邀者。",
+      "rev": "4fb5638bca4a"
+    },
+    "v-join": {
+      "class": "B",
+      "alt": "一位新成员沿箭头加入已有的两人小组。",
+      "rev": "eb8167eafeae"
+    },
+    "v-discuss": {
+      "class": "A",
+      "alt": "两人面对面，各有一个发言气泡，正在交换意见。",
+      "rev": "286ed1815c5b"
+    },
+    "v-speaker": {
+      "class": "A",
+      "alt": "演讲者站在讲台后，面向听众讲话。",
+      "rev": "6ed4592d7ade"
+    },
+    "v-attend": {
+      "class": "A",
+      "alt": "参加者进入正在进行的会议并占据空位。",
+      "rev": "046b55d6be7a"
+    },
+    "v-topic": {
+      "class": "C"
+    },
+    "v-presentation": {
+      "class": "A",
+      "alt": "演示者指向带有柱状图的大屏幕。",
+      "rev": "454ddcfaab10"
+    },
+    "v-participant": {
+      "class": "A",
+      "alt": "一名与会者胸前挂着参加活动的证件。",
+      "rev": "7bc4c051108b"
+    },
+    "v-conference": {
+      "class": "A",
+      "alt": "演讲台前排列多名听众，构成大型会议会场。",
+      "rev": "aa90b775703d"
+    },
+    "v-venue": {
+      "class": "A",
+      "alt": "位置标记指向已摆好会议桌的活动场所。",
+      "rev": "32227a13ecda"
+    },
+    "v-session": {
+      "class": "B",
+      "alt": "四个人围着会议桌参与同一场活动，开始与结束时钟把这场活动限定在一段时间内。",
+      "rev": "17e3405a816d"
+    },
+    "v-register": {
+      "class": "B",
+      "alt": "申请表填写完成后获得参会证件。",
+      "rev": "b1fa9ec9ada6"
+    },
+    "v-schedule": {
+      "class": "A",
+      "alt": "日程表按上午、中午、下午安排不同活动。",
+      "rev": "fa395f29c492"
+    },
+    "v-introduce": {
+      "class": "A",
+      "alt": "中间的人向左右两位互不认识的人作介绍。",
+      "rev": "9a4bcc9d15cc"
+    },
+    "v-minutes": {
+      "class": "A",
+      "alt": "会议桌旁摆着记录纸，上面列有三个已作出的决定。",
+      "rev": "ecccec74b104"
+    },
+    "v-proposal": {
+      "class": "B",
+      "alt": "带有新想法灯泡的提案文件送交评审者。",
+      "rev": "edf2df35c884"
+    },
+    "v-feedback": {
+      "class": "B",
+      "alt": "成果交付后，接收者返回带评语的反馈。",
+      "rev": "b9c2c2c55f26"
+    },
+    "v-summarize": {
+      "class": "B",
+      "alt": "一叠较长内容被概括成更短的一页。",
+      "rev": "93550992aac9"
+    },
+    "v-clarify": {
+      "class": "C"
+    },
+    "v-unanimous": {
+      "class": "B",
+      "alt": "四位参与者全部投出相同的绿色勾。",
+      "rev": "3328e3bb11c5"
+    },
+    "v-consensus": {
+      "class": "C"
+    },
+    "v-facilitate": {
+      "class": "C"
+    },
+    "v-moderator": {
+      "class": "A",
+      "alt": "主持人位于两位发言者之间，协调讨论轮次。",
+      "rev": "bc280f4342f9"
+    },
+    "v-attendance": {
+      "class": "A",
+      "alt": "签到记录上三位人员均打勾，旁边显示到场人数3。",
+      "rev": "5fd3bac9fa05"
+    },
+    "v-handout": {
+      "class": "A",
+      "alt": "一叠讲义被逐份分给两位参加者。",
+      "rev": "d245ac9b08e8"
+    },
+    "v-convene": {
+      "class": "B",
+      "alt": "分散的人员接到通知，聚集到同一会议桌旁。",
+      "rev": "ffbe9ded494f"
+    },
+    "v-adjourn": {
+      "class": "B",
+      "alt": "会议钟停止，参加者沿箭头离开会议桌。",
+      "rev": "3bfbb63db1d6"
+    },
+    "v-endorse": {
+      "class": "C"
+    },
+    "v-deliberation": {
+      "class": "C"
+    },
+    "v-quorum": {
+      "class": "B",
+      "alt": "五个席位中三个人到场，达到最低三人的表决条件。",
+      "rev": "7af52d7cff56"
+    },
+    "v-defer": {
+      "class": "B",
+      "alt": "原本今天作出的决定被移到下周。",
+      "rev": "69352b387df2"
+    },
+    "v-ratify": {
+      "class": "B",
+      "alt": "协议文本经正式批准后盖上同意印章。",
+      "rev": "f5759c3ac30f"
+    },
+    "v-package": {
+      "class": "A",
+      "alt": "一个贴好封箱胶带、可寄送的包裹。",
+      "rev": "6273d2947eea"
+    },
+    "v-address": {
+      "class": "A",
+      "alt": "建筑门口的门牌与寄件标签上显示相同门号12。",
+      "rev": "cfdfd063028f"
+    },
+    "v-label": {
+      "class": "A",
+      "alt": "带穿孔和细绳的空白标签。",
+      "rev": "38c45ca53db4"
+    },
+    "v-truck": {
+      "class": "A",
+      "alt": "一辆有货厢和驾驶室的运货卡车。",
+      "rev": "e0b5ad71b7a6"
+    },
+    "v-warehouse": {
+      "class": "A",
+      "alt": "大型仓库里存放着多箱货物。",
+      "rev": "a1e5d0a18ded"
+    },
+    "v-courier": {
+      "class": "A",
+      "alt": "快递员抱着包裹站在收件建筑门口。",
+      "rev": "cfea6c8da470"
+    },
+    "v-dispatch": {
+      "class": "B",
+      "alt": "封好的包裹离开仓库，被装上配送卡车。",
+      "rev": "f3d056acab4a"
+    },
+    "v-freight": {
+      "class": "A",
+      "alt": "卡车后面有一整托准备运输的货物。",
+      "rev": "d189bca655a8"
+    },
+    "v-destination-label": {
+      "class": "A",
+      "alt": "箱子上的目的地标签画着位置标记，指向收货地址。",
+      "rev": "e311bf96d1bf"
+    },
+    "v-fragile": {
+      "class": "A",
+      "alt": "细脚玻璃杯被轻托在包装内，杯旁有裂损警示。",
+      "rev": "185a61bd0446"
+    },
+    "v-weigh": {
+      "class": "A",
+      "alt": "包裹放在秤盘上，秤下显示重量5。",
+      "rev": "91ad0f8b507e"
+    },
+    "v-track": {
+      "class": "B",
+      "alt": "包裹当前所在位置在运输路线中被定位圈标记。",
+      "rev": "625910be21d0"
+    },
+    "v-distribute": {
+      "class": "B",
+      "alt": "配送中心把三份货物沿不同路线分送到三个收件点。",
+      "rev": "b2b972ae0252"
+    },
+    "v-supplier": {
+      "class": "B",
+      "alt": "原料供应方把货物分别运给两家不同的采购商。",
+      "rev": "ac5cd8da6620"
+    },
+    "v-recipient": {
+      "class": "A",
+      "alt": "收件人在门口接过快递员递来的包裹。",
+      "rev": "171d508a7d3d"
+    },
+    "v-packaging": {
+      "class": "A",
+      "alt": "纸箱周围围有缓冲材料，保护里面的易碎玻璃杯。",
+      "rev": "b9de66379a9e"
+    },
+    "v-bulk": {
+      "class": "A",
+      "alt": "许多相同箱子成批堆放，明显超过单件采购。",
+      "rev": "3e6126568c26"
+    },
+    "v-carton": {
+      "class": "A",
+      "alt": "敞开的瓦楞纸箱露出内部隔板，四片箱盖向外翻折。",
+      "rev": "2d7047326d28"
+    },
+    "v-transport": {
+      "class": "B",
+      "alt": "货物被卡车从一处仓库运到另一处地点。",
+      "rev": "61744f31629d"
+    },
+    "v-consignment": {
+      "class": "B",
+      "alt": "同一批托运箱子被共同的外框和标签圈在一起。",
+      "rev": "b4308e52d18d"
+    },
+    "v-expedite": {
+      "class": "B",
+      "alt": "正常较长的处理路线被一条更短的快速路线替代。",
+      "rev": "df94eb9e879e"
+    },
+    "v-replenish": {
+      "class": "B",
+      "alt": "原本缺货的货架补入箱子后重新装满。",
+      "rev": "77f9452ab954"
+    },
+    "v-backlog": {
+      "class": "A",
+      "alt": "待办架前堆积多份尚未处理的订单。",
+      "rev": "b2376d81d700"
+    },
+    "v-tracking-number": {
+      "class": "A",
+      "alt": "包裹标签上有一串物流编号12345，用于查询货件。",
+      "rev": "ac47952e9410"
+    },
+    "v-perishable": {
+      "class": "B",
+      "alt": "新鲜食品随时间变化开始出现腐坏斑点。",
+      "rev": "83fbb77d15ac"
+    },
+    "v-procurement": {
+      "class": "B",
+      "alt": "组织根据物资需求清单向供应方购买一批货物。",
+      "rev": "4894c8049e38"
+    },
+    "v-lead-time": {
+      "class": "B",
+      "alt": "下单的订单和到货的包裹位于时间轴两端，双端标尺量出两者之间的三周。",
+      "rev": "1c415ce15b2d"
+    },
+    "v-shortage": {
+      "class": "B",
+      "alt": "五名员工只有两把可用椅子，形成供应不足。",
+      "rev": "31fa38724271"
+    },
+    "v-reroute": {
+      "class": "B",
+      "alt": "配送车原路线被阻断，改走绕行路线通往同一目的地。",
+      "rev": "9793a7c41c4e"
+    },
+    "v-stagger": {
+      "class": "B",
+      "alt": "原来同一时点的三项活动分别错开到不同时间位置。",
+      "rev": "92f64991eba4"
+    },
+    "v-requisition": {
+      "class": "A",
+      "alt": "员工填写物资申领单后，领取所需办公用品。",
+      "rev": "da3948c728f3"
+    },
+    "v-entrance": {
+      "class": "A",
+      "alt": "从门外向右的箭头进入建筑入口。",
+      "rev": "941bb1f81feb"
+    },
+    "v-exit": {
+      "class": "A",
+      "alt": "箭头从门内向右伸到门外，表示出口方向。",
+      "rev": "22831ce5237e"
+    },
+    "v-floor": {
+      "class": "A",
+      "alt": "三层建筑中的第二层被单独高亮。",
+      "rev": "4823fffa64a9"
+    },
+    "v-key": {
+      "class": "A",
+      "alt": "带圆孔、齿形和长柄的一把钥匙。",
+      "rev": "5b286facab43"
+    },
+    "v-parking": {
+      "class": "A",
+      "alt": "划线停车位内停着一辆车，旁边是停车标记。",
+      "rev": "17391af9ccb4"
+    },
+    "v-building": {
+      "class": "A",
+      "alt": "一栋带窗户和入口的办公建筑。",
+      "rev": "6014264d2548"
+    },
+    "v-rent": {
+      "class": "B",
+      "alt": "每月支付固定费用，以继续使用同一间房屋。",
+      "rev": "3411cbf9ef45"
+    },
+    "v-maintenance": {
+      "class": "B",
+      "alt": "按日程对机器使用工具进行定期保养。",
+      "rev": "f2551923bf2b"
+    },
+    "v-tenant": {
+      "class": "B",
+      "alt": "居住使用者支付租金后取得房屋使用权。",
+      "rev": "a2a4d47dc80d"
+    },
+    "v-landlord": {
+      "class": "B",
+      "alt": "房屋所有者把钥匙交给使用者，并收取租金。",
+      "rev": "c30ea75427d4"
+    },
+    "v-renovation": {
+      "class": "B",
+      "alt": "陈旧损坏的房间经过修理后恢复整洁。",
+      "rev": "7eaba0b73cb2"
+    },
+    "v-lease": {
+      "class": "A",
+      "alt": "标明12个月租期的合同与房屋钥匙放在一起。",
+      "rev": "b99df4c83a33"
+    },
+    "v-install": {
+      "class": "B",
+      "alt": "设备搬入指定房间并安装到位。",
+      "rev": "372a6736f2cb"
+    },
+    "v-facility": {
+      "class": "C"
+    },
+    "v-permission": {
+      "class": "C"
+    },
+    "v-damage": {
+      "class": "A",
+      "alt": "原本完整的玻璃杯出现明显裂纹。",
+      "rev": "1e6409b68bab"
+    },
+    "v-temporarily": {
+      "class": "B",
+      "alt": "维修围栏只在中间时段挡住楼梯；沙漏旁的箭头通向重新开放的同一楼梯。",
+      "rev": "45bfc846e15a"
+    },
+    "v-premises": {
+      "class": "A",
+      "alt": "围栏圈起建筑和附属院地，强调经营场所的范围。",
+      "rev": "f5340686fbfa"
+    },
+    "v-occupancy": {
+      "class": "A",
+      "alt": "四个席位中三个有人、一个空着，显示使用人数。",
+      "rev": "99b6521d17e8"
+    },
+    "v-ventilation": {
+      "class": "A",
+      "alt": "打开的窗户让空气沿箭头进入房间并流出。",
+      "rev": "90e4eab0be70"
+    },
+    "v-proximity": {
+      "class": "B",
+      "alt": "两处位置标记之间仅相隔很短的距离。",
+      "rev": "b175a3c2c7fd"
+    },
+    "v-inspection": {
+      "class": "A",
+      "alt": "检查人员用放大镜核对机器和检查表。",
+      "rev": "cec0e7679c52"
+    },
+    "v-precaution": {
+      "class": "B",
+      "alt": "暴雨来临前，样品箱已搬到高处的平台上，下面的积水碰不到样品。",
+      "rev": "7df068e783ce"
+    },
+    "v-outage": {
+      "class": "A",
+      "alt": "电源线断开，右侧灯泡变灰且没有发光线。",
+      "rev": "bfb37307ef18"
+    },
+    "v-restoration": {
+      "class": "B",
+      "alt": "画笔参照原貌照片，把破损的装饰花纹补回原来的形状。",
+      "rev": "bea7a3f228fc"
+    },
+    "v-contingent": {
+      "class": "C"
+    },
+    "v-stipulate": {
+      "class": "C"
+    },
+    "v-rectify": {
+      "class": "B",
+      "alt": "错误资料经过修正后变成正确资料。",
+      "rev": "cf90faaae83e"
+    },
+    "v-feasibility": {
+      "class": "C"
+    },
+    "v-undertake": {
+      "class": "C"
+    },
+    "v-comply": {
+      "class": "C"
+    },
+    "v-encroach": {
+      "class": "B",
+      "alt": "原在边界左边的物品越过分界线，挤入右侧空间。",
+      "rev": "54c47818658d"
+    },
+    "v-provision": {
+      "class": "A",
+      "alt": "合同文件里的一条规定被单独高亮，而非整份文件。",
+      "rev": "a33e3c185213"
+    },
+    "v-subsequent": {
+      "class": "B",
+      "alt": "先发生第一件事，箭头向右连接随后发生的第二件事。",
+      "rev": "2216a39c0b6c"
+    },
+    "v-intermittent": {
+      "class": "B",
+      "alt": "信号线先出现、再中断、又出现，重复不连续。",
+      "rev": "1e5a59d3c57d"
+    },
+    "v-mitigate": {
+      "class": "B",
+      "alt": "一个防护挡板让较强冲击箭头变为较小影响。",
+      "rev": "3ce51b19bd34"
+    },
+    "v-reinstate": {
+      "class": "B",
+      "alt": "已取消的安排通过恢复操作重新变为有效。",
+      "rev": "fdab2045f825"
+    },
+    "v-recurring": {
+      "class": "B",
+      "alt": "同一台机器在三个不同日期反复亮起故障灯，每次都在相同位置报错。",
+      "rev": "a62119d0c8e9"
+    },
+    "v-pertinent": {
+      "class": "C"
+    },
+    "v-inconclusive": {
+      "class": "B",
+      "alt": "两个同样可能的结论分支都标有问号，未能确定唯一结论。",
+      "rev": "23dc7744445f"
+    },
+    "v-proficiency": {
+      "class": "C"
+    },
+    "v-discretionary": {
+      "class": "C"
+    },
+    "v-incumbent": {
+      "class": "C"
+    },
+    "v-collateral": {
+      "class": "B",
+      "alt": "房产作为贷款的担保物，与借款资金相连接。",
+      "rev": "1cce88f13047"
+    },
+    "v-itemize": {
+      "class": "B",
+      "alt": "一笔合计金额60被拆成逐项列出的20与40两笔费用。",
+      "rev": "dbf1ddf5ff57"
+    },
+    "v-disburse": {
+      "class": "B",
+      "alt": "款项从机构账户沿箭头发放给三位收款者。",
+      "rev": "d18d870b37ae"
+    },
+    "v-reciprocal": {
+      "class": "B",
+      "alt": "两方之间各有一个方向相反的给予箭头，表示互惠。",
+      "rev": "eaab615bcf7c"
+    },
+    "v-incidental": {
+      "class": "C"
+    },
+    "v-redeemable": {
+      "class": "B",
+      "alt": "有效兑换券经过验证后能换到指定商品。",
+      "rev": "d858371db0a5"
+    },
+    "v-proprietary": {
+      "class": "C"
+    },
+    "v-retrofit": {
+      "class": "B",
+      "alt": "旧机器加装新部件后继续使用，而非整机更换。",
+      "rev": "8a2d2b8b3e0e"
+    },
+    "v-conformity": {
+      "class": "B",
+      "alt": "产品的实际尺寸与规范检查表相符，获得勾号。",
+      "rev": "2504ab2452bc"
+    },
+    "v-substantiate": {
+      "class": "B",
+      "alt": "两份独立原始记录用连线共同支持中央的一项结论，结论得到核实。",
+      "rev": "c394152522af"
+    },
+    "v-amendment": {
+      "class": "B",
+      "alt": "原合同的一段被修改，新文字以醒目色块标出。",
+      "rev": "6696fb24d67e"
+    },
+    "v-adapt": {
+      "class": "B",
+      "alt": "原来的窄桌腿改成宽开口，让轮椅可以进入桌下。",
+      "rev": "276379588fdf"
+    },
+    "v-adopt": {
+      "class": "B",
+      "alt": "董事会在候选政策上打勾，再把同一份规则放上正式公告栏。",
+      "rev": "0e52645c8d46"
+    },
+    "v-affect": {
+      "class": "B",
+      "alt": "暴雨云连接到配送货车和延后的时钟，表示天气影响运输。",
+      "rev": "c796d6deccc4"
+    },
+    "v-effect": {
+      "class": "B",
+      "alt": "椅脚垫上软垫后，声波明显减小，右侧勾出降噪结果。",
+      "rev": "b4d27a88757b"
+    },
+    "v-precede": {
+      "class": "B",
+      "alt": "时间轴先经过安全检查的勾，再到游客进入展馆。",
+      "rev": "337ec063e815"
+    },
+    "v-proceed": {
+      "class": "B",
+      "alt": "工作人员在已获批准的检查单后，沿箭头继续铺设地板。",
+      "rev": "ece67db18b09"
+    },
+    "v-complement": {
+      "class": "A",
+      "alt": "浅色碗与深色盘配成一套餐具，颜色互相衬托。",
+      "rev": "9df864460433"
+    },
+    "v-compliment": {
+      "class": "A",
+      "alt": "顾客面对导游竖起拇指，气泡内用星星表达赞扬。",
+      "rev": "7f84b1208d98"
+    },
+    "v-approve": {
+      "class": "B",
+      "alt": "提案提交到审核桌，审核者在文件上盖绿色勾。",
+      "rev": "530118870eab"
+    },
+    "v-reject": {
+      "class": "B",
+      "alt": "审核窗口把带红叉的申请退回给提交者。",
+      "rev": "e5437e905101"
+    },
+    "v-submit": {
+      "class": "A",
+      "alt": "申请人把填写完成的表格递进有托盘的受理窗口。",
+      "rev": "fdaf9b566a02"
+    },
+    "v-refer": {
+      "class": "A",
+      "alt": "工作人员打开厚手册，用手指沿目录找到一条说明。",
+      "rev": "c47da3115858"
+    },
+    "v-retain": {
+      "class": "A",
+      "alt": "员工把收据放进带锁的留存文件夹，而非扔进旁边的垃圾桶。",
+      "rev": "2e52aff9bae4"
+    },
+    "v-obtain": {
+      "class": "B",
+      "alt": "办理人从柜台领取刚颁发的许可证，手中由空变为有证件。",
+      "rev": "5add15a42c0a"
+    },
+    "v-issue": {
+      "class": "A",
+      "alt": "柜台工作人员把新制作的员工证依次发给等待的人。",
+      "rev": "8839c3744eb7"
+    },
+    "v-acknowledge": {
+      "class": "B",
+      "alt": "收到信封后，收件人发回一封带勾的确认消息。",
+      "rev": "3a039f9a3ad2"
+    },
+    "v-enclose": {
+      "class": "A",
+      "alt": "一张附件单沿向下箭头装入已经放有信件的信封。",
+      "rev": "8c45e8b1e0f7"
+    },
+    "v-disclose": {
+      "class": "B",
+      "alt": "文件上覆盖信息的挡板被移开，内容随后展示给三名读者。",
+      "rev": "acf2153dcc86"
+    },
+    "v-conceal": {
+      "class": "A",
+      "alt": "文件放在桌面上，但关键一行被不透明挡板遮住。",
+      "rev": "a87d533af333"
+    },
+    "v-exclude": {
+      "class": "B",
+      "alt": "一个圆圈包含三枚圆形标记，方形标记被箭头移到圈外。",
+      "rev": "5bac93e55f23"
+    },
+    "v-include": {
+      "class": "B",
+      "alt": "方形标记沿箭头加入圆圈，与原有的三个标记一起组成整体。",
+      "rev": "2b64b9ba1768"
+    },
+    "v-amend": {
+      "class": "B",
+      "alt": "合同原有的一行被划掉，箭头指向新增修订的一行。",
+      "rev": "51bf527a160f"
+    },
+    "v-summon": {
+      "class": "A",
+      "alt": "会议室内的主管按呼叫按钮，走廊里的员工转向会议室。",
+      "rev": "ca4020d117fe"
+    },
+    "v-notify": {
+      "class": "B",
+      "alt": "日期变更消息从办公电脑发出，员工手机出现通知铃。",
+      "rev": "5b3fa78e1f3d"
+    },
+    "v-inform": {
+      "class": "A",
+      "alt": "接待员指着楼层示意图，把会议室的位置告诉来访者。",
+      "rev": "e06b73975b3e"
+    },
+    "v-distinguish": {
+      "class": "B",
+      "alt": "放大镜放大两张相似标签中唯一不同的圆点和方块。",
+      "rev": "828636fb3961"
+    },
+    "v-omit": {
+      "class": "B",
+      "alt": "清单的三条彩色项目经过复制后只留下第一和第三条，中间虚线空位表示省略。",
+      "rev": "ee234dbaebd2"
+    },
+    "v-incorporate": {
+      "class": "B",
+      "alt": "独立的三角形模块嵌入整体框架中预留的三角形位置。",
+      "rev": "7c1df98092c0"
+    },
+    "v-indicate": {
+      "class": "A",
+      "alt": "车站的指示牌用箭头准确指向右侧电梯门。",
+      "rev": "4b6a0df264df"
+    },
+    "v-specify": {
+      "class": "B",
+      "alt": "采购单把箱子的宽度和高度分别标为明确数值，而非只写大小。",
+      "rev": "bb146ccdb816"
+    },
+    "v-define": {
+      "class": "C"
+    },
+    "v-abbreviate": {
+      "class": "B",
+      "alt": "完整名称“质量检验”沿箭头缩写成“质检”，两端表示同一项工作。",
+      "rev": "36073d693c8e"
+    },
+    "v-quote": {
+      "class": "A",
+      "alt": "供应商根据一台打印机向买方展示写有价格的报价单。",
+      "rev": "9db1a611d74a"
+    },
+    "v-bid": {
+      "class": "A",
+      "alt": "三家投标者分别举起不同金额的报价牌，交给项目评审桌。",
+      "rev": "3e36b3fe4850"
+    },
+    "v-tender": {
+      "class": "A",
+      "alt": "封好的正式投标文件与项目图纸一起放入投标箱。",
+      "rev": "e77a2cb14b62"
+    },
+    "v-solicit": {
+      "class": "B",
+      "alt": "公司向三位客户发出带问号的反馈单，再收集返回的意见。",
+      "rev": "5511cd2147dd"
+    },
+    "v-negotiate": {
+      "class": "A",
+      "alt": "买卖双方坐在桌子两端，把不同价格改成双方同意的中间价格。",
+      "rev": "df596b3ed883"
+    },
+    "v-settle": {
+      "class": "B",
+      "alt": "欠款账单旁的付款箭头之后，余额从100降到0并盖清结勾。",
+      "rev": "7a9fc61e5800"
+    },
+    "v-remit": {
+      "class": "B",
+      "alt": "款项从付款人的银行窗口沿箭头汇到收款人的银行窗口。",
+      "rev": "83a193678068"
+    },
+    "v-credit": {
+      "class": "B",
+      "alt": "现金汇入账户，余额由200增加到250，旁边标明加50。",
+      "rev": "d079daffcd19"
+    },
+    "v-debit": {
+      "class": "B",
+      "alt": "账户向外支付现金，余额由200减少到150，旁边标明减50。",
+      "rev": "a7771f70a5c8"
+    },
+    "v-charge": {
+      "class": "A",
+      "alt": "服务台在提供停车服务时，向顾客展示需支付的收费金额。",
+      "rev": "ccbde5159f51"
+    },
+    "v-borrow": {
+      "class": "B",
+      "alt": "左侧使用者从物主处接过投影机，弯箭头表示稍后归还。",
+      "rev": "ea25b88b57b3"
+    },
+    "v-lend": {
+      "class": "B",
+      "alt": "左侧物主把投影机借给右侧使用者，弯回箭头表示会收回。",
+      "rev": "5f4685fc5b39"
+    },
+    "v-owe": {
+      "class": "B",
+      "alt": "已收到的货物旁有一张仍未付款的账单，付款期限还在后面。",
+      "rev": "dfa29b6ec323"
+    },
+    "v-invest": {
+      "class": "B",
+      "alt": "资金投入新设备，设备生产出的产品再形成未来收益。",
+      "rev": "2a5b91448880"
+    },
+    "v-fund": {
+      "class": "B",
+      "alt": "赞助资金被送入实验室项目，使试验器材得以启用。",
+      "rev": "3aa590307338"
+    },
+    "v-finance": {
+      "class": "B",
+      "alt": "银行与企业自有资金两路汇入同一新厂房建设项目。",
+      "rev": "ba438faa5d3a"
+    },
+    "v-sponsor": {
+      "class": "A",
+      "alt": "企业提供资金支持活动，活动舞台侧面展示赞助标牌。",
+      "rev": "f9ea575bd9c8"
+    },
+    "v-subsidize": {
+      "class": "B",
+      "alt": "公共机构分担一部分公交票款，乘客因此只需支付较少金额。",
+      "rev": "397f776e04f8"
+    },
+    "v-offset": {
+      "class": "B",
+      "alt": "节约的50与增加的50费用放在平衡的天平两端，相互抵消。",
+      "rev": "76f0c5065b88"
+    },
+    "v-incur": {
+      "class": "B",
+      "alt": "延迟归还的租车触发一张新增费用单，表示因此产生费用。",
+      "rev": "1fb018d45eae"
+    },
+    "v-exceed": {
+      "class": "B",
+      "alt": "支出柱超过红色预算上限线，突出越过上限的部分。",
+      "rev": "ebe4c9cc94bf"
+    },
+    "v-cap": {
+      "class": "B",
+      "alt": "两根增长的支出柱在红色水平上限处被挡住，不再往上延伸。",
+      "rev": "d356ac83c6f1"
+    },
+    "v-refund-policy": {
+      "class": "B",
+      "alt": "商品连同收据在30天期限内退回商店，箭头把退款交还给顾客。",
+      "rev": "789f58760d6f"
+    },
+    "v-expense-claim": {
+      "class": "A",
+      "alt": "员工把收据钉在报销申请表后，一并交给财务受理托盘。",
+      "rev": "e1a99dfd5a45"
+    },
+    "v-petty-cash": {
+      "class": "A",
+      "alt": "办公室小额备用金盒里放着少量纸币、硬币和支出小票。",
+      "rev": "90642d8a088b"
+    },
+    "v-exchange-rate": {
+      "class": "B",
+      "alt": "一张100美元纸币与15000日元金额由双向箭头连接，展示兑换比例示例。",
+      "rev": "b7068643fdd2"
+    },
+    "v-profit-margin": {
+      "class": "B",
+      "alt": "销售收入条分为80成本与20利润，其中利润占全部收入的20%。",
+      "rev": "ef84f356ab04"
+    },
+    "v-cash-flow": {
+      "class": "B",
+      "alt": "款项流入企业又流出支付工资与租金，方向清楚地穿过企业。",
+      "rev": "228c354fe67f"
+    },
+    "v-fixed-cost": {
+      "class": "B",
+      "alt": "产品数量由1箱变为3箱，两个时期租金条却一样高。",
+      "rev": "7a9065a0748b"
+    },
+    "v-variable-cost": {
+      "class": "B",
+      "alt": "生产的箱子越多，下面对应的原料费用条也随数量升高。",
+      "rev": "98c82746d4ca"
+    },
+    "v-balance-sheet": {
+      "class": "B",
+      "alt": "报表同一日期下列出资产100，以及负债60与所有者权益40。",
+      "rev": "4ec98ee49f0e"
+    },
+    "v-purchase-order": {
+      "class": "A",
+      "alt": "采购单列明三箱货物的数量和价格，并由买方向供应方发出。",
+      "rev": "78c165a3d4f7"
+    },
+    "v-bank-statement": {
+      "class": "A",
+      "alt": "银行对账单按日期排列收入和支出，并在底部显示余额。",
+      "rev": "b814717b61fe"
+    },
+    "v-down-payment": {
+      "class": "B",
+      "alt": "总价100被分成先付20和之后付80，先付的部分突出显示。",
+      "rev": "4db3b1f270a0"
+    },
+    "v-interest-rate": {
+      "class": "B",
+      "alt": "本金1000按年利率5%经过一年，产生50的利息。",
+      "rev": "af5840f7fc40"
+    },
+    "v-service-charge": {
+      "class": "A",
+      "alt": "餐厅账单将餐费100与另加的服务费10分开列出。",
+      "rev": "97bd58c26f3b"
+    },
+    "v-credit-limit": {
+      "class": "B",
+      "alt": "信用额度条到1000即止，已用700，剩下300仍为空白。",
+      "rev": "9c3fb24b4a61"
+    },
+    "v-processing-fee": {
+      "class": "B",
+      "alt": "申请文件进入办理窗口时，旁边另列一笔5元的手续费用。",
+      "rev": "e5c099ec4ec8"
+    },
+    "v-travel-advance": {
+      "class": "B",
+      "alt": "出发前，公司先把现金交给携带行李的员工，用于之后的出差。",
+      "rev": "67e1f00cf2aa"
+    },
+    "v-personal": {
+      "class": "A",
+      "alt": "一把只属于一名员工的带锁储物柜，里面放着他的私人杯子和背包。",
+      "rev": "8ada38d05667"
+    },
+    "v-personnel": {
+      "class": "A",
+      "alt": "佩戴相同员工证的六名工作人员集合在办公楼前。",
+      "rev": "d249f2ef1e48"
+    },
+    "v-considerable": {
+      "class": "B",
+      "alt": "同一尺度下，费用由小堆硬币变为大堆，增加幅度很大。",
+      "rev": "13669ae2968a"
+    },
+    "v-considerate": {
+      "class": "A",
+      "alt": "接电话的员工主动走到办公区门外，让同事安静工作。",
+      "rev": "79bbfd97098b"
+    },
+    "v-economic": {
+      "class": "B",
+      "alt": "就业人数、工厂产出和货币图标并列，组成经济统计图表。",
+      "rev": "be9b0d5c4a21"
+    },
+    "v-economical": {
+      "class": "B",
+      "alt": "两台打印机输出相同页数，右侧只用一个墨盒，左侧需要三个。",
+      "rev": "c61a0f8c4bf1"
+    },
+    "v-successful": {
+      "class": "B",
+      "alt": "计划列出的三项目标均已打勾，完成的作品放在右侧展示台。",
+      "rev": "c028c8c14eb5"
+    },
+    "v-successive": {
+      "class": "B",
+      "alt": "三个相邻月份的格子连续亮起，中间没有跳过任何一个月。",
+      "rev": "eed0c3547474"
+    },
+    "v-stationary": {
+      "class": "A",
+      "alt": "装满箱子的推车轮子被止轮块固定，车保持静止。",
+      "rev": "8a15a6877609"
+    },
+    "v-sensitive": {
+      "class": "A",
+      "alt": "精密电子秤上仅放一根细小羽毛，读数也随之发生变化。",
+      "rev": "c11cc88efb0e"
+    },
+    "v-sensible": {
+      "class": "C"
+    },
+    "v-effective": {
+      "class": "B",
+      "alt": "规则在7月1日开始生效，时间轴之前为灰色，之后为绿色并可执行。",
+      "rev": "b777f31f3b66"
+    },
+    "v-accurate": {
+      "class": "B",
+      "alt": "测量仪读数10.00与标准10.00完全一致，两个数字之间是等号。",
+      "rev": "656fff9ea977"
+    },
+    "v-approximate": {
+      "class": "B",
+      "alt": "估计长度标为约10厘米，下面实测长度为9.8厘米，数值接近但不相等。",
+      "rev": "dc7df9292eee"
+    },
+    "v-appropriate": {
+      "class": "C"
+    },
+    "v-prospective": {
+      "class": "A",
+      "alt": "尚未签约的看房人跟着经纪人参观空办公室，租约仍未签字。",
+      "rev": "a8ea1d0ae316"
+    },
+    "v-former": {
+      "class": "B",
+      "alt": "职位时间轴显示过去由左侧员工担任，如今由右侧员工接任。",
+      "rev": "de876615434d"
+    },
+    "v-formal": {
+      "class": "A",
+      "alt": "会议成员在主席前按固定议程发言，桌上有正式文件和姓名牌。",
+      "rev": "372eb8264ecc"
+    },
+    "v-informal": {
+      "class": "A",
+      "alt": "三位同事在休息区拿着杯子随意交谈，没有主席台或正式议程。",
+      "rev": "a0504c6f6cce"
+    },
+    "v-occasional": {
+      "class": "B",
+      "alt": "日历多数日期为空，只有间隔较远的两个日期出现活动标记。",
+      "rev": "d9822ab0bd39"
+    },
+    "v-seasonal": {
+      "class": "B",
+      "alt": "花朵、太阳、落叶和雪花代表四季；只有夏季格子有带冰块的饮料。",
+      "rev": "8d78e45a1d19"
+    },
+    "v-monthly": {
+      "class": "B",
+      "alt": "三个连续月份均在同一个日期标记一次缴费，没有每周或每天标记。",
+      "rev": "9ce4f52c43d3"
+    },
+    "v-temporary": {
+      "class": "B",
+      "alt": "临时柜台只在维修期内使用，时间轴结束后回到原来的柜台。",
+      "rev": "a8dfb19c2bfc"
+    },
+    "v-provisional": {
+      "class": "B",
+      "alt": "带虚线边框的暂定日程旁有问号，通向仍未完成的审批勾。",
+      "rev": "8b00fc5d8cbc"
+    },
+    "v-preliminary": {
+      "class": "B",
+      "alt": "粗略草图位于流程的第一步，后面还有检查和最终定稿两个阶段。",
+      "rev": "ca9bbd3bfc7e"
+    },
+    "v-final": {
+      "class": "B",
+      "alt": "两个带修改痕迹的旧稿之后，最后一份文件盖上勾且不再有后续箭头。",
+      "rev": "a02abc4ee9e4"
+    },
+    "v-partial": {
+      "class": "B",
+      "alt": "四项任务中只完成两项，完成区域只占整个进度条的一半。",
+      "rev": "737c0d852ea0"
+    },
+    "v-additional": {
+      "class": "B",
+      "alt": "原有两把椅子之外，箭头又送来一把不同颜色的椅子。",
+      "rev": "b67472f667f2"
+    },
+    "v-sufficient": {
+      "class": "B",
+      "alt": "四名参会者对应四把椅子，每人都有座位，数量恰好足够。",
+      "rev": "87c1c8c4dec1"
+    },
+    "v-insufficient": {
+      "class": "B",
+      "alt": "四名参会者只有三把椅子，第四人下面留出明显空位并标问号。",
+      "rev": "9ba0e2454a3a"
+    },
+    "v-adequate": {
+      "class": "B",
+      "alt": "房间采光表的指针刚达到绿色要求区，达到工作所需水平。",
+      "rev": "4beac2fb4058"
+    },
+    "v-numerous": {
+      "class": "A",
+      "alt": "仓库货架上整齐摆满许多小箱子，远多于一两个。",
+      "rev": "e0552ef59dfb"
+    },
+    "v-single": {
+      "class": "A",
+      "alt": "会议桌前只摆一把椅子，桌上也只有一个杯子。",
+      "rev": "f15e33b5001c"
+    },
+    "v-joint": {
+      "class": "B",
+      "alt": "两家公司各派一只手共同签署同一份协议，表示双方共同。",
+      "rev": "1770aa239e90"
+    },
+    "v-independent": {
+      "class": "B",
+      "alt": "外部审查员位于两家公司的边界之外，分别查看双方资料。",
+      "rev": "fa17a31e70fa"
+    },
+    "v-external": {
+      "class": "B",
+      "alt": "组织边界框外有一名顾问，通过虚线与内部团队协作。",
+      "rev": "d43f60e1814c"
+    },
+    "v-internal": {
+      "class": "B",
+      "alt": "公司边界内的两名员工传递文件，消息没有离开边界框。",
+      "rev": "2ff99c0dc8b0"
+    },
+    "v-domestic": {
+      "class": "B",
+      "alt": "货物从一个国家边界内的城市运到同一边界内的另一座城市。",
+      "rev": "6c7f5c2a20a6"
+    },
+    "v-overseas": {
+      "class": "B",
+      "alt": "两片陆地之间隔着海洋，货船把商品送到海对岸。",
+      "rev": "cf75f18c0ca5"
+    },
+    "v-regional": {
+      "class": "B",
+      "alt": "一张地图只高亮其中一个区域，区域内三家分店被连接。",
+      "rev": "e7e6d2f814fa"
+    },
+    "v-remote": {
+      "class": "A",
+      "alt": "两位员工分别在不同地点使用电脑，经屏幕进行远程会议。",
+      "rev": "8f1ef5ed4735"
+    },
+    "v-rural": {
+      "class": "A",
+      "alt": "乡村分店旁有田地、矮屋、树木和远处的山，没有高楼。",
+      "rev": "ed443f1d8c80"
+    },
+    "v-urban": {
+      "class": "A",
+      "alt": "密集的城市街区中有高层办公楼、路口和人行道。",
+      "rev": "3d5bee73c44c"
+    },
+    "v-international": {
+      "class": "B",
+      "alt": "地球上的三处办公点通过弧线相连，表示跨国协作。",
+      "rev": "45e843deebf8"
+    },
+    "v-voluntary": {
+      "class": "A",
+      "alt": "参与活动的员工主动举手，另一人自由选择不参加，没有禁止标记。",
+      "rev": "1724c73e738e"
+    },
+    "v-optional": {
+      "class": "B",
+      "alt": "表单有两个可选附加项，勾选一个、留空一个都能继续下一步。",
+      "rev": "f11b986f1e51"
+    },
+    "v-compulsory": {
+      "class": "B",
+      "alt": "所有员工都必须通过安全培训站点，唯一通路穿过培训门。",
+      "rev": "48873663da98"
+    },
+    "v-essential": {
+      "class": "B",
+      "alt": "电脑通过插入插座的插头接通电源，屏幕亮起，显示电源连接不可缺少。",
+      "rev": "18c46893e65d"
+    },
+    "v-recommended": {
+      "class": "C"
+    },
+    "v-valid": {
+      "class": "B",
+      "alt": "通行证的有效期涵盖今天，验票口亮起绿色勾允许进入。",
+      "rev": "a67edf7dc7cd"
+    },
+    "v-invalid": {
+      "class": "B",
+      "alt": "通行证已在昨天到期，验票口亮起红叉而不放行。",
+      "rev": "f447aaa64037"
+    },
+    "v-original": {
+      "class": "A",
+      "alt": "收据原件有连续编号与手写签名，旁边的复印件用浅色边框区分。",
+      "rev": "61eb08925c41"
+    },
+    "v-identical": {
+      "class": "A",
+      "alt": "两把办公椅的尺寸、颜色、扶手和脚轮完全相同。",
+      "rev": "12632fe3ef89"
+    },
+    "v-separate": {
+      "class": "A",
+      "alt": "两张桌子放在各自独立的小室，中间有完整隔墙。",
+      "rev": "9860805d78fb"
+    },
+    "v-distinct": {
+      "class": "B",
+      "alt": "三只相同瓶子分别用红三角、绿圆和蓝方块标签，区别清楚可辨。",
+      "rev": "f1d5fa2af257"
+    },
+    "v-consistent": {
+      "class": "B",
+      "alt": "三个批次的成品检测结果均处于同一标准高度，表现始终一致。",
+      "rev": "dd3555a5d761"
+    },
+    "v-reliable": {
+      "class": "C"
+    },
+    "v-liable": {
+      "class": "C"
+    },
+    "v-responsible": {
+      "class": "C"
+    },
+    "v-responsive": {
+      "class": "B",
+      "alt": "三次客户消息发出后都迅速收到回信，每一对消息都有返回箭头。",
+      "rev": "899944ba27ce"
+    },
+    "v-prompt": {
+      "class": "B",
+      "alt": "询问邮件发出后仅过一分钟就收到回复，两只时钟下标出时间。",
+      "rev": "72b24e2676a3"
+    },
+    "v-punctual": {
+      "class": "B",
+      "alt": "会议规定9点开始，员工走到会议室时墙上时钟正好9点。",
+      "rev": "1530840eb896"
+    },
+    "v-urgent": {
+      "class": "A",
+      "alt": "漏水管正把水滴到工作台旁，维修人员立即赶来关闭阀门。",
+      "rev": "eec419bb21ef"
+    },
+    "v-immediate": {
+      "class": "B",
+      "alt": "按钮按下的同一时刻灯泡就亮起，两个时间标签完全一致。",
+      "rev": "b3a2afe845d3"
+    },
+    "v-gradual": {
+      "class": "B",
+      "alt": "改善曲线从左下平缓上升，沿多个小台阶逐步到达较高水平。",
+      "rev": "3ca9d25e3cd0"
+    },
+    "v-steady": {
+      "class": "B",
+      "alt": "数值随时间保持水平直线，各个观察点处在同一高度。",
+      "rev": "51b5bdb0b722"
+    },
+    "v-fluctuating": {
+      "class": "B",
+      "alt": "数值曲线随着时间反复上升和下降，没有保持固定高度。",
+      "rev": "ba6df0da8da5"
+    },
+    "v-substantial": {
+      "class": "B",
+      "alt": "一笔合同金额条占全年销售额近一半，突出数额可观。",
+      "rev": "943fd96e43e8"
+    },
+    "v-negligible": {
+      "class": "B",
+      "alt": "整条总成本旁只有极窄的一丝小费差额，视觉上几乎可忽略。",
+      "rev": "b669e4c36f90"
+    },
+    "v-noticeable": {
+      "class": "B",
+      "alt": "门牌从灰色小字变为醒目的大号标记，差异一眼可见。",
+      "rev": "f5278f03a171"
+    },
+    "v-exceptional": {
+      "class": "C"
+    },
+    "v-competitive": {
+      "class": "C"
+    },
+    "v-qualified": {
+      "class": "A",
+      "alt": "电工佩戴合格资质证，凭证进入配电柜工作区。",
+      "rev": "927e6e865d75"
+    },
+    "v-experienced": {
+      "class": "C"
+    },
+    "v-familiar": {
+      "class": "C"
+    },
+    "v-diverse": {
+      "class": "A",
+      "alt": "文具柜同时摆有笔、剪刀、卷尺、文件夹和订书机，种类多样。",
+      "rev": "5aa8817e0e6d"
+    },
+    "v-flexible": {
+      "class": "B",
+      "alt": "同一员工的工作时段可以从早班拖移到晚班，条形仍保持相同长度。",
+      "rev": "ccb5a84c63a6"
+    },
+    "v-feasible": {
+      "class": "C"
+    },
+    "v-beneficial": {
+      "class": "C"
+    },
+    "v-costly": {
+      "class": "B",
+      "alt": "设备修理费用几乎填满预算条，旁边仅剩很小一段可用资金。",
+      "rev": "8fd265542600"
+    },
+    "v-portable": {
+      "class": "A",
+      "alt": "员工用提手轻松拎着小型投影仪走向会议室。",
+      "rev": "b795e3796114"
+    },
+    "v-compact": {
+      "class": "B",
+      "alt": "同样功能的设备由大机柜改成紧凑小机箱，占用的桌面明显缩小。",
+      "rev": "56f3e6259974"
+    },
+    "v-lightweight": {
+      "class": "B",
+      "alt": "两件大小相同的箱子分别称重，右侧仅1千克，比左侧5千克轻。",
+      "rev": "41248fee1834"
+    },
+    "v-adjustable": {
+      "class": "A",
+      "alt": "办公椅旁的双向垂直箭头显示座面可以升高或降低。",
+      "rev": "3753526ceb45"
+    },
+    "v-removable": {
+      "class": "B",
+      "alt": "机器的外罩从主体上向上取下，内部组件清楚露出。",
+      "rev": "ead2d4b5852d"
+    },
+    "v-reusable": {
+      "class": "B",
+      "alt": "一个杯子用过后清洗，再回到原位继续使用，箭头形成闭环。",
+      "rev": "a53bef08080a"
+    },
+    "v-disposable": {
+      "class": "B",
+      "alt": "一次性纸杯用过后进入废物回收箱，没有返回使用的箭头。",
+      "rev": "18cb1870ba20"
+    },
+    "v-concierge": {
+      "class": "A",
+      "alt": "酒店礼宾台后的人为提着行李的住客指点城市地图。",
+      "rev": "7b6585e0ced0"
+    },
+    "v-housekeeping": {
+      "class": "A",
+      "alt": "客房清洁员推着布草车，车上有叠好的毛巾、清洁瓶与整理工具。",
+      "rev": "9f6487c631e9"
+    },
+    "v-suite": {
+      "class": "A",
+      "alt": "同一套客房内由一道敞开的门连接起居室和有床的卧室。",
+      "rev": "2a1dd884ea12"
+    },
+    "v-lobby": {
+      "class": "A",
+      "alt": "酒店正门内是宽敞的大堂，前台旁设有等候沙发和行李。",
+      "rev": "0693abe4071a"
+    },
+    "v-valet": {
+      "class": "A",
+      "alt": "酒店入口，戴制服帽的人接过车钥匙，身旁的车等候停放。",
+      "rev": "dae01b6f91f0"
+    },
+    "v-porter": {
+      "class": "A",
+      "alt": "行李员一手扶着装有旅客行李的酒店行李车。",
+      "rev": "ae7a21914765"
+    },
+    "v-linen": {
+      "class": "A",
+      "alt": "酒店布草车上整齐叠着多层折过的床单、毛巾。",
+      "rev": "1a686b6fd1ac"
+    },
+    "v-mattress": {
+      "class": "A",
+      "alt": "床架上方单独抬起厚实的床垫，侧面能看见绗缝。",
+      "rev": "b2f19a7240f6"
+    },
+    "v-kitchenette": {
+      "class": "A",
+      "alt": "客房一角的紧凑操作台把单灶、小水槽、迷你冰箱并排放在一起。",
+      "rev": "b0710aa160e1"
+    },
+    "v-twin-room": {
+      "class": "A",
+      "alt": "同一间客房里两张窄单人床分开摆放，中间留有走道。",
+      "rev": "5361971747ec"
+    },
+    "v-checkout": {
+      "class": "B",
+      "alt": "退房时把房卡交回前台，换得住宿结账单。",
+      "rev": "8c8fbaaadc49"
+    },
+    "v-occupant": {
+      "class": "C"
+    },
+    "v-overbooking": {
+      "class": "B",
+      "alt": "客房日历里只有两间可用，当天却有三份确认预订。",
+      "rev": "05b1c7257b4a"
+    },
+    "v-walk-in": {
+      "class": "B",
+      "alt": "日历显示没有预约，一位旅客直接来到前台登记。",
+      "rev": "66dfd678f9ed"
+    },
+    "v-gratuity": {
+      "class": "B",
+      "alt": "餐费已结清，在账单旁又单独留了几枚硬币给服务员。",
+      "rev": "46992316fb7f"
+    },
+    "v-property": {
+      "class": "C"
+    },
+    "v-lodging": {
+      "class": "C"
+    },
+    "v-soundproof": {
+      "class": "B",
+      "alt": "同样响的声波在一面厚墙前终止，隔壁房间里没有声波。",
+      "rev": "9c442b996b1c"
+    },
+    "v-banquet": {
+      "class": "A",
+      "alt": "铺桌布的宴会长桌两侧有整套餐具、成排座位和中央花饰。",
+      "rev": "a451219b8a74"
+    },
+    "v-buffet": {
+      "class": "A",
+      "alt": "食客拿着盘子沿长台自取，几盘菜配有公用夹。",
+      "rev": "196eb6a63b5c"
+    },
+    "v-caterer": {
+      "class": "C"
+    },
+    "v-appetizer": {
+      "class": "A",
+      "alt": "正餐之前，小碟中端上三小份带签的开胃小点。",
+      "rev": "26e57e80715c"
+    },
+    "v-entree": {
+      "class": "A",
+      "alt": "大餐盘中央摆着主要的热菜，旁边配有少量蔬菜。",
+      "rev": "4bb89aa08d50"
+    },
+    "v-dessert": {
+      "class": "A",
+      "alt": "餐后小盘中是一块分层蛋糕，旁边放着甜品叉。",
+      "rev": "2d99b7f3bc43"
+    },
+    "v-beverage": {
+      "class": "A",
+      "alt": "一杯带吸管的饮品与瓶装水摆在一起。",
+      "rev": "0ea3284f376e"
+    },
+    "v-refreshments": {
+      "class": "A",
+      "alt": "休息台上放着一壶饮料、两只杯子和一盘小饼干。",
+      "rev": "7e0f30e5b473"
+    },
+    "v-vegetarian": {
+      "class": "C"
+    },
+    "v-vegan": {
+      "class": "C"
+    },
+    "v-allergen": {
+      "class": "C"
+    },
+    "v-ingredient": {
+      "class": "B",
+      "alt": "一盘蔬菜和一碗面粉分别用箭头汇入同一个料理锅。",
+      "rev": "940bccfb2f12"
+    },
+    "v-portion": {
+      "class": "B",
+      "alt": "整只圆饼被平均切开，取出其中一份放到单人小盘。",
+      "rev": "a8730c388af3"
+    },
+    "v-platter": {
+      "class": "A",
+      "alt": "从斜上方看，扁而宽的大浅盘有低低的盘沿和小把手。",
+      "rev": "b93c5b7fb92e"
+    },
+    "v-napkin": {
+      "class": "A",
+      "alt": "餐盘左侧是一张折成三角形的布餐巾，上面放着餐叉。",
+      "rev": "09338dcc5e35"
+    },
+    "v-roast": {
+      "class": "A",
+      "alt": "烤盘上的蔬菜在烤箱内部接受热空气烘烤，周围没有水。",
+      "rev": "e265072e759d"
+    },
+    "v-refill": {
+      "class": "B",
+      "alt": "服务员用水壶给同一只快空的杯子再次添满饮料。",
+      "rev": "a206983be90d"
+    },
+    "v-boarding-pass": {
+      "class": "A",
+      "alt": "带有飞机图标的登机牌标出座号和通行条码。",
+      "rev": "152736f94693"
+    },
+    "v-baggage-claim": {
+      "class": "A",
+      "alt": "到达旅客在椭圆传送带旁等候领取上面的旅行箱。",
+      "rev": "8ac6ff147f46"
+    },
+    "v-carry-on": {
+      "class": "A",
+      "alt": "一只小旅行箱正在放入飞机座位上方的行李架。",
+      "rev": "1781a6a974ed"
+    },
+    "v-airfare": {
+      "class": "B",
+      "alt": "一张机票旁标出购买这个航段所付的票价。",
+      "rev": "e19bb669e291"
+    },
+    "v-runway": {
+      "class": "A",
+      "alt": "很长的机场跑道带有中央虚线、入口标志和正在着陆的飞机。",
+      "rev": "502e57248f5c"
+    },
+    "v-aisle": {
+      "class": "A",
+      "alt": "一排排座椅被中间贯通的纵向过道隔开。",
+      "rev": "8bc12e3c640b"
+    },
+    "v-nonstop": {
+      "class": "B",
+      "alt": "飞机从起点直飞目的地，绕过中间机场且不落地。",
+      "rev": "63d8d66b7d61"
+    },
+    "v-standby": {
+      "class": "B",
+      "alt": "航班座位已满，候补名单上的名字正等待空出的座位。",
+      "rev": "93eb7f409386"
+    },
+    "v-stopover": {
+      "class": "B",
+      "alt": "路线中途的机场处有停留的时钟，之后才再出发飞往终点。",
+      "rev": "6fe430ee2ec7"
+    },
+    "v-outbound": {
+      "class": "B",
+      "alt": "标作基地的建筑旁有一条只指向外地站点的去程箭头。",
+      "rev": "1536f8352c19"
+    },
+    "v-disembark": {
+      "class": "A",
+      "alt": "旅客从飞机客舱门沿舷梯走下，箭头指向停机坪。",
+      "rev": "7a0ed9e09fc6"
+    },
+    "v-embarkation": {
+      "class": "A",
+      "alt": "旅客从码头沿跳板朝船上的舱门登船。",
+      "rev": "77f0fe3d653b"
+    },
+    "v-immigration": {
+      "class": "A",
+      "alt": "入境查验柜台的工作人员核验旅客递来的护照，柜台上标着入境。",
+      "rev": "1db12e8e952f"
+    },
+    "v-passport": {
+      "class": "A",
+      "alt": "深色封皮的护照印有地球图案，打开的内页有持证人照片。",
+      "rev": "a9bcd2724cac"
+    },
+    "v-visa": {
+      "class": "A",
+      "alt": "护照内页贴有一张入境签证，标着获准停留的期限。",
+      "rev": "f3ddbf6b7389"
+    },
+    "v-consulate": {
+      "class": "C"
+    },
+    "v-declaration": {
+      "class": "A",
+      "alt": "入境申报表上勾选了随身携带的货物，旁边放着旅客的行李。",
+      "rev": "894cdbc20912"
+    },
+    "v-toll": {
+      "class": "A",
+      "alt": "车辆在收费闸杆前向窗口付费，闸口旁标明通行费。",
+      "rev": "7277672621f6"
+    },
+    "v-mileage": {
+      "class": "B",
+      "alt": "里程表从120公里到160公里，两次读数之差为行驶的40公里。",
+      "rev": "f63fa8fcef60"
+    },
+    "v-carpool": {
+      "class": "A",
+      "alt": "三位同事一起坐在同一辆车中去上班。",
+      "rev": "240f5793ddb6"
+    },
+    "v-detour": {
+      "class": "A",
+      "alt": "直行道路因施工封闭，绕行线从旁侧经过，再回到原路。",
+      "rev": "e72ff39555c9"
+    },
+    "v-junction": {
+      "class": "A",
+      "alt": "两条道路在中心交汇，形成四向路口。",
+      "rev": "2e88b93c1c2a"
+    },
+    "v-crosswalk": {
+      "class": "A",
+      "alt": "横穿路面的几条白色平行标线构成行人横道，接通两侧人行道。",
+      "rev": "c88acd28b9b6"
+    },
+    "v-commuter": {
+      "class": "B",
+      "alt": "上班族手提公文包，沿着住处与工作地点之间的路线往返。",
+      "rev": "4af49d7f848e"
+    },
+    "v-timetable": {
+      "class": "A",
+      "alt": "交通时刻表按站点列出一班班车的发车时间。",
+      "rev": "0d8d30553717"
+    },
+    "v-transit": {
+      "class": "C"
+    },
+    "v-jet-lag": {
+      "class": "B",
+      "alt": "跨越时区后，目的地已经日出，人体时钟却仍像深夜。",
+      "rev": "768fb2395919"
+    },
+    "v-chauffeur": {
+      "class": "C"
+    },
+    "v-invoice-number": {
+      "class": "A",
+      "alt": "发票右上角的唯一编号用框圈出，金额在表格的下方。",
+      "rev": "8e834f97af96"
+    },
+    "v-barcode": {
+      "class": "A",
+      "alt": "标签上有一串宽窄不等的平行黑条，下面印着商品编号。",
+      "rev": "ea0afa3a5b96"
+    },
+    "v-basket": {
+      "class": "A",
+      "alt": "手提购物篮有两根拱起的把手，篮身留有纵向透孔。",
+      "rev": "976d58b67616"
+    },
+    "v-coupon": {
+      "class": "A",
+      "alt": "边缘有剪切虚线的优惠券上印着减价比例。",
+      "rev": "5e3bfb5cfd3c"
+    },
+    "v-rebate": {
+      "class": "B",
+      "alt": "顾客先按全价付款，之后商家把部分款项返还给顾客。",
+      "rev": "0039945c169b"
+    },
+    "v-markdown": {
+      "class": "B",
+      "alt": "同一件商品的价签从原价100下调为80。",
+      "rev": "8d8fb5a8bb08"
+    },
+    "v-markup": {
+      "class": "B",
+      "alt": "商品进货成本为80，加上20后，零售标价成为100。",
+      "rev": "f4ac53c2c7e7"
+    },
+    "v-boutique": {
+      "class": "C"
+    },
+    "v-franchise": {
+      "class": "C"
+    },
+    "v-franchisee": {
+      "class": "C"
+    },
+    "v-consignment-sale": {
+      "class": "B",
+      "alt": "供货方先把商品寄放店内，店铺卖出后才与供货方结算。",
+      "rev": "c67407a77167"
+    },
+    "v-browse": {
+      "class": "C"
+    },
+    "v-subtotal": {
+      "class": "B",
+      "alt": "账单先把两件商品的价钱相加，税金在小计的下一行。",
+      "rev": "eded97de9e02"
+    },
+    "v-installment-plan": {
+      "class": "B",
+      "alt": "一张总额90的账单分成三个月，每月偿付30。",
+      "rev": "73dfaa7f8388"
+    },
+    "v-retailer": {
+      "class": "B",
+      "alt": "商品由商店以单件售给最终购买者。",
+      "rev": "feac7281e725"
+    },
+    "v-wholesaler": {
+      "class": "B",
+      "alt": "整批纸箱由大货仓按批量运往零售店，再由店里出售。",
+      "rev": "8ade8ebb74bd"
+    },
+    "v-consumer": {
+      "class": "C"
+    },
+    "v-assortment": {
+      "class": "A",
+      "alt": "同一陈列格中摆放多种不同样式的灯，构成可选的商品系列。",
+      "rev": "cb512d4740c1"
+    },
+    "v-restock": {
+      "class": "B",
+      "alt": "原本空着的货架补入一批商品，货架重新排满。",
+      "rev": "5f5293e2a943"
+    },
+    "v-price-tag": {
+      "class": "A",
+      "alt": "用细绳挂在商品上的价签，中央清楚印着价格。",
+      "rev": "7a9810386e41"
+    },
+    "v-gift-wrap": {
+      "class": "A",
+      "alt": "一卷有重复图案的礼品包装纸正摊开包住礼物。",
+      "rev": "23c69b64acb9"
+    },
+    "v-store-credit": {
+      "class": "B",
+      "alt": "退货后商店给顾客一笔余额，只能在同一家店使用。",
+      "rev": "5ff530d151b3"
+    },
+    "v-fitting-room": {
+      "class": "A",
+      "alt": "服装店的小隔间有挂衣钩、试穿的衣服、镜子和拉帘。",
+      "rev": "fd9c3e23b724"
+    },
+    "v-alteration": {
+      "class": "B",
+      "alt": "同一条长裤的裤脚向内折并缝短，明显改变了裤长。",
+      "rev": "364dc35011c4"
+    },
+    "v-seam": {
+      "class": "A",
+      "alt": "两片面料在中间接合，边缘排着一列清楚的缝线。",
+      "rev": "56caa883ec15"
+    },
+    "v-fabric": {
+      "class": "A",
+      "alt": "一卷纺织面料展开，翻起的布角和布边可见。",
+      "rev": "8965ddb38f71"
+    },
+    "v-woven": {
+      "class": "A",
+      "alt": "经线和纬线纵横交织，横线在相邻纵线处交替浮上、穿下。",
+      "rev": "828cba8b93ce"
+    },
+    "v-tailored": {
+      "class": "B",
+      "alt": "裁缝先量肩宽和衣长，再按同一顾客的尺寸裁制外套。",
+      "rev": "00117b8106e7"
+    },
+    "v-washable": {
+      "class": "A",
+      "alt": "衣物洗标上是盛水的洗衣盆和允许水洗的勾号。",
+      "rev": "07db5a38f872"
+    },
+    "v-exhibition": {
+      "class": "A",
+      "alt": "展厅墙上并列陈列多件画作，参观者沿展线观看。",
+      "rev": "3d27d685bfe0"
+    },
+    "v-exhibitor": {
+      "class": "A",
+      "alt": "参展者佩着胸牌，在展会的一个样品展位后在桌上陈列样品。",
+      "rev": "c0b3421b485e"
+    },
+    "v-curator": {
+      "class": "C"
+    },
+    "v-artifact": {
+      "class": "A",
+      "alt": "古代纹饰陶罐陈列在博物馆展柜中，旁边放着小展签。",
+      "rev": "21c686419442"
+    },
+    "v-replica": {
+      "class": "B",
+      "alt": "一个带独特纹样的原件旁，复刻出的新件有相同形状和纹样。",
+      "rev": "fb2df76199e9"
+    },
+    "v-installation": {
+      "class": "C"
+    },
+    "v-premiere": {
+      "class": "C"
+    },
+    "v-auditorium": {
+      "class": "A",
+      "alt": "阶梯式观众厅中的座椅一排排朝向前方的舞台。",
+      "rev": "0258c0a8b9e4"
+    },
+    "v-usher": {
+      "class": "A",
+      "alt": "持手电的引座员沿座位间通道指向一张空座，引领访客入座。",
+      "rev": "69bddb70f058"
+    },
+    "v-intermission": {
+      "class": "B",
+      "alt": "舞台第一幕与第二幕之间有一段单独标出的休息时间。",
+      "rev": "705594f6507f"
+    },
+    "v-conductor": {
+      "class": "A",
+      "alt": "指挥面对谱架挥动细指挥棒，左右两边摆着乐手的谱架。",
+      "rev": "879c4f86dc8e"
+    },
+    "v-rehearsal": {
+      "class": "B",
+      "alt": "正式演出前，乐团在没有观众的舞台上按同一份乐谱练习。",
+      "rev": "10c351346531"
+    },
+    "v-commissioned": {
+      "class": "C"
+    },
+    "v-admission": {
+      "class": "B",
+      "alt": "入场券经核验后闸门开放，持票人获得进入会场的许可。",
+      "rev": "77c8515f90a6"
+    },
+    "v-patron": {
+      "class": "C"
+    },
+    "v-donation": {
+      "class": "B",
+      "alt": "款项进入带爱心标记的捐款箱，受赠方收到无偿捐助。",
+      "rev": "1d2b2689bff0"
+    },
+    "v-tailoring": {
+      "class": "A",
+      "alt": "裁缝在工作台上用量尺、裁衣剪和纸样剪裁衣片。",
+      "rev": "d1be20b51741"
+    },
+    "v-employer": {
+      "class": "C"
+    },
+    "v-employee": {
+      "class": "C"
+    },
+    "v-candidate": {
+      "class": "C"
+    },
+    "v-position": {
+      "class": "C"
+    },
+    "v-occupation": {
+      "class": "C"
+    },
+    "v-profession": {
+      "class": "C"
+    },
+    "v-career": {
+      "class": "B",
+      "alt": "从工作生涯的第一份工作开始，时间线连接多个后续岗位。",
+      "rev": "c34e61b588a9"
+    },
+    "v-task": {
+      "class": "C"
+    },
+    "v-workload": {
+      "class": "B",
+      "alt": "同一名员工要处理的文件由少变多，表示分配给他的工作量。",
+      "rev": "3855fec12887"
+    },
+    "v-workforce": {
+      "class": "C"
+    },
+    "v-supervisor": {
+      "class": "C"
+    },
+    "v-director": {
+      "class": "C"
+    },
+    "v-executive": {
+      "class": "C"
+    },
+    "v-assistant": {
+      "class": "C"
+    },
+    "v-accountant": {
+      "class": "C"
+    },
+    "v-bookkeeper": {
+      "class": "C"
+    },
+    "v-auditor": {
+      "class": "B",
+      "alt": "审计人员用账簿和原始凭证逐笔交叉核验，检查记录是否可靠。",
+      "rev": "32686abce5c2"
+    },
+    "v-consultant": {
+      "class": "C"
+    },
+    "v-contractor": {
+      "class": "C"
+    },
+    "v-partner": {
+      "class": "B",
+      "alt": "两位合伙人各持一部分权益，共同经营同一间店。",
+      "rev": "dbd40ec63e10"
+    },
+    "v-intern": {
+      "class": "C"
+    },
+    "v-trainee": {
+      "class": "C"
+    },
+    "v-trainer": {
+      "class": "C"
+    },
+    "v-newcomer": {
+      "class": "C"
+    },
+    "v-volunteer": {
+      "class": "C"
+    },
+    "v-organizer": {
+      "class": "C"
+    },
+    "v-attendee": {
+      "class": "C"
+    },
+    "v-attendant": {
+      "class": "C"
+    },
+    "v-audience": {
+      "class": "A",
+      "alt": "一排排观众面对同一舞台，从后方能看见大家在观看演出。",
+      "rev": "bc1714983899"
+    },
+    "v-committee": {
+      "class": "C"
+    },
+    "v-chairperson": {
+      "class": "C"
+    },
+    "v-panel": {
+      "class": "C"
+    },
+    "v-membership": {
+      "class": "B",
+      "alt": "收到有姓名及有效期的会员卡后，持卡人可享用会员专属服务。",
+      "rev": "e22bfd934862"
+    },
+    "v-association": {
+      "class": "C"
+    },
+    "v-department": {
+      "class": "C"
+    },
+    "v-division": {
+      "class": "C"
+    },
+    "v-branch": {
+      "class": "B",
+      "alt": "同一机构从总店向外连接到各地分店，其中一个分店被圈出。",
+      "rev": "afd9f5cb4d92"
+    },
+    "v-headquarters": {
+      "class": "B",
+      "alt": "同一公司各分点由一处总指挥部管理，总部在图上特别标出。",
+      "rev": "f9cd7af577d9"
+    },
+    "v-subsidiary": {
+      "class": "B",
+      "alt": "母公司通过持有超过半数股份控制下方独立注册的子公司。",
+      "rev": "5678a764eac9"
+    },
+    "v-enterprise": {
+      "class": "C"
+    },
+    "v-startup": {
+      "class": "C"
+    },
+    "v-venture": {
+      "class": "C"
+    },
+    "v-partnership": {
+      "class": "C"
+    },
+    "v-ownership": {
+      "class": "C"
+    },
+    "v-shareholder": {
+      "class": "B",
+      "alt": "一个持股凭证对应公司圆形股本图中的一小块。",
+      "rev": "711cd2347455"
+    },
+    "v-stakeholder": {
+      "class": "C"
+    },
+    "v-founder": {
+      "class": "C"
+    },
+    "v-owner": {
+      "class": "C"
+    },
+    "v-operator": {
+      "class": "C"
+    },
+    "v-administrator": {
+      "class": "C"
+    },
+    "v-coordinator": {
+      "class": "C"
+    },
+    "v-representative": {
+      "class": "C"
+    },
+    "v-predecessor": {
+      "class": "C"
+    },
+    "v-recruiter": {
+      "class": "C"
+    },
+    "v-interviewer": {
+      "class": "A",
+      "alt": "面试桌两侧坐着两个人，发问的一方手持写有问号的问题卡。",
+      "rev": "8133cb29bbc7"
+    },
+    "v-interviewee": {
+      "class": "A",
+      "alt": "面试桌上递来提问卡，另一侧的应聘者正在作答。",
+      "rev": "23ea68bcbdf0"
+    },
+    "v-application": {
+      "class": "A",
+      "alt": "身份照旁边留着待填写的申请栏目和签字线。",
+      "rev": "8cf8b93ff388"
+    },
+    "v-cover-letter": {
+      "class": "A",
+      "alt": "署名求职信叠在带头像的简历前，信封在旁。",
+      "rev": "0e95504eafae"
+    },
+    "v-job-description": {
+      "class": "C"
+    },
+    "v-probationary-period": {
+      "class": "B",
+      "alt": "从入职到考核的三个月用连续三段标尺表示，末端才决定是否转正。",
+      "rev": "8f2571349b25"
+    },
+    "v-reference-check": {
+      "class": "C"
+    },
+    "v-job-offer": {
+      "class": "B",
+      "alt": "公司把带有入职邀请和签名栏的通知递给候选人。",
+      "rev": "033c0048d047"
+    },
+    "v-wage": {
+      "class": "B",
+      "alt": "工时卡和对应的按小时工资连在一起。",
+      "rev": "fe1c79e13dff"
+    },
+    "v-payroll": {
+      "class": "A",
+      "alt": "工资名册的每一行对应一名员工头像和薪资栏，新增员工被勾入名册。",
+      "rev": "7af27fe606b2"
+    },
+    "v-bonus": {
+      "class": "B",
+      "alt": "在正常工资之外，单独增加一笔奖励金。",
+      "rev": "4f2a56d0fecc"
+    },
+    "v-raise": {
+      "class": "B",
+      "alt": "调薪后的两根工资柱，比调薪前两个月高一截。",
+      "rev": "f18af7d292f2"
+    },
+    "v-commission": {
+      "class": "B",
+      "alt": "一笔成交的销售额中，分出一小部分给销售人员。",
+      "rev": "6fe4a667b9be"
+    },
+    "v-pension": {
+      "class": "B",
+      "alt": "离开工作岗位后，日历上每个月仍有一笔退休给付。",
+      "rev": "ec00a50c0953"
+    },
+    "v-deduction": {
+      "class": "B",
+      "alt": "应发款减掉其中一部分，得到较少的实收金额。",
+      "rev": "f3a85a60d1df"
+    },
+    "v-absence": {
+      "class": "B",
+      "alt": "排班表里本应到场的一人缺席，座位空着。",
+      "rev": "4dc89d3aba98"
+    },
+    "v-vacation": {
+      "class": "B",
+      "alt": "日历中圈定休假时段，旁边放着出游的行李箱。",
+      "rev": "92f10d43599f"
+    },
+    "v-commute": {
+      "class": "B",
+      "alt": "路线每天连接住所和办公室，两端是房屋和办公楼。",
+      "rev": "f3e152149346"
+    },
+    "v-timesheet": {
+      "class": "A",
+      "alt": "工时表按日记录上班和下班，右下角有时钟。",
+      "rev": "81824b57fa19"
+    },
+    "v-roster": {
+      "class": "A",
+      "alt": "排班名单按行列出不同人员，轮班以色块标记。",
+      "rev": "978a87003a13"
+    },
+    "v-renewal": {
+      "class": "B",
+      "alt": "原有期限到期后，同一证件又获得新的有效期。",
+      "rev": "ef0b1d036c47"
+    },
+    "v-resignation": {
+      "class": "B",
+      "alt": "员工把署名辞职信交还给办公室。",
+      "rev": "a0633278bf96"
+    },
+    "v-dismissal": {
+      "class": "B",
+      "alt": "雇主发出终止任职的通知，员工交回工牌并带着物品箱离开办公门。",
+      "rev": "714e2038f4a6"
+    },
+    "v-vacant": {
+      "class": "A",
+      "alt": "挂牌可租的工位上只有空桌空椅，没有人入驻。",
+      "rev": "b45e0a5a1df8"
+    },
+    "v-shortlist": {
+      "class": "B",
+      "alt": "多行候选名单筛选之后，仅留下两名入围者。",
+      "rev": "4f1ea4806114"
+    },
+    "v-crate": {
+      "class": "A",
+      "alt": "木条和两根交叉斜撑钉成坚固的运输木箱。",
+      "rev": "9645aabba383"
+    },
+    "v-pallet": {
+      "class": "A",
+      "alt": "木板平行排列，底部架空，可供叉车从下方插入搬运。",
+      "rev": "6895ac218675"
+    },
+    "v-forklift": {
+      "class": "A",
+      "alt": "带驾驶座和提升门架的叉车正用两根货叉托起货箱。",
+      "rev": "47e0c0d6417f"
+    },
+    "v-conveyor": {
+      "class": "A",
+      "alt": "两个箱子放在一排滚筒上，沿输送带运输。",
+      "rev": "2a5884230319"
+    },
+    "v-depot": {
+      "class": "A",
+      "alt": "配送车辆停在有货箱的集中存放与发运站旁。",
+      "rev": "ba11cbd2e15a"
+    },
+    "v-dock": {
+      "class": "A",
+      "alt": "木质码头伸到水面以上，由桩柱支撑。",
+      "rev": "910db3d2a665"
+    },
+    "v-berth": {
+      "class": "A",
+      "alt": "一条船停在沿岸码头桩划定的停泊位置。",
+      "rev": "da642d6c9d08"
+    },
+    "v-vessel": {
+      "class": "A",
+      "alt": "一艘有驾驶舱的运输船浮在水线上。",
+      "rev": "ef14322c1d2d"
+    },
+    "v-barge": {
+      "class": "A",
+      "alt": "一艘平底驳船在水中托运一个大型货柜。",
+      "rev": "15e27ac9aefb"
+    },
+    "v-trailer": {
+      "class": "A",
+      "alt": "带车轮和前部牵引连接点的货运拖车没有驾驶室。",
+      "rev": "c5da5f57146f"
+    },
+    "v-railcar": {
+      "class": "A",
+      "alt": "有轨轮的封闭货运车厢停在两条平行钢轨上。",
+      "rev": "d3cdd672a6b0"
+    },
+    "v-container": {
+      "class": "A",
+      "alt": "一个长方形金属货柜，侧板有加固折纹。",
+      "rev": "e9181e464286"
+    },
+    "v-cargo": {
+      "class": "A",
+      "alt": "船甲板上堆放多个待运输的货箱。",
+      "rev": "db55d10d19b5"
+    },
+    "v-waybill": {
+      "class": "A",
+      "alt": "随货运单列出启运地、目的地和货运条码。",
+      "rev": "4eb3af17a6b5"
+    },
+    "v-manifest": {
+      "class": "A",
+      "alt": "载货清单上的不同箱货符号，与船上对应的三件货物逐一连线。",
+      "rev": "515f655e7d1c"
+    },
+    "v-seal": {
+      "class": "A",
+      "alt": "编号塑料封签穿过两扇货柜门的门扣，封签末端已经锁紧。",
+      "rev": "2779a753dd21"
+    },
+    "v-consignee": {
+      "class": "B",
+      "alt": "货箱从发货仓送达，收货人签收。",
+      "rev": "0a12ffa2b0da"
+    },
+    "v-consignor": {
+      "class": "B",
+      "alt": "发货人先填运输单，将货箱送入运输环节。",
+      "rev": "070ad8528337"
+    },
+    "v-carrier": {
+      "class": "C"
+    },
+    "v-shipper": {
+      "class": "C"
+    },
+    "v-forwarder": {
+      "class": "C"
+    },
+    "v-dispatch-note": {
+      "class": "A",
+      "alt": "出库通知附上货箱编号，箭头指向驶出仓库的车辆。",
+      "rev": "2c0c86ccfcd7"
+    },
+    "v-packing-list": {
+      "class": "A",
+      "alt": "装箱清单逐项打勾，旁边是对应的待封货箱。",
+      "rev": "f754cb2d17a1"
+    },
+    "v-bill-of-lading": {
+      "class": "C"
+    },
+    "v-delivery-receipt": {
+      "class": "A",
+      "alt": "货箱已交付，单据底部有收货签名。",
+      "rev": "a48f319288fd"
+    },
+    "v-tracking-code": {
+      "class": "A",
+      "alt": "包裹标签上有能跟踪运输的条码和编号。",
+      "rev": "c3df2db6f3dd"
+    },
+    "v-distribution-center": {
+      "class": "A",
+      "alt": "配送中心的库门外有正在装货和准备发车的车辆。",
+      "rev": "10af6e6893ec"
+    },
+    "v-loading-bay": {
+      "class": "A",
+      "alt": "货车尾部和仓库的高装卸平台对接，货物正待装入。",
+      "rev": "35971d58f5e8"
+    },
+    "v-pickup": {
+      "class": "B",
+      "alt": "货物备妥后，买家到取货柜台亲自带走包裹。",
+      "rev": "e9e2aefa97db"
+    },
+    "v-consolidation": {
+      "class": "B",
+      "alt": "两个小批次的货箱打包合为一批统一发运。",
+      "rev": "9d164e77e5de"
+    },
+    "v-overland": {
+      "class": "A",
+      "alt": "货车沿陆上道路越过丘陵，没有飞机或船。",
+      "rev": "8d9d8b816e6b"
+    },
+    "v-nonperishable": {
+      "class": "B",
+      "alt": "罐头过了多个月仍可安全存放，食品没有腐败。",
+      "rev": "98e0d8e86606"
+    },
+    "v-insulated": {
+      "class": "A",
+      "alt": "容器剖面露出内外壁之间厚厚的隔热夹层。",
+      "rev": "e07a2e7c72f3"
+    },
+    "v-offload": {
+      "class": "A",
+      "alt": "箱子从货车尾部向下移动到地面，表示卸货。",
+      "rev": "06b50b311d74"
+    },
+    "v-stow": {
+      "class": "A",
+      "alt": "行李被沿向内的箭头收进有隔板的储物格。",
+      "rev": "0daad9acb762"
+    },
+    "v-secure": {
+      "class": "A",
+      "alt": "两条绑带把货箱牢牢固定在托盘上。",
+      "rev": "46a66f8a2811"
+    },
+    "v-mold": {
+      "class": "A",
+      "alt": "上、下模具中间有形状相同的凹槽和成型件。",
+      "rev": "173ae0b0bdb0"
+    },
+    "v-press": {
+      "class": "A",
+      "alt": "压机的上压头正向下接近放在工作台上的金属板。",
+      "rev": "5c3fda49f37a"
+    },
+    "v-thread": {
+      "class": "A",
+      "alt": "螺栓杆上密集的螺旋纹一圈圈绕着杆身。",
+      "rev": "fc6e3698e3a5"
+    },
+    "v-compressor": {
+      "class": "A",
+      "alt": "带压力表和软管的储气罐把压缩空气送到工具端。",
+      "rev": "4cf4534497da"
+    },
+    "v-alloy": {
+      "class": "B",
+      "alt": "两种金属投入同一熔炉，铸成一种合金。",
+      "rev": "d6440dd183f0"
+    },
+    "v-weld": {
+      "class": "A",
+      "alt": "两片金属接缝处有焊枪和火花。",
+      "rev": "44062920a5b9"
+    },
+    "v-coat": {
+      "class": "A",
+      "alt": "滚筒在木板上方刷出一条颜色均匀的新涂层。",
+      "rev": "b583b348336a"
+    },
+    "v-diameter": {
+      "class": "B",
+      "alt": "双向测量线穿过圆心，连接圆周的两个相对点。",
+      "rev": "1092a4c73ac3"
+    },
+    "v-thickness": {
+      "class": "B",
+      "alt": "侧面板材的上下两面之间用一根短双向尺寸线标出厚度。",
+      "rev": "00776887967c"
+    },
+    "v-blueprint": {
+      "class": "A",
+      "alt": "蓝底工程图上有房间隔墙、开门弧和尺寸线。",
+      "rev": "02449f003290"
+    },
+    "v-workstation": {
+      "class": "A",
+      "alt": "一个带屏幕、键盘、椅子的独立工作台。",
+      "rev": "38576de9d0c6"
+    },
+    "v-throughput": {
+      "class": "B",
+      "alt": "同样一小时时间内，输送带通过的货箱数量被计数。",
+      "rev": "5ecf07b1eb71"
+    },
+    "v-downtime": {
+      "class": "B",
+      "alt": "时间线从停机标记延伸到恢复运行，中间用括线标出停机时长。",
+      "rev": "6bc1400c9ded"
+    },
+    "v-bottleneck": {
+      "class": "B",
+      "alt": "许多货箱挤在宽通道，出口变窄后一次只能过一箱。",
+      "rev": "0ff7584baa11"
+    },
+    "v-bidder": {
+      "class": "C"
+    },
+    "v-sourcing": {
+      "class": "C"
+    },
+    "v-purchaser": {
+      "class": "C"
+    },
+    "v-vendor": {
+      "class": "C"
+    },
+    "v-buyer": {
+      "class": "C"
+    },
+    "v-quotation": {
+      "class": "B",
+      "alt": "卖方把写有预计单价的报价单发给询价方。",
+      "rev": "0019a00b8e4e"
+    },
+    "v-surcharge": {
+      "class": "B",
+      "alt": "账单的标准运费之外，另添一块小额附加费用，合计比基本费用更高。",
+      "rev": "d840f6f57d39"
+    },
+    "v-unit-price": {
+      "class": "B",
+      "alt": "多个相同产品的总价除以数量，得到单个产品价格。",
+      "rev": "846254917092"
+    },
+    "v-minimum-order": {
+      "class": "B",
+      "alt": "两件的订单被拒绝，达到三件的最低订量后可受理。",
+      "rev": "0be4025b7f56"
+    },
+    "v-price-list": {
+      "class": "A",
+      "alt": "一张价目表的每行对应一个商品和一个价格。",
+      "rev": "f8d664bdb05a"
+    },
+    "v-list-price": {
+      "class": "C"
+    },
+    "v-unit-cost": {
+      "class": "C"
+    },
+    "v-manufacturer": {
+      "class": "C"
+    },
+    "v-in-house": {
+      "class": "C"
+    },
+    "v-deplete": {
+      "class": "B",
+      "alt": "货架上多箱物资逐批用掉，最后只剩一个。",
+      "rev": "cec7d6ea18c1"
+    },
+    "v-stockout": {
+      "class": "B",
+      "alt": "有货的货架变空，出现无货标记。",
+      "rev": "8b631a68755a"
+    },
+    "v-overstock": {
+      "class": "A",
+      "alt": "货架格子都被货箱填满，地板上还堆着多余的箱子。",
+      "rev": "5724dddc3aab"
+    },
+    "v-backorder": {
+      "class": "B",
+      "alt": "货架已经空了，收到的订单标为有货后发。",
+      "rev": "27096647f8f7"
+    },
+    "v-reorder": {
+      "class": "B",
+      "alt": "同一订单之后又发一张订单，重新订购来补库存。",
+      "rev": "f95f6dbabff8"
+    },
+    "v-turnover": {
+      "class": "C"
+    },
+    "v-expiry": {
+      "class": "B",
+      "alt": "标签所示截止日期过后，证件失效。",
+      "rev": "3c69a2521a9b"
+    },
+    "v-lot-number": {
+      "class": "B",
+      "alt": "同一批货箱与批号标签都写着028，表示同批货物共用批号。",
+      "rev": "edce45366f1d"
+    },
+    "v-serial-number": {
+      "class": "B",
+      "alt": "外观相同的两件产品各有不同的唯一序列号。",
+      "rev": "972ddba26d0d"
+    },
+    "v-stockroom": {
+      "class": "A",
+      "alt": "储藏室内两层架子上放着整齐的备用货箱。",
+      "rev": "e31046fe390a"
+    },
+    "v-promptly": {
+      "class": "C"
+    },
+    "v-approximately": {
+      "class": "C"
+    },
+    "v-previously": {
+      "class": "C"
+    },
+    "v-respectively": {
+      "class": "C"
+    },
+    "v-respectfully": {
+      "class": "C"
+    },
+    "v-immediately": {
+      "class": "C"
+    },
+    "v-automatically": {
+      "class": "C"
+    },
+    "v-initially": {
+      "class": "C"
+    },
+    "v-ultimately": {
+      "class": "C"
+    },
+    "v-currently": {
+      "class": "C"
+    },
+    "v-permanently": {
+      "class": "C"
+    },
+    "v-alternatively": {
+      "class": "C"
+    },
+    "v-alternately": {
+      "class": "B",
+      "alt": "两种色块按一深一浅的固定次序交替出现。",
+      "rev": "532c4b1c7165"
+    },
+    "v-individually": {
+      "class": "B",
+      "alt": "三个物品分别被放入各自独立的小格中。",
+      "rev": "025fe8939b7b"
+    },
+    "v-intentionally": {
+      "class": "C"
+    },
+    "v-strictly": {
+      "class": "C"
+    },
+    "v-boiler": {
+      "class": "A",
+      "alt": "带火焰加热室、压力表和热水管道的锅炉。",
+      "rev": "e4aabef1c081"
+    },
+    "v-thermostat": {
+      "class": "A",
+      "alt": "墙上的温控器显示室温和设定温度，带调节按钮。",
+      "rev": "cf9797919e1a"
+    },
+    "v-radiator": {
+      "class": "A",
+      "alt": "并排的散热片接着水管，上方的热气升起。",
+      "rev": "812a83a369d5"
+    },
+    "v-furnace": {
+      "class": "A",
+      "alt": "封闭工业炉的炉膛中火焰正加热金属。",
+      "rev": "7e6a85cfe954"
+    },
+    "v-generator": {
+      "class": "A",
+      "alt": "带发动机、燃料箱和电源输出口的便携发电机。",
+      "rev": "ac5a30a7c7cf"
+    },
+    "v-meter": {
+      "class": "A",
+      "alt": "指针式计量表的表盘上有弧形刻度和读数窗。",
+      "rev": "4c017f2cae03"
+    },
+    "v-voltage": {
+      "class": "B",
+      "alt": "两端的电位差用连接探针的仪表按伏特读出。",
+      "rev": "af70bfeabff5"
+    },
+    "v-circuit": {
+      "class": "B",
+      "alt": "电池、开关和灯泡沿一条闭合导线连成电路。",
+      "rev": "4f85449c1d93"
+    },
+    "v-socket": {
+      "class": "A",
+      "alt": "插座的圆形凹槽内有两个供插头插入的孔。",
+      "rev": "61a803f5168f"
+    },
+    "v-outlet": {
+      "class": "A",
+      "alt": "墙上固定着供电的面板，插头正对着电源插口。",
+      "rev": "52cfa31e039b"
+    },
+    "v-adapter": {
+      "class": "A",
+      "alt": "转接头一端有插脚，另一端设有不同形状的接口。",
+      "rev": "b543eec8a4f0"
+    },
+    "v-insulation": {
+      "class": "A",
+      "alt": "剖开的管道外明显包着一圈厚隔热层。",
+      "rev": "09c5ea85b266"
+    },
+    "v-sealant": {
+      "class": "A",
+      "alt": "尖嘴胶筒挤出胶条，封住房缝。",
+      "rev": "890c623f05f9"
+    },
+    "v-hinge": {
+      "class": "A",
+      "alt": "两个带螺丝孔的叶片靠中央销轴铰接。",
+      "rev": "9cf98de0587e"
+    },
+    "v-threshold": {
+      "class": "A",
+      "alt": "两个房间的地面之间有一道凸起的门槛。",
+      "rev": "6089965c6e0f"
+    },
+    "v-partition": {
+      "class": "A",
+      "alt": "两张工作台之间竖着一块独立的高隔板。",
+      "rev": "310872cc6ead"
+    },
+    "v-canopy": {
+      "class": "A",
+      "alt": "由立柱支撑的遮篷向外伸出，覆盖入口。",
+      "rev": "ef9135ed9f93"
+    },
+    "v-gutter": {
+      "class": "A",
+      "alt": "屋檐下有一段接水的槽，雨水从槽流入下水管。",
+      "rev": "c114ecac0b76"
+    },
+    "v-drainage": {
+      "class": "A",
+      "alt": "地面积水流入格栅，再由下方水管向外排走。",
+      "rev": "4c0d1b78f84f"
+    },
+    "v-reservoir": {
+      "class": "A",
+      "alt": "山谷的水被堤坝挡住，形成蓄水池。",
+      "rev": "9c70f40014cc"
+    },
+    "v-valve": {
+      "class": "A",
+      "alt": "管道中央有一只带圆形手轮的控制阀。",
+      "rev": "9d549313cead"
+    },
+    "v-faucet": {
+      "class": "A",
+      "alt": "带把手的水龙头开口朝下，落下一滴水。",
+      "rev": "becac78c3e01"
+    },
+    "v-plumbing": {
+      "class": "A",
+      "alt": "洗手盆的水龙头和盆底的弯管接成给排水系统。",
+      "rev": "93892d56fa54"
+    },
+    "v-wiring": {
+      "class": "A",
+      "alt": "三根绝缘导线从接线盒内分出，通向不同接点。",
+      "rev": "21ba1834235a"
+    },
+    "v-basement": {
+      "class": "A",
+      "alt": "建筑剖面中，贴着地面的水平线以下有一个带楼梯的房间。",
+      "rev": "3ddb4a3af50e"
+    },
+    "v-stairwell": {
+      "class": "A",
+      "alt": "楼梯在竖直的楼梯间里折返，连接三层平台。",
+      "rev": "d287a5a7f077"
+    },
+    "v-handrail": {
+      "class": "A",
+      "alt": "沿斜坡固定的一根可供手握的长栏杆，由立杆支撑。",
+      "rev": "b9f990e7b7d4"
+    },
+    "v-corridor": {
+      "class": "A",
+      "alt": "长廊的两侧有房门，地面线条收向远处。",
+      "rev": "573368f03be0"
+    },
+    "v-vestibule": {
+      "class": "A",
+      "alt": "进楼后先进入一个很小的门厅，再穿第二道门进入室内。",
+      "rev": "14c4d315fbd1"
+    },
+    "v-driveway": {
+      "class": "A",
+      "alt": "一条私家车道从公共道路伸进车库门。",
+      "rev": "1e6f33c99179"
+    },
+    "v-pedestrian": {
+      "class": "A",
+      "alt": "路上的行人迈步走在人行横道上。",
+      "rev": "a6adec53cc89"
+    },
+    "v-motorist": {
+      "class": "A",
+      "alt": "汽车方向盘后的人正坐在驾驶座上。",
+      "rev": "135574e90564"
+    },
+    "v-turnstile": {
+      "class": "A",
+      "alt": "入口闸机的转轴上伸出三根金属辊杆，每次只放行一人。",
+      "rev": "e9884def8626"
+    },
+    "v-scaffold": {
+      "class": "A",
+      "alt": "施工脚手架两侧的立杆支撑多层踏板，中间有交叉斜撑。",
+      "rev": "2f29ef83786a"
+    },
+    "v-ladder": {
+      "class": "A",
+      "alt": "两根长侧杆之间有一排等距踏棍，形成可攀爬的梯子。",
+      "rev": "73e8578c36cd"
+    },
+    "v-beam": {
+      "class": "A",
+      "alt": "高亮的水平承重横梁跨在左右两根支柱上。",
+      "rev": "83506db5c9e6"
+    },
+    "v-column": {
+      "class": "A",
+      "alt": "单根垂直承重柱从底座向上支撑横梁。",
+      "rev": "5ed66ea01445"
+    },
+    "v-foundation": {
+      "class": "A",
+      "alt": "剖面图中建筑底下的宽厚地基埋入土层，承托地面上的房屋。",
+      "rev": "ec6c419f9c59"
+    },
+    "v-roofing": {
+      "class": "A",
+      "alt": "几排错缝铺设的屋瓦覆盖房顶，局部可见尚未覆盖的基层。",
+      "rev": "6cd5cbd2e1e5"
+    },
+    "v-timber": {
+      "class": "A",
+      "alt": "多根锯开的长方形木料叠放，切面上能看到木纹。",
+      "rev": "e50328f3c36e"
+    },
+    "v-concrete": {
+      "class": "A",
+      "alt": "搅拌车通过倾斜溜槽把湿混凝土浇进模板。",
+      "rev": "50b439c545d9"
+    },
+    "v-asphalt": {
+      "class": "A",
+      "alt": "压路机滚筒后铺开深色颗粒状的沥青路面。",
+      "rev": "4bc9da4dc655"
+    },
+    "v-adhesive": {
+      "class": "A",
+      "alt": "胶从尖嘴瓶挤到两片材料的接合面，两片即将粘在一起。",
+      "rev": "b9af78d53c7c"
+    },
+    "v-solvent": {
+      "class": "B",
+      "alt": "抹布蘸上溶剂后，原有的一片涂层被溶开并擦掉。",
+      "rev": "507ed21a3be2"
+    },
+    "v-lubricant": {
+      "class": "A",
+      "alt": "油壶把一滴润滑油滴在转轴和轴承的接触处。",
+      "rev": "de6f3970e195"
+    },
+    "v-leakage": {
+      "class": "A",
+      "alt": "管道的破损接口往下滴水，在地面形成积水。",
+      "rev": "3ac3886dfbdf"
+    },
+    "v-humidity": {
+      "class": "A",
+      "alt": "湿度计用百分比刻度表示空气含水量，表盘有水滴标记。",
+      "rev": "098760625a44"
+    },
+    "v-thermometer": {
+      "class": "A",
+      "alt": "细长温度计的液柱旁边有分度，底部是圆形液泡。",
+      "rev": "86bac9e92000"
+    },
+    "v-sensor": {
+      "class": "A",
+      "alt": "手掌接近感应头，手与感应头之间有探测信号弧线。",
+      "rev": "fed138ee36a2"
+    },
+    "v-detector": {
+      "class": "A",
+      "alt": "天花板上的烟雾探测器遇到烟气，指示灯亮起。",
+      "rev": "13d76a11fd15"
+    },
+    "v-sprinkler": {
+      "class": "A",
+      "alt": "天花板消防喷头下方呈扇形洒出水滴。",
+      "rev": "78abc8386617"
+    },
+    "v-extinguisher": {
+      "class": "A",
+      "alt": "红色手提灭火器带有压把、软管和喇叭形喷嘴。",
+      "rev": "a8da8c806457"
+    },
+    "v-evacuation": {
+      "class": "A",
+      "alt": "人员沿疏散箭头离开建筑，从出口走到外部。",
+      "rev": "21dcfd572d92"
+    },
+    "v-subcontractor": {
+      "class": "C"
+    },
+    "v-surveyor": {
+      "class": "A",
+      "alt": "测量员站在三脚架后，通过测量仪瞄准远处标杆。",
+      "rev": "7fe7536b8076"
+    },
+    "v-caretaker": {
+      "class": "C"
+    },
+    "v-custodian": {
+      "class": "C"
+    },
+    "v-landscape": {
+      "class": "A",
+      "alt": "庭院平面中花坛、灌木和弯曲小路被整齐安排。",
+      "rev": "fc00de0c49ce"
+    },
+    "v-reinforce": {
+      "class": "B",
+      "alt": "原有横梁下面新增一根斜撑，强化承重支架。",
+      "rev": "4dc03de23217"
+    },
+    "v-dismantle": {
+      "class": "B",
+      "alt": "完整办公椅被有序拆成椅背、座面和支腿，零件仍完好。",
+      "rev": "b0c8d805a3c1"
+    },
+    "v-demolish": {
+      "class": "B",
+      "alt": "整栋建筑被拆除后，原址上只剩碎石。",
+      "rev": "6b71f5a4cf89"
+    },
+    "v-insulate": {
+      "class": "B",
+      "alt": "裸露的管道外增加了隔热包层，减少热量流失。",
+      "rev": "3f7ad31c4a01"
+    },
+    "v-ventilate": {
+      "class": "A",
+      "alt": "打开的窗户两侧有一进一出的气流箭头。",
+      "rev": "81b5f785ab43"
+    },
+    "v-illuminate": {
+      "class": "B",
+      "alt": "台灯点亮后，在原本昏暗的桌面上形成一片光照。",
+      "rev": "169414d6f899"
+    },
+    "v-fasten": {
+      "class": "A",
+      "alt": "两条带子在箱子中央扣合，固定扣已闭合。",
+      "rev": "3b351284460c"
+    },
+    "v-disconnect": {
+      "class": "A",
+      "alt": "电源插头与插座之间已经分开，箭头指向拔出方向。",
+      "rev": "47b06bd48c04"
+    },
+    "v-flammable": {
+      "class": "B",
+      "alt": "材料旁的火焰符号提示，遇到小火源即可起火。",
+      "rev": "3827678b68b8"
+    },
+    "v-waterproof": {
+      "class": "A",
+      "alt": "雨滴落在行李包表面，沿包边向外滚落。",
+      "rev": "4c2d87cd856a"
+    },
+    "v-airtight": {
+      "class": "B",
+      "alt": "盖紧的容器装有连续密封圈，外部气流箭头止于圈外。",
+      "rev": "a28148c7a859"
+    },
+    "v-rechargeable": {
+      "class": "B",
+      "alt": "同一电池通过接电，从空电量恢复到满格。",
+      "rev": "ad67dad5b4a2"
+    },
+    "v-renewable": {
+      "class": "B",
+      "alt": "太阳照到光伏板产生电能，下一天阳光仍能补充能源。",
+      "rev": "c9a23301d185"
+    },
+    "v-regarding": {
+      "class": "C"
+    },
+    "v-upcoming": {
+      "class": "C"
+    },
+    "v-recently": {
+      "class": "C"
+    },
+    "v-renovate": {
+      "class": "B",
+      "alt": "旧墙上的裂缝被补好，墙面重新粉刷，原有建筑得以翻新。",
+      "rev": "33a50e928753"
+    },
+    "v-merger": {
+      "class": "B",
+      "alt": "两家独立公司汇入一家合并后的公司，箭头均指向新实体。",
+      "rev": "fedbde8165bd"
+    },
+    "v-acquisition": {
+      "class": "B",
+      "alt": "买方支付资金后取得另一家公司，产权转到买方名下。",
+      "rev": "abd7786f5a7a"
+    },
+    "v-expand": {
+      "class": "B",
+      "alt": "工厂原有一间生产厂房，扩建后增加到两间。",
+      "rev": "eb6f149422e5"
+    },
+    "v-expansion": {
+      "class": "B",
+      "alt": "一家门店扩展为多个营业网点，店面数量增加。",
+      "rev": "8f1fb36f5a38"
+    },
+    "v-launch": {
+      "class": "B",
+      "alt": "原先未上市的产品揭开遮布，正式进入商店陈列。",
+      "rev": "dd3627be3ff5"
+    },
+    "v-implement": {
+      "class": "B",
+      "alt": "纸上的安装方案变成现场已经装好的设备。",
+      "rev": "8cce428ef5aa"
+    },
+    "v-anticipate": {
+      "class": "C"
+    },
+    "v-enhance": {
+      "class": "C"
+    },
+    "v-ensure": {
+      "class": "C"
+    },
+    "v-extend": {
+      "class": "B",
+      "alt": "同一张仍有效的许可上，旧截止点之后接出一段新增时长，终点向后移动。",
+      "rev": "17434e9487da"
+    },
+    "v-require": {
+      "class": "C"
+    },
+    "v-requirement": {
+      "class": "C"
+    },
+    "v-policy": {
+      "class": "C"
+    },
+    "v-regulation": {
+      "class": "C"
+    },
+    "v-appointment": {
+      "class": "B",
+      "alt": "预约簿里的会面时段被圈定，并与两人会面相连。",
+      "rev": "83dbaf79f51a"
+    },
+    "v-reception": {
+      "class": "A",
+      "alt": "办公室入口处设有接待柜台、台铃和等候椅。",
+      "rev": "c7a77d40a2fe"
+    },
+    "v-receptionist": {
+      "class": "A",
+      "alt": "接待员站在前台柜台后，旁边有联络电话和台铃。",
+      "rev": "cb792ae23db9"
+    },
+    "v-survey": {
+      "class": "B",
+      "alt": "同一份调查发给多位对象，收集回多份填写结果。",
+      "rev": "d5ab30ade427"
+    },
+    "v-questionnaire": {
+      "class": "A",
+      "alt": "一张纸上依次列出多个问题，每题都有待勾选的答案框。",
+      "rev": "b3f95dc5a6a7"
+    },
+    "v-brochure": {
+      "class": "A",
+      "alt": "折成三栏的产品宣传册展开，包含产品图和简介文字。",
+      "rev": "4f43edec7b20"
+    },
+    "v-pamphlet": {
+      "class": "A",
+      "alt": "薄薄的小册子装订成册，封面用一个主题图案作介绍。",
+      "rev": "4db7b3f221bb"
+    },
+    "v-flyer": {
+      "class": "A",
+      "alt": "一张未装订的单页宣传单印着商品图片和宣传文字。",
+      "rev": "f21d5df6a06b"
+    },
+    "v-advertisement": {
+      "class": "C"
+    },
+    "v-campaign": {
+      "class": "C"
+    },
+    "v-promote": {
+      "class": "C"
+    },
+    "v-feature": {
+      "class": "C"
+    },
+    "v-relocate": {
+      "class": "B",
+      "alt": "同一办公部门从旧办公楼迁入新地址的办公楼。",
+      "rev": "b5d9fbc826d1"
+    },
+    "v-relocation": {
+      "class": "B",
+      "alt": "办公家具装进运输车，从旧址运往新址完成搬迁。",
+      "rev": "08d29a2c1d5a"
+    },
+    "v-subscription": {
+      "class": "B",
+      "alt": "同一订阅者按月收到连续几期刊物。",
+      "rev": "939103defaa8"
+    },
+    "v-subscribe": {
+      "class": "B",
+      "alt": "读者提交订阅请求，之后每月收到新一期刊物。",
+      "rev": "c0d9cab84924"
+    },
+    "v-renew": {
+      "class": "B",
+      "alt": "旧周期末的服务，在续费后进入新的有效周期。",
+      "rev": "329d1c8da5a8"
+    },
+    "v-expire": {
+      "class": "B",
+      "alt": "证件的有效期已过，原本有效的证件被标为失效。",
+      "rev": "8b652d7f4d8f"
+    },
+    "v-expiration": {
+      "class": "B",
+      "alt": "时间轴越过证件的到期点，之后的区域用叉标明无效。",
+      "rev": "38933d9e1822"
+    },
+    "v-assignment": {
+      "class": "B",
+      "alt": "工作卡沿箭头分配到指定员工名下。",
+      "rev": "eaea34912d1e"
+    },
+    "v-reschedule": {
+      "class": "B",
+      "alt": "原先预约在月初的事项被移到月底，旧时段划掉。",
+      "rev": "1a96a0d9b95e"
+    },
+    "v-cancel": {
+      "class": "B",
+      "alt": "原定会面在日程上被叉掉，不另排新日期。",
+      "rev": "a5eabc2fe080"
+    },
+    "v-inquire": {
+      "class": "B",
+      "alt": "一方向服务台递出带问号的咨询卡。",
+      "rev": "c42a1f194a06"
+    },
+    "v-respond": {
+      "class": "B",
+      "alt": "收到带问号的消息后，向发问方发回回答。",
+      "rev": "4a7061550dbe"
+    },
+    "v-response": {
+      "class": "B",
+      "alt": "一封回复邮件与之前收到的询问信件一一对应。",
+      "rev": "50316acdae04"
+    },
+    "v-contact": {
+      "class": "B",
+      "alt": "一部电话发出联络信号，另一端接通。",
+      "rev": "365d7ca2ea52"
+    },
+    "v-announcement": {
+      "class": "A",
+      "alt": "面向多人公告的通知纸固定在公共布告板上。",
+      "rev": "105d8ca1291f"
+    },
+    "v-newsletter": {
+      "class": "A",
+      "alt": "连续两期成员简报放在一起，页首标明各自期次。",
+      "rev": "922a0e5a8910"
+    },
+    "v-memo": {
+      "class": "A",
+      "alt": "简短的内部通知写在便条上，并夹在办公文件夹前。",
+      "rev": "6628f7c74e3f"
+    },
+    "v-seminar": {
+      "class": "A",
+      "alt": "讲者面对坐着的参加者，用展示板讲解一个专题。",
+      "rev": "4a5cce6b9461"
+    },
+    "v-workshop": {
+      "class": "A",
+      "alt": "培训桌边的两个人亲手用工具组装箱子，进行实作练习。",
+      "rev": "b600c9f2d1e7"
+    },
+    "v-keynote": {
+      "class": "C"
+    },
+    "v-occupy": {
+      "class": "B",
+      "alt": "原先空着的会议室座位，现在有人坐下使用。",
+      "rev": "d817e6258e06"
+    },
+    "v-manual": {
+      "class": "A",
+      "alt": "设备旁放着翻开的操作手册，页上有操作说明。",
+      "rev": "6bad8e381e70"
+    },
+    "v-instruction": {
+      "class": "B",
+      "alt": "操作图上的第一步按键指令，对应设备上的指定按钮。",
+      "rev": "216d831f0a3e"
+    },
+    "v-guideline": {
+      "class": "C"
+    },
+    "v-complaint": {
+      "class": "B",
+      "alt": "顾客就破损货物递交带明显问题标记的投诉单。",
+      "rev": "ce4654c8a6ed"
+    },
+    "v-resolve": {
+      "class": "B",
+      "alt": "机器故障处被修好，原来的警示叉被完成勾取代。",
+      "rev": "0ed25f2c5780"
+    },
+    "v-assist": {
+      "class": "A",
+      "alt": "两个人共同抬起一个箱子，一人协助另一人搬运。",
+      "rev": "f007a0b1e543"
+    },
+    "v-assistance": {
+      "class": "C"
+    },
+    "v-customer-service": {
+      "class": "C"
+    },
+    "v-client": {
+      "class": "C"
+    },
+    "v-clientele": {
+      "class": "C"
+    },
+    "v-delivery": {
+      "class": "B",
+      "alt": "配送车将货箱运送到收件人的家门。",
+      "rev": "3bc7ac58b41d"
+    },
+    "v-reimbursement": {
+      "class": "B",
+      "alt": "员工先垫付并持有收据，再由公司返还同额款项，现金箭头由公司指回员工。",
+      "rev": "c42823be33bc"
+    },
+    "v-statement": {
+      "class": "A",
+      "alt": "银行账户明细按行记录收入、支出和余额变化。",
+      "rev": "3642bfc39906"
+    },
+    "v-loss": {
+      "class": "B",
+      "alt": "收入的一摞硬币低于支出，差额以负值明确标示亏损。",
+      "rev": "69558643bd34"
+    },
+    "v-increase": {
+      "class": "B",
+      "alt": "表示数量的柱形从低到高增长，时间沿横轴向右。",
+      "rev": "d35cc76169c4"
+    },
+    "v-decrease": {
+      "class": "B",
+      "alt": "表示数量的柱形从高到低减少，时间沿横轴向右。",
+      "rev": "05d866851ff8"
+    },
+    "v-decline": {
+      "class": "B",
+      "alt": "收到邀请的一方将邀请函礼貌退回，并用叉表示不接受。",
+      "rev": "bae242a654b9"
+    },
+    "v-surge": {
+      "class": "B",
+      "alt": "数量在大部分时段平稳，最后一段突然陡峭上涨。",
+      "rev": "73ad6eb4f9fb"
+    },
+    "v-figure": {
+      "class": "A",
+      "alt": "数据表中的一个具体数字被放大镜圈出强调。",
+      "rev": "6137a627fa18"
+    },
+    "v-growth": {
+      "class": "B",
+      "alt": "代表业务收入的柱形逐期增高，体现业务增长。",
+      "rev": "00b96e639807"
+    },
+    "v-projection": {
+      "class": "B",
+      "alt": "已观察的实线数据延伸成虚线预测，虚线单独标明未来估计。",
+      "rev": "74d092d1607a"
+    },
+    "v-quarter": {
+      "class": "B",
+      "alt": "十二个月按每组三个月分成四等段，第一段突出显示为一个季度。",
+      "rev": "016b5e61343b"
+    },
+    "v-annual": {
+      "class": "B",
+      "alt": "前后两个年份各有十二个月的小格，只有同一个月份各标记一次付款。",
+      "rev": "84646ef89b46"
+    },
+    "v-fiscal": {
+      "class": "C"
+    },
+    "v-investor": {
+      "class": "B",
+      "alt": "投资者向公司投入资金，并取得相应持股凭证。",
+      "rev": "0c50bf1816e0"
+    },
+    "v-stock": {
+      "class": "A",
+      "alt": "仓库货架摆着可供出售的货箱，旁边有库存清点表。",
+      "rev": "45f49a43b5d4"
+    },
+    "v-proceeds": {
+      "class": "B",
+      "alt": "商品售出后，商家收到相应销售款项。",
+      "rev": "4ea2785ff8eb"
+    },
+    "v-merge": {
+      "class": "B",
+      "alt": "两份独立资料沿两条箭头汇入同一个合并文件夹。",
+      "rev": "c338e0e9d594"
+    },
+    "v-acquire": {
+      "class": "B",
+      "alt": "支付货款后取得购买的机器设备。",
+      "rev": "ffeccfbbc8dc"
+    },
+    "v-competitor": {
+      "class": "B",
+      "alt": "两家商店向同一位顾客提供商品，两侧箭头都指向顾客。",
+      "rev": "1264bd2f73c5"
+    },
+    "v-market-share": {
+      "class": "B",
+      "alt": "完整市场圆饼中，一块着色扇区表示某公司的销售份额。",
+      "rev": "9f6de254b057"
+    },
+    "v-demand": {
+      "class": "B",
+      "alt": "顾客需求清单上的订购量增加，对应要购买的货箱变多。",
+      "rev": "382dea394624"
+    },
+    "v-technician": {
+      "class": "C"
+    },
+    "v-mechanic": {
+      "class": "A",
+      "alt": "维修技工站在汽车旁，旁边放着检查车辆的工具箱。",
+      "rev": "3b36741f2367"
+    },
+    "v-electrician": {
+      "class": "A",
+      "alt": "电工站在配电插座旁，用检测仪检查电路。",
+      "rev": "e66420b50495"
+    },
+    "v-plumber": {
+      "class": "A",
+      "alt": "水管工在水龙头和管道旁，用工具检修接口。",
+      "rev": "1180804b3d35"
+    },
+    "v-inspector": {
+      "class": "A",
+      "alt": "检查员对照检查表核查货箱封条是否完好。",
+      "rev": "b3df04d768f5"
+    },
+    "v-compliance": {
+      "class": "B",
+      "alt": "操作步骤逐项符合规定清单，每一项都有核对勾。",
+      "rev": "6d1097adc956"
+    },
+    "v-hazard": {
+      "class": "A",
+      "alt": "通道中有漏出的水，旁边竖起明显的警示锥。",
+      "rev": "63afa2c7800a"
+    },
+    "v-protective": {
+      "class": "A",
+      "alt": "操作人员戴着安全帽，护目镜遮住双眼。",
+      "rev": "0688df564358"
+    },
+    "v-gear": {
+      "class": "A",
+      "alt": "作业所需的安全帽、工具箱和防护用品整齐放在一起。",
+      "rev": "b049252eee30"
+    },
+    "v-device": {
+      "class": "C"
+    },
+    "v-appliance": {
+      "class": "A",
+      "alt": "一台电动吸尘器带电源线、软管和地面吸头。",
+      "rev": "6865fbb2c9d6"
+    },
+    "v-manufacture": {
+      "class": "B",
+      "alt": "生产设备把原材料加工成一批同规格成品。",
+      "rev": "63910058c33b"
+    },
+    "v-production": {
+      "class": "B",
+      "alt": "原料进入机器，经过制造过程后成为成品。",
+      "rev": "6f3db759cbc6"
+    },
+    "v-plant": {
+      "class": "A",
+      "alt": "制造厂房有锯齿状厂顶、烟囱和生产车间窗户。",
+      "rev": "8955403d0823"
+    },
+    "v-efficiency": {
+      "class": "B",
+      "alt": "前后两台机器都产出四件产品，后一台消耗的电量只有前一台的一半。",
+      "rev": "2af259f172f1"
+    },
+    "v-productivity": {
+      "class": "B",
+      "alt": "同样一名工人每小时的产出从两件增加到四件。",
+      "rev": "052dea1031b0"
+    },
+    "v-automate": {
+      "class": "B",
+      "alt": "原先由人手逐件装箱，之后由机器自动连续装箱。",
+      "rev": "597d9c3f62bf"
+    },
+    "v-patent": {
+      "class": "C"
+    },
+    "v-innovation": {
+      "class": "C"
+    },
+    "v-research": {
+      "class": "C"
+    },
+    "v-laboratory": {
+      "class": "A",
+      "alt": "实验台上摆着试剂瓶、烧瓶和测量仪器。",
+      "rev": "29d038b0f7e6"
+    },
+    "v-experiment": {
+      "class": "B",
+      "alt": "保持其他条件相同的两组试管中，一组加入试剂作对照实验。",
+      "rev": "339d837dd4ed"
+    },
+    "v-analysis": {
+      "class": "C"
+    },
+    "v-data": {
+      "class": "A",
+      "alt": "表格里按行排列观测数值，作为后续分析的数据。",
+      "rev": "85c49579174c"
+    },
+    "v-findings": {
+      "class": "C"
+    },
+    "v-conclude": {
+      "class": "C"
+    },
+    "v-conclusion": {
+      "class": "C"
+    },
+    "v-recommend": {
+      "class": "C"
+    },
+    "v-recommendation": {
+      "class": "C"
+    },
+    "v-suggest": {
+      "class": "C"
+    },
+    "v-suggestion": {
+      "class": "C"
+    },
+    "v-propose": {
+      "class": "C"
+    },
+    "v-approval": {
+      "class": "B",
+      "alt": "申请文件盖上批准章，旁边出现明确的核准勾。",
+      "rev": "8b00e25880bc"
+    },
+    "v-permit": {
+      "class": "A",
+      "alt": "许可证写明准许入场，旁边放有准入钥匙。",
+      "rev": "f6e5668dfaa7"
+    },
+    "v-license": {
+      "class": "A",
+      "alt": "受监管经营的执照挂在店内，文书上有核发印章。",
+      "rev": "f4b11bea7a20"
+    },
+    "v-certificate": {
+      "class": "A",
+      "alt": "正式证书上有标题、签署线和印章缎带。",
+      "rev": "be7f187b3f07"
+    },
+    "v-certification": {
+      "class": "B",
+      "alt": "产品经过检测后取得带正式印章的认证证书。",
+      "rev": "5a9311988314"
+    },
+    "v-qualify": {
+      "class": "B",
+      "alt": "所有必备条件均打勾后，申请者获得资格证件。",
+      "rev": "9f3fe009e433"
+    },
+    "v-retire": {
+      "class": "B",
+      "alt": "最后一个工作日在日历上标出，之后员工离开固定办公岗位。",
+      "rev": "f968a1da79ae"
+    },
+    "v-performance": {
+      "class": "C"
+    },
+    "v-evaluation": {
+      "class": "C"
+    },
+    "v-coworker": {
+      "class": "C"
+    },
+    "v-manager": {
+      "class": "C"
+    },
+    "v-president": {
+      "class": "C"
+    },
+    "v-chief": {
+      "class": "C"
+    },
+    "v-baggage": {
+      "class": "A",
+      "alt": "旅行箱和随身包放在一起，作为旅客携带的行李。",
+      "rev": "5b993736feae"
+    },
+    "v-boarding": {
+      "class": "A",
+      "alt": "旅客拖着行李沿通道走向飞机舱门。",
+      "rev": "02f1ec654a45"
+    },
+    "v-transportation": {
+      "class": "B",
+      "alt": "人员和货物从出发地点装车，再运到目的地点。",
+      "rev": "55387a18a940"
+    },
+    "v-vehicle": {
+      "class": "A",
+      "alt": "一辆有车厢、车窗和车轮的汽车用于道路运输。",
+      "rev": "c64b658dfecd"
+    },
+    "v-traffic": {
+      "class": "A",
+      "alt": "同一条公路上多辆汽车前后行驶，形成车流。",
+      "rev": "9d73c07e245f"
+    },
+    "v-construction": {
+      "class": "A",
+      "alt": "工地内正在砌建墙面，旁边放着材料和施工警示锥。",
+      "rev": "5e011bff2028"
+    },
+    "v-closure": {
+      "class": "A",
+      "alt": "道路入口被横向围栏完全封住，车辆不能继续进入。",
+      "rev": "f8c955ecbf38"
+    },
+    "v-registration": {
+      "class": "B",
+      "alt": "报名者填写姓名等栏目，提交后进入参加名单。",
+      "rev": "da766b0712fe"
+    },
+    "v-catering": {
+      "class": "A",
+      "alt": "服务人员将装有食物的餐盘送到活动餐桌上。",
+      "rev": "4cae2a522f3f"
+    },
+    "v-cuisine": {
+      "class": "C"
+    },
+    "v-menu": {
+      "class": "A",
+      "alt": "菜单页按行列出可点菜品和相应价格。",
+      "rev": "a8f1fef5ba05"
+    },
+    "v-dine": {
+      "class": "A",
+      "alt": "用餐者在餐桌前，伸手取用盘中的食物。",
+      "rev": "acb8c276cdde"
+    },
+    "v-reception-desk": {
+      "class": "A",
+      "alt": "接待柜台上有台铃和登记册，是访客报到的位置。",
+      "rev": "24241aa91694"
+    },
+    "v-elevator": {
+      "class": "A",
+      "alt": "电梯双门位于楼层内，门上有上下方向按钮。",
+      "rev": "1720acb622fc"
+    },
+    "v-stairs": {
+      "class": "A",
+      "alt": "连续台阶逐级升高，旁边设有倾斜扶手。",
+      "rev": "e1aa81bf1604"
+    },
+    "v-hallway": {
+      "class": "A",
+      "alt": "楼内走廊连接左右两侧多扇房门。",
+      "rev": "573368f03be0"
+    },
+    "v-nearby": {
+      "class": "B",
+      "alt": "住宅和商店相隔很短距离，两者之间只需短程步行。",
+      "rev": "65d4b5956ea8"
+    },
+    "v-located": {
+      "class": "C"
+    },
+    "v-situated": {
+      "class": "C"
+    },
+    "v-downtown": {
+      "class": "A",
+      "alt": "城市中心集中分布高楼和商业店面。",
+      "rev": "1016ab57adbb"
+    },
+    "v-suburb": {
+      "class": "A",
+      "alt": "低层住宅位于高楼密集市中心之外，以道路连接。",
+      "rev": "269e8b88b06c"
+    },
+    "v-branch-office": {
+      "class": "B",
+      "alt": "总部与另一个地址的办事处由联络线连接。",
+      "rev": "056b1d4ae6fa"
+    },
+    "v-abroad": {
+      "class": "B",
+      "alt": "旅行者由本国跨越国界，前往另一个国家。",
+      "rev": "2cd66b2ef476"
+    },
+    "v-global": {
+      "class": "B",
+      "alt": "地球轮廓上多个位置互相连线，表示全球范围。",
+      "rev": "b2366e216831"
+    },
+    "v-local": {
+      "class": "C"
+    },
+    "v-decline-fall": {
+      "class": "B",
+      "alt": "销售数量随时间下降，柱形从高到低，表示下滑而非谢绝。",
+      "rev": "38cc915c6d5b"
+    },
+    "v-figure-calculate": {
+      "class": "B",
+      "alt": "将表中各项金额相加，算出最后的合计数。",
+      "rev": "485bd06eca79"
+    },
+    "v-statement-declaration": {
+      "class": "C"
+    },
+    "v-issue-problem": {
+      "class": "B",
+      "alt": "工作流程中出现明显阻碍，问题位置被圈出。",
+      "rev": "026b78215cc0"
+    },
+    "v-issue-edition": {
+      "class": "B",
+      "alt": "同一期刊的连续三期并排摆放，日期依次递进，中间一期的封面被突出。",
+      "rev": "e070e7972fe8"
+    },
+    "v-address-tackle": {
+      "class": "C"
+    },
+    "v-address-speak": {
+      "class": "A",
+      "alt": "发言者面向一组听众正式讲话，前方摆着讲台。",
+      "rev": "785a35524f46"
+    },
+    "v-charge-fee": {
+      "class": "A",
+      "alt": "账单中的一行单独列出配送收费项目和金额。",
+      "rev": "c8d2dbf78207"
+    },
+    "v-charge-battery": {
+      "class": "B",
+      "alt": "设备电池从低电量变成充满，插头表明正在供电。",
+      "rev": "9aa7e7e3a438"
+    },
+    "v-balance-remaining": {
+      "class": "B",
+      "alt": "总款减去已支付部分后，仍有明确的待付余款。",
+      "rev": "efdbe2bce4c6"
+    },
+    "v-balance-reconcile": {
+      "class": "B",
+      "alt": "账目两侧金额经核算后相等，表示借贷平衡。",
+      "rev": "311a9794d6e1"
+    },
+    "v-stock-shares": {
+      "class": "B",
+      "alt": "一家公司的所有权被分成小份，投资者持有其中被突出的一份股票。",
+      "rev": "59c7e5cf4716"
+    },
+    "v-stock-carry": {
+      "class": "B",
+      "alt": "商店将新到货商品摆上货架，备货供顾客购买。",
+      "rev": "05c4bb7d8a9c"
+    },
+    "v-order-sequence": {
+      "class": "B",
+      "alt": "三个步骤按一、二、三从左到右排成固定顺序。",
+      "rev": "e98c9ba3a75f"
+    },
+    "v-order-request-goods": {
+      "class": "B",
+      "alt": "采购方发出注明数量的采购单给供应商。",
+      "rev": "12eb6dd5d6c9"
+    },
+    "v-account-report": {
+      "class": "C"
+    },
+    "v-account-explain": {
+      "class": "C"
+    },
+    "v-position-place": {
+      "class": "B",
+      "alt": "箱子由原位置移动到地面上指定的框内。",
+      "rev": "33c3e592a36c"
+    },
+    "v-position-view": {
+      "class": "C"
+    },
+    "v-branch-tree": {
+      "class": "A",
+      "alt": "树干向两侧延伸出枝条，枝端有叶子。",
+      "rev": "e0abfe7b5f09"
+    },
+    "v-branch-diverge": {
+      "class": "B",
+      "alt": "一条主线在节点处分成两条明确的支线。",
+      "rev": "ae21413c73ac"
+    },
+    "v-book-reserve": {
+      "class": "B",
+      "alt": "旅行者选定日期并预订房间，该时段被保留。",
+      "rev": "9aa515d70ad5"
+    },
+    "v-book-register": {
+      "class": "B",
+      "alt": "收到的款项被逐笔填入账簿中的收入栏。",
+      "rev": "5dec5803f4c0"
+    },
+    "v-book-volume": {
+      "class": "A",
+      "alt": "一本装订好的书有书脊、封面和层叠的书页。",
+      "rev": "550516ead7fb"
+    },
+    "v-reserve-set-aside": {
+      "class": "B",
+      "alt": "一张座位上放着预留牌，留给指定访客使用。",
+      "rev": "c63d4dfd7cb5"
+    },
+    "v-reserve-backup": {
+      "class": "A",
+      "alt": "备用现金放在独立封存的储备盒中，未用于日常支出。",
+      "rev": "e84f17e7babc"
+    },
+    "v-fair-equitable": {
+      "class": "B",
+      "alt": "两名参与者获得数量相同的资源，明确表示公平分配。",
+      "rev": "2c94701b453b"
+    },
+    "v-fair-exhibition": {
+      "class": "A",
+      "alt": "多个展台同时陈列不同产品，参观者在展台之间观看。",
+      "rev": "c921b743228e"
+    },
+    "v-appreciate-value": {
+      "class": "C"
+    },
+    "v-appreciate-gain-value": {
+      "class": "B",
+      "alt": "同一项资产的价格随时间上升，强调资产升值。",
+      "rev": "5785e6935f41"
+    },
+    "v-cover-pay-for": {
+      "class": "B",
+      "alt": "准备好的资金足以支付整张账单的费用。",
+      "rev": "8a68587b580b"
+    },
+    "v-cover-substitute": {
+      "class": "B",
+      "alt": "原排班员工暂时离开，另一名员工接过同一工作时段。",
+      "rev": "777dc2acc68b"
+    },
+    "v-cover-lid": {
+      "class": "A",
+      "alt": "容器上方的盖子正落向开口，起到覆盖保护作用。",
+      "rev": "0ddb86f4d5c0"
+    },
+    "v-return-give-back": {
+      "class": "B",
+      "alt": "借走的工具被送回原来的所有者处。",
+      "rev": "5ba7736021cf"
+    },
+    "v-return-yield": {
+      "class": "B",
+      "alt": "投入的资金经过投资后产生额外收益，收益被单独圈出。",
+      "rev": "6d70d9d54836"
+    },
+    "v-term-period": {
+      "class": "B",
+      "alt": "合同生效日至结束日之间的整段时间被括号圈定。",
+      "rev": "b9e118e7e02e"
+    },
+    "v-term-expression": {
+      "class": "C"
+    },
+    "v-party-contracting": {
+      "class": "B",
+      "alt": "合同的两侧各有一个签署方，两方共同受同一协议约束。",
+      "rev": "e06c9561b46d"
+    },
+    "v-party-celebration": {
+      "class": "A",
+      "alt": "庆祝活动现场摆有蛋糕、彩旗和聚会的人。",
+      "rev": "38604ee99d8a"
+    },
+    "v-run-manage": {
+      "class": "C"
+    },
+    "v-run-series": {
+      "class": "B",
+      "alt": "连续生产的同一批产品从输送带流出，归入一个批次。",
+      "rev": "f4159efe70b0"
+    },
+    "v-run-operate": {
+      "class": "A",
+      "alt": "机器运行时齿轮持续转动，两条弧箭头标明运动方向。",
+      "rev": "507490c6494e"
+    },
+    "v-post-job": {
+      "class": "C"
+    },
+    "v-post-display": {
+      "class": "B",
+      "alt": "工作人员将通知从手中贴到公共布告板上。",
+      "rev": "eff88dcd55bf"
+    },
+    "v-post-mail": {
+      "class": "B",
+      "alt": "贴有邮资标记的信封被投入邮政收件箱。",
+      "rev": "a8995f7559ab"
+    },
+    "v-line-range": {
+      "class": "A",
+      "alt": "同一款式的三个产品以不同大小排列，形成产品系列。",
+      "rev": "5af5e86201d2"
+    },
+    "v-line-queue": {
+      "class": "B",
+      "alt": "三名顾客依次排在同一个服务柜台前等候。",
+      "rev": "40103c9cd435"
+    },
+    "v-line-telephone": {
+      "class": "B",
+      "alt": "两部固定电话通过同一条通话线路连接。",
+      "rev": "616add213be5"
+    },
+    "v-present-show": {
+      "class": "A",
+      "alt": "汇报者指向展示屏上的图表，听众面向屏幕观看。",
+      "rev": "bf58edaf4aba"
+    },
+    "v-present-attending": {
+      "class": "B",
+      "alt": "点名册与现场座位对应，被点到的人员确实在场。",
+      "rev": "3d40e9c860a0"
+    },
+    "v-present-gift": {
+      "class": "A",
+      "alt": "礼物盒包着彩纸，顶端扎有蝴蝶结。",
+      "rev": "2ea78ec34c7c"
+    },
+    "v-note-message": {
+      "class": "A",
+      "alt": "一张小便条写着简短几行内容，贴在桌边。",
+      "rev": "e6d83997c795"
+    },
+    "v-note-observe": {
+      "class": "C"
+    },
+    "v-board-committee": {
+      "class": "C"
+    },
+    "v-notice-observe": {
+      "class": "C"
+    },
+    "v-plant-sow": {
+      "class": "A",
+      "alt": "双手将幼苗放进土壤里，根部被覆土固定。",
+      "rev": "aa32b2a086b2"
+    },
+    "v-tender-submit": {
+      "class": "B",
+      "alt": "投标方正式将装订好的方案递交到接收单位。",
+      "rev": "0ca971b66a39"
+    },
+    "v-benefit-help": {
+      "class": "C"
+    },
+    "v-raise-lift": {
+      "class": "B",
+      "alt": "同一货箱从较低位置被提升到较高位置，箭头朝上。",
+      "rev": "1c3ae24f01d2"
+    },
+    "v-spring-season": {
+      "class": "A",
+      "alt": "春季树枝长出新叶，地面出现盛开的花朵。",
+      "rev": "df2110df582d"
+    },
+    "v-spring-coil": {
+      "class": "A",
+      "alt": "一根金属丝连续盘绕成具有弹性的机械弹簧。",
+      "rev": "19c40312ea67"
+    },
+    "v-fine-penalty": {
+      "class": "B",
+      "alt": "违规停车后收到罚款单，金额与处罚相对应。",
+      "rev": "02beef570484"
+    },
+    "v-fine-thin": {
+      "class": "B",
+      "alt": "同样面积的筛网中，右边网孔更细密。",
+      "rev": "ec5354353b5f"
+    },
+    "v-draft-preliminary": {
+      "class": "A",
+      "alt": "待修订的初稿上留有删除线、圈画和改写标记。",
+      "rev": "b8f8dcd69874"
+    },
+    "v-draft-write": {
+      "class": "B",
+      "alt": "笔在空白纸上写出文书的第一版草案。",
+      "rev": "c1ade3a29e6a"
+    },
+    "v-record-stored": {
+      "class": "A",
+      "alt": "带有日期标记的资料被分类保存进文件夹。",
+      "rev": "11f6952b8c8f"
+    },
+    "v-record-enter": {
+      "class": "B",
+      "alt": "现场观察到的数值被逐项写入记录表格。",
+      "rev": "edcbae850fa4"
+    },
+    "v-contract-agreement": {
+      "class": "A",
+      "alt": "合同文书下方有两个签署栏，双方各自签字。",
+      "rev": "dea0093b8f21"
+    },
+    "v-contract-shrink": {
+      "class": "B",
+      "alt": "同一块材料尺寸从较大变成较小，箭头指向收缩结果。",
+      "rev": "ccc4e47d65f6"
+    },
+    "v-claim-request": {
+      "class": "B",
+      "alt": "申请者附上损失证据和收据，正式提出费用赔付申请。",
+      "rev": "6a91054526e4"
+    },
+    "v-claim-collect": {
+      "class": "B",
+      "alt": "旅客出示与行李编号相同的凭条，认领对应行李。",
+      "rev": "e7fe99b45493"
+    },
+    "v-service-assistance": {
+      "class": "C"
+    },
+    "v-service-maintain": {
+      "class": "B",
+      "alt": "维修人员检查设备并使用工具进行保养。",
+      "rev": "697acb196a05"
+    },
+    "v-file-document": {
+      "class": "A",
+      "alt": "一份文件带有多行内容和单独的归档夹。",
+      "rev": "69e83eaa8348"
+    },
+    "v-file-submit": {
+      "class": "B",
+      "alt": "填好的申请材料正式提交到接收窗口并获得登记。",
+      "rev": "46280bf899f7"
+    },
+    "v-bill-invoice": {
+      "class": "A",
+      "alt": "账单上逐行列出消费项目，底部显示应付总额。",
+      "rev": "87c601e5a889"
+    },
+    "v-bill-charge": {
+      "class": "B",
+      "alt": "商家开出写明应付金额的账单交给客户。",
+      "rev": "053aa5844484"
+    },
+    "v-interest-attention": {
+      "class": "C"
+    },
+    "v-interest-finance": {
+      "class": "B",
+      "alt": "存款留在银行一段时间后，本金仍在，并另增一小份利息。",
+      "rev": "410c5a3715a6"
+    },
+    "v-sound-audio": {
+      "class": "A",
+      "alt": "扬声器向外发出连续声波，可以听见的声音被可视化。",
+      "rev": "e05cfd67c7a0"
+    },
+    "v-sound-well-founded": {
+      "class": "C"
+    },
+    "v-rate-price": {
+      "class": "A",
+      "alt": "价目表明确标示每小时的收费金额，体现按单位收费。",
+      "rev": "78ca648e11aa"
+    },
+    "v-rate-evaluate": {
+      "class": "B",
+      "alt": "评审人对照项目表现，在评分表上给出四分。",
+      "rev": "4c81606c6e4f"
+    },
+    "v-hold-keep": {
+      "class": "B",
+      "alt": "商家把指定商品从销售货架取下，贴上为顾客保留的标记。",
+      "rev": "987570bd5e91"
+    },
+    "v-hold-conduct": {
+      "class": "A",
+      "alt": "主办者组织多人围着同一张桌子参加会议。",
+      "rev": "587e244d0f0b"
+    },
+    "v-cover-include": {
+      "class": "C"
+    },
+    "v-term-condition": {
+      "class": "A",
+      "alt": "协议中单独的一项条款被框出，与其他条目区分。",
+      "rev": "d8b379306ba0"
+    },
+    "v-access": {
+      "class": "B",
+      "alt": "持有有效权限卡的人可以解锁进入，门禁读卡器显示允许。",
+      "rev": "6ae3cc1b12c0"
+    },
+    "v-access-use": {
+      "class": "B",
+      "alt": "正确密码输入电脑后，原本锁住的数据文件可以打开。",
+      "rev": "0bffb5e90893"
+    },
+    "v-assess": {
+      "class": "B",
+      "alt": "检查者查看受损物品，再评定损失程度并填表。",
+      "rev": "c77411aab67d"
+    },
+    "v-excess": {
+      "class": "B",
+      "alt": "容器中装满豆子，超过容量的多余豆子被单独堆在外面。",
+      "rev": "24b9c37582ed"
+    },
+    "v-excess-extra": {
+      "class": "B",
+      "alt": "行李重量超过标明的允许限额，超出部分用颜色突出。",
+      "rev": "d1b2ba42f0b4"
+    },
+    "v-import": {
+      "class": "B",
+      "alt": "货物从国外运往本国，箭头方向明确指向进口国。",
+      "rev": "e20c1dfb203e"
+    },
+    "v-import-goods": {
+      "class": "A",
+      "alt": "本国仓库中的商品带有来自外国的运输来源标签。",
+      "rev": "d059bd9307c7"
+    },
+    "v-export": {
+      "class": "B",
+      "alt": "货物从本国装船送到国外，箭头方向明确指向外国。",
+      "rev": "b99949d05ec0"
+    },
+    "v-export-goods": {
+      "class": "A",
+      "alt": "即将出口的成品货箱放在离港运输船前。",
+      "rev": "504e11f6e580"
+    },
+    "v-principal": {
+      "class": "C"
+    },
+    "v-principal-capital": {
+      "class": "B",
+      "alt": "原始借款标为本金，还款图把本金与另列的利息分开。",
+      "rev": "617b0759e021"
+    },
+    "v-principle": {
+      "class": "C"
+    },
+    "v-insure": {
+      "class": "B",
+      "alt": "车辆取得有效保险文件后，事故赔付保障被标示出来。",
+      "rev": "9f82543e92d8"
+    },
+    "v-assure": {
+      "class": "C"
+    },
+    "v-invaluable": {
+      "class": "C"
+    },
+    "v-inflammable": {
+      "class": "A",
+      "alt": "易燃溶剂容器旁有火焰警示图，提示它很容易着火。",
+      "rev": "6079e3e983d7"
+    },
+    "v-copyright": {
+      "class": "A",
+      "alt": "原创作品与标明著作权的凭证相连，强调复制受权利保护。",
+      "rev": "0bbacb8eca6a"
+    },
+    "v-exporter": {
+      "class": "B",
+      "alt": "经营者把本国商品通过船运卖给国外买家。",
+      "rev": "a2374104c0dd"
+    },
+    "v-importer": {
+      "class": "B",
+      "alt": "经营者从国外进货，送入本国仓库销售。",
+      "rev": "f5da35f5ccc7"
+    },
+    "v-accept": {
+      "class": "B",
+      "alt": "收到合同提议后签字同意，明确接受而非拒绝。",
+      "rev": "d46ef9a327f7"
+    },
+    "v-except": {
+      "class": "B",
+      "alt": "四个对象中的一个被叉掉，其余三个被圈为保留范围。",
+      "rev": "d921f6c1341c"
+    },
+    "v-advice": {
+      "class": "C"
+    },
+    "v-advise": {
+      "class": "C"
+    },
+    "v-complementary": {
+      "class": "B",
+      "alt": "两块轮廓互相匹配的拼块拼合成完整图形，表示互补。",
+      "rev": "51ae421ccb0e"
+    },
+    "v-later": {
+      "class": "B",
+      "alt": "同一时钟所示时刻向后推进，表示更晚的时候。",
+      "rev": "d1f513c35329"
+    },
+    "v-latter": {
+      "class": "B",
+      "alt": "明确提到的两个选项中，只有第二个被框定为后者。",
+      "rev": "88876c596555"
+    },
+    "v-lay": {
+      "class": "B",
+      "alt": "一块竖放的板被平放到有软垫的工作台上。",
+      "rev": "fef29f3beda8"
+    },
+    "v-lie": {
+      "class": "A",
+      "alt": "一个人身体水平地躺在长沙发上休息。",
+      "rev": "995baac5c889"
+    },
+    "v-lie-deceive": {
+      "class": "B",
+      "alt": "实际货物只有两个，提交的报告却虚假声称有五个。",
+      "rev": "952b78ae2f65"
+    },
+    "v-loose": {
+      "class": "A",
+      "alt": "固定件上的螺丝明显松出数圈，连接处晃动。",
+      "rev": "0ab10420dd34"
+    },
+    "v-lose": {
+      "class": "B",
+      "alt": "原本口袋里有凭证，后来口袋空了并出现寻找的问号。",
+      "rev": "81587792a1ca"
+    },
+    "v-rise": {
+      "class": "B",
+      "alt": "价格随时间上升，右侧柱高于左侧，表示上涨。",
+      "rev": "e78b102a417e"
+    },
+    "v-perspective": {
+      "class": "C"
+    },
+    "v-awareness": {
+      "class": "C"
+    },
+    "v-useful": {
+      "class": "C"
+    },
+    "v-careless": {
+      "class": "C"
+    },
+    "v-wireless": {
+      "class": "A",
+      "alt": "耳机通过无线电波连接电脑，两者之间没有线缆。",
+      "rev": "111852574e10"
+    }
+  }
+}

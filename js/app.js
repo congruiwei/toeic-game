@@ -1,6 +1,6 @@
 import {collectExpression,beginExpressions,rateExpression} from './expressions.js';
 import {playReadAloud,stopReadAloud} from './read-aloud.js';
-import {syncPersonalVocab,collectPersonalWord,beginPersonalVocab,flipPersonalWord,ratePersonalWord,removePersonalWord,personalVocabView} from './personal-vocab.js';
+import {syncPersonalVocab,collectPersonalWord,beginPersonalVocab,flipPersonalWord,ratePersonalWord,removePersonalWord,personalVocabView,appendPersonalVocab} from './personal-vocab.js';
 import {speakJapanese,japaneseVoices} from './japanese-audio.js';
 import {watchShellUpdates} from './shell-update.js';
 import {loadMethods,newMethod,methodIndex,methodById,methodCard,methodExample,methodBank} from './methods.js';
@@ -71,7 +71,7 @@ const taskInfo = {
   grammar: ['语法', '破解句子结构', 'grammar'],
   reading: ['阅读', '探索文中的线索', 'reading'],
 };
-let lastRaw = null;
+let lastRaw = null, restorationPending=false, offlineRegistration;
 let answerClock = null;
 let s = fresh(),
   page = 'home',
@@ -199,7 +199,15 @@ function optionUI(){
   if(!document.querySelector('link[data-option-style]')){const link=document.createElement('link');link.rel='stylesheet';link.href='./option-details.css';link.dataset.optionStyle='';link.onerror=()=>link.remove();document.head.append(link);}
   return optionModule??=import('./option-details.js').catch(error=>{optionModule=null;throw error;});
 }
+let artModule;
+function hydrateVocabArt(scope) {
+  if(!scope.querySelector('[data-vocab-art]'))return;
+  if(s.settings.vocabPictures===false){scope.querySelectorAll('[data-vocab-art]').forEach(slot=>slot.replaceChildren());return;}
+  (artModule??=import('./vocab-art.js').catch(error=>{artModule=null;throw error;}))
+    .then(ui=>{if(scope.isConnected)ui.mountArt(scope,s.settings);}).catch(()=>{});
+}
 function hydrateOptions(scope){
+  hydrateVocabArt(scope);
   for(const panel of scope.querySelectorAll('[data-options-id]')){
     if(panel.closest('details:not([open])')||optionPanels.has(panel))continue;
     const context=reviewedAnswer(panel.dataset.optionsId,(ref,q,selected)=>({ref,q,selected}));
@@ -208,7 +216,7 @@ function hydrateOptions(scope){
     optionUI().then(async ui=>{
       const details=await ui.loadOptionDetails(context.ref,context.q,{vocab:bank.vocab});
       if(!panel.isConnected||!reviewedAnswer(panel.dataset.optionsId,()=>true))return;
-      optionPanels.set(panel,{ui,details});panel.innerHTML=ui.renderOptionDetails(details,s);
+      optionPanels.set(panel,{ui,details});panel.innerHTML=ui.renderOptionDetails(details,s);hydrateVocabArt(panel);
       const host=document.createElement('div');host.dataset.answerComparison=context.ref.id;panel.append(host);
       comparisonPanels.set(host,{context,details});hydrateAnswerComparison(host);
     }).catch(error=>{
@@ -573,6 +581,7 @@ function settings() {
    ['timed', '阅读计时'],
    ['methodHints','首次遇到题型时显示方法卡'],
    ['translationExpanded','翻译默认展开'],
+   ['vocabPictures','显示单词配图'],
  ]
    .map(
      ([v, n]) =>
@@ -726,6 +735,7 @@ document.addEventListener('change', async (e) => {
     applyPrefs();
     if(k==='translationLanguage' && document.querySelector('.translations'))translationUI().then(ui=>ui.applyTranslationLanguage(document,s.settings.translationLanguage)).catch(()=>toast('翻译界面暂时无法载入，联网后请重试。'));
     if (k === 'rate') $('#rate-val').textContent = el.value + '×';
+    if(k==='vocabPictures')hydrateVocabArt(document);
     if(k==='audioMode'){hush();prepareVisibleAudio();}
     return;
   }
@@ -738,6 +748,7 @@ document.addEventListener('change', async (e) => {
     try {
       if (el.files[0].size > 25e6) throw Error('文件过大（最多 25 MB）');
       const raw=await el.files[0].text();
+      await loadBank(allBanks,{candidates:false});
       if(backupHasConfusable(raw))await loadBank(['confusables']);
       const candidate = decode(raw, catalog);
       incoming = candidate;
@@ -772,6 +783,8 @@ document.addEventListener('click', async (e) => {
   const el = e.target.closest('[data-act]');
   if (!el || el.disabled) return;
   const { act: a, mode, page: p, i, filter, id } = el.dataset;
+  if(a==='retry-restore'&&restorationPending){el.disabled=true;await boot();return;}
+  if(restorationPending)return;
   if(a==='morpheme-retry'){hydrateWordEnrichment(el.parentElement.parentElement);return;}
   if(a==='morpheme-filter'&&page==='library'&&el.closest('[data-morpheme-index]')){morphologyFilter=el.dataset.filter;hydrateWordEnrichment(root);return;}
   if(['morpheme-family','morpheme-word','morpheme-ja','morpheme-en','morpheme-example','report-morpheme'].includes(a)){
@@ -832,6 +845,11 @@ document.addEventListener('click', async (e) => {
     } catch(error){toast(error.message);}
     return;
   }
+  if(a==='screen-last-word'&&page==='screen'){
+    const run=s.screening?.run,id=run?.ids[run.index-1];
+    if(run && !run.pending && id && s.screening.marks[id] && catalog.get(id)?.ref.mode==='vocab')modal(wordDetailView(catalog.get(id).data));
+    return;
+  }
   if(a==='read-aloud'){
     if(page==='exam'&&s.exam?.phase!=='done')return;
     const panel=el.closest('.translations'),method=el.closest('[data-method-card]');
@@ -873,7 +891,11 @@ document.addEventListener('click', async (e) => {
   }
   if(a==='personal-open'){try{await optionUI();personalPractice=false;personalLimit=50;personalComposing=false;go('personal');}catch{toast('我的单词本界面尚未缓存，联网后请重试。');}return;}
   if(a==='personal-resume'&&s.personalVocab?.run){try{await optionUI();personalPractice=true;go('personal');}catch{toast('我的单词本界面尚未缓存，联网后请重试。');}return;}
-  if(a==='personal-more'&&page==='personal'&&!personalPractice){const y=window.scrollY;personalLimit+=50;render();window.scrollTo(0,y);return;}
+  if(a==='personal-more'&&page==='personal'&&!personalPractice){
+    const y=window.scrollY;personalLimit+=50;
+    if(appendPersonalVocab(root,s,{filter:personalFilter,limit:personalLimit}))hydrateVocabArt(root);
+    window.scrollTo(0,y);return;
+  }
   if(a==='personal-start'&&page==='personal'){if(beginPersonalVocab(s,el.dataset.direction)&&save()){personalPractice=true;render();}return;}
   if(a==='personal-flip'&&page==='personal'){if(flipPersonalWord(s)&&save())render();return;}
   if(a==='personal-rate'&&page==='personal'){if(ratePersonalWord(s,Number(el.dataset.grade))&&save())render();return;}
@@ -894,14 +916,19 @@ document.addEventListener('click', async (e) => {
     else if(language==='en')speak([{speaker:'A',text:item.word,key,bank:'vocab'}],s.settings,toast);
     return;
   }
-  const needed=requiredBanks(a,el).filter(k=>!bank[k]);
+  const requested=[...requiredBanks(a,el)];
+  // Canonical vocabulary can already be loaded by restore without its optional
+  // candidate packet. A fresh exercise must still request that packet.
+  if(a!=='import'&&requested.includes('vocab')&&!requested.includes('confusable-candidates'))requested.push('confusable-candidates');
+  const needed=requested.filter(k=>!bank[k]);
   // Vocab may still be loading on a fresh island; unlock the first automatic word before awaiting it.
   if(a==='screen-open' && needed.length && s.settings.audioMode!=='system')unlockRecordedAudio();
-  const needsMethods=s.settings.methodHints!==false && !methodById('photo') &&
+  const startingVocabulary=el.dataset.mode==='vocab' && (a==='start'||a==='configured');
+  const needsMethods=!startingVocabulary && s.settings.methodHints!==false && !methodById('photo') &&
     ['start','configured','replace','review-one','resume'].includes(a);
   if(needed.length || needsMethods){
     el.disabled=true;el.setAttribute('aria-busy','true');
-    try{await Promise.all([loadBank(needed),needsMethods ? loadMethods().catch(()=>{}) : null]);}catch{toast('题库未能打开，请检查连接后再试。');return;}
+    try{await Promise.all([loadBank(needed,{candidates:a!=='import'}),needsMethods ? loadMethods().catch(()=>{}) : null]);}catch{toast('题库未能打开，请检查连接后再试。');return;}
     finally{el.disabled=false;el.removeAttribute('aria-busy');}
     if(!el.isConnected)return;
   }
@@ -1151,7 +1178,7 @@ document.addEventListener('click', async (e) => {
   }
 });
 document.addEventListener('visibilitychange', () => {
-  if (root.getAttribute('aria-busy') === 'true') return;
+  if (restorationPending || root.getAttribute('aria-busy') === 'true') return;
   if (document.hidden) {
   stopReplay();
     if(page==='examPrepare'){exam.cancelPreparation();page='examLobby';render();}
@@ -1185,7 +1212,7 @@ window.addEventListener('storage', async (e) => {
     return;
   }
   try {
-    await loadBank(allBanks);
+    await loadBank(allBanks,{candidates:false});
     if(backupHasConfusable(e.newValue))await loadBank(['confusables']);
     if(localStorage.getItem(KEY)!==e.newValue)return;
     const updated = decode(e.newValue, catalog);
@@ -1193,6 +1220,7 @@ window.addEventListener('storage', async (e) => {
     exam.stop();
     if(page==='exam')page='examLobby';
     s = updated;
+    restorationPending=false;storageBroken=false;
     clockStart = 0;answerClock=null;
     clearInterval(tick);
     hush();
@@ -1217,29 +1245,36 @@ function requiredBanks(action,el){
 async function boot() {
   try {
     const raw=localStorage.getItem(KEY);
+    restorationPending=Boolean(raw);storageBroken=restorationPending;
     if(raw){
       // Restoring retired IDs needs a complete catalog; a new island can render immediately.
-      await loadBank(allBanks);
+      await loadBank(allBanks,{candidates:false});
       lastRaw=localStorage.getItem(KEY);
       if(backupHasConfusable(lastRaw))await loadBank(['confusables']);
       if(lastRaw)s=decode(lastRaw,catalog);
     }
+    restorationPending=false;storageBroken=false;
   } catch(error) {
-    if(allBanks.some(k=>!bank[k])) {
-      root.innerHTML='<h2>进度尚未载入</h2><p>请检查连接后重新打开，以恢复已保存的练习。</p>';
+    if(allBanks.some(k=>!bank[k])||backupHasConfusable(lastRaw)&&!bank.confusables) {
+      root.innerHTML='<h2>进度尚未载入</h2><p>请检查连接后重试，以恢复已保存的练习。原始进度已保留。</p><button class="primary" data-act="retry-restore">重试载入</button>';
+      registerOfflineShell();
       return;
     }
+    restorationPending=false;
     storageBroken=true;s=fresh();toast('原存档读取失败，已保留原始记录。可从设置导入备份。');
   }
   markVisit();
   tasks = ['vocab', 'part2', s.history.length && Math.random() < 0.5 ? 'reading' : 'grammar'];
   render();
   navigator.storage?.persist?.().catch(() => {});
-  if ('serviceWorker' in navigator)
-    navigator.serviceWorker
+  registerOfflineShell();
+}
+function registerOfflineShell() {
+  if ('serviceWorker' in navigator && !offlineRegistration)
+    offlineRegistration=navigator.serviceWorker
       .register('./sw.js',{updateViaCache:'none'})
       .then(registration=>{
-        watchShellUpdates(registration,()=>page==='home'&&!dialog.open&&!storageBroken,openedUnder);
+        watchShellUpdates(registration,()=>page==='home'&&!dialog.open&&(!storageBroken||restorationPending),openedUnder);
         return navigator.serviceWorker.ready;
       })
       .then(() => {
@@ -1247,6 +1282,6 @@ async function boot() {
         const status = $('#offline-status');
         if (status) status.textContent = '离线题库已就绪';
       })
-      .catch(() => toast('离线资源未就绪，请联网后重开。'));
+      .catch(() => {offlineRegistration=null;toast('离线资源未就绪，请联网后重开。');});
 }
 boot();

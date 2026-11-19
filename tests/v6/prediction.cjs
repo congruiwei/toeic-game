@@ -12,7 +12,10 @@ module.exports=async({page,act,nav,state,reset,store})=>{
   assert.match(await page.locator('.report-rows').first().innerText(),/词汇/);
   assert.equal(await page.locator('.prediction-empty').count(),1);
   await nav('home');await page.locator('[data-act="start"][data-mode="part2"]:visible').first().click();
-  if(await page.locator('[data-act=replace]').isVisible())await act('replace');
+  // The vocabulary run still has four questions. A cold method pack can arrive
+  // after the start click, so wait for the actual switch confirmation.
+  await act('replace');
+  await page.locator('[data-method-card]:visible, [data-act=answer]:visible').first().waitFor();
   if(await page.locator('[data-method-card]').isVisible())await act('method-skip');
   await act('answer');
   const s=await state();assert.ok(s.prediction.L.evidence>0);assert.equal(s.prediction.R.evidence,0);
